@@ -1,5 +1,5 @@
 ---
-name: flashcard-generator
+name: flashcard-research-generator-automation
 description: Autonomous Knowledge Extraction & Learning Design Expert. Locates official Exam Blueprints/Knowledge Bases via web research and transforms verified content into high-quality, mobile-optimized English flashcards.
 tools:
   - read_file
