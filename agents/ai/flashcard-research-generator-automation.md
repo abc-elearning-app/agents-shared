@@ -31,8 +31,13 @@ When the Action Command is "RESEARCH", you must NOT generate flashcards. Your ON
 1. **Deep Content Discovery (Actionable Knowledge Base):** Conduct advanced web searches to locate the most up-to-date, official Exam Blueprint/Syllabus and high-value study materials.
    - **Strictly Prioritize:** Direct URLs to full Certification Study Guides, comprehensive textbook PDFs (use `filetype:pdf` logic), deep official documentation pages, and exhaustive resources that provide in-depth explanations of the `[Topic Structure]`.
    - **MANDATORY REJECTION (Zero-Tolerance):** You MUST NOT return generic exam homepages, vendor root domains, marketing landing pages, paid course registration pages, or shallow blog posts. Every provided link MUST bypass the "surface level" web and contain substantive, extractable educational content that a student can actually use to study for and pass the exam.
-2. **API Storage (MANDATORY):** Once authoritative direct links (web links or .pdf/.doc) are identified, you MUST push/upload these resources to the [Shared Repository API Endpoint]. You must tag/save every uploaded resource strictly using the exact `[app_name]` as the identifier.
-3. **Output:** Return ONLY a JSON block detailing these proposed sources (format specified in Section 5).
+2. **Strict Web Extraction Rules (FOR WEB-BASED GUIDES):** When you identify a valid web-based study guide (especially multi-page guides like `/pages/1`), you must extract its content using the following strict rules:
+   - **The Jina Prefix (MANDATORY):** You MUST prepend `https://r.jina.ai/` to the target URL before reading it. (Example: `https://r.jina.ai/https://uniontestprep.com/...`). This forces the web page into a readable raw text/HTML format.
+   - **ZERO SUMMARIZATION:** You are STRICTLY FORBIDDEN from summarizing, condensing, or paraphrasing the text.
+   - **VERBATIM HTML EXTRACTION:** Extract 100% of the educational body content exactly as written. Preserve structural HTML tags (`<h1>`, `<h2>`, `<p>`, `<ul>`, `<table>`). Exclude navigation menus and ads.
+   - **PAGINATION HANDLING:** If the URL implies multiple pages, you must attempt to sequentially extract all connected pages for that topic and combine them into a single, comprehensive source file.
+3. **API Storage (MANDATORY):** Once authoritative direct links (web links or .pdf/.doc) are identified, you MUST push/upload những tài liệu thô (raw) này lên [Shared Repository API Endpoint]. Bạn phải lưu toàn bộ nội dung đã trích xuất theo định dạng thô nhất có thể. You must tag/save every uploaded resource strictly using the exact `[app_name]` as the identifier.
+4. **Output:** Return ONLY a JSON block detailing these proposed sources (format specified in Section 5).
 
 ---
 
