@@ -1,0 +1,105 @@
+◇ injecting env (1) from .env // tip: ◈ secrets for agents [www.dotenvx.com]
+[36mtiktok-comments-scraper runId:Emxtf49lC7HHRup5R -> [39m2026-04-07T06:13:59.502Z ACTOR: Pulling container image of build FCPHHhdngeDj57aay from registry.
+[36mtiktok-comments-scraper runId:Emxtf49lC7HHRup5R -> [39m2026-04-07T06:13:59.504Z ACTOR: Creating container.
+[36mtiktok-comments-scraper runId:Emxtf49lC7HHRup5R -> [39m2026-04-07T06:13:59.655Z ACTOR: Starting container.
+[36mtiktok-comments-scraper runId:Emxtf49lC7HHRup5R -> [39m2026-04-07T06:13:59.655Z ACTOR: Running under "LIMITED_PERMISSIONS" permission level.
+[36mtiktok-comments-scraper runId:Emxtf49lC7HHRup5R -> [39m2026-04-07T06:13:59.863Z Running on architecture: x86_64
+[36mtiktok-comments-scraper runId:Emxtf49lC7HHRup5R -> [39m2026-04-07T06:13:59.864Z Will run command: xvfb-run -a -s "-ac -screen 0 1920x1080x24+32 -nolisten tcp" /bin/bash -o pipefail -c bash -c "    java         --enable-native-access=ALL-UNNAMED         -cp classes-test:classes-main:lib/*         com.zhiliaoapp.musically.MetaSec         > /dev/null &     node dist/entrypoint.js "
+[36mtiktok-comments-scraper runId:Emxtf49lC7HHRup5R -> [39m2026-04-07T06:14:00.725Z [32mINFO[39m  System info[90m {"apifyVersion":"3.5.2","apifyClientVersion":"2.22.0","crawleeVersion":"3.15.3","osType":"Linux","nodeVersion":"v22.22.2"}[39m
+[36mtiktok-comments-scraper runId:Emxtf49lC7HHRup5R -> [39m2026-04-07T06:14:01.219Z [32mINFO[39m [33m CheerioCrawler:[39m Starting the crawler.
+[36mtiktok-comments-scraper runId:Emxtf49lC7HHRup5R -> [39m2026-04-07T06:14:03.392Z [32mINFO[39m  [POST] Starting the post scrape.  --- https://www.tiktok.com/@techwithchizzy/video/7624849595188645150
+[36mtiktok-comments-scraper runId:Emxtf49lC7HHRup5R -> [39m2026-04-07T06:14:03.392Z [32mINFO[39m  [POST] Starting the comments scrape.  --- https://www.tiktok.com/@techwithchizzy/video/7624849595188645150
+[36mtiktok-comments-scraper runId:Emxtf49lC7HHRup5R -> [39m2026-04-07T06:14:03.429Z [32mINFO[39m  [POST] Post scraped successfully.  --- https://www.tiktok.com/@techwithchizzy/video/7624849595188645150
+[36mtiktok-comments-scraper runId:Emxtf49lC7HHRup5R -> [39m2026-04-07T06:14:04.537Z [32mINFO[39m  Scraped 11 new comments. --- https://www.tiktok.com/@techwithchizzy/video/7624849595188645150
+[36mtiktok-comments-scraper runId:Emxtf49lC7HHRup5R -> [39m2026-04-07T06:14:05.782Z [32mINFO[39m  Scraped 1 new comments. --- https://www.tiktok.com/@techwithchizzy/video/7624849595188645150
+[36mtiktok-comments-scraper runId:Emxtf49lC7HHRup5R -> [39m2026-04-07T06:14:07.640Z [33mWARN[39m  Blocked response, retrying...[90m {"attempt":1,"paginationInfo":{"cursor":"11","index":1,"batchInfo":{"batchIndex":0,"batchSize":5}}}[39m
+[36mtiktok-comments-scraper runId:Emxtf49lC7HHRup5R -> [39m2026-04-07T06:14:08.506Z [33mWARN[39m  The post has no more top-level comments to scrape. --- https://www.tiktok.com/@techwithchizzy/video/7624849595188645150
+[36mtiktok-comments-scraper runId:Emxtf49lC7HHRup5R -> [39m2026-04-07T06:14:08.667Z [33mWARN[39m  The post has no more top-level comments to scrape. --- https://www.tiktok.com/@techwithchizzy/video/7624849595188645150
+[36mtiktok-comments-scraper runId:Emxtf49lC7HHRup5R -> [39m2026-04-07T06:14:10.675Z [33mWARN[39m  The post has no more top-level comments to scrape. --- https://www.tiktok.com/@techwithchizzy/video/7624849595188645150
+[36mtiktok-comments-scraper runId:Emxtf49lC7HHRup5R -> [39m2026-04-07T06:14:11.141Z [32mINFO[39m  [Status message]: Scraped 0/1 posts for top-level comments. Total comments scraped: 12.
+[36mtiktok-comments-scraper runId:Emxtf49lC7HHRup5R -> [39m2026-04-07T06:14:20.178Z [33mWARN[39m  Blocked response, retrying...[90m {"attempt":1,"paginationInfo":{"cursor":"12","index":2,"batchInfo":{"batchIndex":0,"batchSize":5}}}[39m
+[36mtiktok-comments-scraper runId:Emxtf49lC7HHRup5R -> [39m2026-04-07T06:14:21.140Z [32mINFO[39m  [Status message]: Scraped 0/1 posts for top-level comments. Total comments scraped: 12.
+[36mtiktok-comments-scraper runId:Emxtf49lC7HHRup5R -> [39m2026-04-07T06:14:24.521Z [33mWARN[39m  The post has no more top-level comments to scrape. --- https://www.tiktok.com/@techwithchizzy/video/7624849595188645150
+[36mtiktok-comments-scraper runId:Emxtf49lC7HHRup5R -> [39m2026-04-07T06:14:31.140Z [32mINFO[39m  [Status message]: Scraped 1/1 posts for top-level comments. Total comments scraped: 12.
+[36mtiktok-comments-scraper runId:Emxtf49lC7HHRup5R -> [39m2026-04-07T06:14:33.784Z [33mWARN[39m [33m CheerioCrawler:[39m Reclaiming failed request back to the list or queue. Request timed out after 30 seconds
+[36mtiktok-comments-scraper runId:Emxtf49lC7HHRup5R -> [39m2026-04-07T06:14:33.785Z     at async sendCurlRequest (file:///home/myuser/dist/tools/api/curl-request.js:28:43)[90m {"id":"NJVgUXljaOxgSRX","url":"https://www.tiktok.com/@techwithchizzy/video/7624849595188645150","retryCount":1}[39m
+[36mtiktok-comments-scraper runId:Emxtf49lC7HHRup5R -> [39m2026-04-07T06:14:40.417Z [33mWARN[39m  The post has no more top-level comments to scrape. --- https://www.tiktok.com/@techwithchizzy/video/7624849595188645150
+[36mtiktok-comments-scraper runId:Emxtf49lC7HHRup5R -> [39m2026-04-07T06:14:40.493Z [32mINFO[39m [33m CheerioCrawler:[39m All requests from the queue have been processed, the crawler will shut down.
+[36mtiktok-comments-scraper runId:Emxtf49lC7HHRup5R -> [39m2026-04-07T06:14:40.659Z [32mINFO[39m [33m CheerioCrawler:[39m Final request statistics:[90m {"requestsFinished":12,"requestsFailed":0,"retryHistogram":[11,1],"requestAvgFailedDurationMillis":null,"requestAvgFinishedDurationMillis":3666,"requestsFinishedPerMinute":18,"requestsFailedPerMinute":0,"requestTotalDurationMillis":43990,"requestsTotal":12,"crawlerRuntimeMillis":39555}[39m
+[36mtiktok-comments-scraper runId:Emxtf49lC7HHRup5R -> [39m2026-04-07T06:14:40.660Z [32mINFO[39m [33m CheerioCrawler:[39m Finished! Total 12 requests: 12 succeeded, 0 failed.[90m {"terminal":true}[39m
+[36mtiktok-comments-scraper runId:Emxtf49lC7HHRup5R -> [39m2026-04-07T06:14:40.660Z [32mINFO[39m  [Status message]: Scraped 1/1 posts for top-level comments. Total comments scraped: 12.
+[36mtiktok-comments-scraper runId:Emxtf49lC7HHRup5R -> [39m2026-04-07T06:14:40.766Z [32mINFO[39m  [Status message]: Scraped 1/1 posts for top-level comments. Total comments scraped: 12.
+[
+  {
+    "text": "Her",
+    "likes": 1,
+    "author": "lowkeyfreak101",
+    "createTime": "2026-04-04T12:19:47.000Z"
+  },
+  {
+    "text": "H.E.R",
+    "likes": 1,
+    "author": "iloveme8693",
+    "createTime": "2026-04-04T12:15:31.000Z"
+  },
+  {
+    "text": "Her",
+    "likes": 1,
+    "author": "ittz_mnkgoeng",
+    "createTime": "2026-04-04T19:06:01.000Z"
+  },
+  {
+    "text": "Her",
+    "likes": 0,
+    "author": "fifi1110",
+    "createTime": "2026-04-06T18:24:10.000Z"
+  },
+  {
+    "text": "Her",
+    "likes": 0,
+    "author": "lorlor_lashlounge",
+    "createTime": "2026-04-06T21:00:47.000Z"
+  },
+  {
+    "text": "Her",
+    "likes": 1,
+    "author": "doreenb28",
+    "createTime": "2026-04-04T20:41:44.000Z"
+  },
+  {
+    "text": "Her",
+    "likes": 1,
+    "author": "t_isley",
+    "createTime": "2026-04-04T12:11:56.000Z"
+  },
+  {
+    "text": "HER",
+    "likes": 1,
+    "author": "nma.nwosu",
+    "createTime": "2026-04-04T19:21:17.000Z"
+  },
+  {
+    "text": "Her",
+    "likes": 0,
+    "author": "kubz510",
+    "createTime": "2026-04-06T10:01:15.000Z"
+  },
+  {
+    "text": "her",
+    "likes": 0,
+    "author": "adochndidk1",
+    "createTime": "2026-04-06T21:55:18.000Z"
+  },
+  {
+    "text": "@tracyakapoaloka",
+    "likes": 0,
+    "author": "f.saad_official",
+    "createTime": "2026-04-05T10:57:16.000Z"
+  },
+  {
+    "text": "Were you the one who shared the southern African Netherlands cybersecurity school opportunity on TikTok?",
+    "likes": 1,
+    "author": "myktoria8",
+    "createTime": "2026-04-04T18:15:10.000Z"
+  }
+]

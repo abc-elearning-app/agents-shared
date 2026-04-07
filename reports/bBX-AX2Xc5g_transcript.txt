@@ -1,0 +1,2628 @@
+1
+00:00:0,080 --> 00:00:3,520
+If you're preparing for the CompTIA
+
+2
+00:00:1,510 --> 00:00:3,520
+ 
+
+3
+00:00:1,520 --> 00:00:5,440
+Network Plus or the Security Plus and
+
+4
+00:00:3,510 --> 00:00:5,440
+ 
+
+5
+00:00:3,520 --> 00:00:7,440
+are looking to pass it in the very first
+
+6
+00:00:5,430 --> 00:00:7,440
+ 
+
+7
+00:00:5,440 --> 00:00:8,880
+attempt, then you're in the right place.
+
+8
+00:00:7,430 --> 00:00:8,880
+ 
+
+9
+00:00:7,440 --> 00:00:10,240
+In this video, I'm going to walk you
+
+10
+00:00:8,870 --> 00:00:10,240
+ 
+
+11
+00:00:8,880 --> 00:00:12,000
+through everything right from
+
+12
+00:00:10,230 --> 00:00:12,000
+ 
+
+13
+00:00:10,240 --> 00:00:14,320
+understanding the exam to the exam
+
+14
+00:00:11,990 --> 00:00:14,320
+ 
+
+15
+00:00:12,000 --> 00:00:16,400
+objectives right until what are the
+
+16
+00:00:14,310 --> 00:00:16,400
+ 
+
+17
+00:00:14,320 --> 00:00:17,680
+strategies you need to use on test day.
+
+18
+00:00:16,390 --> 00:00:17,680
+ 
+
+19
+00:00:16,400 --> 00:00:19,119
+Also, make sure that you stick around
+
+20
+00:00:17,670 --> 00:00:19,119
+ 
+
+21
+00:00:17,680 --> 00:00:21,039
+till the very end because I'll be
+
+22
+00:00:19,109 --> 00:00:21,039
+ 
+
+23
+00:00:19,119 --> 00:00:23,199
+sharing three insider tips that not just
+
+24
+00:00:21,029 --> 00:00:23,199
+ 
+
+25
+00:00:21,039 --> 00:00:25,119
+helped me but countless others crush
+
+26
+00:00:23,189 --> 00:00:25,119
+ 
+
+27
+00:00:23,199 --> 00:00:27,039
+this exam on the first try. Let's start
+
+28
+00:00:25,109 --> 00:00:27,039
+ 
+
+29
+00:00:25,119 --> 00:00:30,720
+with a quick overview. The CompTIA
+
+30
+00:00:27,029 --> 00:00:30,720
+ 
+
+31
+00:00:27,039 --> 00:00:33,200
+network plus which is the N10-00009
+
+32
+00:00:30,710 --> 00:00:33,200
+ 
+
+33
+00:00:30,720 --> 00:00:35,600
+focuses on networking fundamentals which
+
+34
+00:00:33,190 --> 00:00:35,600
+ 
+
+35
+00:00:33,200 --> 00:00:37,680
+is vendor neutral as compared to let's
+
+36
+00:00:35,590 --> 00:00:37,680
+ 
+
+37
+00:00:35,600 --> 00:00:39,600
+say the CCNA for example which is vendor
+
+38
+00:00:37,670 --> 00:00:39,600
+ 
+
+39
+00:00:37,680 --> 00:00:42,239
+focused whereas the CompTIA security
+
+40
+00:00:39,590 --> 00:00:42,239
+ 
+
+41
+00:00:39,600 --> 00:00:44,399
+plus which is the S50-701
+
+42
+00:00:42,229 --> 00:00:44,399
+ 
+
+43
+00:00:42,239 --> 00:00:46,160
+exam focuses on cyber security
+
+44
+00:00:44,389 --> 00:00:46,160
+ 
+
+45
+00:00:44,399 --> 00:00:47,760
+fundamentals. On the Netbook Plus,
+
+46
+00:00:46,150 --> 00:00:47,760
+ 
+
+47
+00:00:46,160 --> 00:00:49,440
+you'll learn things like networking
+
+48
+00:00:47,750 --> 00:00:49,440
+ 
+
+49
+00:00:47,760 --> 00:00:50,800
+basics, networking architectures,
+
+50
+00:00:49,430 --> 00:00:50,800
+ 
+
+51
+00:00:49,440 --> 00:00:52,879
+network security, network
+
+52
+00:00:50,790 --> 00:00:52,879
+ 
+
+53
+00:00:50,800 --> 00:00:54,320
+troubleshooting. Whereas on the Compia
+
+54
+00:00:52,869 --> 00:00:54,320
+ 
+
+55
+00:00:52,879 --> 00:00:55,920
+Security Plus, you'll learn a little bit
+
+56
+00:00:54,310 --> 00:00:55,920
+ 
+
+57
+00:00:54,320 --> 00:00:57,680
+more about incident management,
+
+58
+00:00:55,910 --> 00:00:57,680
+ 
+
+59
+00:00:55,920 --> 00:00:59,520
+vulnerabilities, what are the different
+
+60
+00:00:57,670 --> 00:00:59,520
+ 
+
+61
+00:00:57,680 --> 00:01:1,520
+types of malares, risk management
+
+62
+00:00:59,510 --> 00:01:1,520
+ 
+
+63
+00:00:59,520 --> 00:01:3,440
+processes, etc. Both exams are
+
+64
+00:01:1,510 --> 00:01:3,440
+ 
+
+65
+00:01:1,520 --> 00:01:5,119
+performance-based, which means you'll be
+
+66
+00:01:3,430 --> 00:01:5,119
+ 
+
+67
+00:01:3,440 --> 00:01:7,920
+getting multiple choice questions as
+
+68
+00:01:5,109 --> 00:01:7,920
+ 
+
+69
+00:01:5,119 --> 00:01:9,840
+well as handson practical questions so
+
+70
+00:01:7,910 --> 00:01:9,840
+ 
+
+71
+00:01:7,920 --> 00:01:11,520
+that your theoretical knowledge as well
+
+72
+00:01:9,830 --> 00:01:11,520
+ 
+
+73
+00:01:9,840 --> 00:01:13,280
+as your practical knowledge can be
+
+74
+00:01:11,510 --> 00:01:13,280
+ 
+
+75
+00:01:11,520 --> 00:01:16,080
+tested. This is also documented on
+
+76
+00:01:13,270 --> 00:01:16,080
+ 
+
+77
+00:01:13,280 --> 00:01:18,159
+Comtia's official site as PBQ also known
+
+78
+00:01:16,070 --> 00:01:18,159
+ 
+
+79
+00:01:16,080 --> 00:01:19,920
+as performance-based questions. The time
+
+80
+00:01:18,149 --> 00:01:19,920
+ 
+
+81
+00:01:18,159 --> 00:01:21,759
+duration for both these exams that is
+
+82
+00:01:19,910 --> 00:01:21,759
+ 
+
+83
+00:01:19,920 --> 00:01:24,400
+the network plus and the security plus
+
+84
+00:01:21,749 --> 00:01:24,400
+ 
+
+85
+00:01:21,759 --> 00:01:27,520
+is 90 minutes with the passing score for
+
+86
+00:01:24,390 --> 00:01:27,520
+ 
+
+87
+00:01:24,400 --> 00:01:29,840
+the network plus is 720 or 900 which is
+
+88
+00:01:27,510 --> 00:01:29,840
+ 
+
+89
+00:01:27,520 --> 00:01:32,320
+a scaled score whereas for the CompTIA
+
+90
+00:01:29,830 --> 00:01:32,320
+ 
+
+91
+00:01:29,840 --> 00:01:34,159
+plus it's 750 out of 900 once again
+
+92
+00:01:32,310 --> 00:01:34,159
+ 
+
+93
+00:01:32,320 --> 00:01:36,079
+which is a scale score. So yeah key
+
+94
+00:01:34,149 --> 00:01:36,079
+ 
+
+95
+00:01:34,159 --> 00:01:38,560
+takeaways from this is that these exams
+
+96
+00:01:36,069 --> 00:01:38,560
+ 
+
+97
+00:01:36,079 --> 00:01:41,040
+are not just about memorization but
+
+98
+00:01:38,550 --> 00:01:41,040
+ 
+
+99
+00:01:38,560 --> 00:01:42,960
+rather practical hands-on application as
+
+100
+00:01:41,030 --> 00:01:42,960
+ 
+
+101
+00:01:41,040 --> 00:01:45,200
+well. Now, in order to pass these exams
+
+102
+00:01:42,950 --> 00:01:45,200
+ 
+
+103
+00:01:42,960 --> 00:01:47,920
+on the first attempt, it's crucial that
+
+104
+00:01:45,190 --> 00:01:47,920
+ 
+
+105
+00:01:45,200 --> 00:01:50,159
+we have a strong and foolproof study
+
+106
+00:01:47,910 --> 00:01:50,159
+ 
+
+107
+00:01:47,920 --> 00:01:52,079
+plan. In order to do this, let's first
+
+108
+00:01:50,149 --> 00:01:52,079
+ 
+
+109
+00:01:50,159 --> 00:01:54,560
+set aside the duration that we've got to
+
+110
+00:01:52,069 --> 00:01:54,560
+ 
+
+111
+00:01:52,079 --> 00:01:56,320
+spend for each of these exams. Now, what
+
+112
+00:01:54,550 --> 00:01:56,320
+ 
+
+113
+00:01:54,560 --> 00:01:58,479
+I strongly recommend is is that you
+
+114
+00:01:56,310 --> 00:01:58,479
+ 
+
+115
+00:01:56,320 --> 00:02:0,719
+don't study both at the same time.
+
+116
+00:01:58,469 --> 00:02:0,719
+ 
+
+117
+00:01:58,479 --> 00:02:2,159
+Rather, first clear one exam and then
+
+118
+00:02:0,709 --> 00:02:2,159
+ 
+
+119
+00:02:0,719 --> 00:02:4,000
+focus on the other exam. And the
+
+120
+00:02:2,149 --> 00:02:4,000
+ 
+
+121
+00:02:2,159 --> 00:02:6,320
+strategy that I would recommend is you
+
+122
+00:02:3,990 --> 00:02:6,320
+ 
+
+123
+00:02:4,000 --> 00:02:9,200
+first focus on the network plus. Give
+
+124
+00:02:6,310 --> 00:02:9,200
+ 
+
+125
+00:02:6,320 --> 00:02:11,840
+about 6 to 8 weeks with 2 to three hours
+
+126
+00:02:9,190 --> 00:02:11,840
+ 
+
+127
+00:02:9,200 --> 00:02:14,160
+of study per day for the network plus.
+
+128
+00:02:11,830 --> 00:02:14,160
+ 
+
+129
+00:02:11,840 --> 00:02:15,599
+Clear that exam first. And once that's
+
+130
+00:02:14,150 --> 00:02:15,599
+ 
+
+131
+00:02:14,160 --> 00:02:18,160
+done, you then turn your attention
+
+132
+00:02:15,589 --> 00:02:18,160
+ 
+
+133
+00:02:15,599 --> 00:02:20,480
+towards the CompTIA security plus. Once
+
+134
+00:02:18,150 --> 00:02:20,480
+ 
+
+135
+00:02:18,160 --> 00:02:22,959
+again with a similar timeline of about 6
+
+136
+00:02:20,470 --> 00:02:22,959
+ 
+
+137
+00:02:20,480 --> 00:02:25,200
+to 8 weeks with about 2 to 3 hours of
+
+138
+00:02:22,949 --> 00:02:25,200
+ 
+
+139
+00:02:22,959 --> 00:02:26,879
+study per day. Now with the study per
+
+140
+00:02:25,190 --> 00:02:26,879
+ 
+
+141
+00:02:25,200 --> 00:02:29,440
+day, keep in mind that you don't need to
+
+142
+00:02:26,869 --> 00:02:29,440
+ 
+
+143
+00:02:26,879 --> 00:02:32,160
+study every single day of the week. Even
+
+144
+00:02:29,430 --> 00:02:32,160
+ 
+
+145
+00:02:29,440 --> 00:02:33,920
+four days or 5 days of quality study is
+
+146
+00:02:32,150 --> 00:02:33,920
+ 
+
+147
+00:02:32,160 --> 00:02:36,160
+enough. So don't burden yourself that
+
+148
+00:02:33,910 --> 00:02:36,160
+ 
+
+149
+00:02:33,920 --> 00:02:37,840
+you got to study every single day. Let's
+
+150
+00:02:36,150 --> 00:02:37,840
+ 
+
+151
+00:02:36,160 --> 00:02:40,080
+say if you want to do every single day,
+
+152
+00:02:37,830 --> 00:02:40,080
+ 
+
+153
+00:02:37,840 --> 00:02:42,640
+then just reduce it to 1 to 2 hours
+
+154
+00:02:40,070 --> 00:02:42,640
+ 
+
+155
+00:02:40,080 --> 00:02:44,080
+because burnout is a real thing in the
+
+156
+00:02:42,630 --> 00:02:44,080
+ 
+
+157
+00:02:42,640 --> 00:02:45,920
+long run and that's something you want
+
+158
+00:02:44,070 --> 00:02:45,920
+ 
+
+159
+00:02:44,080 --> 00:02:48,080
+to avoid as well. With the study plan
+
+160
+00:02:45,910 --> 00:02:48,080
+ 
+
+161
+00:02:45,920 --> 00:02:50,560
+for both of the exams, you got to start
+
+162
+00:02:48,070 --> 00:02:50,560
+ 
+
+163
+00:02:48,080 --> 00:02:52,640
+off with the exam objectives. The exam
+
+164
+00:02:50,550 --> 00:02:52,640
+ 
+
+165
+00:02:50,560 --> 00:02:55,280
+objectives are listed on CompTIA's
+
+166
+00:02:52,630 --> 00:02:55,280
+ 
+
+167
+00:02:52,640 --> 00:02:58,319
+website for both of these exams. And
+
+168
+00:02:55,270 --> 00:02:58,319
+ 
+
+169
+00:02:55,280 --> 00:03:0,319
+it's very important to understand and be
+
+170
+00:02:58,309 --> 00:03:0,319
+ 
+
+171
+00:02:58,319 --> 00:03:2,319
+very familiar with the exam objectives
+
+172
+00:03:0,309 --> 00:03:2,319
+ 
+
+173
+00:03:0,319 --> 00:03:4,319
+because your exam at the end of the day
+
+174
+00:03:2,309 --> 00:03:4,319
+ 
+
+175
+00:03:2,319 --> 00:03:5,920
+is going to be based on these objectives
+
+176
+00:03:4,309 --> 00:03:5,920
+ 
+
+177
+00:03:4,319 --> 00:03:7,440
+itself. The links for everything that
+
+178
+00:03:5,910 --> 00:03:7,440
+ 
+
+179
+00:03:5,920 --> 00:03:9,040
+I'll be discussing in this video is
+
+180
+00:03:7,430 --> 00:03:9,040
+ 
+
+181
+00:03:7,440 --> 00:03:10,800
+going to be in the description box. So
+
+182
+00:03:9,030 --> 00:03:10,800
+ 
+
+183
+00:03:9,040 --> 00:03:12,480
+please you can check them out later on.
+
+184
+00:03:10,790 --> 00:03:12,480
+ 
+
+185
+00:03:10,800 --> 00:03:14,319
+But looking at the exam objectives for
+
+186
+00:03:12,470 --> 00:03:14,319
+ 
+
+187
+00:03:12,480 --> 00:03:16,720
+the netbook plus you start off with
+
+188
+00:03:14,309 --> 00:03:16,720
+ 
+
+189
+00:03:14,319 --> 00:03:20,080
+networking concepts which constitutes
+
+190
+00:03:16,710 --> 00:03:20,080
+ 
+
+191
+00:03:16,720 --> 00:03:21,920
+around 23% of your syllabus. After that,
+
+192
+00:03:20,070 --> 00:03:21,920
+ 
+
+193
+00:03:20,080 --> 00:03:23,280
+you've then got network implementation
+
+194
+00:03:21,910 --> 00:03:23,280
+ 
+
+195
+00:03:21,920 --> 00:03:25,599
+which has routing and switching
+
+196
+00:03:23,270 --> 00:03:25,599
+ 
+
+197
+00:03:23,280 --> 00:03:27,920
+implementations, wireless devices as
+
+198
+00:03:25,589 --> 00:03:27,920
+ 
+
+199
+00:03:25,599 --> 00:03:29,360
+well as physical installations.
+
+200
+00:03:27,910 --> 00:03:29,360
+ 
+
+201
+00:03:27,920 --> 00:03:31,599
+Moving on from that, we've then got
+
+202
+00:03:29,350 --> 00:03:31,599
+ 
+
+203
+00:03:29,360 --> 00:03:33,360
+network operations which revolves more
+
+204
+00:03:31,589 --> 00:03:33,360
+ 
+
+205
+00:03:31,599 --> 00:03:35,360
+around network monitoring, disaster
+
+206
+00:03:33,350 --> 00:03:35,360
+ 
+
+207
+00:03:33,360 --> 00:03:39,440
+recovery. You've got network services
+
+208
+00:03:35,350 --> 00:03:39,440
+ 
+
+209
+00:03:35,360 --> 00:03:41,519
+which includes DHCP, DNS, um, NTS, etc.
+
+210
+00:03:39,430 --> 00:03:41,519
+ 
+
+211
+00:03:39,440 --> 00:03:43,760
+You then go into network security which
+
+212
+00:03:41,509 --> 00:03:43,760
+ 
+
+213
+00:03:41,519 --> 00:03:46,400
+is very important in today's day and age
+
+214
+00:03:43,750 --> 00:03:46,400
+ 
+
+215
+00:03:43,760 --> 00:03:49,280
+as well because um the use of firewalls,
+
+216
+00:03:46,390 --> 00:03:49,280
+ 
+
+217
+00:03:46,400 --> 00:03:52,239
+IDS's, IPSS are pretty important in
+
+218
+00:03:49,270 --> 00:03:52,239
+ 
+
+219
+00:03:49,280 --> 00:03:53,840
+today's modern day networking. So that's
+
+220
+00:03:52,229 --> 00:03:53,840
+ 
+
+221
+00:03:52,239 --> 00:03:56,239
+also what you've got and they also show
+
+222
+00:03:53,830 --> 00:03:56,239
+ 
+
+223
+00:03:53,840 --> 00:03:58,080
+you how it ties into the CIA tribe which
+
+224
+00:03:56,229 --> 00:03:58,080
+ 
+
+225
+00:03:56,239 --> 00:04:0,159
+is the confidentiality, integrity,
+
+226
+00:03:58,070 --> 00:04:0,159
+ 
+
+227
+00:03:58,080 --> 00:04:1,599
+availability triad. We'll also look at
+
+228
+00:04:0,149 --> 00:04:1,599
+ 
+
+229
+00:04:0,159 --> 00:04:4,799
+the different types of networkbased
+
+230
+00:04:1,589 --> 00:04:4,799
+ 
+
+231
+00:04:1,599 --> 00:04:7,439
+attacks which is DOSS, DOS, VLAN hopping
+
+232
+00:04:4,789 --> 00:04:7,439
+ 
+
+233
+00:04:4,799 --> 00:04:9,840
+all of those uh deadly attacks that you
+
+234
+00:04:7,429 --> 00:04:9,840
+ 
+
+235
+00:04:7,439 --> 00:04:12,080
+can face in a production environment.
+
+236
+00:04:9,830 --> 00:04:12,080
+ 
+
+237
+00:04:9,840 --> 00:04:13,760
+And finally, we wrap it up with network
+
+238
+00:04:12,070 --> 00:04:13,760
+ 
+
+239
+00:04:12,080 --> 00:04:16,320
+troubleshooting which then constitutes
+
+240
+00:04:13,750 --> 00:04:16,320
+ 
+
+241
+00:04:13,760 --> 00:04:18,000
+24% of your syllabus. Just like the
+
+242
+00:04:16,310 --> 00:04:18,000
+ 
+
+243
+00:04:16,320 --> 00:04:19,919
+network plus, we've also got the exam
+
+244
+00:04:17,990 --> 00:04:19,919
+ 
+
+245
+00:04:18,000 --> 00:04:22,000
+objectives for the security plus once
+
+246
+00:04:19,909 --> 00:04:22,000
+ 
+
+247
+00:04:19,919 --> 00:04:23,360
+again listed on CompTIA's website. So
+
+248
+00:04:21,990 --> 00:04:23,360
+ 
+
+249
+00:04:22,000 --> 00:04:24,880
+let's have a look at that. For the
+
+250
+00:04:23,350 --> 00:04:24,880
+ 
+
+251
+00:04:23,360 --> 00:04:26,560
+security plus, you start off with the
+
+252
+00:04:24,870 --> 00:04:26,560
+ 
+
+253
+00:04:24,880 --> 00:04:29,120
+general security concepts, which is
+
+254
+00:04:26,550 --> 00:04:29,120
+ 
+
+255
+00:04:26,560 --> 00:04:30,400
+about 12% of your syllabus, followed by
+
+256
+00:04:29,110 --> 00:04:30,400
+ 
+
+257
+00:04:29,120 --> 00:04:32,080
+threats, vulnerabilities, and
+
+258
+00:04:30,390 --> 00:04:32,080
+ 
+
+259
+00:04:30,400 --> 00:04:33,919
+mitigations. You've then got security
+
+260
+00:04:32,070 --> 00:04:33,919
+ 
+
+261
+00:04:32,080 --> 00:04:35,520
+architecture. You've got security
+
+262
+00:04:33,909 --> 00:04:35,520
+ 
+
+263
+00:04:33,919 --> 00:04:38,479
+operations just like you had network
+
+264
+00:04:35,510 --> 00:04:38,479
+ 
+
+265
+00:04:35,520 --> 00:04:40,800
+operations in the network plus exam. And
+
+266
+00:04:38,469 --> 00:04:40,800
+ 
+
+267
+00:04:38,479 --> 00:04:42,560
+um you finally wrap it off with security
+
+268
+00:04:40,790 --> 00:04:42,560
+ 
+
+269
+00:04:40,800 --> 00:04:44,800
+program management and oversight, which
+
+270
+00:04:42,550 --> 00:04:44,800
+ 
+
+271
+00:04:42,560 --> 00:04:47,040
+focuses more on compliance, security
+
+272
+00:04:44,790 --> 00:04:47,040
+ 
+
+273
+00:04:44,800 --> 00:04:49,280
+awareness, governance, risk management,
+
+274
+00:04:47,030 --> 00:04:49,280
+ 
+
+275
+00:04:47,040 --> 00:04:50,800
+etc. tailored more towards the GRC side
+
+276
+00:04:49,270 --> 00:04:50,800
+ 
+
+277
+00:04:49,280 --> 00:04:52,479
+of things. Now it's common knowledge
+
+278
+00:04:50,790 --> 00:04:52,479
+ 
+
+279
+00:04:50,800 --> 00:04:54,720
+that in cyber security you need to know
+
+280
+00:04:52,469 --> 00:04:54,720
+ 
+
+281
+00:04:52,479 --> 00:04:57,199
+networking before you go into security.
+
+282
+00:04:54,710 --> 00:04:57,199
+ 
+
+283
+00:04:54,720 --> 00:04:59,919
+Therefore following that logic once
+
+284
+00:04:57,189 --> 00:04:59,919
+ 
+
+285
+00:04:57,199 --> 00:05:1,600
+again as I said you do the network plus
+
+286
+00:04:59,909 --> 00:05:1,600
+ 
+
+287
+00:04:59,919 --> 00:05:3,120
+first and then you look at the security
+
+288
+00:05:1,590 --> 00:05:3,120
+ 
+
+289
+00:05:1,600 --> 00:05:5,040
+plus. Once you're done with the exam
+
+290
+00:05:3,110 --> 00:05:5,040
+ 
+
+291
+00:05:3,120 --> 00:05:7,919
+objectives we then move on to the actual
+
+292
+00:05:5,030 --> 00:05:7,919
+ 
+
+293
+00:05:5,040 --> 00:05:9,840
+study plan which involves a video course
+
+294
+00:05:7,909 --> 00:05:9,840
+ 
+
+295
+00:05:7,919 --> 00:05:11,759
+the study guide as well as practice
+
+296
+00:05:9,830 --> 00:05:11,759
+ 
+
+297
+00:05:9,840 --> 00:05:13,280
+exams. Starting off with video courses.
+
+298
+00:05:11,749 --> 00:05:13,280
+ 
+
+299
+00:05:11,759 --> 00:05:15,120
+If you're looking for a structured and
+
+300
+00:05:13,270 --> 00:05:15,120
+ 
+
+301
+00:05:13,280 --> 00:05:17,759
+comprehensive video course, then I would
+
+302
+00:05:15,110 --> 00:05:17,759
+ 
+
+303
+00:05:15,120 --> 00:05:19,840
+like to share Zero to Mastery's Comptia
+
+304
+00:05:17,749 --> 00:05:19,840
+ 
+
+305
+00:05:17,759 --> 00:05:21,759
+Network Plus and Security Plus playlist
+
+306
+00:05:19,830 --> 00:05:21,759
+ 
+
+307
+00:05:19,840 --> 00:05:24,000
+with you. Both of these playlists are
+
+308
+00:05:21,749 --> 00:05:24,000
+ 
+
+309
+00:05:21,759 --> 00:05:25,520
+about 9 hours long. And once you sign up
+
+310
+00:05:23,990 --> 00:05:25,520
+ 
+
+311
+00:05:24,000 --> 00:05:27,360
+with Zero to Mastery, the link is going
+
+312
+00:05:25,510 --> 00:05:27,360
+ 
+
+313
+00:05:25,520 --> 00:05:29,199
+to be in the description. So you can use
+
+314
+00:05:27,350 --> 00:05:29,199
+ 
+
+315
+00:05:27,360 --> 00:05:31,039
+that link to sign up. But once you're
+
+316
+00:05:29,189 --> 00:05:31,039
+ 
+
+317
+00:05:29,199 --> 00:05:33,120
+signed up, you can then also explore
+
+318
+00:05:31,029 --> 00:05:33,120
+ 
+
+319
+00:05:31,039 --> 00:05:34,800
+other courses on the platform as well.
+
+320
+00:05:33,110 --> 00:05:34,800
+ 
+
+321
+00:05:33,120 --> 00:05:36,800
+But with the CompTIA Netbook Plus and
+
+322
+00:05:34,790 --> 00:05:36,800
+ 
+
+323
+00:05:34,800 --> 00:05:38,800
+the Security Plus, these are pretty
+
+324
+00:05:36,790 --> 00:05:38,800
+ 
+
+325
+00:05:36,800 --> 00:05:41,039
+comprehensive and end-to-end courses
+
+326
+00:05:38,790 --> 00:05:41,039
+ 
+
+327
+00:05:38,800 --> 00:05:42,880
+which also have practice exams at the
+
+328
+00:05:41,029 --> 00:05:42,880
+ 
+
+329
+00:05:41,039 --> 00:05:44,400
+end of the course. Once you complete the
+
+330
+00:05:42,870 --> 00:05:44,400
+ 
+
+331
+00:05:42,880 --> 00:05:45,919
+course content, you also get a
+
+332
+00:05:44,390 --> 00:05:45,919
+ 
+
+333
+00:05:44,400 --> 00:05:47,759
+certificate of completion which you can
+
+334
+00:05:45,909 --> 00:05:47,759
+ 
+
+335
+00:05:45,919 --> 00:05:49,440
+then share onto LinkedIn so that you
+
+336
+00:05:47,749 --> 00:05:49,440
+ 
+
+337
+00:05:47,759 --> 00:05:51,759
+know recruiters or anyone out there
+
+338
+00:05:49,430 --> 00:05:51,759
+ 
+
+339
+00:05:49,440 --> 00:05:53,360
+knows that you've already studied for
+
+340
+00:05:51,749 --> 00:05:53,360
+ 
+
+341
+00:05:51,759 --> 00:05:54,720
+this exam which is also pretty
+
+342
+00:05:53,350 --> 00:05:54,720
+ 
+
+343
+00:05:53,360 --> 00:05:57,039
+important. Let's say if you don't want
+
+344
+00:05:54,710 --> 00:05:57,039
+ 
+
+345
+00:05:54,720 --> 00:05:58,400
+to give the actual exam in that case
+
+346
+00:05:57,029 --> 00:05:58,400
+ 
+
+347
+00:05:57,039 --> 00:06:0,639
+just having the certificate of
+
+348
+00:05:58,390 --> 00:06:0,639
+ 
+
+349
+00:05:58,400 --> 00:06:1,919
+completion also holds value and look
+
+350
+00:06:0,629 --> 00:06:1,919
+ 
+
+351
+00:06:0,639 --> 00:06:4,000
+there are plenty of other video
+
+352
+00:06:1,909 --> 00:06:4,000
+ 
+
+353
+00:06:1,919 --> 00:06:6,400
+resources as well for example one is
+
+354
+00:06:3,990 --> 00:06:6,400
+ 
+
+355
+00:06:4,000 --> 00:06:8,800
+professor Messor's playlist on YouTube
+
+356
+00:06:6,390 --> 00:06:8,800
+ 
+
+357
+00:06:6,400 --> 00:06:10,880
+but what sets zero to mastery apart is
+
+358
+00:06:8,790 --> 00:06:10,880
+ 
+
+359
+00:06:8,800 --> 00:06:13,600
+that it focuses on not just theoretical
+
+360
+00:06:10,870 --> 00:06:13,600
+ 
+
+361
+00:06:10,880 --> 00:06:16,160
+stuff but as I said it also focuses on
+
+362
+00:06:13,590 --> 00:06:16,160
+ 
+
+363
+00:06:13,600 --> 00:06:19,199
+the hands-on practical stuff with real
+
+364
+00:06:16,150 --> 00:06:19,199
+ 
+
+365
+00:06:16,160 --> 00:06:21,120
+world scenarios used in teaching as well
+
+366
+00:06:19,189 --> 00:06:21,120
+ 
+
+367
+00:06:19,199 --> 00:06:22,560
+as in the practice exams and sometimes
+
+368
+00:06:21,110 --> 00:06:22,560
+ 
+
+369
+00:06:21,120 --> 00:06:24,080
+what happens is when you're studying you
+
+370
+00:06:22,550 --> 00:06:24,080
+ 
+
+371
+00:06:22,560 --> 00:06:25,280
+can get pretty lonely in the process
+
+372
+00:06:24,070 --> 00:06:25,280
+ 
+
+373
+00:06:24,080 --> 00:06:26,880
+especially if you don't have other
+
+374
+00:06:25,270 --> 00:06:26,880
+ 
+
+375
+00:06:25,280 --> 00:06:29,039
+friends that are also attempting the
+
+376
+00:06:26,870 --> 00:06:29,039
+ 
+
+377
+00:06:26,880 --> 00:06:30,880
+exam at the same time that is where zero
+
+378
+00:06:29,029 --> 00:06:30,880
+ 
+
+379
+00:06:29,039 --> 00:06:33,360
+to mastery has got a discord community
+
+380
+00:06:30,870 --> 00:06:33,360
+ 
+
+381
+00:06:30,880 --> 00:06:35,520
+as well where you can get access to this
+
+382
+00:06:33,350 --> 00:06:35,520
+ 
+
+383
+00:06:33,360 --> 00:06:37,840
+community and you can connect with other
+
+384
+00:06:35,510 --> 00:06:37,840
+ 
+
+385
+00:06:35,520 --> 00:06:40,000
+students post questions um see what
+
+386
+00:06:37,830 --> 00:06:40,000
+ 
+
+387
+00:06:37,840 --> 00:06:42,720
+their study plans are collaborate and
+
+388
+00:06:39,990 --> 00:06:42,720
+ 
+
+389
+00:06:40,000 --> 00:06:44,560
+get an idea of pretty much a sense of
+
+390
+00:06:42,710 --> 00:06:44,560
+ 
+
+391
+00:06:42,720 --> 00:06:46,560
+community when you're attempting this
+
+392
+00:06:44,550 --> 00:06:46,560
+ 
+
+393
+00:06:44,560 --> 00:06:48,800
+exam along with this zero to mastery
+
+394
+00:06:46,550 --> 00:06:48,800
+ 
+
+395
+00:06:46,560 --> 00:06:50,560
+also has a streak system with badges
+
+396
+00:06:48,790 --> 00:06:50,560
+ 
+
+397
+00:06:48,800 --> 00:06:52,800
+when you complete certain milestones
+
+398
+00:06:50,550 --> 00:06:52,800
+ 
+
+399
+00:06:50,560 --> 00:06:54,319
+called as ZTM passport and the main
+
+400
+00:06:52,790 --> 00:06:54,319
+ 
+
+401
+00:06:52,800 --> 00:06:56,240
+Reason for that is is to keep you
+
+402
+00:06:54,309 --> 00:06:56,240
+ 
+
+403
+00:06:54,319 --> 00:06:58,240
+motivated. So I'd highly recommend you
+
+404
+00:06:56,230 --> 00:06:58,240
+ 
+
+405
+00:06:56,240 --> 00:06:59,599
+to check the courses by zero to mastery.
+
+406
+00:06:58,230 --> 00:06:59,599
+ 
+
+407
+00:06:58,240 --> 00:07:1,680
+Again the link is going to be in the
+
+408
+00:06:59,589 --> 00:07:1,680
+ 
+
+409
+00:06:59,599 --> 00:07:3,039
+description. Go and check it out. After
+
+410
+00:07:1,670 --> 00:07:3,039
+ 
+
+411
+00:07:1,680 --> 00:07:5,039
+doing the video course, I'd also
+
+412
+00:07:3,029 --> 00:07:5,039
+ 
+
+413
+00:07:3,039 --> 00:07:7,520
+recommend you then read the study guide
+
+414
+00:07:5,029 --> 00:07:7,520
+ 
+
+415
+00:07:5,039 --> 00:07:9,360
+offered by Comtia now on Comtia's
+
+416
+00:07:7,510 --> 00:07:9,360
+ 
+
+417
+00:07:7,520 --> 00:07:11,199
+website as well or you can check this on
+
+418
+00:07:9,350 --> 00:07:11,199
+ 
+
+419
+00:07:9,360 --> 00:07:13,759
+other websites as well where they sell
+
+420
+00:07:11,189 --> 00:07:13,759
+ 
+
+421
+00:07:11,199 --> 00:07:15,840
+the CompTIA certification kit which
+
+422
+00:07:13,749 --> 00:07:15,840
+ 
+
+423
+00:07:13,759 --> 00:07:18,400
+consists of the study guide as well as a
+
+424
+00:07:15,830 --> 00:07:18,400
+ 
+
+425
+00:07:15,840 --> 00:07:20,639
+book on practice exams. So I'd highly
+
+426
+00:07:18,390 --> 00:07:20,639
+ 
+
+427
+00:07:18,400 --> 00:07:22,560
+recommend you check the study guide out.
+
+428
+00:07:20,629 --> 00:07:22,560
+ 
+
+429
+00:07:20,639 --> 00:07:25,919
+make notes while you're referring to
+
+430
+00:07:22,550 --> 00:07:25,919
+ 
+
+431
+00:07:22,560 --> 00:07:28,000
+your um video library and then you can
+
+432
+00:07:25,909 --> 00:07:28,000
+ 
+
+433
+00:07:25,919 --> 00:07:30,479
+sort of correlate the notes to the study
+
+434
+00:07:27,990 --> 00:07:30,479
+ 
+
+435
+00:07:28,000 --> 00:07:32,160
+guide which goes much in depth. The
+
+436
+00:07:30,469 --> 00:07:32,160
+ 
+
+437
+00:07:30,479 --> 00:07:34,880
+reason why I recommend reading the study
+
+438
+00:07:32,150 --> 00:07:34,880
+ 
+
+439
+00:07:32,160 --> 00:07:37,520
+guide is because video libraries focus a
+
+440
+00:07:34,870 --> 00:07:37,520
+ 
+
+441
+00:07:34,880 --> 00:07:40,720
+lot on highlevel concepts whereas the
+
+442
+00:07:37,510 --> 00:07:40,720
+ 
+
+443
+00:07:37,520 --> 00:07:42,880
+study guide tends to go much in depth
+
+444
+00:07:40,710 --> 00:07:42,880
+ 
+
+445
+00:07:40,720 --> 00:07:44,319
+and look the exams also based on the
+
+446
+00:07:42,870 --> 00:07:44,319
+ 
+
+447
+00:07:42,880 --> 00:07:46,160
+study guide itself. So make sure you
+
+448
+00:07:44,309 --> 00:07:46,160
+ 
+
+449
+00:07:44,319 --> 00:07:47,680
+read the study guide at least one or two
+
+450
+00:07:46,150 --> 00:07:47,680
+ 
+
+451
+00:07:46,160 --> 00:07:49,520
+times as part of your study plans.
+
+452
+00:07:47,670 --> 00:07:49,520
+ 
+
+453
+00:07:47,680 --> 00:07:51,599
+you've also got to focus on hands-on
+
+454
+00:07:49,510 --> 00:07:51,599
+ 
+
+455
+00:07:49,520 --> 00:07:53,759
+stuff and to do that for the network
+
+456
+00:07:51,589 --> 00:07:53,759
+ 
+
+457
+00:07:51,599 --> 00:07:55,919
+plus you got to practice labs with Cisco
+
+458
+00:07:53,749 --> 00:07:55,919
+ 
+
+459
+00:07:53,759 --> 00:07:57,840
+Packet Tracer or um you can use
+
+460
+00:07:55,909 --> 00:07:57,840
+ 
+
+461
+00:07:55,919 --> 00:07:59,440
+Wireshark as well whereas for the
+
+462
+00:07:57,830 --> 00:07:59,440
+ 
+
+463
+00:07:57,840 --> 00:08:1,680
+security plus you can look at labs
+
+464
+00:07:59,430 --> 00:08:1,680
+ 
+
+465
+00:07:59,440 --> 00:08:4,319
+offered by tryh hackme what this does is
+
+466
+00:08:1,670 --> 00:08:4,319
+ 
+
+467
+00:08:1,680 --> 00:08:6,319
+is it gives you that practice not just
+
+468
+00:08:4,309 --> 00:08:6,319
+ 
+
+469
+00:08:4,319 --> 00:08:8,160
+from an exam perspective but also
+
+470
+00:08:6,309 --> 00:08:8,160
+ 
+
+471
+00:08:6,319 --> 00:08:10,319
+strengthens your foundations if let's
+
+472
+00:08:8,150 --> 00:08:10,319
+ 
+
+473
+00:08:8,160 --> 00:08:11,919
+say you want to then work in a junior
+
+474
+00:08:10,309 --> 00:08:11,919
+ 
+
+475
+00:08:10,319 --> 00:08:13,360
+network engineer or a junior cyber
+
+476
+00:08:11,909 --> 00:08:13,360
+ 
+
+477
+00:08:11,919 --> 00:08:14,960
+security engineer role it's also
+
+478
+00:08:13,350 --> 00:08:14,960
+ 
+
+479
+00:08:13,360 --> 00:08:17,360
+important to do practice exams and when
+
+480
+00:08:14,950 --> 00:08:17,360
+ 
+
+481
+00:08:14,960 --> 00:08:20,080
+it comes to practice exams on Udemy
+
+482
+00:08:17,350 --> 00:08:20,080
+ 
+
+483
+00:08:17,360 --> 00:08:22,000
+Jason Dion has got a comprehensive um
+
+484
+00:08:20,070 --> 00:08:22,000
+ 
+
+485
+00:08:20,080 --> 00:08:24,000
+practice exam syllabus. Once again,
+
+486
+00:08:21,990 --> 00:08:24,000
+ 
+
+487
+00:08:22,000 --> 00:08:26,240
+check the link in the description and go
+
+488
+00:08:23,990 --> 00:08:26,240
+ 
+
+489
+00:08:24,000 --> 00:08:27,919
+and have a look at that. But it's pretty
+
+490
+00:08:26,230 --> 00:08:27,919
+ 
+
+491
+00:08:26,240 --> 00:08:29,599
+well respected and it's got a lot of
+
+492
+00:08:27,909 --> 00:08:29,599
+ 
+
+493
+00:08:27,919 --> 00:08:31,440
+reviews from a lot of students who use
+
+494
+00:08:29,589 --> 00:08:31,440
+ 
+
+495
+00:08:29,599 --> 00:08:32,959
+it to clear the exam on the first
+
+496
+00:08:31,430 --> 00:08:32,959
+ 
+
+497
+00:08:31,440 --> 00:08:34,800
+attempt. Also, one thing with the
+
+498
+00:08:32,949 --> 00:08:34,800
+ 
+
+499
+00:08:32,959 --> 00:08:37,440
+practice exams is if you get a question
+
+500
+00:08:34,790 --> 00:08:37,440
+ 
+
+501
+00:08:34,800 --> 00:08:39,200
+wrong, just don't skip over it. Rather
+
+502
+00:08:37,430 --> 00:08:39,200
+ 
+
+503
+00:08:37,440 --> 00:08:40,880
+dive deep into every question that
+
+504
+00:08:39,190 --> 00:08:40,880
+ 
+
+505
+00:08:39,200 --> 00:08:42,800
+you've got wrong. See why you got it
+
+506
+00:08:40,870 --> 00:08:42,800
+ 
+
+507
+00:08:40,880 --> 00:08:44,959
+wrong. Where are your gaps in knowledge?
+
+508
+00:08:42,790 --> 00:08:44,959
+ 
+
+509
+00:08:42,800 --> 00:08:47,600
+And try and fill those gaps. aim to
+
+510
+00:08:44,949 --> 00:08:47,600
+ 
+
+511
+00:08:44,959 --> 00:08:49,200
+consistently score, let's say, 85% or
+
+512
+00:08:47,590 --> 00:08:49,200
+ 
+
+513
+00:08:47,600 --> 00:08:50,720
+higher on all of these practice exams
+
+514
+00:08:49,190 --> 00:08:50,720
+ 
+
+515
+00:08:49,200 --> 00:08:52,720
+because once you do that, then you're
+
+516
+00:08:50,710 --> 00:08:52,720
+ 
+
+517
+00:08:50,720 --> 00:08:54,720
+ready for the actual exam, for the exam
+
+518
+00:08:52,710 --> 00:08:54,720
+ 
+
+519
+00:08:52,720 --> 00:08:57,200
+day. Pretty standard advisers, get good
+
+520
+00:08:54,710 --> 00:08:57,200
+ 
+
+521
+00:08:54,720 --> 00:08:59,760
+rest. Don't cram a lot of information in
+
+522
+00:08:57,190 --> 00:08:59,760
+ 
+
+523
+00:08:57,200 --> 00:09:1,600
+the previous day of the exam. Um try not
+
+524
+00:08:59,750 --> 00:09:1,600
+ 
+
+525
+00:08:59,760 --> 00:09:3,279
+to be overwhelmed when you're giving the
+
+526
+00:09:1,590 --> 00:09:3,279
+ 
+
+527
+00:09:1,600 --> 00:09:5,360
+exam. If you're stuck on a question,
+
+528
+00:09:3,269 --> 00:09:5,360
+ 
+
+529
+00:09:3,279 --> 00:09:7,519
+just flag it, move on, and then you can
+
+530
+00:09:5,350 --> 00:09:7,519
+ 
+
+531
+00:09:5,360 --> 00:09:9,040
+come back to um that flagged question
+
+532
+00:09:7,509 --> 00:09:9,040
+ 
+
+533
+00:09:7,519 --> 00:09:10,800
+right at the end. Also, what I like
+
+534
+00:09:9,030 --> 00:09:10,800
+ 
+
+535
+00:09:9,040 --> 00:09:12,160
+doing is first do the multiple choice
+
+536
+00:09:10,790 --> 00:09:12,160
+ 
+
+537
+00:09:10,800 --> 00:09:13,760
+questions. Once you're done, you can
+
+538
+00:09:12,150 --> 00:09:13,760
+ 
+
+539
+00:09:12,160 --> 00:09:15,040
+then come back to the performance-based
+
+540
+00:09:13,750 --> 00:09:15,040
+ 
+
+541
+00:09:13,760 --> 00:09:16,959
+questions because the multiple choice
+
+542
+00:09:15,030 --> 00:09:16,959
+ 
+
+543
+00:09:15,040 --> 00:09:18,480
+questions are generally quicker to get
+
+544
+00:09:16,949 --> 00:09:18,480
+ 
+
+545
+00:09:16,959 --> 00:09:20,800
+done. And the performance-based
+
+546
+00:09:18,470 --> 00:09:20,800
+ 
+
+547
+00:09:18,480 --> 00:09:22,240
+questions are what can consume time. So,
+
+548
+00:09:20,790 --> 00:09:22,240
+ 
+
+549
+00:09:20,800 --> 00:09:23,760
+get done with your multiple choice and
+
+550
+00:09:22,230 --> 00:09:23,760
+ 
+
+551
+00:09:22,240 --> 00:09:25,680
+then come back to the performance-based
+
+552
+00:09:23,750 --> 00:09:25,680
+ 
+
+553
+00:09:23,760 --> 00:09:27,519
+questions once that's done. And finally,
+
+554
+00:09:25,670 --> 00:09:27,519
+ 
+
+555
+00:09:25,680 --> 00:09:30,480
+stay calm and confident. Trust your
+
+556
+00:09:27,509 --> 00:09:30,480
+ 
+
+557
+00:09:27,519 --> 00:09:32,000
+prep. Trust whatever you've done. You've
+
+558
+00:09:30,470 --> 00:09:32,000
+ 
+
+559
+00:09:30,480 --> 00:09:33,760
+seen all of this before, so don't get
+
+560
+00:09:31,990 --> 00:09:33,760
+ 
+
+561
+00:09:32,000 --> 00:09:35,360
+scared and I'm sure you will be able to
+
+562
+00:09:33,750 --> 00:09:35,360
+ 
+
+563
+00:09:33,760 --> 00:09:36,480
+answer the questions. Now, finally, as
+
+564
+00:09:35,350 --> 00:09:36,480
+ 
+
+565
+00:09:35,360 --> 00:09:38,560
+promised, I'm going to give you three
+
+566
+00:09:36,470 --> 00:09:38,560
+ 
+
+567
+00:09:36,480 --> 00:09:40,720
+insider tips which are a bonus which can
+
+568
+00:09:38,550 --> 00:09:40,720
+ 
+
+569
+00:09:38,560 --> 00:09:43,200
+help you prepare better for this exam.
+
+570
+00:09:40,710 --> 00:09:43,200
+ 
+
+571
+00:09:40,720 --> 00:09:44,720
+The first one is use cheat sheets. Now
+
+572
+00:09:43,190 --> 00:09:44,720
+ 
+
+573
+00:09:43,200 --> 00:09:46,399
+there are plenty of freely available
+
+574
+00:09:44,710 --> 00:09:46,399
+ 
+
+575
+00:09:44,720 --> 00:09:49,040
+cheat sheets online for let's say
+
+576
+00:09:46,389 --> 00:09:49,040
+ 
+
+577
+00:09:46,399 --> 00:09:51,519
+example being with network plus focusing
+
+578
+00:09:49,030 --> 00:09:51,519
+ 
+
+579
+00:09:49,040 --> 00:09:53,680
+on ports protocols etc along with
+
+580
+00:09:51,509 --> 00:09:53,680
+ 
+
+581
+00:09:51,519 --> 00:09:55,600
+security plus for different acronyms.
+
+582
+00:09:53,670 --> 00:09:55,600
+ 
+
+583
+00:09:53,680 --> 00:09:57,680
+Use these cheat sheets and whenever you
+
+584
+00:09:55,590 --> 00:09:57,680
+ 
+
+585
+00:09:55,600 --> 00:09:59,040
+get time you can just have a snippet of
+
+586
+00:09:57,670 --> 00:09:59,040
+ 
+
+587
+00:09:57,680 --> 00:10:0,720
+it on your phone. You can have a look.
+
+588
+00:09:59,030 --> 00:10:0,720
+ 
+
+589
+00:09:59,040 --> 00:10:2,480
+It helps you memorize things better and
+
+590
+00:10:0,710 --> 00:10:2,480
+ 
+
+591
+00:10:0,720 --> 00:10:4,240
+faster. The second thing is teach what
+
+592
+00:10:2,470 --> 00:10:4,240
+ 
+
+593
+00:10:2,480 --> 00:10:5,680
+you learn because teaching is the best
+
+594
+00:10:4,230 --> 00:10:5,680
+ 
+
+595
+00:10:4,240 --> 00:10:7,920
+form of learning and this is something
+
+596
+00:10:5,670 --> 00:10:7,920
+ 
+
+597
+00:10:5,680 --> 00:10:10,399
+which worked wonders for me when I was
+
+598
+00:10:7,910 --> 00:10:10,399
+ 
+
+599
+00:10:7,920 --> 00:10:12,480
+studying for these exams or even in
+
+600
+00:10:10,389 --> 00:10:12,480
+ 
+
+601
+00:10:10,399 --> 00:10:15,200
+general just preparing for any exam in
+
+602
+00:10:12,470 --> 00:10:15,200
+ 
+
+603
+00:10:12,480 --> 00:10:17,440
+networking or cyber security. Explaining
+
+604
+00:10:15,190 --> 00:10:17,440
+ 
+
+605
+00:10:15,200 --> 00:10:19,440
+to someone what I had already learned
+
+606
+00:10:17,430 --> 00:10:19,440
+ 
+
+607
+00:10:17,440 --> 00:10:21,040
+helped me retain things faster and
+
+608
+00:10:19,430 --> 00:10:21,040
+ 
+
+609
+00:10:19,440 --> 00:10:22,800
+better. And finally, as I stated
+
+610
+00:10:21,030 --> 00:10:22,800
+ 
+
+611
+00:10:21,040 --> 00:10:25,200
+earlier, sometimes the prep can get very
+
+612
+00:10:22,790 --> 00:10:25,200
+ 
+
+613
+00:10:22,800 --> 00:10:27,360
+lonely. So try joining some online study
+
+614
+00:10:25,190 --> 00:10:27,360
+ 
+
+615
+00:10:25,200 --> 00:10:29,360
+groups on either Facebook, Discord,
+
+616
+00:10:27,350 --> 00:10:29,360
+ 
+
+617
+00:10:27,360 --> 00:10:31,040
+Reddit, etc. if you're using zero to
+
+618
+00:10:29,350 --> 00:10:31,040
+ 
+
+619
+00:10:29,360 --> 00:10:32,959
+mastery. As I said, they've also got a
+
+620
+00:10:31,030 --> 00:10:32,959
+ 
+
+621
+00:10:31,040 --> 00:10:34,880
+Discord community. So, that will help
+
+622
+00:10:32,949 --> 00:10:34,880
+ 
+
+623
+00:10:32,959 --> 00:10:36,560
+you keep that loneliness at bay. So,
+
+624
+00:10:34,870 --> 00:10:36,560
+ 
+
+625
+00:10:34,880 --> 00:10:38,399
+there you go. This is a plan on how you
+
+626
+00:10:36,550 --> 00:10:38,399
+ 
+
+627
+00:10:36,560 --> 00:10:40,800
+can pass the CompTIA Netbook Plus and
+
+628
+00:10:38,389 --> 00:10:40,800
+ 
+
+629
+00:10:38,399 --> 00:10:42,640
+Security Plus on the first attempt. Um,
+
+630
+00:10:40,790 --> 00:10:42,640
+ 
+
+631
+00:10:40,800 --> 00:10:44,720
+if you've got any questions, doubts, you
+
+632
+00:10:42,630 --> 00:10:44,720
+ 
+
+633
+00:10:42,640 --> 00:10:46,640
+can revisit the video. Again, as I said,
+
+634
+00:10:44,710 --> 00:10:46,640
+ 
+
+635
+00:10:44,720 --> 00:10:48,640
+check the description box. I'm going to
+
+636
+00:10:46,630 --> 00:10:48,640
+ 
+
+637
+00:10:46,640 --> 00:10:51,440
+sort of list all of the points that I
+
+638
+00:10:48,630 --> 00:10:51,440
+ 
+
+639
+00:10:48,640 --> 00:10:53,040
+mentioned in a notepad format as well.
+
+640
+00:10:51,430 --> 00:10:53,040
+ 
+
+641
+00:10:51,440 --> 00:10:54,480
+If you found this video helpful, hit the
+
+642
+00:10:53,030 --> 00:10:54,480
+ 
+
+643
+00:10:53,040 --> 00:10:56,000
+like button, subscribe to the channel,
+
+644
+00:10:54,470 --> 00:10:56,000
+ 
+
+645
+00:10:54,480 --> 00:10:58,480
+and drop your thoughts. Let me know what
+
+646
+00:10:55,990 --> 00:10:58,480
+ 
+
+647
+00:10:56,000 --> 00:11:0,560
+of the strategies you have used to let's
+
+648
+00:10:58,470 --> 00:11:0,560
+ 
+
+649
+00:10:58,480 --> 00:11:2,160
+say pass this exam or what would you
+
+650
+00:11:0,550 --> 00:11:2,160
+ 
+
+651
+00:11:0,560 --> 00:11:3,760
+recommend we should be adding to the
+
+652
+00:11:2,150 --> 00:11:3,760
+ 
+
+653
+00:11:2,160 --> 00:11:4,880
+study plan. Thank you so much for
+
+654
+00:11:3,750 --> 00:11:4,880
+ 
+
+655
+00:11:3,760 --> 00:11:7,880
+watching and I'll see you in the next
+
+656
+00:11:4,870 --> 00:11:7,880
+ 
+
+657
+00:11:4,880 --> 00:11:7,880
+video.
+

@@ -1,0 +1,25 @@
+◇ injecting env (0) from .env // tip: ◈ encrypted .env [www.dotenvx.com]
+[36myoutube-scraper runId:Ds3fD8kThxhnWzzQg -> [39m2026-04-06T02:47:04.192Z ACTOR: Pulling container image of build wCdaPz9PHf9acMDYA from registry.
+[36myoutube-scraper runId:Ds3fD8kThxhnWzzQg -> [39m2026-04-06T02:47:04.194Z ACTOR: Creating container.
+[36myoutube-scraper runId:Ds3fD8kThxhnWzzQg -> [39m2026-04-06T02:47:04.344Z ACTOR: Starting container.
+[36myoutube-scraper runId:Ds3fD8kThxhnWzzQg -> [39m2026-04-06T02:47:04.344Z ACTOR: Running under "LIMITED_PERMISSIONS" permission level.
+[36myoutube-scraper runId:Ds3fD8kThxhnWzzQg -> [39m2026-04-06T02:47:04.588Z Running on architecture: x86_64
+[36myoutube-scraper runId:Ds3fD8kThxhnWzzQg -> [39m2026-04-06T02:47:04.588Z Will run command: xvfb-run -a -s "-ac -screen 0 1920x1080x24+32 -nolisten tcp" node dist/entrypoint.js
+[36myoutube-scraper runId:Ds3fD8kThxhnWzzQg -> [39m2026-04-06T02:47:06.074Z [32mINFO[39m  System info[90m {"apifyVersion":"3.6.0","apifyClientVersion":"2.18.0","crawleeVersion":"3.16.0","osType":"Linux","nodeVersion":"v22.22.2"}[39m
+[36myoutube-scraper runId:Ds3fD8kThxhnWzzQg -> [39m2026-04-06T02:47:06.486Z [32mINFO[39m  Starting scraper with startUrls, ignoring searchQueries
+[36myoutube-scraper runId:Ds3fD8kThxhnWzzQg -> [39m2026-04-06T02:47:06.672Z [32mINFO[39m [33m CheerioCrawler:[39m Starting the crawler.
+[36myoutube-scraper runId:Ds3fD8kThxhnWzzQg -> [39m2026-04-06T02:47:10.195Z [32mINFO[39m  handling detail url https://m.youtube.com/watch?v=N86t3RD2ukU&ucbcb=1
+[36myoutube-scraper runId:Ds3fD8kThxhnWzzQg -> [39m2026-04-06T02:47:16.042Z [32mINFO[39m  Has found 20 comments so far for https://www.youtube.com/watch?v=N86t3RD2ukU.
+[36myoutube-scraper runId:Ds3fD8kThxhnWzzQg -> [39m2026-04-06T02:47:19.193Z [32mINFO[39m [33m CheerioCrawler:[39m All requests from the queue have been processed, the crawler will shut down.
+[36myoutube-scraper runId:Ds3fD8kThxhnWzzQg -> [39m2026-04-06T02:47:19.195Z [32mINFO[39m  Persisting state for videos...
+[36myoutube-scraper runId:Ds3fD8kThxhnWzzQg -> [39m2026-04-06T02:47:19.196Z [32mINFO[39m  Persisting state for comments...
+[36myoutube-scraper runId:Ds3fD8kThxhnWzzQg -> [39m2026-04-06T02:47:19.387Z [32mINFO[39m [33m CheerioCrawler:[39m Final request statistics:[90m {"requestsFinished":18,"requestsFailed":0,"retryHistogram":[18],"requestAvgFailedDurationMillis":null,"requestAvgFinishedDurationMillis":2060,"requestsFinishedPerMinute":84,"requestsFailedPerMinute":0,"requestTotalDurationMillis":37084,"requestsTotal":18,"crawlerRuntimeMillis":12829}[39m
+[36myoutube-scraper runId:Ds3fD8kThxhnWzzQg -> [39m2026-04-06T02:47:19.388Z [32mINFO[39m [33m CheerioCrawler:[39m Finished! Total 18 requests: 18 succeeded, 0 failed.[90m {"terminal":true}[39m
+[36myoutube-scraper runId:Ds3fD8kThxhnWzzQg -> [39m2026-04-06T02:47:19.484Z [32mINFO[39m  Persisting state for videos...
+[36myoutube-scraper runId:Ds3fD8kThxhnWzzQg -> [39m2026-04-06T02:47:19.485Z [32mINFO[39m  Persisting state for comments...
+{
+  "videoId": "N86t3RD2ukU",
+  "title": "CompTIA SecAI+: Is It Actually Worth It? (Recruiter Take)",
+  "transcript": "",
+  "comments": []
+}

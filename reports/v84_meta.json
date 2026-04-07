@@ -1,0 +1,205 @@
+◇ injecting env (1) from .env // tip: ⌘ enable debugging { debug: true }
+Đang truy quét Transcript cho: https://www.youtube.com/watch?v=ppF_kpXv7Zk
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:25:02.536Z ACTOR: Pulling container image of build wCdaPz9PHf9acMDYA from registry.
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:25:02.538Z ACTOR: Creating container.
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:25:02.683Z ACTOR: Starting container.
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:25:02.683Z ACTOR: Running under "LIMITED_PERMISSIONS" permission level.
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:25:02.871Z Running on architecture: x86_64
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:25:02.872Z Will run command: xvfb-run -a -s "-ac -screen 0 1920x1080x24+32 -nolisten tcp" node dist/entrypoint.js
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:25:03.788Z [32mINFO[39m  System info[90m {"apifyVersion":"3.6.0","apifyClientVersion":"2.18.0","crawleeVersion":"3.16.0","osType":"Linux","nodeVersion":"v22.22.2"}[39m
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:25:03.978Z [32mINFO[39m  Starting scraper with startUrls, ignoring searchQueries
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:25:04.167Z [32mINFO[39m [33m CheerioCrawler:[39m Starting the crawler.
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:25:08.826Z [33mWARN[39m [33m CheerioCrawler:[39m Reclaiming failed request back to the list or queue. Error status code encountered - 429
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:25:08.827Z     at CurlImpersonateHttpClient.performRequest (file:///home/myuser/dist/tools/curl-impersonate-http-client.js:77:37)[90m {"id":"WjfNr1W1VJdrXQi","url":"https://m.youtube.com/watch?v=ppF_kpXv7Zk&ucbcb=1","retryCount":1}[39m
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:25:17.789Z [32mINFO[39m  handling detail url https://m.youtube.com/watch?v=ppF_kpXv7Zk&ucbcb=1
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:25:25.756Z [32mINFO[39m  Fetching subtitle language(s) en (type(s): auto_generated) --- https://www.youtube.com/watch?v=ppF_kpXv7Zk
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:25:26.042Z [33mWARN[39m [33m CheerioCrawler:[39m Reclaiming failed request back to the list or queue. SyntaxError: Unexpected token '<', "<html><hea"... is not valid JSON
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:25:26.043Z     at JSON.parse (<anonymous>)
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:25:26.043Z     at Object.srt (file:///home/myuser/dist/subs/common.js:91:55)
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:25:26.043Z     at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:25:26.043Z     at async fetchSubtitleTextWithRetries (file:///home/myuser/dist/routes/subtitles.js:101:32)
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:25:26.044Z     at async Promise.all (index 0)
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:25:26.044Z     at async getVideoDetailWithSubtitle (file:///home/myuser/dist/routes/subtitles.js:48:32)
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:25:26.045Z     at async handleSubtitle (file:///home/myuser/dist/routes/subtitles.js:19:32)
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:25:26.045Z     at async CheerioCrawler.requestHandler (file:///home/myuser/dist/main.js:231:13)
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:25:26.045Z     at async wrap (/home/myuser/node_modules/@apify/timeout/cjs/index.cjs:54:21)[90m {"id":"7DZPys7ZdUaRTrW","url":"https://www.youtube.com/watch?v=ppF_kpXv7Zk","retryCount":1}[39m
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:25:29.397Z [32mINFO[39m  Fetching subtitle language(s) en (type(s): auto_generated) --- https://www.youtube.com/watch?v=ppF_kpXv7Zk
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:25:29.817Z [33mWARN[39m [33m CheerioCrawler:[39m Reclaiming failed request back to the list or queue. SyntaxError: Unexpected token '<', "<html><hea"... is not valid JSON
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:25:29.818Z     at JSON.parse (<anonymous>)
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:25:29.818Z     at Object.srt (file:///home/myuser/dist/subs/common.js:91:55)
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:25:29.819Z     at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:25:29.819Z     at async fetchSubtitleTextWithRetries (file:///home/myuser/dist/routes/subtitles.js:101:32)
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:25:29.820Z     at async Promise.all (index 0)
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:25:29.821Z     at async getVideoDetailWithSubtitle (file:///home/myuser/dist/routes/subtitles.js:48:32)
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:25:29.821Z     at async handleSubtitle (file:///home/myuser/dist/routes/subtitles.js:19:32)
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:25:29.822Z     at async CheerioCrawler.requestHandler (file:///home/myuser/dist/main.js:231:13)
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:25:29.822Z     at async wrap (/home/myuser/node_modules/@apify/timeout/cjs/index.cjs:54:21)[90m {"id":"7DZPys7ZdUaRTrW","url":"https://www.youtube.com/watch?v=ppF_kpXv7Zk","retryCount":2}[39m
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:25:33.066Z [32mINFO[39m  Fetching subtitle language(s) en (type(s): auto_generated) --- https://www.youtube.com/watch?v=ppF_kpXv7Zk
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:25:33.553Z [33mWARN[39m [33m CheerioCrawler:[39m Reclaiming failed request back to the list or queue. SyntaxError: Unexpected token '<', "<html><hea"... is not valid JSON
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:25:33.554Z     at JSON.parse (<anonymous>)
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:25:33.554Z     at Object.srt (file:///home/myuser/dist/subs/common.js:91:55)
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:25:33.555Z     at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:25:33.556Z     at async fetchSubtitleTextWithRetries (file:///home/myuser/dist/routes/subtitles.js:101:32)
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:25:33.556Z     at async Promise.all (index 0)
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:25:33.557Z     at async getVideoDetailWithSubtitle (file:///home/myuser/dist/routes/subtitles.js:48:32)
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:25:33.558Z     at async handleSubtitle (file:///home/myuser/dist/routes/subtitles.js:19:32)
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:25:33.558Z     at async CheerioCrawler.requestHandler (file:///home/myuser/dist/main.js:231:13)
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:25:33.559Z     at async wrap (/home/myuser/node_modules/@apify/timeout/cjs/index.cjs:54:21)[90m {"id":"7DZPys7ZdUaRTrW","url":"https://www.youtube.com/watch?v=ppF_kpXv7Zk","retryCount":3}[39m
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:25:36.724Z [32mINFO[39m  Fetching subtitle language(s) en (type(s): auto_generated) --- https://www.youtube.com/watch?v=ppF_kpXv7Zk
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:25:37.063Z [33mWARN[39m [33m CheerioCrawler:[39m Reclaiming failed request back to the list or queue. SyntaxError: Unexpected token '<', "<html><hea"... is not valid JSON
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:25:37.064Z     at JSON.parse (<anonymous>)
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:25:37.065Z     at Object.srt (file:///home/myuser/dist/subs/common.js:91:55)
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:25:37.066Z     at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:25:37.067Z     at async fetchSubtitleTextWithRetries (file:///home/myuser/dist/routes/subtitles.js:101:32)
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:25:37.067Z     at async Promise.all (index 0)
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:25:37.068Z     at async getVideoDetailWithSubtitle (file:///home/myuser/dist/routes/subtitles.js:48:32)
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:25:37.069Z     at async handleSubtitle (file:///home/myuser/dist/routes/subtitles.js:19:32)
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:25:37.069Z     at async CheerioCrawler.requestHandler (file:///home/myuser/dist/main.js:231:13)
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:25:37.070Z     at async wrap (/home/myuser/node_modules/@apify/timeout/cjs/index.cjs:54:21)[90m {"id":"7DZPys7ZdUaRTrW","url":"https://www.youtube.com/watch?v=ppF_kpXv7Zk","retryCount":4}[39m
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:25:40.317Z [32mINFO[39m  Fetching subtitle language(s) en (type(s): auto_generated) --- https://www.youtube.com/watch?v=ppF_kpXv7Zk
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:25:40.779Z [33mWARN[39m [33m CheerioCrawler:[39m Reclaiming failed request back to the list or queue. SyntaxError: Unexpected token '<', "<html><hea"... is not valid JSON
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:25:40.780Z     at JSON.parse (<anonymous>)
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:25:40.780Z     at Object.srt (file:///home/myuser/dist/subs/common.js:91:55)
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:25:40.781Z     at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:25:40.782Z     at async fetchSubtitleTextWithRetries (file:///home/myuser/dist/routes/subtitles.js:101:32)
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:25:40.782Z     at async Promise.all (index 0)
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:25:40.783Z     at async getVideoDetailWithSubtitle (file:///home/myuser/dist/routes/subtitles.js:48:32)
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:25:40.784Z     at async handleSubtitle (file:///home/myuser/dist/routes/subtitles.js:19:32)
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:25:40.784Z     at async CheerioCrawler.requestHandler (file:///home/myuser/dist/main.js:231:13)
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:25:40.785Z     at async wrap (/home/myuser/node_modules/@apify/timeout/cjs/index.cjs:54:21)[90m {"id":"7DZPys7ZdUaRTrW","url":"https://www.youtube.com/watch?v=ppF_kpXv7Zk","retryCount":5}[39m
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:25:43.963Z [32mINFO[39m  Fetching subtitle language(s) en (type(s): auto_generated) --- https://www.youtube.com/watch?v=ppF_kpXv7Zk
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:25:44.299Z [33mWARN[39m [33m CheerioCrawler:[39m Reclaiming failed request back to the list or queue. SyntaxError: Unexpected token '<', "<html><hea"... is not valid JSON
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:25:44.300Z     at JSON.parse (<anonymous>)
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:25:44.300Z     at Object.srt (file:///home/myuser/dist/subs/common.js:91:55)
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:25:44.301Z     at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:25:44.301Z     at async fetchSubtitleTextWithRetries (file:///home/myuser/dist/routes/subtitles.js:101:32)
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:25:44.302Z     at async Promise.all (index 0)
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:25:44.303Z     at async getVideoDetailWithSubtitle (file:///home/myuser/dist/routes/subtitles.js:48:32)
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:25:44.303Z     at async handleSubtitle (file:///home/myuser/dist/routes/subtitles.js:19:32)
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:25:44.304Z     at async CheerioCrawler.requestHandler (file:///home/myuser/dist/main.js:231:13)
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:25:44.304Z     at async wrap (/home/myuser/node_modules/@apify/timeout/cjs/index.cjs:54:21)[90m {"id":"7DZPys7ZdUaRTrW","url":"https://www.youtube.com/watch?v=ppF_kpXv7Zk","retryCount":6}[39m
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:25:47.441Z [32mINFO[39m  Fetching subtitle language(s) en (type(s): auto_generated) --- https://www.youtube.com/watch?v=ppF_kpXv7Zk
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:25:47.656Z [33mWARN[39m [33m CheerioCrawler:[39m Reclaiming failed request back to the list or queue. SyntaxError: Unexpected token '<', "<html><hea"... is not valid JSON
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:25:47.657Z     at JSON.parse (<anonymous>)
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:25:47.658Z     at Object.srt (file:///home/myuser/dist/subs/common.js:91:55)
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:25:47.658Z     at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:25:47.659Z     at async fetchSubtitleTextWithRetries (file:///home/myuser/dist/routes/subtitles.js:101:32)
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:25:47.660Z     at async Promise.all (index 0)
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:25:47.660Z     at async getVideoDetailWithSubtitle (file:///home/myuser/dist/routes/subtitles.js:48:32)
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:25:47.661Z     at async handleSubtitle (file:///home/myuser/dist/routes/subtitles.js:19:32)
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:25:47.661Z     at async CheerioCrawler.requestHandler (file:///home/myuser/dist/main.js:231:13)
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:25:47.662Z     at async wrap (/home/myuser/node_modules/@apify/timeout/cjs/index.cjs:54:21)[90m {"id":"7DZPys7ZdUaRTrW","url":"https://www.youtube.com/watch?v=ppF_kpXv7Zk","retryCount":7}[39m
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:25:50.808Z [32mINFO[39m  Fetching subtitle language(s) en (type(s): auto_generated) --- https://www.youtube.com/watch?v=ppF_kpXv7Zk
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:25:51.177Z [33mWARN[39m [33m CheerioCrawler:[39m Reclaiming failed request back to the list or queue. SyntaxError: Unexpected token '<', "<html><hea"... is not valid JSON
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:25:51.177Z     at JSON.parse (<anonymous>)
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:25:51.178Z     at Object.srt (file:///home/myuser/dist/subs/common.js:91:55)
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:25:51.178Z     at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:25:51.179Z     at async fetchSubtitleTextWithRetries (file:///home/myuser/dist/routes/subtitles.js:101:32)
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:25:51.179Z     at async Promise.all (index 0)
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:25:51.179Z     at async getVideoDetailWithSubtitle (file:///home/myuser/dist/routes/subtitles.js:48:32)
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:25:51.180Z     at async handleSubtitle (file:///home/myuser/dist/routes/subtitles.js:19:32)
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:25:51.180Z     at async CheerioCrawler.requestHandler (file:///home/myuser/dist/main.js:231:13)
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:25:51.181Z     at async wrap (/home/myuser/node_modules/@apify/timeout/cjs/index.cjs:54:21)[90m {"id":"7DZPys7ZdUaRTrW","url":"https://www.youtube.com/watch?v=ppF_kpXv7Zk","retryCount":8}[39m
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:25:54.313Z [32mINFO[39m  Fetching subtitle language(s) en (type(s): auto_generated) --- https://www.youtube.com/watch?v=ppF_kpXv7Zk
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:25:54.577Z [33mWARN[39m [33m CheerioCrawler:[39m Reclaiming failed request back to the list or queue. SyntaxError: Unexpected token '<', "<html><hea"... is not valid JSON
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:25:54.578Z     at JSON.parse (<anonymous>)
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:25:54.578Z     at Object.srt (file:///home/myuser/dist/subs/common.js:91:55)
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:25:54.579Z     at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:25:54.579Z     at async fetchSubtitleTextWithRetries (file:///home/myuser/dist/routes/subtitles.js:101:32)
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:25:54.580Z     at async Promise.all (index 0)
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:25:54.580Z     at async getVideoDetailWithSubtitle (file:///home/myuser/dist/routes/subtitles.js:48:32)
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:25:54.581Z     at async handleSubtitle (file:///home/myuser/dist/routes/subtitles.js:19:32)
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:25:54.582Z     at async CheerioCrawler.requestHandler (file:///home/myuser/dist/main.js:231:13)
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:25:54.582Z     at async wrap (/home/myuser/node_modules/@apify/timeout/cjs/index.cjs:54:21)[90m {"id":"7DZPys7ZdUaRTrW","url":"https://www.youtube.com/watch?v=ppF_kpXv7Zk","retryCount":9}[39m
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:25:57.732Z [32mINFO[39m  Fetching subtitle language(s) en (type(s): auto_generated) --- https://www.youtube.com/watch?v=ppF_kpXv7Zk
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:25:58.073Z [33mWARN[39m [33m CheerioCrawler:[39m Reclaiming failed request back to the list or queue. SyntaxError: Unexpected token '<', "<html><hea"... is not valid JSON
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:25:58.074Z     at JSON.parse (<anonymous>)
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:25:58.074Z     at Object.srt (file:///home/myuser/dist/subs/common.js:91:55)
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:25:58.075Z     at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:25:58.075Z     at async fetchSubtitleTextWithRetries (file:///home/myuser/dist/routes/subtitles.js:101:32)
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:25:58.076Z     at async Promise.all (index 0)
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:25:58.077Z     at async getVideoDetailWithSubtitle (file:///home/myuser/dist/routes/subtitles.js:48:32)
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:25:58.078Z     at async handleSubtitle (file:///home/myuser/dist/routes/subtitles.js:19:32)
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:25:58.078Z     at async CheerioCrawler.requestHandler (file:///home/myuser/dist/main.js:231:13)
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:25:58.079Z     at async wrap (/home/myuser/node_modules/@apify/timeout/cjs/index.cjs:54:21)[90m {"id":"7DZPys7ZdUaRTrW","url":"https://www.youtube.com/watch?v=ppF_kpXv7Zk","retryCount":10}[39m
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:26:01.204Z [32mINFO[39m  Fetching subtitle language(s) en (type(s): auto_generated) --- https://www.youtube.com/watch?v=ppF_kpXv7Zk
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:26:01.666Z [33mWARN[39m [33m CheerioCrawler:[39m Reclaiming failed request back to the list or queue. SyntaxError: Unexpected token '<', "<html><hea"... is not valid JSON
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:26:01.667Z     at JSON.parse (<anonymous>)
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:26:01.667Z     at Object.srt (file:///home/myuser/dist/subs/common.js:91:55)
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:26:01.668Z     at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:26:01.669Z     at async fetchSubtitleTextWithRetries (file:///home/myuser/dist/routes/subtitles.js:101:32)
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:26:01.669Z     at async Promise.all (index 0)
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:26:01.670Z     at async getVideoDetailWithSubtitle (file:///home/myuser/dist/routes/subtitles.js:48:32)
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:26:01.670Z     at async handleSubtitle (file:///home/myuser/dist/routes/subtitles.js:19:32)
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:26:01.671Z     at async CheerioCrawler.requestHandler (file:///home/myuser/dist/main.js:231:13)
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:26:01.671Z     at async wrap (/home/myuser/node_modules/@apify/timeout/cjs/index.cjs:54:21)[90m {"id":"7DZPys7ZdUaRTrW","url":"https://www.youtube.com/watch?v=ppF_kpXv7Zk","retryCount":11}[39m
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:26:03.789Z [32mINFO[39m  Persisting state for videos...
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:26:03.790Z [32mINFO[39m  Persisting state for comments...
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:26:04.167Z [32mINFO[39m [33m CheerioCrawler:Statistics:[39m CheerioCrawler request statistics:[90m {"requestAvgFailedDurationMillis":null,"requestAvgFinishedDurationMillis":13748,"requestsFinishedPerMinute":1,"requestsFailedPerMinute":0,"requestTotalDurationMillis":13748,"requestsTotal":1,"crawlerRuntimeMillis":60136,"retryHistogram":[null,1]}[39m
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:26:04.173Z [32mINFO[39m [33m CheerioCrawler:AutoscaledPool:[39m state[90m {"currentConcurrency":0,"desiredConcurrency":20,"systemStatus":{"isSystemIdle":true,"memInfo":{"isOverloaded":false,"limitRatio":0.2,"actualRatio":0},"eventLoopInfo":{"isOverloaded":false,"limitRatio":0.6,"actualRatio":0},"cpuInfo":{"isOverloaded":false,"limitRatio":0.4,"actualRatio":0},"clientInfo":{"isOverloaded":false,"limitRatio":0.3,"actualRatio":0}}}[39m
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:26:04.836Z [32mINFO[39m  Fetching subtitle language(s) en (type(s): auto_generated) --- https://www.youtube.com/watch?v=ppF_kpXv7Zk
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:26:05.136Z [33mWARN[39m [33m CheerioCrawler:[39m Reclaiming failed request back to the list or queue. SyntaxError: Unexpected token '<', "<html><hea"... is not valid JSON
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:26:05.136Z     at JSON.parse (<anonymous>)
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:26:05.137Z     at Object.srt (file:///home/myuser/dist/subs/common.js:91:55)
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:26:05.138Z     at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:26:05.138Z     at async fetchSubtitleTextWithRetries (file:///home/myuser/dist/routes/subtitles.js:101:32)
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:26:05.139Z     at async Promise.all (index 0)
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:26:05.140Z     at async getVideoDetailWithSubtitle (file:///home/myuser/dist/routes/subtitles.js:48:32)
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:26:05.140Z     at async handleSubtitle (file:///home/myuser/dist/routes/subtitles.js:19:32)
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:26:05.141Z     at async CheerioCrawler.requestHandler (file:///home/myuser/dist/main.js:231:13)
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:26:05.142Z     at async wrap (/home/myuser/node_modules/@apify/timeout/cjs/index.cjs:54:21)[90m {"id":"7DZPys7ZdUaRTrW","url":"https://www.youtube.com/watch?v=ppF_kpXv7Zk","retryCount":12}[39m
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:26:08.305Z [32mINFO[39m  Fetching subtitle language(s) en (type(s): auto_generated) --- https://www.youtube.com/watch?v=ppF_kpXv7Zk
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:26:08.559Z [33mWARN[39m [33m CheerioCrawler:[39m Reclaiming failed request back to the list or queue. SyntaxError: Unexpected token '<', "<html><hea"... is not valid JSON
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:26:08.560Z     at JSON.parse (<anonymous>)
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:26:08.560Z     at Object.srt (file:///home/myuser/dist/subs/common.js:91:55)
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:26:08.561Z     at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:26:08.562Z     at async fetchSubtitleTextWithRetries (file:///home/myuser/dist/routes/subtitles.js:101:32)
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:26:08.562Z     at async Promise.all (index 0)
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:26:08.563Z     at async getVideoDetailWithSubtitle (file:///home/myuser/dist/routes/subtitles.js:48:32)
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:26:08.563Z     at async handleSubtitle (file:///home/myuser/dist/routes/subtitles.js:19:32)
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:26:08.564Z     at async CheerioCrawler.requestHandler (file:///home/myuser/dist/main.js:231:13)
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:26:08.564Z     at async wrap (/home/myuser/node_modules/@apify/timeout/cjs/index.cjs:54:21)[90m {"id":"7DZPys7ZdUaRTrW","url":"https://www.youtube.com/watch?v=ppF_kpXv7Zk","retryCount":13}[39m
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:26:11.737Z [32mINFO[39m  Fetching subtitle language(s) en (type(s): auto_generated) --- https://www.youtube.com/watch?v=ppF_kpXv7Zk
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:26:11.967Z [33mWARN[39m [33m CheerioCrawler:[39m Reclaiming failed request back to the list or queue. SyntaxError: Unexpected token '<', "<html><hea"... is not valid JSON
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:26:11.968Z     at JSON.parse (<anonymous>)
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:26:11.969Z     at Object.srt (file:///home/myuser/dist/subs/common.js:91:55)
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:26:11.969Z     at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:26:11.970Z     at async fetchSubtitleTextWithRetries (file:///home/myuser/dist/routes/subtitles.js:101:32)
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:26:11.970Z     at async Promise.all (index 0)
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:26:11.971Z     at async getVideoDetailWithSubtitle (file:///home/myuser/dist/routes/subtitles.js:48:32)
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:26:11.971Z     at async handleSubtitle (file:///home/myuser/dist/routes/subtitles.js:19:32)
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:26:11.972Z     at async CheerioCrawler.requestHandler (file:///home/myuser/dist/main.js:231:13)
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:26:11.972Z     at async wrap (/home/myuser/node_modules/@apify/timeout/cjs/index.cjs:54:21)[90m {"id":"7DZPys7ZdUaRTrW","url":"https://www.youtube.com/watch?v=ppF_kpXv7Zk","retryCount":14}[39m
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:26:15.145Z [32mINFO[39m  Fetching subtitle language(s) en (type(s): auto_generated) --- https://www.youtube.com/watch?v=ppF_kpXv7Zk
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:26:15.589Z [33mWARN[39m [33m CheerioCrawler:[39m Reclaiming failed request back to the list or queue. SyntaxError: Unexpected token '<', "<html><hea"... is not valid JSON
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:26:15.589Z     at JSON.parse (<anonymous>)
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:26:15.590Z     at Object.srt (file:///home/myuser/dist/subs/common.js:91:55)
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:26:15.591Z     at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:26:15.591Z     at async fetchSubtitleTextWithRetries (file:///home/myuser/dist/routes/subtitles.js:101:32)
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:26:15.592Z     at async Promise.all (index 0)
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:26:15.592Z     at async getVideoDetailWithSubtitle (file:///home/myuser/dist/routes/subtitles.js:48:32)
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:26:15.593Z     at async handleSubtitle (file:///home/myuser/dist/routes/subtitles.js:19:32)
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:26:15.593Z     at async CheerioCrawler.requestHandler (file:///home/myuser/dist/main.js:231:13)
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:26:15.594Z     at async wrap (/home/myuser/node_modules/@apify/timeout/cjs/index.cjs:54:21)[90m {"id":"7DZPys7ZdUaRTrW","url":"https://www.youtube.com/watch?v=ppF_kpXv7Zk","retryCount":15}[39m
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:26:18.907Z [32mINFO[39m  Fetching subtitle language(s) en (type(s): auto_generated) --- https://www.youtube.com/watch?v=ppF_kpXv7Zk
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:26:19.225Z [31mERROR[39m[33m CheerioCrawler:[39m Request failed and reached maximum retries. SyntaxError: Unexpected token '<', "<html><hea"... is not valid JSON
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:26:19.225Z     at JSON.parse (<anonymous>)
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:26:19.226Z     at Object.srt (file:///home/myuser/dist/subs/common.js:91:55)
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:26:19.226Z     at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:26:19.226Z     at async fetchSubtitleTextWithRetries (file:///home/myuser/dist/routes/subtitles.js:101:32)
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:26:19.226Z     at async Promise.all (index 0)
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:26:19.227Z     at async getVideoDetailWithSubtitle (file:///home/myuser/dist/routes/subtitles.js:48:32)
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:26:19.227Z     at async handleSubtitle (file:///home/myuser/dist/routes/subtitles.js:19:32)
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:26:19.227Z     at async CheerioCrawler.requestHandler (file:///home/myuser/dist/main.js:231:13)
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:26:19.227Z     at async wrap (/home/myuser/node_modules/@apify/timeout/cjs/index.cjs:54:21)[90m {"id":"7DZPys7ZdUaRTrW","url":"https://www.youtube.com/watch?v=ppF_kpXv7Zk","method":"GET","uniqueKey":"https://www.youtube.com/watch?v=ppF_kpXv7Zk-subtitles-1"}[39m
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:26:19.260Z [32mINFO[39m [33m CheerioCrawler:[39m All requests from the queue have been processed, the crawler will shut down.
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:26:19.260Z [32mINFO[39m  Persisting state for videos...
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:26:19.261Z [32mINFO[39m  Persisting state for comments...
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:26:19.406Z [32mINFO[39m [33m CheerioCrawler:[39m Final request statistics:[90m {"requestsFinished":1,"requestsFailed":1,"retryHistogram":[null,1,null,null,null,null,null,null,null,null,null,null,null,null,null,1],"requestAvgFailedDurationMillis":318,"requestAvgFinishedDurationMillis":13748,"requestsFinishedPerMinute":1,"requestsFailedPerMinute":0,"requestTotalDurationMillis":14066,"requestsTotal":2,"crawlerRuntimeMillis":75375}[39m
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:26:19.406Z [32mINFO[39m [33m CheerioCrawler:[39m Error analysis:[90m {"totalErrors":1,"uniqueErrors":1,"mostCommonErrors":["1x: Unexpected token '<', \"<html><hea\"... is not valid JSON (<anonymous>)"]}[39m
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:26:19.407Z [32mINFO[39m [33m CheerioCrawler:[39m Finished! Total 2 requests: 1 succeeded, 1 failed.[90m {"terminal":true}[39m
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:26:19.440Z [33mWARN[39m  No results were pushed to the dataset - make sure video limits in the input are above 0 and the URLs are correct.
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:26:19.441Z [33mWARN[39m  [Status message]: No results were collected during scrape - if you want to collect videos, set limits above 0
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:26:19.487Z [32mINFO[39m  Persisting state for videos...
+[36myoutube-scraper runId:kiJRXh30Fx3HrSlvV -> [39m2026-04-07T08:26:19.487Z [32mINFO[39m  Persisting state for comments...
+KHÔNG TÌM THẤY NỘI DUNG TRANSCRIPT TRONG DỮ LIỆU TRẢ VỀ.
