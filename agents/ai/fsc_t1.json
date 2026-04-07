@@ -1,0 +1,186 @@
+{
+  "status": "completed",
+  "appName": "fsc",
+  "flashcards": [
+    {
+      "Topic": "1",
+      "Subtopic": "1",
+      "Front": "The First Rule of Gun Safety",
+      "Back": "Treat all firearms as if they are loaded at all times, even if you believe the weapon is empty."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "1",
+      "Front": "The Second Rule of Gun Safety",
+      "Back": "Always keep the firearm pointed in the safest possible direction (never at anything you do not intend to shoot)."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "1",
+      "Front": "The Third Rule of Gun Safety",
+      "Back": "Always keep your finger off the trigger and outside the trigger guard until you are ready to fire."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "1",
+      "Front": "The Fourth Rule of Gun Safety",
+      "Back": "Be sure of your target and what is beyond it. Know the entire path of the bullet, including potential backstops."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "1",
+      "Front": "The Fifth Rule of Gun Safety",
+      "Back": "Know how to properly operate your firearm. Read the manual and understand the specific mechanics and safety features."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "1",
+      "Front": "The Sixth Rule of Gun Safety",
+      "Back": "Store firearms safely and securely to prevent unauthorized access, especially by children or prohibited persons."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "1",
+      "Front": "Safe Direction",
+      "Back": "A direction where, should the firearm discharge, there would be no injury and minimal property damage."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "1",
+      "Front": "Trigger Guard",
+      "Back": "The metal loop surrounding the trigger designed to prevent accidental discharge. Always keep your finger outside this until ready to fire."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "1",
+      "Front": "Muzzle Awareness",
+      "Back": "Constant consciousness of where the barrel of the gun is pointing to ensure it never crosses anything you don't intend to destroy."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "1",
+      "Front": "Action (Firearm)",
+      "Back": "The part of the firearm that loads, fires, and ejects the cartridge. Knowing how the action works is vital for safe operation."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "1",
+      "Front": "Dry Firing",
+      "Back": "Pulling the trigger of an unloaded firearm. Only do this if the manual states it is safe for the specific gun and ensure it is truly empty."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "1",
+      "Front": "Mechanical Safety",
+      "Back": "A device designed to prevent accidental discharge. Never rely on it exclusively; it is a mechanical device that can fail."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "1",
+      "Front": "Clearing a Firearm",
+      "Back": "The process of ensuring a firearm is empty by removing the magazine, opening the action, and physically/visually inspecting the chamber."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "1",
+      "Front": "Eye Protection",
+      "Back": "Impact-resistant glasses that must be worn whenever shooting to protect against hot gases, lead fragments, or shell casings."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "1",
+      "Front": "Hearing Protection",
+      "Back": "Earplugs or muffs that must be worn to prevent permanent hearing loss from the high-decibel blast of a firearm."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "1",
+      "Front": "Range Commands",
+      "Back": "Standard instructions used at shooting ranges (e.g., 'Cease Fire') that must be obeyed immediately for safety."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "1",
+      "Front": "Backstop",
+      "Back": "An object or terrain (like an earthen mound) intended to safely stop a bullet after it passes through or misses the target."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "1",
+      "Front": "Firearm Cleaning Safety",
+      "Back": "Always ensure the gun is unloaded and ammunition is in a separate room before beginning any maintenance."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "1",
+      "Front": "Alcohol and Drugs",
+      "Back": "Never handle or use firearms while under the influence of substances that impair judgment or coordination."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "1",
+      "Front": "Safe Storage (DOJ Requirement)",
+      "Back": "Firearms must be stored in a locked container or with a California-approved firearms safety device (like a cable lock)."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "1",
+      "Front": "Unattended Firearm",
+      "Back": "A gun should never be left alone unless it is properly secured in a locked container or safe."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "1",
+      "Front": "Chamber Check",
+      "Back": "Looking and feeling inside the chamber to verify that no ammunition is present before handling the gun."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "1",
+      "Front": "Loaded vs. Unloaded Assumption",
+      "Back": "Safety Rule #1 dictates that even if you just saw someone clear a gun, you must assume it is loaded until you check it yourself."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "1",
+      "Front": "Target Identification",
+      "Back": "Positively identifying what you are shooting at to ensure it is not a person, pet, or unauthorized object."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "1",
+      "Front": "Obstruction (Barrel)",
+      "Back": "Any object (like mud or a cleaning patch) inside the barrel. Firing with an obstruction can cause the gun to explode."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "1",
+      "Front": "Self-Correction (Safety)",
+      "Back": "If you realize you are pointing a gun in an unsafe direction, correct it immediately and keep your finger off the trigger."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "1",
+      "Front": "Holster Safety",
+      "Back": "When placing a gun in a holster, keep your finger outside the trigger guard to prevent 'snagging' and accidental discharge."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "1",
+      "Front": "Passing a Firearm",
+      "Back": "When giving a gun to someone, the action should be open and the firearm verified as unloaded by both parties."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "1",
+      "Front": "Safety Device Failure",
+      "Back": "Mechanisms like thumb safeties can fail or break; they are secondary to following the four basic safety rules."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "1",
+      "Front": "Muzzle Flash",
+      "Back": "The burst of flame at the end of the barrel when firing. Keep hands and objects away from the muzzle to avoid burns."
+    }
+  ]
+}

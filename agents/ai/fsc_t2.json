@@ -1,0 +1,186 @@
+{
+  "status": "completed",
+  "appName": "fsc",
+  "flashcards": [
+    {
+      "Topic": "2",
+      "Subtopic": "1",
+      "Front": "The 'Stop' Rule for Children",
+      "Back": "If a child sees a gun, they should: 1. Stop. 2. Don't touch. 3. Leave the area. 4. Tell an adult."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "1",
+      "Front": "Parental Responsibility (CA Law)",
+      "Back": "In California, it is a crime to keep a loaded firearm where you know or should know a child is likely to gain access to it."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "1",
+      "Front": "Child-Proof Safety Myth",
+      "Back": "There is no such thing as a 'child-proof' gun. Children can often operate safeties and triggers that adults assume are too difficult."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "1",
+      "Front": "Safe Storage Principle",
+      "Back": "Firearms should be stored unloaded and in a locked container, with ammunition stored in a separate locked location."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "1",
+      "Front": "Firearm Safety Devices (FSDs)",
+      "Back": "California law requires all firearms sold to be accompanied by a DOJ-approved firearms safety device, such as a cable lock or trigger lock."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "1",
+      "Front": "Cable Lock",
+      "Back": "A flexible steel cable that loops through the action of a firearm to prevent it from being closed and fired. common for both handguns and long guns."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "1",
+      "Front": "Trigger Lock",
+      "Back": "A two-piece clamp that fits over the trigger guard to prevent the trigger from being pulled. It should never be used on a loaded gun."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "1",
+      "Front": "Lock Box",
+      "Back": "A small, reinforced metal container designed to secure a single handgun. it often features quick-access codes or biometric scanners."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "1",
+      "Front": "Gun Safe",
+      "Back": "A heavy, fire-resistant storage cabinet for multiple firearms. it provides the highest level of protection against theft and unauthorized access."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "1",
+      "Front": "Talking to Children about Guns",
+      "Back": "Education is key. Parents should de-mystify guns by explaining they are not toys and teaching the 'Stop' rule early."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "1",
+      "Front": "Hiding a Gun",
+      "Back": "Hiding a gun is NOT a substitute for locking it. Children are naturally curious and often find hidden objects during play."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "1",
+      "Front": "Loaded Gun Liability",
+      "Back": "If a child gains access to your loaded gun and causes injury or death, you can be prosecuted for criminal storage of a firearm."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "1",
+      "Front": "Ammunition Storage (Children)",
+      "Back": "Store ammunition in a cool, dry, locked location separate from the firearm to add an extra layer of safety."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "1",
+      "Front": "Unloaded Gun Assumption (Children)",
+      "Back": "Children may not understand the difference between a loaded and unloaded gun; therefore, all guns must be secured regardless of status."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "1",
+      "Front": "Adolescent Suicide Prevention",
+      "Back": "Secure storage is a critical factor in preventing impulsive acts of self-harm among teenagers in the home."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "1",
+      "Front": "Visiting Other Homes",
+      "Back": "Before your child plays at a friend's house, ask the parents if they have firearms and how they are secured."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "1",
+      "Front": "Toy Guns vs. Real Guns",
+      "Back": "Teach children that unlike toy guns in movies or games, real guns cause permanent injury and death."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "1",
+      "Front": "Firearm Display",
+      "Back": "Never leave firearms displayed on walls or in unlocked cabinets if children or unauthorized persons have access to the home."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "1",
+      "Front": "Safe Storage Affidavit",
+      "Back": "In California, buyers must sign a statement or provide a receipt for an approved safety device at the time of purchase."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "1",
+      "Front": "Biometric Locks",
+      "Back": "Safes that use fingerprints for access. they are popular for bedside storage because they allow quick access for the owner but not for children."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "1",
+      "Front": "Mechanical Trigger Locks",
+      "Back": "Locks that use a key or combination. They are effective for storage but must be used carefully to avoid touching the trigger during installation."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "1",
+      "Front": "Gun Safety Programs for Kids",
+      "Back": "National programs like 'Eddie Eagle' help reinforce the message of not touching found firearms."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "1",
+      "Front": "Storing 'Empty' Guns",
+      "Back": "Guns believed to be empty have been involved in many accidents. Always lock them up as if they were loaded."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "1",
+      "Front": "Key Management",
+      "Back": "Keys to gun locks and safes must be kept on your person or in a hidden location that children cannot reach."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "1",
+      "Front": "Safe Handling Education",
+      "Back": "When a child is old enough and shows interest, formal safety training and supervised shooting can help build respect for firearms."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "1",
+      "Front": "Curiosity and Access",
+      "Back": "Research shows that even children who have been taught safety rules may still touch a gun if they find one unattended."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "1",
+      "Front": "Secondary Lock",
+      "Back": "Using both a cable lock and a locked safe provides maximum security against unauthorized use."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "1",
+      "Front": "Trigger Guard Exposure",
+      "Back": "When using a lock, ensure it completely blocks access to the trigger so a small finger cannot reach inside."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "1",
+      "Front": "Impact of Media",
+      "Back": "Video games and movies can give children a false sense of how guns work and the consequences of their use."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "1",
+      "Front": "Home Safety Audit",
+      "Back": "Regularly check that all firearms are accounted for and that all locking mechanisms are functioning properly."
+    }
+  ]
+}
