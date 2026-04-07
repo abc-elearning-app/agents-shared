@@ -2,7 +2,7 @@ import requests
 import time
 import os
 
-url = "https://script.google.com/macros/s/AKfycbzCOsyhKIZcfu9caX8UPTLbVsNNG7JM12XJz1B5dMnEK83MQZaYkHsoGOwuJla3dRPjeg/exec"
+url = "https://script.google.com/macros/s/AKfycbzzNrqiWiV3kTbwaAN1f94X6gcaxxuy7b_NmC1mlKTyBlpjYRZ4JQKcQXVP04qQUfCioQ/exec"
 files = [
     "ccna_t1_s1.json", "ccna_t1_s2.json", "ccna_t1_s3.json", "ccna_t1_s4.json",
     "ccna_t1_s5.json", "ccna_t1_s6.json", "ccna_t1_s7.json", "ccna_t1_s8.json",

@@ -30,7 +30,7 @@ def upload_json(file_path, url):
         return False
 
 if __name__ == "__main__":
-    url = "https://script.google.com/macros/s/AKfycbzCOsyhKIZcfu9caX8UPTLbVsNNG7JM12XJz1B5dMnEK83MQZaYkHsoGOwuJla3dRPjeg/exec"
+    url = "https://script.google.com/macros/s/AKfycbzzNrqiWiV3kTbwaAN1f94X6gcaxxuy7b_NmC1mlKTyBlpjYRZ4JQKcQXVP04qQUfCioQ/exec"
     files = [
         "ccna_t1_s1.json",
         "ccna_t1_s2.json",

@@ -31,6 +31,6 @@ def upload_json(file_path, url):
         print(f"An error occurred: {e}")
 
 if __name__ == "__main__":
-    url = "https://script.google.com/macros/s/AKfycbzCOsyhKIZcfu9caX8UPTLbVsNNG7JM12XJz1B5dMnEK83MQZaYkHsoGOwuJla3dRPjeg/exec"
+    url = "https://script.google.com/macros/s/AKfycbzzNrqiWiV3kTbwaAN1f94X6gcaxxuy7b_NmC1mlKTyBlpjYRZ4JQKcQXVP04qQUfCioQ/exec"
     file_path = "ccna_t1_s1.json"
     upload_json(file_path, url)
