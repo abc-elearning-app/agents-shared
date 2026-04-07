@@ -1,0 +1,186 @@
+{
+  "status": "completed",
+  "appName": "ccna",
+  "flashcards": [
+    {
+      "Topic": "2",
+      "Subtopic": "1",
+      "Front": "VLAN (Virtual LAN)",
+      "Back": "A logical grouping of network devices that behave as if they are connected to the same wire, regardless of their physical location. It is used to segment broadcast domains."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "1",
+      "Front": "Access Interface",
+      "Back": "A switch port configured to carry traffic for only one specific VLAN. it is typically used to connect end-user devices like PCs and printers."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "1",
+      "Front": "Static Access Port",
+      "Back": "An access port that has been manually assigned to a specific VLAN ID by a network administrator."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "1",
+      "Front": "Data VLAN",
+      "Back": "A VLAN configured to carry user-generated traffic, such as email, web browsing, and file transfers, isolated from management or voice traffic."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "1",
+      "Front": "Voice VLAN",
+      "Back": "A specialized VLAN configuration on an access port that allows an IP phone to send tagged voice traffic while a connected PC sends untagged data traffic."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "1",
+      "Front": "Normal Range VLANs",
+      "Back": "VLAN IDs from 1 to 1005. These are used in small-to-medium enterprise networks and are stored in the vlan.dat file."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "1",
+      "Front": "Extended Range VLANs",
+      "Back": "VLAN IDs from 1006 to 4094. These are primarily used by service providers and are stored in the switch's running configuration."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "1",
+      "Front": "VLAN ID",
+      "Back": "A 12-bit field in an Ethernet header tag that identifies the specific VLAN to which a frame belongs, supporting up to 4096 unique IDs."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "1",
+      "Front": "Switchport mode access",
+      "Back": "The Cisco IOS command used to force an interface to function as a permanent access port, disabling DTP negotiation."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "1",
+      "Front": "VLAN shutdown state",
+      "Back": "A configuration state where a VLAN is defined in the database but is administratively disabled, preventing any traffic from being forwarded within that VLAN."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "1",
+      "Front": "Broadcast Domain (VLAN)",
+      "Back": "The logical area in a network where a broadcast frame is forwarded. Creating VLANs effectively divides one large broadcast domain into multiple smaller ones."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "1",
+      "Front": "vlan.dat",
+      "Back": "The binary file stored in a switch's flash memory that contains the configuration for all normal range VLANs."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "1",
+      "Front": "VTP (VLAN Trunking Protocol)",
+      "Back": "A Cisco-proprietary protocol that automates the addition, deletion, and renaming of VLANs across multiple synchronized switches in a domain."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "1",
+      "Front": "VTP Transparent Mode",
+      "Back": "A VTP mode where a switch does not synchronize its VLAN database with other switches but still forwards VTP advertisements received from its neighbors."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "1",
+      "Front": "Inter-VLAN Connectivity",
+      "Back": "The ability for hosts in different VLANs to communicate with each other, which requires a Layer 3 device like a router or a multilayer switch."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "2",
+      "Front": "VLAN Trunking",
+      "Back": "The process of carrying traffic from multiple VLANs over a single physical link between two switches or a switch and a router."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "2",
+      "Front": "Trunk Port",
+      "Back": "A switch interface configured to support multiple VLANs simultaneously using a tagging protocol like 802.1Q."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "2",
+      "Front": "802.1Q",
+      "Back": "The industry-standard trunking protocol that inserts a 4-byte VLAN tag into the original Ethernet frame header."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "2",
+      "Front": "Native VLAN",
+      "Back": "The specific VLAN on an 802.1Q trunk that carries all untagged traffic. For security, both ends of a trunk must be configured with the same native VLAN ID."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "2",
+      "Front": "Default VLAN",
+      "Back": "The pre-configured VLAN on a Cisco switch (VLAN 1) to which all ports are assigned out of the box."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "2",
+      "Front": "Dynamic Trunking Protocol (DTP)",
+      "Back": "A Cisco-proprietary protocol used to automatically negotiate whether a link should become a trunk or an access port between two connected switches."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "2",
+      "Front": "Administrative Mode (DTP)",
+      "Back": "The configured DTP setting on a port (e.g., dynamic auto, dynamic desirable), which determines how the port attempts to negotiate trunking."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "2",
+      "Front": "Operational Mode (DTP)",
+      "Back": "The actual resulting state of a port (either 'trunking' or 'static access') after DTP negotiation with its neighbor has completed."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "2",
+      "Front": "Dynamic Auto",
+      "Back": "A DTP mode where the port waits passively to be asked to become a trunk. it will only trunk if the neighbor is set to 'desirable' or 'on'."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "2",
+      "Front": "Dynamic Desirable",
+      "Back": "A DTP mode where the port actively attempts to negotiate a trunk link with its neighbor. it is the most aggressive DTP setting."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "2",
+      "Front": "Switchport nonegotiate",
+      "Back": "A command that prevents a port from sending DTP frames. it is used when a trunk is manually configured ('mode trunk') to improve security and efficiency."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "2",
+      "Front": "Allowed VLAN List",
+      "Back": "A security configuration on a trunk port that specifies which VLAN IDs are permitted to send and receive traffic across the link."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "2",
+      "Front": "VLAN Pruning",
+      "Back": "A technique used to restrict the transmission of broadcast and multicast traffic on a trunk to only the VLANs that are actually present on the remote switch."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "2",
+      "Front": "VLAN Hopping",
+      "Back": "A malicious attack where a device sends frames with multiple VLAN tags to gain unauthorized access to a different VLAN without passing through a router."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "2",
+      "Front": "Native VLAN Mismatch",
+      "Back": "An error condition where two ends of a trunk have different native VLAN IDs, potentially leading to traffic leaking between VLANs."
+    }
+  ]
+}

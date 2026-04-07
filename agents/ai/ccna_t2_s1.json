@@ -1,0 +1,186 @@
+{
+  "status": "completed",
+  "appName": "ccna",
+  "flashcards": [
+    {
+      "Topic": "2",
+      "Subtopic": "1",
+      "Front": "VLAN (Virtual LAN)",
+      "Back": "A logical grouping of network devices that behave as if they are connected to the same physical switch, regardless of their location. it is used to segment broadcast domains."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "1",
+      "Front": "Access Port",
+      "Back": "A switch interface configured to carry traffic for only one specific VLAN. it is typically used to connect end-user devices like PCs and printers."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "1",
+      "Front": "Data VLAN",
+      "Back": "A VLAN configured to carry standard user-generated traffic such as web browsing and file transfers, isolated from voice or management traffic."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "1",
+      "Front": "Voice VLAN",
+      "Back": "A specialized VLAN on an access port that allows an IP phone to send tagged voice traffic while a connected PC sends untagged data traffic."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "1",
+      "Front": "Normal Range VLANs",
+      "Back": "VLAN IDs from 1 to 1005. These are the standard IDs used in most enterprise networks and are stored in the switch's vlan.dat file."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "1",
+      "Front": "Default VLAN",
+      "Back": "The pre-configured VLAN on a Cisco switch (VLAN 1) to which all ports are assigned by default out of the box."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "1",
+      "Front": "VLAN ID",
+      "Back": "A 12-bit number used to identify a specific virtual LAN. The IDs range from 1 to 4094, with 1-1005 being the normal range."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "1",
+      "Front": "Switchport mode access",
+      "Back": "The Cisco IOS command that forces a switch port to function as a permanent access port, preventing it from negotiating a trunk link."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "1",
+      "Front": "Switchport access vlan",
+      "Back": "The interface subcommand used to assign a specific VLAN ID to an access port, ensuring the connected device resides in that broadcast domain."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "1",
+      "Front": "Switchport voice vlan",
+      "Back": "The command used to define the VLAN ID for voice traffic on an access port, enabling the port to support an IP phone and a PC simultaneously."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "1",
+      "Front": "VLAN Database",
+      "Back": "The collection of VLAN configuration data stored in the vlan.dat file. it contains the IDs and names of all normal range VLANs defined on the switch."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "1",
+      "Front": "Show vlan brief",
+      "Back": "The primary Cisco command used to verify VLAN configuration. it displays a list of all active VLANs and the access ports assigned to each one."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "1",
+      "Front": "Broadcast Domain (Layer 2)",
+      "Back": "A logical division of a network where all nodes can reach each other by broadcast. VLANs are used to reduce the size of these domains."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "1",
+      "Front": "VLAN Spanning",
+      "Back": "The concept where a single VLAN exists across multiple physical switches, allowing members of the same logical group to communicate regardless of their physical port."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "1",
+      "Front": "Untagged Traffic",
+      "Back": "Standard Ethernet frames that do not contain a VLAN ID. In an access port configuration, all incoming and outgoing frames are untagged."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "1",
+      "Front": "Layer 2 Switch",
+      "Back": "A network device that forwards frames based on MAC addresses. it can use VLANs to separate traffic but cannot route between them."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "1",
+      "Front": "Inter-VLAN Connectivity",
+      "Back": "The ability for hosts in different VLANs to communicate. This requires a Layer 3 device like a router or multilayer switch to move traffic between domains."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "1",
+      "Front": "VLAN Assignment",
+      "Back": "The process of associating a physical switch port with a specific logical VLAN ID, effectively placing the connected device into a chosen network segment."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "1",
+      "Front": "Administrative Mode (Access)",
+      "Back": "The configured state of a port, such as 'static access,' which defines its intended function regardless of the connected neighbor's settings."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "1",
+      "Front": "Operational Mode (Access)",
+      "Back": "The actual resulting state of a port (e.g., 'static access') after negotiation. For an access port, this should always match the administrative mode."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "1",
+      "Front": "VLAN Shutdown Command",
+      "Back": "A configuration command ('shutdown' within VLAN mode) that administratively disables a specific VLAN, stopping all traffic forwarding for that ID."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "1",
+      "Front": "VLAN Name",
+      "Back": "An optional descriptive label assigned to a VLAN ID (e.g., 'Sales' or 'HR') to make the network configuration more human-readable."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "1",
+      "Front": "vlan.dat File",
+      "Back": "The binary file in flash memory where normal range VLANs are stored. if this file is deleted, the switch loses its normal range VLAN definitions."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "1",
+      "Front": "VLAN Transparency",
+      "Back": "The principle where end devices are unaware of the VLANs they belong to, as the switch handles all logical segmentation transparently."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "1",
+      "Front": "Static VLAN Mapping",
+      "Back": "A port-based membership method where the administrator manually assigns each port to a VLAN. This is the most common method in CCNA-level networking."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "1",
+      "Front": "VTP Domain (Impact)",
+      "Back": "A configuration that allows switches to synchronize VLAN information. if not used correctly, it can lead to accidental deletion of VLANs across the entire network."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "1",
+      "Front": "FastEthernet Interface",
+      "Back": "A 100 Mbps switch port. Access ports on these interfaces are frequently used for connecting standard workstations and IP phones."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "1",
+      "Front": "GigabitEthernet Interface",
+      "Back": "A 1000 Mbps switch port. modern access switches often use these for high-performance end-user connectivity and uplinks."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "1",
+      "Front": "VLAN Consistency",
+      "Back": "The requirement that a VLAN must be defined with the same ID on all switches where its members reside to ensure seamless communication across trunks."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "1",
+      "Front": "Show interfaces switchport",
+      "Back": "A detailed Cisco command used to verify the administrative and operational modes of an interface, as well as its assigned access and voice VLANs."
+    }
+  ]
+}

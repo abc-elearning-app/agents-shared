@@ -1,0 +1,186 @@
+{
+  "status": "completed",
+  "appName": "ccna",
+  "flashcards": [
+    {
+      "Topic": "2",
+      "Subtopic": "2",
+      "Front": "VLAN Trunking",
+      "Back": "The process of carrying traffic from multiple VLANs over a single physical link between two switches or a switch and a router, using tagging to identify the VLAN ID of each frame."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "2",
+      "Front": "802.1Q",
+      "Back": "The industry-standard trunking protocol that inserts a 4-byte VLAN tag into the original Ethernet frame header. it is supported by almost all modern networking vendors."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "2",
+      "Front": "ISL (Inter-Switch Link)",
+      "Back": "A legacy Cisco-proprietary trunking protocol that encapsulates the entire Ethernet frame. it is now largely obsolete and replaced by the more efficient 802.1Q standard."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "2",
+      "Front": "Trunk Port",
+      "Back": "A switch interface configured to support multiple VLANs simultaneously. it uses encapsulation to ensure frames are delivered to the correct logical network on the receiving end."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "2",
+      "Front": "Native VLAN",
+      "Back": "The specific VLAN ID on an 802.1Q trunk that carries all untagged traffic. For security, both ends of a trunk must share the same native VLAN configuration."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "2",
+      "Front": "VLAN Tagging",
+      "Back": "The action of adding a unique identifier to a frame's header as it enters a trunk link, allowing switches to distinguish between traffic from different broadcast domains."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "2",
+      "Front": "Dynamic Trunking Protocol (DTP)",
+      "Back": "A Cisco-proprietary protocol used to automatically negotiate whether a link should function as a trunk or an access port between two directly connected switches."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "2",
+      "Front": "Administrative Mode (DTP)",
+      "Back": "The configured state of a port's trunking negotiation (e.g., dynamic auto, dynamic desirable, or static trunk), which defines how it interacts with its neighbor."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "2",
+      "Front": "Operational Mode (DTP)",
+      "Back": "The actual resulting trunking state of an interface (either 'trunk' or 'static access') after DTP negotiation with the connected neighbor is complete."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "2",
+      "Front": "Dynamic Desirable",
+      "Back": "A DTP mode where the port actively initiates trunking negotiation by sending DTP frames. it will form a trunk if the neighbor is 'auto', 'desirable', or 'on'."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "2",
+      "Front": "Dynamic Auto",
+      "Back": "A DTP mode where the port waits passively for the neighbor to initiate negotiation. it will only trunk if the neighbor is set to 'desirable' or 'on'."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "2",
+      "Front": "Switchport mode trunk",
+      "Back": "The command that statically forces a switch port into trunking mode. it will attempt to negotiate a trunk link even if the neighbor is in 'dynamic auto' mode."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "2",
+      "Front": "Switchport nonegotiate",
+      "Back": "A security command that disables DTP on an interface. it is used when a trunk is manually configured to prevent the switch from sending discovery frames."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "2",
+      "Front": "Allowed VLAN List",
+      "Back": "A configuration on a trunk port that restricts which VLANs are permitted to cross the link. by default, all VLANs (1–4094) are allowed."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "2",
+      "Front": "VLAN Hopping",
+      "Back": "A malicious attack where a device sends frames with multiple VLAN tags to gain unauthorized access to a different VLAN, often exploiting misconfigured native VLANs."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "2",
+      "Front": "Show interfaces trunk",
+      "Back": "The primary Cisco command used to verify the operational status of trunk links, displaying encapsulation, native VLAN, and the list of allowed VLANs."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "2",
+      "Front": "Show interfaces switchport",
+      "Back": "A detailed command that provides the administrative and operational trunking parameters for an interface, including DTP mode and native VLAN settings."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "2",
+      "Front": "VLAN Pruning",
+      "Back": "The process of removing unnecessary VLAN traffic from a trunk link to save bandwidth. it ensures that broadcast frames are only sent to switches that have active ports in that VLAN."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "2",
+      "Front": "Trunk Encapsulation",
+      "Back": "The specific framing method used on a trunk link. modern switches use 'dot1q' (802.1Q), while older switches might support 'isl' or 'negotiate'."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "2",
+      "Front": "Dot1q Tag",
+      "Back": "The 4-byte field inserted into an Ethernet header by 802.1Q. it includes the Priority field, the Canonical Format Identifier, and the 12-bit VLAN ID."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "2",
+      "Front": "Native VLAN Mismatch",
+      "Back": "A configuration error where two ends of a trunk link have different native VLAN IDs, which can lead to traffic leaking between different VLANs."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "2",
+      "Front": "Switchport trunk native vlan",
+      "Back": "The Cisco IOS command used to change the native VLAN ID for an 802.1Q trunk from its default value of 1."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "2",
+      "Front": "Switchport trunk allowed vlan add",
+      "Back": "The specific command syntax used to add one or more VLANs to the existing allowed list on a trunk port without overwriting the previous configuration."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "2",
+      "Front": "VTP (Impact on Trunking)",
+      "Back": "VLAN Trunking Protocol. while its name implies it handles trunking, it actually synchronizes the VLAN database (IDs and names) across switches in a domain."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "2",
+      "Front": "Double Tagging",
+      "Back": "A specific type of VLAN hopping attack where an attacker adds two 802.1Q tags to a frame. The first tag is stripped by the first switch, and the second tag allows it to enter a different VLAN."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "2",
+      "Front": "Trunking Administrative State",
+      "Back": "The user-configured intent for an interface, which can be 'on' (trunk), 'off' (access), 'desirable', or 'auto'."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "2",
+      "Front": "Trunking Operational State",
+      "Back": "The actual real-time status of an interface, indicating whether it is currently functioning as a trunk or an access port."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "2",
+      "Front": "Router-on-a-Stick",
+      "Back": "A legacy inter-VLAN routing method where a single trunk link connects a switch to a router, with the router interface divided into multiple logical subinterfaces."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "2",
+      "Front": "Subinterface (Routing)",
+      "Back": "A logical division of a physical router interface, each assigned a unique VLAN ID and IP address to perform routing between different broadcast domains."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "2",
+      "Front": "Untagged Frame Forwarding",
+      "Back": "The behavior where a switch receives a frame without an 802.1Q tag on a trunk port and forwards it to the native VLAN broadcast domain."
+    }
+  ]
+}

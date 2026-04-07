@@ -1,0 +1,186 @@
+{
+  "status": "completed",
+  "appName": "ccna",
+  "flashcards": [
+    {
+      "Topic": "2",
+      "Subtopic": "5",
+      "Front": "Rapid PVST+",
+      "Back": "Cisco's default spanning tree mode that uses 802.1w (RSTP) logic while maintaining a separate spanning tree instance for every configured VLAN."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "5",
+      "Front": "RSTP (802.1w)",
+      "Back": "The IEEE standard for Rapid Spanning Tree Protocol, which provides significantly faster convergence than the original 802.1D STP by using a proposal-and-agreement process."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "5",
+      "Front": "Root Bridge",
+      "Back": "The central switch in a spanning tree topology. All other switches calculate their best path to this device, which is elected based on the lowest Bridge ID."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "5",
+      "Front": "Bridge ID (BID)",
+      "Back": "An 8-byte value used by STP to elect the root bridge. it consists of a 2-byte Priority (including VLAN ID) and the switch's 6-byte MAC address."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "5",
+      "Front": "Root Port (RP)",
+      "Back": "The single port on a non-root switch that has the lowest cumulative path cost to reach the root bridge."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "5",
+      "Front": "Designated Port (DP)",
+      "Back": "The port on a network segment that is responsible for forwarding traffic from that segment toward the root bridge. Every active link has exactly one DP."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "5",
+      "Front": "Alternate Port",
+      "Back": "An RSTP port role for an interface that has an alternative path to the root bridge but is currently blocked. it can become a Root Port almost instantly if the primary fails."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "5",
+      "Front": "Backup Port",
+      "Back": "An RSTP port role for an interface that provides a redundant path to a segment where the switch already has a Designated Port."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "5",
+      "Front": "Discarding State",
+      "Back": "The RSTP port state that combines the functions of the legacy STP Blocking and Disabled states. it does not forward data frames or learn MAC addresses."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "5",
+      "Front": "Learning State (RSTP)",
+      "Back": "An intermediate RSTP state where the port does not yet forward data frames but begins to populate the MAC address table based on incoming traffic."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "5",
+      "Front": "Forwarding State (RSTP)",
+      "Back": "The operational RSTP state where the port is fully functional, forwarding data frames and learning MAC addresses."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "5",
+      "Front": "PortFast",
+      "Back": "A Cisco feature that allows a port connected to an end-user device to transition immediately to the forwarding state, bypassing the usual STP delay."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "5",
+      "Front": "BPDU Guard",
+      "Back": "A security feature that automatically disables a PortFast-enabled port if it receives a BPDU, preventing loops from unauthorized switches."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "5",
+      "Front": "Bridge Priority",
+      "Back": "A configurable value (default 32768) used to influence the root bridge election. it must be set in increments of 4096."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "5",
+      "Front": "System ID Extension",
+      "Back": "A 12-bit field within the Bridge Priority that carries the VLAN ID, allowing for a unique Bridge ID for every VLAN instance in PVST+."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "5",
+      "Front": "Root Path Cost",
+      "Back": "The total cumulative cost of all links from a switch port to the root bridge. STP uses this value to determine the Root Port."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "5",
+      "Front": "Hello BPDU",
+      "Back": "The specific management frame used by spanning tree to communicate topology information and maintain the root bridge election."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "5",
+      "Front": "Convergence (STP)",
+      "Back": "The state where all switches in a network have agreed on their port roles and states, and there is a single loop-free path between all nodes."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "5",
+      "Front": "Edge Port",
+      "Back": "The RSTP term for a port connected to a host device. When PortFast is enabled on a port, RSTP treats it as an edge port."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "5",
+      "Front": "Proposal and Agreement",
+      "Back": "The mechanism used by RSTP to achieve rapid convergence by allowing adjacent switches to explicitly negotiate port states rather than relying on timers."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "5",
+      "Front": "TCN (Topology Change Notification)",
+      "Back": "A specialized BPDU sent by a switch to inform the root bridge that a link has failed or a new path has become active."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "5",
+      "Front": "Point-to-Point Link (RSTP)",
+      "Back": "A full-duplex link between two switches. RSTP can only perform rapid transition to forwarding on these types of links."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "5",
+      "Front": "Shared Link (RSTP)",
+      "Back": "A half-duplex link (typically connected to a hub). RSTP must fall back to legacy 802.1D timers on these links, slowing down convergence."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "5",
+      "Front": "Root Primary Command",
+      "Back": "A Cisco IOS macro that automatically sets a switch's priority to 24576 (or lower) to ensure it becomes the root bridge for a specific VLAN."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "5",
+      "Front": "Root Secondary Command",
+      "Back": "A Cisco IOS macro that sets a switch's priority to 28672, positioning it to take over as root bridge if the primary root fails."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "5",
+      "Front": "show spanning-tree vlan",
+      "Back": "A verification command that displays the STP status, root bridge info, and port roles/states for a specific VLAN instance."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "5",
+      "Front": "Max Age Timer",
+      "Back": "The legacy STP timer (default 20s) indicating how long a switch waits after missing a BPDU before triggering a topology change."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "5",
+      "Front": "Forward Delay",
+      "Back": "The legacy STP timer (default 15s) that defines the length of the Listening and Learning states. RSTP eliminates the need for this in most cases."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "5",
+      "Front": "spanning-tree mode rapid-pvst",
+      "Back": "The global configuration command used to enable the Rapid Per-VLAN Spanning Tree Plus mode on a Cisco switch."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "5",
+      "Front": "PVST+ (Legacy)",
+      "Back": "The older Cisco-proprietary version of spanning tree that uses 802.1D logic but provides a separate instance per VLAN."
+    }
+  ]
+}

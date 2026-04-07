@@ -1,0 +1,186 @@
+{
+  "status": "completed",
+  "appName": "ccna",
+  "flashcards": [
+    {
+      "Topic": "6",
+      "Subtopic": "8",
+      "Front": "Cisco AI Endpoint Analytics",
+      "Back": "A feature within Cisco DNA Center that uses AI and machine learning to identify, profile, and monitor endpoints on the network with high precision."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "8",
+      "Front": "Endpoint Visibility",
+      "Back": "The ability of AI Endpoint Analytics to discover and track every device connected to the network, including IoT, medical, and industrial equipment."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "8",
+      "Front": "Endpoint Profiling",
+      "Back": "The process of collecting data about a device (like OS, model, and hardware) to automatically categorize it into a specific device type or group."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "8",
+      "Front": "AI/ML Driven Identification",
+      "Back": "Using advanced mathematical models to recognize devices based on their behavioral patterns rather than just simple MAC addresses or hostnames."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "8",
+      "Front": "Deep Packet Inspection (DPI)",
+      "Back": "A technique used by AI Endpoint Analytics to examine the data portion of packets to accurately identify application protocols and device types."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "8",
+      "Front": "Endpoint Spoofing Detection",
+      "Back": "An AI-powered security feature that detects if a malicious device is attempting to impersonate a legitimate endpoint by mimicking its hardware profile."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "8",
+      "Front": "Asset Classification",
+      "Back": "The automated sorting of discovered devices into structured categories like 'Workstation,' 'IP Camera,' or 'Smart Sensor' for policy enforcement."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "8",
+      "Front": "Behavioral Baselining",
+      "Back": "Learning the 'normal' traffic patterns of a device so that deviations can be detected as potential security threats or hardware malfunctions."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "8",
+      "Front": "NetFlow (Analytics Context)",
+      "Back": "A key source of telemetry data for AI Endpoint Analytics, providing details on flow volume, duration, and protocol usage for every device."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "8",
+      "Front": "DNS Traffic Inspection",
+      "Back": "Analyzing the domain name requests made by an endpoint to help identify its manufacturer, service type, and intended function."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "8",
+      "Front": "HTTP User-Agent Analysis",
+      "Back": "Examining the User-Agent string in web traffic to determine the operating system and browser version used by a connected device."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "8",
+      "Front": "Device Trust Score",
+      "Back": "A security metric assigned to an endpoint based on its identity verification and behavioral consistency over time."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "8",
+      "Front": "IoT Device Management",
+      "Back": "The specialized handling of Internet of Things devices that often lack traditional management agents and have unique communication profiles."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "8",
+      "Front": "Custom Device Profiles",
+      "Back": "The ability for administrators to create unique identification rules for proprietary hardware that is not already in the Cisco AI database."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "8",
+      "Front": "Cisco Identity Services Engine (ISE) Integration",
+      "Back": "The connection between DNA Center and ISE where endpoint profile data is used to automatically apply security access policies."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "8",
+      "Front": "Unprofiled Device",
+      "Back": "A connected endpoint that AI Analytics has discovered but cannot yet identify. These often require manual review or more data for classification."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "8",
+      "Front": "Precision Identification",
+      "Back": "The capability to distinguish between very similar devices, such as different models of IP phones from the same manufacturer."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "8",
+      "Front": "Endpoint Inventory (Dashboard)",
+      "Back": "A centralized view in DNA Center that shows the status, location, and type of every endpoint currently on the network."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "8",
+      "Front": "Crowdsourced Intelligence",
+      "Back": "The use of anonymized data from thousands of Cisco customers to improve the device identification accuracy for everyone."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "8",
+      "Front": "Protocol Inspection",
+      "Back": "The continuous monitoring of specialized protocols like DICOM (medical) or Modbus (industrial) to identify niche equipment."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "8",
+      "Front": "Attribute Mapping",
+      "Back": "Linking specific technical data points (like MAC OUI or TCP ports) to human-readable device labels in the analytics engine."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "8",
+      "Front": "AI Cloud Connection",
+      "Back": "The secure link where DNA Center sends telemetry data to Cisco's cloud AI for advanced analysis and model updates."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "8",
+      "Front": "Policy Segmentation (Analytics)",
+      "Back": "Using the identified device type to automatically place the endpoint into the correct virtual network or security group."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "8",
+      "Front": "Anomaly Detection (Endpoints)",
+      "Back": "The automatic alerting when a device starts communicating in a way that is inconsistent with its assigned profile (e.g., a printer sending mass emails)."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "8",
+      "Front": "MAC OUI (Analytics)",
+      "Back": "The first 24 bits of a MAC address used as a basic attribute to identify the hardware manufacturer of an endpoint."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "8",
+      "Front": "DHCP Fingerprinting",
+      "Back": "Analyzing the options and sequence of a device's DHCP request to help determine its operating system and device class."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "8",
+      "Front": "mDNS/Bonjour (Analytics)",
+      "Back": "Monitoring discovery protocols to find devices like Apple TVs or printers that announce their services on the local subnet."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "8",
+      "Front": "Passive Scanning (AI)",
+      "Back": "Gathering device information by simply observing network traffic, without sending any disruptive probes to the endpoint."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "8",
+      "Front": "Active Probing (AI)",
+      "Back": "Sending specific requests (like SNMP or HTTP) to an endpoint to elicit a response that helps confirm its identity and capabilities."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "8",
+      "Front": "Profiling Convergence",
+      "Back": "The speed at which the AI engine can gather enough data to move a device from 'unknown' to 'identified'."
+    }
+  ]
+}

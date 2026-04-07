@@ -1,0 +1,186 @@
+{
+  "status": "completed",
+  "appName": "ccna",
+  "flashcards": [
+    {
+      "Topic": "4",
+      "Subtopic": "8",
+      "Front": "SSH (Secure Shell)",
+      "Back": "A cryptographic network protocol used for secure remote access to a device's command-line interface. Unlike Telnet, it encrypts all traffic, including credentials."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "8",
+      "Front": "Hostname (SSH Requirement)",
+      "Back": "A unique name assigned to a router or switch. it is a required parameter for generating the RSA keys used by SSH."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "8",
+      "Front": "ip domain-name",
+      "Back": "The Cisco global command used to define the network domain for the device. it is combined with the hostname to form the FQDN for RSA key generation."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "8",
+      "Front": "crypto key generate rsa",
+      "Back": "The Cisco command used to create the public and private encryption keys required for SSH communication."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "8",
+      "Front": "RSA Key Modulus",
+      "Back": "The bit length of the generated encryption keys. A minimum of 768 bits is required for SSHv2, while 1024 or higher is recommended for better security."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "8",
+      "Front": "SSH v2",
+      "Back": "The modern and more secure version of the SSH protocol. it is the standard for Cisco device management and addresses vulnerabilities found in SSH v1."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "8",
+      "Front": "ip ssh version 2",
+      "Back": "The global configuration command used to force a Cisco device to only support the more secure SSH v2 protocol."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "8",
+      "Front": "line vty 0 15",
+      "Back": "The command to enter configuration mode for the virtual terminal lines, which are the logical ports used for remote network management."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "8",
+      "Front": "transport input ssh",
+      "Back": "A VTY line configuration command that restricts remote access to only the SSH protocol, effectively disabling insecure Telnet access."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "8",
+      "Front": "login local",
+      "Back": "A VTY line configuration command that instructs the device to check a user's credentials against its own local database of usernames and passwords."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "8",
+      "Front": "Local Username Database",
+      "Back": "A list of usernames and secret passwords stored in the device's running configuration, used by the 'login local' command for authentication."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "8",
+      "Front": "show ip ssh",
+      "Back": "A verification command used to confirm that the SSH server is enabled and to see which protocol version is currently running."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "8",
+      "Front": "show ssh",
+      "Back": "A verification command that displays the status of all currently active SSH client connections to the device."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "8",
+      "Front": "TCP Port 22",
+      "Back": "The standard destination port number used for all SSH communication."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "8",
+      "Front": "In-Band Management",
+      "Back": "Accessing a device's management interface (like SSH) over the same network infrastructure used for standard user data traffic."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "8",
+      "Front": "Out-of-Band Management",
+      "Back": "Accessing a device's management interface through a dedicated physical connection (like the console port) that is independent of the network."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "8",
+      "Front": "Telnet (Remote Access)",
+      "Back": "A legacy management protocol that sends all data in clear text. it is highly insecure and should be avoided in production networks."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "8",
+      "Front": "crypto key zeroize rsa",
+      "Back": "The command used to permanently delete the existing RSA keys from a device, which will also disable the SSH server."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "8",
+      "Front": "SSH Timeout",
+      "Back": "A security setting configured via 'ip ssh timeout' that automatically disconnects an idle remote session after a certain period."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "8",
+      "Front": "SSH Authentication Retries",
+      "Back": "A security setting configured via 'ip ssh authentication-retries' that limits the number of failed login attempts before the session is closed."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "8",
+      "Front": "username [name] secret [password]",
+      "Back": "The standard global command used to create a local user account with a highly secure, hashed password for remote access."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "8",
+      "Front": "FQDN (SSH Context)",
+      "Back": "Fully Qualified Domain Name. The combination of hostname and domain-name (e.g., SW1.example.com) used by the RSA key generation algorithm."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "8",
+      "Front": "terminal length 0",
+      "Back": "An EXEC mode command often used in remote sessions to disable output paging, allowing for long configuration displays without interruptions."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "8",
+      "Front": "SSH Client",
+      "Back": "Software (like PuTTY or the built-in terminal on Linux/Mac) that an administrator uses to establish an encrypted connection to a remote network device."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "8",
+      "Front": "Banner Motd",
+      "Back": "A legal warning message displayed to users upon connecting to a device. it is often used to discourage unauthorized management attempts."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "8",
+      "Front": "Privilege Level 15",
+      "Back": "The highest administrative access level on a Cisco device. User accounts can be configured to enter this mode automatically upon SSH login."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "8",
+      "Front": "VTY Access List",
+      "Back": "An ACL applied to the VTY lines (using 'access-class') to restrict SSH access to only specific authorized IP addresses or subnets."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "8",
+      "Front": "SCP (Secure Copy)",
+      "Back": "A file transfer protocol that runs over SSH, providing a secure way to upload or download IOS images and configuration files."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "8",
+      "Front": "SSH Data Integrity",
+      "Back": "A property of SSH that uses hashing to ensure that management commands have not been altered in transit between the client and the device."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "8",
+      "Front": "SSH Confidentiality",
+      "Back": "A property of SSH that uses encryption to ensure that even if management traffic is intercepted, it cannot be read by an unauthorized third party."
+    }
+  ]
+}

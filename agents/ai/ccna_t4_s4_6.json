@@ -1,0 +1,186 @@
+{
+  "status": "completed",
+  "appName": "ccna",
+  "flashcards": [
+    {
+      "Topic": "4",
+      "Subtopic": "4",
+      "Front": "SNMP Manager",
+      "Back": "The centralized software system used to monitor and manage network devices. It sends requests to and receives information from SNMP agents running on routers, switches, and servers."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "4",
+      "Front": "SNMP Agent",
+      "Back": "A software component running on a network device that maintains its management data and responds to queries from the SNMP manager. it can also proactively send notifications when specific events occur."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "4",
+      "Front": "Management Information Base",
+      "Back": "A structured hierarchical database used by SNMP that defines all the objects a device can monitor. Each object is identified by a unique Object Identifier (OID)."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "4",
+      "Front": "SNMP Get Request",
+      "Back": "A message sent by an SNMP manager to an agent to retrieve the value of a specific management object, such as the current traffic level on a switch port."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "4",
+      "Front": "SNMP Set Request",
+      "Back": "A command sent by an SNMP manager to an agent to modify a configuration value on a device, such as shutting down a physical interface or changing a system name."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "4",
+      "Front": "SNMP Trap",
+      "Back": "An unsolicited notification sent by an SNMP agent to a manager to report a significant event, such as a link failure or an authentication error. it is an unreliable (UDP) message."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "4",
+      "Front": "SNMP Inform",
+      "Back": "A notification similar to a trap, but it requires an acknowledgement from the SNMP manager. if no ACK is received, the agent will retransmit the message, making it more reliable."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "4",
+      "Front": "SNMP v2c",
+      "Back": "The most commonly used version of SNMP. it introduces bulk transfers and better error handling but still relies on simple 'community strings' for security, which are sent in plain text."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "4",
+      "Front": "SNMP v3",
+      "Back": "The most secure version of SNMP, providing robust authentication and encryption. It uses USM (User-based Security Model) and VACM (View-based Access Control Model) to protect management data."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "4",
+      "Front": "Community String",
+      "Back": "A simple password used in SNMP v1 and v2c to authenticate communication between the manager and the agent. There are typically two types: 'read-only' and 'read-write'."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "5",
+      "Front": "Syslog",
+      "Back": "A standard protocol for sending system log or event messages to a central server. it allows administrators to monitor device health, security events, and configuration changes from a single location."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "5",
+      "Front": "Syslog Severity Levels",
+      "Back": "A standardized scale from 0 to 7 used to rank the importance of a log message. Level 0 is the most critical (Emergency), while Level 7 is the least critical (Debugging)."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "5",
+      "Front": "Level 0: Emergency",
+      "Back": "The highest syslog severity level, indicating that the entire system is unusable. This is reserved for catastrophic failures that require immediate attention."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "5",
+      "Front": "Level 3: Error",
+      "Back": "A syslog severity level indicating that a specific component or process has failed. While serious, it typically does not cause a total system outage."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "5",
+      "Front": "Level 4: Warning",
+      "Back": "A syslog severity level that alerts administrators to potential problems that might become serious if not addressed. it is used for non-critical errors or unusual events."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "5",
+      "Front": "Level 5: Notification",
+      "Back": "A syslog severity level used for significant normal operational events, such as an interface changing state (UP/DOWN) or a configuration change being made."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "5",
+      "Front": "Level 7: Debugging",
+      "Back": "The lowest syslog severity level, containing highly detailed information typically used only by engineers for troubleshooting specific software issues."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "5",
+      "Front": "Logging Buffered",
+      "Back": "A Cisco IOS command that configures a device to store log messages in its local RAM. This allows administrators to view the recent history of events even if no external syslog server is available."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "5",
+      "Front": "Logging Trap",
+      "Back": "A configuration command that defines the minimum severity level of messages that should be sent to an external syslog server. Only messages at this level or higher will be forwarded."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "5",
+      "Front": "Syslog Facility",
+      "Back": "A label used to categorize the source of a log message, such as 'auth', 'cron', or 'local0'. it allows the syslog server to sort and store messages from different systems into separate files."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "6",
+      "Front": "DHCP Relay",
+      "Back": "A feature that allows a router to forward DHCP broadcast requests from clients to a server on a different network. it is essential for centralizing IP address management across multiple subnets."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "6",
+      "Front": "IP Helper-Address",
+      "Back": "The Cisco IOS command used to enable a DHCP relay agent. it converts incoming local broadcasts for several protocols, including DHCP and DNS, into unicast packets for a specific server."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "6",
+      "Front": "DHCP Client Mode",
+      "Back": "A configuration on a Cisco router interface (using 'ip address dhcp') that allows the device to automatically obtain its own IP address and subnet mask from a central server."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "6",
+      "Front": "DHCP Pool",
+      "Back": "The defined range of IP addresses that a DHCP server is permitted to assign to clients on a specific network segment. Each pool is associated with a single subnet."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "6",
+      "Front": "DHCP Option 150",
+      "Back": "A specialized DHCP configuration used in VoIP environments to provide the IP addresses of TFTP servers to IP phones, allowing them to download their configuration and firmware."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "6",
+      "Front": "DHCP Option 43",
+      "Back": "A vendor-specific DHCP option often used to provide the IP addresses of Wireless LAN Controllers to lightweight access points during the join process."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "6",
+      "Front": "DHCP Conflict Detection",
+      "Back": "A process where a DHCP server pings an IP address before assigning it to a client to ensure no other device is already using it statically. This prevents IP address conflicts on the network."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "6",
+      "Front": "DHCP Snooping",
+      "Back": "A Layer 2 security feature that monitors DHCP traffic on a switch. it blocks unauthorized DHCP servers and prevents various attacks like DHCP starvation and spoofing."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "6",
+      "Front": "DHCP Binding Table",
+      "Back": "A database maintained by a DHCP server that maps the MAC address of each client to its assigned IP address and the remaining duration of its lease."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "6",
+      "Front": "Default Lease Time",
+      "Back": "The pre-configured duration for which a DHCP client is allowed to use its assigned IP address. it is typically set to 24 hours on many Cisco systems but is highly configurable."
+    }
+  ]
+}

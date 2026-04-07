@@ -1,0 +1,186 @@
+{
+  "status": "completed",
+  "appName": "ccna",
+  "flashcards": [
+    {
+      "Topic": "2",
+      "Subtopic": "9",
+      "Front": "WLC WLAN Creation",
+      "Back": "The process in the WLC GUI where an administrator navigates to WLANs > Create New to define a unique profile name and SSID for a wireless network."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "9",
+      "Front": "Profile Name (WLAN)",
+      "Back": "An administrative label used to identify a specific WLAN configuration within the WLC. it is internal to the controller and not seen by wireless clients."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "9",
+      "Front": "SSID String",
+      "Back": "The actual text name of the wireless network that is broadcast to clients. it must be carefully chosen as it is the name users will select to connect."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "9",
+      "Front": "WLAN ID (GUI)",
+      "Back": "A unique numerical identifier (1–512) assigned to a WLAN within the WLC. it is used to track and manage the wireless network entry in the controller's database."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "9",
+      "Front": "WLAN General Tab",
+      "Back": "The main configuration screen in the WLC GUI where you enable the WLAN, set the SSID, and map the WLAN to a specific network interface."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "9",
+      "Front": "WLAN Status: Enabled",
+      "Back": "A critical checkbox in the WLC GUI. even if perfectly configured, a WLAN will not broadcast until it is explicitly enabled."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "9",
+      "Front": "Dynamic Interface Mapping",
+      "Back": "The setting in the WLC GUI that binds a specific WLAN to a logical interface, which in turn maps the wireless traffic to a physical VLAN ID."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "9",
+      "Front": "WLAN Security Tab",
+      "Back": "The GUI section where administrators define Layer 2 and Layer 3 security policies, such as WPA2 encryption and client authentication methods."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "9",
+      "Front": "Layer 2 Security: WPA2",
+      "Back": "The most common security scheme selected in the WLC drop-down menu, providing robust encryption for modern enterprise and personal wireless networks."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "9",
+      "Front": "AES Encryption (WLC)",
+      "Back": "The hardware-accelerated encryption standard selected under WPA2 parameters to provide maximum data confidentiality for wireless traffic."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "9",
+      "Front": "PSK (Pre-Shared Key) Mode",
+      "Back": "An authentication key management setting used for WPA2-Personal, where all clients use the same static password to join the wireless network."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "9",
+      "Front": "802.1X (WLC GUI)",
+      "Back": "An authentication key management option for WPA2-Enterprise that requires clients to authenticate against an external RADIUS server."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "9",
+      "Front": "WLAN QoS Tab",
+      "Back": "The GUI section used to prioritize wireless traffic. it allows administrators to assign a specific quality of service level to all traffic on a WLAN."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "9",
+      "Front": "Platinum QoS Profile",
+      "Back": "The highest priority level in the WLC GUI, typically reserved for time-critical voice traffic (VoIP)."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "9",
+      "Front": "Gold QoS Profile",
+      "Back": "A high-priority QoS level used for video-on-demand and other time-sensitive multimedia streaming."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "9",
+      "Front": "Silver QoS Profile",
+      "Back": "The default QoS level in the WLC GUI, used for standard 'Best Effort' data traffic like web browsing and email."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "9",
+      "Front": "Bronze QoS Profile",
+      "Back": "The lowest priority QoS level, typically assigned to background traffic or guest wireless networks to prevent them from impacting critical business data."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "9",
+      "Front": "WLAN Advanced Tab",
+      "Back": "A GUI section containing specialized parameters like session timeouts, client load balancing, and interference mitigation settings."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "9",
+      "Front": "Client Exclusion",
+      "Back": "An advanced setting that temporarily blocks a client MAC address after repeated failed authentication attempts to protect against brute-force attacks."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "9",
+      "Front": "Coverage Hole Detection",
+      "Back": "An automated feature configured in the WLC GUI that identifies areas where client signal quality is too low and prompts the WLC to increase AP transmit power."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "9",
+      "Front": "Peer-to-Peer Blocking",
+      "Back": "A security setting that prevents wireless clients on the same WLAN from communicating directly with each other, forcing all traffic to the wired network."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "9",
+      "Front": "Max Clients per WLAN",
+      "Back": "An advanced setting that limits the total number of simultaneous associations permitted on a single WLAN to prevent AP overload."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "9",
+      "Front": "Broadcast SSID (Toggle)",
+      "Back": "A checkbox in the WLC GUI that determines if the SSID is included in beacon frames. Disabling this creates a 'hidden' network."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "9",
+      "Front": "Radio Policy",
+      "Back": "A WLAN setting that defines which radio bands (2.4 GHz, 5 GHz, or both) will support the wireless network."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "9",
+      "Front": "Session Timeout (Advanced)",
+      "Back": "The maximum duration a client can stay connected to a WLAN before being forced to re-authenticate."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "9",
+      "Front": "WMM (Wi-Fi Multimedia)",
+      "Back": "A mandatory QoS requirement for high-speed 802.11n/ac/ax networks that ensures the AP and client can negotiate priority levels."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "9",
+      "Front": "Band Select",
+      "Back": "A WLC feature that proactively encourages dual-band clients to connect to the less congested 5 GHz radio instead of 2.4 GHz."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "9",
+      "Front": "Client Load Balancing",
+      "Back": "An advanced setting that distributes clients across multiple nearby APs to ensure no single AP becomes a performance bottleneck."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "9",
+      "Front": "Fast Transition (802.11r)",
+      "Back": "A GUI option that enables rapid roaming for mobile clients, reducing the handoff time between access points in an ESS."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "9",
+      "Front": "Diagnostics (WLC GUI)",
+      "Back": "A menu section providing tools to monitor real-time client statistics, AP radio status, and system error logs for troubleshooting."
+    }
+  ]
+}

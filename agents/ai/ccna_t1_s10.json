@@ -1,0 +1,186 @@
+{
+  "status": "completed",
+  "appName": "ccna",
+  "flashcards": [
+    {
+      "Topic": "1",
+      "Subtopic": "10",
+      "Front": "ipconfig /all",
+      "Back": "The Windows command used to display detailed TCP/IP configuration for all interfaces, including IP address, subnet mask, default gateway, and DNS servers."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "10",
+      "Front": "ifconfig",
+      "Back": "A legacy command used on macOS and Linux to display or configure network interface parameters. it provides the IP address and subnet mask for active interfaces."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "10",
+      "Front": "ip address (ip addr)",
+      "Back": "The modern Linux command (part of the iproute2 suite) used to display and manage IP addresses on network interfaces, replacing the older 'ifconfig' utility."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "10",
+      "Front": "ip route",
+      "Back": "The modern Linux command used to display and modify the IP routing table. it is used to verify the default gateway and other static/dynamic routes."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "10",
+      "Front": "networksetup -getinfo",
+      "Back": "A macOS-specific command used to retrieve detailed network configuration for a specific hardware interface, such as Wi-Fi or Ethernet."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "10",
+      "Front": "nslookup",
+      "Back": "A network utility available on all major OSs used to query DNS servers to resolve hostnames to IP addresses or vice versa."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "10",
+      "Front": "ping",
+      "Back": "A diagnostic tool that uses ICMP Echo Request messages to test reachability to a remote host and measure round-trip time."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "10",
+      "Front": "tracert",
+      "Back": "The Windows implementation of traceroute. it identifies the path taken by packets to a destination by displaying each hop (router) along the way."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "10",
+      "Front": "traceroute",
+      "Back": "The macOS and Linux utility used to isolate routing problems by showing the sequence of routers a packet traverses to reach its destination."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "10",
+      "Front": "netstat -rn",
+      "Back": "A cross-platform command used to display the kernel's routing table in numerical format, showing the default gateway and active network routes."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "10",
+      "Front": "arp -a",
+      "Back": "A command used on Windows, macOS, and Linux to display the current ARP cache, which maps local IP addresses to their corresponding physical MAC addresses."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "10",
+      "Front": "Default Gateway",
+      "Back": "The IP address of the local router interface that a host uses to send traffic destined for networks outside its own local subnet."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "10",
+      "Front": "DNS Server Address",
+      "Back": "The IP address of a server that handles name resolution requests. Hosts must have this configured to access resources using domain names (like www.google.com)."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "10",
+      "Front": "Loopback Address (Host)",
+      "Back": "The address 127.0.0.1 (IPv4) or ::1 (IPv6) used by a host to send network traffic to itself, typically for testing the local software stack."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "10",
+      "Front": "Subnet Mask (Verification)",
+      "Back": "A parameter that must be verified to ensure the host correctly identifies which other IP addresses are local and which require the use of a default gateway."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "10",
+      "Front": "ICMP Echo Reply",
+      "Back": "The message sent by a remote host in response to a 'ping' request, confirming that the destination is alive and reachable."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "10",
+      "Front": "Time to Live (TTL)",
+      "Back": "A field in the IP header that prevents packets from looping infinitely. it is decremented by each router, and 'traceroute' exploits this to map network hops."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "10",
+      "Front": "MAC Address (Physical Address)",
+      "Back": "The unique 48-bit hardware identifier assigned to a network interface card. it is used for communication on the local Layer 2 segment."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "10",
+      "Front": "DHCP (Client Setting)",
+      "Back": "A configuration where the host is set to 'Obtain an IP address automatically.' The host will use the DORA process to get parameters from a DHCP server."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "10",
+      "Front": "Static IP Configuration",
+      "Back": "A manual assignment of IP parameters on a host. Unlike DHCP, these settings remain constant and must be updated manually if the network changes."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "10",
+      "Front": "Hostname",
+      "Back": "A human-readable label assigned to a device on a network. utilities like 'ping' can use hostnames if a DNS server or local 'hosts' file is available."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "10",
+      "Front": "Round-Trip Time (RTT)",
+      "Back": "The total time it takes for a signal to travel from a source to a destination and back again, typically measured in milliseconds by the 'ping' utility."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "10",
+      "Front": "Packet Loss",
+      "Back": "A condition where one or more data packets traveling across a network fail to reach their destination, often indicated by timed-out requests in 'ping'."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "10",
+      "Front": "Interface Status",
+      "Back": "A verification step to ensure a network adapter is 'Up' or 'Enabled' before troubleshooting higher-level IP configuration issues."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "10",
+      "Front": "Metric (Routing)",
+      "Back": "A value in the host's routing table used to determine the preferred path when multiple routes to the same destination exist."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "10",
+      "Front": "IPv6 Address (Verification)",
+      "Back": "Checking for a Global Unicast Address (GUA) or Link-Local Address (LLA) on an interface using OS-specific commands like 'ipconfig' or 'ip addr'."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "10",
+      "Front": "dig",
+      "Back": "A powerful command-line tool for interrogating DNS name servers, often preferred by Linux and macOS administrators over 'nslookup'."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "10",
+      "Front": "MTU (Maximum Transmission Unit)",
+      "Back": "The size of the largest PDU that can be communicated in a single network layer transaction. it is usually 1500 bytes for standard Ethernet."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "10",
+      "Front": "NIC (Network Interface Card)",
+      "Back": "The physical hardware component that enables a computer to connect to a network. its settings are verified using commands like 'ipconfig' or 'ifconfig'."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "10",
+      "Front": "API (Application Programming Interface)",
+      "Back": "In the context of host networking, APIs are used by applications to interact with the OS's networking stack to send and receive data."
+    }
+  ]
+}

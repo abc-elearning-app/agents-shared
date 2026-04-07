@@ -1,0 +1,186 @@
+{
+  "status": "completed",
+  "appName": "ccna",
+  "flashcards": [
+    {
+      "Topic": "4",
+      "Subtopic": "2",
+      "Front": "NTP",
+      "Back": "Network Time Protocol. A protocol used to synchronize the clocks of computer systems and network devices over packet-switched, variable-latency data networks."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "2",
+      "Front": "NTP Stratum",
+      "Back": "A hierarchical level that indicates the distance of a device from an authoritative time source. Stratum 0 is the highest precision clock, and the number increments with each hop."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "2",
+      "Front": "Stratum 0",
+      "Back": "High-precision timekeeping devices such as atomic clocks, GPS, or other radio clocks. They are not directly connected to the network but to Stratum 1 servers."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "2",
+      "Front": "Stratum 1",
+      "Back": "A network time server that is directly synchronized to a Stratum 0 device. it acts as a primary network time standard."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "2",
+      "Front": "NTP Client Mode",
+      "Back": "A configuration where a device requests time updates from an NTP server to keep its own internal clock accurate."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "2",
+      "Front": "NTP Server Mode",
+      "Back": "A configuration where a device provides time synchronization services to other clients on the network."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "2",
+      "Front": "ntp server (Command)",
+      "Back": "The Cisco IOS command used to specify an external time source for the local device to synchronize with."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "2",
+      "Front": "ntp master",
+      "Back": "A Cisco command that configures a device to act as an authoritative NTP server, using its own internal clock as the reference for other devices."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "2",
+      "Front": "show ntp status",
+      "Back": "A verification command that displays the current synchronization state, the reference clock ID, and the local device's stratum level."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "2",
+      "Front": "show ntp associations",
+      "Back": "A verification command that lists all configured time servers and indicates which one is currently selected as the synchronization source."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "2",
+      "Front": "NTP Offset",
+      "Back": "The time difference between the local clock and the reference server's clock, measured in milliseconds."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "2",
+      "Front": "NTP Jitter (Dispersion)",
+      "Back": "The variability in the latency of time packets received from a server. High jitter can reduce the accuracy of synchronization."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "2",
+      "Front": "NTP Reach",
+      "Back": "An 8-bit octet shown in 'show ntp associations' that indicates the success rate of the last eight time queries (377 means all eight were successful)."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "2",
+      "Front": "ntp update-calendar",
+      "Back": "A command that instructs a Cisco router to periodically update its hardware calendar chip with the time learned via NTP."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "2",
+      "Front": "Reference Clock ID",
+      "Back": "The IP address or string identifying the source that the local NTP process is currently synchronized to."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "2",
+      "Front": "Synchronized State",
+      "Back": "The status indicating that the local device has successfully matched its clock with a trusted NTP server and is within an acceptable margin of error."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "2",
+      "Front": "Unsynchronized State",
+      "Back": "A condition where a device has not yet established a reliable link with an NTP server or the time difference is too large to correct automatically."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "2",
+      "Front": "NTP Authentication",
+      "Back": "A security feature that uses MD5 keys to ensure a client only accepts time updates from an authorized and verified server."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "2",
+      "Front": "NTP Broadcast Mode",
+      "Back": "An NTP configuration where a server sends time updates to all devices on a local subnet simultaneously, rather than responding to individual requests."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "2",
+      "Front": "Stratum 16",
+      "Back": "The NTP value indicating that a device is unsynchronized and its time should not be trusted by other network nodes."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "2",
+      "Front": "Local Hardware Clock",
+      "Back": "The battery-backed clock chip inside a router or switch that maintains time even when the device is powered off."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "2",
+      "Front": "Software Clock",
+      "Back": "The internal timekeeping process maintained by the Cisco IOS kernel while the device is running. it is what NTP actually synchronizes."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "2",
+      "Front": "UDP Port 123",
+      "Back": "The standardized port number used for all NTP communication between clients and servers."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "2",
+      "Front": "NTP Poll Interval",
+      "Back": "The frequency at which an NTP client sends a request to its server. this interval increases as the clock stability improves."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "2",
+      "Front": "ntp source",
+      "Back": "A command used to specify a particular local interface (usually a Loopback) whose IP address should be used for all outgoing NTP packets."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "2",
+      "Front": "Network Delay (NTP)",
+      "Back": "The round-trip time measured for an NTP packet to travel from the client to the server and back, used to calculate the correct time."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "2",
+      "Front": "Clock Slew",
+      "Back": "The process of making very small, gradual adjustments to the local clock speed to bring it into synchronization without jumping the time forward or backward."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "2",
+      "Front": "NTP Peer",
+      "Back": "A relationship between two devices at the same stratum level where they exchange time information to improve the stability of their respective clocks."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "2",
+      "Front": "Drift (Clock)",
+      "Back": "The tendency of a hardware clock to gradually lose or gain time over a period due to environmental factors or crystal quality."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "2",
+      "Front": "Leap Second",
+      "Back": "A one-second adjustment occasionally applied to UTC time to keep it synchronized with Earth's rotation. NTP can distribute info about upcoming leap seconds."
+    }
+  ]
+}

@@ -1,0 +1,186 @@
+{
+  "status": "completed",
+  "appName": "ccna",
+  "flashcards": [
+    {
+      "Topic": "6",
+      "Subtopic": "1",
+      "Front": "Network Automation",
+      "Back": "The use of software to automatically configure, manage, and monitor network devices, reducing manual effort and improving efficiency."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "1",
+      "Front": "Programmability (Network)",
+      "Back": "The ability to manage and control network hardware through software and APIs rather than manual CLI interaction."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "1",
+      "Front": "Manual Configuration",
+      "Back": "The traditional process of an engineer typing individual commands on each device one-by-one, which is slow and prone to errors."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "1",
+      "Front": "Configuration Consistency",
+      "Back": "A major benefit of automation, ensuring that all devices in a network are configured with identical standard settings without variations."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "1",
+      "Front": "Human Error Reduction",
+      "Back": "The decrease in network outages and security holes achieved by using automated scripts instead of manual typing for repetitive tasks."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "1",
+      "Front": "Scalability (Automation)",
+      "Back": "The ability to manage hundreds or thousands of devices as easily as one, which is essential for large enterprise and cloud environments."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "1",
+      "Front": "Configuration Drift",
+      "Back": "A problem in manual networks where individual devices gradually become inconsistent due to undocumented local changes. automation prevents this."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "1",
+      "Front": "Operational Efficiency",
+      "Back": "The improvement in speed and resource usage gained by automating day-to-day management tasks like monitoring and troubleshooting."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "1",
+      "Front": "Speed of Deployment",
+      "Back": "The reduction in time required to roll out new network services or configuration changes across the entire infrastructure."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "1",
+      "Front": "Infrastructure as Code (IaC)",
+      "Back": "A management philosophy where network configurations are treated like software code, allowing for version control and automated testing."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "1",
+      "Front": "Controller-Based Management",
+      "Back": "A model where an administrator interacts with a central software controller, which then automates the configuration of all physical devices."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "1",
+      "Front": "Application Programming Interface (API)",
+      "Back": "A software interface that allows different programs (like an automation script and a network controller) to communicate and exchange data."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "1",
+      "Front": "Network Monitoring (Automated)",
+      "Back": "The use of automated tools to continuously gather performance data and health status from devices without manual polling."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "1",
+      "Front": "Automated Provisioning",
+      "Back": "The process of automatically setting up a new network device from scratch, including software installation and base configuration."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "1",
+      "Front": "Policy-Based Networking",
+      "Back": "A management approach where administrators define high-level business rules, and automation software applies them to the network."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "1",
+      "Front": "Data Analytics (Network)",
+      "Back": "The automated analysis of large volumes of network data to identify trends, predict failures, and optimize performance."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "1",
+      "Front": "Change Management (Automated)",
+      "Back": "The use of automation to track, test, and apply changes to the network while maintaining a full audit log of all modifications."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "1",
+      "Front": "Zero-Touch Provisioning (ZTP)",
+      "Back": "An automated feature where a new device can be plugged into the network and automatically download its configuration without any manual CLI work."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "1",
+      "Front": "Network Reliability",
+      "Back": "The increased uptime and stability of a network that results from consistent, tested, and automated configuration processes."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "1",
+      "Front": "Standardization (Network)",
+      "Back": "The practice of using predefined templates for all network configurations, which is enforced and simplified through automation."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "1",
+      "Front": "Network Lifecycle Management",
+      "Back": "The use of automation to manage a device from initial installation through updates and monitoring, until it is decommissioned."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "1",
+      "Front": "Troubleshooting (Automated)",
+      "Back": "The use of software tools to automatically detect and isolate the root cause of network issues faster than manual investigation."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "1",
+      "Front": "Resource Management",
+      "Back": "The automated allocation and optimization of network bandwidth, IP addresses, and hardware resources."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "1",
+      "Front": "Software-Defined Networking (SDN)",
+      "Back": "A networking architecture that separates the control plane from the data plane and uses automation for centralized management."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "1",
+      "Front": "Vendor Neutrality (Automation)",
+      "Back": "The ability of automation tools (like Ansible) to manage devices from different manufacturers using a single, unified approach."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "1",
+      "Front": "Version Control (Config)",
+      "Back": "The practice of storing network configurations in a system like Git, allowing for history tracking and the ability to 'roll back' to a previous state."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "1",
+      "Front": "Audit Trail (Automated)",
+      "Back": "An automatically generated record of every configuration change made to the network, including who made it and exactly what was changed."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "1",
+      "Front": "Data Model (Automation)",
+      "Back": "A standardized way of representing network data (like YANG) so that it can be easily understood and processed by automation software."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "1",
+      "Front": "Compliance Management",
+      "Back": "The automated checking of device configurations against security and organizational standards to ensure they remain in compliance."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "1",
+      "Front": "Cost Reduction (Automation)",
+      "Back": "The long-term savings in personnel time and reduced downtime achieved by implementing automated network management systems."
+    }
+  ]
+}

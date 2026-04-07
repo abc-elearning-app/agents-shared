@@ -1,0 +1,186 @@
+{
+  "status": "completed",
+  "appName": "ccna",
+  "flashcards": [
+    {
+      "Topic": "2",
+      "Subtopic": "4",
+      "Front": "EtherChannel",
+      "Back": "A technology that allows multiple physical Ethernet links between two switches to be bundled into a single logical link, increasing bandwidth and providing redundancy."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "4",
+      "Front": "Port-Channel",
+      "Back": "The logical interface created when physical ports are aggregated into an EtherChannel. Configuration applied to this interface is replicated to all bundled physical ports."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "4",
+      "Front": "LACP (Link Aggregation Control Protocol)",
+      "Back": "The IEEE standard (802.3ad) for dynamic EtherChannel negotiation. it allows switches from different vendors to form a bundle automatically."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "4",
+      "Front": "PAgP (Port Aggregation Protocol)",
+      "Back": "A Cisco-proprietary protocol for dynamic EtherChannel negotiation. it is the legacy predecessor to LACP."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "4",
+      "Front": "LACP Mode: Active",
+      "Back": "An LACP negotiation mode where the port actively initiates the formation of an EtherChannel by sending LACP frames to its neighbor."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "4",
+      "Front": "LACP Mode: Passive",
+      "Back": "An LACP negotiation mode where the port only responds to LACP frames it receives but does not initiate negotiation itself."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "4",
+      "Front": "PAgP Mode: Desirable",
+      "Back": "A PAgP negotiation mode where the port actively attempts to negotiate the formation of an EtherChannel bundle."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "4",
+      "Front": "PAgP Mode: Auto",
+      "Back": "A PAgP negotiation mode where the port waits passively for the neighbor to initiate negotiation."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "4",
+      "Front": "EtherChannel Mode: On",
+      "Back": "A static configuration mode where the physical ports are forced to form an EtherChannel without any negotiation protocols (LACP or PAgP)."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "4",
+      "Front": "channel-group",
+      "Back": "The interface-level command used to assign a physical port to an EtherChannel bundle and specify the mode (on, active, passive, etc.)."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "4",
+      "Front": "EtherChannel Load Balancing",
+      "Back": "The mechanism that determines which physical link a frame will use. it uses a mathematical hash of header fields to distribute traffic across the bundle."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "4",
+      "Front": "port-channel load-balance",
+      "Back": "The global configuration command used to define the hashing algorithm used for traffic distribution across all EtherChannels on the switch."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "4",
+      "Front": "Source MAC Hashing",
+      "Back": "A load balancing method (src-mac) where all frames from a specific host are always sent over the same physical link in the bundle."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "4",
+      "Front": "Destination IP Hashing",
+      "Back": "A load balancing method (dst-ip) where traffic distribution is based on the destination network address, useful for traffic heading to multiple servers."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "4",
+      "Front": "Layer 3 EtherChannel",
+      "Back": "An EtherChannel bundle where the Port-Channel interface is configured as a routed port (using 'no switchport') and assigned an IP address."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "4",
+      "Front": "no switchport",
+      "Back": "The command used to convert a Layer 2 switch port or Port-Channel into a Layer 3 routed interface."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "4",
+      "Front": "show etherchannel summary",
+      "Back": "The primary verification command for EtherChannel. it shows the status of each bundle and indicates which physical ports are members."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "4",
+      "Front": "EtherChannel Flag 'P'",
+      "Back": "A code seen in the 'summary' output indicating that the physical port is 'In Port-channel' and functioning correctly as part of the bundle."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "4",
+      "Front": "EtherChannel Flag 'D'",
+      "Back": "A code seen in the 'summary' output indicating that the physical port is 'Down' or has been administratively disabled."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "4",
+      "Front": "show etherchannel load-balance",
+      "Back": "A verification command used to confirm which hashing method is currently active for traffic distribution across logical bundles."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "4",
+      "Front": "EtherChannel Inconsistency",
+      "Back": "An error state occurring when bundled physical ports have mismatched configurations (e.g., different VLANs or duplex settings), causing the bundle to fail."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "4",
+      "Front": "STP and EtherChannel",
+      "Back": "The interaction where Spanning Tree treats the entire Port-Channel as a single interface, preventing loops while still allowing multiple physical links to be active."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "4",
+      "Front": "Aggregator ID",
+      "Back": "A unique identifier assigned by LACP to each EtherChannel bundle to distinguish it from other bundles on the same switch."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "4",
+      "Front": "LACP System Priority",
+      "Back": "A configurable value used in LACP to determine which switch has the authority to decide which ports are active in a bundle if more than 8 ports are configured."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "4",
+      "Front": "Max-Bundle (LACP)",
+      "Back": "The maximum number of active physical links supported in a single LACP EtherChannel, which is typically 8 on most Cisco platforms."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "4",
+      "Front": "Minimum-Links",
+      "Back": "A configuration parameter that defines the minimum number of active physical links required for the logical Port-Channel interface to stay in an 'Up' state."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "4",
+      "Front": "test etherchannel load-balance",
+      "Back": "A diagnostic command used to predict which specific physical link a given packet flow (defined by MAC/IP) would take through a Port-Channel."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "4",
+      "Front": "LACP Port Priority",
+      "Back": "A value used to determine which physical ports should be placed in standby mode if the number of ports in an LACP bundle exceeds the maximum limit."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "4",
+      "Front": "EtherChannel Guard",
+      "Back": "A feature that detects misconfigurations where a link is intended to be part of an EtherChannel but is not negotiating correctly, resulting in an err-disabled state."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "4",
+      "Front": "Hashing Algorithm",
+      "Back": "The mathematical process that takes packet header info as input and produces an output value used to select one of the physical links in an EtherChannel."
+    }
+  ]
+}

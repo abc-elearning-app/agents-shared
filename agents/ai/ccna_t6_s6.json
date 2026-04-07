@@ -1,0 +1,186 @@
+{
+  "status": "completed",
+  "appName": "ccna",
+  "flashcards": [
+    {
+      "Topic": "6",
+      "Subtopic": "6",
+      "Front": "Ansible",
+      "Back": "An open-source automation tool that is agentless and uses a push model. it communicates with network devices via SSH or NETCONF and uses YAML for configuration."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "6",
+      "Front": "Puppet",
+      "Back": "A configuration management tool that typically uses an agent-based pull model. it uses its own domain-specific language to define the desired state of a device."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "6",
+      "Front": "Chef",
+      "Back": "An automation platform that uses an agent-based pull model. it relies on Ruby-based code to define 'recipes' for managing device configurations."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "6",
+      "Front": "Agentless Architecture",
+      "Back": "A management model (used by Ansible) where no specialized software needs to be installed on the network devices themselves to perform automation."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "6",
+      "Front": "Agent-Based Architecture",
+      "Back": "A management model (used by Puppet and Chef) where a software client must be installed on each managed device to communicate with the central server."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "6",
+      "Front": "Push Model",
+      "Back": "An automation workflow where the central management server initiates the connection and sends configuration changes to the network devices immediately."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "6",
+      "Front": "Pull Model",
+      "Back": "An automation workflow where the managed device periodically contacts the central server to check for and download any pending configuration updates."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "6",
+      "Front": "Ansible Playbook",
+      "Back": "A YAML file that contains a series of 'plays' or instructions to be executed on a group of network devices to achieve a desired configuration."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "6",
+      "Front": "Puppet Manifest",
+      "Back": "A file that uses Puppet's declarative language to describe the final desired state of a system's configuration."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "6",
+      "Front": "Chef Recipe",
+      "Back": "A file containing Ruby-based code that defines the specific steps and logic needed to configure a resource on a managed device."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "6",
+      "Front": "Ansible Inventory",
+      "Back": "A file used by Ansible to list and group the IP addresses or hostnames of all the network devices that it will manage."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "6",
+      "Front": "Chef Cookbook",
+      "Back": "A container used by Chef to organize and group multiple related recipes, templates, and other configuration files into a single unit."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "6",
+      "Front": "Puppet Forge",
+      "Back": "An online repository where Puppet users share pre-built modules and manifests for managing common network devices and applications."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "6",
+      "Front": "YAML (Ansible)",
+      "Back": "Yet Another Markup Language. A human-friendly data serialization language used by Ansible for playbooks and inventory files."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "6",
+      "Front": "Ruby (Chef)",
+      "Back": "The programming language that Chef is built upon and uses for its configuration scripts (recipes and cookbooks)."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "6",
+      "Front": "Idempotency (Config Management)",
+      "Back": "The property where running an automation task multiple times results in the same final configuration, ensuring no changes are made if the device is already in the desired state."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "6",
+      "Front": "Configuration Drift",
+      "Back": "The tendency for device configurations to change over time due to manual CLI edits. automation tools detect and correct this drift automatically."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "6",
+      "Front": "Ansible Control Node",
+      "Back": "The computer or server where Ansible is installed and from which all playbooks and management commands are executed."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "6",
+      "Front": "Puppet Master",
+      "Back": "The centralized server in a Puppet environment that stores all configuration manifests and manages the communication with the agents."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "6",
+      "Front": "Chef Server",
+      "Back": "The central hub where all Chef cookbooks are stored and from which managed nodes pull their configuration recipes."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "6",
+      "Front": "Jinja2",
+      "Back": "A powerful templating engine used by Ansible to generate dynamic network configuration files based on variables."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "6",
+      "Front": "Declarative Management",
+      "Back": "A management style where the engineer defines 'what' the end state should look like (e.g., VLAN 10 exists), rather than 'how' to do it."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "6",
+      "Front": "Imperative Management",
+      "Back": "A management style where the engineer provides the specific commands or steps to achieve a change (similar to a standard script)."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "6",
+      "Front": "Ansible Module",
+      "Back": "A specialized piece of code that Ansible uses to perform a specific task on a device, such as the 'ios_config' or 'ios_command' modules."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "6",
+      "Front": "Chef Run-list",
+      "Back": "An ordered list of recipes that defines the sequence in which Chef will apply configuration changes to a managed node."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "6",
+      "Front": "Puppet Proxy Agent",
+      "Back": "A specialized Puppet agent that runs on a separate server to manage devices (like some Cisco switches) that cannot host an internal agent."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "6",
+      "Front": "Version Control (IaC)",
+      "Back": "The use of tools like Git to track history, manage branches, and collaborate on the configuration files used for network automation."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "6",
+      "Front": "Ansible Ad-hoc Command",
+      "Back": "A quick, one-line Ansible command used to perform a simple task on many devices at once without writing a full playbook."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "6",
+      "Front": "Resource (Puppet/Chef)",
+      "Back": "The fundamental unit of configuration, such as a single file, a package, or a network interface, that is managed by the tool."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "6",
+      "Front": "Desired State",
+      "Back": "The configuration configuration defined in the automation tool's master files. the tool's goal is to ensure the device's actual state matches this."
+    }
+  ]
+}

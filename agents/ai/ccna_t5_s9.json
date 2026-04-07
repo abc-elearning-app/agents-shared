@@ -1,0 +1,186 @@
+{
+  "status": "completed",
+  "appName": "ccna",
+  "flashcards": [
+    {
+      "Topic": "5",
+      "Subtopic": "9",
+      "Front": "WEP (Wired Equivalent Privacy)",
+      "Back": "The original security protocol for 802.11 Wi-Fi. it uses the RC4 cipher and is now considered completely insecure and deprecated."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "9",
+      "Front": "WPA (Wi-Fi Protected Access)",
+      "Back": "A legacy security standard designed to fix WEP's flaws. it introduced TKIP for encryption and dynamic key management."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "9",
+      "Front": "WPA2",
+      "Back": "The industry standard for wireless security that fully implements 802.11i. it uses robust AES encryption with the CCMP algorithm."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "9",
+      "Front": "WPA3",
+      "Back": "The latest wireless security standard that adds mandatory PMF and replaces PSK with SAE to prevent offline dictionary attacks."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "9",
+      "Front": "AES (Advanced Encryption Standard)",
+      "Back": "The powerful encryption algorithm used in WPA2 and WPA3. it is much more secure than the older RC4 cipher used in WEP."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "9",
+      "Front": "TKIP",
+      "Back": "Temporal Key Integrity Protocol. A stopgap encryption method for WPA that used longer initialization vectors but has since been deprecated."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "9",
+      "Front": "CCMP",
+      "Back": "Counter Mode with Cipher Block Chaining Message Authentication Code Protocol. The specific algorithm used by WPA2 for data privacy and integrity."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "9",
+      "Front": "GCMP",
+      "Back": "Galois/Counter Mode Protocol. The high-performance encryption and integrity algorithm used in WPA3 to provide even stronger protection than CCMP."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "9",
+      "Front": "PSK (Pre-Shared Key)",
+      "Back": "Also known as Personal Mode. A security method where all users on a wireless network use the same static password to authenticate."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "9",
+      "Front": "SAE (Simultaneous Authentication of Equals)",
+      "Back": "The key exchange protocol in WPA3-Personal that protects users from brute-force password guessing attacks."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "9",
+      "Front": "802.1X (Wireless)",
+      "Back": "Also known as Enterprise Mode. A port-based framework that requires unique user credentials verified against a RADIUS server."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "9",
+      "Front": "EAP (Extensible Authentication Protocol)",
+      "Back": "A flexible framework used by 802.1X to carry different authentication methods between the client and the AAA server."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "9",
+      "Front": "EAP-TLS",
+      "Back": "A high-security EAP method that requires digital certificates on both the client and the server for mutual authentication."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "9",
+      "Front": "PEAP",
+      "Back": "Protected EAP. A method that creates a secure TLS tunnel to protect the exchange of user credentials, typically using MS-CHAPv2."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "9",
+      "Front": "Supplicant",
+      "Back": "The role played by the wireless client device (e.g., a laptop or smartphone) in an 802.1X authentication process."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "9",
+      "Front": "Authenticator (Wireless)",
+      "Back": "The role played by the access point or Wireless LAN Controller that acts as an intermediary between the client and the AAA server."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "9",
+      "Front": "PMF (Protected Management Frames)",
+      "Back": "A security feature that encrypts 802.11 management frames, such as deauthentication packets, to prevent disconnection attacks."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "9",
+      "Front": "MIC (Message Integrity Check)",
+      "Back": "A hashing function used in WPA/WPA2/WPA3 to ensure that wireless frames have not been tampered with in transit."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "9",
+      "Front": "IV (Initialization Vector)",
+      "Back": "A random number used along with a secret key for data encryption. WEP's IV was too short (24 bits), making it easy to crack."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "9",
+      "Front": "Forward Secrecy",
+      "Back": "A property of WPA3 that ensures even if a future key is compromised, it cannot be used to decrypt past wireless traffic."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "9",
+      "Front": "Four-Way Handshake",
+      "Back": "The process used by WPA2 and WPA3 to securely derive and install unique encryption keys for a client session."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "9",
+      "Front": "Supplicant Key Hierarchy",
+      "Back": "The structure of different keys (PMK, PTK, GTK) used in Wi-Fi security to protect both unicast and group traffic."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "9",
+      "Front": "Group Temporal Key (GTK)",
+      "Back": "A shared encryption key used by an access point to protect broadcast and multicast traffic sent to all associated clients."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "9",
+      "Front": "Pairwise Temporal Key (PTK)",
+      "Back": "A unique encryption key used to protect unicast traffic between a specific wireless client and the access point."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "9",
+      "Front": "EAP-FAST",
+      "Back": "Flexible Authentication via Secure Tunneling. A Cisco-proprietary EAP method that uses Protected Access Credentials (PAC) for secure login."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "9",
+      "Front": "Authentication Server (AS)",
+      "Back": "The centralized server (typically RADIUS) that makes the final 'accept' or 'reject' decision in an 802.1X wireless environment."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "9",
+      "Front": "Mutual Authentication",
+      "Back": "A security process where both the client and the network prove their identities to each other before data is exchanged."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "9",
+      "Front": "RC4 Cipher",
+      "Back": "The legacy stream cipher used by WEP. its weaknesses led to the development of the more robust AES-based security standards."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "9",
+      "Front": "Michael (Algorithm)",
+      "Back": "The specific MIC algorithm used in the TKIP standard to provide data integrity for WPA networks."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "9",
+      "Front": "Open Authentication",
+      "Back": "A configuration where no password is required to join the wireless network. data is transmitted without encryption and is visible to anyone nearby."
+    }
+  ]
+}

@@ -1,0 +1,186 @@
+{
+  "status": "completed",
+  "appName": "ccna",
+  "flashcards": [
+    {
+      "Topic": "1",
+      "Subtopic": "2",
+      "Front": "Two-Tier Architecture",
+      "Back": "A hierarchical network design featuring an access layer and a distribution layer. It is also known as a collapsed core architecture and is suitable for smaller campus environments."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "2",
+      "Front": "Three-Tier Architecture",
+      "Back": "A hierarchical network design featuring access, distribution, and core layers. This structure provides high scalability and performance for large enterprise networks."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "2",
+      "Front": "Access Layer",
+      "Back": "The point in a hierarchical network where end-user devices connect to the infrastructure. Its primary role is to provide local port density and basic edge security."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "2",
+      "Front": "Distribution Layer",
+      "Back": "The intermediary layer in a hierarchical design that aggregates access switches and connects them to the core. It typically implements routing, security policies, and QoS."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "2",
+      "Front": "Core Layer",
+      "Back": "The high-speed backbone of a hierarchical network. Its sole purpose is to switch large volumes of traffic as quickly as possible between different distribution layer modules."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "2",
+      "Front": "Collapsed Core",
+      "Back": "A two-tier design where the functions of the distribution and core layers are combined into a single set of switches. This reduces cost and complexity for smaller sites."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "2",
+      "Front": "Spine-Leaf Topology",
+      "Back": "A two-tier data center architecture where every leaf switch connects to every spine switch. This design ensures low-latency and predictable performance for east-west traffic."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "2",
+      "Front": "Leaf Switch",
+      "Back": "A device in a spine-leaf architecture that connects directly to servers and storage. It serves as the entry point for all physical and virtual endpoints in the data center."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "2",
+      "Front": "Spine Switch",
+      "Back": "A high-capacity backbone switch in a fabric topology that interconnects all leaf switches. It does not connect to endpoints, focusing entirely on high-speed internal switching."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "2",
+      "Front": "WAN Architecture",
+      "Back": "A network design used to connect geographically dispersed sites over long distances. It typically utilizes service provider infrastructure like Metro Ethernet or MPLS."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "2",
+      "Front": "SOHO Network",
+      "Back": "A simplified network design tailored for small offices or home environments. It often uses integrated devices that combine routing, switching, and wireless functions."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "2",
+      "Front": "On-Premises Infrastructure",
+      "Back": "A deployment model where all networking hardware and servers are physically located within an organization's own facilities, providing maximum control and local access."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "2",
+      "Front": "Cloud Infrastructure",
+      "Back": "A model where computing and networking resources are hosted by a third-party provider and accessed over the internet, offering high elasticity and reduced maintenance."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "2",
+      "Front": "Star Topology",
+      "Back": "A physical network layout where all peripheral nodes connect to a single central hub or switch. This is the most common design for modern Ethernet-based LANs."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "2",
+      "Front": "Full Mesh Topology",
+      "Back": "A highly redundant network design where every node has a direct physical or logical connection to every other node, providing the highest possible availability."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "2",
+      "Front": "Partial Mesh Topology",
+      "Back": "A network design where some nodes are interconnected but not all. It balances redundancy and cost by providing multiple paths for critical sites without the expense of a full mesh."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "2",
+      "Front": "Hybrid Design",
+      "Back": "An architectural approach that combines multiple topology concepts, such as a star at the access layer and a partial mesh at the distribution layer, to optimize performance."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "2",
+      "Front": "Clos Network",
+      "Back": "The mathematical foundation for the spine-leaf architecture. It is a non-blocking, multi-stage switching fabric that scales effectively by adding more switches to the tiers."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "2",
+      "Front": "Underlay Network",
+      "Back": "The physical hardware and cabling that provides foundational connectivity. It is responsible for transporting the actual bits between devices in an automated network fabric."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "2",
+      "Front": "Overlay Network",
+      "Back": "A virtual network fabric built on top of a physical underlay. It uses encapsulation techniques like VXLAN to create logical connections independent of physical cabling."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "2",
+      "Front": "Metro Ethernet",
+      "Back": "A WAN technology that provides high-speed Ethernet connectivity across a metropolitan area, allowing businesses to link local sites using familiar Ethernet protocols."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "2",
+      "Front": "Point-of-Presence",
+      "Back": "A physical location where a service provider houses equipment to provide local access to their backbone network. It serves as the entry point for customers into the WAN."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "2",
+      "Front": "User Network Interface",
+      "Back": "The physical demarc point between a customer's equipment and a service provider's network. it is the specific port where the customer's LAN connects to the WAN."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "2",
+      "Front": "E-Line Service",
+      "Back": "A point-to-point Ethernet WAN service that connects exactly two sites. It functions like a direct physical cable between two remote office routers."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "2",
+      "Front": "E-LAN Service",
+      "Back": "An any-to-any Ethernet WAN service that connects multiple sites together into a single logical broadcast domain, functioning like one large distributed switch."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "2",
+      "Front": "E-Tree Service",
+      "Back": "A hub-and-spoke Ethernet WAN service where a central site can communicate with all remote sites, but remote sites cannot communicate directly with each other."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "2",
+      "Front": "Routed Access Layer",
+      "Back": "A network design where the boundary between Layer 2 and Layer 3 is moved to the access switch. This eliminates the need for STP and simplifies network management."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "2",
+      "Front": "Uplink",
+      "Back": "A high-speed network connection that links a lower-tier device (like an access switch) to a higher-tier device (like a distribution switch) in a hierarchy."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "2",
+      "Front": "Fabric (Networking)",
+      "Back": "An integrated networking environment that combines an automated underlay and overlay. it allows for centralized management and policy enforcement across all devices."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "2",
+      "Front": "Redundancy (Design)",
+      "Back": "The inclusion of duplicate components or communication paths in a network design to ensure continued operation in the event of a hardware or link failure."
+    }
+  ]
+}

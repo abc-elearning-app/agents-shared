@@ -1,0 +1,186 @@
+{
+  "status": "completed",
+  "appName": "ccna",
+  "flashcards": [
+    {
+      "Topic": "5",
+      "Subtopic": "1",
+      "Front": "Vulnerability",
+      "Back": "A weakness in a system, process, or design that could be exploited by a threat actor to compromise the security of an organization's assets."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "1",
+      "Front": "Threat",
+      "Back": "Any potential danger that could take advantage of a vulnerability to cause harm, such as unauthorized data access or service disruption."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "1",
+      "Front": "Exploit",
+      "Back": "A specific mechanism, such as a piece of software or a set of commands, used to leverage a vulnerability to gain unauthorized access or cause damage."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "1",
+      "Front": "Mitigation",
+      "Back": "The practice of reducing the risk or impact of a threat by implementing security controls, such as firewalls, patches, or employee training."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "1",
+      "Front": "Social Engineering",
+      "Back": "An attack method that relies on human interaction and manipulation to trick individuals into revealing sensitive information or breaking security protocols."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "1",
+      "Front": "Phishing",
+      "Back": "A widespread social engineering attack where fraudulent emails are sent to trick users into providing credentials or clicking on malicious links."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "1",
+      "Front": "Spear Phishing",
+      "Back": "A highly targeted phishing attack aimed at a specific individual or organization, often using personalized information to increase credibility."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "1",
+      "Front": "Whaling",
+      "Back": "A form of spear phishing targeted at high-level executives (the 'big fish') who have access to extremely sensitive corporate data."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "1",
+      "Front": "Vishing",
+      "Back": "Voice Phishing. A social engineering attack conducted over the phone or via VoIP, where the attacker impersonates a trusted entity."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "1",
+      "Front": "Smishing",
+      "Back": "SMS Phishing. A security attack conducted via text messages to lure victims into revealing personal information or downloading malware."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "1",
+      "Front": "Pharming",
+      "Back": "A cyberattack that redirects a website's traffic to a fake, malicious site, often by poisoning DNS entries or host files."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "1",
+      "Front": "Malware",
+      "Back": "Malicious Software. A broad term for any program designed to infiltrate, damage, or gain unauthorized access to a computer system."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "1",
+      "Front": "Virus",
+      "Back": "A type of malware that attaches itself to a legitimate program and requires human action (like running the file) to replicate and spread."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "1",
+      "Front": "Worm",
+      "Back": "A self-replicating malware program that spreads automatically across network connections without needing to attach to a host file."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "1",
+      "Front": "Trojan Horse",
+      "Back": "Malware that disguises itself as a useful or harmless program to trick users into installing it, while secretly performing malicious actions."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "1",
+      "Front": "Denial-of-Service (DoS)",
+      "Back": "An attack that attempts to make a network resource or service unavailable by overwhelming it with a flood of useless traffic."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "1",
+      "Front": "DDoS",
+      "Back": "Distributed Denial-of-Service. A DoS attack where the malicious traffic originates from thousands of different sources, making it harder to block."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "1",
+      "Front": "Brute-Force Attack",
+      "Back": "A trial-and-error method used to guess passwords or encryption keys by attempting every possible combination until the correct one is found."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "1",
+      "Front": "Dictionary Attack",
+      "Back": "A password-cracking technique that uses a pre-defined list of common words and previously leaked passwords to gain access to a system."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "1",
+      "Front": "Man-in-the-Middle (MitM)",
+      "Back": "An attack where a malicious actor secretly intercepts and possibly alters the communication between two parties who believe they are talking directly."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "1",
+      "Front": "Spoofing Attack",
+      "Back": "A technique where an attacker impersonates another device or user by falsifying data, such as an IP address or MAC address, to bypass security controls."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "1",
+      "Front": "Reflection Attack",
+      "Back": "A DDoS method where the attacker sends requests to legitimate servers using the victim's forged source IP, causing the servers to flood the victim with replies."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "1",
+      "Front": "Amplification Attack",
+      "Back": "A type of reflection attack where the responses generated by the third-party servers are much larger than the original forged requests, increasing the impact."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "1",
+      "Front": "Buffer Overflow",
+      "Back": "A software vulnerability where a program writes more data to a memory buffer than it can hold, potentially allowing an attacker to execute malicious code."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "1",
+      "Front": "Reconnaissance Attack",
+      "Back": "The initial phase of a cyberattack where the actor gathers information about the target network using tools like port scanners and ping sweeps."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "1",
+      "Front": "Watering Hole Attack",
+      "Back": "A security attack where the actor infects a website frequently visited by a specific group of users to gain access to their systems or network."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "1",
+      "Front": "Zero-Day Threat",
+      "Back": "A security vulnerability that is unknown to the software vendor and the public, leaving no time for a patch to be developed before it is exploited."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "1",
+      "Front": "Least Privilege",
+      "Back": "A fundamental security principle where users and systems are granted only the minimum level of access necessary to perform their required functions."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "1",
+      "Front": "Defense in Depth",
+      "Back": "A security strategy that uses multiple layers of diverse security controls to protect assets, ensuring that if one layer fails, others are still in place."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "1",
+      "Front": "Asset (Security)",
+      "Back": "Any hardware, software, data, or intellectual property that has value to an organization and requires protection from threats."
+    }
+  ]
+}

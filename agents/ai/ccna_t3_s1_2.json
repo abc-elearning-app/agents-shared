@@ -1,0 +1,186 @@
+{
+  "status": "completed",
+  "appName": "ccna",
+  "flashcards": [
+    {
+      "Topic": "3",
+      "Subtopic": "1",
+      "Front": "Routing Table",
+      "Back": "A data file stored in a router's memory that lists known network paths. The router uses this information to determine the best next hop for any given destination IP address."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "1",
+      "Front": "Administrative Distance",
+      "Back": "A value used by routers to rank the reliability of different routing information sources. When multiple paths to the same network exist, the router chooses the one with the lowest AD."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "1",
+      "Front": "Routing Metric",
+      "Back": "A numerical value used by a routing protocol to determine the best path among multiple routes to the same destination. Different protocols use different criteria, such as hop count or bandwidth."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "1",
+      "Front": "Next Hop",
+      "Back": "The IP address of the adjacent router interface that a packet should be sent to on its way to the final destination. It represents the immediate following step in the routing path."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "1",
+      "Front": "Outgoing Interface",
+      "Back": "The physical or logical port on the local router that a packet will exit through to reach its next destination. It is determined by the routing table lookup process."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "1",
+      "Front": "Gateway of Last Resort",
+      "Back": "The default route used by a router when no specific entry in the routing table matches a packet's destination IP address. It typically points toward the internet or a core router."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "1",
+      "Front": "Directly Connected Route",
+      "Back": "A routing table entry for a network that is physically attached to one of the router's own interfaces. These routes have the lowest possible administrative distance of 0."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "1",
+      "Front": "Static Route",
+      "Back": "A network path that is manually configured by an administrator. It is reliable and efficient for small networks but does not automatically adapt to topology changes. Its default AD is 1."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "1",
+      "Front": "Dynamic Route",
+      "Back": "A network path learned automatically by a router using a protocol like OSPF or EIGRP. These routes can adapt in real-time to network failures and changes in topology."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "1",
+      "Front": "Routing Protocol Code",
+      "Back": "The short character prefix (like 'C', 'S', or 'O') seen in a routing table that identifies the source of the route. For example, 'O' stands for OSPF and 'L' stands for local."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "2",
+      "Front": "Longest Prefix Match",
+      "Back": "The fundamental rule a router uses to choose between multiple matching routes. It always selects the entry with the most specific (longest) subnet mask to forward the packet."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "2",
+      "Front": "Default Route",
+      "Back": "A special type of static route represented as 0.0.0.0/0. It matches every possible destination IP address and is used only when no more specific match exists in the routing table."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "2",
+      "Front": "Host Route",
+      "Back": "An extremely specific routing entry for a single IP address, denoted by a /32 mask in IPv4 or a /128 mask in IPv6. It always wins the longest prefix match over any subnet route."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "2",
+      "Front": "Recursive Lookup",
+      "Back": "The process where a router must perform multiple routing table searches to find the outgoing interface for a next-hop IP address. Modern routers use CEF to avoid this overhead."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "2",
+      "Front": "Cisco Express Forwarding",
+      "Back": "A high-performance Layer 3 switching technology that pre-calculates the forwarding information and stores it in a specialized table. This allows for extremely fast packet processing in hardware."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "2",
+      "Front": "FIB Table",
+      "Back": "The database used by CEF that contains a mirrored copy of the routing table information optimized for fast lookups. It maps destination networks directly to their outgoing interfaces."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "2",
+      "Front": "Adjacency Table",
+      "Back": "A CEF-related table that stores the pre-calculated Layer 2 header information for all directly connected neighbors. This allows the router to encapsulate packets without repeated ARP lookups."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "2",
+      "Front": "Process Switching",
+      "Back": "The slowest method of packet forwarding where every individual packet must be processed by the router's main CPU. It is only used as a fallback for traffic that cannot be handled in hardware."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "2",
+      "Front": "Fast Switching",
+      "Back": "A legacy caching mechanism where only the first packet of a flow is processed by the CPU. The forwarding decision is then cached in memory for all subsequent packets in the same flow."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "2",
+      "Front": "RIB (Routing Information Base)",
+      "Back": "The formal name for the IP routing table. It serves as the master database for all paths learned from static configuration and dynamic routing protocols."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "2",
+      "Front": "Convergence",
+      "Back": "The state where all routers in a network have updated their routing tables and agree on the best paths to all destinations. Fast convergence is essential for minimizing downtime after a failure."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "1",
+      "Front": "Successor (EIGRP)",
+      "Back": "The term for the primary best path to a destination network in an EIGRP topology. It is the route that is actively installed in the IP routing table."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "1",
+      "Front": "Feasible Successor",
+      "Back": "A backup path in EIGRP that is guaranteed to be loop-free. If the primary successor fails, the feasible successor can be promoted to the routing table immediately without a new calculation."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "1",
+      "Front": "Autonomous System",
+      "Back": "A collection of networks under a single administrative control that shares a common routing strategy. Each system is identified by a unique number (ASN) for global internet routing."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "1",
+      "Front": "Interior Gateway Protocol",
+      "Back": "A routing protocol designed for use within a single autonomous system. Common examples include OSPF, EIGRP, and RIP."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "1",
+      "Front": "Exterior Gateway Protocol",
+      "Back": "A routing protocol used to exchange path information between different autonomous systems. BGP is the only protocol currently used for this purpose on the global internet."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "1",
+      "Front": "Distance Vector Protocol",
+      "Back": "A routing algorithm that determines the best path based on the direction (vector) and distance (metric) to a network. It periodically sends its entire routing table to its neighbors."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "1",
+      "Front": "Link-State Protocol",
+      "Back": "A sophisticated routing algorithm where each router builds a complete map of the entire network topology. Protocols like OSPF use this approach to calculate the most efficient paths."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "1",
+      "Front": "Equal-Cost Multi-Path",
+      "Back": "A routing feature that allows a router to install multiple paths to the same destination in the routing table if they have identical metrics. It enables load balancing across redundant links."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "1",
+      "Front": "Floating Static Route",
+      "Back": "A static route configured with a higher administrative distance than the primary dynamic route. It remains hidden in the configuration until the primary path fails, providing a redundant backup."
+    }
+  ]
+}

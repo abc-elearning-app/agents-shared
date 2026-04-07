@@ -1,0 +1,186 @@
+{
+  "status": "completed",
+  "appName": "ccna",
+  "flashcards": [
+    {
+      "Topic": "3",
+      "Subtopic": "2",
+      "Front": "Longest Prefix Match",
+      "Back": "The primary rule a router uses to select a route from the routing table. it chooses the entry with the most specific (longest) subnet mask that matches the destination IP."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "2",
+      "Front": "Administrative Distance (AD)",
+      "Back": "A rating of the trustworthiness of a routing information source. it is the first criteria used when multiple sources provide a route to the same destination."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "2",
+      "Front": "Routing Metric",
+      "Back": "A value used by a specific routing protocol to determine the best path among multiple routes from the same source to the same destination."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "2",
+      "Front": "Tie-Breaker Rule",
+      "Back": "The logic that if a router learns two identical prefixes with the same AD, it then compares the metrics to decide which one to install in the routing table."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "2",
+      "Front": "Equal-Cost Multi-Path (ECMP)",
+      "Back": "A router's ability to install and use multiple paths to the same destination if they have the same AD and the same metric, allowing for load balancing."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "2",
+      "Front": "Default Route (0.0.0.0/0)",
+      "Back": "The 'route of last resort' with a prefix length of zero. it is the least specific match and is only used if no other route in the table matches the destination."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "2",
+      "Front": "Host Route (/32)",
+      "Back": "The most specific possible routing entry, matching a single IP address. it always wins the longest prefix match over any subnet or summary route."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "2",
+      "Front": "Process Switching",
+      "Back": "The slowest packet forwarding method where the router's main CPU must handle every packet individually, including a full routing table lookup."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "2",
+      "Front": "Fast Switching",
+      "Back": "A legacy caching method where the first packet of a flow is handled by the CPU, and subsequent packets are forwarded using a hardware cache entry."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "2",
+      "Front": "Cisco Express Forwarding (CEF)",
+      "Back": "The modern, high-speed packet forwarding mechanism used by Cisco routers. it pre-calculates forwarding info and stores it in specialized hardware tables."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "2",
+      "Front": "Forwarding Information Base (FIB)",
+      "Back": "The primary table used by CEF. it is a mirrored copy of the routing table optimized for extremely fast hardware-based lookups."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "2",
+      "Front": "Adjacency Table",
+      "Back": "A CEF table that stores pre-computed Layer 2 header information for all directly connected neighbors, allowing the router to encapsulate packets instantly."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "2",
+      "Front": "Switching Fabric",
+      "Back": "The internal hardware architecture of a router or switch that moves data from the ingress (input) interface to the egress (output) interface."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "2",
+      "Front": "Ingress Look-up",
+      "Back": "The process that occurs as a packet enters a router, where its destination IP is extracted and compared against the FIB to find the exit path."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "2",
+      "Front": "Egress Processing",
+      "Back": "The final stage of packet forwarding where the router adds the correct Layer 2 header (MAC address) and sends the packet out the exit interface."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "2",
+      "Front": "TTL Decrement",
+      "Back": "A mandatory step in router forwarding where the Time-to-Live field in the IP header is reduced by 1. if it reaches 0, the packet is dropped."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "2",
+      "Front": "Checksum Recalculation",
+      "Back": "The process where a router recomputes the IP header checksum after modifying the TTL field to ensure data integrity during forwarding."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "2",
+      "Front": "Binary Search Tree",
+      "Back": "The mathematical data structure often used by software-based routing lookups to efficiently find the longest prefix match among thousands of entries."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "2",
+      "Front": "MTU Check",
+      "Back": "A forwarding decision step where the router verifies if the packet size is larger than the exit interface's maximum transmission unit."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "2",
+      "Front": "IP Fragmentation",
+      "Back": "The process where a router breaks a large packet into smaller pieces if it exceeds the MTU of the outgoing link (only supported in IPv4)."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "2",
+      "Front": "ICMP Time Exceeded",
+      "Back": "The error message sent back to the source host by a router if it drops a packet because the TTL field reached zero during the forwarding process."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "2",
+      "Front": "ICMP Destination Unreachable",
+      "Back": "The error message sent by a router if it has no match (including no default route) in its routing table for a packet's destination IP."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "2",
+      "Front": "RIB (Routing Information Base)",
+      "Back": "The formal name for the master routing table that contains all paths learned from all sources. it is used to populate the FIB."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "2",
+      "Front": "Forwarding Logic",
+      "Back": "The overall set of rules a device follows: 1. Check L2 destination. 2. Check L3 destination (LPM). 3. Adjust TTL/Checksum. 4. Encapsulate L2. 5. Transmit."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "2",
+      "Front": "Recursion Depth",
+      "Back": "The number of times a router must re-search the routing table to resolve a next-hop IP to a physical interface. High depth slows down forwarding."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "2",
+      "Front": "Control Plane (Routing)",
+      "Back": "The 'intelligence' of the router where protocols like OSPF and EIGRP run to build the routing table (RIB)."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "2",
+      "Front": "Data Plane (Routing)",
+      "Back": "The hardware-driven part of the router (CEF/FIB) that performs the actual high-speed switching of packets from port to port."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "2",
+      "Front": "Glean State",
+      "Back": "A CEF state where the router knows a neighbor is directly connected but doesn't have its MAC address yet, triggering an ARP request."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "2",
+      "Front": "Adjacency Table Limit",
+      "Back": "The maximum number of Layer 2 neighbor entries that can be stored in hardware memory, which can limit the number of connected hosts."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "2",
+      "Front": "Switching Latency",
+      "Back": "The time delay between a packet entering an ingress port and exiting the egress port during the forwarding process."
+    }
+  ]
+}

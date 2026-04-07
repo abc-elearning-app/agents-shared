@@ -1,0 +1,186 @@
+{
+  "status": "completed",
+  "appName": "ccna",
+  "flashcards": [
+    {
+      "Topic": "6",
+      "Subtopic": "4",
+      "Front": "Cisco DNA Center",
+      "Back": "The foundational controller and analytics platform for Cisco's enterprise network architecture, providing a centralized dashboard for managing campus devices."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "4",
+      "Front": "Traditional Device Management",
+      "Back": "A device-centric approach where network engineers manually configure and troubleshoot each router and switch individually via the CLI."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "4",
+      "Front": "Single-Pane-of-Glass",
+      "Back": "A management concept where all aspects of the network—design, policy, provisioning, and assurance—are handled from one unified graphical interface."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "4",
+      "Front": "Intent-Based Networking (IBN)",
+      "Back": "The DNA Center philosophy where an administrator defines high-level business requirements, and the controller automatically handles the technical implementation."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "4",
+      "Front": "Design (DNA Center)",
+      "Back": "The functional area of DNA Center used to define the physical hierarchy of the network, including sites, buildings, and floor maps."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "4",
+      "Front": "Policy (DNA Center)",
+      "Back": "The functional area where administrators create high-level rules for security (segmentation) and application performance (QoS) that apply to the whole network."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "4",
+      "Front": "Provisioning (DNA Center)",
+      "Back": "The functional area used to prepare and deploy configurations to network devices, including adding them to the inventory and assigning them to sites."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "4",
+      "Front": "Assurance (DNA Center)",
+      "Back": "The functional area that uses AI and machine learning to monitor network health, providing proactive troubleshooting and root-cause analysis."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "4",
+      "Front": "SWIM (Software Image Management)",
+      "Back": "A DNA Center feature that centralizes and automates the process of managing and upgrading the operating system images for all network hardware."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "4",
+      "Front": "Plug-and-Play (PnP)",
+      "Back": "A Cisco technology that allows new, unconfigured devices to be discovered by DNA Center and automatically provisioned as soon as they are connected."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "4",
+      "Front": "EasyQoS",
+      "Back": "A DNA Center automation tool that simplifies the complex process of creating and deploying Quality of Service policies across multiple network devices."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "4",
+      "Front": "Network Discovery (DNA Center)",
+      "Back": "The process where DNA Center scans the network (using SNMP, CDP, or LLDP) to identify and add existing devices to its management database."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "4",
+      "Front": "Inventory (DNA Center)",
+      "Back": "The centralized list of all hardware devices managed by the controller, including their serial numbers, software versions, and physical location."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "4",
+      "Front": "Path Trace",
+      "Back": "A powerful visualization tool in DNA Center Assurance that shows the exact hop-by-hop path a packet takes between any two devices in the network."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "4",
+      "Front": "Health Score",
+      "Back": "A metric provided by DNA Center Assurance that gives a high-level rating (0-100) of the current performance and stability of a device or client."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "4",
+      "Front": "Encrypted Traffic Analysis (ETA)",
+      "Back": "A security feature in DNA Center that can detect malware within encrypted traffic without the need for decryption, by analyzing flow patterns."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "4",
+      "Front": "CLI vs. API Management",
+      "Back": "The shift from human-to-device interaction (CLI) to software-to-device interaction (APIs) for faster and more reliable configuration."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "4",
+      "Front": "Day 0 Operations",
+      "Back": "The initial phase of a network device's lifecycle, involving physical installation and basic automated provisioning (ZTP or PnP)."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "4",
+      "Front": "Day 1 Operations",
+      "Back": "The phase where a device is integrated into the production network and receives its initial full configuration and policy settings."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "4",
+      "Front": "Day N Operations",
+      "Back": "The ongoing phase of a network device's life, involving continuous monitoring, maintenance, software updates, and configuration changes."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "4",
+      "Front": "Actionable Insights",
+      "Back": "Troubleshooting data provided by DNA Center Assurance that not only identifies an issue but also suggests the specific steps to fix it."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "4",
+      "Front": "Topology Map (DNA Center)",
+      "Back": "A dynamic, graphical representation of all network devices and their physical interconnections as seen by the controller."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "4",
+      "Front": "Golden Image",
+      "Back": "A verified and approved Cisco IOS version defined in SWIM that all devices of a certain model should run to ensure network consistency."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "4",
+      "Front": "Role-Based Access Control (RBAC)",
+      "Back": "The practice of restricting DNA Center GUI access based on an administrator's specific job role (e.g., observer, designer, or admin)."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "4",
+      "Front": "Cisco Prime Infrastructure",
+      "Back": "Cisco's legacy network management platform. it is device-centric and focused on wired/wireless lifecycle management rather than SDN."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "4",
+      "Front": "Device Onboarding",
+      "Back": "The automated process of bringing a new hardware device into the management control of DNA Center."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "4",
+      "Front": "Machine Learning (Assurance)",
+      "Back": "The technology used by DNA Center to establish a 'normal' performance baseline for the network and detect anomalies that indicate a problem."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "4",
+      "Front": "Software-Defined Access (SDA)",
+      "Back": "The campus network architecture that is fully automated and managed by DNA Center, implementing fabric technology for connectivity."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "4",
+      "Front": "Configuration Audit (DNA Center)",
+      "Back": "A feature that periodically checks devices to ensure their current settings match the intended policy defined in the controller."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "4",
+      "Front": "Northbound REST APIs (DNA)",
+      "Back": "The interfaces provided by DNA Center that allow third-party automation tools (like Ansible) to interact with the controller's functions."
+    }
+  ]
+}

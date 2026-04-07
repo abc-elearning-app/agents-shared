@@ -1,0 +1,186 @@
+{
+  "status": "completed",
+  "appName": "ccna",
+  "flashcards": [
+    {
+      "Topic": "4",
+      "Subtopic": "7",
+      "Front": "PHB (Per-Hop Behavior)",
+      "Back": "A QoS term referring to the specific treatment (like priority or dropping) a single router gives to a packet as it passes through."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "7",
+      "Front": "Classification (QoS)",
+      "Back": "The process of identifying and grouping network traffic into different categories based on header fields like IP addresses or port numbers."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "7",
+      "Front": "Marking (QoS)",
+      "Back": "The action of changing a field in a packet or frame header (e.g., DSCP or CoS) to label its priority level for other devices."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "7",
+      "Front": "Queuing (QoS)",
+      "Back": "The management of memory buffers where packets are stored when an outgoing interface is busy, ensuring high-priority traffic is sent first."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "7",
+      "Front": "Congestion Avoidance",
+      "Back": "QoS tools that proactively drop packets when buffers fill up to prevent total congestion and maintain network stability."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "7",
+      "Front": "Policing (QoS)",
+      "Back": "A traffic management tool that enforces a strict bit rate by immediately dropping any packets that exceed the configured limit."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "7",
+      "Front": "Shaping (QoS)",
+      "Back": "A technique that smooths traffic bursts by buffering excess packets in a queue and sending them at a constant, lower rate."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "7",
+      "Front": "Trust Boundary",
+      "Back": "The location in a network where a device (like an access switch) begins to accept and act upon the QoS markings present in incoming packets."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "7",
+      "Front": "DSCP",
+      "Back": "Differentiated Services Code Point. A 6-bit field in the IP header used for advanced traffic classification, providing up to 64 priority levels."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "7",
+      "Front": "CoS (Class of Service)",
+      "Back": "A 3-bit marking field in the 802.1Q Ethernet header, used to prioritize traffic at Layer 2 across trunk links."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "7",
+      "Front": "Expedited Forwarding (EF)",
+      "Back": "A high-priority DSCP value (46) typically used for VoIP traffic to ensure low delay, low jitter, and guaranteed bandwidth."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "7",
+      "Front": "Assured Forwarding (AF)",
+      "Back": "A set of DSCP values that provide guaranteed delivery but allow for different drop probabilities if the network becomes congested."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "7",
+      "Front": "Low Latency Queuing (LLQ)",
+      "Back": "A Cisco queuing method that provides a strict-priority queue for real-time traffic (voice/video) alongside standard bandwidth-guaranteed queues."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "7",
+      "Front": "Tail Drop",
+      "Back": "A condition where a router drops all incoming packets for a specific queue because the buffer is completely full."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "7",
+      "Front": "Jitter",
+      "Back": "The variation in the delay of received packets. QoS tools like LLQ are used to minimize jitter for time-sensitive applications."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "7",
+      "Front": "Bandwidth (QoS Requirement)",
+      "Back": "The minimum data rate required by an application. QoS ensures that critical applications always have their required bandwidth available."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "7",
+      "Front": "CIR (Committed Information Rate)",
+      "Back": "The average traffic rate that a service provider or shaper guarantees to transport under normal conditions."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "7",
+      "Front": "NBAR2",
+      "Back": "Network-Based Application Recognition. A deep packet inspection technology used for advanced traffic classification up to the application layer."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "7",
+      "Front": "FIFO Queuing",
+      "Back": "First-In, First-Out. The simplest queuing method where packets are sent in the exact order they arrive, providing no prioritization."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "7",
+      "Front": "Priority Queuing",
+      "Back": "A method where higher-priority queues are always emptied before lower-priority ones, which can lead to 'bandwidth starvation' for low-priority traffic."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "7",
+      "Front": "Class-Based Weighted Fair Queuing",
+      "Back": "CBWFQ. A method that guarantees a minimum amount of bandwidth to different traffic classes while sharing excess capacity fairly."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "7",
+      "Front": "IP Precedence",
+      "Back": "A legacy 3-bit field in the IP header used for marking, which has been superseded by the more granular 6-bit DSCP field."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "7",
+      "Front": "PCP (Priority Code Point)",
+      "Back": "Another name for the CoS bits in an 802.1Q or 802.1ad header used for Layer 2 prioritization."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "7",
+      "Front": "Class Selector (CS)",
+      "Back": "A set of DSCP values designed to be backward compatible with the older 3-bit IP Precedence values."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "7",
+      "Front": "Weighted Random Early Detection",
+      "Back": "WRED. A congestion avoidance tool that randomly drops low-priority packets before a buffer becomes full to prevent TCP global synchronization."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "7",
+      "Front": "TCP Global Synchronization",
+      "Back": "A network inefficiency where multiple TCP flows all reduce their window sizes at once due to tail drop, leading to oscillating link utilization."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "7",
+      "Front": "Best Effort",
+      "Back": "The default treatment for network traffic where no QoS guarantees are applied. it is typically marked with a DSCP value of 0."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "7",
+      "Front": "Packet Loss",
+      "Back": "The failure of one or more transmitted packets to reach their destination. QoS aims to minimize this for critical real-time traffic."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "7",
+      "Front": "Scheduling (QoS)",
+      "Back": "The logic used by a router to decide which packet from which queue to send out of an interface next."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "7",
+      "Front": "Admission Control",
+      "Back": "A QoS process that checks if enough network resources are available before allowing a new high-priority session (like a VoIP call) to start."
+    }
+  ]
+}

@@ -1,0 +1,186 @@
+{
+  "status": "completed",
+  "appName": "ccna",
+  "flashcards": [
+    {
+      "Topic": "4",
+      "Subtopic": "6",
+      "Front": "DHCP Client Mode",
+      "Back": "A configuration on a Cisco router interface (using 'ip address dhcp') that allows the device to automatically obtain its own IP address and subnet mask from a central server."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "6",
+      "Front": "DHCP Relay",
+      "Back": "The process where a router forwards DHCP broadcast messages from a local subnet to a centralized DHCP server on a different subnet, converting them into unicast packets."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "6",
+      "Front": "ip helper-address (Function)",
+      "Back": "The Cisco interface command that enables the DHCP relay agent. it instructs the router to forward UDP broadcasts for multiple protocols, including DHCP, to a specific server."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "6",
+      "Front": "Helper Address Protocol List",
+      "Back": "The set of protocols forwarded by default when a helper address is set, including DHCP (67/68), DNS (53), Time (37), TACACS (49), TFTP (69), and NetBIOS (137/138)."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "6",
+      "Front": "DHCP Discover (Relay)",
+      "Back": "When a relay agent receives this broadcast message, it changes the source to its own interface IP and the destination to the DHCP server's unicast address."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "6",
+      "Front": "GIADDR (Gateway IP Address)",
+      "Back": "A field in the DHCP packet header that the relay agent populates with its own interface IP address. The DHCP server uses this to identify the correct pool for the client."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "6",
+      "Front": "show ip interface (DHCP)",
+      "Back": "The verification command used to confirm if a helper address is correctly configured on a specific router interface."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "6",
+      "Front": "ip address dhcp",
+      "Back": "The specific Cisco IOS command entered in interface configuration mode to make a router act as a DHCP client on that port."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "6",
+      "Front": "DHCP Option 43",
+      "Back": "A vendor-specific DHCP option used by Cisco lightweight access points to discover the IP address of their Wireless LAN Controller (WLC)."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "6",
+      "Front": "DHCP Option 150",
+      "Back": "A Cisco-proprietary DHCP option that provides a list of TFTP server IP addresses to VoIP phones for downloading configuration files."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "6",
+      "Front": "DHCP Option 66",
+      "Back": "An industry-standard DHCP option used to provide the IP address or hostname of a TFTP server to a client."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "6",
+      "Front": "DHCP Option 67",
+      "Back": "A DHCP option used to specify the boot file name that a client should download from a TFTP server (used in PXE booting)."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "6",
+      "Front": "DHCP Relay Agent Information Option",
+      "Back": "Also known as Option 82. it allows a relay agent to insert additional information about the client's physical location (like the switch port) into the DHCP request."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "6",
+      "Front": "Centrally Managed DHCP",
+      "Back": "A network design where a single high-availability server handles IP addressing for all subnets, rather than running individual DHCP processes on every router."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "6",
+      "Front": "DHCP Unicast Reply",
+      "Back": "The message sent by a DHCP server back to the relay agent. The agent then converts it back into a broadcast or unicast to the original client."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "6",
+      "Front": "UDP Port 67",
+      "Back": "The destination port used for DHCP messages sent from a client or relay agent to a DHCP server."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "6",
+      "Front": "UDP Port 68",
+      "Back": "The destination port used for DHCP messages sent from a DHCP server to a client."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "6",
+      "Front": "DHCP Snooping (Relay Context)",
+      "Back": "A security feature that prevents rogue DHCP servers from operating on a network by only allowing DHCP responses from 'trusted' ports."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "6",
+      "Front": "Release (DHCP)",
+      "Back": "A message sent by a client to the DHCP server to inform it that it no longer needs the assigned IP address, allowing the server to return it to the pool."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "6",
+      "Front": "Renew (DHCP)",
+      "Back": "A unicast message sent by a client to its original DHCP server after 50% of the lease time has passed to extend the current lease."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "6",
+      "Front": "Rebind (DHCP)",
+      "Back": "A broadcast message sent by a client if it cannot reach its original server to renew a lease (at 87.5% of lease time), attempting to extend the lease with any server."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "6",
+      "Front": "DHCP NAK",
+      "Back": "Negative Acknowledgment. A message from the server to the client indicating that the requested IP address is not available or is invalid for the subnet."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "6",
+      "Front": "DHCP DECLINE",
+      "Back": "A message from the client to the server indicating that the offered IP address is already in use on the local network (detected via ARP)."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "6",
+      "Front": "DHCP INFORM",
+      "Back": "A message sent by a client that already has a static IP but needs additional configuration parameters like DNS servers or domain name."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "6",
+      "Front": "Reservation (DHCP)",
+      "Back": "A permanent mapping of a specific MAC address to a specific IP address in the DHCP server, ensuring the client always gets the same IP."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "6",
+      "Front": "IP Pool Range",
+      "Back": "The set of contiguous IP addresses defined in a DHCP pool that the server is allowed to dynamically assign to clients."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "6",
+      "Front": "Default Router (Option)",
+      "Back": "The DHCP parameter that provides the client with its default gateway address for the subnet."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "6",
+      "Front": "Domain Name (Option)",
+      "Back": "The DHCP parameter that informs the client of the local DNS suffix (e.g., cisco.com) to use for name resolution."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "6",
+      "Front": "Helper Address (Multiple)",
+      "Back": "A configuration where a router has two or more 'ip helper-address' commands on one interface to provide redundancy for the DHCP service."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "6",
+      "Front": "Next-Server",
+      "Back": "A Cisco DHCP pool command used to specify the IP address of the next server in the boot process (usually the TFTP server)."
+    }
+  ]
+}

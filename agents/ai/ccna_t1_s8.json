@@ -1,0 +1,186 @@
+{
+  "status": "completed",
+  "appName": "ccna",
+  "flashcards": [
+    {
+      "Topic": "1",
+      "Subtopic": "8",
+      "Front": "IPv6 Address Structure",
+      "Back": "A 128-bit logical identifier typically represented as eight groups of four hexadecimal digits (quartets) separated by colons."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "8",
+      "Front": "Quartet (IPv6)",
+      "Back": "A 16-bit segment of an IPv6 address, written as four hexadecimal digits. There are eight quartets in total in a full IPv6 address."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "8",
+      "Front": "Leading Zero Omission",
+      "Back": "An IPv6 abbreviation rule that allows the removal of any leading zeros within a 16-bit quartet (e.g., '00AB' becomes 'AB')."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "8",
+      "Front": "Zero Compression (::)",
+      "Back": "An IPv6 rule that allows replacing a contiguous sequence of all-zero quartets with a double colon. This can only be applied once per address."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "8",
+      "Front": "IPv6 Prefix",
+      "Back": "The leading bits of an IPv6 address that define the network or subnet. it is analogous to the network portion of an IPv4 address."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "8",
+      "Front": "Prefix Length",
+      "Back": "A decimal value following a slash (e.g., /64) that indicates how many of the leading bits in an IPv6 address represent the network prefix."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "8",
+      "Front": "Global Routing Prefix",
+      "Back": "The specific IPv6 address block assigned to an organization by an ISP or RIR, typically making up the first 48 bits."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "8",
+      "Front": "Subnet ID (IPv6)",
+      "Back": "A 16-bit field in a standard /64 address structure that follows the global routing prefix, used by an organization to identify its internal subnets."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "8",
+      "Front": "Interface ID",
+      "Back": "The 64-bit portion of an IPv6 address that uniquely identifies a specific interface on a subnet. it occupies the last half of the address."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "8",
+      "Front": "SLAAC",
+      "Back": "Stateless Address Autoconfiguration. A mechanism allowing hosts to configure their own IPv6 address and gateway using ICMPv6 Router Advertisements."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "8",
+      "Front": "Router Advertisement (RA)",
+      "Back": "An NDP message sent periodically by routers to provide hosts with the local network prefix, length, and default gateway information."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "8",
+      "Front": "Router Solicitation (RS)",
+      "Back": "An NDP message sent by a host upon joining a network to immediately request configuration info from any local routers rather than waiting for an RA."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "8",
+      "Front": "NDP (Neighbor Discovery Protocol)",
+      "Back": "A suite of ICMPv6 messages that replaces ARP, performing functions like MAC address resolution and router discovery."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "8",
+      "Front": "DAD (Duplicate Address Detection)",
+      "Back": "A mandatory IPv6 process where a host verifies that its newly generated address is not already in use by another device on the same link."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "8",
+      "Front": "EUI-64",
+      "Back": "A method of automatically creating a 64-bit interface ID by expanding a 48-bit MAC address and inverting the 7th bit."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "8",
+      "Front": "Unabbreviated IPv6",
+      "Back": "A full 32-digit hexadecimal representation of an IPv6 address with no leading zeros removed and no zero compression applied."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "8",
+      "Front": "Trailing Zeros",
+      "Back": "Zeros at the end of an IPv6 quartet. Unlike leading zeros, these can never be removed as it would change the value of the address."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "8",
+      "Front": "Prefix ID",
+      "Back": "Another term for the Subnet ID or the network portion of the address that identifies the specific logical segment."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "8",
+      "Front": "Link-Local Scope",
+      "Back": "The reachability limit of an address with the fe80::/10 prefix. Traffic with these addresses never leaves the local network segment."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "8",
+      "Front": "Neighbor Solicitation (NS)",
+      "Back": "An NDP message used to request the MAC address of a neighbor or to verify a neighbor's reachability, replacing the ARP Request."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "8",
+      "Front": "Neighbor Advertisement (NA)",
+      "Back": "An NDP message sent in response to an NS, providing the requested MAC address, analogous to an ARP Reply."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "8",
+      "Front": "Solicited-Node Multicast",
+      "Back": "A specialized multicast address used in NDP to efficiently resolve MAC addresses without broadcasting to every node on the link."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "8",
+      "Front": "All-Nodes Multicast (ff02::1)",
+      "Back": "A reserved IPv6 address that targets every IPv6-enabled device on the local link, similar to an IPv4 broadcast."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "8",
+      "Front": "All-Routers Multicast (ff02::2)",
+      "Back": "A reserved IPv6 address used to communicate with all routers on a segment, primarily for sending Router Solicitations."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "8",
+      "Front": "Subnet-Router Anycast",
+      "Back": "A special anycast address automatically assigned to all router interfaces on a subnet, typically using the subnet's prefix with an all-zero interface ID."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "8",
+      "Front": "ICMPv6",
+      "Back": "The version of Internet Control Message Protocol for IPv6. it handles error reporting, diagnostics, and essential neighbor discovery functions."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "8",
+      "Front": "Prefix Delegation",
+      "Back": "A mechanism where a router automatically receives a network prefix from an upstream provider to use for its own internal subnets."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "8",
+      "Front": "Static IPv6 Configuration",
+      "Back": "The manual assignment of an IPv6 address and prefix length to an interface using the 'ipv6 address' command."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "8",
+      "Front": "IPv6 Verification",
+      "Back": "The use of 'show ipv6 interface' or 'show ipv6 route' commands to confirm that addressing and reachability are correctly configured."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "8",
+      "Front": "IPv6 Global Reachability",
+      "Back": "The state where a host can communicate across the public internet using a Global Unicast Address and valid routing entries."
+    }
+  ]
+}

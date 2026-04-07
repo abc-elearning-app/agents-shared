@@ -1,0 +1,186 @@
+{
+  "status": "completed",
+  "appName": "ccna",
+  "flashcards": [
+    {
+      "Topic": "5",
+      "Subtopic": "10",
+      "Front": "WLC GUI Navigation",
+      "Back": "The process of using a web browser to access the Wireless LAN Controller's management interface by entering its management IP address via HTTPS."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "10",
+      "Front": "WLANs Menu (GUI)",
+      "Back": "The top-level menu in the WLC GUI used to create, delete, and configure the different wireless networks (SSIDs) supported by the controller."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "10",
+      "Front": "WLAN Profile Name",
+      "Back": "A unique administrative name assigned to a WLAN in the WLC GUI to distinguish it from other configurations. it is not visible to wireless clients."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "10",
+      "Front": "WLAN SSID (GUI Config)",
+      "Back": "The field in the WLAN configuration screen where the actual network name broadcast to users is defined."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "10",
+      "Front": "WLAN ID (GUI Config)",
+      "Back": "A unique index number assigned to a WLAN on the WLC. it is used internally by the controller to track the wireless network entry."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "10",
+      "Front": "WLAN Status Checkbox",
+      "Back": "A critical setting in the General tab of the WLAN GUI. the WLAN must be set to 'Enabled' for the SSIDs to be broadcast by the APs."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "10",
+      "Front": "Interface/Interface Group (G)",
+      "Back": "The setting in the WLAN General tab that maps the wireless network to a specific dynamic interface or VLAN on the wired network."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "10",
+      "Front": "WLC Security Tab",
+      "Back": "The section of the WLAN configuration GUI where administrators define the authentication and encryption parameters for the network."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "10",
+      "Front": "Layer 2 Security Sub-tab",
+      "Back": "The specific area within the Security tab where you select the wireless security protocol, such as WPA2 or WPA3."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "10",
+      "Front": "WPA+WPA2 (Selection)",
+      "Back": "A common drop-down option in the WLC GUI that allows the WLAN to support both original WPA and the newer WPA2 standards for compatibility."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "10",
+      "Front": "WPA2 Policy",
+      "Back": "A checkbox in the WPA/WPA2 parameters section that must be enabled to support 802.11i-compliant security on the WLAN."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "10",
+      "Front": "AES (WLC GUI Selection)",
+      "Back": "The encryption cipher that should be selected under WPA2 parameters. it provides the highest level of security and performance for WPA2 networks."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "10",
+      "Front": "TKIP (GUI Warning)",
+      "Back": "An older, less secure encryption cipher. it should be disabled in the WLC GUI whenever possible to ensure better security and higher data rates."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "10",
+      "Front": "Authentication Key Management",
+      "Back": "The AKM section in the WLC GUI where you define how users authenticate, such as using a Pre-Shared Key (PSK) or 802.1X."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "10",
+      "Front": "PSK Checkbox",
+      "Back": "The specific toggle in the WLC security screen that enables WPA2-Personal mode for the WLAN."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "10",
+      "Front": "Pre-Shared Key Format",
+      "Back": "The WLC GUI allows the PSK to be entered in either ASCII (passphrase) or Hexadecimal format."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "10",
+      "Front": "ASCII Passphrase",
+      "Back": "A human-readable PSK between 8 and 63 characters long, which is converted by the WLC into a 256-bit encryption key."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "10",
+      "Front": "Broadcast SSID (Toggle)",
+      "Back": "A configuration option in the WLC GUI that determines if the SSID is included in beacon frames. disabling it creates a 'hidden' network."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "10",
+      "Front": "WLAN Advanced Tab",
+      "Back": "A GUI section containing specialized settings like client timeouts, load balancing, and diagnostic features."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "10",
+      "Front": "Apply Button (GUI)",
+      "Back": "The button that must be clicked to commit configuration changes to the WLC's running memory. unsaved changes are lost if the browser is closed."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "10",
+      "Front": "WLC Dashboard",
+      "Back": "The main landing page of the GUI that provides a summary of active WLANs, connected APs, and wireless client statistics."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "10",
+      "Front": "Client Summary (GUI)",
+      "Back": "A monitoring screen in the WLC GUI that lists all currently connected wireless devices, their assigned IP, SSID, and signal strength."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "10",
+      "Front": "AP Operational Status",
+      "Back": "A verification check in the WLC GUI to ensure that access points have successfully joined the controller and are broadcasting the configured WLANs."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "10",
+      "Front": "Dynamic Interface (WLC)",
+      "Back": "A logical interface on the WLC that represents a specific VLAN. it must be correctly configured before it can be mapped to a WLAN."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "10",
+      "Front": "WPA2-PSK Handshake",
+      "Back": "The four-step negotiation process between a client and an AP that verifies both sides have the correct pre-shared key without sending it over the air."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "10",
+      "Front": "WLAN Radio Policy",
+      "Back": "A GUI setting that defines which radio bands (2.4 GHz, 5 GHz, or both) the specific wireless network will be active on."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "10",
+      "Front": "WLC Management IP",
+      "Back": "The IP address used by administrators to log into the WLC GUI. it is typically assigned to the WLC management interface."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "10",
+      "Front": "Beacon Management Frames",
+      "Back": "Periodic wireless signals sent by an AP to announce the presence of a WLAN. the SSID is included in these frames unless hidden in the GUI."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "10",
+      "Front": "WLAN Troubleshooting (GUI)",
+      "Back": "The use of the WLC's internal logs and client monitoring tools to diagnose connectivity or security issues for wireless users."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "10",
+      "Front": "WLC Configuration Backup",
+      "Back": "The process of exporting the entire controller configuration via the GUI to an external file for disaster recovery."
+    }
+  ]
+}

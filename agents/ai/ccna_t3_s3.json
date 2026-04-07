@@ -1,0 +1,186 @@
+{
+  "status": "completed",
+  "appName": "ccna",
+  "flashcards": [
+    {
+      "Topic": "3",
+      "Subtopic": "3",
+      "Front": "IPv4 Static Route",
+      "Back": "A manual routing entry configured using the 'ip route' command. it explicitly defines the destination network, mask, and path."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "3",
+      "Front": "IPv6 Static Route",
+      "Back": "A manual routing entry configured using the 'ipv6 route' command. it specifies the destination IPv6 prefix and length."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "3",
+      "Front": "IPv4 Default Route",
+      "Back": "A static route represented as 0.0.0.0 0.0.0.0 that matches any destination IP. it is used when no more specific match exists."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "3",
+      "Front": "IPv6 Default Route",
+      "Back": "A static route represented as ::/0 that matches any IPv6 destination. it provides a path for traffic with unknown destinations."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "3",
+      "Front": "Floating Static Route",
+      "Back": "A backup static route configured with a higher administrative distance than the primary dynamic route, ensuring it only appears if the primary fails."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "3",
+      "Front": "Host Route (Static)",
+      "Back": "An extremely specific static route targeting a single IP address (mask 255.255.255.255 in IPv4 or /128 in IPv6)."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "3",
+      "Front": "Next-Hop IP Address",
+      "Back": "The IP address of the adjacent router interface to which packets should be sent. This is the recommended way to configure static routes on multi-access links."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "3",
+      "Front": "Exit Interface (Routing)",
+      "Back": "The local interface through which a router sends packets. for serial point-to-point links, specifying only the exit interface is sufficient."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "3",
+      "Front": "Recursive Static Route",
+      "Back": "A static route that only specifies a next-hop IP. The router must perform a second lookup to find the physical exit interface for that IP."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "3",
+      "Front": "Fully Specified Static Route",
+      "Back": "A static route that specifies both the exit interface and the next-hop IP. This is the most efficient configuration for multi-access networks like Ethernet."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "3",
+      "Front": "Administrative Distance (Static)",
+      "Back": "The default value for a standard static route is 1, making it more trustworthy than any dynamic routing protocol (except connected routes)."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "3",
+      "Front": "Summary Static Route",
+      "Back": "A single static route that represents multiple smaller contiguous subnets, helping to reduce the overall size of the routing table."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "3",
+      "Front": "IPv6 Link-Local Next-Hop",
+      "Back": "When using an IPv6 link-local address as a next hop, you MUST also specify the exit interface, as LLAs are only unique within a single link."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "3",
+      "Front": "Backup Route (Floating)",
+      "Back": "A role played by a floating static route. it 'floats' out of the routing table while the primary route is active and 'floats' back in when it fails."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "3",
+      "Front": "ip route (Command Syntax)",
+      "Back": "The global command: ip route [network] [mask] {next-hop-ip | exit-int} [distance]."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "3",
+      "Front": "ipv6 unicast-routing",
+      "Back": "The mandatory global configuration command required to enable the forwarding of IPv6 packets on a Cisco router."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "3",
+      "Front": "show ipv6 route static",
+      "Back": "The Cisco IOS verification command used to view only the manually configured static routes in the IPv6 routing table."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "3",
+      "Front": "Directly Attached Static Route",
+      "Back": "A static route that only specifies the exit interface. The router assumes the destination network is directly connected to that segment."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "3",
+      "Front": "Static Route AD of 255",
+      "Back": "Setting a static route's administrative distance to 255 makes it unusable, as the router will never install a route with an AD of 255 into the table."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "3",
+      "Front": "Proxy ARP (Static Routing)",
+      "Back": "A feature that allows a router to respond to ARP requests for a remote IP if it has a static route via an exit interface on that segment."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "3",
+      "Front": "Candidate Default Route",
+      "Back": "Any route in the routing table that could potentially serve as the gateway of last resort, often indicated by the 'S*' code."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "3",
+      "Front": "Null0 Interface",
+      "Back": "A virtual bit-bucket interface. Static routes pointing to Null0 are used to discard traffic for specific networks, often for security or loop prevention."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "3",
+      "Front": "Loopback Interface (Static)",
+      "Back": "A logical internal interface. Static routes to a loopback address are often used for management or to provide a stable termination point for services."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "3",
+      "Front": "Unidirectional Link (Static)",
+      "Back": "A limitation where a static route only provides a path in one direction. return traffic must also have a valid route (static or dynamic) to flow back."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "3",
+      "Front": "Static Route Recursion Error",
+      "Back": "A failure that occurs if the next-hop IP of a static route cannot be reached by any other route in the table, making the static route invalid."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "3",
+      "Front": "IPv6 Global Unicast Next-Hop",
+      "Back": "Using a standard public IPv6 address as the next-hop. unlike link-local addresses, specifying the exit interface is optional in this case."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "3",
+      "Front": "Administrative Control",
+      "Back": "The primary advantage of static routing, allowing the administrator to define exact paths for traffic without protocol-driven changes."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "3",
+      "Front": "Stub Network",
+      "Back": "A network that only has a single path to the outside world. Static routing is the most common and efficient choice for stub environments."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "3",
+      "Front": "Static Route Verification",
+      "Back": "The process of using 'ping' and 'traceroute' to ensure that a manually configured path is actually forwarding traffic as intended."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "3",
+      "Front": "IPv6 NDP AD",
+      "Back": "The administrative distance for routes learned via Neighbor Discovery Protocol (RA messages), which defaults to 2."
+    }
+  ]
+}

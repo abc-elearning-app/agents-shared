@@ -1,0 +1,186 @@
+{
+  "status": "completed",
+  "appName": "ccna",
+  "flashcards": [
+    {
+      "Topic": "5",
+      "Subtopic": "6",
+      "Front": "ACL (Access Control List)",
+      "Back": "A sequential list of permit or deny statements used by a router to filter network traffic based on specific criteria in packet headers."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "6",
+      "Front": "Standard ACL",
+      "Back": "A type of ACL that filters traffic based solely on the source IPv4 address. it uses the number ranges 1–99 and 1300–1999."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "6",
+      "Front": "Extended ACL",
+      "Back": "A granular ACL that filters traffic based on source/destination IP, protocol, and port numbers. it uses ranges 100–199 and 2000–2699."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "6",
+      "Front": "Named ACL",
+      "Back": "An ACL identified by a descriptive text string instead of a number. This allows for easier management and direct editing of individual lines."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "6",
+      "Front": "Numbered ACL",
+      "Back": "A traditional Cisco ACL identified by a specific numerical ID that determines its type (standard vs extended)."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "6",
+      "Front": "Wildcard Mask",
+      "Back": "A 32-bit string of bits used in ACLs to specify which parts of an IP address to match. 0 = must match, 1 = ignore (don't care)."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "6",
+      "Front": "Implicit Deny",
+      "Back": "The invisible 'deny all' statement at the end of every ACL. if a packet does not match any explicit permit rule, it is automatically dropped."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "6",
+      "Front": "First-Match Logic",
+      "Back": "The processing behavior where a router checks an ACL from top to bottom and stops at the very first entry that matches the packet."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "6",
+      "Front": "Access Control Entry (ACE)",
+      "Back": "A single line or statement within an ACL that defines a specific filtering rule (e.g., 'permit tcp any any eq 80')."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "6",
+      "Front": "Inbound ACL",
+      "Back": "An ACL applied to an interface that filters packets as they arrive at the router, before a routing table lookup is performed."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "6",
+      "Front": "Outbound ACL",
+      "Back": "An ACL applied to an interface that filters packets after the routing decision is made, just before they are sent out of the port."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "6",
+      "Front": "ip access-group",
+      "Back": "The interface configuration command used to apply an IPv4 ACL to a specific physical or logical port."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "6",
+      "Front": "Sequence Numbers (ACL)",
+      "Back": "Unique identifiers assigned to each ACE, allowing administrators to insert or delete specific rules without rewriting the entire ACL."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "6",
+      "Front": "host Keyword",
+      "Back": "A shortcut used in ACLs to match a single specific IP address, equivalent to using a wildcard mask of 0.0.0.0."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "6",
+      "Front": "any Keyword",
+      "Back": "A shortcut used in ACLs to match all possible IP addresses, equivalent to using a wildcard mask of 255.255.255.255."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "6",
+      "Front": "ACL Placement (Standard)",
+      "Back": "Standard ACLs should be placed as close to the destination as possible to prevent them from unintentionally blocking traffic to other networks."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "6",
+      "Front": "ACL Placement (Extended)",
+      "Back": "Extended ACLs should be placed as close to the source as possible to save bandwidth and CPU resources by dropping unwanted traffic early."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "6",
+      "Front": "established Keyword",
+      "Back": "An extended ACL parameter used to permit return TCP traffic from a connection that was initiated from the internal network."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "6",
+      "Front": "show ip access-lists",
+      "Back": "The primary verification command that displays all configured ACLs on the router and the number of packet matches (hits) for each line."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "6",
+      "Front": "log Keyword (ACL)",
+      "Back": "An optional parameter at the end of an ACE that causes the router to generate a syslog message whenever a packet matches that specific rule."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "6",
+      "Front": "remark Command",
+      "Back": "A configuration keyword used to add descriptive comments to an ACL statement to explain its purpose to other administrators."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "6",
+      "Front": "VTY Access Class",
+      "Back": "The 'access-class' command used to apply an ACL to the VTY lines, restricting remote management (Telnet/SSH) access to trusted IPs."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "6",
+      "Front": "Outbound vs. Self-Generated",
+      "Back": "ACLs applied outbound on an interface do not filter packets that are generated by the router itself (e.g., pings from the router CLI)."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "6",
+      "Front": "One ACL Per Interface",
+      "Back": "A router restriction where only one ACL can be applied per interface, per direction (in/out), and per protocol (IPv4/IPv6)."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "6",
+      "Front": "ICMP Filtering",
+      "Back": "Using extended ACLs to permit or deny specific ICMP message types like echo-requests (pings) or unreachable messages."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "6",
+      "Front": "Range Matching (Ports)",
+      "Back": "An extended ACL feature using the 'range' keyword to match a block of TCP or UDP port numbers in a single statement."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "6",
+      "Front": "ACL Hit Count",
+      "Back": "A statistic shown in 'show ip access-lists' that increments every time a packet is matched against a specific permit or deny entry."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "6",
+      "Front": "Empty ACL",
+      "Back": "A list that is defined but has no ACEs. an empty ACL permits all traffic by default, effectively doing nothing."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "6",
+      "Front": "Wildcard Mask (Calculation)",
+      "Back": "The result of subtracting a standard subnet mask from 255.255.255.255 (e.g., 255.255.255.0 becomes 0.0.0.255)."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "6",
+      "Front": "Named ACL Mode",
+      "Back": "A sub-configuration mode (ip-access-list) that allows for direct line manipulation and descriptive naming of filtering lists."
+    }
+  ]
+}

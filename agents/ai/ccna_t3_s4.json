@@ -1,0 +1,186 @@
+{
+  "status": "completed",
+  "appName": "ccna",
+  "flashcards": [
+    {
+      "Topic": "3",
+      "Subtopic": "4",
+      "Front": "OSPFv2",
+      "Back": "An open-standard link-state routing protocol for IPv4. it uses the Shortest Path First (SPF) algorithm to calculate loop-free paths within an autonomous system."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "4",
+      "Front": "Router ID (OSPF)",
+      "Back": "A unique 32-bit number identifying an OSPF router. it is determined by: 1. Manual config, 2. Highest working loopback IP, 3. Highest working physical interface IP."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "4",
+      "Front": "OSPF Area 0",
+      "Back": "The backbone area in an OSPF multi-area design. In a single-area design, all OSPF-enabled interfaces must be assigned to Area 0."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "4",
+      "Front": "Wildcard Mask (OSPF)",
+      "Back": "A sequence of bits used in the 'network' command to specify which interfaces should participate in OSPF. a '0' bit means 'match' and a '1' bit means 'ignore'."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "4",
+      "Front": "Neighbor Adjacency",
+      "Back": "A relationship between two OSPF routers on the same link that have exchanged Hello packets and agreed on essential parameters like timers and area IDs."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "4",
+      "Front": "Hello Packet (OSPF)",
+      "Back": "A multicast packet (224.0.0.5) sent periodically to discover neighbors, maintain adjacencies, and elect the Designated Router."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "4",
+      "Front": "Hello Interval",
+      "Back": "The timer (default 10s on Ethernet) that defines how often an OSPF router sends Hello packets. neighbors must have matching intervals to form an adjacency."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "4",
+      "Front": "Dead Interval",
+      "Back": "The time a router waits (default 40s) without hearing a Hello packet from a neighbor before declaring that neighbor down."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "4",
+      "Front": "Designated Router (DR)",
+      "Back": "A router elected on a multi-access network (like Ethernet) to manage the LSDB synchronization, reducing the number of OSPF adjacencies on the segment."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "4",
+      "Front": "Backup Designated Router (BDR)",
+      "Back": "A router that stands ready to take over the DR role immediately if the primary DR fails, ensuring continuous routing updates."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "4",
+      "Front": "DROTHER",
+      "Back": "An OSPF router on a multi-access segment that is neither the DR nor the BDR. DROTHERs only form full adjacencies with the DR and BDR."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "4",
+      "Front": "FULL State (OSPF)",
+      "Back": "The final state of an OSPF adjacency, indicating that the neighbors have completely synchronized their link-state databases."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "4",
+      "Front": "SPF Algorithm",
+      "Back": "Dijkstra's algorithm. it calculates the shortest, loop-free path from the local router to every destination in the LSDB based on cumulative cost."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "4",
+      "Front": "OSPF Metric (Cost)",
+      "Back": "A value assigned to an interface based on its bandwidth. Formula: $Cost = \\frac{Reference\\ Bandwidth}{Interface\\ Bandwidth}$. lower cost is preferred."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "4",
+      "Front": "Reference Bandwidth",
+      "Back": "The numerator in the OSPF cost formula, default 100 Mbps. it must be increased on modern networks to distinguish between 1 Gbps and 10 Gbps links."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "4",
+      "Front": "ip ospf cost",
+      "Back": "The interface-level command used to manually override the calculated OSPF cost for a specific link."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "4",
+      "Front": "Passive Interface (OSPF)",
+      "Back": "A configuration that stops a router from sending/receiving OSPF Hellos on an interface, while still advertising the interface's subnet to the rest of the network."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "4",
+      "Front": "Loopback Interface (OSPF)",
+      "Back": "A virtual interface often used as an OSPF Router ID because it is more stable than physical ports (it never goes down unless the router does)."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "4",
+      "Front": "LSDB (Link State Database)",
+      "Back": "A complete map of all routers and links in an OSPF area. every router in the area must have an identical copy of the LSDB."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "4",
+      "Front": "LSA (Link State Advertisement)",
+      "Back": "A data packet containing information about a router's local links. routers flood LSAs throughout the area to build and update the LSDB."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "4",
+      "Front": "OSPF Process ID",
+      "Back": "A locally significant number used to start the OSPF routing process. it does not need to match between neighboring routers."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "4",
+      "Front": "show ip ospf neighbor",
+      "Back": "The primary verification command to check the status of adjacencies, showing the neighbor ID, state (like FULL), and local interface."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "4",
+      "Front": "show ip ospf interface brief",
+      "Back": "A concise verification command displaying which interfaces are participating in OSPF, their area, cost, and DR/BDR status."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "4",
+      "Front": "2-WAY State",
+      "Back": "An OSPF neighbor state indicating that bidirectional communication has been established, but the LSDBs have not yet been synchronized."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "4",
+      "Front": "LS Update (LSU)",
+      "Back": "An OSPF packet type used to flood one or more LSAs to neighbors during the synchronization process."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "4",
+      "Front": "Link-State Acknowledgment",
+      "Back": "A packet (LSAck) sent to confirm that an LSU was received, ensuring reliable delivery of topology updates."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "4",
+      "Front": "OSPF Default AD",
+      "Back": "The administrative distance for OSPF is 110, placing it between EIGRP (90) and RIP (120) in terms of trustworthiness."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "4",
+      "Front": "DR Election Priority",
+      "Back": "A value (0–255) configured on an interface. The router with the highest priority becomes the DR. setting it to 0 prevents a router from ever becoming DR/BDR."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "4",
+      "Front": "OSPF Broadcast Network",
+      "Back": "The default network type for Ethernet interfaces, where a DR and BDR are elected to manage adjacencies."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "4",
+      "Front": "OSPF Point-to-Point Network",
+      "Back": "A network type (like HDLC or PPP) where exactly two routers are connected. No DR/BDR election occurs, and Hellos are sent to 224.0.0.5."
+    }
+  ]
+}

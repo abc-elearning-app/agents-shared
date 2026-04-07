@@ -1,0 +1,186 @@
+{
+  "status": "completed",
+  "appName": "ccna",
+  "flashcards": [
+    {
+      "Topic": "6",
+      "Subtopic": "5",
+      "Front": "REST (Representational State Transfer)",
+      "Back": "An architectural style for creating web services that use standard HTTP methods to interact with resources. it is the most common API type for network automation."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "5",
+      "Front": "CRUD Operations",
+      "Back": "The four basic functions of persistent storage: Create, Read, Update, and Delete. These are mapped to specific HTTP verbs in REST APIs."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "5",
+      "Front": "HTTP GET",
+      "Back": "The HTTP verb used to 'Read' or retrieve information from a resource. it is non-destructive and does not modify data on the server."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "5",
+      "Front": "HTTP POST",
+      "Back": "The HTTP verb used to 'Create' a new resource or data structure on the server. it is typically used to add a new configuration entry."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "5",
+      "Front": "HTTP PUT",
+      "Back": "The HTTP verb used to 'Update' or replace an entire existing resource with new data. if the resource doesn't exist, it may create it."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "5",
+      "Front": "HTTP PATCH",
+      "Back": "An HTTP verb used for partial updates to a resource. unlike PUT, it only modifies the specific fields provided in the request."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "5",
+      "Front": "HTTP DELETE",
+      "Back": "The HTTP verb used to 'Delete' or remove a specified resource from the server, such as deleting a VLAN or a user account."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "5",
+      "Front": "URI (Uniform Resource Identifier)",
+      "Back": "The specific string of characters used to identify a resource in a REST API, such as https://controller/api/v1/interfaces."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "5",
+      "Front": "API Resource",
+      "Back": "The specific object or piece of data being manipulated via the API, such as a switch port, a routing entry, or a device status."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "5",
+      "Front": "Data Serialization",
+      "Back": "The process of converting complex data structures (like variables in a script) into a text format (like JSON or XML) for transmission over a network."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "5",
+      "Front": "JSON",
+      "Back": "JavaScript Object Notation. A lightweight, human-readable data format that uses key-value pairs and is the standard for most modern REST APIs."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "5",
+      "Front": "XML",
+      "Back": "eXtensible Markup Language. A data encoding format that uses hierarchical tags (like HTML) to define data elements. it is used by NETCONF."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "5",
+      "Front": "Statelessness (REST)",
+      "Back": "A REST characteristic where the server does not store any client context between requests. Each API call must contain all the information needed to process it."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "5",
+      "Front": "Client-Server Model",
+      "Back": "The fundamental REST architecture where the client (automation script) makes requests and the server (network controller) provides responses."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "5",
+      "Front": "HTTP Header",
+      "Back": "The part of an API request that carries metadata, such as authentication tokens, content-type (JSON/XML), and the desired HTTP verb."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "5",
+      "Front": "API Payload",
+      "Back": "The actual data content sent in an API request (e.g., in a POST or PUT) or received in a response, typically formatted as JSON."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "5",
+      "Front": "Authentication Token",
+      "Back": "A temporary security credential (like a Bearer token) provided in an API header to prove that the client has permission to access the resource."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "5",
+      "Front": "HTTP Status Code",
+      "Back": "A 3-digit number returned by the server to indicate the result of an API call. e.g., 200 (Success), 404 (Not Found), or 201 (Created)."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "5",
+      "Front": "Query Parameter",
+      "Back": "Optional fields added to the end of a URI (starting with '?') used to filter or sort the data returned by an API GET request."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "5",
+      "Front": "Base URL",
+      "Back": "The initial part of an API address that stays the same for all calls to that specific service (e.g., https://api.cisco.com/dnac)."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "5",
+      "Front": "Endpoint (API)",
+      "Back": "The final part of a URI that points to a specific functional area or resource type (e.g., /network-device or /vlan)."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "5",
+      "Front": "Idempotency (API)",
+      "Back": "A property where making the same API request multiple times (like PUT or DELETE) results in the same final state on the server."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "5",
+      "Front": "Content-Type",
+      "Back": "A mandatory HTTP header field that tells the server how the data in the request body is formatted (e.g., application/json)."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "5",
+      "Front": "API Versioning",
+      "Back": "The practice of including a version number in the URI (like /v1/ or /v2/) to ensure that scripts don't break when the API is updated."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "5",
+      "Front": "Cacheability",
+      "Back": "A REST constraint where responses must define themselves as cacheable or not to improve network efficiency and reduce server load."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "5",
+      "Front": "Uniform Interface",
+      "Back": "The REST principle that simplifies the architecture by requiring all clients to use the same standardized methods to interact with the server."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "5",
+      "Front": "Layered System",
+      "Back": "A REST characteristic where a client cannot tell if it is connected directly to the end server or through an intermediary like a load balancer."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "5",
+      "Front": "SSL/TLS (API Security)",
+      "Back": "The encryption protocols used by HTTPS to protect API communication from eavesdropping and tampering."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "5",
+      "Front": "Basic Authentication",
+      "Back": "A simple API security method where the username and password are encoded in Base64 and sent in the HTTP header."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "5",
+      "Front": "Python Requests Library",
+      "Back": "A popular software tool used by network engineers to easily send REST API calls (GET, POST, etc.) from automation scripts."
+    }
+  ]
+}

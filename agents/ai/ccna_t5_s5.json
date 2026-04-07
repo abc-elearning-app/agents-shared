@@ -1,0 +1,186 @@
+{
+  "status": "completed",
+  "appName": "ccna",
+  "flashcards": [
+    {
+      "Topic": "5",
+      "Subtopic": "5",
+      "Front": "VPN (Virtual Private Network)",
+      "Back": "A secure, encrypted communication tunnel created over an untrusted public network like the internet, allowing private data to be transmitted safely."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "5",
+      "Front": "Site-to-Site VPN",
+      "Back": "A permanent VPN tunnel that connects two entire networks, such as a branch office to a head office. All devices at each site use the tunnel transparently."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "5",
+      "Front": "Remote Access VPN",
+      "Back": "A temporary VPN connection initiated by an individual device (e.g., a laptop) to gain access to a corporate network from a remote location."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "5",
+      "Front": "IPsec",
+      "Back": "IP Security. A framework of open standards used to provide confidentiality, integrity, and authentication for data as it travels across a network."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "5",
+      "Front": "Confidentiality (VPN)",
+      "Back": "A security service provided by IPsec that uses encryption to ensure that data cannot be read by anyone except the intended recipient."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "5",
+      "Front": "Data Integrity (VPN)",
+      "Back": "A security service that uses hashing algorithms to ensure that a packet was not altered or corrupted while in transit through the VPN tunnel."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "5",
+      "Front": "Authentication (VPN)",
+      "Back": "The process of verifying the identity of the VPN endpoints (using pre-shared keys or certificates) to ensure the connection is established with a trusted peer."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "5",
+      "Front": "Anti-Replay Protection",
+      "Back": "An IPsec service that prevents an attacker from capturing a valid packet and resending it later to gain unauthorized access or disrupt services."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "5",
+      "Front": "ESP (Encapsulating Security Payload)",
+      "Back": "The primary IPsec protocol used to provide both encryption and authentication for the data portion of a packet."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "5",
+      "Front": "AH (Authentication Header)",
+      "Back": "An IPsec protocol that provides authentication and integrity for the entire packet but does not offer any encryption (confidentiality)."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "5",
+      "Front": "IKE (Internet Key Exchange)",
+      "Back": "The protocol used by IPsec to negotiate security parameters and exchange cryptographic keys between VPN endpoints."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "5",
+      "Front": "IKE Phase 1",
+      "Back": "The initial negotiation stage where the two VPN peers establish a secure management tunnel used for subsequent communications."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "5",
+      "Front": "IKE Phase 2",
+      "Back": "The stage where the peers negotiate the specific security parameters for the actual data tunnel used to protect user traffic."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "5",
+      "Front": "Pre-Shared Key (PSK)",
+      "Back": "A simple authentication method for VPNs where both endpoints are manually configured with the same secret password."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "5",
+      "Front": "SSL/TLS VPN",
+      "Back": "A type of remote access VPN that uses the standard encryption built into web browsers, making it easy to deploy without specialized client software."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "5",
+      "Front": "Cisco AnyConnect",
+      "Back": "The enterprise software client used to establish secure remote access SSL or IPsec VPN connections to Cisco gateways."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "5",
+      "Front": "GRE (Generic Routing Encapsulation)",
+      "Back": "A tunneling protocol that can wrap any Layer 3 packet. it is often used with IPsec to support multicast and routing protocol traffic over a VPN."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "5",
+      "Front": "Split Tunneling",
+      "Back": "A VPN configuration that allows a user to access the internet directly for standard traffic while sending only corporate traffic through the secure VPN tunnel."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "5",
+      "Front": "Full Tunneling",
+      "Back": "A VPN configuration where all of a client's network traffic is sent through the secure tunnel, including traffic destined for the public internet."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "5",
+      "Front": "VPN Gateway",
+      "Back": "The network device (like a router or ASA firewall) that acts as the termination point for VPN tunnels and performs encryption/decryption."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "5",
+      "Front": "Encryption Algorithm",
+      "Back": "The mathematical formula (like AES or 3DES) used to transform plain-text data into unreadable cipher-text within a VPN tunnel."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "5",
+      "Front": "Hashing Algorithm",
+      "Back": "A one-way function (like SHA-256) used in VPNs to generate a unique fingerprint for a packet, ensuring its integrity."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "5",
+      "Front": "Diffie-Hellman (DH)",
+      "Back": "A key exchange algorithm that allows two VPN peers to securely generate a shared secret key over an unsecure network."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "5",
+      "Front": "Transport Mode (IPsec)",
+      "Back": "An IPsec mode where only the payload of the packet is encrypted. it is typically used for host-to-host VPNs within a local network."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "5",
+      "Front": "Tunnel Mode (IPsec)",
+      "Back": "The standard IPsec mode for site-to-site VPNs where the entire original packet is encrypted and wrapped in a new IP header."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "5",
+      "Front": "Peer (VPN)",
+      "Back": "One of the two endpoints involved in a VPN connection. both peers must agree on security settings for the tunnel to form."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "5",
+      "Front": "Clientless VPN",
+      "Back": "An SSL VPN method where the user accesses corporate applications through a web browser without installing any permanent software on their device."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "5",
+      "Front": "Crypto Map",
+      "Back": "A legacy Cisco configuration tool used to define which traffic should be protected by IPsec and which peers to connect to."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "5",
+      "Front": "Virtual Tunnel Interface (VTI)",
+      "Back": "A modern Cisco method for configuring VPNs where the IPsec parameters are applied to a logical interface, simplifying routing and configuration."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "5",
+      "Front": "Dynamic Multipoint VPN (DMVPN)",
+      "Back": "A Cisco solution that allows for the automated creation of on-demand site-to-site VPN tunnels between multiple branch offices."
+    }
+  ]
+}

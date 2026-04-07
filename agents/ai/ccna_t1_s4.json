@@ -1,0 +1,186 @@
+{
+  "status": "completed",
+  "appName": "ccna",
+  "flashcards": [
+    {
+      "Topic": "1",
+      "Subtopic": "4",
+      "Front": "Late Collision",
+      "Back": "A data collision that occurs after the first 64 bytes of a frame have been transmitted. It is a classic symptom of a duplex mismatch between two connected network interfaces."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "4",
+      "Front": "Duplex Mismatch",
+      "Back": "A condition where one side of a link is set to full-duplex while the other is set to half-duplex. This leads to poor performance and incrementing late collision counters."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "4",
+      "Front": "CRC Error",
+      "Back": "A frame that fails the Frame Check Sequence (FCS) calculation. This indicates corruption during transmission, often due to bad cabling or electromagnetic interference."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "4",
+      "Front": "Runt Error",
+      "Back": "An Ethernet frame that is smaller than the minimum legal size of 64 bytes. These are typically caused by collisions on half-duplex segments."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "4",
+      "Front": "Giant Error",
+      "Back": "An Ethernet frame that exceeds the maximum supported transmission unit (MTU), typically 1518 bytes. They can be caused by faulty hardware or mismatched MTU settings."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "4",
+      "Front": "Input Error",
+      "Back": "A composite counter on a Cisco interface that tracks the total number of errors received, including runts, giants, CRC errors, and ignored frames."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "4",
+      "Front": "Output Error",
+      "Back": "A statistic that tracks the number of frames that the interface failed to transmit successfully due to internal issues like buffer overflows."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "4",
+      "Front": "Frame Error",
+      "Back": "A type of input error where a received frame has a non-integer number of octets and an invalid CRC. This often points to physical layer noise or bad transceivers."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "4",
+      "Front": "Ignored Error",
+      "Back": "A counter that increments when an interface receives a packet but lacks sufficient buffer space to process it, usually due to high system load."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "4",
+      "Front": "Overrun Error",
+      "Back": "An input error occurring when the switch's internal hardware cannot move data from the interface buffer to memory fast enough, resulting in data loss."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "4",
+      "Front": "Speed Mismatch",
+      "Back": "A condition where two connected interfaces are configured with different static bit rates (e.g., 100 Mbps vs 1000 Mbps). This results in a total loss of link (down/down)."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "4",
+      "Front": "Flapping Link",
+      "Back": "A physical interface that repeatedly transitions between the UP and DOWN states. Common causes include loose cables, faulty transceivers, or EMI."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "4",
+      "Front": "No Buffer Error",
+      "Back": "An error that increments when a device has no internal memory available to store a received frame, causing the frame to be dropped immediately."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "4",
+      "Front": "Deferred Error",
+      "Back": "A counter on half-duplex ports that increments when an interface must wait to transmit because the medium is already busy. High counts indicate network congestion."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "4",
+      "Front": "Lost Carrier",
+      "Back": "An error occurring when an interface loses the physical carrier signal while attempting to transmit. This points to a disconnected cable or hardware failure."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "4",
+      "Front": "Interface Reset",
+      "Back": "A counter indicating how many times an interface has been completely reinitialized. Frequent resets are a sign of serious hardware or driver issues."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "4",
+      "Front": "Jabber Error",
+      "Back": "An error detected when a device transmits data for longer than the maximum allowed frame time. This is typically caused by a faulty network interface card."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "4",
+      "Front": "CSMA/CD",
+      "Back": "Carrier Sense Multiple Access with Collision Detection. The protocol used by half-duplex Ethernet to manage how devices share the medium and recover from collisions."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "4",
+      "Front": "Jam Signal",
+      "Back": "A specialized signal sent by an Ethernet device when it detects a collision. it ensures that all other devices on the segment recognize the collision and stop transmitting."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "4",
+      "Front": "Collision Domain",
+      "Back": "A physical network segment where data packets can collide. Modern switches eliminate these by providing dedicated bandwidth to every port."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "4",
+      "Front": "Err-Disabled",
+      "Back": "A Cisco port state where the interface is automatically shut down by the system due to a security violation or excessive physical layer errors."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "4",
+      "Front": "Notconnect State",
+      "Back": "A Cisco interface status indicating that no physical link is detected. Possible causes include a missing cable, bad cable, or wrong pinouts."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "4",
+      "Front": "MAC-Bending",
+      "Back": "Damage to fiber-optic cabling caused by bending it beyond its allowed radius, which leads to signal attenuation and transmission errors."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "4",
+      "Front": "Local Collision",
+      "Back": "A collision that occurs on the local segment before the frame has fully left the interface. These are expected and normal in half-duplex environments."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "4",
+      "Front": "Remote Collision",
+      "Back": "A collision that occurs further down the network segment. The transmitting device only knows about it if it receives a jam signal from another node."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "4",
+      "Front": "Watchdog Error",
+      "Back": "A specific type of input error often related to internal hardware timings or buffer synchronization issues on a network interface."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "4",
+      "Front": "Babble",
+      "Back": "A legacy interface counter that increments when a device transmits a frame that is larger than the maximum allowed size, similar to a giant."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "4",
+      "Front": "Unknown Protocol Drop",
+      "Back": "A counter that increments when an interface receives a frame containing a protocol ID that the local operating system does not recognize."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "4",
+      "Front": "Throttle",
+      "Back": "A mechanism where a device intentionally slows down the reception or transmission rate on an interface to prevent CPU or buffer exhaustion."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "4",
+      "Front": "Queue Drop",
+      "Back": "A packet loss event that occurs when an interface's input or output queue is completely full and cannot accept any more traffic."
+    }
+  ]
+}
