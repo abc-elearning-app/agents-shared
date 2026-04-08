@@ -1,0 +1,186 @@
+{
+  "status": "completed",
+  "appName": "ccna",
+  "flashcards": [
+    {
+      "Topic": "4",
+      "Subtopic": "4",
+      "Front": "SNMP",
+      "Back": "Simple Network Management Protocol. An application layer protocol used for exchanging management information between network devices."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "4",
+      "Front": "SNMP Manager",
+      "Back": "The centralized software system (NMS) used to monitor and manage network devices by sending requests and receiving notifications from agents."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "4",
+      "Front": "SNMP Agent",
+      "Back": "A software component running on a network device (like a router or switch) that maintains its local management data and responds to manager queries."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "4",
+      "Front": "MIB (Management Information Base)",
+      "Back": "A structured database maintained by the SNMP agent that defines all the objects (variables) a manager can monitor or configure on the device."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "4",
+      "Front": "Object ID (OID)",
+      "Back": "A unique numerical string used to identify a specific piece of information within the MIB hierarchy, such as CPU usage or interface status."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "4",
+      "Front": "SNMP Get Request",
+      "Back": "A message sent by the manager to the agent to retrieve the value of a specific OID from the device's MIB."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "4",
+      "Front": "SNMP GetNext",
+      "Back": "An SNMP request used to retrieve the value of the next OID in the MIB hierarchy, allowing the manager to 'walk' through a table of data."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "4",
+      "Front": "SNMP GetBulk",
+      "Back": "An improvement introduced in SNMPv2c that allows the manager to retrieve a large block of data from the MIB in a single transaction."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "4",
+      "Front": "SNMP Set Request",
+      "Back": "A command sent by the manager to the agent to modify a configuration variable on the device, such as shutting down a port."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "4",
+      "Front": "SNMP Trap",
+      "Back": "An unsolicited notification sent by an agent to the manager when a significant event occurs. it is an unreliable (UDP) 'fire-and-forget' message."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "4",
+      "Front": "SNMP Inform",
+      "Back": "A notification similar to a trap, but it requires an acknowledgment from the manager. if no ACK is received, the agent retransmits the message for reliability."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "4",
+      "Front": "SNMPv1",
+      "Back": "The original version of the protocol. it uses simple community strings for security and lacks many of the performance features of later versions."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "4",
+      "Front": "SNMPv2c",
+      "Back": "The most widely used version today. it introduces GetBulk and Inform messages but still relies on plain-text community strings for security."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "4",
+      "Front": "SNMPv3",
+      "Back": "The most secure version, providing robust authentication and encryption to ensure data confidentiality, integrity, and origin verification."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "4",
+      "Front": "Community String",
+      "Back": "A simple plain-text password used in SNMPv1 and v2c to authorize communication between the manager and the agent."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "4",
+      "Front": "Read-Only (RO) Community",
+      "Back": "A community string that only allows the manager to view (Get) device information but not make any changes (Set)."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "4",
+      "Front": "Read-Write (RW) Community",
+      "Back": "A community string that gives the manager authority to both view and modify configuration parameters on the device."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "4",
+      "Front": "UDP Port 161",
+      "Back": "The standard destination port used by SNMP managers when sending requests to agents."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "4",
+      "Front": "UDP Port 162",
+      "Back": "The standard destination port used by SNMP agents when sending Traps or Informs to the network management station."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "4",
+      "Front": "USM (User-based Security Model)",
+      "Back": "The SNMPv3 security framework that provides authentication and encryption based on individual user accounts rather than shared passwords."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "4",
+      "Front": "VACM",
+      "Back": "View-based Access Control Model. An SNMPv3 feature that allows administrators to restrict which parts of the MIB a particular user is allowed to see or change."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "4",
+      "Front": "SNMP EngineID",
+      "Back": "A unique identifier for every SNMPv3 entity (manager or agent) used to generate security keys and prevent replay attacks."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "4",
+      "Front": "NMS (Network Management Station)",
+      "Back": "The hardware platform (server or workstation) that runs the SNMP manager software to monitor the entire network."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "4",
+      "Front": "NoAuthNoPriv",
+      "Back": "The lowest security level in SNMPv3, which uses username matching for authentication but provides no encryption or message integrity."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "4",
+      "Front": "AuthNoPriv",
+      "Back": "An SNMPv3 security level that provides message authentication (HMAC-MD5 or SHA) to verify the sender but does not encrypt the data."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "4",
+      "Front": "AuthPriv",
+      "Back": "The highest SNMPv3 security level, providing both MD5/SHA authentication and full DES/AES encryption for all management traffic."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "4",
+      "Front": "SNMP Polling",
+      "Back": "The process where the manager periodically sends Get requests to agents to gather status data and build performance reports over time."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "4",
+      "Front": "OID Tree",
+      "Back": "The hierarchical structure of the MIB database, starting from a root 'iso' and branching out to specific vendors like 'cisco'."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "4",
+      "Front": "Variable (SNMP)",
+      "Back": "An individual data point in the MIB (like ifInOctets for interface traffic) that can be retrieved or modified by the manager."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "4",
+      "Front": "SNMP Walk",
+      "Back": "A diagnostic procedure where a manager uses repeated GetNext requests to retrieve every OID value in a specific branch of the MIB tree."
+    }
+  ]
+}

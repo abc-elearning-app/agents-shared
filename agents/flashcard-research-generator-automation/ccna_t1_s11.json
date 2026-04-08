@@ -1,0 +1,186 @@
+{
+  "status": "completed",
+  "appName": "ccna",
+  "flashcards": [
+    {
+      "Topic": "1",
+      "Subtopic": "11",
+      "Front": "Radio Frequency (RF)",
+      "Back": "The electromagnetic wave frequency used for wireless communication. In Wi-Fi, data is transmitted as RF signals through free space without physical cables."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "11",
+      "Front": "2.4 GHz Band",
+      "Back": "A common wireless frequency range (2.400–2.4835 GHz) that offers good range and wall penetration but suffers from high interference and few non-overlapping channels."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "11",
+      "Front": "5 GHz Band",
+      "Back": "A higher wireless frequency range (5.150–5.825 GHz) that provides more non-overlapping channels and less interference, though it has a shorter effective range than 2.4 GHz."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "11",
+      "Front": "Non-Overlapping Channels",
+      "Back": "Specific wireless frequencies that do not interfere with each other. In the 2.4 GHz band, only channels 1, 6, and 11 are considered non-overlapping."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "11",
+      "Front": "Service Set Identifier (SSID)",
+      "Back": "A human-readable text string that acts as the name of a wireless network, allowing users to identify and connect to the correct service."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "11",
+      "Front": "Basic Service Set (BSS)",
+      "Back": "The fundamental building block of an 802.11 network, consisting of a single access point and all of its associated client stations."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "11",
+      "Front": "Extended Service Set (ESS)",
+      "Back": "A wireless network architecture where multiple BSSs are interconnected by a distribution system (switched LAN), allowing clients to roam between APs while maintaining the same SSID."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "11",
+      "Front": "BSSID",
+      "Back": "A unique, machine-readable MAC address assigned to an AP's radio interface. it is used at Layer 2 to distinguish between different BSSs."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "11",
+      "Front": "IEEE 802.11",
+      "Back": "The collection of standards that define the physical layer and MAC sublayer for wireless local area networks (WLANs)."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "11",
+      "Front": "Half-Duplex (Wireless)",
+      "Back": "The communication mode of all standard 802.11 Wi-Fi networks, where devices can either transmit or receive on a channel, but not both simultaneously."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "11",
+      "Front": "Infrastructure Mode",
+      "Back": "A wireless network configuration where all client stations communicate through a central access point rather than directly with each other."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "11",
+      "Front": "Roaming",
+      "Back": "The process where a wireless client moves its association from one access point to another within the same ESS without losing network connectivity."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "11",
+      "Front": "Station (STA)",
+      "Back": "Any device that contains an 802.11-compliant interface, such as a laptop, smartphone, or wireless access point."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "11",
+      "Front": "Independent BSS (IBSS)",
+      "Back": "A peer-to-peer wireless network (ad hoc mode) where two or more stations communicate directly without the use of an access point."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "11",
+      "Front": "Association",
+      "Back": "The process by which a wireless client station joins a BSS and establishes a logical link with an access point to gain network access."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "11",
+      "Front": "WEP (Wired Equivalent Privacy)",
+      "Back": "The original, now deprecated, security standard for 802.11 networks. it is considered highly insecure due to weaknesses in its RC4-based encryption."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "11",
+      "Front": "WPA (Wi-Fi Protected Access)",
+      "Back": "An intermediate security standard designed to fix WEP's flaws. it introduced TKIP for encryption but has since been superseded by WPA2 and WPA3."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "11",
+      "Front": "WPA2",
+      "Back": "A robust wireless security standard that introduced hardware-based AES encryption. it is the most widely deployed Wi-Fi security protocol today."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "11",
+      "Front": "WPA3",
+      "Back": "The latest wireless security standard that introduces SAE for better protection against brute-force attacks and mandated Protected Management Frames."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "11",
+      "Front": "AES-CCMP",
+      "Back": "The advanced encryption mechanism used by WPA2 and WPA3 to provide data confidentiality and integrity for wireless traffic."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "11",
+      "Front": "TKIP",
+      "Back": "A legacy encryption protocol used by WPA to improve security on older hardware. it has been deprecated in favor of the much more secure AES."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "11",
+      "Front": "802.1X / EAP",
+      "Back": "An enterprise-level authentication framework that requires unique user credentials verified against a RADIUS server before granting wireless access."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "11",
+      "Front": "Basic Service Area (BSA)",
+      "Back": "The physical area covered by a single AP's radio signal, often referred to as a wireless 'cell'."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "11",
+      "Front": "Workgroup Bridge (WGB)",
+      "Back": "A specialized AP mode that allows wired devices without wireless capability to connect to a Wi-Fi network."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "11",
+      "Front": "Wireless Repeater",
+      "Back": "A device that receives a signal from an existing access point and retransmits it to extend the wireless coverage area."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "11",
+      "Front": "Mesh Network (Wireless)",
+      "Back": "A topology where multiple access points connect to each other wirelessly to provide coverage over a large area with minimal wired cabling."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "11",
+      "Front": "Distribution System (DS)",
+      "Back": "The wired backbone infrastructure (typically Ethernet) that interconnects multiple access points to form an ESS."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "11",
+      "Front": "Throughput (Wireless)",
+      "Back": "The actual amount of data successfully transmitted over a wireless link, which is always lower than the theoretical bandwidth due to overhead and interference."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "11",
+      "Front": "Signal-to-Noise Ratio (SNR)",
+      "Back": "A measurement used to compare the strength of a desired wireless signal to the level of background radio interference."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "11",
+      "Front": "Omnidirectional Antenna",
+      "Back": "A type of Wi-Fi antenna that radiates signal equally in all horizontal directions, typically used for general indoor coverage."
+    }
+  ]
+}

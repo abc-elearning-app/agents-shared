@@ -1,0 +1,186 @@
+{
+  "status": "completed",
+  "appName": "ccna",
+  "flashcards": [
+    {
+      "Topic": "1",
+      "Subtopic": "9",
+      "Front": "Global Unicast Address (GUA)",
+      "Back": "A globally unique and routable IPv6 address, equivalent to a public IPv4 address. gua addresses currently begin with the binary prefix 001 (2000::/3)."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "9",
+      "Front": "Unique Local Address (ULA)",
+      "Back": "An IPv6 address intended for use within an organization's internal network, similar to private IPv4. They use the prefix fc00::/7 (commonly fd00::/8)."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "9",
+      "Front": "Link-Local Address (LLA)",
+      "Back": "An IPv6 address used for communication on a single local link. Every IPv6-enabled interface must have an LLA, which starts with fe80::/10."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "9",
+      "Front": "Multicast Address (IPv6)",
+      "Back": "An address used to send a single packet to multiple destinations. These addresses always begin with the prefix ff00::/8."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "9",
+      "Front": "Anycast Address",
+      "Back": "An IPv6 address assigned to multiple nodes. A packet sent to this address is delivered to the 'nearest' node as determined by the routing protocol."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "9",
+      "Front": "Solicited-Node Multicast",
+      "Back": "A specialized multicast address used in NDP to efficiently resolve MAC addresses. it is formed by ff02::1:ff00:0/104 + the last 24 bits of the unicast address."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "9",
+      "Front": "All-Nodes Multicast (ff02::1)",
+      "Back": "A reserved IPv6 address that targets every IPv6-enabled device on the local link, serving as the replacement for the IPv4 broadcast."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "9",
+      "Front": "All-Routers Multicast (ff02::2)",
+      "Back": "A reserved IPv6 address used to communicate with all routers on a segment, primarily for Neighbor Discovery functions."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "9",
+      "Front": "Dual-Stack",
+      "Back": "A migration strategy where network devices run both IPv4 and IPv6 protocol stacks simultaneously to ensure compatibility during the transition."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "9",
+      "Front": "Tunneling (IPv6 over IPv4)",
+      "Back": "A transition method that encapsulates IPv6 packets inside IPv4 headers so they can be transported across an existing IPv4-only infrastructure."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "9",
+      "Front": "IPv6 Address Scope",
+      "Back": "The range of reachability for an address. Examples include link-local (one segment) and global (the entire internet)."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "9",
+      "Front": "Interface-Local Scope",
+      "Back": "A multicast scope (ff01::/16) that limits traffic to the individual interface itself, primarily used for loopback testing."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "9",
+      "Front": "Site-Local Scope",
+      "Back": "A legacy IPv6 address scope that was intended to limit traffic to a single physical site. it has been replaced by Unique Local Addresses."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "9",
+      "Front": "Organization-Local Scope",
+      "Back": "A multicast scope that limits traffic to all nodes within a specific organization, spanning multiple sites."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "9",
+      "Front": "IPv6 Header",
+      "Back": "A fixed 40-byte header that is simpler than the IPv4 header, allowing for faster processing by routers."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "9",
+      "Front": "Loopback Address (::1)",
+      "Back": "The reserved IPv6 address 0:0:0:0:0:0:0:1, used by a host to send packets to its own software stack for testing."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "9",
+      "Front": "Unspecified Address (::)",
+      "Back": "The all-zeros IPv6 address (::/128) used as a temporary source address by a host before it has been assigned a unique address."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "9",
+      "Front": "ff02::5 (OSPFv3)",
+      "Back": "The reserved multicast address used by OSPFv3 to communicate with all SPF routers on a segment."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "9",
+      "Front": "ff02::6 (OSPFv3 DR)",
+      "Back": "The reserved multicast address used by OSPFv3 to communicate with the Designated Router (DR) and Backup Designated Router (BDR)."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "9",
+      "Front": "Next-Hop (IPv6)",
+      "Back": "In IPv6 routing, the next-hop address is typically the Link-Local Address of the adjacent router interface."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "9",
+      "Front": "Modified EUI-64 (Process)",
+      "Back": "The specific algorithm of splitting a MAC, inserting 'fffe', and flipping the 7th bit to create a 64-bit interface ID."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "9",
+      "Front": "7th Bit Flip",
+      "Back": "The process in EUI-64 where the Universal/Local bit of the MAC address is inverted to indicate that the resulting interface ID is universally unique."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "9",
+      "Front": "Global ID (ULA)",
+      "Back": "A 40-bit random value within a Unique Local Address that ensures the address block is highly likely to be unique across different organizations."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "9",
+      "Front": "Hex Digit",
+      "Back": "A single character (0-9, A-F) representing 4 bits of data. 32 of these digits make up a full IPv6 address."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "9",
+      "Front": "ICMPv6 Packet Type 135",
+      "Back": "The message type code for a Neighbor Solicitation (NS), used to discover a neighbor's MAC address."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "9",
+      "Front": "ICMPv6 Packet Type 136",
+      "Back": "The message type code for a Neighbor Advertisement (NA), used to respond to address resolution requests."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "9",
+      "Front": "Prefix Length (GUA)",
+      "Back": "The boundary in a public address that separates the ISP-assigned prefix from the organization's internal subnets and host interface IDs."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "9",
+      "Front": "Well-known Multicast",
+      "Back": "A set of reserved multicast addresses (like ff02::1) that have a predefined purpose and are recognized by all IPv6-compliant devices."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "9",
+      "Front": "Dynamic LLA",
+      "Back": "A link-local address that is automatically generated by the device hardware or OS using EUI-64 or a randomized interface ID."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "9",
+      "Front": "Static LLA",
+      "Back": "A link-local address that is manually configured by an administrator to simplify routing protocol peerings and troubleshooting."
+    }
+  ]
+}

@@ -1,0 +1,186 @@
+{
+  "status": "completed",
+  "appName": "ccna",
+  "flashcards": [
+    {
+      "Topic": "3",
+      "Subtopic": "1",
+      "Front": "Routing Table",
+      "Back": "An internal data file stored in a router's RAM that contains a list of known network paths. The router uses this information to determine where to forward packets."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "1",
+      "Front": "Routing Protocol Code",
+      "Back": "A single-letter code (e.g., C, S, O, D) at the beginning of a routing table entry that identifies the source of the routing information."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "1",
+      "Front": "Prefix (Routing)",
+      "Back": "The network or subnet portion of an IP address. in a routing table, it represents the destination network ID."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "1",
+      "Front": "Network Mask (Routing)",
+      "Back": "The value that defines the size of the destination network. it is typically shown in CIDR notation (e.g., /24) in modern routing tables."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "1",
+      "Front": "Next Hop IP",
+      "Back": "The IP address of the adjacent router interface to which a packet should be sent to continue its journey toward the final destination."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "1",
+      "Front": "Outgoing Interface",
+      "Back": "The physical or logical port on the local router through which a packet exits to reach the next hop or the final destination network."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "1",
+      "Front": "Administrative Distance (AD)",
+      "Back": "A value from 0 to 255 used to rate the reliability of a routing source. if multiple sources offer a route to the same network, the one with the lowest AD is installed."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "1",
+      "Front": "Routing Metric",
+      "Back": "A numerical value used by a specific routing protocol to rank multiple paths to the same destination. The path with the lowest metric is chosen as the best route."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "1",
+      "Front": "Gateway of Last Resort",
+      "Back": "The default route used by a router when no specific entry in the routing table matches a packet's destination IP address. it is denoted by an asterisk (*)."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "1",
+      "Front": "Directly Connected Route (C)",
+      "Back": "A network that is physically attached to one of the router's active interfaces. it has an administrative distance of 0."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "1",
+      "Front": "Local Route (L)",
+      "Back": "A /32 (IPv4) or /128 (IPv6) route for the specific IP address assigned to a router interface. it allows the router to process packets destined for itself efficiently."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "1",
+      "Front": "Static Route (S)",
+      "Back": "A manual routing entry configured by an administrator. it has a default administrative distance of 1 and is highly reliable but not dynamic."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "1",
+      "Front": "OSPF Route (O)",
+      "Back": "A route learned dynamically via the Open Shortest Path First protocol. it has a default administrative distance of 110."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "1",
+      "Front": "EIGRP Route (D)",
+      "Back": "A route learned via Cisco's Enhanced Interior Gateway Routing Protocol. it has a default internal administrative distance of 90."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "1",
+      "Front": "RIP Route (R)",
+      "Back": "A route learned via the Routing Information Protocol. it uses hop count as a metric and has a default administrative distance of 120."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "1",
+      "Front": "External EIGRP (D EX)",
+      "Back": "An EIGRP route that was redistributed from a different routing source. it has a higher administrative distance of 170."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "1",
+      "Front": "AD of eBGP",
+      "Back": "The administrative distance for External Border Gateway Protocol routes, which is 20. These are highly trusted as they come from outside the autonomous system."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "1",
+      "Front": "Hop Count",
+      "Back": "The metric used by RIP, representing the number of routers a packet must cross to reach its destination. The maximum limit is 15 hops."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "1",
+      "Front": "Cost (Metric)",
+      "Back": "The metric used by OSPF, based on the bandwidth of the links along the path. lower cost indicates a faster and preferred route."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "1",
+      "Front": "Composite Metric",
+      "Back": "The metric calculation used by EIGRP, which by default combines Bandwidth and Delay to determine the best path."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "1",
+      "Front": "Floating Static Route",
+      "Back": "A backup static route configured with a higher administrative distance than the primary route. it only enters the routing table if the primary path fails."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "1",
+      "Front": "show ip route",
+      "Back": "The primary Cisco IOS command used to view the IPv4 routing table and its components."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "1",
+      "Front": "Routing Table Convergence",
+      "Back": "The state where all routers in a network have finished exchanging information and their routing tables are consistent and accurate."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "1",
+      "Front": "Recursive Lookup",
+      "Back": "The process where a router must look up a next-hop IP in the routing table to find the corresponding outgoing interface."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "1",
+      "Front": "Route Source Legend",
+      "Back": "The introductory text in the 'show ip route' output that explains what each letter code (C, S, O, etc.) stands for."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "1",
+      "Front": "Installed Route",
+      "Back": "A route that has been successfully added to the active routing table because it is the most trustworthy path to a destination."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "1",
+      "Front": "Default Route (0.0.0.0/0)",
+      "Back": "A special route that matches all destination IP addresses. it is used to send traffic to the internet or a central hub when no specific route exists."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "1",
+      "Front": "Administrative Override",
+      "Back": "The concept that static routes take precedence over dynamic routes because they have a lower administrative distance (1 vs 90/110/120)."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "1",
+      "Front": "Best Path Selection",
+      "Back": "The two-step logical process a router uses: 1. Compare AD between different sources. 2. Compare metrics within the same source."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "1",
+      "Front": "Age (Routing Table)",
+      "Back": "A timer in some routing table entries showing how long it has been since the router last received a valid update for that path."
+    }
+  ]
+}

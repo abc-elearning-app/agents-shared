@@ -1,0 +1,186 @@
+{
+  "status": "completed",
+  "appName": "ccna",
+  "flashcards": [
+    {
+      "Topic": "6",
+      "Subtopic": "7",
+      "Front": "JSON",
+      "Back": "JavaScript Object Notation. A lightweight, text-based data interchange format that is easy for humans to read and write and easy for machines to parse and generate."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "7",
+      "Front": "JSON Object",
+      "Back": "A collection of key-value pairs wrapped in curly braces { }. it is the JSON equivalent of a Python dictionary or an associative array."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "7",
+      "Front": "JSON Array",
+      "Back": "An ordered list of values wrapped in square brackets [ ]. it is the JSON equivalent of a Python list or a standard programming array."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "7",
+      "Front": "JSON Key",
+      "Back": "A string wrapped in double quotes that acts as a label for a piece of data. it appears before the colon in a key-value pair."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "7",
+      "Front": "JSON Value",
+      "Back": "The data associated with a key. it can be a string, number, boolean, null, object, or array, and appears after the colon."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "7",
+      "Front": "Key-Value Pair",
+      "Back": "The fundamental building block of a JSON object, consisting of a quoted key, a colon, and a valid JSON value."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "7",
+      "Front": "JSON Colon (:)",
+      "Back": "The specific syntax character used to separate a key from its corresponding value within a JSON object."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "7",
+      "Front": "JSON Comma (,)",
+      "Back": "The character used to separate multiple items in an array or multiple key-value pairs in an object. it is not used after the final item."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "7",
+      "Front": "Curly Braces { }",
+      "Back": "The characters used to define the boundaries of a JSON object."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "7",
+      "Front": "Square Brackets [ ]",
+      "Back": "The characters used to define the boundaries of a JSON array."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "7",
+      "Front": "JSON String",
+      "Back": "A sequence of zero or more Unicode characters wrapped in double quotes (e.g., \"hostname\"). Single quotes are not valid in standard JSON."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "7",
+      "Front": "JSON Number",
+      "Back": "A data type representing a numerical value (integer or floating-point). Unlike strings, numbers are not wrapped in quotes (e.g., 1024)."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "7",
+      "Front": "JSON Boolean",
+      "Back": "A data type representing one of two logical values: true or false. These are written in lowercase without quotes."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "7",
+      "Front": "JSON null",
+      "Back": "A special value representing the intentional absence of any value. it is written as 'null' without quotes."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "7",
+      "Front": "Nesting (JSON)",
+      "Back": "The practice of placing objects inside other objects or arrays inside objects to represent complex, hierarchical data structures."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "7",
+      "Front": "Double Quotes (JSON Requirement)",
+      "Back": "Standard JSON requires all keys and all string values to be wrapped in double quotes. using single quotes will result in a syntax error."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "7",
+      "Front": "Whitespace (JSON)",
+      "Back": "The spaces, tabs, and newlines in a JSON file. they are ignored by machines but are used by humans to make the data more readable."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "7",
+      "Front": "Data Serialization Language",
+      "Back": "A category of text-based languages like JSON and XML used to represent and transmit data structures over a network."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "7",
+      "Front": "JSON Schema",
+      "Back": "A document that defines the required structure and data types for a JSON file, used to validate that the data is correct before processing."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "7",
+      "Front": "API Response (JSON)",
+      "Back": "The structured data returned by a REST API after a request. it is almost always formatted as a JSON object or array."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "7",
+      "Front": "Ordered List (Array)",
+      "Back": "A characteristic of JSON arrays where the items maintain their specific sequence (0, 1, 2...). this is important for representing lists like interface names."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "7",
+      "Front": "Unordered Collection (Object)",
+      "Back": "A characteristic of JSON objects where the sequence of key-value pairs does not technically matter, as long as the keys are unique."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "7",
+      "Front": "JSON Parsing",
+      "Back": "The process performed by an automation script (like Python) to read a JSON string and convert it into native data structures for processing."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "7",
+      "Front": "application/json",
+      "Back": "The standard MIME type used in the HTTP 'Content-Type' or 'Accept' headers to indicate that the data being sent or requested is in JSON format."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "7",
+      "Front": "JSON Minification",
+      "Back": "The process of removing all unnecessary whitespace from a JSON file to reduce its size for faster transmission over the network."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "7",
+      "Front": "Escape Characters (JSON)",
+      "Back": "Special sequences (like \\\" or \\n) used within a JSON string to represent characters that would otherwise break the syntax."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "7",
+      "Front": "Self-Describing Data",
+      "Back": "A property of JSON where the keys (labels) explain the meaning of the values, making the data easier to understand without external documentation."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "7",
+      "Front": "Pretty Print (JSON)",
+      "Back": "The process of formatting minified JSON with proper indentation and line breaks to make it readable for human troubleshooters."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "7",
+      "Front": "Root Element (JSON)",
+      "Back": "The single top-level object or array that contains all other data within a JSON file."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "7",
+      "Front": "YANG vs JSON",
+      "Back": "YANG is a data modeling language used to define structure, while JSON is one of several formats (along with XML) used to encode and transmit the actual data."
+    }
+  ]
+}

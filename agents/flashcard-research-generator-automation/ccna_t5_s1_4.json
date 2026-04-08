@@ -1,0 +1,186 @@
+{
+  "status": "completed",
+  "appName": "ccna",
+  "flashcards": [
+    {
+      "Topic": "5",
+      "Subtopic": "1",
+      "Front": "Vulnerability",
+      "Back": "A weakness in a system, process, or design that could be exploited by a malicious actor to compromise security. Common examples include software bugs or poorly configured hardware."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "1",
+      "Front": "Threat",
+      "Back": "Any potential danger that could take advantage of a vulnerability to cause harm. it represents the possibility of a malicious act like data theft, service disruption, or unauthorized access."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "1",
+      "Front": "Exploit",
+      "Back": "A specific tool, technique, or piece of code used to take advantage of a vulnerability. it is the actual mechanism through which a threat actor gains access or causes damage."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "1",
+      "Front": "Mitigation",
+      "Back": "The actions taken to reduce the risk or impact of a threat. This includes applying software patches, configuring firewalls, and implementing strong authentication policies."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "1",
+      "Front": "Social Engineering",
+      "Back": "An attack method that relies on human interaction to trick people into revealing sensitive information or breaking security procedures. Examples include phishing and impersonation."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "1",
+      "Front": "Phishing",
+      "Back": "A common social engineering attack where fraudulent emails or messages are sent to trick users into providing credentials or clicking on malicious links that install malware."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "1",
+      "Front": "Malware",
+      "Back": "Malicious software designed to infiltrate, damage, or gain unauthorized access to a computer system. This broad category includes viruses, worms, trojans, and ransomware."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "1",
+      "Front": "Brute-Force Attack",
+      "Back": "A trial-and-error method used to guess passwords or encryption keys. Attackers use automated tools to try thousands of combinations until the correct one is found."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "2",
+      "Front": "Physical Access Control",
+      "Back": "Security measures designed to prevent unauthorized people from physically touching network equipment. Examples include locked server rooms, security cameras, and biometric scanners."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "2",
+      "Front": "Security Awareness Training",
+      "Back": "An educational program designed to teach employees about security risks and best practices. it is a critical defense against social engineering and human error."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "3",
+      "Front": "Enable Secret",
+      "Back": "The Cisco IOS command used to set a highly secure, hashed password for accessing privileged EXEC mode. it is much more secure than the older 'enable password' command."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "3",
+      "Front": "Console Password",
+      "Back": "A local security setting that requires a password for anyone physically connecting a terminal to the device's console port. it is the first line of defense for physical access."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "3",
+      "Front": "VTY Line Password",
+      "Back": "A password requirement for remote management access via Telnet or SSH. Configuring this is mandatory for allowing any remote CLI interaction with a Cisco device."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "3",
+      "Front": "Service Password-Encryption",
+      "Back": "A global Cisco IOS command that provides basic encryption for all plain-text passwords in the configuration file. While not robust, it prevents casual viewing of sensitive data."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "3",
+      "Front": "Login Local",
+      "Back": "A line configuration command that instructs the device to check a user's credentials against its own local database of usernames and passwords rather than a simple line password."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "4",
+      "Front": "Multi-Factor Authentication",
+      "Back": "A security requirement that forces users to provide two or more different types of evidence to verify their identity, such as a password and a one-time code from a smartphone."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "4",
+      "Front": "Password Complexity",
+      "Back": "A policy that requires passwords to be long and include a mix of uppercase letters, lowercase letters, numbers, and special symbols to resist guessing and brute-force attacks."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "4",
+      "Front": "Digital Certificate",
+      "Back": "An electronic file used to prove the identity of a device or user over a network. it is a highly secure alternative to passwords and is the basis for many encryption protocols."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "4",
+      "Front": "Biometrics",
+      "Back": "Authentication methods based on unique physical characteristics, such as fingerprints, facial recognition, or iris scans. They provide high security as they are difficult to replicate."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "4",
+      "Front": "Password Aging",
+      "Back": "A security policy that requires users to change their passwords periodically. This limits the amount of time an attacker can use a compromised set of credentials."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "4",
+      "Front": "Least Privilege Principle",
+      "Back": "A fundamental security concept where users and devices are granted only the minimum level of access necessary to perform their jobs. This limits the potential damage from a security breach."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "4",
+      "Front": "AAA (Security)",
+      "Back": "A framework for managing network security that stands for Authentication (who you are), Authorization (what you can do), and Accounting (what you actually did)."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "1",
+      "Front": "Denial of Service",
+      "Back": "A malicious attack that attempts to make a network resource or service unavailable to its intended users, typically by overwhelming it with a flood of useless traffic."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "1",
+      "Front": "Ransomware",
+      "Back": "A type of malware that encrypts a victim's files and demands payment in exchange for the decryption key. it is one of the most significant threats to modern organizations."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "1",
+      "Front": "Zero-Day Exploit",
+      "Back": "An attack that targets a software vulnerability that is unknown to the vendor or the public. Because no patch exists yet, these threats are extremely difficult to defend against."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "1",
+      "Front": "Man-in-the-Middle",
+      "Back": "An attack where a malicious actor secretly intercepts and possibly alters the communication between two parties who believe they are communicating directly with each other."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "3",
+      "Front": "Banner Motd",
+      "Back": "A Cisco IOS command used to display a legal warning message to anyone attempting to log into the device. it is an important part of a corporate security policy."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "3",
+      "Front": "SSH Timeout",
+      "Back": "A configuration that automatically disconnects an inactive remote session after a certain period. This prevents unauthorized users from taking over an abandoned management connection."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "4",
+      "Front": "RADIUS Server",
+      "Back": "A centralized server used to manage AAA services for a large number of network devices. it allows for a single point of management for user accounts and security policies."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "4",
+      "Front": "Hardware Token",
+      "Back": "A physical device, like a key fob or smart card, that generates a changing code used for multi-factor authentication. it provides a high level of security for sensitive access."
+    }
+  ]
+}

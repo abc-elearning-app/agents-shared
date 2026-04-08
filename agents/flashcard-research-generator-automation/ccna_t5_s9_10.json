@@ -1,0 +1,126 @@
+{
+  "status": "completed",
+  "appName": "ccna",
+  "flashcards": [
+    {
+      "Topic": "5",
+      "Subtopic": "9",
+      "Front": "WEP",
+      "Back": "The original security protocol for 802.11 wireless networks. it is now considered extremely insecure because its encryption keys can be easily cracked in minutes using freely available software."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "9",
+      "Front": "WPA",
+      "Back": "An intermediate security standard designed to fix the weaknesses of WEP. it introduced the TKIP encryption protocol and provided a much-needed security boost before the finalization of WPA2."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "9",
+      "Front": "WPA2",
+      "Back": "The long-standing standard for wireless security that introduced hardware-based AES encryption. it provides robust protection for both personal and enterprise networks and is still widely used today."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "9",
+      "Front": "WPA3",
+      "Back": "The latest evolution of wireless security that addresses several vulnerabilities in WPA2. it introduces Simultaneous Authentication of Equals (SAE) to protect against offline dictionary attacks."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "9",
+      "Front": "SAE (Simultaneous Authentication of Equals)",
+      "Back": "The key exchange protocol used in WPA3 Personal. it replaces the PSK exchange of WPA2, providing much stronger protection for users who choose weak or easy-to-guess passwords."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "9",
+      "Front": "TKIP",
+      "Back": "An encryption protocol used in the original WPA standard. it was designed to run on older WEP hardware via software updates, but it has since been deprecated in favor of the more secure AES."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "9",
+      "Front": "AES-CCMP",
+      "Back": "The specific encryption mechanism used by WPA2 and WPA3. it provides data confidentiality, integrity, and origin authentication using the highly secure Advanced Encryption Standard algorithm."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "9",
+      "Front": "Pre-Shared Key (Wireless)",
+      "Back": "A common authentication method where all users on a wireless network use the same static password. it is the most frequent choice for home and small office Wi-Fi installations."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "9",
+      "Front": "802.1X Enterprise",
+      "Back": "A high-security authentication framework that requires each user to provide unique credentials (like a username and password) to a RADIUS server before they are granted access to the wireless network."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "9",
+      "Front": "Extensible Authentication Protocol",
+      "Back": "The underlying protocol used by 802.1X to carry authentication data between the client, access point, and RADIUS server. it supports various methods like PEAP, EAP-TLS, and EAP-FAST."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "10",
+      "Front": "WLC Security Tab",
+      "Back": "The section in the Cisco Wireless LAN Controller GUI used to define the Layer 2 and Layer 3 security parameters for a WLAN. it is where you select WPA2 and configure the pre-shared key."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "10",
+      "Front": "WLC Layer 2 Security",
+      "Back": "A sub-tab in the WLAN configuration GUI where you choose the encryption standard (like WPA2) and the authentication key management method (like PSK or 802.1X)."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "10",
+      "Front": "Authentication Key Management",
+      "Back": "A setting in the WLC GUI that specifies how encryption keys are generated and distributed. For a standard home-style setup, this is where you would enable the PSK option."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "10",
+      "Front": "ASCII vs Hex (PSK)",
+      "Back": "The two formats for entering a pre-shared key in the WLC GUI. ASCII allows for human-readable passwords (8-63 characters), while Hex requires a 64-digit hexadecimal string."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "10",
+      "Front": "WLAN Status (Enabled)",
+      "Back": "A critical checkbox in the WLC GUI that must be selected for a wireless network to become active. Even if perfectly configured, the WLAN will not broadcast until it is explicitly enabled."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "9",
+      "Front": "GCMP",
+      "Back": "The advanced encryption mode used in WPA3 to provide even stronger data protection than the CCMP mode used in WPA2. it is required for the highest levels of wireless security."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "9",
+      "Front": "Forward Secrecy",
+      "Back": "A security property provided by WPA3 that ensures even if a password is later compromised, an attacker cannot decrypt wireless traffic that was captured in the past."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "9",
+      "Front": "PMF (Protected Management Frames)",
+      "Back": "A security feature that encrypts the management traffic between an AP and a client. it is optional in WPA2 but mandatory in WPA3 to prevent deauthentication attacks."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "10",
+      "Front": "Radius Server (GUI)",
+      "Back": "A configuration screen in the WLC GUI where you define the IP address and shared secret of an external AAA server. This is necessary for implementing 802.1X Enterprise security."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "10",
+      "Front": "WLAN Broadcast SSID",
+      "Back": "An option in the WLC GUI that determines if the AP should include the SSID in its beacon frames. Disabling this makes the network 'hidden' to casual scans."
+    }
+  ]
+}

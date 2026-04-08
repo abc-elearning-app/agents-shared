@@ -1,0 +1,186 @@
+{
+  "status": "completed",
+  "appName": "ccna",
+  "flashcards": [
+    {
+      "Topic": "2",
+      "Subtopic": "6",
+      "Front": "Autonomous AP Architecture",
+      "Back": "A decentralized wireless model where each AP is standalone and self-contained, managing its own security policies and RF parameters without a central controller."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "6",
+      "Front": "Lightweight AP Architecture",
+      "Back": "A centralized wireless model where 'dumb' APs rely on a Wireless LAN Controller (WLC) for management, security, and control functions."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "6",
+      "Front": "Split-MAC Architecture",
+      "Back": "The division of labor in lightweight AP systems where real-time 802.11 functions stay on the AP, while non-real-time management functions move to the WLC."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "6",
+      "Front": "CAPWAP",
+      "Back": "Control and Provisioning of Wireless Access Points. An IETF standard tunneling protocol used for communication between lightweight APs and a WLC."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "6",
+      "Front": "CAPWAP Control Port",
+      "Back": "UDP port 5246, used for management and configuration traffic between the WLC and its associated lightweight access points."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "6",
+      "Front": "CAPWAP Data Port",
+      "Back": "UDP port 5247, used to transport encapsulated client data frames between the access point and the Wireless LAN Controller."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "6",
+      "Front": "Cloud-Based AP Architecture",
+      "Back": "A wireless model where AP management is handled by a remote cloud platform (like Cisco Meraki) while the APs function as autonomous units for traffic forwarding."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "6",
+      "Front": "Embedded WLC",
+      "Back": "A wireless deployment where the WLC software function is integrated directly into the hardware of a network switch (e.g., Catalyst 9300)."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "6",
+      "Front": "Cisco Mobility Express",
+      "Back": "A wireless solution where the WLC function is hosted on an access point, allowing it to manage up to 100 other APs without a dedicated hardware controller."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "6",
+      "Front": "Local Mode (AP)",
+      "Back": "The default operating mode for a lightweight AP. it provides BSSs to clients and scans for interference/rogue devices on other channels when not transmitting."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "6",
+      "Front": "FlexConnect Mode",
+      "Back": "An AP mode designed for branch offices. it allows the AP to switch traffic locally even if the CAPWAP connection to the central WLC is lost."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "6",
+      "Front": "Monitor Mode (AP)",
+      "Back": "A dedicated sensor mode where the AP does not transmit. it is used exclusively for IDS, rogue detection, and location services."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "6",
+      "Front": "Sniffer Mode (AP)",
+      "Back": "A diagnostic mode where the AP radios are dedicated to capturing all 802.11 frames on a channel and forwarding them to a remote analysis tool (like Wireshark)."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "6",
+      "Front": "Rogue Detector Mode",
+      "Back": "A specialized AP mode that correlates MAC addresses between the wired and wireless networks to identify unauthorized rogue access points."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "6",
+      "Front": "Bridge Mode (AP)",
+      "Back": "An AP mode used to create point-to-point or point-to-multipoint wireless links between buildings or to support wireless mesh networking."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "6",
+      "Front": "SE-Connect Mode",
+      "Back": "A mode that dedicates the AP radios to spectrum analysis, discovering non-Wi-Fi sources of interference like microwaves or cordless phones."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "6",
+      "Front": "DTLS (Wireless)",
+      "Back": "Datagram Transport Layer Security. The protocol used to provide encryption for CAPWAP control messages between an AP and its WLC."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "6",
+      "Front": "Wireless LAN Controller (WLC)",
+      "Back": "The central management device in a lightweight architecture that handles client authentication, roaming, security, and radio resource management."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "6",
+      "Front": "Unified WLC Deployment",
+      "Back": "A centralized design where the WLC is typically located in a core data center and manages APs across the entire enterprise network."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "6",
+      "Front": "BSS (Basic Service Set)",
+      "Back": "The basic building block of a WLAN, consisting of a single access point and its associated client stations."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "6",
+      "Front": "Radio Resource Management",
+      "Back": "An automated WLC feature that dynamically adjusts the power levels and channel assignments of all managed APs to optimize network performance."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "6",
+      "Front": "Wireless Data Plane",
+      "Back": "In a centralized WLC model, this refers to the path user traffic takes from the AP, through the CAPWAP tunnel, to the WLC before entering the wired network."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "6",
+      "Front": "Wireless Control Plane",
+      "Back": "The management traffic exchanged between the AP and WLC used for provisioning, monitoring, and maintaining the wireless infrastructure."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "6",
+      "Front": "Dynamic Channel Assignment",
+      "Back": "A component of RRM where the WLC automatically chooses the best operating channel for an AP to minimize interference with its neighbors."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "6",
+      "Front": "Transmit Power Optimization",
+      "Back": "A component of RRM where the WLC adjusts an AP's radio power to ensure adequate coverage while minimizing overlap between adjacent cells."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "6",
+      "Front": "Wireless Roaming",
+      "Back": "The process where a mobile client moves from the coverage area of one AP to another within the same ESS without losing network connectivity."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "6",
+      "Front": "SSID (Wireless)",
+      "Back": "Service Set Identifier. A human-readable text string that identifies a specific wireless network, allowing users to select the correct signal for connection."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "6",
+      "Front": "Intrusion Detection System (IDS)",
+      "Back": "A security feature where APs in monitor mode or local mode scan for malicious wireless activity, such as deauthentication attacks or spoofed SSIDs."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "6",
+      "Front": "VLAN (Wireless Mapping)",
+      "Back": "The logical association where a WLC maps a specific SSID to a wired VLAN ID, ensuring wireless traffic enters the correct network segment."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "6",
+      "Front": "Lightweight AP (LAP)",
+      "Back": "Another term for a centralized AP that requires a WLC. it is 'lightweight' because it lacks the full management and security capabilities of an autonomous unit."
+    }
+  ]
+}

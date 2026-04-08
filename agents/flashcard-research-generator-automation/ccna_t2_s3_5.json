@@ -1,0 +1,186 @@
+{
+  "status": "completed",
+  "appName": "ccna",
+  "flashcards": [
+    {
+      "Topic": "2",
+      "Subtopic": "3",
+      "Front": "Cisco Discovery Protocol (CDP)",
+      "Back": "A Cisco-proprietary Layer 2 protocol used to discover and share information about directly connected neighboring Cisco devices, including device ID, software version, and interface details."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "3",
+      "Front": "LLDP (Link Layer Discovery Protocol)",
+      "Back": "An industry-standard, vendor-neutral Layer 2 protocol (802.1AB) that performs similar discovery functions to CDP but works across devices from different manufacturers."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "3",
+      "Front": "Neighbor Table (Discovery)",
+      "Back": "A local database on a network device that stores information gathered via CDP or LLDP, essential for mapping the physical network topology and troubleshooting connectivity."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "4",
+      "Front": "EtherChannel",
+      "Back": "A technology that bundles multiple physical Ethernet links between two switches into a single logical link, providing higher bandwidth and automatic link-level redundancy."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "4",
+      "Front": "Port-Channel",
+      "Back": "The logical virtual interface created when multiple physical ports are aggregated into an EtherChannel. Configuration applied to this interface affects all bundled physical ports."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "4",
+      "Front": "LACP (Link Aggregation Control Protocol)",
+      "Back": "The industry-standard protocol (802.3ad) used to negotiate the formation of an EtherChannel. it uses modes 'active' and 'passive' for negotiation."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "4",
+      "Front": "PAgP (Port Aggregation Protocol)",
+      "Back": "A Cisco-proprietary protocol for negotiating EtherChannels. it uses modes 'desirable' and 'auto' and is the legacy alternative to LACP."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "4",
+      "Front": "Channel-group",
+      "Back": "The interface configuration command used to assign a physical port to an EtherChannel bundle and specify the negotiation protocol/mode."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "4",
+      "Front": "EtherChannel Load Balancing",
+      "Back": "The process of distributing traffic across the multiple physical links of an aggregated bundle, typically using a hash of source and/or destination MAC or IP addresses."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "5",
+      "Front": "Spanning Tree Protocol (STP)",
+      "Back": "A Layer 2 protocol (802.1D) designed to prevent loops in redundant Ethernet networks by logically blocking specific paths to ensure only one active loop-free path exists."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "5",
+      "Front": "Root Bridge",
+      "Back": "The central reference point in an STP topology. it is elected based on the lowest Bridge ID (BID) and all other switches calculate the shortest path toward it."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "5",
+      "Front": "Bridge ID (BID)",
+      "Back": "An 8-byte value used by STP to elect the root bridge, consisting of a 2-byte Bridge Priority and the 6-byte MAC address of the switch."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "5",
+      "Front": "System ID Extension",
+      "Back": "A 12-bit portion of the Bridge Priority field used in PVST+ to carry the VLAN ID, allowing a switch to have a unique BID for each VLAN instance."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "5",
+      "Front": "Root Port",
+      "Back": "The single port on a non-root switch that provides the lowest cumulative path cost to reach the root bridge."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "5",
+      "Front": "Designated Port",
+      "Back": "The port on a network segment (collision domain) that is responsible for forwarding traffic from that segment toward the root bridge."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "5",
+      "Front": "Blocking State (STP)",
+      "Back": "An STP port state where the interface does not forward data frames or learn MAC addresses. it only processes BPDUs to detect network changes."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "5",
+      "Front": "Forwarding State (STP)",
+      "Back": "The operational STP state where a port processes BPDUs, learns MAC addresses, and forwards data frames normally."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "5",
+      "Front": "Listening State",
+      "Back": "An intermediate STP state where a port processes BPDUs to build the network topology but does not yet learn MAC addresses or forward data."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "5",
+      "Front": "Learning State",
+      "Back": "An intermediate STP state where a port populates its MAC address table based on incoming frames but still does not forward data."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "5",
+      "Front": "BPDU (Bridge Protocol Data Unit)",
+      "Back": "The specific management frames used by STP to exchange topology information, elect the root bridge, and maintain loop-free paths."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "5",
+      "Front": "Rapid PVST+",
+      "Back": "Cisco's default spanning tree mode (based on 802.1w) that provides significantly faster convergence than legacy STP while maintaining a separate instance for each VLAN."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "5",
+      "Front": "PortFast",
+      "Back": "A Cisco feature that allows an access port to immediately skip the listening and learning states and enter forwarding, typically used for ports connected to end-user devices."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "5",
+      "Front": "BPDU Guard",
+      "Back": "A security feature that automatically disables a PortFast-enabled port if it receives a BPDU, preventing loops from unauthorized switches connected at the edge."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "5",
+      "Front": "Bridge Priority",
+      "Back": "A configurable value (0–61440 in increments of 4096) used to influence the root bridge election. Lower values increase the chance of becoming the root bridge."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "5",
+      "Front": "STP Path Cost",
+      "Back": "A value assigned to an interface based on its bandwidth (e.g., 10 Gbps = 2, 1 Gbps = 4). STP uses this to calculate the shortest path to the root bridge."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "5",
+      "Front": "Hello Timer",
+      "Back": "The interval (default 2 seconds) at which the root bridge sends out configuration BPDUs to its neighbors."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "5",
+      "Front": "MaxAge Timer",
+      "Back": "The duration (default 20 seconds) a switch waits after missing a BPDU before concluding that a topology change has occurred."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "5",
+      "Front": "Forward Delay Timer",
+      "Back": "The time (default 15 seconds) a port spends in each of the listening and learning states before transitioning to the forwarding state."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "5",
+      "Front": "Alternate Port (RSTP)",
+      "Back": "A port in Rapid STP that has an alternative path to the root bridge but is currently blocked. it can transition to a root port almost instantly if the primary fails."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "5",
+      "Front": "Backup Port (RSTP)",
+      "Back": "A port in Rapid STP that provides a redundant path to the same network segment as another designated port on the same switch. it remains blocked unless the primary designated port fails."
+    }
+  ]
+}

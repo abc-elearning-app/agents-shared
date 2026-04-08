@@ -1,0 +1,186 @@
+{
+  "status": "completed",
+  "appName": "ccna",
+  "flashcards": [
+    {
+      "Topic": "4",
+      "Subtopic": "1",
+      "Front": "Static NAT",
+      "Back": "A one-to-one mapping between an internal private IP address and a specific external public IP address. It is typically used for internal servers that must be reachable from the internet."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "1",
+      "Front": "Dynamic NAT",
+      "Back": "A translation process where internal private addresses are mapped to the first available public address from a pre-defined pool. This allows for efficient use of a limited number of public IPs."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "1",
+      "Front": "Port Address Translation",
+      "Back": "Also known as NAT Overloading, it allows multiple private IP addresses to be mapped to a single public IP address using unique source port numbers to distinguish between sessions."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "1",
+      "Front": "Inside Local Address",
+      "Back": "The actual private IP address assigned to a host on the internal network. It is the address the device uses to communicate within its own local segment."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "1",
+      "Front": "Inside Global Address",
+      "Back": "The public IP address that represents an internal host to the outside world. It is the translated address seen by devices on the internet."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "1",
+      "Front": "Outside Global Address",
+      "Back": "The public IP address assigned to a host on an external network, such as a web server. It is the destination address as seen from the internal network."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "1",
+      "Front": "Outside Local Address",
+      "Back": "The IP address of an external host as it appears to the internal network. In most standard NAT configurations, this is identical to the outside global address."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "1",
+      "Front": "NAT Pool",
+      "Back": "A defined range of public IP addresses that a router can use for dynamic translation. The router assigns an address from this pool to internal devices as they request internet access."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "1",
+      "Front": "IP NAT Inside Source",
+      "Back": "The base Cisco IOS command used to define which internal traffic should be translated. It is used for both static mappings and dynamic translations using ACLs and pools."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "1",
+      "Front": "Overload Keyword",
+      "Back": "The specific addition to a NAT command that enables Port Address Translation. It allows a single public IP address, such as the one on the router's WAN port, to support hundreds of internal devices."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "2",
+      "Front": "Network Time Protocol",
+      "Back": "A protocol used to synchronize the clocks of computer systems over a network. Accurate time is essential for log file analysis, security certificates, and scheduled network tasks."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "2",
+      "Front": "NTP Stratum",
+      "Back": "A hierarchical level that indicates the distance of a device from an authoritative time source. Stratum 0 is a high-precision clock, while Stratum 1 is a server directly connected to it."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "2",
+      "Front": "NTP Client Mode",
+      "Back": "A configuration where a network device requests and receives time updates from a designated NTP server. This ensures the device's clock remains accurate and synchronized."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "2",
+      "Front": "NTP Master",
+      "Back": "A Cisco IOS command that configures a router to act as an authoritative NTP server for other devices on the network, even if it is not synchronized to an external source."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "2",
+      "Front": "NTP Authentication",
+      "Back": "A security feature that ensures a device only synchronizes its time with trusted and verified NTP servers. It protects the network from malicious time spoofing attacks."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "3",
+      "Front": "DHCP",
+      "Back": "A network protocol that automatically assigns IP addresses and other configuration parameters like subnet masks and default gateways to devices on a network."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "3",
+      "Front": "DHCP DORA Process",
+      "Back": "The four-step sequence a client uses to obtain an IP address: Discover (broadcast), Offer (from server), Request (from client), and Acknowledgment (from server)."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "3",
+      "Front": "DHCP Relay Agent",
+      "Back": "A router feature that forwards DHCP broadcast requests from clients to a server on a different subnet. This allows for a single centralized DHCP server to support multiple logical networks."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "3",
+      "Front": "IP Helper-Address",
+      "Back": "The specific Cisco IOS command used to enable a DHCP relay agent on an interface. it converts local broadcasts into unicast packets directed at the central server's IP address."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "3",
+      "Front": "DHCP Exclusion",
+      "Back": "A range of IP addresses within a DHCP pool that the server is instructed not to assign to clients. These are typically reserved for static assignment to devices like routers and servers."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "3",
+      "Front": "DHCP Lease",
+      "Back": "The specific amount of time for which a client is permitted to use an assigned IP address. The client must renew the lease periodically to maintain its network connectivity."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "3",
+      "Front": "DHCP Reservation",
+      "Back": "A configuration on a DHCP server that ensures a specific device (identified by its MAC address) always receives the same IP address every time it connects to the network."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "3",
+      "Front": "Domain Name System",
+      "Back": "An essential network service that translates human-readable hostnames (like www.google.com) into their corresponding IP addresses so that devices can locate one another."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "3",
+      "Front": "DNS Recursive Query",
+      "Back": "A request where a client asks a DNS server to resolve a name, and the server takes responsibility for finding the answer by querying other servers if necessary."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "3",
+      "Front": "DNS Iterative Query",
+      "Back": "A request where a DNS server provides the best answer it currently has, which might be a referral to another server that is more likely to know the correct IP address."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "3",
+      "Front": "A Record",
+      "Back": "The most common type of DNS record, which maps a hostname to a 32-bit IPv4 address. It is the fundamental link between human-readable names and network locations."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "3",
+      "Front": "AAAA Record",
+      "Back": "A DNS record type used to map a hostname to a 128-bit IPv6 address. It performs the same function as a standard 'A' record but for the next-generation IP protocol."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "3",
+      "Front": "CNAME Record",
+      "Back": "A DNS record that acts as an alias, pointing one hostname to another canonical hostname. This allows multiple names to resolve to the same underlying IP address."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "3",
+      "Front": "DNS Cache",
+      "Back": "A temporary storage area on a host or server that keeps track of recently resolved DNS queries. This significantly speeds up subsequent requests for the same hostname."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "3",
+      "Front": "NS Record",
+      "Back": "A DNS record that specifies which server is authoritative for a given domain. It tells other servers where to find the official records for that specific part of the DNS hierarchy."
+    }
+  ]
+}

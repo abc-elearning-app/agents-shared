@@ -1,0 +1,1206 @@
+{
+  "status": "completed",
+  "app_name": "ged-prep",
+  "flashcards": [
+    {
+      "Topic": "1",
+      "Subtopic": "N/A",
+      "Front": "Absolute Value",
+      "Back": "The distance of a number from zero on a number line, regardless of direction. This value is always positive or zero because distance cannot be negative."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "N/A",
+      "Front": "Rational Number",
+      "Back": "Any number that can be expressed as a fraction of two integers where the denominator is not zero. This includes whole numbers, terminating decimals, and repeating decimals."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "N/A",
+      "Front": "Greatest Common Factor",
+      "Back": "The largest whole number that divides evenly into two or more other numbers. It is used to simplify fractions to their lowest terms."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "N/A",
+      "Front": "Least Common Multiple",
+      "Back": "The smallest positive integer that is a multiple of two or more numbers. This concept is essential for finding common denominators when adding or subtracting fractions."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "N/A",
+      "Front": "^a \\cdot x^b = x^{a+b}$",
+      "Back": "The product rule for exponents which states that when multiplying terms with the same base, you add their exponents. This simplifies complex algebraic expressions involving powers."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "N/A",
+      "Front": "Scientific Notation",
+      "Back": "A way of expressing very large or very small numbers as the product of a decimal between 1 and 10 and a power of 10. It is widely used in science and engineering for clarity."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "N/A",
+      "Front": "$\\sqrt{x}$",
+      "Back": "The symbol for a square root, representing a value that, when multiplied by itself, gives the original number. For example, the square root of 25 is 5."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "N/A",
+      "Front": "Undefined Expression",
+      "Back": "A mathematical statement that has no defined value, typically occurring when a denominator is zero. Division by zero is impossible in standard arithmetic."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "N/A",
+      "Front": "Unit Rate",
+      "Back": "A ratio that compares a quantity to exactly one unit of another quantity. Examples include miles per hour or price per ounce."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "N/A",
+      "Front": "Proportion",
+      "Back": "An equation stating that two ratios or fractions are equal to each other. Solving these often involves cross-multiplication to find an unknown value."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "N/A",
+      "Front": "Simple Interest",
+      "Back": "The amount of money earned or paid for the use of borrowed capital, calculated only on the principal amount. The formula used is  = Prt$."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "N/A",
+      "Front": "Markup",
+      "Back": "The amount added to the cost price of goods to cover overhead and profit. It is usually expressed as a percentage of the original cost."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "N/A",
+      "Front": "Markdown",
+      "Back": "A reduction in the original selling price of an item. This is often used during sales to encourage customers to purchase inventory."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "N/A",
+      "Front": "Perimeter",
+      "Back": "The total distance around the edge of a two-dimensional shape. It is calculated by adding the lengths of all the sides of the polygon."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "N/A",
+      "Front": " = lw$",
+      "Back": "The formula for calculating the area of a rectangle by multiplying its length by its width. This measurement represents the total space inside the boundary."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "N/A",
+      "Front": " = \frac{1}{2}bh$",
+      "Back": "The formula for the area of a triangle, which is half the product of the base and the height. It applies to all types of triangles regardless of their angles."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "N/A",
+      "Front": "Circumference",
+      "Back": "The distance around the outside of a circle, equivalent to the perimeter of other shapes. It is calculated using the formula  = 2\\pi r$ or  = \\pi d$."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "N/A",
+      "Front": "Radius",
+      "Back": "The distance from the center of a circle to any point on its outer edge. It is exactly half the length of the diameter."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "N/A",
+      "Front": "Diameter",
+      "Back": "A straight line passing from side to side through the center of a circle or sphere. This distance is twice the length of the radius."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "N/A",
+      "Front": "$\\pi \u0007pprox 3.14$",
+      "Back": "A mathematical constant representing the ratio of a circle's circumference to its diameter. It is an irrational number used in many geometric formulas."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "N/A",
+      "Front": "^2 + b^2 = c^2$",
+      "Back": "The Pythagorean theorem, which relates the lengths of the sides of a right triangle. The square of the hypotenuse is equal to the sum of the squares of the other two sides."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "N/A",
+      "Front": " = lwh$",
+      "Back": "The formula for the volume of a rectangular prism, found by multiplying length, width, and height. It measures the amount of three-dimensional space an object occupies."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "N/A",
+      "Front": " = \\pi r^2 h$",
+      "Back": "The formula for calculating the volume of a cylinder. It is derived by multiplying the area of the circular base by the height of the cylinder."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "N/A",
+      "Front": "Surface Area",
+      "Back": "The total area of all the exterior faces of a three-dimensional object. It is measured in square units and represents the total 'skin' of the shape."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "N/A",
+      "Front": "Mean",
+      "Back": "The average of a set of numbers, calculated by adding all values and dividing by the total count. It provides a central value for a data set."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "N/A",
+      "Front": "Median",
+      "Back": "The middle value in a list of numbers ordered from least to greatest. If there is an even number of values, it is the average of the two middle numbers."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "N/A",
+      "Front": "Mode",
+      "Back": "The number that appears most frequently in a data set. A set can have one mode, multiple modes, or no mode at all."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "N/A",
+      "Front": "Range",
+      "Back": "The difference between the highest and lowest values in a data set. It is a simple measure of how spread out the numbers are."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "N/A",
+      "Front": "Probability",
+      "Back": "The likelihood of a specific event occurring, expressed as a number between 0 and 1. It is calculated by dividing the number of favorable outcomes by the total possible outcomes."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "N/A",
+      "Front": "Linear Expression",
+      "Back": "An algebraic statement where the highest power of the variable is one. It typically takes the form  + b$ and represents a straight line when graphed."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "N/A",
+      "Front": "Polynomial",
+      "Back": "A mathematical expression consisting of variables and coefficients, involving only addition, subtraction, and multiplication. Each term has a non-negative integer exponent."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "N/A",
+      "Front": "Factoring",
+      "Back": "The process of breaking down a mathematical expression into a product of simpler components. This is often used to solve quadratic equations or simplify fractions."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "N/A",
+      "Front": "Linear Equation",
+      "Back": "An equation that creates a straight line when plotted on a graph. Both sides of the equation are equal, and the variables are raised only to the first power."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "N/A",
+      "Front": "Linear Inequality",
+      "Back": "A relationship between two algebraic expressions that uses symbols like $<$ or $>$. The solution is a range of values rather than a single number."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "N/A",
+      "Front": "System of Equations",
+      "Back": "A set of two or more equations with the same variables. The solution is the point where the lines intersect on a coordinate plane."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "N/A",
+      "Front": "Function",
+      "Back": "A relationship where each input has exactly one output. It can be represented by an equation, a table of values, or a graph."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "N/A",
+      "Front": "Slope",
+      "Back": "A measure of the steepness of a line, often described as 'rise over run.' It is the ratio of the change in $ to the change in $."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "N/A",
+      "Front": "hBcintercept",
+      "Back": "The point where a line crosses the vertical axis on a graph. At this point, the hBccoordinate is always zero."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "N/A",
+      "Front": "Parallel Lines",
+      "Back": "Two lines in the same plane that never intersect and have exactly the same slope. They remain the same distance apart at all points."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "N/A",
+      "Front": "Perpendicular Lines",
+      "Back": "Two lines that intersect at a right angle of 90 degrees. Their slopes are negative reciprocals of each other."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "N/A",
+      "Front": "Quadratic Equation",
+      "Back": "An equation of the second degree, meaning it contains at least one term squared. Its standard form is ^2 + bx + c = 0$."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "N/A",
+      "Front": "Variable",
+      "Back": "A letter or symbol used to represent an unknown or changing number in an algebraic expression. Common examples include $ and $."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "N/A",
+      "Front": "Coefficient",
+      "Back": "A numerical or constant factor placed before a variable in an algebraic term. In the expression x$, the number 5 is the multiplier."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "N/A",
+      "Front": "Constant",
+      "Back": "A value that does not change within a mathematical expression or equation. It is a fixed number without any attached variables."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "N/A",
+      "Front": "Coordinate Plane",
+      "Back": "A two-dimensional surface formed by the intersection of a horizontal hBcaxis and a vertical hBcaxis. It is used to plot points and graph equations."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "N/A",
+      "Front": "Ordered Pair",
+      "Back": "A pair of numbers $ used to locate a point on a coordinate plane. The first number indicates horizontal position and the second indicates vertical position."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "N/A",
+      "Front": "Slope-Intercept Form",
+      "Back": "The standard way to write a linear equation, expressed as  = mx + b$. In this form, $ represents the slope and $ represents the hBcintercept."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "N/A",
+      "Front": "hBcintercept",
+      "Back": "The point where a graph crosses the horizontal axis. At this location, the value of the hBccoordinate is always zero."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "N/A",
+      "Front": "Inequality Symbols",
+      "Back": "Signs used to compare values, such as greater than ($>$), less than ($<$), or equal to. They indicate the relative size or order of two expressions."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "N/A",
+      "Front": "Distributive Property",
+      "Back": "A rule stating that multiplying a sum by a number is the same as multiplying each addend separately. It is written as (b + c) = ab + ac$."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "N/A",
+      "Front": "Main Idea",
+      "Back": "The central point or most important message that an author wants to convey in a text. All other details in the passage support this core concept."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "N/A",
+      "Front": "Supporting Details",
+      "Back": "Facts, examples, and descriptions that provide evidence for the main idea. They help to explain, prove, or expand upon the author's primary point."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "N/A",
+      "Front": "Inference",
+      "Back": "A logical conclusion reached on the basis of evidence and reasoning rather than explicit statements. It involves 'reading between the lines' to understand hidden meanings."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "N/A",
+      "Front": "Conclusion",
+      "Back": "A judgment or decision reached after considering all the facts and evidence in a passage. It summarizes the final outcome of the author's argument or story."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "N/A",
+      "Front": "Theme",
+      "Back": "The underlying message or universal truth explored in a literary work. It often reflects broader ideas about human nature, society, or the world."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "N/A",
+      "Front": "Plot",
+      "Back": "The sequence of events that make up a story, including the conflict, rising action, climax, and resolution. It provides the structure for the narrative."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "N/A",
+      "Front": "Characterization",
+      "Back": "The techniques an author uses to create and develop characters within a story. This includes describing their appearance, actions, thoughts, and dialogue."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "N/A",
+      "Front": "Setting",
+      "Back": "The time and place in which a story or event occurs. It establishes the atmosphere and provides the context for the characters' actions."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "N/A",
+      "Front": "Summary",
+      "Back": "A brief statement that covers the main points of a text without including minor details or personal opinions. it provides an overview of the entire work."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "N/A",
+      "Front": "Textual Evidence",
+      "Back": "Specific quotes or paraphrased information from a passage used to support an argument or claim. It proves that the reader's interpretation is based on the actual text."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "N/A",
+      "Front": "Argument",
+      "Back": "A set of reasons or evidence given with the aim of persuading others that an action or idea is right or wrong. It is the foundation of persuasive writing."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "N/A",
+      "Front": "Claim",
+      "Back": "A statement that asserts something to be true or factual. In an essay, it serves as the main thesis that the author intends to prove with evidence."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "N/A",
+      "Front": "Counter-argument",
+      "Back": "An argument or set of reasons put forward to oppose an idea or theory developed in another argument. Addressing these strengthens the author's own position."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "N/A",
+      "Front": "Rhetoric",
+      "Back": "The art of effective or persuasive speaking and writing, especially the use of figures of speech and other compositional techniques. It aims to influence the audience's perspective."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "N/A",
+      "Front": "Analogy",
+      "Back": "A comparison between two different things that highlights their similarities to explain a complex idea. It helps the reader understand something new by relating it to something familiar."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "N/A",
+      "Front": "Tone",
+      "Back": "The author's attitude toward the subject matter or the audience, conveyed through word choice and style. It can be formal, informal, serious, humorous, or sarcastic."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "N/A",
+      "Front": "Word Choice",
+      "Back": "The specific vocabulary an author selects to convey meaning and create a particular effect. It is also known as diction and significantly impacts the text's tone."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "N/A",
+      "Front": "Figurative Language",
+      "Back": "The use of words in a non-literal way to create a special effect or feeling. Common types include metaphors, similes, and personification."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "N/A",
+      "Front": "Simile",
+      "Back": "A figure of speech that compares two different things using the words 'like' or 'as'. An example is 'brave as a lion'."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "N/A",
+      "Front": "Metaphor",
+      "Back": "A direct comparison between two unrelated things without using 'like' or 'as'. It suggests that one thing is another to highlight a shared quality."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "N/A",
+      "Front": "Imagery",
+      "Back": "Vivid descriptive language that appeals to the five senses. It helps the reader create a mental picture of the scenes and characters in the text."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "N/A",
+      "Front": "Repetition",
+      "Back": "The intentional use of a word or phrase multiple times to emphasize an idea or create a rhythmic effect. It is a common tool in persuasive writing and poetry."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "N/A",
+      "Front": "Author's Purpose",
+      "Back": "The primary reason an author writes a text, such as to inform, persuade, entertain, or describe. Identifying this helps the reader evaluate the author's message."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "N/A",
+      "Front": "Point of View",
+      "Back": "The perspective from which a story is told, such as first-person or third-person. It determines how much information the reader receives about the characters and events."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "N/A",
+      "Front": "Bias",
+      "Back": "A prejudice in favor of or against one thing, person, or group compared with another, usually in a way considered unfair. It can distort the facts presented in a text."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "N/A",
+      "Front": "Context Clues",
+      "Back": "Hints found within a sentence or passage that help the reader determine the meaning of an unknown word. They include definitions, synonyms, and antonyms."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "N/A",
+      "Front": "Sentence Fragment",
+      "Back": "A group of words that is missing a subject, a verb, or a complete thought. It is an incomplete sentence and should be avoided in formal writing."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "N/A",
+      "Front": "Run-on Sentence",
+      "Back": "Two or more complete sentences that are joined together without the correct punctuation or conjunctions. They make writing difficult to read and understand."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "N/A",
+      "Front": "Parallel Structure",
+      "Back": "The use of consistent grammatical patterns for items in a list or series. This technique creates balance and clarity in writing."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "N/A",
+      "Front": "Conjunction",
+      "Back": "A word used to connect clauses or sentences or to coordinate words in the same clause. Examples include 'and', 'but', and 'or'."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "N/A",
+      "Front": "Modifier",
+      "Back": "A word or phrase that describes or provides more information about another word. Misplaced versions of these can lead to confusing or unintended meanings."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "N/A",
+      "Front": "Pronoun-Antecedent Agreement",
+      "Back": "The rule that a pronoun must match the noun it replaces in both number and gender. For example, a singular noun requires a singular pronoun."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "N/A",
+      "Front": "Subject-Verb Agreement",
+      "Back": "The grammatical rule that the verb must match the subject in number. A singular subject requires a singular verb, while a plural subject requires a plural verb."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "N/A",
+      "Front": "Capitalization",
+      "Back": "The use of upper-case letters for the first letter of a sentence, proper nouns, and titles. It helps distinguish specific names and entities from general ones."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "N/A",
+      "Front": "Punctuation",
+      "Back": "The marks used in writing to separate sentences and their elements and to clarify meaning. Examples include periods, commas, and question marks."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "N/A",
+      "Front": "Apostrophe",
+      "Back": "A punctuation mark used to indicate either possession or the omission of letters in a contraction. Examples include 'John's book' or 'can't'."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "N/A",
+      "Front": "Possessive Noun",
+      "Back": "A noun that shows ownership or belonging, usually formed by adding an apostrophe and an 's'. For example, 'the student's desk' indicates the desk belongs to the student."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "N/A",
+      "Front": "Denotation",
+      "Back": "The literal, dictionary definition of a word, devoid of any emotional associations. It represents the objective meaning of the term."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "N/A",
+      "Front": "Connotation",
+      "Back": "The emotional or cultural associations that a word carries beyond its literal definition. Words can have positive, negative, or neutral associations."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "N/A",
+      "Front": "Logical Fallacy",
+      "Back": "An error in reasoning that makes an argument invalid or misleading. Common examples include personal attacks or jumping to conclusions without enough evidence."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "N/A",
+      "Front": "Sequence of Events",
+      "Back": "The order in which things happen in a story or a process. Understanding this is crucial for following the plot or a set of instructions."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "N/A",
+      "Front": "Cause and Effect",
+      "Back": "A relationship where one event makes another event happen. The first event is the reason, and the second event is the result."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "N/A",
+      "Front": "Compare and Contrast",
+      "Back": "A text structure that highlights the similarities and differences between two or more subjects. It helps readers understand the unique characteristics of each item."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "N/A",
+      "Front": "Informational Text",
+      "Back": "Writing that is intended to provide facts and explanations about a specific topic. It is non-fiction and common in textbooks, news articles, and reports."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "N/A",
+      "Front": "Literary Text",
+      "Back": "Writing that is creative and imaginative, such as novels, short stories, and poems. It focuses on characters, plot, and artistic expression."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "N/A",
+      "Front": "Transitions",
+      "Back": "Words or phrases that link ideas, sentences, and paragraphs together. They help the reader follow the flow of the author's thoughts smoothly."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "N/A",
+      "Front": "Active Voice",
+      "Back": "A sentence structure where the subject performs the action expressed by the verb. This style is usually more direct and easier to read."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "N/A",
+      "Front": "Passive Voice",
+      "Back": "A sentence structure where the subject receives the action of the verb. It often makes the writing sound more formal but less direct."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "N/A",
+      "Front": "Comma Splice",
+      "Back": "The error of joining two independent clauses with only a comma and no coordinating conjunction. It is a common type of run-on sentence."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "N/A",
+      "Front": "Diction",
+      "Back": "The author's choice and use of words and phrases in speech or writing. It establishes the style and tone of the entire work."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "N/A",
+      "Front": "Scientific Method",
+      "Back": "A systematic way of exploring the world through observation, hypothesis testing, and experimentation. It helps scientists develop reliable and repeatable results."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "N/A",
+      "Front": "Hypothesis",
+      "Back": "A testable explanation for a set of observations or a scientific question. It is often written as an 'If... then...' statement and serves as a starting point for investigations."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "N/A",
+      "Front": "Scientific Theory",
+      "Back": "A well-substantiated explanation of some aspect of the natural world that is based on a body of facts. These have been repeatedly confirmed through observation and experiment."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "N/A",
+      "Front": "Scientific Law",
+      "Back": "A statement that describes an observable occurrence in nature that appears to always be true. It often takes the form of a mathematical equation, like gravity."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "N/A",
+      "Front": "Independent Variable",
+      "Back": "The factor that is intentionally changed or manipulated in a scientific experiment. It is the variable that the researcher controls to see its effect on the outcome."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "N/A",
+      "Front": "Dependent Variable",
+      "Back": "The factor that is measured or observed in response to changes in the independent variable. It represents the outcome or data collected during the experiment."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "N/A",
+      "Front": "Control Group",
+      "Back": "The group in an experiment that does not receive the treatment or change. It serves as a baseline to compare the results of the experimental group."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "N/A",
+      "Front": "Sample Size",
+      "Back": "The number of individual observations or participants included in a study. A larger number generally leads to more accurate and reliable conclusions."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "N/A",
+      "Front": "Data Interpretation",
+      "Back": "The process of analyzing and making sense of numerical or qualitative information gathered during an experiment. It involves identifying patterns, trends, and relationships."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "N/A",
+      "Front": "Photosynthesis",
+      "Back": "The process by which green plants and some other organisms use sunlight to synthesize foods from carbon dioxide and water. This process releases oxygen as a byproduct."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "N/A",
+      "Front": "Cellular Respiration",
+      "Back": "The process by which cells break down glucose and other nutrients to produce energy in the form of ATP. It is essentially the reverse of photosynthesis."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "N/A",
+      "Front": "Carbon Cycle",
+      "Back": "The series of processes by which carbon compounds are interconverted in the environment. It involves the incorporation of carbon dioxide into living tissue by photosynthesis."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "N/A",
+      "Front": "Cell Division",
+      "Back": "The process by which a parent cell divides into two or more daughter cells. This is essential for growth, repair, and reproduction in living organisms."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "N/A",
+      "Front": "Heredity",
+      "Back": "The passing on of physical or mental characteristics genetically from one generation to another. It determines the traits that offspring inherit from their parents."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "N/A",
+      "Front": "Genotype",
+      "Back": "The genetic makeup of an organism, consisting of the specific alleles inherited from its parents. It is the internal 'code' that influences the organism's traits."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "N/A",
+      "Front": "Phenotype",
+      "Back": "The observable physical or behavioral characteristics of an organism. It is determined by both the organism's genetic makeup and its environment."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "N/A",
+      "Front": "Allele",
+      "Back": "One of two or more alternative forms of a gene that arise by mutation and are found at the same place on a chromosome. They determine specific versions of a trait."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "N/A",
+      "Front": "DNA",
+      "Back": "Deoxyribonucleic acid, the molecule that carries the genetic instructions for the development and functioning of all known living organisms. It has a double-helix structure."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "N/A",
+      "Front": "Evolution",
+      "Back": "The process by which different kinds of living organisms are thought to have developed and diversified from earlier forms during the history of the earth. It is driven by natural selection."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "N/A",
+      "Front": "Natural Selection",
+      "Back": "The process whereby organisms better adapted to their environment tend to survive and produce more offspring. This is the main mechanism of evolution."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "N/A",
+      "Front": "Common Ancestry",
+      "Back": "The idea that multiple species share a single ancestral population from which they all descended. It is supported by evidence from fossils, DNA, and anatomy."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "N/A",
+      "Front": "Plate Tectonics",
+      "Back": "The theory that Earth's outer shell is divided into several large plates that glide over the mantle. Their movements cause earthquakes, volcanoes, and mountain building."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "N/A",
+      "Front": "Rock Cycle",
+      "Back": "A continuous process by which rocks are created, changed from one type to another, destroyed, and then formed again. It involves igneous, sedimentary, and metamorphic rocks."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "N/A",
+      "Front": "Water Cycle",
+      "Back": "The continuous movement of water on, above, and below the surface of the Earth. It involves processes like evaporation, condensation, and precipitation."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "N/A",
+      "Front": "Climate Change",
+      "Back": "Significant and long-lasting changes in the Earth's weather patterns and temperatures. Human activities, such as burning fossil fuels, are a major driver of current trends."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "N/A",
+      "Front": "Renewable Energy",
+      "Back": "Energy from sources that are naturally replenished on a human timescale, such as sunlight, wind, and rain. These are generally more sustainable than fossil fuels."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "N/A",
+      "Front": "Non-renewable Energy",
+      "Back": "Energy sources that exist in limited amounts and cannot be easily replaced once used. Common examples include coal, oil, and natural gas."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "N/A",
+      "Front": "Fossil Fuels",
+      "Back": "Natural fuels such as coal or gas, formed in the geological past from the remains of living organisms. Burning them releases carbon dioxide into the atmosphere."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "N/A",
+      "Front": "Force",
+      "Back": "A push or pull upon an object resulting from the object's interaction with another object. It is measured in Newtons and can change an object's motion."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "N/A",
+      "Front": "Motion",
+      "Back": "The change in position of an object over time relative to a reference point. It is described in terms of distance, speed, velocity, and acceleration."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "N/A",
+      "Front": "Newton's First Law",
+      "Back": "The law of inertia, stating that an object at rest stays at rest, and an object in motion stays in motion unless acted upon by an external force."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "N/A",
+      "Front": "Newton's Second Law",
+      "Back": "The principle that the force acting on an object is equal to its mass times its acceleration. This is written as the formula  = ma$."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "N/A",
+      "Front": "Newton's Third Law",
+      "Back": "The principle that for every action, there is an equal and opposite reaction. This means forces always come in pairs."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "N/A",
+      "Front": "Kinetic Energy",
+      "Back": "The energy an object possesses due to its motion. The amount depends on both the mass of the object and the square of its velocity."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "N/A",
+      "Front": "Potential Energy",
+      "Back": "The stored energy an object has because of its position or state. For example, a rock at the top of a hill has gravitational potential energy."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "N/A",
+      "Front": "Conservation of Energy",
+      "Back": "A fundamental law of physics stating that energy cannot be created or destroyed, only transformed from one form to another. The total energy remains constant."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "N/A",
+      "Front": "Work",
+      "Back": "The transfer of energy that occurs when a force is applied to an object and moves it over a distance. It is calculated as  = F \\cdot d$."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "N/A",
+      "Front": "Power",
+      "Back": "The rate at which work is done or energy is transferred over time. It is measured in Watts and calculated as work divided by time."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "N/A",
+      "Front": "Atom",
+      "Back": "The basic unit of a chemical element, consisting of a nucleus of protons and neutrons surrounded by electrons. It is the smallest unit of matter."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "N/A",
+      "Front": "Molecule",
+      "Back": "A group of two or more atoms held together by chemical bonds. It is the smallest unit of a chemical compound that retains its properties."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "N/A",
+      "Front": "Element",
+      "Back": "A pure substance that consists entirely of one type of atom. They are organized in the periodic table based on their atomic number."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "N/A",
+      "Front": "Compound",
+      "Back": "A substance formed when two or more different elements are chemically bonded together. Water ($) is a common example of this."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "N/A",
+      "Front": "Chemical Reaction",
+      "Back": "A process that involves the rearrangement of the molecular or ionic structure of a substance. Reactants are transformed into products with different properties."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "N/A",
+      "Front": "Conservation of Mass",
+      "Back": "A principle stating that mass is neither created nor destroyed during a chemical reaction. The total mass of the reactants must equal the total mass of the products."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "N/A",
+      "Front": "Density",
+      "Back": "The mass of a substance per unit of volume. It is calculated using the formula  = \frac{m}{V}$ and determines whether an object sinks or floats."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "N/A",
+      "Front": "pH Scale",
+      "Back": "A measure of how acidic or basic a water-based solution is, ranging from 0 to 14. A pH of 7 is neutral, below 7 is acidic, and above 7 is basic."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "N/A",
+      "Front": "Ecosystem",
+      "Back": "A community of living organisms interacting with their physical environment. It includes both biotic factors like plants and animals, and abiotic factors like soil and water."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "N/A",
+      "Front": "Food Web",
+      "Back": "A complex network of interconnected food chains that shows how energy flows through an ecosystem. It illustrates that most organisms eat more than one type of food."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "N/A",
+      "Front": "Biodiversity",
+      "Back": "The variety of all living things and their interactions in a specific habitat or on Earth as a whole. High levels of this are essential for a healthy ecosystem."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "N/A",
+      "Front": "Sustainability",
+      "Back": "The ability to maintain or support a process continuously over time. In science, it often refers to managing resources so they are not depleted for future generations."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "N/A",
+      "Front": "Democracy",
+      "Back": "A system of government where the power is vested in the people, who rule either directly or through freely elected representatives. It emphasizes individual rights and freedoms."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "N/A",
+      "Front": "Republic",
+      "Back": "A form of government in which the country is considered a 'public matter' and is not the private concern or property of the rulers. The head of state is usually an elected president."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "N/A",
+      "Front": "Separation of Powers",
+      "Back": "The division of government responsibilities into distinct branches to prevent any one branch from becoming too powerful. In the U.S., these are the legislative, executive, and judicial branches."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "N/A",
+      "Front": "Checks and Balances",
+      "Back": "A system that allows each branch of government to amend or veto acts of another branch. This ensures that power is distributed and not concentrated in one area."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "N/A",
+      "Front": "Federalism",
+      "Back": "A system of government in which power is divided between a central national government and several regional state governments. This allows for both local and national governance."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "N/A",
+      "Front": "Bill of Rights",
+      "Back": "The first ten amendments to the U.S. Constitution, which guarantee essential rights and civil liberties to citizens. These include freedom of speech, religion, and the right to a fair trial."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "N/A",
+      "Front": "U.S. Constitution",
+      "Back": "The supreme law of the United States, providing the framework for the organization of the government. It was ratified in 1788 and remains the oldest written constitution in use."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "N/A",
+      "Front": "Amendment",
+      "Back": "A formal change or addition to a legal document, such as the U.S. Constitution. The process is designed to be difficult to ensure only widely supported changes are made."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "N/A",
+      "Front": "Legislative Branch",
+      "Back": "The part of government responsible for making laws. In the United States, this is Congress, which consists of the Senate and the House of Representatives."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "N/A",
+      "Front": "Executive Branch",
+      "Back": "The part of government responsible for carrying out and enforcing laws. It is headed by the President and includes the Vice President and the Cabinet."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "N/A",
+      "Front": "Judicial Branch",
+      "Back": "The part of government that interprets laws and administers justice. It consists of a system of courts, with the Supreme Court being the highest in the nation."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "N/A",
+      "Front": "Popular Sovereignty",
+      "Back": "The principle that the authority of a state and its government are created and sustained by the consent of its people. This is often expressed through voting."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "N/A",
+      "Front": "Rule of Law",
+      "Back": "The principle that all people and institutions are subject to and accountable to law that is fairly applied and enforced. No one, including government officials, is above the law."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "N/A",
+      "Front": "Primary Source",
+      "Back": "An original document or physical object which was written or created during the time under study. Examples include diaries, letters, and official records."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "N/A",
+      "Front": "Secondary Source",
+      "Back": "A document that relates or discusses information originally presented elsewhere. These are created by someone who did not experience the events first-hand, such as a textbook."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "N/A",
+      "Front": "Historical Bias",
+      "Back": "A prejudice or outlook in historical writing that results from the author's own perspective or background. It can influence which facts are presented and how they are interpreted."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "N/A",
+      "Front": "Propaganda",
+      "Back": "Information, especially of a biased or misleading nature, used to promote a particular political cause or point of view. It is often used to influence public opinion."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "N/A",
+      "Front": "Historical Context",
+      "Back": "The social, political, cultural, and economic environment in which an event took place. Understanding this is essential for interpreting the meaning and significance of history."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "N/A",
+      "Front": "Causality",
+      "Back": "The relationship between an event or action and the reason for its occurrence. In history, this involves identifying the factors that led to a specific outcome."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "N/A",
+      "Front": "American Revolution",
+      "Back": "The war between Great Britain and its thirteen colonies in North America, which led to the independence of the United States. It began in 1775 and ended in 1783."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "N/A",
+      "Front": "U.S. Civil War",
+      "Back": "The conflict between the Northern states and the Southern states of the U.S. from 1861 to 1865. The primary issues were slavery and states' rights."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "N/A",
+      "Front": "Industrial Revolution",
+      "Back": "The transition to new manufacturing processes in Europe and the United States in the 18th and 19th centuries. It led to the growth of factories and urbanization."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "N/A",
+      "Front": "World War I",
+      "Back": "A global conflict that lasted from 1914 to 1918, primarily involving the Allied Powers and the Central Powers. It resulted in massive casualties and redrew the map of Europe."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "N/A",
+      "Front": "World War II",
+      "Back": "The largest and deadliest war in history, lasting from 1939 to 1945. It involved the vast majority of the world's countries and two opposing military alliances: the Allies and the Axis."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "N/A",
+      "Front": "Cold War",
+      "Back": "A period of geopolitical tension between the United States and the Soviet Union after World War II. It was characterized by ideological conflict and a nuclear arms race."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "N/A",
+      "Front": "Civil Rights Movement",
+      "Back": "A struggle by African Americans in the mid-1950s to late 1960s to achieve civil rights equal to those of whites. It aimed to end racial discrimination and segregation."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "N/A",
+      "Front": "Globalization",
+      "Back": "The process of interaction and integration among people, companies, and governments worldwide. It is driven by international trade, investment, and information technology."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "N/A",
+      "Front": "Supply and Demand",
+      "Back": "The economic model of price determination in a market. It states that the price of a good will reach an equilibrium where the quantity supplied equals the quantity demanded."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "N/A",
+      "Front": "Equilibrium Price",
+      "Back": "The market price where the quantity of goods supplied is equal to the quantity of goods demanded. At this point, there is no shortage or surplus of the product."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "N/A",
+      "Front": "Scarcity",
+      "Back": "The fundamental economic problem of having seemingly unlimited human wants in a world of limited resources. It requires people to make choices about how to allocate resources."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "N/A",
+      "Front": "Opportunity Cost",
+      "Back": "The value of the next best alternative that is given up when a choice is made. It represents the trade-off involved in any decision."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "N/A",
+      "Front": "Inflation",
+      "Back": "A general increase in prices and fall in the purchasing value of money over time. It means that each unit of currency buys fewer goods and services than before."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "N/A",
+      "Front": "Gross Domestic Product",
+      "Back": "The total market value of all final goods and services produced within a country in a specific time period. It is used as a broad measure of overall economic activity."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "N/A",
+      "Front": "Capitalism",
+      "Back": "An economic system in which private individuals or businesses own capital goods. The production of goods and services is based on supply and demand in the general market."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "N/A",
+      "Front": "Socialism",
+      "Back": "A political and economic theory of social organization which advocates that the means of production should be owned or regulated by the community as a whole."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "N/A",
+      "Front": "Communism",
+      "Back": "A political theory derived from Karl Marx, advocating class war and leading to a society in which all property is publicly owned and each person works according to their abilities."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "N/A",
+      "Front": "Mixed Economy",
+      "Back": "An economic system combining private and public enterprise. It features characteristics of both capitalism and socialism, with both market forces and government regulation."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "N/A",
+      "Front": "Geography",
+      "Back": "The study of places and the relationships between people and their environments. It includes both physical characteristics of the Earth and human societies."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "N/A",
+      "Front": "Map Projection",
+      "Back": "A way of representing the spherical surface of the Earth on a flat map. Every projection distorts the Earth's surface in some way, affecting distance, area, or shape."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "N/A",
+      "Front": "Latitude",
+      "Back": "The measurement of distance north or south of the Equator, expressed in degrees. These lines run horizontally around the Earth."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "N/A",
+      "Front": "Longitude",
+      "Back": "The measurement of distance east or west of the Prime Meridian, expressed in degrees. These lines run vertically from the North Pole to the South Pole."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "N/A",
+      "Front": "Urbanization",
+      "Back": "The process by which more and more people leave the countryside to live in cities. This leads to the physical growth of urban areas and changes in social structure."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "N/A",
+      "Front": "Migration",
+      "Back": "The movement of people from one place to another with the intentions of settling, permanently or temporarily, at a new location. It can be voluntary or forced."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "N/A",
+      "Front": "Natural Resources",
+      "Back": "Materials or substances such as minerals, forests, water, and fertile land that occur in nature and can be used for economic gain."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "N/A",
+      "Front": "Cultural Diffusion",
+      "Back": "The spread of cultural beliefs and social activities from one group to another. It increases with advanced communication, transportation, and international trade."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "N/A",
+      "Front": "Public Policy",
+      "Back": "The principles, often unwritten, on which social laws are based. It refers to the actions taken by government to address public issues and problems."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "N/A",
+      "Front": "Interest Groups",
+      "Back": "Organizations that seek to influence public policy and decision-making on behalf of a specific cause or community. They use lobbying and advocacy to achieve their goals."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "N/A",
+      "Front": "Electoral College",
+      "Back": "The body of electors who formally elect the United States president and vice-president. It is based on the number of senators and representatives each state has in Congress."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "N/A",
+      "Front": "Monarchy",
+      "Back": "A form of government with a monarch at the head, such as a king or queen. Power is usually inherited and can be absolute or limited by a constitution."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "N/A",
+      "Front": "Sovereignty",
+      "Back": "The supreme power or authority of a state to govern itself or another state. It means that the state has full control over its own affairs without outside interference."
+    }
+  ]
+}

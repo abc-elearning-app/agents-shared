@@ -1,0 +1,186 @@
+{
+  "status": "completed",
+  "appName": "ccna",
+  "flashcards": [
+    {
+      "Topic": "5",
+      "Subtopic": "5",
+      "Front": "Site-to-Site VPN",
+      "Back": "A permanent encrypted tunnel between two locations, such as a head office and a branch. it allows devices at both sites to communicate securely over the internet as if they were on the same private network."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "5",
+      "Front": "Remote Access VPN",
+      "Back": "A temporary secure connection initiated by an individual user to gain access to a corporate network. it typically uses software on the user's device and can be based on SSL/TLS or IPsec protocols."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "5",
+      "Front": "IPsec",
+      "Back": "A suite of protocols used to secure IP communications by authenticating and encrypting each IP packet in a data stream. it is the industry standard for creating secure site-to-site VPN tunnels."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "5",
+      "Front": "Encapsulating Security Payload",
+      "Back": "An IPsec protocol that provides data confidentiality (encryption) and authentication. it encapsulates the original packet, ensuring that its contents cannot be read or tampered with during transit."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "5",
+      "Front": "IKE (Internet Key Exchange)",
+      "Back": "A protocol used in IPsec to establish a secure session between two devices. it handles the negotiation of encryption algorithms and the secure exchange of cryptographic keys."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "6",
+      "Front": "Access Control List",
+      "Back": "A sequential list of permit or deny statements used by a router or switch to filter network traffic. it can be based on various criteria like IP addresses, protocols, and port numbers."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "6",
+      "Front": "Standard ACL",
+      "Back": "A type of ACL that only filters traffic based on the source IP address. it uses numbers from 1–99 or 1300–1999 and should be applied as close to the destination as possible."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "6",
+      "Front": "Extended ACL",
+      "Back": "A more granular type of ACL that filters traffic based on source and destination IP addresses, protocols, and port numbers. it uses numbers 100–199 or 2000–2699 and is applied close to the source."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "6",
+      "Front": "Implicit Deny",
+      "Back": "An invisible statement at the end of every ACL that automatically drops any traffic that did not match an earlier permit rule. To allow any traffic, there must be at least one explicit permit statement."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "6",
+      "Front": "Named ACL",
+      "Back": "An ACL identified by a descriptive text string instead of a number. This makes configuration more organized and allows for easier editing of individual lines within the list."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "6",
+      "Front": "Wildcard Mask (ACL)",
+      "Back": "A 32-bit string used in ACL rules to specify which parts of an IP address to examine. A '0' bit means 'match exactly,' while a '1' bit means 'ignore'."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "7",
+      "Front": "DHCP Snooping",
+      "Back": "A Layer 2 security feature that acts as a firewall between untrusted hosts and trusted DHCP servers. it prevents malicious actors from setting up a rogue DHCP server on the network."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "7",
+      "Front": "DHCP Binding Database",
+      "Back": "A table maintained by a switch with DHCP snooping enabled. it tracks the MAC address, IP address, lease time, and port for every client, serving as a reference for other security features."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "7",
+      "Front": "Dynamic ARP Inspection",
+      "Back": "A security feature that validates ARP packets in a network. it uses the DHCP snooping binding table to ensure that only legitimate ARP requests and responses are forwarded, preventing ARP spoofing."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "7",
+      "Front": "Port Security",
+      "Back": "A feature on a Cisco switch that restricts the number of MAC addresses allowed on an interface. it can be configured to automatically shut down a port if an unauthorized device is connected."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "7",
+      "Front": "Sticky MAC Address",
+      "Back": "A port security configuration that allows a switch to dynamically learn a MAC address and save it permanently to its running configuration. This avoids manual entry of every authorized device."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "7",
+      "Front": "Port Security Violation Modes",
+      "Back": "The three possible actions a switch can take when a violation occurs: Shutdown (default, port goes to err-disabled), Restrict (log event, drop traffic), and Protect (drop traffic silently)."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "8",
+      "Front": "Authentication (AAA)",
+      "Back": "The first component of the AAA framework, which verifies the identity of a user or device. This is typically done through a combination of usernames and passwords or digital certificates."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "8",
+      "Front": "Authorization (AAA)",
+      "Back": "The second component of AAA, which determines the specific permissions and resources a verified user is allowed to access. it defines what commands a user can run or what data they can view."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "8",
+      "Front": "Accounting (AAA)",
+      "Back": "The final component of AAA, which tracks and records the actions performed by a user during their session. This creates an audit trail for billing, security analysis, and troubleshooting."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "7",
+      "Front": "Trusted Port (Snooping)",
+      "Back": "A switch port, typically connected to a legitimate DHCP server or another switch, that is allowed to send all types of DHCP messages. All other ports are considered untrusted by default."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "7",
+      "Front": "Untrusted Port (Snooping)",
+      "Back": "An access port where end-user devices are connected. The switch blocks any DHCP server responses (like Offers or ACKs) from these ports to prevent rogue server attacks."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "7",
+      "Front": "ARP Spoofing",
+      "Back": "A malicious technique where an attacker sends forged ARP messages onto a local network to associate their MAC address with the IP of a legitimate server, allowing them to intercept traffic."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "7",
+      "Front": "Gratuitous ARP (Attack)",
+      "Back": "A specific type of ARP packet that threat actors can use to proactively update the ARP tables of other devices on a network with false information. DAI is used to mitigate this threat."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "6",
+      "Front": "Sequence Numbers (ACL)",
+      "Back": "Unique identifiers assigned to each rule in a named or modern numbered ACL. They allow for the surgical insertion or deletion of specific rules without rewriting the entire list."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "6",
+      "Front": "Remark Command (ACL)",
+      "Back": "A configuration keyword used to add descriptive comments to an ACL. These comments are visible in the configuration and help explain the purpose of the filtering rules to other engineers."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "5",
+      "Front": "VPN Gateway",
+      "Back": "A specialized network device, such as a Cisco ASA firewall or a router, that serves as the endpoint for VPN tunnels. it handles all encryption and decryption tasks for the remote connections."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "5",
+      "Front": "Split Tunneling",
+      "Back": "A VPN configuration that allows a remote user to access the internet directly while simultaneously maintaining a secure tunnel to the corporate network for private resources."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "5",
+      "Front": "SSL VPN",
+      "Back": "A type of remote access VPN that uses the standard encryption built into web browsers. it is easy to deploy as it does not require specialized client software for basic access."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "8",
+      "Front": "RADIUS (AAA)",
+      "Back": "A standard networking protocol that provides centralized AAA management. it combines authentication and authorization into a single process and uses UDP for transmission."
+    }
+  ]
+}

@@ -1,0 +1,186 @@
+{
+  "status": "completed",
+  "appName": "ccna",
+  "flashcards": [
+    {
+      "Topic": "4",
+      "Subtopic": "3",
+      "Front": "DHCP Server Role",
+      "Back": "The central authority responsible for managing a pool of IP addresses and automatically assigning them to clients along with other configuration parameters."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "3",
+      "Front": "DHCP Client Role",
+      "Back": "A network device configured to automatically request and receive its IP address and other network settings from a DHCP server upon connecting."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "3",
+      "Front": "DHCP Relay Agent",
+      "Back": "A router feature that intercepts local DHCP broadcast messages and forwards them as unicast to a central DHCP server on a different subnet."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "3",
+      "Front": "DHCP Discover",
+      "Back": "The first step in the DHCP process (broadcast), where a client searches for any available DHCP servers on the network."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "3",
+      "Front": "DHCP Offer",
+      "Back": "The second step where a server responds to a 'Discover' message with a proposed IP address and configuration for the client."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "3",
+      "Front": "DHCP Request",
+      "Back": "The third step where the client informs the server that it accepts the offered IP address and network parameters."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "3",
+      "Front": "DHCP Acknowledgment (ACK)",
+      "Back": "The final step where the server confirms the lease and provides the final configuration details to the client."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "3",
+      "Front": "DHCP Lease Time",
+      "Back": "The duration for which a client is permitted to use an assigned IP address. The client must renew the lease before it expires to keep the address."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "3",
+      "Front": "ip helper-address",
+      "Back": "The Cisco interface command used to enable DHCP relay functionality by specifying the IP address of the remote DHCP server."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "3",
+      "Front": "DHCP Exclusion",
+      "Back": "A configuration on the DHCP server that prevents certain IP addresses from being assigned to clients, typically reserved for static use on routers or servers."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "3",
+      "Front": "Domain Name System (DNS)",
+      "Back": "The network service used to resolve human-readable hostnames (like www.cisco.com) into numerical IP addresses."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "3",
+      "Front": "DNS Resolution Process",
+      "Back": "The sequence of queries a client or server performs to find the IP address associated with a specific domain name."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "3",
+      "Front": "A Record",
+      "Back": "The standard DNS record used to map a hostname to a 32-bit IPv4 address."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "3",
+      "Front": "AAAA Record",
+      "Back": "The DNS record type used to map a hostname to a 128-bit IPv6 address."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "3",
+      "Front": "CNAME Record",
+      "Back": "Canonical Name record. A DNS entry that acts as an alias, pointing one hostname to another hostname."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "3",
+      "Front": "DNS Recursive Query",
+      "Back": "A query where the client asks its local DNS server to handle the entire resolution process and return the final answer."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "3",
+      "Front": "DNS Iterative Query",
+      "Back": "A query where a DNS server responds with the best information it has (typically a referral to another server) instead of resolving the whole name itself."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "3",
+      "Front": "UDP Port 53",
+      "Back": "The primary transport port used for standard DNS queries and replies because of its low overhead."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "3",
+      "Front": "TCP Port 53",
+      "Back": "The port used by DNS for large data transfers such as zone transfers between DNS servers."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "3",
+      "Front": "DNS Cache",
+      "Back": "A local storage area on a host that keeps track of recently resolved domain names to speed up future access to the same sites."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "3",
+      "Front": "DHCP Pool (Cisco)",
+      "Back": "A named group of addresses and parameters defined on a Cisco router configured as a DHCP server."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "3",
+      "Front": "DHCP Conflict",
+      "Back": "An error that occurs when two devices on the same network are assigned the same IP address. DHCP servers check for this using ping before assignment."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "3",
+      "Front": "show ip dhcp binding",
+      "Back": "The Cisco command used to view the list of currently leased IP addresses and their associated client MAC addresses."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "3",
+      "Front": "show ip dhcp pool",
+      "Back": "A verification command that displays statistics about configured DHCP pools, including utilization and available addresses."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "3",
+      "Front": "DNS Server Forwarder",
+      "Back": "A configuration on a local DNS server that instructs it to send queries it cannot resolve to a specific external DNS server."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "3",
+      "Front": "FQDN",
+      "Back": "Fully Qualified Domain Name. The complete domain name for a specific host on the internet (e.g., mail.google.com.)."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "3",
+      "Front": "Reverse DNS Lookup",
+      "Back": "The process of resolving an IP address back into its associated hostname using a specialized DNS record (PTR)."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "3",
+      "Front": "DHCP Option 150",
+      "Back": "A specialized DHCP configuration parameter often used to provide the IP addresses of TFTP servers to IP phones."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "3",
+      "Front": "NS Record",
+      "Back": "Name Server record. A DNS entry that identifies which servers are authoritative for a particular domain."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "3",
+      "Front": "Authoritative DNS Server",
+      "Back": "A DNS server that holds the master copies of the records for a specific domain and can provide definitive answers to queries."
+    }
+  ]
+}

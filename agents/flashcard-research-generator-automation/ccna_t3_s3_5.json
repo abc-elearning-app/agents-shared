@@ -1,0 +1,186 @@
+{
+  "status": "completed",
+  "appName": "ccna",
+  "flashcards": [
+    {
+      "Topic": "3",
+      "Subtopic": "3",
+      "Front": "IPv4 Static Route",
+      "Back": "A manual routing entry configured using the 'ip route' command. It explicitly defines the destination network, subnet mask, and the next-hop IP address or exit interface."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "3",
+      "Front": "IPv6 Static Route",
+      "Back": "A manual routing entry configured using the 'ipv6 route' command. It specifies the destination IPv6 prefix and the next-hop address, which can be a global unicast or a link-local address."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "3",
+      "Front": "Floating Static Route",
+      "Back": "A backup static route configured with a higher administrative distance than the primary dynamic route. It only appears in the routing table if the primary path fails."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "3",
+      "Front": "Fully Specified Static Route",
+      "Back": "A static route that specifies both the exit interface and the next-hop IP address. This avoids the need for recursive lookups and is recommended for multi-access interfaces like Ethernet."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "3",
+      "Front": "Summary Static Route",
+      "Back": "A single static route that represents multiple contiguous smaller networks. This reduces the number of entries in the routing table, conserving memory and CPU resources."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "4",
+      "Front": "OSPFv2",
+      "Back": "An open-standard link-state routing protocol designed for IPv4 networks. It uses the SPF algorithm to calculate the shortest path to all destinations within an autonomous system."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "4",
+      "Front": "Router ID (OSPF)",
+      "Back": "A unique 32-bit number used to identify each router in an OSPF network. It is chosen based on the highest manual ID, the highest loopback IP, or the highest physical interface IP."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "4",
+      "Front": "OSPF Area 0",
+      "Back": "The backbone area in an OSPF network. All other areas must connect directly to Area 0 to ensure that routing information can be exchanged between different parts of the network."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "4",
+      "Front": "OSPF Neighbor Table",
+      "Back": "A list of all adjacent routers with which an OSPF router has established a bidirectional communication link. It is essential for sharing topology updates."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "4",
+      "Front": "Link State Database",
+      "Back": "A complete map of the entire OSPF network topology stored in every router's memory. All routers within the same area must have an identical LSDB to ensure consistent path calculation."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "4",
+      "Front": "Shortest Path First Algorithm",
+      "Back": "The mathematical calculation used by OSPF to determine the most efficient route to every destination. It uses the total cumulative cost of all links along the path as its primary metric."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "4",
+      "Front": "Designated Router",
+      "Back": "A router elected on a multi-access network (like Ethernet) to manage the distribution of OSPF updates. This reduces the total number of adjacencies and management traffic on the segment."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "4",
+      "Front": "Backup Designated Router",
+      "Back": "A router that stands ready to take over the DR role immediately if the primary device fails. This ensures that OSPF updates continue to flow without a new election process."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "4",
+      "Front": "OSPF Cost",
+      "Back": "The metric used by OSPF to rank different paths. It is calculated by dividing a reference bandwidth (usually 100 Mbps) by the interface's actual bandwidth."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "4",
+      "Front": "Hello Packet (OSPF)",
+      "Back": "A periodic message sent by OSPF routers to discover neighbors and maintain adjacencies. It includes essential parameters like the Hello interval, Dead interval, and Area ID."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "4",
+      "Front": "Dead Interval",
+      "Back": "The amount of time an OSPF router waits after missing a Hello packet before declaring a neighbor down. By default, this is four times the Hello interval."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "4",
+      "Front": "Link State Advertisement",
+      "Back": "A packet containing information about a router's local links and their states. LSAs are flooded throughout an OSPF area to ensure all routers have a complete and accurate topology map."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "4",
+      "Front": "Area Border Router",
+      "Back": "An OSPF router that has interfaces connected to two or more different areas. It is responsible for summarizing and passing routing information between Area 0 and the other areas."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "4",
+      "Front": "Passive Interface",
+      "Back": "A configuration that prevents a router from sending OSPF Hello packets out a specific port while still including that network in its topology updates. It is typically used for ports connected to end-user segments."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "4",
+      "Front": "Wildcard Mask",
+      "Back": "A sequence of bits used in OSPF configuration to specify which parts of an IP address must match a given network command. It is the binary opposite of a standard subnet mask."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "5",
+      "Front": "First Hop Redundancy Protocol",
+      "Back": "A class of protocols that allow multiple physical routers to act as a single virtual default gateway for a group of hosts. This provides high availability and automatic failover for the network's exit point."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "5",
+      "Front": "HSRP",
+      "Back": "A Cisco-proprietary redundancy protocol that allows two or more routers to share a single virtual IP and MAC address. It ensures that hosts always have a working default gateway even if a physical router fails."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "5",
+      "Front": "VRRP",
+      "Back": "An open-standard alternative to Cisco's HSRP. It allows routers from different vendors to work together to provide a highly available default gateway for local network hosts."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "5",
+      "Front": "GLBP",
+      "Back": "A Cisco-proprietary FHRP that goes beyond HSRP by providing active load balancing across multiple physical routers. It allows all routers in a redundancy group to participate in forwarding traffic."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "5",
+      "Front": "Virtual IP Address",
+      "Back": "A shared IP address assigned to an FHRP redundancy group. Hosts use this address as their default gateway, unaware that it is actually being serviced by multiple physical routers."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "5",
+      "Front": "HSRP Active Router",
+      "Back": "The specific physical router in an HSRP group that is currently responsible for forwarding all traffic sent to the virtual gateway address. Only one router can be active at a time."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "5",
+      "Front": "HSRP Standby Router",
+      "Back": "A router that monitors the active router's status and is prepared to take over the forwarding role immediately if the active device stops responding. This ensures continuous network connectivity."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "5",
+      "Front": "Preemption (HSRP)",
+      "Back": "An optional feature that allows a higher-priority router to regain the 'Active' role as soon as it comes back online, even if another router is currently servicing the virtual gateway."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "5",
+      "Front": "HSRP Priority",
+      "Back": "A configurable value (default 100) used to determine which router becomes the active gateway in an HSRP group. The device with the highest priority is elected as the primary forwarder."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "5",
+      "Front": "Gratuitous ARP",
+      "Back": "An ARP message sent by an FHRP router when it takes over the active role. It informs all switches on the segment to update their MAC tables so traffic is redirected to the new active device."
+    }
+  ]
+}

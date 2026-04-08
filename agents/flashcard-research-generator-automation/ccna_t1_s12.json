@@ -1,0 +1,186 @@
+{
+  "status": "completed",
+  "appName": "ccna",
+  "flashcards": [
+    {
+      "Topic": "1",
+      "Subtopic": "12",
+      "Front": "Server Virtualization",
+      "Back": "A technology that allows a single physical server to host multiple independent virtual machines, each running its own operating system."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "12",
+      "Front": "Hypervisor",
+      "Back": "The software layer that creates and manages virtual machines on a physical host, allocating hardware resources like CPU and RAM to each VM."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "12",
+      "Front": "Type 1 Hypervisor",
+      "Back": "A 'bare-metal' hypervisor that runs directly on the physical hardware of a server without a host operating system (e.g., VMware ESXi)."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "12",
+      "Front": "Type 2 Hypervisor",
+      "Back": "A hypervisor that runs as an application on top of a traditional host operating system like Windows or macOS (e.g., Oracle VirtualBox)."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "12",
+      "Front": "Virtual Machine (VM)",
+      "Back": "A software-based emulation of a physical computer that runs its own guest OS and applications, completely isolated from other VMs."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "12",
+      "Front": "Virtual Switch (vSwitch)",
+      "Back": "A software-defined switch that resides within a virtualized host to provide network connectivity between virtual machines and the physical network."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "12",
+      "Front": "Host (Virtualization)",
+      "Back": "The physical server that provides the underlying hardware resources (CPU, memory, storage) for running virtualized workloads."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "12",
+      "Front": "Guest OS",
+      "Back": "The operating system installed inside a virtual machine or container, which is separate from the host server's operating system."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "12",
+      "Front": "Container",
+      "Back": "A lightweight virtualization method that packages an application and its dependencies, sharing the host OS kernel for better efficiency than VMs."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "12",
+      "Front": "Docker",
+      "Back": "The most popular platform for creating and managing containers, providing a standardized environment for application deployment."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "12",
+      "Front": "Virtual Routing and Forwarding (VRF)",
+      "Back": "A technology that allows multiple independent instances of a routing table to coexist within a single router, enabling network virtualization."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "12",
+      "Front": "Cloud Computing",
+      "Back": "The on-demand delivery of IT resources over the internet, relying heavily on virtualization to provide scalable and flexible services."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "12",
+      "Front": "Infrastructure as a Service (IaaS)",
+      "Back": "A cloud model providing virtualized computing resources like servers and storage over the internet (e.g., Amazon Web Services)."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "12",
+      "Front": "Platform as a Service (PaaS)",
+      "Back": "A cloud model that provides a framework for developers to build and deploy applications without managing the underlying infrastructure."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "12",
+      "Front": "Software as a Service (SaaS)",
+      "Back": "A cloud model where software applications are delivered over the internet, typically via a web browser (e.g., Google Workspace)."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "12",
+      "Front": "Public Cloud",
+      "Back": "Cloud services offered by third-party providers over the public internet, making them available to anyone who wants to purchase them."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "12",
+      "Front": "Private Cloud",
+      "Back": "A cloud environment dedicated to a single organization, often hosted on-premises or by a specialized third-party provider for enhanced security."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "12",
+      "Front": "Hybrid Cloud",
+      "Back": "A computing environment that combines public and private clouds, allowing data and applications to be shared between them for greater flexibility."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "12",
+      "Front": "Resource Pooling",
+      "Back": "A virtualization concept where computing resources are aggregated and shared among multiple users or applications to maximize efficiency."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "12",
+      "Front": "Elasticity (Cloud)",
+      "Back": "The ability of a cloud environment to automatically scale resources up or down in response to changing demand."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "12",
+      "Front": "Measured Service",
+      "Back": "A cloud computing characteristic where resource usage is monitored and billed based on actual consumption (pay-as-you-go)."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "12",
+      "Front": "Multitenancy",
+      "Back": "An architecture where a single instance of a software application serves multiple customers (tenants), while keeping their data isolated."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "12",
+      "Front": "VNI (Virtual Network Identifier)",
+      "Back": "A 24-bit value used in VXLAN to uniquely identify individual virtualized Layer 2 segments, supporting up to 16 million identifiers."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "12",
+      "Front": "VXLAN",
+      "Back": "Virtual Extensible LAN. An encapsulation protocol used to run Layer 2 overlay networks across a Layer 3 underlay infrastructure."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "12",
+      "Front": "Network Functions Virtualization",
+      "Back": "The process of replacing dedicated hardware appliances (like firewalls or load balancers) with virtualized software versions running on standard servers."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "12",
+      "Front": "Management Plane",
+      "Back": "The logical area of a network device used for administrative tasks, which is often centralized in virtualized or SDN environments."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "12",
+      "Front": "Control Plane",
+      "Back": "The intelligence of a network device that makes forwarding decisions, which can be virtualized and centralized in software-defined architectures."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "12",
+      "Front": "Data Plane",
+      "Back": "The hardware component responsible for moving actual user traffic, following instructions from the control plane."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "12",
+      "Front": "Snapshots (VM)",
+      "Back": "A virtualization feature that captures the entire state of a VM at a specific point in time, allowing for easy recovery if a change causes issues."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "12",
+      "Front": "Live Migration",
+      "Back": "A feature that allows a running virtual machine to be moved from one physical host to another with zero downtime for the users."
+    }
+  ]
+}

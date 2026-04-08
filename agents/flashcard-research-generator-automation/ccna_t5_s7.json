@@ -1,0 +1,186 @@
+{
+  "status": "completed",
+  "appName": "ccna",
+  "flashcards": [
+    {
+      "Topic": "5",
+      "Subtopic": "7",
+      "Front": "DHCP Snooping",
+      "Back": "A Layer 2 security feature that acts as a firewall between untrusted hosts and trusted DHCP servers, preventing rogue DHCP server attacks."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "7",
+      "Front": "DHCP Binding Table",
+      "Back": "A database built by DHCP snooping that tracks the MAC address, assigned IP, lease time, and port for all clients on untrusted interfaces."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "7",
+      "Front": "Trusted Port (DHCP)",
+      "Back": "A port connected to a legitimate DHCP server or a relay agent. it is allowed to send all types of DHCP messages, including offers and acknowledgments."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "7",
+      "Front": "Untrusted Port (DHCP)",
+      "Back": "An access port where end-user devices are connected. DHCP snooping blocks any DHCP server-side messages (like Offer or ACK) from these ports."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "7",
+      "Front": "Dynamic ARP Inspection (DAI)",
+      "Back": "A security feature that validates ARP packets in a network by comparing them against the DHCP snooping binding table to prevent ARP spoofing."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "7",
+      "Front": "ARP Spoofing",
+      "Back": "A malicious technique where an attacker sends forged ARP messages to associate their MAC address with the IP address of a legitimate gateway or server."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "7",
+      "Front": "Port Security",
+      "Back": "A Cisco switch feature that limits the number of MAC addresses allowed on a single port, providing control over which devices can connect to the network."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "7",
+      "Front": "Sticky MAC Address",
+      "Back": "A port security feature that dynamically learns a MAC address and saves it permanently to the running configuration so it persists across reboots."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "7",
+      "Front": "Shutdown Mode (Violation)",
+      "Back": "The default port security violation mode. it immediately disables the port (err-disabled state), stops all traffic, and sends a log message."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "7",
+      "Front": "Restrict Mode (Violation)",
+      "Back": "A violation mode that drops unauthorized traffic, increments a counter, and generates a syslog/SNMP notification, but keeps the port operational."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "7",
+      "Front": "Protect Mode (Violation)",
+      "Back": "The least restrictive violation mode. it silently drops unauthorized traffic without generating any logs or disabling the port."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "7",
+      "Front": "Err-Disabled State (L2 Security)",
+      "Back": "A port status indicating it has been administratively shut down by the system due to a security violation like port security or BPDU guard."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "7",
+      "Front": "Violation Counter",
+      "Back": "A statistic in port security that tracks the number of times unauthorized MAC addresses have attempted to access a secured port."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "7",
+      "Front": "Rate Limiting (DAI)",
+      "Back": "A protection mechanism in Dynamic ARP Inspection that limits the number of ARP packets allowed per second to prevent CPU exhaustion."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "7",
+      "Front": "ARP ACL",
+      "Back": "A manually configured list used by DAI to validate ARP packets for hosts that use static IP addresses and are not in the DHCP snooping table."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "7",
+      "Front": "IP Source Guard (IPSG)",
+      "Back": "A security feature that uses the DHCP snooping table to verify that an incoming packet's source IP matches the MAC address assigned to that port."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "7",
+      "Front": "Gratuitous ARP (Security)",
+      "Back": "A type of ARP packet often used by attackers to update the ARP caches of other devices. DAI is used to validate and filter these messages."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "7",
+      "Front": "Static MAC (Port Security)",
+      "Back": "An authorized hardware address that is manually entered by an administrator into the port security configuration for a specific interface."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "7",
+      "Front": "maximum [number] (Port Security)",
+      "Back": "The command parameter used to define how many unique MAC addresses are allowed to be learned or configured on a secured interface."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "7",
+      "Front": "Trusted Port (DAI)",
+      "Back": "A switch port connected to another switch or a router where ARP packets are not inspected, as those devices are considered trustworthy."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "7",
+      "Front": "switchport port-security",
+      "Back": "The mandatory command used to enable the port security feature on a Cisco interface once it has been configured as an access port."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "7",
+      "Front": "ip dhcp snooping vlan",
+      "Back": "The global command used to specify which VLANs should be monitored by the DHCP snooping feature."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "7",
+      "Front": "show port-security interface",
+      "Back": "The verification command that displays the status, violation mode, and learned MAC addresses for a specific secured port."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "7",
+      "Front": "show ip arp inspection vlan",
+      "Back": "A verification command that shows the DAI status and statistics for a particular VLAN, including the number of dropped packets."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "7",
+      "Front": "Recovery Interval (Err-disable)",
+      "Back": "A global setting that allows a switch to automatically re-enable an err-disabled port after a specified amount of time."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "7",
+      "Front": "DHCP Starvation Attack",
+      "Back": "A denial-of-service attack where an actor exhausts the DHCP server's address pool using forged MAC addresses. Port security mitigates this."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "7",
+      "Front": "CAM Table Overflow",
+      "Back": "An attack where thousands of fake MAC addresses are sent to a switch to fill its MAC table, forcing it to act as a hub. Port security prevents this."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "7",
+      "Front": "Option 82 (Relay)",
+      "Back": "A field in DHCP packets where a switch can insert its own ID and port information to help the server assign IPs based on physical location."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "7",
+      "Front": "Binding Database Persistence",
+      "Back": "A feature that allows a switch to save its DHCP snooping table to an external file so it is not lost during a power failure or reboot."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "7",
+      "Front": "Untrusted Port (DAI)",
+      "Back": "An access port where all incoming ARP packets are intercepted and checked against the binding table for validity."
+    }
+  ]
+}

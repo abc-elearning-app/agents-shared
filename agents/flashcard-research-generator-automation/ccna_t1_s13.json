@@ -1,0 +1,186 @@
+{
+  "status": "completed",
+  "appName": "ccna",
+  "flashcards": [
+    {
+      "Topic": "1",
+      "Subtopic": "13",
+      "Front": "MAC Address Table",
+      "Back": "An internal database on a switch that maps hardware MAC addresses to physical ports. it is used to make intelligent forwarding decisions."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "13",
+      "Front": "CAM Table",
+      "Back": "Content Addressable Memory table. This is the hardware implementation of the MAC address table, optimized for extremely fast lookups."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "13",
+      "Front": "MAC Learning",
+      "Back": "The process by which a switch populates its address table by examining the source MAC address of every incoming frame."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "13",
+      "Front": "MAC Aging",
+      "Back": "A mechanism that removes entries from the MAC table if they have been inactive for a specific period (default 300 seconds), keeping the table current."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "13",
+      "Front": "Frame Forwarding",
+      "Back": "The action of sending an Ethernet frame out a specific port when the destination MAC address is found in the switch's address table."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "13",
+      "Front": "Frame Filtering",
+      "Back": "A switch decision to drop a frame instead of forwarding it, occurring when the destination MAC is on the same port where the frame was received."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "13",
+      "Front": "Flooding",
+      "Back": "The process of sending a frame out all active ports except the incoming port. this happens for unknown unicast, broadcast, and multicast traffic."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "13",
+      "Front": "Unknown Unicast",
+      "Back": "A frame with a destination MAC address that is not currently in the switch's MAC table. The switch must flood this frame to ensure delivery."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "13",
+      "Front": "Broadcast Frame",
+      "Back": "A frame destined for all devices on a local segment, identified by the MAC address FF:FF:FF:FF:FF:FF. it is always flooded by switches."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "13",
+      "Front": "Broadcast Domain",
+      "Back": "The logical boundary within which a broadcast frame can travel. Routers and VLANs are used to define and limit these domains."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "13",
+      "Front": "Collision Domain",
+      "Back": "A physical segment where packets can collide. Modern switches create a separate collision domain for every port, eliminating collisions in full-duplex mode."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "13",
+      "Front": "Store-and-Forward",
+      "Back": "A switching method where the entire frame is received and checked for errors (FCS) before it is forwarded. This ensures only valid frames are sent."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "13",
+      "Front": "Cut-Through Switching",
+      "Back": "A low-latency switching method where forwarding begins as soon as the destination MAC is read, without waiting for the rest of the frame or error checking."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "13",
+      "Front": "Fragment-Free Switching",
+      "Back": "A hybrid method that waits for the first 64 bytes of a frame (the minimum Ethernet size) before forwarding, filtering out most collision-related runts."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "13",
+      "Front": "Frame Check Sequence (FCS)",
+      "Back": "A 4-byte CRC value at the end of an Ethernet frame used for error detection. The receiver recalculates this value to verify data integrity."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "13",
+      "Front": "Layer 2 PDU",
+      "Back": "The Protocol Data Unit at the data link layer, which is called a 'Frame'. it contains the MAC addresses and the payload from higher layers."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "13",
+      "Front": "ASIC (Switching)",
+      "Back": "Application-Specific Integrated Circuit. Specialized hardware chips in a switch that perform frame processing and forwarding at 'wirespeed'."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "13",
+      "Front": "Full-Duplex Ethernet",
+      "Back": "A communication mode allowing simultaneous transmit and receive on a switch port, effectively doubling bandwidth and eliminating collisions."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "13",
+      "Front": "Half-Duplex Ethernet",
+      "Back": "A legacy mode where a device can either transmit or receive, but not both at once. it requires CSMA/CD to manage collisions."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "13",
+      "Front": "Switch Port Security",
+      "Back": "A feature that restricts which MAC addresses are allowed to access a port, providing a basic but effective form of network access control."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "13",
+      "Front": "Ingress Port",
+      "Back": "The physical interface on a switch where a frame enters the device. The switch uses this port to learn the source MAC address."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "13",
+      "Front": "Egress Port",
+      "Back": "The physical interface on a switch where a frame leaves the device, determined by the destination MAC address lookup in the CAM table."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "13",
+      "Front": "Unicast Frame",
+      "Back": "A frame intended for a single specific destination device, identified by a unique hardware MAC address."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "13",
+      "Front": "Multicast Frame (L2)",
+      "Back": "A frame destined for a group of devices. it is identified by a special MAC address prefix (e.g., 01:00:5E for IPv4 multicast)."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "13",
+      "Front": "TCAM",
+      "Back": "Ternary Content Addressable Memory. A specialized memory type used in multilayer switches for high-speed lookups of ACLs and QoS policies."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "13",
+      "Front": "Latency (Switching)",
+      "Back": "The time delay between when a frame enters a switch port and when it begins to exit the destination port."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "13",
+      "Front": "Buffer (Switch)",
+      "Back": "Internal memory used to temporarily store frames when the egress port is busy, preventing data loss during traffic bursts."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "13",
+      "Front": "Microsegmentation",
+      "Back": "The practice of using a switch to provide dedicated bandwidth to every device, effectively reducing the size of collision domains to just two devices (host and switch)."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "13",
+      "Front": "MTU (Ethernet)",
+      "Back": "Maximum Transmission Unit. The largest frame size allowed on an Ethernet segment, typically 1518 bytes including the header and FCS."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "13",
+      "Front": "Bridge ID (STP)",
+      "Back": "An 8-byte identifier used in spanning tree to elect a root bridge, consisting of a priority value and the switch's MAC address."
+    }
+  ]
+}

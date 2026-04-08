@@ -1,0 +1,186 @@
+{
+  "status": "completed",
+  "appName": "ccna",
+  "flashcards": [
+    {
+      "Topic": "5",
+      "Subtopic": "8",
+      "Front": "AAA Framework",
+      "Back": "A structural security framework for controlling access to computer resources, enforcing policies, and auditing usage. it stands for Authentication, Authorization, and Accounting."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "8",
+      "Front": "Authentication (AAA)",
+      "Back": "The first 'A' in AAA. it verifies the identity of a user or device, answering the question: 'Who are you?'"
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "8",
+      "Front": "Authorization (AAA)",
+      "Back": "The second 'A' in AAA. it determines what a verified user is permitted to do or see on the network, answering the question: 'What can you do?'"
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "8",
+      "Front": "Accounting (AAA)",
+      "Back": "The third 'A' in AAA. it tracks and records the actions performed by a user during their session, answering the question: 'What did you do?'"
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "8",
+      "Front": "RADIUS",
+      "Back": "Remote Authentication Dial-In User Service. An open-standard protocol used for centralized AAA management. it combines authentication and authorization."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "8",
+      "Front": "TACACS+",
+      "Back": "Terminal Access Controller Access-Control System Plus. A Cisco-proprietary AAA protocol that provides granular control and encrypts the entire packet."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "8",
+      "Front": "NAD (Network Access Device)",
+      "Back": "The network hardware (like a switch or router) that challenges the user for credentials and forwards them to the AAA server for verification."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "8",
+      "Front": "Cisco ISE",
+      "Back": "Identity Services Engine. Cisco's primary security policy management platform that provides centralized AAA services for the entire enterprise."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "8",
+      "Front": "RADIUS UDP Ports",
+      "Back": "RADIUS typically uses UDP port 1812 for authentication and authorization, and UDP port 1813 for accounting."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "8",
+      "Front": "TACACS+ TCP Port",
+      "Back": "TACACS+ uses TCP port 49 for all communication, ensuring a reliable connection for management traffic."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "8",
+      "Front": "AAA Server",
+      "Back": "A centralized server (like Cisco ISE or a Windows RADIUS server) that maintains the user database and enforces security policies for the NADs."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "8",
+      "Front": "NAS (Network Access Server)",
+      "Back": "Another term for the Network Access Device (switch/router) that serves as the gateway for users to access the network resources."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "8",
+      "Front": "Encrypted (AAA Context)",
+      "Back": "TACACS+ encrypts the entire communication between the NAD and the server, while RADIUS only encrypts the user's password field."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "8",
+      "Front": "Separated AAA Functions",
+      "Back": "A key feature of TACACS+ where authentication, authorization, and accounting are handled as three completely independent processes."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "8",
+      "Front": "Combined AAA Functions",
+      "Back": "The RADIUS approach where authentication and authorization are bundled into a single message exchange."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "8",
+      "Front": "Shared Secret (AAA)",
+      "Back": "A common password configured on both the network device and the AAA server to authenticate the communication between them."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "8",
+      "Front": "Local AAA",
+      "Back": "A configuration where the network device uses its own internal database for authentication rather than an external server."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "8",
+      "Front": "AAA Method List",
+      "Back": "A Cisco configuration string that defines the sequence of authentication sources to use (e.g., try TACACS first, then fall back to local)."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "8",
+      "Front": "Attribute-Value (AV) Pairs",
+      "Back": "The data format used by AAA protocols to carry specific user parameters, such as privilege level, VLAN assignment, or session timeout."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "8",
+      "Front": "User Credentials",
+      "Back": "The information provided by a user to prove their identity, typically a combination of a username and a password or token."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "8",
+      "Front": "AAA Challenge",
+      "Back": "A message sent by the AAA server to the user (via the NAD) requesting additional information, such as a second factor of authentication."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "8",
+      "Front": "AAA Accept",
+      "Back": "The notification from the AAA server to the NAD indicating that the user has been successfully authenticated and should be granted access."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "8",
+      "Front": "AAA Reject",
+      "Back": "The notification from the AAA server indicating that the user's credentials were invalid or that they are not authorized to access the network."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "8",
+      "Front": "Centralized Management (AAA)",
+      "Back": "The primary benefit of using a remote AAA server, allowing administrators to manage all user accounts in one place rather than on every individual device."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "8",
+      "Front": "Accounting Log",
+      "Back": "The record created by the AAA server that detailed when a user logged in, what commands they ran, and when they disconnected."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "8",
+      "Front": "Granular Command Control",
+      "Back": "An advantage of TACACS+ where the server can authorize or deny every individual command an administrator tries to enter at the CLI."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "8",
+      "Front": "RADIUS Retransmission",
+      "Back": "Since it uses UDP, the RADIUS client (the switch) is responsible for resending requests if it does not receive a reply from the server."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "8",
+      "Front": "AAA Fail-Open",
+      "Back": "A risky configuration where access is granted if the AAA server is unreachable. it is generally better to fail-closed for security."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "8",
+      "Front": "Privilege Level (AAA)",
+      "Back": "A value (0-15) returned by the AAA server during authorization that determines the degree of control the user has over the network device."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "8",
+      "Front": "Self-Registration (ISE)",
+      "Back": "A feature of Cisco ISE that allows guest users to create their own temporary network accounts via a web portal."
+    }
+  ]
+}

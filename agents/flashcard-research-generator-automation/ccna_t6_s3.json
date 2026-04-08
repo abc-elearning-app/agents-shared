@@ -1,0 +1,186 @@
+{
+  "status": "completed",
+  "appName": "ccna",
+  "flashcards": [
+    {
+      "Topic": "6",
+      "Subtopic": "3",
+      "Front": "Underlay Network",
+      "Back": "The physical network of routers, switches, and cabling that provides basic Layer 3 IP connectivity between all devices in a software-defined architecture."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "3",
+      "Front": "Overlay Network",
+      "Back": "A logical network that runs on top of the underlay, creating virtual links between endpoints. it uses encapsulation to separate user traffic from the physical topology."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "3",
+      "Front": "Fabric (SDA)",
+      "Back": "The unified system formed by the combination of the underlay and the overlay. it provides automated connectivity and policy enforcement for all endpoints."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "3",
+      "Front": "VXLAN (SDA Overlay)",
+      "Back": "Virtual Extensible LAN. The standard encapsulation protocol used in Cisco's SD-Access overlay to transport Layer 2 frames over a Layer 3 underlay."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "3",
+      "Front": "LISP (SDA Control Plane)",
+      "Back": "Locator/ID Separation Protocol. The technology used in the SDA control plane to track the location of endpoints independently of their IP addresses."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "3",
+      "Front": "Fabric Edge Node",
+      "Back": "An SDA switch that connects directly to endpoints (like PCs and APs). it handles the entry and exit of traffic to the fabric."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "3",
+      "Front": "Fabric Border Node",
+      "Back": "An SDA device that connects the automated fabric to external networks, such as the internet, a shared data center, or traditional legacy networks."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "3",
+      "Front": "Fabric Control Node",
+      "Back": "The SDA device that maintains the LISP mapping database, tracking where every user and device is currently located within the network."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "3",
+      "Front": "Scalable Group Tag (SGT)",
+      "Back": "A metadata tag used in SDA to define security and QoS policies based on a user's role rather than their IP address or VLAN."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "3",
+      "Front": "SDA Intent-Based Networking",
+      "Back": "The ability of an administrator to define business goals in DNA Center, which are then automatically translated into fabric-wide configurations."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "3",
+      "Front": "Control Plane Separation",
+      "Back": "The SDN principle where the 'brains' of the network (decision making) are decoupled from the hardware that actually moves packets (data plane)."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "3",
+      "Front": "Northbound API (NBI)",
+      "Back": "A REST-based interface on an SDN controller used by external applications and scripts to automate network-wide management tasks."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "3",
+      "Front": "Southbound API (SBI)",
+      "Back": "The communication protocol used by a controller to manage individual switches and routers. examples include NETCONF, RESTCONF, and OpenFlow."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "3",
+      "Front": "NETCONF (SBI)",
+      "Back": "A modern southbound protocol that uses XML data encoding and SSH transport to program device configurations reliably."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "3",
+      "Front": "RESTCONF (SBI)",
+      "Back": "An HTTP-based southbound protocol that provides a RESTful interface for accessing and manipulating device configurations."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "3",
+      "Front": "OpenFlow (SBI)",
+      "Back": "A legacy SDN protocol that allows a controller to directly program the flow tables of network switches."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "3",
+      "Front": "Fabric Virtualization",
+      "Back": "The ability to run multiple independent logical networks (virtual networks) across a single physical fabric underlay."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "3",
+      "Front": "Anycast Gateway",
+      "Back": "An SDA feature where the default gateway for a VLAN exists on every fabric edge switch simultaneously, improving performance for mobile users."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "3",
+      "Front": "Endpoint Identifier (EID)",
+      "Back": "In LISP, the IP address assigned to a user device that stays the same even if the user moves to a different physical location."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "3",
+      "Front": "Routing Locator (RLOC)",
+      "Back": "In LISP, the IP address of the fabric switch that a specific user device is currently connected to."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "3",
+      "Front": "Encapsulation (Overlay)",
+      "Back": "The process of wrapping a user packet inside a new header (like VXLAN) to transport it across the underlay network."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "3",
+      "Front": "Software-Defined Access (SDA)",
+      "Back": "Cisco's enterprise campus SDN solution that uses DNA Center to automate network provisioning and security segmentation."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "3",
+      "Front": "Data Plane (ASIC)",
+      "Back": "The physical hardware in a switch that performs high-speed packet forwarding based on the rules provided by the SDN controller."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "3",
+      "Front": "Management Plane (DNA)",
+      "Back": "The centralized dashboard in DNA Center where administrators design, monitor, and troubleshoot the entire network fabric."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "3",
+      "Front": "Automated Deployment (Fabric)",
+      "Back": "The ability of DNA Center to automatically configure all switches in an SDA fabric according to a predefined design template."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "3",
+      "Front": "Policy-Based Access",
+      "Back": "The enforcement of security rules in a fabric based on user identity and group membership rather than fixed IP subnets."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "3",
+      "Front": "Global Network View",
+      "Back": "The high-level perspective provided by an SDN controller, allowing it to see the entire network topology and traffic flows."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "3",
+      "Front": "Network Orchestration (SDN)",
+      "Back": "The automated coordination of multiple network components and services to deliver a complete end-to-end application workflow."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "3",
+      "Front": "YANG Data Model",
+      "Back": "A standardized data modeling language used by NETCONF and RESTCONF to define the structure of network configurations."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "3",
+      "Front": "SDN Scalability",
+      "Back": "The property of software-defined architectures that allows them to support massive growth by adding nodes without increasing management complexity."
+    }
+  ]
+}

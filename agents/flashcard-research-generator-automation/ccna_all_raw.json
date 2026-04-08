@@ -1,0 +1,3976 @@
+{
+  "status": "completed",
+  "appName": "ccna",
+  "flashcards": [
+    {
+      "Topic": "1",
+      "Subtopic": "1",
+      "Front": "Router",
+      "Back": "A networking device that forwards data packets between different IP networks. It operates at the network layer to determine the best path for traffic using a routing table."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "1",
+      "Front": "Layer 2 Switch",
+      "Back": "A hardware device that connects multiple devices on a single local area network. It uses MAC addresses to forward data frames exclusively to the intended destination port."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "1",
+      "Front": "Layer 3 Switch",
+      "Back": "A high-performance switch that combines traditional switching with routing capabilities. It can forward traffic based on IP addresses, enabling efficient inter-VLAN routing at hardware speeds."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "1",
+      "Front": "Next-Generation Firewall",
+      "Back": "A security appliance that provides advanced traffic filtering beyond traditional port and protocol inspection. It includes deep packet inspection, application awareness, and integrated intrusion prevention systems."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "1",
+      "Front": "Intrusion Prevention System",
+      "Back": "A network security technology that continuously monitors traffic for malicious activity. It can actively block or drop suspicious packets in real-time to prevent security breaches."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "1",
+      "Front": "Access Point",
+      "Back": "A device that provides wireless connectivity to mobile clients within a local network. It acts as a bridge between wireless 802.11 signals and the wired Ethernet infrastructure."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "1",
+      "Front": "Wireless LAN Controller",
+      "Back": "A centralized device used to manage and configure multiple lightweight access points. It simplifies wireless network administration by handling security, roaming, and radio frequency management."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "1",
+      "Front": "Endpoint",
+      "Back": "Any hardware device that marks the end of a communication path on a network. Common examples include user laptops, smartphones, tablets, and desktop computers."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "1",
+      "Front": "Server",
+      "Back": "A specialized computer or software program that provides specific services or data to other devices on a network. It typically hosts applications, files, or web content for client access."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "1",
+      "Front": "Power over Ethernet",
+      "Back": "A technology that transmits both electrical power and data over standard twisted-pair Ethernet cabling. This allows devices like IP cameras and access points to operate without separate power supplies."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "1",
+      "Front": "Powered Device",
+      "Back": "A network component that receives its operating electrical power via an Ethernet cable. Common examples include VoIP phones, wireless access points, and security cameras in a PoE environment."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "1",
+      "Front": "Power Sourcing Equipment",
+      "Back": "A device, typically a PoE-capable switch, that provides electrical power to other components over Ethernet cabling. It detects compatible devices before delivering voltage to prevent damage."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "1",
+      "Front": "Core Switch",
+      "Back": "A high-capacity switch located at the backbone of a network hierarchy. It is responsible for extremely fast transport of large volumes of data between different distribution layers."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "1",
+      "Front": "Distribution Switch",
+      "Back": "A device that acts as a bridge between the access layer and the core layer of a network. It typically implements security policies, routing, and traffic filtering."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "1",
+      "Front": "Access Switch",
+      "Back": "The entry point for end-user devices into the local network infrastructure. These switches provide port connectivity for computers, printers, and other endpoints at the network edge."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "1",
+      "Front": "Default Gateway",
+      "Back": "The specific router interface that hosts on a local subnet use to send traffic to external networks. It serves as the exit point for packets destined beyond the local segment."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "1",
+      "Front": "MAC Address Table",
+      "Back": "An internal database used by switches to store the mapping between hardware addresses and physical ports. It allows the switch to forward frames precisely to the correct destination."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "1",
+      "Front": "Routing Table",
+      "Back": "A data file stored in a router's memory that lists known network paths. The router uses this information to determine the next hop for any given destination IP address."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "1",
+      "Front": "Application-Specific Integrated Circuit",
+      "Back": "Specialized hardware chips used in high-end switches to perform packet forwarding at extremely high speeds. They allow for wirespeed performance that software-based processing cannot match."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "1",
+      "Front": "VoIP Phone",
+      "Back": "An endpoint device that transmits voice communications over an IP network instead of traditional phone lines. These devices often rely on PoE for power and data connectivity."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "1",
+      "Front": "Network Interface Card",
+      "Back": "The hardware component that enables a computer to connect to a network. It provides the physical and logical link required to transmit and receive data over the medium."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "1",
+      "Front": "Cloud Controller",
+      "Back": "A centralized management platform hosted on the internet for controlling networking hardware. It allows administrators to configure and monitor devices from any location without local management servers."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "1",
+      "Front": "Cisco DNA Center",
+      "Back": "A powerful network management and automation platform used for controlling enterprise networks. It provides a centralized dashboard for design, provisioning, and troubleshooting via software-defined principles."
+    },
+    {"Topic": "1", "Subtopic": "1", "Front": "Virtual Private Network", "Back": "A secure, encrypted tunnel created over an untrusted network like the internet. It allows remote users or offices to access private network resources as if they were locally connected."},
+    {"Topic": "1", "Subtopic": "1", "Front": "Load Balancer", "Back": "A device that distributes incoming network traffic across multiple servers. This ensures high availability and optimizes resource utilization by preventing any single server from becoming overwhelmed."},
+    {"Topic": "1", "Subtopic": "1", "Front": "Patch Panel", "Back": "A passive hardware assembly used to organize and terminate multiple network cable connections. It provides a centralized point for managing physical cabling between switches and wall outlets."},
+    {"Topic": "1", "Subtopic": "1", "Front": "Midspan PoE", "Back": "A standalone injector device that adds electrical power to an Ethernet cable between a non-PoE switch and a powered device. It is used to upgrade existing networks to PoE capability."},
+    {"Topic": "1", "Subtopic": "1", "Front": "Autonomous AP", "Back": "A wireless access point that operates independently without a centralized controller. It handles all security, management, and traffic forwarding functions locally on the device."},
+    {"Topic": "1", "Subtopic": "1", "Front": "Lightweight AP", "Back": "A wireless access point that requires a centralized controller to function. It delegates management tasks like encryption and radio management to the controller, focusing only on traffic delivery."},
+    {"Topic": "1", "Subtopic": "1", "Front": "Smart Switch", "Back": "A mid-level network switch that offers more features than unmanaged switches but fewer than fully managed ones. It typically provides a web-based interface for basic configuration and monitoring."}
+  ]
+}{
+  "status": "completed",
+  "appName": "ccna",
+  "flashcards": [
+    {
+      "Topic": "1",
+      "Subtopic": "2",
+      "Front": "Two-Tier Architecture",
+      "Back": "A network design consisting of an access layer and a collapsed core/distribution layer. It is cost-effective for smaller environments while providing high-speed connectivity for end-user devices."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "2",
+      "Front": "Three-Tier Architecture",
+      "Back": "A hierarchical network design featuring access, distribution, and core layers. This structure provides high scalability, performance, and redundancy for large enterprise environments."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "2",
+      "Front": "Access Layer",
+      "Back": "The point in a hierarchical network where end devices connect to the infrastructure. Its primary function is to provide local port density and basic security features like port security."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "2",
+      "Front": "Distribution Layer",
+      "Back": "The intermediary layer in a network hierarchy that aggregates access switches. It is responsible for implementing routing, security policies, and traffic filtering between subnets."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "2",
+      "Front": "Core Layer",
+      "Back": "The high-speed backbone of a hierarchical network. Its sole purpose is to switch large volumes of traffic as quickly as possible between different distribution layer modules."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "2",
+      "Front": "Spine-Leaf Topology",
+      "Back": "A two-tier data center architecture where every leaf switch connects to every spine switch. This design ensures low-latency, predictable performance for east-west traffic patterns."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "2",
+      "Front": "Leaf Switch",
+      "Back": "A device in a spine-leaf architecture that connects to both servers and every spine switch in the fabric. It serves as the entry point for all physical and virtual endpoints."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "2",
+      "Front": "Spine Switch",
+      "Back": "A high-capacity backbone device in a fabric topology that interconnects all leaf switches. It does not connect directly to endpoints, focusing entirely on high-speed internal switching."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "2",
+      "Front": "WAN Topology",
+      "Back": "A network architecture designed to connect geographically dispersed locations over long distances. It typically utilizes service provider infrastructure to link remote offices and data centers."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "2",
+      "Front": "SOHO Network",
+      "Back": "A simplified network design tailored for small offices or home environments. It often uses integrated devices that combine routing, switching, and wireless functions into a single unit."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "2",
+      "Front": "On-Premises Infrastructure",
+      "Back": "A deployment model where all networking hardware and servers are physically located within the organization's own buildings. This offers maximum control but requires significant maintenance and space."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "2",
+      "Front": "Cloud Infrastructure",
+      "Back": "A model where computing resources and network services are hosted by a third-party provider and accessed over the internet. It offers high elasticity and reduces the need for local hardware maintenance."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "2",
+      "Front": "Hybrid Cloud",
+      "Back": "A network environment that integrates both on-premises data centers and public cloud services. It allows organizations to keep sensitive data local while utilizing the cloud for scalable workloads."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "2",
+      "Front": "Star Topology",
+      "Back": "A physical network layout where all peripheral nodes connect to a single central hub or switch. This is the most common design for modern Ethernet-based local area networks."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "2",
+      "Front": "Full Mesh Topology",
+      "Back": "A highly redundant network design where every node has a direct physical or logical connection to every other node. It provides the highest availability but is very expensive to implement."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "2",
+      "Front": "Partial Mesh Topology",
+      "Back": "A network design where some nodes are interconnected but not all. It balances cost and redundancy by providing multiple paths for critical sites without the expense of a full mesh."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "2",
+      "Front": "Point-to-Point Topology",
+      "Back": "The simplest network design consisting of a direct dedicated link between two nodes. This is commonly used in WAN connections to link two remote office routers."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "2",
+      "Front": "Hub-and-Spoke",
+      "Back": "A WAN topology where a central site (the hub) connects to multiple remote sites (the spokes). All traffic between remote sites must pass through the central hub for processing."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "2",
+      "Front": "Southbound Interface",
+      "Back": "A communication protocol used by a controller to manage and configure network devices. It allows the centralized control plane to push instructions down to the physical data plane hardware."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "2",
+      "Front": "Northbound Interface",
+      "Back": "An API that allows applications and management software to communicate with a network controller. It enables automation and programmatic control of the entire network fabric."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "2",
+      "Front": "Control Plane",
+      "Back": "The logical part of a network device responsible for making decisions about where traffic should be sent. It handles protocols like OSPF and STP to build the intelligence of the network."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "2",
+      "Front": "Data Plane",
+      "Back": "The hardware-based part of a network device that performs the actual forwarding of packets or frames. It uses the information generated by the control plane to move traffic at wirespeed."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "2",
+      "Front": "Management Plane",
+      "Back": "The logical area of a network device used for administrative tasks and monitoring. It includes protocols like SSH, SNMP, and Telnet used by engineers to interact with the device."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "2",
+      "Front": "Tier-1 ISP",
+      "Back": "A large internet service provider that owns its global backbone and connects to other ISPs via settlement-free peering. They form the core of the global internet infrastructure."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "2",
+      "Front": "Software-Defined Networking",
+      "Back": "An architectural approach that decouples the control plane from the underlying hardware. This enables centralized, programmatic management and automation of the entire network infrastructure."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "2",
+      "Front": "Metro Ethernet",
+      "Back": "A WAN technology that provides high-speed Ethernet connectivity across a metropolitan area. It allows businesses to connect multiple local sites using familiar Ethernet protocols."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "2",
+      "Front": "Point-of-Presence",
+      "Back": "A physical location where a service provider or carrier houses network equipment to provide local access to their backbone. It serves as the entry point for customers into the WAN."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "2",
+      "Front": "Dual-Homed",
+      "Back": "A redundancy configuration where a network device or site is connected to two different upstream providers or switches. This prevents a single link failure from causing a total outage."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "2",
+      "Front": "Overlay Network",
+      "Back": "A virtual network fabric built on top of a physical underlay infrastructure. It uses encapsulation techniques like VXLAN to create logical connections that are independent of physical cabling."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "2",
+      "Front": "Underlay Network",
+      "Back": "The physical hardware and cabling that provides the foundational connectivity for a network. It is responsible for transporting the encapsulated packets of an overlay network."
+    }
+  ]
+}{
+  "status": "completed",
+  "appName": "ccna",
+  "flashcards": [
+    {
+      "Topic": "1",
+      "Subtopic": "3",
+      "Front": "Unshielded Twisted Pair",
+      "Back": "The most common type of copper cabling used in local area networks. It consists of four pairs of color-coded wires twisted together to reduce electromagnetic interference."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "3",
+      "Front": "Single-Mode Fiber",
+      "Back": "A type of optical cabling designed to transmit a single ray of light over long distances. It uses a very thin glass core and a laser light source to achieve high bandwidth and low attenuation."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "3",
+      "Front": "Multimode Fiber",
+      "Back": "An optical cable that allows multiple paths of light to travel through a relatively large glass core. It is typically used for shorter distances within buildings and utilizes LED light sources."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "3",
+      "Front": "RJ-45 Connector",
+      "Back": "The standard physical interface used for connecting twisted-pair Ethernet cables to network devices. It contains eight pins that align with the eight wires inside the UTP cable."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "3",
+      "Front": "T568A / T568B",
+      "Back": "The two standard wiring schemes for terminating UTP cables into RJ-45 connectors. T568B is the more commonly used standard in modern commercial network installations."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "3",
+      "Front": "Straight-Through Cable",
+      "Back": "An Ethernet cable where the wire pins on both ends match exactly. It is used to connect dissimilar devices, such as a computer to a switch or a switch to a router."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "3",
+      "Front": "Crossover Cable",
+      "Back": "An Ethernet cable where the transmit and receive pairs are swapped at one end. It is traditionally used to connect similar devices, such as two switches or two computers, directly together."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "3",
+      "Front": "Auto-MDIX",
+      "Back": "A feature on modern switch ports that automatically detects the required cable type and configures the interface accordingly. This eliminates the need for manual crossover cables in most installations."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "3",
+      "Front": "Ethernet Shared Media",
+      "Back": "A legacy network environment where multiple devices compete for access to the same physical cable or frequency. It relies on CSMA/CD to manage data collisions and is rarely used in modern switched networks."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "3",
+      "Front": "Point-to-Point Connection",
+      "Back": "A direct physical or logical link between exactly two network nodes. This configuration avoids collisions entirely and is the standard for modern full-duplex Ethernet switch ports."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "3",
+      "Front": "Attenuation",
+      "Back": "The gradual loss of signal strength as data travels through a copper or fiber medium. It is measured in decibels and limits the maximum effective length of a network cable."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "3",
+      "Front": "Electromagnetic Interference",
+      "Back": "Disturbance caused by external electrical sources that can degrade data signals in copper cabling. UTP uses twisted pairs to cancel out this noise, while STP adds a metal shield for further protection."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "3",
+      "Front": "SFP Transceiver",
+      "Back": "A small, hot-swappable modular interface used to connect switch ports to fiber optic or copper cabling. It allows for easy hardware upgrades by changing only the module rather than the entire switch port."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "3",
+      "Front": "Core (Fiber)",
+      "Back": "The central glass or plastic strand of an optical fiber that carries the light signal. Its size determines whether the cable is classified as single-mode or multimode."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "3",
+      "Front": "Cladding (Fiber)",
+      "Back": "The outer layer of glass that surrounds the fiber core. It has a lower refractive index, which causes light to reflect back into the core, a phenomenon known as total internal reflection."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "3",
+      "Front": "Full-Duplex",
+      "Back": "A communication mode that allows a device to transmit and receive data simultaneously over a network link. This effectively doubles the potential bandwidth and eliminates the possibility of collisions."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "3",
+      "Front": "Half-Duplex",
+      "Back": "A communication mode where a device can either transmit or receive data, but not both at the same time. It is used in legacy hub environments and requires collision detection mechanisms."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "3",
+      "Front": "Console Cable",
+      "Back": "A specialized serial cable, often light blue, used for initial out-of-band configuration of a Cisco device. It connects a computer's COM port to the device's console port."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "3",
+      "Front": "Rollover Cable",
+      "Back": "A cable used for console connections where the pinout on one end is completely reversed at the other. It is specifically designed for serial management of networking hardware."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "3",
+      "Front": "Baseband Transmission",
+      "Back": "A signaling method that uses the entire bandwidth of a medium to transmit a single data signal at a time. This is the standard approach for almost all Ethernet technologies."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "3",
+      "Front": "1000Base-T",
+      "Back": "The IEEE standard for Gigabit Ethernet over copper UTP cabling. It supports speeds of up to 1,000 Mbps over distances of up to 100 meters using all four wire pairs."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "3",
+      "Front": "10GBase-SR",
+      "Back": "An Ethernet standard for 10 Gbps speeds over multimode fiber. The 'SR' stands for short reach, as it is typically used for distances up to 300-400 meters in data centers."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "3",
+      "Front": "10GBase-LR",
+      "Back": "An Ethernet standard for 10 Gbps speeds over single-mode fiber. The 'LR' stands for long reach, supporting distances of up to 10 kilometers for campus backbones."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "3",
+      "Front": "Crosstalk",
+      "Back": "A type of interference where electrical signals from one wire pair leak into an adjacent pair within the same cable. High-quality UTP categories and precise twisting are used to minimize this effect."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "3",
+      "Front": "Plenum Cable",
+      "Back": "A type of network cabling with a special fire-retardant jacket. It is designed for installation in air handling spaces, as it produces minimal smoke and no toxic fumes during a fire."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "3",
+      "Front": "Power Sum NEXT",
+      "Back": "A measurement used to determine the cumulative effect of crosstalk from all wire pairs on a single pair. It is a critical performance metric for high-speed copper Ethernet standards."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "3",
+      "Front": "LC Connector",
+      "Back": "A small form-factor fiber optic connector that uses a 1.25mm ferrule. It is half the size of older connectors, allowing for much higher port density on networking equipment."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "3",
+      "Front": "ST Connector",
+      "Back": "A legacy fiber optic connector featuring a bayonet-style twist-lock mechanism. While common in older installations, it has largely been replaced by smaller, more reliable connectors like LC."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "3",
+      "Front": "Insertion Loss",
+      "Back": "The loss of signal power resulting from the insertion of a component, such as a connector or splice, into an optical fiber link. Minimizing this loss is essential for maintaining link budgets."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "3",
+      "Front": "Optical Carrier",
+      "Back": "A standardized set of transmission speeds for fiber optic networks. It defines the hierarchy of bandwidth levels used in high-capacity service provider backbones."
+    }
+  ]
+}{
+  "status": "completed",
+  "appName": "ccna",
+  "flashcards": [
+    {
+      "Topic": "1",
+      "Subtopic": "4",
+      "Front": "Late Collision",
+      "Back": "A data collision that occurs after the first 64 bytes of a frame have been transmitted. It is a classic symptom of a duplex mismatch between two connected network interfaces."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "4",
+      "Front": "Duplex Mismatch",
+      "Back": "An error condition where one side of a link is set to full-duplex while the other is set to half-duplex. This leads to severe performance degradation and intermittent connectivity issues."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "4",
+      "Front": "Input Error",
+      "Back": "A counter on a Cisco interface that increments when a packet is received incorrectly. It includes several specific error types such as CRC, framing, and giant errors."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "4",
+      "Front": "CRC Error",
+      "Back": "A checksum failure that indicates a frame was corrupted during transmission. This is frequently caused by physical issues such as faulty cabling, electromagnetic interference, or bad connectors."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "4",
+      "Front": "Giant Error",
+      "Back": "An error that occurs when an interface receives a frame that exceeds the maximum supported MTU (usually 1,518 bytes). It is often caused by mismatched MTU settings or faulty hardware."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "4",
+      "Front": "Runt Error",
+      "Back": "A frame received that is smaller than the minimum legal Ethernet size of 64 bytes. These are typically the result of collisions on a half-duplex network segment."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "4",
+      "Front": "Speed Mismatch",
+      "Back": "A condition where two connected interfaces are configured with different static bit rates. Unlike a duplex mismatch, this usually results in a complete loss of physical link connectivity."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "4",
+      "Front": "Frame Error",
+      "Back": "A type of input error where a received frame has a non-integer number of octets and an invalid CRC. It often points to physical layer issues like a noisy cable or a bad transceiver."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "4",
+      "Front": "Collision Counter",
+      "Back": "A statistic on half-duplex interfaces that tracks the number of times the device attempted to send data while the medium was busy. While normal in half-duplex, high counts indicate network congestion."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "4",
+      "Front": "Ignored Error",
+      "Back": "A counter that increments when an interface receives a packet but lacks sufficient buffer space to process it. This usually indicates that the switch's internal CPU or memory is overloaded."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "4",
+      "Front": "Output Error",
+      "Back": "A statistic that tracks the total number of frames that failed to be transmitted by an interface. Common causes include buffer overflows or physical layer link failures."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "4",
+      "Front": "Deferred Error",
+      "Back": "A counter on half-duplex ports that increments when an interface must wait to transmit because the medium is already in use. It is a sign of high utilization on a shared segment."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "4",
+      "Front": "Carrier Sense Error",
+      "Back": "An error that occurs when an interface loses the physical carrier signal while attempting to transmit a frame. This usually points to a physical hardware failure or a disconnected cable."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "4",
+      "Front": "Interface Reset",
+      "Back": "A counter indicating how many times an interface has been completely reinitialized. Frequent resets are a sign of flapping links or intermittent hardware malfunctions."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "4",
+      "Front": "Jabber Error",
+      "Back": "An error detected when an interface continues to transmit data longer than the maximum allowed frame time. This is typically caused by a faulty network interface card or transceiver."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "4",
+      "Front": "Baby Giant",
+      "Back": "A frame that is slightly larger than the standard Ethernet MTU, typically between 1,519 and 1,600 bytes. These are common in environments using VLAN tagging or MPLS encapsulation."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "4",
+      "Front": "Runts (Cisco)",
+      "Back": "Cisco's specific term for frames shorter than 64 bytes with a valid CRC. They are often caused by faulty software or improperly configured encapsulation on the sending device."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "4",
+      "Front": "Discarded Packet",
+      "Back": "A packet that was received correctly but was intentionally dropped by the switch. This happens when the destination port is congested or when security policies like ACLs block the traffic."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "4",
+      "Front": "Pause Frame",
+      "Back": "An Ethernet flow control mechanism that tells the sender to stop transmitting for a brief period. Frequent pause frames indicate that the receiving port's buffers are becoming overwhelmed."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "4",
+      "Front": "Underrun Error",
+      "Back": "A transmission error occurring when the switch's CPU cannot provide data fast enough to keep up with the interface's transmit speed. This is usually a sign of extreme system load."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "4",
+      "Front": "Overrun Error",
+      "Back": "A reception error that happens when the switch's internal hardware cannot move data from the interface buffer to memory fast enough. It results in lost frames during high-traffic bursts."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "4",
+      "Front": "No Buffer Error",
+      "Back": "An error that increments when a switch has no internal memory available to store a received frame. This leads to the frame being dropped before any processing can occur."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "4",
+      "Front": "Flapping Link",
+      "Back": "A condition where a physical interface repeatedly transitions between the UP and DOWN states. It is often caused by a loose cable connection, faulty port, or electromagnetic interference."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "4",
+      "Front": "Err-Disabled State",
+      "Back": "A security and protection feature that automatically shuts down a Cisco port when it detects a violation. Common triggers include port security breaches, BPDU guard violations, or excessive errors."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "4",
+      "Front": "Keepalive Failure",
+      "Back": "A condition where an interface fails to receive its periodic health-check signals from the connected neighbor. This causes the device to mark the interface as protocol DOWN."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "4",
+      "Front": "Link Loss",
+      "Back": "The complete absence of a physical signal on a network interface. On a Cisco device, this is reported as the 'line status' being administratively down or simply 'down'."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "4",
+      "Front": "Protocol Down",
+      "Back": "A state where the physical link is active, but the logical communication layer (Line Protocol) has failed. This is often due to mismatched encapsulation or keepalive issues."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "4",
+      "Front": "Auto-Negotiation Failure",
+      "Back": "A problem where two connected devices fail to agree on a common speed or duplex setting. This often results in a 'down/down' state or a fallback to suboptimal settings."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "4",
+      "Front": "Loopback (Interface)",
+      "Back": "A troubleshooting state where an interface is configured to send its own transmitted data back to its receiver. This is used to test the internal circuitry and software of the network device."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "4",
+      "Front": "TDR Test",
+      "Back": "A diagnostic tool built into many Cisco switches that can measure the length of a connected copper cable. It can identify the exact location of a break or short in the wiring."
+    }
+  ]
+}{
+  "status": "completed",
+  "appName": "ccna",
+  "flashcards": [
+    {
+      "Topic": "1",
+      "Subtopic": "5",
+      "Front": "Transmission Control Protocol",
+      "Back": "A connection-oriented transport layer protocol that provides reliable, ordered, and error-checked delivery of a stream of data. It is used by applications like HTTP, FTP, and SSH."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "5",
+      "Front": "User Datagram Protocol",
+      "Back": "A connectionless transport layer protocol that provides a simple, unreliable message service. It prioritizes speed and low overhead, making it ideal for real-time applications like VoIP and video streaming."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "5",
+      "Front": "Three-Way Handshake",
+      "Back": "The process used by TCP to establish a reliable connection between a client and a server. It consists of three messages: SYN, SYN-ACK, and ACK."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "5",
+      "Front": "Four-Way Termination",
+      "Back": "The sequence of messages used by TCP to gracefully close an established connection. Each side sends a FIN segment and receives an ACK to ensure all data has been transmitted."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "5",
+      "Front": "TCP Sequence Number",
+      "Back": "A 32-bit field in the TCP header used to track the order of data segments. It allows the receiving host to reassemble the data in the correct sequence, even if segments arrive out of order."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "5",
+      "Front": "TCP Acknowledgement Number",
+      "Back": "A field used by a receiving host to inform the sender that data was received successfully. It indicates the next expected byte of data, providing the basis for TCP's reliability."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "5",
+      "Front": "Window Size",
+      "Back": "A TCP header field used for flow control that specifies the amount of data a sender can transmit before receiving an acknowledgement. This prevents a fast sender from overwhelming a slow receiver."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "5",
+      "Front": "Multiplexing",
+      "Back": "A process at the transport layer that allows multiple applications on a single host to share one network connection. It uses unique port numbers to distinguish between different data streams."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "5",
+      "Front": "Well-Known Ports",
+      "Back": "Port numbers ranging from 0 to 1023 that are reserved for common network services. Examples include port 80 for HTTP, port 443 for HTTPS, and port 22 for SSH."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "5",
+      "Front": "Ephemeral Ports",
+      "Back": "Temporary port numbers automatically assigned by a client's operating system for a specific communication session. They are typically chosen from the range 49152 to 65535."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "5",
+      "Front": "TCP Segmentation",
+      "Back": "The process of breaking down a large application data stream into smaller pieces that fit within the network's maximum transmission unit. Each piece is encapsulated with a TCP header."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "5",
+      "Front": "Error Recovery",
+      "Back": "A TCP feature where the sender retransmits data segments that were not acknowledged by the receiver. This mechanism ensures that all data eventually reaches its destination intact."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "5",
+      "Front": "Flow Control",
+      "Back": "A mechanism used by TCP to manage the rate of data transmission between two nodes. It ensures that a sender does not transmit data faster than the receiver can process it."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "5",
+      "Front": "UDP Header Size",
+      "Back": "The fixed length of a UDP header, which is exactly 8 bytes. This minimal overhead makes it much faster than TCP for time-sensitive traffic."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "5",
+      "Front": "TCP Header Size",
+      "Back": "The standard length of a TCP header, which is typically 20 bytes without options. The additional fields compared to UDP provide for reliability, flow control, and connection management."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "5",
+      "Front": "Best-Effort Delivery",
+      "Back": "A delivery model used by UDP where the network makes no guarantee that data will reach its destination. If a segment is lost, no attempt is made to retransmit it."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "5",
+      "Front": "Checksum",
+      "Back": "A field in both TCP and UDP headers used to detect data corruption during transmission. The receiver recalculates the value and discards the segment if it does not match the original."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "5",
+      "Front": "Maximum Segment Size",
+      "Back": "A TCP parameter negotiated during the handshake that defines the largest amount of data a host can receive in a single segment. It is typically set to 1460 bytes for Ethernet."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "5",
+      "Front": "SYN Flood",
+      "Back": "A type of denial-of-service attack that exploits the TCP three-way handshake. The attacker sends numerous SYN requests but never completes the connection, exhausting the server's resources."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "5",
+      "Front": "Expectational Acknowledgement",
+      "Back": "The method TCP uses where the ACK number sent back is the sequence number of the next byte the receiver expects to get. This confirms all previous bytes were received correctly."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "5",
+      "Front": "Selective Acknowledgement",
+      "Back": "An optional TCP feature that allows a receiver to inform the sender exactly which segments were received. This enables the sender to retransmit only the specific missing pieces rather than an entire stream."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "5",
+      "Front": "Sliding Window",
+      "Back": "The dynamic flow control mechanism in TCP where the window size changes based on network conditions. It allows for more efficient bandwidth usage by adjusting to the receiver's available buffer space."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "5",
+      "Front": "Socket",
+      "Back": "The combination of an IP address and a port number. It uniquely identifies a specific communication endpoint for a single application process across the network."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "5",
+      "Front": "Urgent Pointer",
+      "Back": "A rarely used TCP header field that indicates a specific portion of the data stream should be processed immediately by the receiving application, bypassing normal buffers."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "5",
+      "Front": "Flag Bits (TCP)",
+      "Back": "A set of individual bits in the TCP header used to control the state of the connection. Important flags include SYN for synchronization, ACK for acknowledgement, and FIN for termination."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "5",
+      "Front": "UDP Length Field",
+      "Back": "A 16-bit field in the UDP header that specifies the total size of the UDP segment, including the header and the data. It is used by the receiver to identify the end of the packet."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "5",
+      "Front": "Ordered Data Transfer",
+      "Back": "A TCP feature that ensures segments are delivered to the application in the same order they were sent. The receiver uses sequence numbers to rearrange segments that arrive out of order."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "5",
+      "Front": "Data Offset",
+      "Back": "A TCP header field that indicates where the application data begins. It effectively tells the receiver the length of the TCP header, which can vary if options are present."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "5",
+      "Front": "Push Flag",
+      "Back": "A TCP control bit that instructs the receiver to pass the data to the application immediately rather than waiting for the buffer to fill up. It is commonly used in interactive sessions like Telnet."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "5",
+      "Front": "Retransmission Timeout",
+      "Back": "The specific amount of time a TCP sender waits for an acknowledgement before deciding a segment is lost. This value is dynamically calculated based on the round-trip time of the connection."
+    }
+  ]
+}{
+  "status": "completed",
+  "appName": "ccna",
+  "flashcards": [
+    {
+      "Topic": "1",
+      "Subtopic": "6",
+      "Front": "IPv4 Address",
+      "Back": "A 32-bit logical identifier assigned to a network interface. It operates at the network layer to facilitate routing across internetworks."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "6",
+      "Front": "Subnet Mask",
+      "Back": "A 32-bit value used to distinguish the network portion from the host portion of an IP address. It is represented by contiguous binary 1s followed by 0s."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "6",
+      "Front": "Network Address",
+      "Back": "The first address in a subnet where all host bits are set to binary zero. It represents the entire network segment and cannot be assigned to an individual device."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "6",
+      "Front": "Broadcast Address",
+      "Back": "The last address in a subnet where all host bits are set to binary one. It is used to send data to all hosts on that specific network segment."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "6",
+      "Front": "Host Address",
+      "Back": "A unique IP assigned to a specific device within a network segment. Its value falls between the network address and the broadcast address."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "6",
+      "Front": "Class A Network",
+      "Back": "An IP classification using a default /8 mask that supports up to 16,777,214 hosts per network. Its first octet ranges from 1 to 126."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "6",
+      "Front": "Class B Network",
+      "Back": "An IP classification with a default /16 mask supporting up to 65,534 hosts. Its first octet ranges from 128 to 191."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "6",
+      "Front": "Class C Network",
+      "Back": "An IP classification utilizing a default /24 mask that supports up to 254 hosts. Its first octet ranges from 192 to 223, making it ideal for small LANs."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "6",
+      "Front": "Class D Address",
+      "Back": "An IP range from 224.0.0.0 to 239.255.255.255 reserved exclusively for multicast traffic. It is not assigned to individual hosts or standard network interfaces."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "6",
+      "Front": "Class E Address",
+      "Back": "An IP range from 240.0.0.0 to 255.255.255.255 that is reserved for experimental and research purposes. These addresses cannot be routed on the public internet."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "6",
+      "Front": "CIDR Notation",
+      "Back": "A compact representation of an IP address and its associated routing prefix. It appends a slash followed by the number of network bits, replacing traditional dotted-decimal masks."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "6",
+      "Front": "VLSM",
+      "Back": "A subnetting technique that allows network administrators to divide an IP space into subnets of different sizes. This minimizes wasted addresses by precisely matching the required host count."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "6",
+      "Front": "Default Gateway",
+      "Back": "The IP address of a router interface on the local subnet that provides a path to external networks. Hosts send non-local traffic to this address for forwarding."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "6",
+      "Front": "Loopback Address",
+      "Back": "A special IP block (127.0.0.0/8) used to test the local TCP/IP protocol stack. Traffic sent to this address never leaves the originating device."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "6",
+      "Front": "APIPA",
+      "Back": "A feature that automatically assigns an IP address from the 169.254.0.0/16 range when a DHCP server is unreachable. It allows for local communication but cannot be routed externally."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "6",
+      "Front": "Private IPv4 Address",
+      "Back": "Non-routable IP ranges specified by RFC 1918 (such as 10.0.0.0/8) designated for internal network use. They require Network Address Translation to access the public internet."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "6",
+      "Front": "Public IPv4 Address",
+      "Back": "Globally unique IP addresses assigned by regional internet registries. They are fully routable across the public internet without translation."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "6",
+      "Front": "Octet",
+      "Back": "An 8-bit segment of a 32-bit IPv4 address. Four of these separated by dots make up the standard dotted-decimal format."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "6",
+      "Front": "Dotted Decimal Notation",
+      "Back": "The standard presentation format for IPv4 addresses consisting of four decimal numbers separated by periods. It translates the underlying 32-bit binary structure into human-readable form."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "6",
+      "Front": "Prefix Length",
+      "Back": "The number of contiguous binary ones in a subnet mask. It directly indicates how many bits are allocated for the network identification."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "6",
+      "Front": "Subnetting",
+      "Back": "The process of logically dividing a single large network into multiple smaller, more manageable network segments. This improves security and reduces broadcast traffic."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "6",
+      "Front": "Supernetting",
+      "Back": "The aggregation of multiple contiguous smaller networks into a single larger network route. This reduces the size of routing tables in core network devices."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "6",
+      "Front": "Magic Number",
+      "Back": "A shortcut subnetting calculation value derived by subtracting the interesting octet of a mask from 256. It determines the increment size between consecutive subnets."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "6",
+      "Front": "Bitwise ANDing",
+      "Back": "A mathematical process performed by a router comparing an IP address and a subnet mask in binary. It is used to calculate the exact network address of a destination."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "6",
+      "Front": "Directed Broadcast",
+      "Back": "A packet sent to all hosts on a specific remote network by using that remote network's broadcast address. Routers typically drop these packets by default to prevent attacks."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "6",
+      "Front": "Local Broadcast",
+      "Back": "A packet destined for the IP address 255.255.255.255, targeting all devices on the immediate local segment. This traffic is never forwarded by a router."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "6",
+      "Front": "Network Portion",
+      "Back": "The leading bits of an IP address that identify the specific network segment. All devices on the same local segment must share this exact bit sequence."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "6",
+      "Front": "Host Portion",
+      "Back": "The trailing bits of an IP address used to uniquely identify an individual device on a given network. These bits must be unique for every interface on the segment."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "6",
+      "Front": "IP Conflict",
+      "Back": "An error state occurring when two devices on the same local network are configured with the identical IP address. This typically disrupts connectivity for one or both devices."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "6",
+      "Front": "Route Summarization",
+      "Back": "A method of representing a series of contiguous subnets as a single routing entry. It optimizes router performance and conserves memory in large topologies."
+    }
+  ]
+}{
+  "status": "completed",
+  "appName": "ccna",
+  "flashcards": [
+    {
+      "Topic": "1",
+      "Subtopic": "7",
+      "Front": "Private IP Address",
+      "Back": "An IP address reserved for use within internal networks and not routable on the public internet. This allows organizations to reuse the same address space without conflict."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "7",
+      "Front": "RFC 1918",
+      "Back": "The specific document that defines the three blocks of IPv4 address space reserved for private internal networks. It is the foundational standard for modern network addressing."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "7",
+      "Front": "Class A Private Range",
+      "Back": "The largest block of private addresses, consisting of the 10.0.0.0/8 network. It provides over 16 million unique addresses for very large internal environments."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "7",
+      "Front": "Class B Private Range",
+      "Back": "A block of private addresses ranging from 172.16.0.0 to 172.31.255.255. It consists of 16 contiguous /16 networks used for medium-to-large corporate networks."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "7",
+      "Front": "Class C Private Range",
+      "Back": "The private address block spanning from 192.168.0.0 to 192.168.255.255. It contains 256 /24 networks and is the most common choice for home and small office LANs."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "7",
+      "Front": "Network Address Translation",
+      "Back": "A process that maps private internal IP addresses to a single or small pool of public IP addresses. This allows multiple internal devices to share one internet connection."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "7",
+      "Front": "Public IP Address",
+      "Back": "A globally unique IP address assigned by internet registries that is fully routable on the public internet. These addresses are necessary for any device that needs direct external access."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "7",
+      "Front": "IP Address Exhaustion",
+      "Back": "The depletion of the available pool of unassigned IPv4 addresses. The use of private addressing and NAT was the primary strategy used to delay this problem for decades."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "7",
+      "Front": "Non-Routable Address",
+      "Back": "An IP address that service provider routers are configured to drop by default. Private addresses fall into this category to ensure they do not interfere with global internet traffic."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "7",
+      "Front": "Inside Local Address",
+      "Back": "The actual private IP address assigned to a host on an internal network. It is the address the device uses to communicate with other nodes on its local segment."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "7",
+      "Front": "Inside Global Address",
+      "Back": "The public IP address that represents one or more internal hosts to the outside world. It is the translated address seen by devices on the internet."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "7",
+      "Front": "Outside Global Address",
+      "Back": "The public IP address assigned to a host on the external network, such as a web server on the internet. It is the destination address as seen from the internal network."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "7",
+      "Front": "Outside Local Address",
+      "Back": "The IP address of an external host as it appears to the internal network. In most standard NAT configurations, this is identical to the outside global address."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "7",
+      "Front": "Static NAT",
+      "Back": "A one-to-one mapping between an internal private address and a specific external public address. It is typically used for internal servers that must be reachable from the internet."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "7",
+      "Front": "Dynamic NAT",
+      "Back": "A mapping where internal private addresses are translated to the first available public address from a pre-configured pool. It allows for efficient use of a limited number of public IPs."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "7",
+      "Front": "Port Address Translation",
+      "Back": "A form of NAT that allows multiple private IP addresses to be mapped to a single public IP address using unique source port numbers to distinguish between sessions."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "7",
+      "Front": "Overloading (NAT)",
+      "Back": "The common term for Port Address Translation on Cisco routers. It allows a single public IP, often the one on the router's WAN interface, to support hundreds of internal devices."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "7",
+      "Front": "NAT Table",
+      "Back": "An internal database stored in a router's memory that tracks active translations. It maps internal IP and port combinations to their corresponding external public counterparts."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "7",
+      "Front": "Shared Address Space",
+      "Back": "A specific block of IP addresses (100.64.0.0/10) reserved for use by service providers in Carrier-Grade NAT environments. It avoids conflicts with standard RFC 1918 private ranges."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "7",
+      "Front": "Carrier-Grade NAT",
+      "Back": "A large-scale NAT implementation used by ISPs to share a single public IP address among thousands of customers. This is common in mobile networks and areas with limited IPv4 availability."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "7",
+      "Front": "Double NAT",
+      "Back": "A scenario where a packet passes through two different NAT devices before reaching the internet. This often occurs when a user connects their own router to an ISP-provided gateway."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "7",
+      "Front": "NAT Traversal",
+      "Back": "A set of techniques used by applications like VoIP and gaming to establish connections through NAT devices. These protocols often need to bypass the security restrictions imposed by address translation."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "7",
+      "Front": "Universal Plug and Play",
+      "Back": "A network protocol that allows devices to automatically discover and configure NAT port forwardings on a router. While convenient for users, it can present significant security risks."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "7",
+      "Front": "Port Forwarding",
+      "Back": "A configuration that directs incoming traffic on a specific public port to a designated private IP address and port. It allows external users to access a specific service behind a NAT router."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "7",
+      "Front": "Twice NAT",
+      "Back": "A complex NAT configuration where both the source and destination IP addresses are translated in a single packet. It is used in advanced scenarios like merging networks with overlapping addresses."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "7",
+      "Front": "End-to-End Transparency",
+      "Back": "The principle that any node on the internet should be able to communicate directly with any other node. NAT breaks this principle by hiding internal devices behind a single public address."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "7",
+      "Front": "Stateful NAT",
+      "Back": "A translation process that keeps track of the connection state for every session. The router only allows incoming traffic if it matches an existing entry in the translation table created by an internal device."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "7",
+      "Front": "Translation Pool",
+      "Back": "A defined range of public IP addresses that a router can use for dynamic NAT. As internal devices request internet access, the router assigns an address from this pool for the duration of the session."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "7",
+      "Front": "NAT Timeout",
+      "Back": "The period of inactivity after which a router removes an entry from its translation table. This ensures that public IP addresses and ports are released and made available for new connections."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "7",
+      "Front": "IP Spoofing",
+      "Back": "A malicious technique where an attacker sends packets with a forged source IP address. NAT provides a basic level of protection against this by only allowing traffic that matches an internal session."
+    }
+  ]
+}{
+  "status": "completed",
+  "appName": "ccna",
+  "flashcards": [
+    {
+      "Topic": "1",
+      "Subtopic": "8",
+      "Front": "IPv6 Address",
+      "Back": "A 128-bit logical identifier used to uniquely identify an interface on a network. It is represented as eight groups of four hexadecimal digits separated by colons."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "8",
+      "Front": "Zero Compression",
+      "Back": "An IPv6 addressing rule that allows a single contiguous sequence of all-zero groups to be replaced by a double colon (::). This can only be done once per address to avoid ambiguity."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "8",
+      "Front": "Leading Zero Omission",
+      "Back": "A rule in IPv6 formatting that allows any leading zeros in a 16-bit hexadecimal group to be removed. For example, the group '0db8' can be simplified to just 'db8'."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "8",
+      "Front": "IPv6 Prefix",
+      "Back": "The leading bits of an IPv6 address that identify the network or subnet. It is similar to the network portion of an IPv4 address and is denoted using CIDR-style notation like /64."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "8",
+      "Front": "Interface ID",
+      "Back": "The 64-bit portion of an IPv6 address that uniquely identifies a specific interface on a subnet. It occupies the last half of the 128-bit address space."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "9",
+      "Front": "Global Unicast Address",
+      "Back": "A globally unique and routable IPv6 address, equivalent to a public IPv4 address. These addresses typically begin with the binary prefix 001 (hex 2000::/3)."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "9",
+      "Front": "Link-Local Address",
+      "Back": "An IPv6 address used for communication only within a single local link. These addresses always start with the prefix fe80::/10 and are automatically generated for every interface."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "9",
+      "Front": "Unique Local Address",
+      "Back": "An IPv6 address intended for use within an organization's internal network, similar to RFC 1918 private IPv4 addresses. They use the prefix fc00::/7."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "9",
+      "Front": "Multicast Address",
+      "Back": "An IPv6 address used to send a single packet to multiple destinations simultaneously. These addresses always begin with the prefix ff00::/8."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "9",
+      "Front": "Anycast Address",
+      "Back": "An IPv6 address assigned to multiple interfaces (typically on different nodes). A packet sent to this address is delivered to the nearest interface as determined by the routing protocol."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "9",
+      "Front": "Modified EUI-64",
+      "Back": "A method used to automatically generate a 64-bit Interface ID from a 48-bit MAC address. It involves inserting 'fffe' in the middle and inverting the 7th bit of the first byte."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "9",
+      "Front": "Solicited-Node Multicast",
+      "Back": "A special type of multicast address used in IPv6 for neighbor discovery. It is formed by taking the prefix ff02::1:ff00:0/104 and appending the last 24 bits of a host's unicast address."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "8",
+      "Front": "SLAAC",
+      "Back": "A mechanism that allows an IPv6 host to automatically configure its own address and default gateway without a DHCP server. It uses ICMPv6 Router Advertisement messages to obtain the network prefix."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "8",
+      "Front": "Stateless DHCPv6",
+      "Back": "A configuration mode where a host uses SLAAC for its IPv6 address but queries a DHCPv6 server for additional information like DNS server addresses and domain names."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "8",
+      "Front": "Stateful DHCPv6",
+      "Back": "A mode where a DHCPv6 server centrally manages and assigns IPv6 addresses to clients, similar to the traditional operation of DHCP in IPv4 networks."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "9",
+      "Front": "Loopback Address (IPv6)",
+      "Back": "The reserved IPv6 address 0:0:0:0:0:0:0:1, often abbreviated as ::1/128. It is used by a host to send packets to itself for software testing purposes."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "9",
+      "Front": "Unspecified Address",
+      "Back": "The all-zeros IPv6 address (::/128) used by a host as a source address before it has been assigned a unique address, typically during the Duplicate Address Detection process."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "8",
+      "Front": "Neighbor Discovery Protocol",
+      "Back": "An ICMPv6-based protocol suite that replaces ARP. It handles tasks like resolving MAC addresses, discovering routers, and checking for duplicate IP addresses on a link."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "8",
+      "Front": "Router Advertisement",
+      "Back": "An ICMPv6 message sent periodically by routers to inform hosts of the network's presence and provide configuration parameters like the local prefix and MTU."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "8",
+      "Front": "Router Solicitation",
+      "Back": "An ICMPv6 message sent by a host upon joining a network to immediately request configuration information from any available local routers, rather than waiting for the next periodic advertisement."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "8",
+      "Front": "Neighbor Solicitation",
+      "Back": "A message used by an IPv6 host to determine the link-layer (MAC) address of a neighbor or to verify that a neighbor is still reachable. It replaces the function of an ARP Request."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "8",
+      "Front": "Neighbor Advertisement",
+      "Back": "A response to a Neighbor Solicitation message that provides the requested MAC address. It is also used to proactively announce a change in a host's link-layer address."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "8",
+      "Front": "Duplicate Address Detection",
+      "Back": "A mandatory process in IPv6 where a host verifies that its newly configured unicast address is not already in use by another device on the same local link."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "8",
+      "Front": "IPv6 Static Routing",
+      "Back": "The manual configuration of network paths on a router for IPv6 traffic. It uses the 'ipv6 route' command followed by the destination prefix and the next-hop address."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "9",
+      "Front": "Dual-Stack",
+      "Back": "A transition strategy where network devices run both IPv4 and IPv6 protocol stacks simultaneously. This allows for a gradual migration while maintaining compatibility with both networks."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "9",
+      "Front": "Tunneling (IPv6)",
+      "Back": "A transition method that encapsulates IPv6 packets inside IPv4 headers so they can be transported across an existing IPv4-only network infrastructure."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "8",
+      "Front": "Global Routing Prefix",
+      "Back": "The specific portion of a Global Unicast Address assigned to an organization by an ISP or registry. It typically makes up the first 48 bits of the address."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "8",
+      "Front": "Subnet ID (IPv6)",
+      "Back": "The 16-bit field in a standard /64 IPv6 address that follows the global routing prefix. It allows an organization to create up to 65,536 individual subnets."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "9",
+      "Front": "All-Nodes Multicast",
+      "Back": "A reserved IPv6 address (ff02::1) that targets every IPv6-enabled device on the local link. It is the IPv6 equivalent of an IPv4 broadcast address."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "9",
+      "Front": "All-Routers Multicast",
+      "Back": "A reserved IPv6 address (ff02::2) used to communicate with all routers on a local segment. It is primarily used by hosts to send Router Solicitation messages."
+    }
+  ]
+}{
+  "status": "completed",
+  "appName": "ccna",
+  "flashcards": [
+    {
+      "Topic": "1",
+      "Subtopic": "11",
+      "Front": "Radio Frequency",
+      "Back": "The electromagnetic wave frequency used for wireless communication. In Wi-Fi, the most common frequency bands are 2.4 GHz and 5 GHz, which carry data between access points and clients."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "11",
+      "Front": "Service Set Identifier",
+      "Back": "A unique, human-readable name that identifies a specific wireless network. It allows users to distinguish between different available Wi-Fi signals and choose the correct one for connection."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "11",
+      "Front": "2.4 GHz Band",
+      "Back": "A wireless frequency range that offers better range and penetration through walls but suffers from high interference and fewer non-overlapping channels. It is commonly used by many household devices."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "11",
+      "Front": "5 GHz Band",
+      "Back": "A higher-frequency wireless range that provides faster data speeds and less interference than the 2.4 GHz band. However, it has a shorter effective range and is more easily blocked by physical obstacles."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "11",
+      "Front": "Non-Overlapping Channels",
+      "Back": "Specific wireless frequencies that do not interfere with one another. In the 2.4 GHz band, only channels 1, 6, and 11 are considered truly non-overlapping in most regulatory regions."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "11",
+      "Front": "Basic Service Set",
+      "Back": "The fundamental building block of a wireless network, consisting of a single access point and all of its associated client devices. All members must use the same channel to communicate."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "11",
+      "Front": "Extended Service Set",
+      "Back": "A wireless network configuration where multiple access points share the same SSID and are connected to a common wired infrastructure. This allows clients to roam between APs without losing connectivity."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "11",
+      "Front": "BSSID",
+      "Back": "The unique hardware MAC address of a wireless access point's radio interface. It is used at the data link layer to uniquely identify a specific wireless cell, even if multiple cells share the same SSID."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "11",
+      "Front": "WPA2",
+      "Back": "A widely used security standard for wireless networks that provides robust encryption using the AES protocol. It significantly improved security over the older WEP and WPA standards."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "11",
+      "Front": "WPA3",
+      "Back": "The latest wireless security standard that introduces improved encryption and protection against brute-force attacks. It is designed to secure both personal and enterprise Wi-Fi networks."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "11",
+      "Front": "AES",
+      "Back": "The advanced encryption standard used by WPA2 and WPA3 to secure wireless data. It is a highly secure symmetric-key algorithm that is implemented in hardware for maximum performance."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "11",
+      "Front": "TKIP",
+      "Back": "A legacy encryption protocol used by the original WPA standard to improve security over WEP. It has since been deprecated in favor of the much more secure AES algorithm."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "11",
+      "Front": "Pre-Shared Key",
+      "Back": "A security method where all users on a wireless network use the same password to authenticate and encrypt their data. It is the standard approach for home and small office Wi-Fi."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "11",
+      "Front": "802.1X / EAP",
+      "Back": "An enterprise-level authentication framework that requires each user to provide unique credentials (like a username and password) to access the wireless network. It is typically managed by a RADIUS server."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "11",
+      "Front": "Autonomous AP Architecture",
+      "Back": "A wireless design where each access point is managed and configured independently. The AP handles all security, management, and traffic forwarding functions without a centralized controller."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "11",
+      "Front": "Lightweight AP Architecture",
+      "Back": "A centralized wireless design where access points delegate management and control functions to a Wireless LAN Controller. This allows for easier administration of large-scale networks."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "11",
+      "Front": "Split-MAC Architecture",
+      "Back": "The mechanism used in lightweight AP designs where time-sensitive tasks are handled by the AP, while management and security tasks are offloaded to a central controller."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "11",
+      "Front": "CAPWAP",
+      "Back": "The standard protocol used for communication between a lightweight access point and a Wireless LAN Controller. It creates a secure tunnel for both management traffic and user data."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "11",
+      "Front": "Roaming",
+      "Back": "The process where a wireless client moves from the coverage area of one access point to another within the same ESS. A well-designed network ensures this transition is seamless to the user."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "11",
+      "Front": "Signal-to-Noise Ratio",
+      "Back": "A measurement used to compare the strength of a desired wireless signal to the amount of background interference. A higher ratio results in faster data speeds and fewer errors."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "11",
+      "Front": "Gain",
+      "Back": "The increase in signal strength provided by an antenna. Directional antennas provide high gain in a specific direction, while omnidirectional antennas provide lower gain in all directions."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "11",
+      "Front": "Omnidirectional Antenna",
+      "Back": "An antenna that radiates and receives wireless signals equally in all horizontal directions. It is the most common type used for general indoor Wi-Fi coverage."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "11",
+      "Front": "Directional Antenna",
+      "Back": "An antenna that focuses wireless energy in a specific direction, providing much longer range in that path. It is ideal for point-to-point links between buildings."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "11",
+      "Front": "MIMO",
+      "Back": "A technology that uses multiple antennas at both the transmitter and receiver to improve wireless performance. It allows for higher data throughput and better reliability in obstructed environments."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "11",
+      "Front": "Channel Bonding",
+      "Back": "A technique that combines two or more adjacent wireless channels into a single wider channel. This effectively increases the total bandwidth available for data transmission."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "11",
+      "Front": "Dynamic Frequency Selection",
+      "Back": "A mechanism that allows Wi-Fi devices to use 5 GHz channels that are also reserved for radar systems. The AP must monitor for radar signals and automatically switch channels if one is detected."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "11",
+      "Front": "CSMA/CA",
+      "Back": "The media access control method used in wireless networks to avoid collisions. Devices listen to the medium and wait for a clear slot before attempting to transmit their data."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "11",
+      "Front": "Ad Hoc Mode",
+      "Back": "A peer-to-peer wireless configuration where client devices connect directly to one another without an access point. This is also known as an Independent Basic Service Set."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "11",
+      "Front": "Infrastructure Mode",
+      "Back": "The standard wireless configuration where all client devices communicate through a central access point. This allows for centralized management and access to the wired network."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "11",
+      "Front": "Wireless Mesh Network",
+      "Back": "A topology where access points connect to each other wirelessly to extend the network's range. Only one or two APs need a physical wired connection to provide internet access to the entire area."
+    }
+  ]
+}{
+  "status": "completed",
+  "appName": "ccna",
+  "flashcards": [
+    {
+      "Topic": "1",
+      "Subtopic": "12",
+      "Front": "Server Virtualization",
+      "Back": "A technology that allows multiple independent operating systems to run simultaneously on a single physical server. It uses a hypervisor to abstract the hardware resources, improving efficiency and reducing costs."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "12",
+      "Front": "Hypervisor",
+      "Back": "The software layer that creates and manages virtual machines on a physical host. It allocates CPU, memory, and storage resources to each VM while ensuring they remain isolated from one another."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "12",
+      "Front": "Type 1 Hypervisor",
+      "Back": "A 'bare-metal' virtualization layer that runs directly on the physical hardware of a server. It provides high performance and stability, making it the standard choice for enterprise data centers."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "12",
+      "Front": "Type 2 Hypervisor",
+      "Back": "A virtualization application that runs on top of a traditional host operating system like Windows or macOS. It is commonly used by developers and students for testing and lab environments."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "12",
+      "Front": "Virtual Machine",
+      "Back": "A software-based emulation of a physical computer that runs its own operating system and applications. It is completely isolated from the host and other VMs on the same physical hardware."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "12",
+      "Front": "Container",
+      "Back": "A lightweight virtualization method that packages an application and its dependencies together. Unlike VMs, they share the host's operating system kernel, making them faster and more resource-efficient."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "12",
+      "Front": "Docker",
+      "Back": "The most popular platform used to create, deploy, and manage application containers. It provides a standardized format that ensures applications run consistently across different computing environments."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "12",
+      "Front": "Virtual Routing and Forwarding",
+      "Back": "A technology that allows multiple independent instances of a routing table to coexist on a single router. It enables network virtualization by keeping the traffic of different departments or customers completely isolated."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "12",
+      "Front": "Virtual Switch",
+      "Back": "A software-defined networking component that provides connectivity between virtual machines within a physical host. It functions like a physical switch, supporting VLANs and security policies."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "12",
+      "Front": "Cloud Computing",
+      "Back": "The on-demand delivery of computing power, database storage, and other IT resources via the internet. It relies heavily on virtualization to provide scalable and flexible services to users."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "13",
+      "Front": "MAC Address Table",
+      "Back": "An internal database used by a switch to store the mapping between hardware addresses and physical ports. It is also commonly referred to as the Content Addressable Memory or CAM table."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "13",
+      "Front": "MAC Learning",
+      "Back": "The process by which a switch builds its address table by examining the source MAC address of every incoming frame. It associates that address with the port on which the frame was received."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "13",
+      "Front": "MAC Aging",
+      "Back": "A mechanism that removes inactive entries from the MAC address table after a specific period, typically 300 seconds. This ensures the table remains accurate and does not overflow with stale data."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "13",
+      "Front": "Frame Forwarding",
+      "Back": "The action of sending a frame out a specific port when its destination MAC address is found in the switch's address table. This minimizes unnecessary traffic on other network segments."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "13",
+      "Front": "Frame Filtering",
+      "Back": "A decision made by a switch to not forward a frame out a particular port. This occurs when the destination MAC address is known to be on the same port where the frame was originally received."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "13",
+      "Front": "Flooding",
+      "Back": "The process where a switch sends a frame out all active ports except the one it arrived on. This happens when the destination MAC address is unknown, or for broadcast and multicast traffic."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "13",
+      "Front": "Unknown Unicast",
+      "Back": "A frame with a specific destination MAC address that is not currently present in the switch's MAC address table. The switch must flood this frame to ensure it reaches its intended recipient."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "13",
+      "Front": "Broadcast Frame",
+      "Back": "A frame destined for every device on a local network segment, identified by the MAC address FF:FF:FF:FF:FF:FF. Switches always flood these frames to all ports within the same VLAN."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "13",
+      "Front": "Broadcast Domain",
+      "Back": "A logical division of a computer network in which all nodes can reach each other by broadcast at the data link layer. Routers and VLANs are used to define the boundaries of these domains."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "13",
+      "Front": "Collision Domain",
+      "Back": "A physical network segment where data packets can collide with one another. Modern switches eliminate these domains by providing dedicated, full-duplex bandwidth to every connected device."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "13",
+      "Front": "ASIC",
+      "Back": "Specialized hardware chips designed for extremely fast packet processing and forwarding. They allow switches to make switching decisions at 'wirespeed,' with virtually zero latency regardless of traffic volume."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "13",
+      "Front": "TCAM",
+      "Back": "A high-speed memory type used in multilayer switches to perform complex lookups for ACLs and QoS policies. It allows the switch to process security and priority rules without impacting forwarding performance."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "13",
+      "Front": "Store-and-Forward",
+      "Back": "A switching method where the entire frame is received and checked for errors using the FCS before it is forwarded. This ensures that only valid, error-free frames are sent across the network."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "13",
+      "Front": "Cut-Through Switching",
+      "Back": "A low-latency switching method where the switch begins forwarding a frame as soon as the destination MAC address is read. It does not check for errors, potentially forwarding corrupt data."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "13",
+      "Front": "Fragment-Free Switching",
+      "Back": "A hybrid switching method that waits to receive the first 64 bytes of a frame before forwarding. This allows it to filter out most collision-related runts while still maintaining low latency."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "13",
+      "Front": "VLAN",
+      "Back": "A technology that allows a single physical switch to be partitioned into multiple logical networks. Devices in different groups cannot communicate directly without a router, improving security and performance."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "13",
+      "Front": "Trunk Port",
+      "Back": "A switch interface configured to carry traffic for multiple VLANs simultaneously. It uses a tagging protocol like 802.1Q to identify which VLAN each frame belongs to as it travels between switches."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "13",
+      "Front": "Access Port",
+      "Back": "A switch port assigned to a single specific VLAN. It connects directly to end-user devices like computers or printers and does not add any VLAN tags to the frames it receives."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "13",
+      "Front": "Native VLAN",
+      "Back": "The specific VLAN on an 802.1Q trunk port that carries all untagged traffic. For security reasons, it is a best practice to change this from the default value of VLAN 1."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "13",
+      "Front": "Frame Check Sequence",
+      "Back": "A 4-byte value at the end of an Ethernet frame used for error detection. The receiving device recalculates this value and discards the frame if it does not match the original transmission."
+    }
+  ]
+}{
+  "status": "completed",
+  "appName": "ccna",
+  "flashcards": [
+    {
+      "Topic": "2",
+      "Subtopic": "1",
+      "Front": "Virtual LAN",
+      "Back": "A logical grouping of network devices that behave as if they were connected to the same physical switch, even if they are dispersed across different locations. It is used to isolate broadcast traffic and improve network security."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "1",
+      "Front": "Access Port",
+      "Back": "A switch interface configured to carry traffic for a single VLAN. It is used to connect end-user devices like computers or printers that do not understand VLAN tagging."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "1",
+      "Front": "Voice VLAN",
+      "Back": "A specialized VLAN configuration on an access port that allows an IP phone and a PC to share a single physical link. It prioritizes time-sensitive voice traffic over standard data traffic."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "1",
+      "Front": "Default VLAN",
+      "Back": "The pre-configured VLAN on a Cisco switch out of the box, which is VLAN 1. All switch ports are assigned to this VLAN by default until they are manually moved to a different one."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "1",
+      "Front": "Normal Range VLANs",
+      "Back": "The standard set of VLAN IDs ranging from 1 to 1005. These are stored in the vlan.dat file in the switch's flash memory and are the most commonly used in enterprise networks."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "1",
+      "Front": "Extended Range VLANs",
+      "Back": "A set of VLAN IDs ranging from 1006 to 4094, typically used in large service provider environments. These are stored in the switch's running configuration rather than the vlan.dat file."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "1",
+      "Front": "VLAN Database",
+      "Back": "The local file (vlan.dat) stored in a switch's flash memory that contains the configuration for all normal range VLANs. It persists across reboots independently of the startup-config."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "1",
+      "Front": "Broadcast Domain",
+      "Back": "The logical boundary of a network within which a broadcast frame can travel. Creating VLANs is the primary method used to divide a large physical switch into multiple smaller, more efficient domains."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "2",
+      "Front": "Trunk Port",
+      "Back": "A high-speed link between two switches configured to carry traffic for multiple VLANs simultaneously. It uses tagging to ensure that each frame is delivered to the correct destination VLAN on the other end."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "2",
+      "Front": "802.1Q",
+      "Back": "The industry-standard trunking protocol used to tag Ethernet frames with VLAN information. it inserts a 4-byte header into the original frame to identify which VLAN the traffic belongs to."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "2",
+      "Front": "Native VLAN",
+      "Back": "The specific VLAN on an 802.1Q trunk that carries untagged traffic. For proper operation and security, both ends of a trunk must be configured with the same ID for this VLAN."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "2",
+      "Front": "VLAN Tagging",
+      "Back": "The process of adding a unique identifier to an Ethernet frame as it travels across a trunk link. This allows switches to distinguish between traffic belonging to different logical networks."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "2",
+      "Front": "Dynamic Trunking Protocol",
+      "Back": "A Cisco-proprietary protocol used to automatically negotiate whether a link should become a trunk or an access port. For security, it is often recommended to disable this feature on most ports."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "2",
+      "Front": "DTP Dynamic Auto",
+      "Back": "A DTP port mode where the interface waits passively to be asked to become a trunk. It will only form a trunk if the neighbor on the other side is set to 'Desirable' or 'On'."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "2",
+      "Front": "DTP Dynamic Desirable",
+      "Back": "A DTP port mode where the interface actively attempts to negotiate a trunk link with its neighbor. It will form a trunk if the other side is set to 'Auto', 'Desirable', or 'On'."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "2",
+      "Front": "Switchport Nonegotiate",
+      "Back": "A configuration command that disables the Dynamic Trunking Protocol on an interface. It is used when a trunk is manually configured and you want to prevent the switch from sending DTP frames."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "2",
+      "Front": "VLAN Allowed List",
+      "Back": "A security configuration on a trunk port that specifies which VLANs are permitted to cross the link. By default, all VLANs are allowed, but pruning this list improves network efficiency and security."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "2",
+      "Front": "Inter-VLAN Routing",
+      "Back": "The process of moving traffic between different VLANs using a Layer 3 device like a router or a multilayer switch. Since VLANs are separate broadcast domains, they cannot communicate without this."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "2",
+      "Front": "Router-on-a-Stick",
+      "Back": "An inter-VLAN routing method that uses a single physical link between a router and a switch. The router's interface is divided into multiple logical subinterfaces, each serving as the gateway for a different VLAN."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "2",
+      "Front": "Subinterface",
+      "Back": "A logical division of a physical router interface, each with its own IP address and 802.1Q encapsulation. This allows one physical port to support routing for dozens of different VLANs."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "2",
+      "Front": "Switch Virtual Interface",
+      "Back": "A logical Layer 3 interface on a multilayer switch that acts as the default gateway for a specific VLAN. It provides much faster inter-VLAN routing than traditional external routers."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "2",
+      "Front": "Multilayer Switch",
+      "Back": "A switch that is capable of making both Layer 2 and Layer 3 forwarding decisions. It can route traffic between VLANs at hardware speeds using specialized ASIC chips."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "2",
+      "Front": "VLAN Leaking",
+      "Back": "A configuration error where a native VLAN mismatch on a trunk allows traffic to cross between different VLANs without a router. This is a significant security risk and must be avoided."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "2",
+      "Front": "802.1Q Priority Field",
+      "Back": "A 3-bit field within the 802.1Q tag used for Quality of Service marking. It allows switches to prioritize critical traffic like voice or video as it crosses trunk links."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "2",
+      "Front": "VLAN Pruning",
+      "Back": "A technique used to restrict the transmission of broadcast and unknown unicast traffic over a trunk link to only the VLANs that are actively present on the receiving switch."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "2",
+      "Front": "Show Interfaces Trunk",
+      "Back": "A critical Cisco IOS command used to verify the status of trunk links. It displays which ports are trunking, the protocol used, the native VLAN, and the list of allowed VLANs."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "1",
+      "Front": "Show Vlan Brief",
+      "Back": "A standard Cisco command used to verify VLAN configuration. it provides a concise list of all active VLANs and the physical access ports currently assigned to each one."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "2",
+      "Front": "Data VLAN",
+      "Back": "A standard VLAN configured on an access port to carry only user-generated traffic. It is typically isolated from management and voice traffic for improved security and performance."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "2",
+      "Front": "Management VLAN",
+      "Back": "A specific VLAN used for administrative access to network devices via SSH, Telnet, or SNMP. It should be kept separate from user data VLANs to protect the network's control plane."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "2",
+      "Front": "Black Hole VLAN",
+      "Back": "A security best practice where all unused switch ports are assigned to an isolated, non-routed VLAN. This prevents unauthorized devices from gaining any network access if they are physically plugged in."
+    }
+  ]
+}{
+  "status": "completed",
+  "appName": "ccna",
+  "flashcards": [
+    {
+      "Topic": "2",
+      "Subtopic": "3",
+      "Front": "Cisco Discovery Protocol",
+      "Back": "A Cisco-proprietary Layer 2 protocol that allows network devices to share information about themselves with directly connected neighbors. It provides details like the device ID, software version, and capabilities."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "3",
+      "Front": "LLDP",
+      "Back": "An industry-standard, vendor-neutral Layer 2 discovery protocol similar to CDP. It allows devices from different manufacturers to discover and share information with one another on a local network segment."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "3",
+      "Front": "Neighbor Table",
+      "Back": "A local database on a switch or router that stores information gathered via CDP or LLDP. It is essential for troubleshooting physical connectivity and mapping the network topology."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "4",
+      "Front": "EtherChannel",
+      "Back": "A technology that allows multiple physical Ethernet links to be combined into a single logical link between two switches. This provides increased bandwidth and automatic redundancy without causing loops."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "4",
+      "Front": "Port-Channel",
+      "Back": "The logical interface created when multiple physical ports are bundled together using EtherChannel. It is treated as a single interface by the spanning tree protocol and routing table."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "4",
+      "Front": "LACP",
+      "Back": "An industry-standard protocol (802.3ad) used to dynamically negotiate the formation of an EtherChannel. It allows switches from different vendors to bundle links together automatically."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "4",
+      "Front": "PAgP",
+      "Back": "A Cisco-proprietary protocol used to automate the creation of EtherChannels. It is the legacy equivalent of LACP and is rarely used in modern multi-vendor environments."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "4",
+      "Front": "EtherChannel Load Balancing",
+      "Back": "The process of distributing traffic across the physical links of a Port-Channel. It uses a mathematical hash of source and destination addresses to ensure that data flows are evenly spread."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "5",
+      "Front": "Spanning Tree Protocol",
+      "Back": "A Layer 2 protocol designed to prevent loops in redundant network topologies. It achieves this by logically blocking specific ports to ensure there is only one active path between any two devices."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "5",
+      "Front": "Root Bridge",
+      "Back": "The central reference point in a spanning tree topology. All other switches calculate their best path to this device, which is elected based on the lowest bridge ID."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "5",
+      "Front": "Bridge ID",
+      "Back": "An 8-byte value used by STP to elect the root bridge. It consists of a 2-byte bridge priority and the 6-byte MAC address of the switch."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "5",
+      "Front": "Root Port",
+      "Back": "The single port on a non-root switch that has the lowest path cost to reach the root bridge. Every switch except the root bridge must have exactly one root port."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "5",
+      "Front": "Designated Port",
+      "Back": "A switch port that is responsible for forwarding traffic onto a specific network segment in an STP topology. Every active segment must have exactly one designated port."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "5",
+      "Front": "Blocking State",
+      "Back": "An STP port state where the interface does not forward user data or learn MAC addresses. It only listens for BPDUs to detect if the network topology has changed."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "5",
+      "Front": "Forwarding State",
+      "Back": "The final STP port state where the interface is fully operational. It can send and receive user data, learn MAC addresses, and process BPDUs."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "5",
+      "Front": "BPDU",
+      "Back": "The specific management frames used by spanning tree to exchange information between switches. They contain the data necessary to elect a root bridge and calculate the loop-free path."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "5",
+      "Front": "Hello Time",
+      "Back": "The interval at which a root bridge sends out configuration BPDUs to its neighbors. By default, this is set to 2 seconds on most Cisco switches."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "5",
+      "Front": "Max Age",
+      "Back": "The amount of time a switch waits after missing a BPDU before concluding that a topology change has occurred. The default value is 20 seconds."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "5",
+      "Front": "Forward Delay",
+      "Back": "The time a port spends in the listening and learning states before transitioning to forwarding. It is set to 15 seconds by default to ensure all switches have converged."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "5",
+      "Front": "Rapid PVST+",
+      "Back": "Cisco's default spanning tree mode that provides significantly faster convergence than the original STP. It maintains a separate spanning tree instance for each VLAN to allow for load balancing."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "5",
+      "Front": "PortFast",
+      "Back": "A Cisco feature that allows an access port to immediately skip the listening and learning states and enter forwarding. It is only used for ports connected to end-user devices."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "5",
+      "Front": "BPDU Guard",
+      "Back": "A security feature that automatically disables a PortFast-enabled port if it receives a BPDU. This prevents unauthorized switches from being connected to the network edge."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "5",
+      "Front": "Bridge Priority",
+      "Back": "A configurable value between 0 and 61440 used to influence the root bridge election. Setting this to a lower value increases the likelihood that a switch will become the root."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "5",
+      "Front": "STP Path Cost",
+      "Back": "A value assigned to an interface based on its speed, used by STP to calculate the shortest path to the root bridge. Faster links have lower costs (e.g., 10 Gbps cost is 2)."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "5",
+      "Front": "Learning State",
+      "Back": "An intermediate STP state where a port does not yet forward data but begins to populate the MAC address table based on incoming frames."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "5",
+      "Front": "Listening State",
+      "Back": "The first transition state in traditional STP where a port processes BPDUs to determine the network topology but does not yet learn MAC addresses or forward data."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "5",
+      "Front": "Secondary Root Bridge",
+      "Back": "A switch configured with a slightly higher priority than the primary root. It is designed to take over the root bridge role immediately if the primary device fails."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "5",
+      "Front": "Alternate Port",
+      "Back": "A port in Rapid STP that has an alternative path to the root bridge but is currently blocked. It can transition to a root port almost instantly if the primary path fails."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "5",
+      "Front": "Backup Port",
+      "Back": "A port in Rapid STP that provides a redundant path to the same network segment. It remains blocked unless the designated port for that segment fails."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "5",
+      "Front": "Edge Port",
+      "Back": "The Rapid STP term for a port connected to an end-user device. When PortFast is enabled, the switch treats the port as an edge port, allowing for immediate forwarding."
+    }
+  ]
+}{
+  "status": "completed",
+  "appName": "ccna",
+  "flashcards": [
+    {
+      "Topic": "2",
+      "Subtopic": "6",
+      "Front": "Autonomous AP Architecture",
+      "Back": "A decentralized wireless design where each access point is managed and configured independently. The AP handles all security, management, and traffic forwarding functions without a centralized controller."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "6",
+      "Front": "Cloud-Based AP Architecture",
+      "Back": "A wireless model where access points are managed through a centralized cloud platform like Cisco Meraki. This allows for easy scalability and remote management without the need for on-premises hardware controllers."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "6",
+      "Front": "Split-MAC Architecture",
+      "Back": "The mechanism used in lightweight AP designs where time-sensitive tasks are handled by the AP, while management and security tasks are offloaded to a central controller."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "6",
+      "Front": "Local Mode (AP)",
+      "Back": "The default operating mode for a lightweight access point. It provides active wireless service to clients while simultaneously scanning the environment for interference and rogue devices."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "6",
+      "Front": "FlexConnect Mode",
+      "Back": "An AP mode designed for branch office deployments. It allows the AP to continue forwarding local traffic even if the connection to the central Wireless LAN Controller is lost."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "6",
+      "Front": "Monitor Mode (AP)",
+      "Back": "A specialized AP mode where the device does not provide any wireless service to clients. Instead, it acts as a dedicated sensor to detect interference, IDS events, and rogue access points."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "6",
+      "Front": "Sniffer Mode (AP)",
+      "Back": "An AP mode used for troubleshooting where the device captures all wireless traffic on a specific channel and forwards it to a remote server for detailed packet analysis."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "7",
+      "Front": "Wireless LAN Controller",
+      "Back": "A centralized device used to manage and configure multiple lightweight access points. It simplifies wireless network administration by handling security, roaming, and radio frequency management."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "7",
+      "Front": "Link Aggregation (WLC)",
+      "Back": "A configuration on a Cisco WLC that bundles all of its physical distribution ports into a single logical interface. This provides high-speed, redundant connectivity to the wired network."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "7",
+      "Front": "CAPWAP Data Tunnel",
+      "Back": "A secure tunnel used to transport user traffic between a lightweight access point and its controller. It ensures that all wireless data is centrally processed and secured by the WLC."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "7",
+      "Front": "CAPWAP Control Tunnel",
+      "Back": "A management tunnel used to exchange configuration and status information between an AP and a WLC. It uses DTLS encryption to protect the control plane from eavesdropping."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "8",
+      "Front": "WLC Management Interface",
+      "Back": "The primary logical interface used for administrative access to the Wireless LAN Controller. it is typically assigned a static IP address and is used for SSH and HTTPS management."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "8",
+      "Front": "Out-of-Band Management (WLC)",
+      "Back": "Accessing a WLC through a dedicated physical port that is separate from the data traffic. This ensures that administrators can still reach the device even if the main network is down."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "8",
+      "Front": "RADIUS",
+      "Back": "An industry-standard protocol used for centralized authentication, authorization, and accounting. It is the primary method used to verify user credentials in enterprise wireless networks."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "8",
+      "Front": "TACACS+",
+      "Back": "A Cisco-proprietary AAA protocol that provides more granular control than RADIUS. It is typically used for managing administrative access to networking hardware like routers and switches."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "9",
+      "Front": "WLC Dashboard",
+      "Back": "The main GUI screen of a Cisco Wireless LAN Controller. It provides a high-level overview of the network's health, including the number of active clients, APs, and any critical alerts."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "9",
+      "Front": "WLAN ID",
+      "Back": "A unique numerical identifier assigned to a specific wireless network on a WLC. A single controller can support multiple WLANs, each with its own SSID and security settings."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "9",
+      "Front": "WLAN Security Profile",
+      "Back": "The specific set of authentication and encryption parameters defined for a wireless network in the WLC GUI. It includes options like WPA2-PSK or 802.1X enterprise authentication."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "9",
+      "Front": "Dynamic Interface (WLC)",
+      "Back": "A logical interface on a WLC that maps a specific WLAN to a physical VLAN on the wired network. It serves as the bridge between the wireless and wired infrastructures."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "9",
+      "Front": "SSID Broadcast",
+      "Back": "A setting in the WLC GUI that determines if the network name should be visible to nearby devices. Disabling this hides the network but is not a robust security measure."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "9",
+      "Front": "QoS Profile (WLC)",
+      "Back": "A configuration that defines the priority level for wireless traffic. Profiles like 'Platinum' are used for voice, while 'Bronze' is typically used for guest or background traffic."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "9",
+      "Front": "Advanced WLAN Settings",
+      "Back": "A section in the WLC GUI used to fine-tune network performance. It includes options for session timeouts, load balancing, and client exclusion policies."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "9",
+      "Front": "AP Join Process",
+      "Back": "The sequence of steps a lightweight access point takes to discover and register with a controller. This can be automated using DHCP options, DNS lookups, or local broadcasts."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "6",
+      "Front": "Embedded WLC Architecture",
+      "Back": "A wireless design where the controller software runs directly on a switch. This provides a compact, integrated solution for small to medium-sized campus environments."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "6",
+      "Front": "Mobility Express",
+      "Back": "A Cisco wireless solution where the WLC function is hosted on an access point. It allows one AP to act as a controller for up to 100 other access points in the network."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "7",
+      "Front": "WLC Distribution System Port",
+      "Back": "The physical interface on a controller used for connection to the wired switch infrastructure. It carries both management traffic and encapsulated user data."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "8",
+      "Front": "Console Port Access",
+      "Back": "A physical out-of-band management method used for the initial setup or recovery of a WLC. It requires a serial connection and a terminal emulation program."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "9",
+      "Front": "Radio Resource Management",
+      "Back": "An automated feature on a WLC that dynamically adjusts the power levels and channels of all connected access points to optimize performance and minimize interference."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "9",
+      "Front": "CleanAir Technology",
+      "Back": "A Cisco-proprietary feature that allows access points to detect, identify, and mitigate non-Wi-Fi interference from devices like microwaves or cordless phones."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "9",
+      "Front": "Client Exclusion",
+      "Back": "A security feature on a WLC that temporarily blocks a wireless client after a certain number of failed authentication attempts. This helps protect the network from brute-force attacks."
+    }
+  ]
+}{
+  "status": "completed",
+  "appName": "ccna",
+  "flashcards": [
+    {
+      "Topic": "3",
+      "Subtopic": "1",
+      "Front": "Routing Table",
+      "Back": "A data file stored in a router's memory that lists known network paths. The router uses this information to determine the best next hop for any given destination IP address."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "1",
+      "Front": "Administrative Distance",
+      "Back": "A value used by routers to rank the reliability of different routing information sources. When multiple paths to the same network exist, the router chooses the one with the lowest AD."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "1",
+      "Front": "Routing Metric",
+      "Back": "A numerical value used by a routing protocol to determine the best path among multiple routes to the same destination. Different protocols use different criteria, such as hop count or bandwidth."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "1",
+      "Front": "Next Hop",
+      "Back": "The IP address of the adjacent router interface that a packet should be sent to on its way to the final destination. It represents the immediate following step in the routing path."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "1",
+      "Front": "Outgoing Interface",
+      "Back": "The physical or logical port on the local router that a packet will exit through to reach its next destination. It is determined by the routing table lookup process."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "1",
+      "Front": "Gateway of Last Resort",
+      "Back": "The default route used by a router when no specific entry in the routing table matches a packet's destination IP address. It typically points toward the internet or a core router."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "1",
+      "Front": "Directly Connected Route",
+      "Back": "A routing table entry for a network that is physically attached to one of the router's own interfaces. These routes have the lowest possible administrative distance of 0."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "1",
+      "Front": "Static Route",
+      "Back": "A network path that is manually configured by an administrator. It is reliable and efficient for small networks but does not automatically adapt to topology changes. Its default AD is 1."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "1",
+      "Front": "Dynamic Route",
+      "Back": "A network path learned automatically by a router using a protocol like OSPF or EIGRP. These routes can adapt in real-time to network failures and changes in topology."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "1",
+      "Front": "Routing Protocol Code",
+      "Back": "The short character prefix (like 'C', 'S', or 'O') seen in a routing table that identifies the source of the route. For example, 'O' stands for OSPF and 'L' stands for local."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "2",
+      "Front": "Longest Prefix Match",
+      "Back": "The fundamental rule a router uses to choose between multiple matching routes. It always selects the entry with the most specific (longest) subnet mask to forward the packet."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "2",
+      "Front": "Default Route",
+      "Back": "A special type of static route represented as 0.0.0.0/0. It matches every possible destination IP address and is used only when no more specific match exists in the routing table."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "2",
+      "Front": "Host Route",
+      "Back": "An extremely specific routing entry for a single IP address, denoted by a /32 mask in IPv4 or a /128 mask in IPv6. It always wins the longest prefix match over any subnet route."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "2",
+      "Front": "Recursive Lookup",
+      "Back": "The process where a router must perform multiple routing table searches to find the outgoing interface for a next-hop IP address. Modern routers use CEF to avoid this overhead."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "2",
+      "Front": "Cisco Express Forwarding",
+      "Back": "A high-performance Layer 3 switching technology that pre-calculates the forwarding information and stores it in a specialized table. This allows for extremely fast packet processing in hardware."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "2",
+      "Front": "FIB Table",
+      "Back": "The database used by CEF that contains a mirrored copy of the routing table information optimized for fast lookups. It maps destination networks directly to their outgoing interfaces."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "2",
+      "Front": "Adjacency Table",
+      "Back": "A CEF-related table that stores the pre-calculated Layer 2 header information for all directly connected neighbors. This allows the router to encapsulate packets without repeated ARP lookups."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "2",
+      "Front": "Process Switching",
+      "Back": "The slowest method of packet forwarding where every individual packet must be processed by the router's main CPU. It is only used as a fallback for traffic that cannot be handled in hardware."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "2",
+      "Front": "Fast Switching",
+      "Back": "A legacy caching mechanism where only the first packet of a flow is processed by the CPU. The forwarding decision is then cached in memory for all subsequent packets in the same flow."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "2",
+      "Front": "RIB (Routing Information Base)",
+      "Back": "The formal name for the IP routing table. It serves as the master database for all paths learned from static configuration and dynamic routing protocols."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "2",
+      "Front": "Convergence",
+      "Back": "The state where all routers in a network have updated their routing tables and agree on the best paths to all destinations. Fast convergence is essential for minimizing downtime after a failure."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "1",
+      "Front": "Successor (EIGRP)",
+      "Back": "The term for the primary best path to a destination network in an EIGRP topology. It is the route that is actively installed in the IP routing table."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "1",
+      "Front": "Feasible Successor",
+      "Back": "A backup path in EIGRP that is guaranteed to be loop-free. If the primary successor fails, the feasible successor can be promoted to the routing table immediately without a new calculation."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "1",
+      "Front": "Autonomous System",
+      "Back": "A collection of networks under a single administrative control that shares a common routing strategy. Each system is identified by a unique number (ASN) for global internet routing."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "1",
+      "Front": "Interior Gateway Protocol",
+      "Back": "A routing protocol designed for use within a single autonomous system. Common examples include OSPF, EIGRP, and RIP."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "1",
+      "Front": "Exterior Gateway Protocol",
+      "Back": "A routing protocol used to exchange path information between different autonomous systems. BGP is the only protocol currently used for this purpose on the global internet."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "1",
+      "Front": "Distance Vector Protocol",
+      "Back": "A routing algorithm that determines the best path based on the direction (vector) and distance (metric) to a network. It periodically sends its entire routing table to its neighbors."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "1",
+      "Front": "Link-State Protocol",
+      "Back": "A sophisticated routing algorithm where each router builds a complete map of the entire network topology. Protocols like OSPF use this approach to calculate the most efficient paths."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "1",
+      "Front": "Equal-Cost Multi-Path",
+      "Back": "A routing feature that allows a router to install multiple paths to the same destination in the routing table if they have identical metrics. It enables load balancing across redundant links."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "1",
+      "Front": "Floating Static Route",
+      "Back": "A static route configured with a higher administrative distance than the primary dynamic route. It remains hidden in the configuration until the primary path fails, providing a redundant backup."
+    }
+  ]
+}{
+  "status": "completed",
+  "appName": "ccna",
+  "flashcards": [
+    {
+      "Topic": "3",
+      "Subtopic": "3",
+      "Front": "IPv4 Static Route",
+      "Back": "A manual routing entry configured using the 'ip route' command. It explicitly defines the destination network, subnet mask, and the next-hop IP address or exit interface."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "3",
+      "Front": "IPv6 Static Route",
+      "Back": "A manual routing entry configured using the 'ipv6 route' command. It specifies the destination IPv6 prefix and the next-hop address, which can be a global unicast or a link-local address."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "3",
+      "Front": "Floating Static Route",
+      "Back": "A backup static route configured with a higher administrative distance than the primary dynamic route. It only appears in the routing table if the primary path fails."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "3",
+      "Front": "Fully Specified Static Route",
+      "Back": "A static route that specifies both the exit interface and the next-hop IP address. This avoids the need for recursive lookups and is recommended for multi-access interfaces like Ethernet."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "3",
+      "Front": "Summary Static Route",
+      "Back": "A single static route that represents multiple contiguous smaller networks. This reduces the number of entries in the routing table, conserving memory and CPU resources."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "4",
+      "Front": "OSPFv2",
+      "Back": "An open-standard link-state routing protocol designed for IPv4 networks. It uses the SPF algorithm to calculate the shortest path to all destinations within an autonomous system."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "4",
+      "Front": "Router ID (OSPF)",
+      "Back": "A unique 32-bit number used to identify each router in an OSPF network. It is chosen based on the highest manual ID, the highest loopback IP, or the highest physical interface IP."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "4",
+      "Front": "OSPF Area 0",
+      "Back": "The backbone area in an OSPF network. All other areas must connect directly to Area 0 to ensure that routing information can be exchanged between different parts of the network."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "4",
+      "Front": "OSPF Neighbor Table",
+      "Back": "A list of all adjacent routers with which an OSPF router has established a bidirectional communication link. It is essential for sharing topology updates."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "4",
+      "Front": "Link State Database",
+      "Back": "A complete map of the entire OSPF network topology stored in every router's memory. All routers within the same area must have an identical LSDB to ensure consistent path calculation."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "4",
+      "Front": "Shortest Path First Algorithm",
+      "Back": "The mathematical calculation used by OSPF to determine the most efficient route to every destination. It uses the total cumulative cost of all links along the path as its primary metric."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "4",
+      "Front": "Designated Router",
+      "Back": "A router elected on a multi-access network (like Ethernet) to manage the distribution of OSPF updates. This reduces the total number of adjacencies and management traffic on the segment."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "4",
+      "Front": "Backup Designated Router",
+      "Back": "A router that stands ready to take over the DR role immediately if the primary device fails. This ensures that OSPF updates continue to flow without a new election process."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "4",
+      "Front": "OSPF Cost",
+      "Back": "The metric used by OSPF to rank different paths. It is calculated by dividing a reference bandwidth (usually 100 Mbps) by the interface's actual bandwidth."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "4",
+      "Front": "Hello Packet (OSPF)",
+      "Back": "A periodic message sent by OSPF routers to discover neighbors and maintain adjacencies. It includes essential parameters like the Hello interval, Dead interval, and Area ID."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "4",
+      "Front": "Dead Interval",
+      "Back": "The amount of time an OSPF router waits after missing a Hello packet before declaring a neighbor down. By default, this is four times the Hello interval."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "4",
+      "Front": "Link State Advertisement",
+      "Back": "A packet containing information about a router's local links and their states. LSAs are flooded throughout an OSPF area to ensure all routers have a complete and accurate topology map."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "4",
+      "Front": "Area Border Router",
+      "Back": "An OSPF router that has interfaces connected to two or more different areas. It is responsible for summarizing and passing routing information between Area 0 and the other areas."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "4",
+      "Front": "Passive Interface",
+      "Back": "A configuration that prevents a router from sending OSPF Hello packets out a specific port while still including that network in its topology updates. It is typically used for ports connected to end-user segments."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "4",
+      "Front": "Wildcard Mask",
+      "Back": "A sequence of bits used in OSPF configuration to specify which parts of an IP address must match a given network command. It is the binary opposite of a standard subnet mask."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "5",
+      "Front": "First Hop Redundancy Protocol",
+      "Back": "A class of protocols that allow multiple physical routers to act as a single virtual default gateway for a group of hosts. This provides high availability and automatic failover for the network's exit point."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "5",
+      "Front": "HSRP",
+      "Back": "A Cisco-proprietary redundancy protocol that allows two or more routers to share a single virtual IP and MAC address. It ensures that hosts always have a working default gateway even if a physical router fails."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "5",
+      "Front": "VRRP",
+      "Back": "An open-standard alternative to Cisco's HSRP. It allows routers from different vendors to work together to provide a highly available default gateway for local network hosts."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "5",
+      "Front": "GLBP",
+      "Back": "A Cisco-proprietary FHRP that goes beyond HSRP by providing active load balancing across multiple physical routers. It allows all routers in a redundancy group to participate in forwarding traffic."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "5",
+      "Front": "Virtual IP Address",
+      "Back": "A shared IP address assigned to an FHRP redundancy group. Hosts use this address as their default gateway, unaware that it is actually being serviced by multiple physical routers."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "5",
+      "Front": "HSRP Active Router",
+      "Back": "The specific physical router in an HSRP group that is currently responsible for forwarding all traffic sent to the virtual gateway address. Only one router can be active at a time."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "5",
+      "Front": "HSRP Standby Router",
+      "Back": "A router that monitors the active router's status and is prepared to take over the forwarding role immediately if the active device stops responding. This ensures continuous network connectivity."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "5",
+      "Front": "Preemption (HSRP)",
+      "Back": "An optional feature that allows a higher-priority router to regain the 'Active' role as soon as it comes back online, even if another router is currently servicing the virtual gateway."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "5",
+      "Front": "HSRP Priority",
+      "Back": "A configurable value (default 100) used to determine which router becomes the active gateway in an HSRP group. The device with the highest priority is elected as the primary forwarder."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "5",
+      "Front": "Gratuitous ARP",
+      "Back": "An ARP message sent by an FHRP router when it takes over the active role. It informs all switches on the segment to update their MAC tables so traffic is redirected to the new active device."
+    }
+  ]
+}{
+  "status": "completed",
+  "appName": "ccna",
+  "flashcards": [
+    {
+      "Topic": "4",
+      "Subtopic": "1",
+      "Front": "Static NAT",
+      "Back": "A one-to-one mapping between an internal private IP address and a specific external public IP address. It is typically used for internal servers that must be reachable from the internet."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "1",
+      "Front": "Dynamic NAT",
+      "Back": "A translation process where internal private addresses are mapped to the first available public address from a pre-defined pool. This allows for efficient use of a limited number of public IPs."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "1",
+      "Front": "Port Address Translation",
+      "Back": "Also known as NAT Overloading, it allows multiple private IP addresses to be mapped to a single public IP address using unique source port numbers to distinguish between sessions."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "1",
+      "Front": "Inside Local Address",
+      "Back": "The actual private IP address assigned to a host on the internal network. It is the address the device uses to communicate within its own local segment."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "1",
+      "Front": "Inside Global Address",
+      "Back": "The public IP address that represents an internal host to the outside world. It is the translated address seen by devices on the internet."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "1",
+      "Front": "Outside Global Address",
+      "Back": "The public IP address assigned to a host on an external network, such as a web server. It is the destination address as seen from the internal network."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "1",
+      "Front": "Outside Local Address",
+      "Back": "The IP address of an external host as it appears to the internal network. In most standard NAT configurations, this is identical to the outside global address."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "1",
+      "Front": "NAT Pool",
+      "Back": "A defined range of public IP addresses that a router can use for dynamic translation. The router assigns an address from this pool to internal devices as they request internet access."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "1",
+      "Front": "IP NAT Inside Source",
+      "Back": "The base Cisco IOS command used to define which internal traffic should be translated. It is used for both static mappings and dynamic translations using ACLs and pools."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "1",
+      "Front": "Overload Keyword",
+      "Back": "The specific addition to a NAT command that enables Port Address Translation. It allows a single public IP address, such as the one on the router's WAN port, to support hundreds of internal devices."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "2",
+      "Front": "Network Time Protocol",
+      "Back": "A protocol used to synchronize the clocks of computer systems over a network. Accurate time is essential for log file analysis, security certificates, and scheduled network tasks."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "2",
+      "Front": "NTP Stratum",
+      "Back": "A hierarchical level that indicates the distance of a device from an authoritative time source. Stratum 0 is a high-precision clock, while Stratum 1 is a server directly connected to it."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "2",
+      "Front": "NTP Client Mode",
+      "Back": "A configuration where a network device requests and receives time updates from a designated NTP server. This ensures the device's clock remains accurate and synchronized."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "2",
+      "Front": "NTP Master",
+      "Back": "A Cisco IOS command that configures a router to act as an authoritative NTP server for other devices on the network, even if it is not synchronized to an external source."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "2",
+      "Front": "NTP Authentication",
+      "Back": "A security feature that ensures a device only synchronizes its time with trusted and verified NTP servers. It protects the network from malicious time spoofing attacks."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "3",
+      "Front": "DHCP",
+      "Back": "A network protocol that automatically assigns IP addresses and other configuration parameters like subnet masks and default gateways to devices on a network."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "3",
+      "Front": "DHCP DORA Process",
+      "Back": "The four-step sequence a client uses to obtain an IP address: Discover (broadcast), Offer (from server), Request (from client), and Acknowledgment (from server)."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "3",
+      "Front": "DHCP Relay Agent",
+      "Back": "A router feature that forwards DHCP broadcast requests from clients to a server on a different subnet. This allows for a single centralized DHCP server to support multiple logical networks."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "3",
+      "Front": "IP Helper-Address",
+      "Back": "The specific Cisco IOS command used to enable a DHCP relay agent on an interface. it converts local broadcasts into unicast packets directed at the central server's IP address."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "3",
+      "Front": "DHCP Exclusion",
+      "Back": "A range of IP addresses within a DHCP pool that the server is instructed not to assign to clients. These are typically reserved for static assignment to devices like routers and servers."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "3",
+      "Front": "DHCP Lease",
+      "Back": "The specific amount of time for which a client is permitted to use an assigned IP address. The client must renew the lease periodically to maintain its network connectivity."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "3",
+      "Front": "DHCP Reservation",
+      "Back": "A configuration on a DHCP server that ensures a specific device (identified by its MAC address) always receives the same IP address every time it connects to the network."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "3",
+      "Front": "Domain Name System",
+      "Back": "An essential network service that translates human-readable hostnames (like www.google.com) into their corresponding IP addresses so that devices can locate one another."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "3",
+      "Front": "DNS Recursive Query",
+      "Back": "A request where a client asks a DNS server to resolve a name, and the server takes responsibility for finding the answer by querying other servers if necessary."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "3",
+      "Front": "DNS Iterative Query",
+      "Back": "A request where a DNS server provides the best answer it currently has, which might be a referral to another server that is more likely to know the correct IP address."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "3",
+      "Front": "A Record",
+      "Back": "The most common type of DNS record, which maps a hostname to a 32-bit IPv4 address. It is the fundamental link between human-readable names and network locations."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "3",
+      "Front": "AAAA Record",
+      "Back": "A DNS record type used to map a hostname to a 128-bit IPv6 address. It performs the same function as a standard 'A' record but for the next-generation IP protocol."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "3",
+      "Front": "CNAME Record",
+      "Back": "A DNS record that acts as an alias, pointing one hostname to another canonical hostname. This allows multiple names to resolve to the same underlying IP address."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "3",
+      "Front": "DNS Cache",
+      "Back": "A temporary storage area on a host or server that keeps track of recently resolved DNS queries. This significantly speeds up subsequent requests for the same hostname."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "3",
+      "Front": "NS Record",
+      "Back": "A DNS record that specifies which server is authoritative for a given domain. It tells other servers where to find the official records for that specific part of the DNS hierarchy."
+    }
+  ]
+}{
+  "status": "completed",
+  "appName": "ccna",
+  "flashcards": [
+    {
+      "Topic": "4",
+      "Subtopic": "4",
+      "Front": "SNMP Manager",
+      "Back": "The centralized software system used to monitor and manage network devices. It sends requests to and receives information from SNMP agents running on routers, switches, and servers."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "4",
+      "Front": "SNMP Agent",
+      "Back": "A software component running on a network device that maintains its management data and responds to queries from the SNMP manager. it can also proactively send notifications when specific events occur."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "4",
+      "Front": "Management Information Base",
+      "Back": "A structured hierarchical database used by SNMP that defines all the objects a device can monitor. Each object is identified by a unique Object Identifier (OID)."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "4",
+      "Front": "SNMP Get Request",
+      "Back": "A message sent by an SNMP manager to an agent to retrieve the value of a specific management object, such as the current traffic level on a switch port."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "4",
+      "Front": "SNMP Set Request",
+      "Back": "A command sent by an SNMP manager to an agent to modify a configuration value on a device, such as shutting down a physical interface or changing a system name."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "4",
+      "Front": "SNMP Trap",
+      "Back": "An unsolicited notification sent by an SNMP agent to a manager to report a significant event, such as a link failure or an authentication error. it is an unreliable (UDP) message."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "4",
+      "Front": "SNMP Inform",
+      "Back": "A notification similar to a trap, but it requires an acknowledgement from the SNMP manager. if no ACK is received, the agent will retransmit the message, making it more reliable."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "4",
+      "Front": "SNMP v2c",
+      "Back": "The most commonly used version of SNMP. it introduces bulk transfers and better error handling but still relies on simple 'community strings' for security, which are sent in plain text."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "4",
+      "Front": "SNMP v3",
+      "Back": "The most secure version of SNMP, providing robust authentication and encryption. It uses USM (User-based Security Model) and VACM (View-based Access Control Model) to protect management data."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "4",
+      "Front": "Community String",
+      "Back": "A simple password used in SNMP v1 and v2c to authenticate communication between the manager and the agent. There are typically two types: 'read-only' and 'read-write'."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "5",
+      "Front": "Syslog",
+      "Back": "A standard protocol for sending system log or event messages to a central server. it allows administrators to monitor device health, security events, and configuration changes from a single location."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "5",
+      "Front": "Syslog Severity Levels",
+      "Back": "A standardized scale from 0 to 7 used to rank the importance of a log message. Level 0 is the most critical (Emergency), while Level 7 is the least critical (Debugging)."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "5",
+      "Front": "Level 0: Emergency",
+      "Back": "The highest syslog severity level, indicating that the entire system is unusable. This is reserved for catastrophic failures that require immediate attention."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "5",
+      "Front": "Level 3: Error",
+      "Back": "A syslog severity level indicating that a specific component or process has failed. While serious, it typically does not cause a total system outage."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "5",
+      "Front": "Level 4: Warning",
+      "Back": "A syslog severity level that alerts administrators to potential problems that might become serious if not addressed. it is used for non-critical errors or unusual events."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "5",
+      "Front": "Level 5: Notification",
+      "Back": "A syslog severity level used for significant normal operational events, such as an interface changing state (UP/DOWN) or a configuration change being made."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "5",
+      "Front": "Level 7: Debugging",
+      "Back": "The lowest syslog severity level, containing highly detailed information typically used only by engineers for troubleshooting specific software issues."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "5",
+      "Front": "Logging Buffered",
+      "Back": "A Cisco IOS command that configures a device to store log messages in its local RAM. This allows administrators to view the recent history of events even if no external syslog server is available."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "5",
+      "Front": "Logging Trap",
+      "Back": "A configuration command that defines the minimum severity level of messages that should be sent to an external syslog server. Only messages at this level or higher will be forwarded."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "5",
+      "Front": "Syslog Facility",
+      "Back": "A label used to categorize the source of a log message, such as 'auth', 'cron', or 'local0'. it allows the syslog server to sort and store messages from different systems into separate files."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "6",
+      "Front": "DHCP Relay",
+      "Back": "A feature that allows a router to forward DHCP broadcast requests from clients to a server on a different network. it is essential for centralizing IP address management across multiple subnets."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "6",
+      "Front": "IP Helper-Address",
+      "Back": "The Cisco IOS command used to enable a DHCP relay agent. it converts incoming local broadcasts for several protocols, including DHCP and DNS, into unicast packets for a specific server."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "6",
+      "Front": "DHCP Client Mode",
+      "Back": "A configuration on a Cisco router interface (using 'ip address dhcp') that allows the device to automatically obtain its own IP address and subnet mask from a central server."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "6",
+      "Front": "DHCP Pool",
+      "Back": "The defined range of IP addresses that a DHCP server is permitted to assign to clients on a specific network segment. Each pool is associated with a single subnet."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "6",
+      "Front": "DHCP Option 150",
+      "Back": "A specialized DHCP configuration used in VoIP environments to provide the IP addresses of TFTP servers to IP phones, allowing them to download their configuration and firmware."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "6",
+      "Front": "DHCP Option 43",
+      "Back": "A vendor-specific DHCP option often used to provide the IP addresses of Wireless LAN Controllers to lightweight access points during the join process."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "6",
+      "Front": "DHCP Conflict Detection",
+      "Back": "A process where a DHCP server pings an IP address before assigning it to a client to ensure no other device is already using it statically. This prevents IP address conflicts on the network."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "6",
+      "Front": "DHCP Snooping",
+      "Back": "A Layer 2 security feature that monitors DHCP traffic on a switch. it blocks unauthorized DHCP servers and prevents various attacks like DHCP starvation and spoofing."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "6",
+      "Front": "DHCP Binding Table",
+      "Back": "A database maintained by a DHCP server that maps the MAC address of each client to its assigned IP address and the remaining duration of its lease."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "6",
+      "Front": "Default Lease Time",
+      "Back": "The pre-configured duration for which a DHCP client is allowed to use its assigned IP address. it is typically set to 24 hours on many Cisco systems but is highly configurable."
+    }
+  ]
+}{
+  "status": "completed",
+  "appName": "ccna",
+  "flashcards": [
+    {
+      "Topic": "4",
+      "Subtopic": "4",
+      "Front": "Quality of Service",
+      "Back": "A set of technologies used to manage network traffic and ensure that critical applications receive the necessary bandwidth, low latency, and minimal packet loss required for proper operation."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "4",
+      "Front": "Classification (QoS)",
+      "Back": "The process of identifying and grouping network traffic into different categories based on specific criteria like port numbers, IP addresses, or application types. it is the first step in applying QoS policies."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "4",
+      "Front": "Marking (QoS)",
+      "Back": "The action of changing specific bits in a packet header (like DSCP or CoS) to identify its priority level. This allows other network devices to recognize and apply the appropriate QoS treatment to the traffic."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "4",
+      "Front": "Differentiated Services Code Point",
+      "Back": "A 6-bit field in the IPv4 or IPv6 header used for advanced traffic marking. it provides up to 64 different priority levels, allowing for granular control over network performance."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "4",
+      "Front": "Class of Service",
+      "Back": "A 3-bit marking field found in the 802.1Q Ethernet header. it is used to prioritize traffic at Layer 2 across trunk links, providing 8 different priority levels."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "4",
+      "Front": "Queuing (QoS)",
+      "Back": "A mechanism that stores packets in separate memory buffers when an outgoing interface is congested. The router then decides which queue to service first based on the assigned priority levels."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "4",
+      "Front": "Congestion Avoidance",
+      "Back": "A set of techniques, such as Weighted Random Early Detection (WRED), that proactively drop packets when buffers begin to fill up. This prevents total congestion and ensures that high-priority traffic is protected."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "4",
+      "Front": "Policing (QoS)",
+      "Back": "A traffic management tool that strictly enforces a maximum bit rate by immediately dropping any packets that exceed the configured limit. it is typically used at the network edge to prevent resource abuse."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "4",
+      "Front": "Shaping (QoS)",
+      "Back": "A technique that limits the output bit rate of an interface by temporarily buffering excess packets in a queue. This smooths out traffic bursts and provides a more consistent data flow than policing."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "4",
+      "Front": "Trust Boundary",
+      "Back": "The specific point in a network where QoS markings on incoming packets are either accepted and trusted or stripped and reassigned. it is typically located at the access layer switch port."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "4",
+      "Front": "Low Latency Queuing",
+      "Back": "A queuing method that provides a strict priority queue for time-sensitive traffic like voice. This ensures that these packets are always sent first, minimizing delay and jitter."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "4",
+      "Front": "Jitter",
+      "Back": "The variation in the delay of received packets. High jitter can cause significant quality issues for real-time applications like VoIP and video conferencing, making QoS essential."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "4",
+      "Front": "Bandwidth (QoS)",
+      "Back": "The total capacity of a network link to transmit data. QoS tools ensure that this resource is allocated fairly and that critical applications always have the minimum amount they need to function."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "8",
+      "Front": "Secure Shell",
+      "Back": "A cryptographic network protocol used for secure remote access to a device's command-line interface. Unlike Telnet, it encrypts all communication, including usernames and passwords."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "8",
+      "Front": "SSH v2",
+      "Back": "The modern and much more secure version of the SSH protocol. it uses stronger encryption algorithms and is the standard requirement for managing Cisco networking hardware."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "8",
+      "Front": "VTY Lines",
+      "Back": "The logical ports on a Cisco device used for remote management access. For security, these should be configured to only allow SSH connections using the 'transport input ssh' command."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "8",
+      "Front": "RSA Key Pair",
+      "Back": "A set of cryptographic keys (public and private) generated on a router or switch to enable SSH. The private key remains on the device, while the public key is used for secure session negotiation."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "8",
+      "Front": "IP Domain-Name",
+      "Back": "A required configuration command for enabling SSH on a Cisco device. it provides the necessary suffix for generating the device's unique RSA encryption keys."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "8",
+      "Front": "Local Authentication (SSH)",
+      "Back": "A security configuration where a remote user's credentials are checked against a username and password stored directly in the device's own running configuration."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "8",
+      "Front": "Telnet",
+      "Back": "A legacy remote access protocol that sends all data in plain text. it is highly insecure and should be disabled on all production network devices in favor of SSH."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "9",
+      "Front": "Trivial File Transfer Protocol",
+      "Back": "A very simple, connectionless (UDP) protocol used for transferring files between network devices. it is commonly used for backing up configurations and downloading IOS images in local environments."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "9",
+      "Front": "File Transfer Protocol",
+      "Back": "A standard connection-oriented (TCP) protocol used for moving files between a client and a server. it is more reliable and supports larger file sizes than TFTP but requires more overhead."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "9",
+      "Front": "Binary Transfer Mode",
+      "Back": "The specific FTP transfer mode used for moving non-text files like Cisco IOS images. it ensures that the file content is transmitted bit-for-bit without any character translation."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "9",
+      "Front": "Flash Memory",
+      "Back": "The non-volatile storage on a Cisco device where the IOS operating system image is typically stored. Administrators use TFTP or FTP to upload new images to this memory for upgrades."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "9",
+      "Front": "Startup-Config",
+      "Back": "The configuration file stored in NVRAM that is loaded by a device when it boots up. it is a best practice to regularly back this file up to a remote TFTP or FTP server."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "9",
+      "Front": "Copy Running-Config TFTP",
+      "Back": "The standard Cisco IOS command used to upload the device's current active configuration to a remote TFTP server for backup and disaster recovery purposes."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "9",
+      "Front": "SCP (Secure Copy)",
+      "Back": "A secure alternative to FTP and TFTP that uses the SSH protocol to transfer files between devices. it provides both the encryption of SSH and the file management capabilities of RCP."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "9",
+      "Front": "FTP Passive Mode",
+      "Back": "An FTP connection method where the client initiates both the control and data connections to the server. This is often necessary when the client is located behind a NAT device or firewall."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "9",
+      "Front": "Archive (Cisco IOS)",
+      "Back": "A specialized feature in Cisco IOS that can automatically back up a device's configuration to a remote server whenever a change is made. it provides a history of configurations for auditing."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "9",
+      "Front": "Verify (Cisco IOS)",
+      "Back": "A command used to check the integrity of a file (like an IOS image) after it has been transferred. it typically uses an MD5 hash to ensure the file was not corrupted during the transfer."
+    }
+  ]
+}{
+  "status": "completed",
+  "appName": "ccna",
+  "flashcards": [
+    {
+      "Topic": "5",
+      "Subtopic": "1",
+      "Front": "Vulnerability",
+      "Back": "A weakness in a system, process, or design that could be exploited by a malicious actor to compromise security. Common examples include software bugs or poorly configured hardware."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "1",
+      "Front": "Threat",
+      "Back": "Any potential danger that could take advantage of a vulnerability to cause harm. it represents the possibility of a malicious act like data theft, service disruption, or unauthorized access."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "1",
+      "Front": "Exploit",
+      "Back": "A specific tool, technique, or piece of code used to take advantage of a vulnerability. it is the actual mechanism through which a threat actor gains access or causes damage."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "1",
+      "Front": "Mitigation",
+      "Back": "The actions taken to reduce the risk or impact of a threat. This includes applying software patches, configuring firewalls, and implementing strong authentication policies."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "1",
+      "Front": "Social Engineering",
+      "Back": "An attack method that relies on human interaction to trick people into revealing sensitive information or breaking security procedures. Examples include phishing and impersonation."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "1",
+      "Front": "Phishing",
+      "Back": "A common social engineering attack where fraudulent emails or messages are sent to trick users into providing credentials or clicking on malicious links that install malware."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "1",
+      "Front": "Malware",
+      "Back": "Malicious software designed to infiltrate, damage, or gain unauthorized access to a computer system. This broad category includes viruses, worms, trojans, and ransomware."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "1",
+      "Front": "Brute-Force Attack",
+      "Back": "A trial-and-error method used to guess passwords or encryption keys. Attackers use automated tools to try thousands of combinations until the correct one is found."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "2",
+      "Front": "Physical Access Control",
+      "Back": "Security measures designed to prevent unauthorized people from physically touching network equipment. Examples include locked server rooms, security cameras, and biometric scanners."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "2",
+      "Front": "Security Awareness Training",
+      "Back": "An educational program designed to teach employees about security risks and best practices. it is a critical defense against social engineering and human error."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "3",
+      "Front": "Enable Secret",
+      "Back": "The Cisco IOS command used to set a highly secure, hashed password for accessing privileged EXEC mode. it is much more secure than the older 'enable password' command."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "3",
+      "Front": "Console Password",
+      "Back": "A local security setting that requires a password for anyone physically connecting a terminal to the device's console port. it is the first line of defense for physical access."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "3",
+      "Front": "VTY Line Password",
+      "Back": "A password requirement for remote management access via Telnet or SSH. Configuring this is mandatory for allowing any remote CLI interaction with a Cisco device."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "3",
+      "Front": "Service Password-Encryption",
+      "Back": "A global Cisco IOS command that provides basic encryption for all plain-text passwords in the configuration file. While not robust, it prevents casual viewing of sensitive data."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "3",
+      "Front": "Login Local",
+      "Back": "A line configuration command that instructs the device to check a user's credentials against its own local database of usernames and passwords rather than a simple line password."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "4",
+      "Front": "Multi-Factor Authentication",
+      "Back": "A security requirement that forces users to provide two or more different types of evidence to verify their identity, such as a password and a one-time code from a smartphone."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "4",
+      "Front": "Password Complexity",
+      "Back": "A policy that requires passwords to be long and include a mix of uppercase letters, lowercase letters, numbers, and special symbols to resist guessing and brute-force attacks."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "4",
+      "Front": "Digital Certificate",
+      "Back": "An electronic file used to prove the identity of a device or user over a network. it is a highly secure alternative to passwords and is the basis for many encryption protocols."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "4",
+      "Front": "Biometrics",
+      "Back": "Authentication methods based on unique physical characteristics, such as fingerprints, facial recognition, or iris scans. They provide high security as they are difficult to replicate."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "4",
+      "Front": "Password Aging",
+      "Back": "A security policy that requires users to change their passwords periodically. This limits the amount of time an attacker can use a compromised set of credentials."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "4",
+      "Front": "Least Privilege Principle",
+      "Back": "A fundamental security concept where users and devices are granted only the minimum level of access necessary to perform their jobs. This limits the potential damage from a security breach."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "4",
+      "Front": "AAA (Security)",
+      "Back": "A framework for managing network security that stands for Authentication (who you are), Authorization (what you can do), and Accounting (what you actually did)."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "1",
+      "Front": "Denial of Service",
+      "Back": "A malicious attack that attempts to make a network resource or service unavailable to its intended users, typically by overwhelming it with a flood of useless traffic."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "1",
+      "Front": "Ransomware",
+      "Back": "A type of malware that encrypts a victim's files and demands payment in exchange for the decryption key. it is one of the most significant threats to modern organizations."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "1",
+      "Front": "Zero-Day Exploit",
+      "Back": "An attack that targets a software vulnerability that is unknown to the vendor or the public. Because no patch exists yet, these threats are extremely difficult to defend against."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "1",
+      "Front": "Man-in-the-Middle",
+      "Back": "An attack where a malicious actor secretly intercepts and possibly alters the communication between two parties who believe they are communicating directly with each other."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "3",
+      "Front": "Banner Motd",
+      "Back": "A Cisco IOS command used to display a legal warning message to anyone attempting to log into the device. it is an important part of a corporate security policy."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "3",
+      "Front": "SSH Timeout",
+      "Back": "A configuration that automatically disconnects an inactive remote session after a certain period. This prevents unauthorized users from taking over an abandoned management connection."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "4",
+      "Front": "RADIUS Server",
+      "Back": "A centralized server used to manage AAA services for a large number of network devices. it allows for a single point of management for user accounts and security policies."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "4",
+      "Front": "Hardware Token",
+      "Back": "A physical device, like a key fob or smart card, that generates a changing code used for multi-factor authentication. it provides a high level of security for sensitive access."
+    }
+  ]
+}{
+  "status": "completed",
+  "appName": "ccna",
+  "flashcards": [
+    {
+      "Topic": "5",
+      "Subtopic": "5",
+      "Front": "Site-to-Site VPN",
+      "Back": "A permanent encrypted tunnel between two locations, such as a head office and a branch. it allows devices at both sites to communicate securely over the internet as if they were on the same private network."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "5",
+      "Front": "Remote Access VPN",
+      "Back": "A temporary secure connection initiated by an individual user to gain access to a corporate network. it typically uses software on the user's device and can be based on SSL/TLS or IPsec protocols."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "5",
+      "Front": "IPsec",
+      "Back": "A suite of protocols used to secure IP communications by authenticating and encrypting each IP packet in a data stream. it is the industry standard for creating secure site-to-site VPN tunnels."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "5",
+      "Front": "Encapsulating Security Payload",
+      "Back": "An IPsec protocol that provides data confidentiality (encryption) and authentication. it encapsulates the original packet, ensuring that its contents cannot be read or tampered with during transit."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "5",
+      "Front": "IKE (Internet Key Exchange)",
+      "Back": "A protocol used in IPsec to establish a secure session between two devices. it handles the negotiation of encryption algorithms and the secure exchange of cryptographic keys."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "6",
+      "Front": "Access Control List",
+      "Back": "A sequential list of permit or deny statements used by a router or switch to filter network traffic. it can be based on various criteria like IP addresses, protocols, and port numbers."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "6",
+      "Front": "Standard ACL",
+      "Back": "A type of ACL that only filters traffic based on the source IP address. it uses numbers from 1–99 or 1300–1999 and should be applied as close to the destination as possible."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "6",
+      "Front": "Extended ACL",
+      "Back": "A more granular type of ACL that filters traffic based on source and destination IP addresses, protocols, and port numbers. it uses numbers 100–199 or 2000–2699 and is applied close to the source."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "6",
+      "Front": "Implicit Deny",
+      "Back": "An invisible statement at the end of every ACL that automatically drops any traffic that did not match an earlier permit rule. To allow any traffic, there must be at least one explicit permit statement."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "6",
+      "Front": "Named ACL",
+      "Back": "An ACL identified by a descriptive text string instead of a number. This makes configuration more organized and allows for easier editing of individual lines within the list."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "6",
+      "Front": "Wildcard Mask (ACL)",
+      "Back": "A 32-bit string used in ACL rules to specify which parts of an IP address to examine. A '0' bit means 'match exactly,' while a '1' bit means 'ignore'."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "7",
+      "Front": "DHCP Snooping",
+      "Back": "A Layer 2 security feature that acts as a firewall between untrusted hosts and trusted DHCP servers. it prevents malicious actors from setting up a rogue DHCP server on the network."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "7",
+      "Front": "DHCP Binding Database",
+      "Back": "A table maintained by a switch with DHCP snooping enabled. it tracks the MAC address, IP address, lease time, and port for every client, serving as a reference for other security features."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "7",
+      "Front": "Dynamic ARP Inspection",
+      "Back": "A security feature that validates ARP packets in a network. it uses the DHCP snooping binding table to ensure that only legitimate ARP requests and responses are forwarded, preventing ARP spoofing."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "7",
+      "Front": "Port Security",
+      "Back": "A feature on a Cisco switch that restricts the number of MAC addresses allowed on an interface. it can be configured to automatically shut down a port if an unauthorized device is connected."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "7",
+      "Front": "Sticky MAC Address",
+      "Back": "A port security configuration that allows a switch to dynamically learn a MAC address and save it permanently to its running configuration. This avoids manual entry of every authorized device."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "7",
+      "Front": "Port Security Violation Modes",
+      "Back": "The three possible actions a switch can take when a violation occurs: Shutdown (default, port goes to err-disabled), Restrict (log event, drop traffic), and Protect (drop traffic silently)."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "8",
+      "Front": "Authentication (AAA)",
+      "Back": "The first component of the AAA framework, which verifies the identity of a user or device. This is typically done through a combination of usernames and passwords or digital certificates."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "8",
+      "Front": "Authorization (AAA)",
+      "Back": "The second component of AAA, which determines the specific permissions and resources a verified user is allowed to access. it defines what commands a user can run or what data they can view."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "8",
+      "Front": "Accounting (AAA)",
+      "Back": "The final component of AAA, which tracks and records the actions performed by a user during their session. This creates an audit trail for billing, security analysis, and troubleshooting."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "7",
+      "Front": "Trusted Port (Snooping)",
+      "Back": "A switch port, typically connected to a legitimate DHCP server or another switch, that is allowed to send all types of DHCP messages. All other ports are considered untrusted by default."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "7",
+      "Front": "Untrusted Port (Snooping)",
+      "Back": "An access port where end-user devices are connected. The switch blocks any DHCP server responses (like Offers or ACKs) from these ports to prevent rogue server attacks."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "7",
+      "Front": "ARP Spoofing",
+      "Back": "A malicious technique where an attacker sends forged ARP messages onto a local network to associate their MAC address with the IP of a legitimate server, allowing them to intercept traffic."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "7",
+      "Front": "Gratuitous ARP (Attack)",
+      "Back": "A specific type of ARP packet that threat actors can use to proactively update the ARP tables of other devices on a network with false information. DAI is used to mitigate this threat."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "6",
+      "Front": "Sequence Numbers (ACL)",
+      "Back": "Unique identifiers assigned to each rule in a named or modern numbered ACL. They allow for the surgical insertion or deletion of specific rules without rewriting the entire list."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "6",
+      "Front": "Remark Command (ACL)",
+      "Back": "A configuration keyword used to add descriptive comments to an ACL. These comments are visible in the configuration and help explain the purpose of the filtering rules to other engineers."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "5",
+      "Front": "VPN Gateway",
+      "Back": "A specialized network device, such as a Cisco ASA firewall or a router, that serves as the endpoint for VPN tunnels. it handles all encryption and decryption tasks for the remote connections."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "5",
+      "Front": "Split Tunneling",
+      "Back": "A VPN configuration that allows a remote user to access the internet directly while simultaneously maintaining a secure tunnel to the corporate network for private resources."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "5",
+      "Front": "SSL VPN",
+      "Back": "A type of remote access VPN that uses the standard encryption built into web browsers. it is easy to deploy as it does not require specialized client software for basic access."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "8",
+      "Front": "RADIUS (AAA)",
+      "Back": "A standard networking protocol that provides centralized AAA management. it combines authentication and authorization into a single process and uses UDP for transmission."
+    }
+  ]
+}{
+  "status": "completed",
+  "appName": "ccna",
+  "flashcards": [
+    {
+      "Topic": "5",
+      "Subtopic": "9",
+      "Front": "WEP",
+      "Back": "The original security protocol for 802.11 wireless networks. it is now considered extremely insecure because its encryption keys can be easily cracked in minutes using freely available software."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "9",
+      "Front": "WPA",
+      "Back": "An intermediate security standard designed to fix the weaknesses of WEP. it introduced the TKIP encryption protocol and provided a much-needed security boost before the finalization of WPA2."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "9",
+      "Front": "WPA2",
+      "Back": "The long-standing standard for wireless security that introduced hardware-based AES encryption. it provides robust protection for both personal and enterprise networks and is still widely used today."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "9",
+      "Front": "WPA3",
+      "Back": "The latest evolution of wireless security that addresses several vulnerabilities in WPA2. it introduces Simultaneous Authentication of Equals (SAE) to protect against offline dictionary attacks."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "9",
+      "Front": "SAE (Simultaneous Authentication of Equals)",
+      "Back": "The key exchange protocol used in WPA3 Personal. it replaces the PSK exchange of WPA2, providing much stronger protection for users who choose weak or easy-to-guess passwords."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "9",
+      "Front": "TKIP",
+      "Back": "An encryption protocol used in the original WPA standard. it was designed to run on older WEP hardware via software updates, but it has since been deprecated in favor of the more secure AES."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "9",
+      "Front": "AES-CCMP",
+      "Back": "The specific encryption mechanism used by WPA2 and WPA3. it provides data confidentiality, integrity, and origin authentication using the highly secure Advanced Encryption Standard algorithm."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "9",
+      "Front": "Pre-Shared Key (Wireless)",
+      "Back": "A common authentication method where all users on a wireless network use the same static password. it is the most frequent choice for home and small office Wi-Fi installations."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "9",
+      "Front": "802.1X Enterprise",
+      "Back": "A high-security authentication framework that requires each user to provide unique credentials (like a username and password) to a RADIUS server before they are granted access to the wireless network."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "9",
+      "Front": "Extensible Authentication Protocol",
+      "Back": "The underlying protocol used by 802.1X to carry authentication data between the client, access point, and RADIUS server. it supports various methods like PEAP, EAP-TLS, and EAP-FAST."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "10",
+      "Front": "WLC Security Tab",
+      "Back": "The section in the Cisco Wireless LAN Controller GUI used to define the Layer 2 and Layer 3 security parameters for a WLAN. it is where you select WPA2 and configure the pre-shared key."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "10",
+      "Front": "WLC Layer 2 Security",
+      "Back": "A sub-tab in the WLAN configuration GUI where you choose the encryption standard (like WPA2) and the authentication key management method (like PSK or 802.1X)."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "10",
+      "Front": "Authentication Key Management",
+      "Back": "A setting in the WLC GUI that specifies how encryption keys are generated and distributed. For a standard home-style setup, this is where you would enable the PSK option."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "10",
+      "Front": "ASCII vs Hex (PSK)",
+      "Back": "The two formats for entering a pre-shared key in the WLC GUI. ASCII allows for human-readable passwords (8-63 characters), while Hex requires a 64-digit hexadecimal string."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "10",
+      "Front": "WLAN Status (Enabled)",
+      "Back": "A critical checkbox in the WLC GUI that must be selected for a wireless network to become active. Even if perfectly configured, the WLAN will not broadcast until it is explicitly enabled."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "9",
+      "Front": "GCMP",
+      "Back": "The advanced encryption mode used in WPA3 to provide even stronger data protection than the CCMP mode used in WPA2. it is required for the highest levels of wireless security."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "9",
+      "Front": "Forward Secrecy",
+      "Back": "A security property provided by WPA3 that ensures even if a password is later compromised, an attacker cannot decrypt wireless traffic that was captured in the past."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "9",
+      "Front": "PMF (Protected Management Frames)",
+      "Back": "A security feature that encrypts the management traffic between an AP and a client. it is optional in WPA2 but mandatory in WPA3 to prevent deauthentication attacks."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "10",
+      "Front": "Radius Server (GUI)",
+      "Back": "A configuration screen in the WLC GUI where you define the IP address and shared secret of an external AAA server. This is necessary for implementing 802.1X Enterprise security."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "10",
+      "Front": "WLAN Broadcast SSID",
+      "Back": "An option in the WLC GUI that determines if the AP should include the SSID in its beacon frames. Disabling this makes the network 'hidden' to casual scans."
+    }
+  ]
+}{
+  "status": "completed",
+  "appName": "ccna",
+  "flashcards": [
+    {
+      "Topic": "6",
+      "Subtopic": "1",
+      "Front": "Network Automation",
+      "Back": "The use of software to automatically configure, manage, and monitor network devices. it reduces manual errors, improves consistency, and allows for faster deployment of network services."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "2",
+      "Front": "Traditional Networking",
+      "Back": "A model where each network device is managed individually using its own control plane. Configuration is typically done manually via the CLI, making it slow and prone to human error in large environments."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "2",
+      "Front": "Controller-Based Networking",
+      "Back": "A management model where a centralized software controller manages multiple network devices. it provides a global view of the network and allows for automated, policy-based configuration."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "3",
+      "Front": "Control Plane",
+      "Back": "The logical part of a network device that makes decisions about where traffic should be sent. In SDN, this is often moved to a centralized controller to simplify management."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "3",
+      "Front": "Data Plane",
+      "Back": "The hardware component of a network device that performs the actual forwarding of packets. it follows the instructions provided by the control plane to move data at high speeds."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "3",
+      "Front": "Southbound API",
+      "Back": "A communication protocol (like OpenFlow or NETCONF) used by a controller to manage and configure network devices. it allows the controller to push policies down to the data plane."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "3",
+      "Front": "Northbound API",
+      "Back": "An interface (typically REST-based) that allows applications and management software to communicate with a network controller. it enables high-level automation and orchestration of network services."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "3",
+      "Front": "Underlay Network",
+      "Back": "The physical infrastructure, including cabling and hardware devices, that provides the foundational connectivity for a network. it is responsible for the actual delivery of packets."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "3",
+      "Front": "Overlay Network",
+      "Back": "A logical network created on top of a physical underlay. it uses encapsulation (like VXLAN) to create virtual connections that are independent of the physical topology."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "3",
+      "Front": "Fabric (Networking)",
+      "Back": "The combination of an underlay and an overlay network working together as a single integrated system. it provides a scalable, automated, and highly flexible networking environment."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "4",
+      "Front": "Cisco DNA Center",
+      "Back": "A powerful management and automation platform for enterprise networks. it provides a centralized dashboard for design, provisioning, policy management, and troubleshooting using SDN principles."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "4",
+      "Front": "Intent-Based Networking",
+      "Back": "A networking philosophy where administrators define high-level business goals (intent), and the network automation software automatically translates those goals into device-specific configurations."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "5",
+      "Front": "REST API",
+      "Back": "An architectural style for creating web services that use standard HTTP methods to interact with resources. it is the most common type of API used for network automation."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "5",
+      "Front": "HTTP Verbs (REST)",
+      "Back": "The standard actions used in RESTful communication: GET (retrieve), POST (create), PUT (update), and DELETE (remove). They correspond to the basic CRUD operations."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "5",
+      "Front": "CRUD Operations",
+      "Back": "The four basic functions of persistent storage: Create, Read, Update, and Delete. These are mapped to HTTP methods in RESTful network management interfaces."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "6",
+      "Front": "Ansible",
+      "Back": "An open-source automation tool that uses SSH to manage network devices. it is 'agentless,' meaning no software needs to be installed on the devices themselves, and uses YAML for configuration."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "6",
+      "Front": "Puppet",
+      "Back": "A configuration management tool that typically uses an agent-based model. it relies on a domain-specific language to define the desired state of network devices and ensures they stay in compliance."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "6",
+      "Front": "Chef",
+      "Back": "An automation platform that uses an agent-based architecture and Ruby-based 'recipes' to manage configurations. it is highly flexible but requires more programming knowledge than tools like Ansible."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "7",
+      "Front": "JSON",
+      "Back": "A lightweight data-interchange format that is easy for humans to read and write and easy for machines to parse. it is the standard format for data encoding in most modern network APIs."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "7",
+      "Front": "JSON Object",
+      "Back": "A collection of key-value pairs wrapped in curly braces { }. Each key is a string followed by a colon and the associated value, making the data highly structured and searchable."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "7",
+      "Front": "JSON Array",
+      "Back": "An ordered list of values wrapped in square brackets [ ]. Values within the array can be strings, numbers, objects, or even other arrays, allowing for complex data structures."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "6",
+      "Front": "Playbook (Ansible)",
+      "Back": "A YAML file in Ansible that contains a set of 'plays' or instructions to be executed on a group of network devices. it serves as the master blueprint for an automation task."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "6",
+      "Front": "Idempotency",
+      "Back": "A key property of many automation tools where running the same task multiple times has no additional effect after the first successful execution. it ensures the network stays in the desired state."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "5",
+      "Front": "URI (Uniform Resource Identifier)",
+      "Back": "The specific address used to identify a resource in a REST API, such as a particular switch port or a VLAN configuration. it is the target of an HTTP request."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "5",
+      "Front": "Payload (API)",
+      "Back": "The actual data sent or received in an API request or response, typically formatted in JSON or XML. it contains the specific configuration details or status information being exchanged."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "3",
+      "Front": "Overlay Tunneling",
+      "Back": "A technique where a packet is encapsulated inside another protocol header to be transported across the underlay network. VXLAN is the most common example used in modern data center fabrics."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "4",
+      "Front": "Cisco DNA Center Assurance",
+      "Back": "A feature that uses AI and machine learning to monitor network performance and provide proactive troubleshooting insights. it helps administrators identify and fix issues before they impact users."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "6",
+      "Front": "YAML",
+      "Back": "A human-friendly data serialization language commonly used for configuration files and automation scripts. its clean, indentation-based structure makes it the preferred choice for Ansible playbooks."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "5",
+      "Front": "API Authentication",
+      "Back": "The process of verifying the identity of a script or application before it is allowed to access a network controller. Common methods include API keys, basic auth, or OAuth tokens."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "2",
+      "Front": "Southbound Protocol (OpenFlow)",
+      "Back": "One of the original protocols used in software-defined networking to allow a controller to directly manipulate the forwarding tables of a switch. it is a foundational concept in the history of SDN."
+    }
+  ]
+}

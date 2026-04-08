@@ -1,0 +1,186 @@
+{
+  "status": "completed",
+  "appName": "ccna",
+  "flashcards": [
+    {
+      "Topic": "2",
+      "Subtopic": "6",
+      "Front": "Autonomous AP Architecture",
+      "Back": "A decentralized wireless design where each access point is managed and configured independently. The AP handles all security, management, and traffic forwarding functions without a centralized controller."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "6",
+      "Front": "Cloud-Based AP Architecture",
+      "Back": "A wireless model where access points are managed through a centralized cloud platform like Cisco Meraki. This allows for easy scalability and remote management without the need for on-premises hardware controllers."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "6",
+      "Front": "Split-MAC Architecture",
+      "Back": "The mechanism used in lightweight AP designs where time-sensitive tasks are handled by the AP, while management and security tasks are offloaded to a central controller."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "6",
+      "Front": "Local Mode (AP)",
+      "Back": "The default operating mode for a lightweight access point. It provides active wireless service to clients while simultaneously scanning the environment for interference and rogue devices."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "6",
+      "Front": "FlexConnect Mode",
+      "Back": "An AP mode designed for branch office deployments. It allows the AP to continue forwarding local traffic even if the connection to the central Wireless LAN Controller is lost."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "6",
+      "Front": "Monitor Mode (AP)",
+      "Back": "A specialized AP mode where the device does not provide any wireless service to clients. Instead, it acts as a dedicated sensor to detect interference, IDS events, and rogue access points."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "6",
+      "Front": "Sniffer Mode (AP)",
+      "Back": "An AP mode used for troubleshooting where the device captures all wireless traffic on a specific channel and forwards it to a remote server for detailed packet analysis."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "7",
+      "Front": "Wireless LAN Controller",
+      "Back": "A centralized device used to manage and configure multiple lightweight access points. It simplifies wireless network administration by handling security, roaming, and radio frequency management."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "7",
+      "Front": "Link Aggregation (WLC)",
+      "Back": "A configuration on a Cisco WLC that bundles all of its physical distribution ports into a single logical interface. This provides high-speed, redundant connectivity to the wired network."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "7",
+      "Front": "CAPWAP Data Tunnel",
+      "Back": "A secure tunnel used to transport user traffic between a lightweight access point and its controller. It ensures that all wireless data is centrally processed and secured by the WLC."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "7",
+      "Front": "CAPWAP Control Tunnel",
+      "Back": "A management tunnel used to exchange configuration and status information between an AP and a WLC. It uses DTLS encryption to protect the control plane from eavesdropping."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "8",
+      "Front": "WLC Management Interface",
+      "Back": "The primary logical interface used for administrative access to the Wireless LAN Controller. it is typically assigned a static IP address and is used for SSH and HTTPS management."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "8",
+      "Front": "Out-of-Band Management (WLC)",
+      "Back": "Accessing a WLC through a dedicated physical port that is separate from the data traffic. This ensures that administrators can still reach the device even if the main network is down."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "8",
+      "Front": "RADIUS",
+      "Back": "An industry-standard protocol used for centralized authentication, authorization, and accounting. It is the primary method used to verify user credentials in enterprise wireless networks."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "8",
+      "Front": "TACACS+",
+      "Back": "A Cisco-proprietary AAA protocol that provides more granular control than RADIUS. It is typically used for managing administrative access to networking hardware like routers and switches."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "9",
+      "Front": "WLC Dashboard",
+      "Back": "The main GUI screen of a Cisco Wireless LAN Controller. It provides a high-level overview of the network's health, including the number of active clients, APs, and any critical alerts."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "9",
+      "Front": "WLAN ID",
+      "Back": "A unique numerical identifier assigned to a specific wireless network on a WLC. A single controller can support multiple WLANs, each with its own SSID and security settings."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "9",
+      "Front": "WLAN Security Profile",
+      "Back": "The specific set of authentication and encryption parameters defined for a wireless network in the WLC GUI. It includes options like WPA2-PSK or 802.1X enterprise authentication."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "9",
+      "Front": "Dynamic Interface (WLC)",
+      "Back": "A logical interface on a WLC that maps a specific WLAN to a physical VLAN on the wired network. It serves as the bridge between the wireless and wired infrastructures."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "9",
+      "Front": "SSID Broadcast",
+      "Back": "A setting in the WLC GUI that determines if the network name should be visible to nearby devices. Disabling this hides the network but is not a robust security measure."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "9",
+      "Front": "QoS Profile (WLC)",
+      "Back": "A configuration that defines the priority level for wireless traffic. Profiles like 'Platinum' are used for voice, while 'Bronze' is typically used for guest or background traffic."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "9",
+      "Front": "Advanced WLAN Settings",
+      "Back": "A section in the WLC GUI used to fine-tune network performance. It includes options for session timeouts, load balancing, and client exclusion policies."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "9",
+      "Front": "AP Join Process",
+      "Back": "The sequence of steps a lightweight access point takes to discover and register with a controller. This can be automated using DHCP options, DNS lookups, or local broadcasts."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "6",
+      "Front": "Embedded WLC Architecture",
+      "Back": "A wireless design where the controller software runs directly on a switch. This provides a compact, integrated solution for small to medium-sized campus environments."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "6",
+      "Front": "Mobility Express",
+      "Back": "A Cisco wireless solution where the WLC function is hosted on an access point. It allows one AP to act as a controller for up to 100 other access points in the network."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "7",
+      "Front": "WLC Distribution System Port",
+      "Back": "The physical interface on a controller used for connection to the wired switch infrastructure. It carries both management traffic and encapsulated user data."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "8",
+      "Front": "Console Port Access",
+      "Back": "A physical out-of-band management method used for the initial setup or recovery of a WLC. It requires a serial connection and a terminal emulation program."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "9",
+      "Front": "Radio Resource Management",
+      "Back": "An automated feature on a WLC that dynamically adjusts the power levels and channels of all connected access points to optimize performance and minimize interference."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "9",
+      "Front": "CleanAir Technology",
+      "Back": "A Cisco-proprietary feature that allows access points to detect, identify, and mitigate non-Wi-Fi interference from devices like microwaves or cordless phones."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "9",
+      "Front": "Client Exclusion",
+      "Back": "A security feature on a WLC that temporarily blocks a wireless client after a certain number of failed authentication attempts. This helps protect the network from brute-force attacks."
+    }
+  ]
+}

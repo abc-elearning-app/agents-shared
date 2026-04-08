@@ -1,0 +1,186 @@
+{
+  "status": "completed",
+  "appName": "ccna",
+  "flashcards": [
+    {
+      "Topic": "1",
+      "Subtopic": "1",
+      "Front": "Router",
+      "Back": "A networking device that forwards data packets between computer networks. It operates at the network layer (Layer 3) and uses routing tables to determine the best path for traffic."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "1",
+      "Front": "Layer 2 Switch",
+      "Back": "A hardware device that connects multiple devices on a single local area network. It uses hardware MAC addresses to forward data frames to the correct destination port."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "1",
+      "Front": "Layer 3 Switch",
+      "Back": "A high-performance switch that combines traditional switching with routing capabilities. It can forward traffic based on IP addresses, enabling efficient inter-VLAN routing at hardware speeds."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "1",
+      "Front": "Access Switch",
+      "Back": "The entry point for end-user devices into the local network. These switches provide high port density and basic security features like port security to protect the network edge."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "1",
+      "Front": "Distribution Switch",
+      "Back": "A device that aggregates traffic from multiple access switches and connects them to the core layer. It typically implements routing, security policies, and traffic filtering."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "1",
+      "Front": "Core Switch",
+      "Back": "A high-capacity backbone switch responsible for extremely fast transport of large volumes of data. Its primary goal is to minimize latency between different distribution layer modules."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "1",
+      "Front": "Next-Generation Firewall",
+      "Back": "A security appliance that provides advanced traffic filtering beyond traditional port and protocol inspection. It includes deep packet inspection and integrated intrusion prevention systems."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "1",
+      "Front": "Intrusion Prevention System",
+      "Back": "A network security technology that continuously monitors traffic for malicious activity. It can actively block or drop suspicious packets in real-time to prevent security breaches."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "1",
+      "Front": "Access Point",
+      "Back": "A hardware device that provides wireless connectivity to mobile clients within a local network. It acts as a bridge between the 802.11 wireless medium and the wired Ethernet infrastructure."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "1",
+      "Front": "Wireless LAN Controller",
+      "Back": "A centralized device used to manage and configure multiple lightweight access points. It simplifies wireless administration by handling radio frequency management and security policies."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "1",
+      "Front": "Cisco DNA Center",
+      "Back": "A powerful network management and automation platform used for enterprise networks. It provides a centralized dashboard for design, provisioning, and troubleshooting via software-defined principles."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "1",
+      "Front": "Endpoint",
+      "Back": "Any hardware device that marks the end of a communication path on a network. Common examples include laptops, smartphones, desktop computers, and printers."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "1",
+      "Front": "Server",
+      "Back": "A specialized computer or software program that provides specific services or data to other devices on a network. It typically hosts applications, files, or web content."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "1",
+      "Front": "Power over Ethernet",
+      "Back": "A technology that transmits both electrical power and data over standard twisted-pair Ethernet cabling. It allows devices like IP cameras to operate without separate power supplies."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "1",
+      "Front": "Power Sourcing Equipment",
+      "Back": "A device, typically a PoE-capable switch, that provides electrical power to other components over Ethernet cabling. It detects compatible devices before delivering voltage."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "1",
+      "Front": "Powered Device",
+      "Back": "A network component that receives its operating electrical power via an Ethernet cable. Common examples include VoIP phones, wireless access points, and security cameras."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "1",
+      "Front": "Fabric Edge Node",
+      "Back": "A switch in a software-defined access network that connects directly to user devices. It handles the mapping of user traffic into the virtual overlay network."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "1",
+      "Front": "Fabric Border Node",
+      "Back": "A device in an SDN fabric that connects the internal automated network to external networks like the internet or a traditional data center. It manages traffic entering and leaving the fabric."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "1",
+      "Front": "Fabric Control Node",
+      "Back": "The 'brains' of an SDN fabric that maintains a mapping database of all endpoints and their locations. It allows the network to track mobile users and devices dynamically."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "1",
+      "Front": "Leaf Switch",
+      "Back": "A device in a spine-leaf architecture that connects to both servers and every spine switch. It serves as the entry point for all traffic into the data center fabric."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "1",
+      "Front": "Spine Switch",
+      "Back": "A high-capacity backbone device in a fabric topology that interconnects all leaf switches. It does not connect directly to endpoints, focusing instead on high-speed internal switching."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "1",
+      "Front": "VXLAN Tunnel",
+      "Back": "A logical point-to-point connection used in SDN fabrics to transport user data across the physical underlay. It encapsulates original Ethernet frames within UDP packets for routing."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "1",
+      "Front": "DNS Server",
+      "Back": "A specialized server that translates human-readable domain names into numerical IP addresses. This allow users to access network resources without remembering complex numbers."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "1",
+      "Front": "DHCP Server",
+      "Back": "A network service that automatically assigns IP addresses and other configuration parameters to client devices. It eliminates the need for manual static IP configuration on every host."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "1",
+      "Front": "Web Server",
+      "Back": "A computer system that stores and delivers web content to clients over the internet using HTTP or HTTPS protocols. It typically hosts websites and web-based applications."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "1",
+      "Front": "Mail Server",
+      "Back": "A network device responsible for sending, receiving, and storing electronic mail. It uses standardized protocols like SMTP, POP3, and IMAP to handle user messages."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "1",
+      "Front": "IoT Device",
+      "Back": "A physical object embedded with sensors and software that connects to a network to exchange data. Common examples include smart thermostats, industrial sensors, and connected appliances."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "1",
+      "Front": "VoIP Phone",
+      "Back": "An endpoint device that transmits voice communications over an IP network instead of traditional copper phone lines. These devices frequently rely on PoE for power."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "1",
+      "Front": "Cisco Prime Infrastructure",
+      "Back": "A legacy network management suite that provides life-cycle management for wired and wireless networks. It has largely been succeeded by the more modern Cisco DNA Center."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "1",
+      "Front": "Patch Panel",
+      "Back": "A passive hardware assembly used to organize and terminate multiple network cable connections. It serves as a central point for managing physical cabling in a server room."
+    }
+  ]
+}

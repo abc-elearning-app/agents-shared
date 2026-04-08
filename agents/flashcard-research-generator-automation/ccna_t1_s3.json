@@ -1,0 +1,186 @@
+{
+  "status": "completed",
+  "appName": "ccna",
+  "flashcards": [
+    {
+      "Topic": "1",
+      "Subtopic": "3",
+      "Front": "Unshielded Twisted Pair (UTP)",
+      "Back": "The most common type of copper cabling used in Ethernet networks. It consists of four pairs of color-coded wires twisted together to reduce electromagnetic interference."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "3",
+      "Front": "Single-Mode Fiber (SMF)",
+      "Back": "An optical cable designed to transmit a single ray of light over very long distances (up to 100km). It uses a thin 9-micron core and a laser light source."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "3",
+      "Front": "Multimode Fiber (MMF)",
+      "Back": "An optical cable that allows multiple paths of light to travel through a large core (50 or 62.5 microns). it is used for shorter distances within buildings and uses LED sources."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "3",
+      "Front": "RJ-45",
+      "Back": "The standard physical connector used for terminating twisted-pair Ethernet cables. It contains eight pins that align with the eight internal wires of the UTP cable."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "3",
+      "Front": "Small Form-Factor Pluggable (SFP)",
+      "Back": "A hot-swappable modular transceiver used to connect switch ports to fiber or copper cabling. It allows for easy hardware upgrades without replacing the entire switch."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "3",
+      "Front": "Category 5e (Cat 5e)",
+      "Back": "An enhanced UTP cable standard that supports speeds up to 1,000 Mbps (Gigabit Ethernet) at distances up to 100 meters. it significantly reduced crosstalk compared to original Cat 5."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "3",
+      "Front": "Category 6 (Cat 6)",
+      "Back": "A UTP cable standard that supports 10 Gbps speeds for short distances (up to 55 meters) and 1 Gbps for up to 100 meters. it includes a plastic separator to reduce crosstalk."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "3",
+      "Front": "Category 6a (Cat 6a)",
+      "Back": "An augmented version of Cat 6 that supports 10 Gbps speeds for the full 100-meter length. it features improved shielding and tighter wire twisting."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "3",
+      "Front": "Ethernet Shared Media",
+      "Back": "A legacy network environment where multiple devices compete for access to the same physical cable. It relies on CSMA/CD to manage collisions and is rarely used in modern switched networks."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "3",
+      "Front": "Point-to-Point Connection",
+      "Back": "A direct physical or logical link between exactly two nodes. in modern Ethernet, this refers to a full-duplex connection between a switch and a host or another switch."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "3",
+      "Front": "1000Base-T",
+      "Back": "The IEEE 802.3ab standard for Gigabit Ethernet over copper UTP cabling. It requires all four pairs of wires and supports distances up to 100 meters."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "3",
+      "Front": "1000Base-LX",
+      "Back": "The IEEE standard for Gigabit Ethernet over fiber optic cabling using long-wavelength lasers. It supports distances up to 5km over single-mode fiber."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "3",
+      "Front": "1000Base-SX",
+      "Back": "The IEEE standard for Gigabit Ethernet over multimode fiber using short-wavelength lasers. It is commonly used for backbone links within a single building (up to 550m)."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "3",
+      "Front": "Electromagnetic Interference (EMI)",
+      "Back": "Disturbance caused by external electrical sources that can degrade data signals in copper cabling. UTP uses twisting to cancel this out, while STP adds a metal shield."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "3",
+      "Front": "Crosstalk",
+      "Back": "A type of interference where electrical signals from one wire pair leak into an adjacent pair within the same cable. High-quality categories and precise twisting minimize this effect."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "3",
+      "Front": "Straight-Through Cable",
+      "Back": "An Ethernet cable where the wire pins on both ends match exactly. It is used to connect dissimilar devices, such as a computer to a switch or a switch to a router."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "3",
+      "Front": "Crossover Cable",
+      "Back": "An Ethernet cable where the transmit and receive pairs are swapped at one end. It is traditionally used to connect similar devices, like two switches or two computers."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "3",
+      "Front": "Auto-MDIX",
+      "Back": "A switch feature that automatically detects the required cable type (straight-through or crossover) and configures the interface accordingly, eliminating the need for manual crossover cables."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "3",
+      "Front": "Attenuation",
+      "Back": "The gradual loss of signal strength as data travels through a medium. It is measured in decibels and is the primary factor limiting the maximum length of a network cable."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "3",
+      "Front": "Core (Fiber Component)",
+      "Back": "The central glass or plastic strand of an optical fiber that carries the light signal. Its diameter determines whether the fiber is classified as single-mode or multimode."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "3",
+      "Front": "Cladding (Fiber Component)",
+      "Back": "The outer layer of glass surrounding the fiber core. It has a lower refractive index, causing light to reflect back into the core via total internal reflection."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "3",
+      "Front": "IEEE 802.3",
+      "Back": "The working group and collection of standards that define the physical layer and data link layer's media access control (MAC) for wired Ethernet."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "3",
+      "Front": "Bandwidth",
+      "Back": "The maximum theoretical data transfer rate of a network medium, typically measured in bits per second (bps). Higher categories of cabling offer greater bandwidth."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "3",
+      "Front": "Pinout",
+      "Back": "The specific assignment of internal wires to the individual pins of a connector (like RJ-45). Standard pinouts include T568A and T568B."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "3",
+      "Front": "GBIC",
+      "Back": "Gigabit Interface Converter. A legacy, larger form-factor transceiver module used to connect switch ports to different types of media. It has been replaced by the smaller SFP."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "3",
+      "Front": "SFP+",
+      "Back": "An enhanced version of the SFP transceiver that supports data rates up to 10 Gbps. It has the same physical dimensions as a standard SFP."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "3",
+      "Front": "Shielded Twisted Pair (STP)",
+      "Back": "A type of copper cabling that includes a metal foil or braid shield around the wire pairs to provide superior protection against electromagnetic interference."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "3",
+      "Front": "Distance Limit (100m)",
+      "Back": "The maximum effective length for all standard copper Ethernet segments (10Base-T through 10GBase-T). Exceeding this limit leads to excessive attenuation and data errors."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "3",
+      "Front": "T568B",
+      "Back": "The most commonly used wiring standard for terminating RJ-45 connectors in modern commercial network installations. It specifies the sequence: Orange/White, Orange, Green/White, Blue, Blue/White, Green, Brown/White, Brown."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "3",
+      "Front": "Optical Carrier (OC)",
+      "Back": "A standardized set of transmission speeds for fiber optic networks (e.g., OC-3, OC-12). It defines the hierarchy of bandwidth used in high-capacity service provider backbones."
+    }
+  ]
+}

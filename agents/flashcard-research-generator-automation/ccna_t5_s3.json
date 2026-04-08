@@ -1,0 +1,186 @@
+{
+  "status": "completed",
+  "appName": "ccna",
+  "flashcards": [
+    {
+      "Topic": "5",
+      "Subtopic": "3",
+      "Front": "enable secret",
+      "Back": "The Cisco global command used to set a highly secure, hashed password for accessing privileged EXEC mode. it takes precedence over the legacy 'enable password' command."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "3",
+      "Front": "line console 0",
+      "Back": "The command to enter configuration mode for the physical serial console port, used for local out-of-band management access."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "3",
+      "Front": "line vty 0 15",
+      "Back": "The command to enter configuration mode for the 16 virtual terminal lines, which support remote network management connections like Telnet and SSH."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "3",
+      "Front": "login local (Access Control)",
+      "Back": "A line configuration subcommand that instructs the device to prompt for both a username and a password, verified against the local user database."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "3",
+      "Front": "service password-encryption",
+      "Back": "A global configuration command that applies a weak (Type 7) encryption to all clear-text passwords in the configuration file to prevent shoulder surfing."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "3",
+      "Front": "username [name] secret [pass]",
+      "Back": "The global command used to create a local user account. The 'secret' keyword ensures the password is stored as a secure SHA-256 or Scrypt hash."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "3",
+      "Front": "Privileged EXEC Mode",
+      "Back": "The administrative mode on a Cisco device (indicated by the # prompt) that allows for full configuration and monitoring. access is usually protected by an enable secret."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "3",
+      "Front": "User EXEC Mode",
+      "Back": "The default starting mode on a Cisco device (indicated by the > prompt) with limited, non-disruptive monitoring capabilities."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "3",
+      "Front": "Password Hashing",
+      "Back": "A one-way mathematical process that converts a plain-text password into a fixed-length string. The original password cannot be easily reversed from the hash."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "3",
+      "Front": "Clear-text Password",
+      "Back": "A password stored in its original, readable form. These are insecure and can be seen by anyone with access to the configuration file or network sniffer."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "3",
+      "Front": "Type 5 Encryption",
+      "Back": "A secure hashing algorithm (MD5) used by Cisco for the 'enable secret' command in older IOS versions."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "3",
+      "Front": "Type 7 Encryption",
+      "Back": "A weak, reversible encryption used by 'service password-encryption'. it is intended only to hide passwords from casual viewing."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "3",
+      "Front": "Type 8 / Type 9 Encryption",
+      "Back": "Modern, highly secure hashing algorithms (SHA-256 and Scrypt) used in newer Cisco IOS versions for storing local user and enable secret passwords."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "3",
+      "Front": "transport input (VTY)",
+      "Back": "A line configuration command used to specify which protocols are allowed for remote access. 'transport input ssh' is the most secure setting."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "3",
+      "Front": "exec-timeout",
+      "Back": "A line configuration command used to set the interval of inactivity after which the device automatically disconnects a management session."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "3",
+      "Front": "login (Line command)",
+      "Back": "A subcommand that enables password checking on a line. without this (or 'login local'), the device may allow access without any password at all."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "3",
+      "Front": "password (Line command)",
+      "Back": "The subcommand used to set a simple, non-username password for access to a specific line (Console or VTY)."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "3",
+      "Front": "Local User Database",
+      "Back": "A table of usernames and hashed passwords stored directly in the device's running configuration, used for local authentication."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "3",
+      "Front": "AAA (Authentication context)",
+      "Back": "A framework that can be enabled on Cisco devices to provide more advanced access control, often using external servers like RADIUS or TACACS+."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "3",
+      "Front": "Access-class",
+      "Back": "A line configuration command used to apply an IP Access Control List to the VTY lines, restricting remote management to specific subnets."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "3",
+      "Front": "show running-config",
+      "Back": "The command used to verify the current device configuration, including checking that passwords are encrypted and lines are secured."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "3",
+      "Front": "Enable Password (Legacy)",
+      "Back": "The original Cisco command for securing privileged access. it is less secure because it stores the password in plain text by default."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "3",
+      "Front": "Out-of-band Management",
+      "Back": "Administrative access to a device that does not rely on the network data path, such as using the physical console port."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "3",
+      "Front": "In-band Management",
+      "Back": "Administrative access to a device that occurs over the network data path, such as using SSH across a production VLAN."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "3",
+      "Front": "Auxiliary (AUX) Port",
+      "Back": "A physical port on many Cisco routers designed for remote dial-up modem access. it can be secured with passwords similar to the console port."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "3",
+      "Front": "Privilege Level 15 (User)",
+      "Back": "Configuring a local user account with 'privilege 15' allows that user to enter privileged EXEC mode immediately upon logging in via SSH/Console."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "3",
+      "Front": "Banner Motd (Verification)",
+      "Back": "Checking that a legal warning message is displayed upon login to satisfy corporate security and compliance requirements."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "3",
+      "Front": "Logging Synchronous (Line)",
+      "Back": "A configuration that prevents log messages from interrupting an administrator's command input, making management easier."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "3",
+      "Front": "Security Strength (Hash)",
+      "Back": "The resistance of a hashed password to being cracked.SHA-256 based 'secrets' are significantly stronger than MD5 or plain-text passwords."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "3",
+      "Front": "Administrative Lockout",
+      "Back": "A security scenario where an administrator loses all passwords to a device and must perform a physical password recovery process."
+    }
+  ]
+}

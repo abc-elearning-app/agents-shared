@@ -1,0 +1,186 @@
+{
+  "status": "completed",
+  "appName": "ccna",
+  "flashcards": [
+    {
+      "Topic": "1",
+      "Subtopic": "5",
+      "Front": "Transmission Control Protocol (TCP)",
+      "Back": "A connection-oriented transport layer protocol that provides reliable, ordered, and error-checked delivery of a stream of data. it is used by applications like HTTP, FTP, and SSH."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "5",
+      "Front": "User Datagram Protocol (UDP)",
+      "Back": "A connectionless transport layer protocol that provides a simple, unreliable message service. It prioritizes speed and low overhead, making it ideal for real-time applications like VoIP."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "5",
+      "Front": "Connection-Oriented",
+      "Back": "A communication model that requires a pre-established session between two endpoints before data can be transferred. TCP uses a three-way handshake to achieve this."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "5",
+      "Front": "Connectionless",
+      "Back": "A communication model where data is sent without first establishing a dedicated session. UDP operates this way, allowing for faster transmission but with no delivery guarantees."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "5",
+      "Front": "Reliability (Transport)",
+      "Back": "The ability of a protocol to ensure that all data segments arrive at the destination intact. TCP provides this through acknowledgments and retransmissions."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "5",
+      "Front": "Flow Control",
+      "Back": "A mechanism that prevents a fast sender from overwhelming a slow receiver. TCP uses windowing to manage the amount of data that can be sent before an acknowledgment is required."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "5",
+      "Front": "Windowing",
+      "Back": "A dynamic flow control technique where the receiver specifies the number of bytes it is currently able to accept. The sender adjusts its transmission rate based on this value."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "5",
+      "Front": "Ordered Data Transfer",
+      "Back": "A TCP feature that ensures segments are delivered to the application in the same order they were sent. The receiver uses sequence numbers to rearrange out-of-order packets."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "5",
+      "Front": "Multiplexing",
+      "Back": "A process at the transport layer that allows multiple applications on a single host to share one network connection. it uses unique port numbers to distinguish between data streams."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "5",
+      "Front": "TCP Segment",
+      "Back": "The Protocol Data Unit (PDU) at the transport layer for TCP. it consists of a 20-byte header followed by the application data."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "5",
+      "Front": "UDP Datagram",
+      "Back": "The PDU at the transport layer for UDP. it consists of a minimal 8-byte header and is sent with 'best-effort' delivery."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "5",
+      "Front": "Source Port",
+      "Back": "A 16-bit field in both TCP and UDP headers that identifies the sending application. For client requests, it is typically an ephemeral port number."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "5",
+      "Front": "Destination Port",
+      "Back": "A 16-bit field that identifies the intended receiving application or service on the destination host, such as port 80 for a web server."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "5",
+      "Front": "Sequence Number",
+      "Back": "A 32-bit field in the TCP header used to track the order of data bytes. it allows the receiver to detect missing data and reassemble the stream correctly."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "5",
+      "Front": "Acknowledgment Number",
+      "Back": "A TCP field used to inform the sender that data was received. it indicates the sequence number of the next byte the receiver expects to get."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "5",
+      "Front": "TCP Flags",
+      "Back": "Individual bits in the TCP header used to control the state of a connection. Important flags include SYN, ACK, FIN, RST, PSH, and URG."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "5",
+      "Front": "Checksum (L4)",
+      "Back": "A field in both TCP and UDP headers used for error detection. The receiver recalculates the value and discards the segment if it does not match the original."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "5",
+      "Front": "SYN (Synchronize)",
+      "Back": "The TCP flag used to initiate a connection. it is the first packet sent in the three-way handshake process."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "5",
+      "Front": "ACK (Acknowledgment)",
+      "Back": "A TCP flag used to confirm the receipt of a segment. it is used in almost every packet after the initial SYN request."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "5",
+      "Front": "FIN (Finish)",
+      "Back": "The TCP flag used to gracefully terminate a connection. Both sides of a session must send and acknowledge a FIN packet to close the link."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "5",
+      "Front": "Socket",
+      "Back": "The combination of an IP address and a port number. it uniquely identifies a specific communication endpoint for an application across the network."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "5",
+      "Front": "Ephemeral Port",
+      "Back": "A temporary port number (range 49152–65535) automatically assigned by a client's OS for a single session. it is used as the source port for outgoing requests."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "5",
+      "Front": "Three-Way Handshake",
+      "Back": "The process TCP uses to establish a session: Client sends SYN, Server responds with SYN-ACK, and Client sends ACK."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "5",
+      "Front": "Best-Effort Delivery",
+      "Back": "The delivery model used by UDP where the network makes no guarantee that data will arrive. if a datagram is lost, UDP does not attempt to retransmit it."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "5",
+      "Front": "Error Recovery",
+      "Back": "A TCP mechanism where the sender retransmits any data segments that were not acknowledged by the receiver within a specific timeout period."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "5",
+      "Front": "Overhead (Transport)",
+      "Back": "The extra data required by a protocol header. UDP has very low overhead (8 bytes), while TCP has higher overhead (20 bytes) to support its complex features."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "5",
+      "Front": "TCP Port 443",
+      "Back": "The well-known port used for HTTPS (Secure Web Browsing). it requires the reliability and connection management features of TCP."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "5",
+      "Front": "UDP Port 53",
+      "Back": "The standard port used for DNS queries. UDP is preferred for these small, single-packet requests to minimize latency and network traffic."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "5",
+      "Front": "TCP Port 22",
+      "Back": "The well-known port used for SSH (Secure Shell). it relies on TCP to ensure that every management command is delivered reliably and in order."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "5",
+      "Front": "UDP Port 161",
+      "Back": "The standard port used by SNMP managers to query agents. UDP is used because network management should not add excessive overhead or rely on a complex session."
+    }
+  ]
+}

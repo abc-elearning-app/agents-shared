@@ -1,0 +1,186 @@
+{
+  "status": "completed",
+  "appName": "ccna",
+  "flashcards": [
+    {
+      "Topic": "4",
+      "Subtopic": "5",
+      "Front": "Syslog",
+      "Back": "A standardized protocol used for sending system log or event messages to a specific server. it allows for centralized monitoring of device health and security."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "5",
+      "Front": "Syslog Severity Level",
+      "Back": "A scale from 0 to 7 used to indicate the importance of a log message. Lower numbers represent more critical events."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "5",
+      "Front": "Level 0: Emergency",
+      "Back": "The highest syslog severity level, indicating that the system is unusable. This is reserved for catastrophic failures."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "5",
+      "Front": "Level 1: Alert",
+      "Back": "A syslog severity level indicating that immediate action is required to correct a serious problem."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "5",
+      "Front": "Level 2: Critical",
+      "Back": "A syslog severity level for critical conditions that should be addressed as soon as possible to prevent a service outage."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "5",
+      "Front": "Level 3: Error",
+      "Back": "A syslog severity level used for non-critical error conditions that may impact a specific feature or interface."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "5",
+      "Front": "Level 4: Warning",
+      "Back": "A syslog severity level used to notify administrators of potential problems that could become serious if ignored."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "5",
+      "Front": "Level 5: Notification",
+      "Back": "A syslog severity level for significant but normal operational events, such as an interface changing state (UP/DOWN)."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "5",
+      "Front": "Level 6: Informational",
+      "Back": "A syslog severity level for general information messages that do not require any administrative action."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "5",
+      "Front": "Level 7: Debugging",
+      "Back": "The lowest syslog severity level, containing highly detailed information used only for troubleshooting specific software issues."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "5",
+      "Front": "Syslog Facility",
+      "Back": "A label in a log message that identifies the source system or process that generated the event (e.g., %LINEPROTO or %LINK)."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "5",
+      "Front": "Syslog Mnemonic",
+      "Back": "A short, capitalized text string that uniquely identifies the specific type of event within a facility (e.g., UPDOWN)."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "5",
+      "Front": "Log Timestamp",
+      "Back": "The part of a log message that records the exact date and time the event occurred, provided the system clock is accurate."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "5",
+      "Front": "logging console",
+      "Back": "A Cisco command that sends log messages to the physical console port. this is enabled by default at the debugging level."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "5",
+      "Front": "logging monitor",
+      "Back": "A command that sends log messages to virtual terminal sessions (Telnet/SSH). users must also run 'terminal monitor' to see them."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "5",
+      "Front": "logging buffered",
+      "Back": "A configuration that stores log messages in the device's local RAM. administrators can view these using the 'show logging' command."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "5",
+      "Front": "logging host",
+      "Back": "The Cisco command used to specify the IP address of an external syslog server where the device should send its logs."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "5",
+      "Front": "logging trap",
+      "Back": "A command that defines the severity threshold for messages sent to an external syslog server. only messages at this level or higher will be forwarded."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "5",
+      "Front": "service timestamps",
+      "Back": "The global configuration command used to enable the inclusion of date and time information in all system log messages."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "5",
+      "Front": "service sequence-numbers",
+      "Back": "A command that adds a sequential number to every log message, allowing administrators to detect if any logs were missed during transmission."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "5",
+      "Front": "show logging",
+      "Back": "The primary verification command that displays the status of all logging destinations and the contents of the local log buffer."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "5",
+      "Front": "UDP Port 514",
+      "Back": "The standard destination port used by network devices when forwarding syslog messages to a centralized management server."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "5",
+      "Front": "Log Buffer Size",
+      "Back": "The amount of RAM (in bytes) allocated for local log storage. when the buffer is full, the oldest messages are overwritten by new ones."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "5",
+      "Front": "Syslog Message Format",
+      "Back": "The standard structure: [timestamp]: %[facility]-[severity]-[mnemonic]: [description]."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "5",
+      "Front": "Remote Logging",
+      "Back": "The process of sending system events over the network to a central repository for archival, correlation, and analysis."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "5",
+      "Front": "terminal monitor",
+      "Back": "An EXEC mode command required for an SSH/Telnet user to view log messages in their current terminal session."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "5",
+      "Front": "Log Correlation",
+      "Back": "The process of analyzing log messages from multiple devices to identify patterns or the root cause of a widespread network issue."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "5",
+      "Front": "Syslog RFC 5424",
+      "Back": "The modern IETF standard that defines the syslog protocol, replacing the older RFC 3164 and providing a more extensible format."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "5",
+      "Front": "Log Aggregation",
+      "Back": "The practice of collecting logs from various network sources into a single platform like Splunk or ELK for unified management."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "5",
+      "Front": "Logging Synchronous",
+      "Back": "A line configuration command that prevents log messages from interrupting command-line input by moving them to a new line."
+    }
+  ]
+}

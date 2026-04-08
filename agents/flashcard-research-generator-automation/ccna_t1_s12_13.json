@@ -1,0 +1,186 @@
+{
+  "status": "completed",
+  "appName": "ccna",
+  "flashcards": [
+    {
+      "Topic": "1",
+      "Subtopic": "12",
+      "Front": "Server Virtualization",
+      "Back": "A technology that allows multiple independent operating systems to run simultaneously on a single physical server. It uses a hypervisor to abstract the hardware resources, improving efficiency and reducing costs."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "12",
+      "Front": "Hypervisor",
+      "Back": "The software layer that creates and manages virtual machines on a physical host. It allocates CPU, memory, and storage resources to each VM while ensuring they remain isolated from one another."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "12",
+      "Front": "Type 1 Hypervisor",
+      "Back": "A 'bare-metal' virtualization layer that runs directly on the physical hardware of a server. It provides high performance and stability, making it the standard choice for enterprise data centers."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "12",
+      "Front": "Type 2 Hypervisor",
+      "Back": "A virtualization application that runs on top of a traditional host operating system like Windows or macOS. It is commonly used by developers and students for testing and lab environments."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "12",
+      "Front": "Virtual Machine",
+      "Back": "A software-based emulation of a physical computer that runs its own operating system and applications. It is completely isolated from the host and other VMs on the same physical hardware."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "12",
+      "Front": "Container",
+      "Back": "A lightweight virtualization method that packages an application and its dependencies together. Unlike VMs, they share the host's operating system kernel, making them faster and more resource-efficient."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "12",
+      "Front": "Docker",
+      "Back": "The most popular platform used to create, deploy, and manage application containers. It provides a standardized format that ensures applications run consistently across different computing environments."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "12",
+      "Front": "Virtual Routing and Forwarding",
+      "Back": "A technology that allows multiple independent instances of a routing table to coexist on a single router. It enables network virtualization by keeping the traffic of different departments or customers completely isolated."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "12",
+      "Front": "Virtual Switch",
+      "Back": "A software-defined networking component that provides connectivity between virtual machines within a physical host. It functions like a physical switch, supporting VLANs and security policies."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "12",
+      "Front": "Cloud Computing",
+      "Back": "The on-demand delivery of computing power, database storage, and other IT resources via the internet. It relies heavily on virtualization to provide scalable and flexible services to users."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "13",
+      "Front": "MAC Address Table",
+      "Back": "An internal database used by a switch to store the mapping between hardware addresses and physical ports. It is also commonly referred to as the Content Addressable Memory or CAM table."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "13",
+      "Front": "MAC Learning",
+      "Back": "The process by which a switch builds its address table by examining the source MAC address of every incoming frame. It associates that address with the port on which the frame was received."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "13",
+      "Front": "MAC Aging",
+      "Back": "A mechanism that removes inactive entries from the MAC address table after a specific period, typically 300 seconds. This ensures the table remains accurate and does not overflow with stale data."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "13",
+      "Front": "Frame Forwarding",
+      "Back": "The action of sending a frame out a specific port when its destination MAC address is found in the switch's address table. This minimizes unnecessary traffic on other network segments."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "13",
+      "Front": "Frame Filtering",
+      "Back": "A decision made by a switch to not forward a frame out a particular port. This occurs when the destination MAC address is known to be on the same port where the frame was originally received."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "13",
+      "Front": "Flooding",
+      "Back": "The process where a switch sends a frame out all active ports except the one it arrived on. This happens when the destination MAC address is unknown, or for broadcast and multicast traffic."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "13",
+      "Front": "Unknown Unicast",
+      "Back": "A frame with a specific destination MAC address that is not currently present in the switch's MAC address table. The switch must flood this frame to ensure it reaches its intended recipient."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "13",
+      "Front": "Broadcast Frame",
+      "Back": "A frame destined for every device on a local network segment, identified by the MAC address FF:FF:FF:FF:FF:FF. Switches always flood these frames to all ports within the same VLAN."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "13",
+      "Front": "Broadcast Domain",
+      "Back": "A logical division of a computer network in which all nodes can reach each other by broadcast at the data link layer. Routers and VLANs are used to define the boundaries of these domains."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "13",
+      "Front": "Collision Domain",
+      "Back": "A physical network segment where data packets can collide with one another. Modern switches eliminate these domains by providing dedicated, full-duplex bandwidth to every connected device."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "13",
+      "Front": "ASIC",
+      "Back": "Specialized hardware chips designed for extremely fast packet processing and forwarding. They allow switches to make switching decisions at 'wirespeed,' with virtually zero latency regardless of traffic volume."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "13",
+      "Front": "TCAM",
+      "Back": "A high-speed memory type used in multilayer switches to perform complex lookups for ACLs and QoS policies. It allows the switch to process security and priority rules without impacting forwarding performance."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "13",
+      "Front": "Store-and-Forward",
+      "Back": "A switching method where the entire frame is received and checked for errors using the FCS before it is forwarded. This ensures that only valid, error-free frames are sent across the network."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "13",
+      "Front": "Cut-Through Switching",
+      "Back": "A low-latency switching method where the switch begins forwarding a frame as soon as the destination MAC address is read. It does not check for errors, potentially forwarding corrupt data."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "13",
+      "Front": "Fragment-Free Switching",
+      "Back": "A hybrid switching method that waits to receive the first 64 bytes of a frame before forwarding. This allows it to filter out most collision-related runts while still maintaining low latency."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "13",
+      "Front": "VLAN",
+      "Back": "A technology that allows a single physical switch to be partitioned into multiple logical networks. Devices in different groups cannot communicate directly without a router, improving security and performance."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "13",
+      "Front": "Trunk Port",
+      "Back": "A switch interface configured to carry traffic for multiple VLANs simultaneously. It uses a tagging protocol like 802.1Q to identify which VLAN each frame belongs to as it travels between switches."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "13",
+      "Front": "Access Port",
+      "Back": "A switch port assigned to a single specific VLAN. It connects directly to end-user devices like computers or printers and does not add any VLAN tags to the frames it receives."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "13",
+      "Front": "Native VLAN",
+      "Back": "The specific VLAN on an 802.1Q trunk port that carries all untagged traffic. For security reasons, it is a best practice to change this from the default value of VLAN 1."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "13",
+      "Front": "Frame Check Sequence",
+      "Back": "A 4-byte value at the end of an Ethernet frame used for error detection. The receiving device recalculates this value and discards the frame if it does not match the original transmission."
+    }
+  ]
+}

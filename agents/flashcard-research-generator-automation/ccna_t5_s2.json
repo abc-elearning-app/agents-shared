@@ -1,0 +1,186 @@
+{
+  "status": "completed",
+  "appName": "ccna",
+  "flashcards": [
+    {
+      "Topic": "5",
+      "Subtopic": "2",
+      "Front": "Security Policy",
+      "Back": "A formal document that outlines the rules, procedures, and expectations for protecting an organization's assets and resources from security threats."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "2",
+      "Front": "User Awareness",
+      "Back": "The degree to which employees understand the security risks they face and the steps they must take to protect the organization's information."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "2",
+      "Front": "Security Training",
+      "Back": "Periodic formal instruction provided to employees to ensure they are familiar with current security policies, threat recognition, and reporting procedures."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "2",
+      "Front": "Physical Access Control",
+      "Back": "Security measures, such as locks, guards, and badges, designed to prevent unauthorized individuals from physically entering sensitive areas like server rooms."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "2",
+      "Front": "Badge Access",
+      "Back": "A scalable physical security solution that uses electronic cards to verify identities and provide an audit trail of who entered a specific area and when."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "2",
+      "Front": "Audit Trail",
+      "Back": "A chronological record of security-related events, such as logins or door access, used to track user activity and investigate security incidents."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "2",
+      "Front": "Credential Protection",
+      "Back": "The practice of keeping usernames and passwords secure, including avoiding writing them down or sharing them with others."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "2",
+      "Front": "Incident Reporting",
+      "Back": "The formal process for employees to notify the security team when they suspect a threat or discover a potential security breach."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "2",
+      "Front": "Data Confidentiality",
+      "Back": "A security goal that ensures sensitive information is only accessible to authorized individuals and remains protected from unauthorized disclosure."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "2",
+      "Front": "Removable Media Policy",
+      "Back": "Security guidelines that restrict or control the use of USB drives and other portable storage devices to prevent data theft and malware infection."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "2",
+      "Front": "Clean Desk Policy",
+      "Back": "A security rule requiring employees to clear sensitive information from their workspaces at the end of the day to prevent unauthorized viewing."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "2",
+      "Front": "Lockable Rack",
+      "Back": "A physical cabinet used to house network equipment that can be locked to prevent unauthorized tampering or hardware theft."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "2",
+      "Front": "Network Closet",
+      "Back": "A small, dedicated room used to house local network switches and cabling. it must be physically secured to protect the network's integrity."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "2",
+      "Front": "Data Center",
+      "Back": "A large, highly secured facility used to house an organization's core servers and storage. it requires multiple layers of physical access control."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "2",
+      "Front": "Tailgating (Physical)",
+      "Back": "A security breach where an unauthorized person follows an authorized person through a secured door without scanning their own badge."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "2",
+      "Front": "Mantrap",
+      "Back": "A physical security entrance consisting of two interlocking doors where the first door must close before the second door can be opened."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "2",
+      "Front": "Environmental Monitoring",
+      "Back": "The use of sensors to track temperature, humidity, and water leaks in server rooms to prevent hardware damage from environmental factors."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "2",
+      "Front": "Video Surveillance (CCTV)",
+      "Back": "The use of cameras to monitor and record activity in and around sensitive areas for security and investigative purposes."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "2",
+      "Front": "Biometric Authentication",
+      "Back": "A high-security access method that uses unique physical characteristics, like fingerprints or iris patterns, to verify an individual's identity."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "2",
+      "Front": "Smart Card",
+      "Back": "A physical card embedded with a microprocessor chip used for authentication. it is often used in combination with a PIN for multifactor security."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "2",
+      "Front": "Asset Tagging",
+      "Back": "The process of placing physical labels on hardware to track ownership, location, and configuration for inventory and security management."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "2",
+      "Front": "Acceptable Use Policy (AUP)",
+      "Back": "A set of rules defining the permitted and prohibited uses of an organization's computing resources and internet access."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "2",
+      "Front": "Security Audit",
+      "Back": "A systematic evaluation of an organization's security controls and practices to ensure compliance with policies and identify weaknesses."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "2",
+      "Front": "Two-Factor Authentication (2FA)",
+      "Back": "A security process requiring two different types of evidence to verify a user's identity, such as a password and a physical token."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "2",
+      "Front": "Social Media Policy",
+      "Back": "Security guidelines that educate employees on the risks of sharing sensitive corporate information on personal social media platforms."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "2",
+      "Front": "Dumpster Diving",
+      "Back": "A physical reconnaissance technique where an attacker searches through an organization's trash to find discarded sensitive documents or passwords."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "2",
+      "Front": "Document Shredding",
+      "Back": "A physical security practice of destroying sensitive papers before disposal to prevent information from being recovered through dumpster diving."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "2",
+      "Front": "Physical Intrusion Detection",
+      "Back": "The use of motion sensors, door contacts, and glass-break sensors to alert security teams of unauthorized entry into sensitive areas."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "2",
+      "Front": "Escort Policy",
+      "Back": "A security rule requiring that all visitors be accompanied by an authorized employee at all times while inside secured areas of the building."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "2",
+      "Front": "Access Revocation",
+      "Back": "The immediate process of disabling an employee's digital and physical access rights upon their termination or resignation."
+    }
+  ]
+}

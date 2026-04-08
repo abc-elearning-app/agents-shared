@@ -1,0 +1,186 @@
+{
+  "status": "completed",
+  "appName": "ccna",
+  "flashcards": [
+    {
+      "Topic": "6",
+      "Subtopic": "2",
+      "Front": "Traditional Networking",
+      "Back": "A decentralized management model where each network device (router/switch) contains its own control plane and is configured individually."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "2",
+      "Front": "Controller-Based Networking",
+      "Back": "A centralized management model where a software controller manages multiple network devices, often centralizing the control plane functions."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "2",
+      "Front": "Distributed Control Plane",
+      "Back": "The model used in traditional networking where each device independently runs routing protocols (like OSPF) to make its own forwarding decisions."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "2",
+      "Front": "Centralized Control Plane",
+      "Back": "The model used in SDN where the intelligence and decision-making for the whole network are moved to a single software controller."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "2",
+      "Front": "SDN (Software-Defined Networking)",
+      "Back": "An architectural approach that makes networks agile and flexible by separating the control plane from the underlying data plane."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "2",
+      "Front": "Northbound Interface (NBI)",
+      "Back": "The API that allows a network controller to communicate with higher-level applications and scripts for automation and orchestration."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "2",
+      "Front": "Southbound Interface (SBI)",
+      "Back": "The API or protocol (like OpenFlow or NETCONF) that a controller uses to communicate with and configure physical network devices."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "2",
+      "Front": "Data Plane",
+      "Back": "The part of a network device's architecture that is responsible for moving actual user packets from port to port based on the control plane's instructions."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "2",
+      "Front": "Control Plane",
+      "Back": "The logical area of a network device that handles the 'intelligence'—learning MAC addresses, building routing tables, and running STP."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "2",
+      "Front": "Management Plane",
+      "Back": "The logical area of a device used for administrative tasks, such as SSH, Telnet, or SNMP access."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "2",
+      "Front": "OpenFlow",
+      "Back": "One of the first and most well-known southbound protocols, used to allow a controller to directly manipulate the forwarding tables of a switch."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "2",
+      "Front": "NETCONF",
+      "Back": "An IETF standard southbound protocol that uses XML-based data encoding to install, manipulate, and delete configurations on network devices."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "2",
+      "Front": "RESTCONF",
+      "Back": "An HTTP-based protocol that provides a RESTful interface for managing network devices, often used as a modern alternative to NETCONF."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "2",
+      "Front": "Cisco DNA Center (SDN)",
+      "Back": "Cisco's enterprise SDN controller that provides a centralized platform for managing campus networks using software-defined principles."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "2",
+      "Front": "Intent-Based Networking (IBN)",
+      "Back": "A networking model where the administrator defines what they want the network to do (intent), and the controller automatically handles the 'how'."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "2",
+      "Front": "SD-Access (SDA)",
+      "Back": "Cisco's software-defined solution for campus LANs, automating the configuration of VLANs, security, and segmentation through DNA Center."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "2",
+      "Front": "SD-WAN",
+      "Back": "A software-defined approach to managing wide-area networks, providing centralized control over multiple connection types like MPLS and internet."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "2",
+      "Front": "Network Orchestration",
+      "Back": "The automated coordination and management of complex network tasks and workflows across multiple systems and devices."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "2",
+      "Front": "Application Centric Infrastructure (ACI)",
+      "Back": "Cisco's SDN solution for data centers, which uses a spine-leaf topology and a centralized APIC controller."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "2",
+      "Front": "REST API (NBI)",
+      "Back": "Representational State Transfer. the most common type of Northbound API, allowing software to interact with network controllers using standard web methods."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "2",
+      "Front": "Device Abstraction",
+      "Back": "A benefit of SDN where the controller hides the complex individual CLI commands of different devices and presents a unified management interface."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "2",
+      "Front": "Policy Propagation",
+      "Back": "The process where a controller pushes a single security or QoS policy out to all relevant devices in the network simultaneously."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "2",
+      "Front": "Forwarding Table (SDN)",
+      "Back": "The hardware table in a switch (FIB) that is updated by the centralized controller in an SDN architecture."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "2",
+      "Front": "OpenDaylight (ODL)",
+      "Back": "A popular open-source SDN controller framework that supports a wide range of southbound and northbound protocols."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "2",
+      "Front": "Vendor Lock-in (Traditional)",
+      "Back": "A risk in traditional networks where proprietary features and management tools make it difficult to switch to a different hardware manufacturer."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "2",
+      "Front": "OpFlex",
+      "Back": "A Cisco-developed southbound protocol used in ACI to communicate policy information between the APIC controller and the switches."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "2",
+      "Front": "Network Visibility (Centralized)",
+      "Back": "The enhanced ability of an SDN controller to see the state and traffic patterns of the entire network from a single dashboard."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "2",
+      "Front": "Control Plane Overhead",
+      "Back": "In traditional networks, the CPU resources consumed by each device to run its own routing and management protocols."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "2",
+      "Front": "API Endpoint",
+      "Back": "A specific URL on a network controller that a script or application connects to in order to send or receive management data."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "2",
+      "Front": "Hybrid SDN",
+      "Back": "A network that uses both traditional distributed control protocols and a centralized SDN controller simultaneously."
+    }
+  ]
+}

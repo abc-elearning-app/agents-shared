@@ -1,0 +1,186 @@
+{
+  "status": "completed",
+  "appName": "ccna",
+  "flashcards": [
+    {
+      "Topic": "4",
+      "Subtopic": "4",
+      "Front": "Quality of Service",
+      "Back": "A set of technologies used to manage network traffic and ensure that critical applications receive the necessary bandwidth, low latency, and minimal packet loss required for proper operation."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "4",
+      "Front": "Classification (QoS)",
+      "Back": "The process of identifying and grouping network traffic into different categories based on specific criteria like port numbers, IP addresses, or application types. it is the first step in applying QoS policies."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "4",
+      "Front": "Marking (QoS)",
+      "Back": "The action of changing specific bits in a packet header (like DSCP or CoS) to identify its priority level. This allows other network devices to recognize and apply the appropriate QoS treatment to the traffic."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "4",
+      "Front": "Differentiated Services Code Point",
+      "Back": "A 6-bit field in the IPv4 or IPv6 header used for advanced traffic marking. it provides up to 64 different priority levels, allowing for granular control over network performance."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "4",
+      "Front": "Class of Service",
+      "Back": "A 3-bit marking field found in the 802.1Q Ethernet header. it is used to prioritize traffic at Layer 2 across trunk links, providing 8 different priority levels."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "4",
+      "Front": "Queuing (QoS)",
+      "Back": "A mechanism that stores packets in separate memory buffers when an outgoing interface is congested. The router then decides which queue to service first based on the assigned priority levels."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "4",
+      "Front": "Congestion Avoidance",
+      "Back": "A set of techniques, such as Weighted Random Early Detection (WRED), that proactively drop packets when buffers begin to fill up. This prevents total congestion and ensures that high-priority traffic is protected."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "4",
+      "Front": "Policing (QoS)",
+      "Back": "A traffic management tool that strictly enforces a maximum bit rate by immediately dropping any packets that exceed the configured limit. it is typically used at the network edge to prevent resource abuse."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "4",
+      "Front": "Shaping (QoS)",
+      "Back": "A technique that limits the output bit rate of an interface by temporarily buffering excess packets in a queue. This smooths out traffic bursts and provides a more consistent data flow than policing."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "4",
+      "Front": "Trust Boundary",
+      "Back": "The specific point in a network where QoS markings on incoming packets are either accepted and trusted or stripped and reassigned. it is typically located at the access layer switch port."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "4",
+      "Front": "Low Latency Queuing",
+      "Back": "A queuing method that provides a strict priority queue for time-sensitive traffic like voice. This ensures that these packets are always sent first, minimizing delay and jitter."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "4",
+      "Front": "Jitter",
+      "Back": "The variation in the delay of received packets. High jitter can cause significant quality issues for real-time applications like VoIP and video conferencing, making QoS essential."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "4",
+      "Front": "Bandwidth (QoS)",
+      "Back": "The total capacity of a network link to transmit data. QoS tools ensure that this resource is allocated fairly and that critical applications always have the minimum amount they need to function."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "8",
+      "Front": "Secure Shell",
+      "Back": "A cryptographic network protocol used for secure remote access to a device's command-line interface. Unlike Telnet, it encrypts all communication, including usernames and passwords."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "8",
+      "Front": "SSH v2",
+      "Back": "The modern and much more secure version of the SSH protocol. it uses stronger encryption algorithms and is the standard requirement for managing Cisco networking hardware."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "8",
+      "Front": "VTY Lines",
+      "Back": "The logical ports on a Cisco device used for remote management access. For security, these should be configured to only allow SSH connections using the 'transport input ssh' command."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "8",
+      "Front": "RSA Key Pair",
+      "Back": "A set of cryptographic keys (public and private) generated on a router or switch to enable SSH. The private key remains on the device, while the public key is used for secure session negotiation."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "8",
+      "Front": "IP Domain-Name",
+      "Back": "A required configuration command for enabling SSH on a Cisco device. it provides the necessary suffix for generating the device's unique RSA encryption keys."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "8",
+      "Front": "Local Authentication (SSH)",
+      "Back": "A security configuration where a remote user's credentials are checked against a username and password stored directly in the device's own running configuration."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "8",
+      "Front": "Telnet",
+      "Back": "A legacy remote access protocol that sends all data in plain text. it is highly insecure and should be disabled on all production network devices in favor of SSH."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "9",
+      "Front": "Trivial File Transfer Protocol",
+      "Back": "A very simple, connectionless (UDP) protocol used for transferring files between network devices. it is commonly used for backing up configurations and downloading IOS images in local environments."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "9",
+      "Front": "File Transfer Protocol",
+      "Back": "A standard connection-oriented (TCP) protocol used for moving files between a client and a server. it is more reliable and supports larger file sizes than TFTP but requires more overhead."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "9",
+      "Front": "Binary Transfer Mode",
+      "Back": "The specific FTP transfer mode used for moving non-text files like Cisco IOS images. it ensures that the file content is transmitted bit-for-bit without any character translation."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "9",
+      "Front": "Flash Memory",
+      "Back": "The non-volatile storage on a Cisco device where the IOS operating system image is typically stored. Administrators use TFTP or FTP to upload new images to this memory for upgrades."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "9",
+      "Front": "Startup-Config",
+      "Back": "The configuration file stored in NVRAM that is loaded by a device when it boots up. it is a best practice to regularly back this file up to a remote TFTP or FTP server."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "9",
+      "Front": "Copy Running-Config TFTP",
+      "Back": "The standard Cisco IOS command used to upload the device's current active configuration to a remote TFTP server for backup and disaster recovery purposes."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "9",
+      "Front": "SCP (Secure Copy)",
+      "Back": "A secure alternative to FTP and TFTP that uses the SSH protocol to transfer files between devices. it provides both the encryption of SSH and the file management capabilities of RCP."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "9",
+      "Front": "FTP Passive Mode",
+      "Back": "An FTP connection method where the client initiates both the control and data connections to the server. This is often necessary when the client is located behind a NAT device or firewall."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "9",
+      "Front": "Archive (Cisco IOS)",
+      "Back": "A specialized feature in Cisco IOS that can automatically back up a device's configuration to a remote server whenever a change is made. it provides a history of configurations for auditing."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "9",
+      "Front": "Verify (Cisco IOS)",
+      "Back": "A command used to check the integrity of a file (like an IOS image) after it has been transferred. it typically uses an MD5 hash to ensure the file was not corrupted during the transfer."
+    }
+  ]
+}

@@ -1,0 +1,186 @@
+{
+  "status": "completed",
+  "appName": "ccna",
+  "flashcards": [
+    {
+      "Topic": "1",
+      "Subtopic": "8",
+      "Front": "IPv6 Address Length",
+      "Back": "A standard IPv6 address is 128 bits long, providing a massive address space of approximately $3.4 \\times 10^{38}$ unique identifiers."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "8",
+      "Front": "IPv6 Representation",
+      "Back": "IPv6 addresses are written in hexadecimal format, divided into eight groups of four digits (quartets) separated by colons."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "8",
+      "Front": "Leading Zero Omission",
+      "Back": "An IPv6 rule that allows any leading zeros in a 16-bit quartet to be removed to simplify the address (e.g., '0db8' becomes 'db8')."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "8",
+      "Front": "Zero Compression",
+      "Back": "A rule that allows a single contiguous sequence of all-zero quartets to be replaced by a double colon (::). This can only be done once per address."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "8",
+      "Front": "IPv6 Prefix",
+      "Back": "The leading bits of an IPv6 address that identify the network or subnet. it is analogous to the network portion of an IPv4 address."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "8",
+      "Front": "Interface ID",
+      "Back": "The 64-bit portion of an IPv6 address that uniquely identifies a specific interface on a subnet. it occupies the last half of the 128-bit address."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "8",
+      "Front": "Global Routing Prefix",
+      "Back": "The portion of a Global Unicast Address assigned to an organization by an ISP or registry, typically the first 48 bits."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "8",
+      "Front": "Subnet ID (IPv6)",
+      "Back": "The 16-bit field in a standard /64 IPv6 address that follows the global routing prefix, allowing for the creation of 65,536 subnets."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "9",
+      "Front": "Global Unicast Address (GUA)",
+      "Back": "A globally unique and routable IPv6 address, equivalent to a public IPv4 address. gua addresses currently begin with the binary prefix 001 (2000::/3)."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "9",
+      "Front": "Link-Local Address",
+      "Back": "An IPv6 address used for communication only within a single local link. These addresses always start with the prefix fe80::/10."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "9",
+      "Front": "Unique Local Address (ULA)",
+      "Back": "An IPv6 address intended for use within an organization's internal network, similar to private IPv4. They use the prefix fc00::/7 (commonly fd00::/8)."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "9",
+      "Front": "Multicast Address (IPv6)",
+      "Back": "An IPv6 address used to send a single packet to multiple destinations simultaneously. These addresses always begin with the prefix ff00::/8."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "9",
+      "Front": "Anycast Address (IPv6)",
+      "Back": "An IPv6 address assigned to multiple interfaces (typically on different nodes). A packet sent to this address is delivered to the 'nearest' interface."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "9",
+      "Front": "Modified EUI-64",
+      "Back": "A method to automatically generate a 64-bit Interface ID from a 48-bit MAC address by inserting 'fffe' in the middle and inverting the 7th bit."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "8",
+      "Front": "SLAAC",
+      "Back": "Stateless Address Autoconfiguration. A mechanism that allows an IPv6 host to configure its own address using Router Advertisement messages."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "8",
+      "Front": "Stateless DHCPv6",
+      "Back": "A configuration where a host uses SLAAC for its address but queries a DHCPv6 server for additional info like DNS server addresses."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "8",
+      "Front": "Stateful DHCPv6",
+      "Back": "A configuration where a DHCPv6 server centrally manages and assigns IPv6 addresses to clients, similar to traditional DHCP in IPv4."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "9",
+      "Front": "Loopback Address (IPv6)",
+      "Back": "The reserved IPv6 address 0:0:0:0:0:0:0:1, abbreviated as ::1/128. it is used by a host to send packets to itself for testing."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "9",
+      "Front": "Unspecified Address (IPv6)",
+      "Back": "The all-zeros IPv6 address (::/128) used as a source address by a host before it has been assigned a unique address."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "8",
+      "Front": "Duplicate Address Detection (DAD)",
+      "Back": "A mandatory IPv6 process where a host verifies that its newly configured address is not already in use on the local link."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "8",
+      "Front": "Neighbor Discovery Protocol (NDP)",
+      "Back": "An ICMPv6-based protocol suite that replaces ARP. it handles MAC address resolution, router discovery, and link-layer health checks."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "8",
+      "Front": "Router Advertisement (RA)",
+      "Back": "A periodic ICMPv6 message sent by routers to inform hosts of the network's presence and provide configuration parameters like the prefix."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "8",
+      "Front": "Router Solicitation (RS)",
+      "Back": "An ICMPv6 message sent by a host upon joining a network to immediately request configuration information from any available local routers."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "8",
+      "Front": "Neighbor Solicitation (NS)",
+      "Back": "An ICMPv6 message used by a host to determine the MAC address of a neighbor or to verify that a neighbor is still reachable."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "8",
+      "Front": "Neighbor Advertisement (NA)",
+      "Back": "A response to a Neighbor Solicitation message that provides the requested MAC address or announces a change in the host's link-layer info."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "9",
+      "Front": "Solicited-Node Multicast",
+      "Back": "A special multicast address used in IPv6 neighbor discovery. it is formed by the prefix ff02::1:ff00:0/104 + the last 24 bits of the unicast address."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "9",
+      "Front": "All-Nodes Multicast (ff02::1)",
+      "Back": "An IPv6 address that targets every IPv6-enabled device on the local link. it is the equivalent of an IPv4 broadcast."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "9",
+      "Front": "All-Routers Multicast (ff02::2)",
+      "Back": "An IPv6 address used to communicate with all routers on a local segment, primarily for Router Solicitation messages."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "9",
+      "Front": "Dual-Stack",
+      "Back": "A transition strategy where network devices run both IPv4 and IPv6 protocol stacks simultaneously to ensure compatibility with both networks."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "9",
+      "Front": "Tunneling (IPv6)",
+      "Back": "A transition method that encapsulates IPv6 packets inside IPv4 headers so they can be transported across an existing IPv4-only infrastructure."
+    }
+  ]
+}

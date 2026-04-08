@@ -1,0 +1,186 @@
+{
+  "status": "completed",
+  "appName": "ccna",
+  "flashcards": [
+    {
+      "Topic": "1",
+      "Subtopic": "6",
+      "Front": "IPv4 Address",
+      "Back": "A 32-bit logical identifier assigned to a network interface. It is typically represented in dotted-decimal notation consisting of four octets."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "6",
+      "Front": "Octet",
+      "Back": "An 8-bit segment of an IPv4 address. There are four octets in a single address, each ranging from 0 to 255 in decimal."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "6",
+      "Front": "Dotted-Decimal Notation",
+      "Back": "The standard presentation format for IPv4 addresses, where the four 8-bit binary numbers are converted to decimal and separated by periods (e.g., 192.168.1.1)."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "6",
+      "Front": "Subnet Mask",
+      "Back": "A 32-bit value used to distinguish the network portion from the host portion of an IP address. it consists of a series of contiguous binary 1s followed by 0s."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "6",
+      "Front": "Prefix Length (CIDR)",
+      "Back": "A compact representation of a subnet mask that indicates the number of network bits using a slash followed by a number (e.g., /24 for 255.255.255.0)."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "6",
+      "Front": "Network ID",
+      "Back": "The first address in a subnet, where all host bits are set to binary 0. it represents the entire network and cannot be assigned to an individual device."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "6",
+      "Front": "Broadcast Address",
+      "Back": "The last address in a subnet, where all host bits are set to binary 1. Data sent to this address is received by all hosts on the specific segment."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "6",
+      "Front": "Usable Host Range",
+      "Back": "The set of IP addresses between the Network ID and the Broadcast Address that can be assigned to devices. Formula: First = ID + 1; Last = Broadcast - 1."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "6",
+      "Front": "Class A Range",
+      "Back": "IPv4 addresses where the first octet is between 1 and 126. The default mask is 255.0.0.0 (/8), supporting over 16 million hosts per network."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "6",
+      "Front": "Class B Range",
+      "Back": "IPv4 addresses where the first octet is between 128 and 191. The default mask is 255.255.0.0 (/16), supporting 65,534 hosts per network."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "6",
+      "Front": "Class C Range",
+      "Back": "IPv4 addresses where the first octet is between 192 and 223. The default mask is 255.255.255.0 (/24), supporting 254 hosts per network."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "6",
+      "Front": "Class D Range",
+      "Back": "IPv4 addresses from 224 to 239, reserved exclusively for multicast traffic. They are not assigned to individual network interfaces."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "6",
+      "Front": "Class E Range",
+      "Back": "IPv4 addresses from 240 to 255, reserved by the IETF for experimental and future research purposes. They are not used for standard routing."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "6",
+      "Front": "Loopback Address (IPv4)",
+      "Back": "The special IP range 127.0.0.0/8 used for testing the local TCP/IP stack. Traffic sent to 127.0.0.1 never leaves the physical device."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "6",
+      "Front": "APIPA Range",
+      "Back": "The 169.254.0.0/16 block used for automatic link-local addressing when a DHCP server is unavailable. it allows for local communication only."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "6",
+      "Front": "Subnetting",
+      "Back": "The process of logically dividing a single large network into multiple smaller, more manageable network segments to improve performance and security."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "6",
+      "Front": "Variable-Length Subnet Masking",
+      "Back": "A technique that allows for the use of different subnet masks for different subnets within the same major network, minimizing wasted IP addresses."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "6",
+      "Front": "Number of Hosts Formula",
+      "Back": "The mathematical calculation $2^H - 2$, where $H$ is the number of host bits. The 2 is subtracted for the Network ID and Broadcast Address."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "6",
+      "Front": "Number of Subnets Formula",
+      "Back": "The calculation $2^S$, where $S$ is the number of bits borrowed from the host portion to create subnets."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "6",
+      "Front": "Magic Number",
+      "Back": "A shortcut value used in subnetting, calculated by subtracting the decimal value of the 'interesting' octet of a mask from 256. it represents the increment size between subnets."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "6",
+      "Front": "Boolean ANDing",
+      "Back": "The binary logic used by a router to find the Network ID. it compares each bit of the IP address with the corresponding bit of the subnet mask."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "6",
+      "Front": "Classful Networking",
+      "Back": "The legacy method of IP allocation where the network and host portions were strictly determined by the first few bits of the first octet."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "6",
+      "Front": "Classless Inter-Domain Routing",
+      "Back": "The modern method of IP addressing that ignores the traditional class rules and uses prefix lengths to define the network boundary at any bit position."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "6",
+      "Front": "RFC 1918",
+      "Back": "The document that defines the three blocks of IPv4 address space reserved for private internal use: 10.0.0.0/8, 172.16.0.0/12, and 192.168.0.0/16."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "6",
+      "Front": "Unicast Address",
+      "Back": "An IP address used for one-to-one communication. Traffic sent to a unicast address is delivered to exactly one specific network interface."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "6",
+      "Front": "Multicast Address",
+      "Back": "An IP address (Class D) used for one-to-many communication. Traffic is delivered to all devices that have 'joined' the specific multicast group."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "6",
+      "Front": "Default Gateway",
+      "Back": "The IP address of a router interface on the local subnet that hosts use to send traffic to external networks."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "6",
+      "Front": "Interesting Octet",
+      "Back": "The specific octet in a subnet mask that contains both 1s and 0s. This is the octet where the 'magic number' increment is applied to find subnet IDs."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "6",
+      "Front": "Binary Conversion",
+      "Back": "The process of translating a decimal IP address into a 32-bit string of 1s and 0s for logical processing by networking hardware."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "6",
+      "Front": "Public IP Address",
+      "Back": "A globally unique IPv4 address assigned by internet registries that is fully routable on the public internet."
+    }
+  ]
+}

@@ -1,0 +1,186 @@
+{
+  "status": "completed",
+  "appName": "ccna",
+  "flashcards": [
+    {
+      "Topic": "6",
+      "Subtopic": "1",
+      "Front": "Network Automation",
+      "Back": "The use of software to automatically configure, manage, and monitor network devices. it reduces manual errors, improves consistency, and allows for faster deployment of network services."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "2",
+      "Front": "Traditional Networking",
+      "Back": "A model where each network device is managed individually using its own control plane. Configuration is typically done manually via the CLI, making it slow and prone to human error in large environments."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "2",
+      "Front": "Controller-Based Networking",
+      "Back": "A management model where a centralized software controller manages multiple network devices. it provides a global view of the network and allows for automated, policy-based configuration."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "3",
+      "Front": "Control Plane",
+      "Back": "The logical part of a network device that makes decisions about where traffic should be sent. In SDN, this is often moved to a centralized controller to simplify management."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "3",
+      "Front": "Data Plane",
+      "Back": "The hardware component of a network device that performs the actual forwarding of packets. it follows the instructions provided by the control plane to move data at high speeds."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "3",
+      "Front": "Southbound API",
+      "Back": "A communication protocol (like OpenFlow or NETCONF) used by a controller to manage and configure network devices. it allows the controller to push policies down to the data plane."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "3",
+      "Front": "Northbound API",
+      "Back": "An interface (typically REST-based) that allows applications and management software to communicate with a network controller. it enables high-level automation and orchestration of network services."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "3",
+      "Front": "Underlay Network",
+      "Back": "The physical infrastructure, including cabling and hardware devices, that provides the foundational connectivity for a network. it is responsible for the actual delivery of packets."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "3",
+      "Front": "Overlay Network",
+      "Back": "A logical network created on top of a physical underlay. it uses encapsulation (like VXLAN) to create virtual connections that are independent of the physical topology."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "3",
+      "Front": "Fabric (Networking)",
+      "Back": "The combination of an underlay and an overlay network working together as a single integrated system. it provides a scalable, automated, and highly flexible networking environment."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "4",
+      "Front": "Cisco DNA Center",
+      "Back": "A powerful management and automation platform for enterprise networks. it provides a centralized dashboard for design, provisioning, policy management, and troubleshooting using SDN principles."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "4",
+      "Front": "Intent-Based Networking",
+      "Back": "A networking philosophy where administrators define high-level business goals (intent), and the network automation software automatically translates those goals into device-specific configurations."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "5",
+      "Front": "REST API",
+      "Back": "An architectural style for creating web services that use standard HTTP methods to interact with resources. it is the most common type of API used for network automation."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "5",
+      "Front": "HTTP Verbs (REST)",
+      "Back": "The standard actions used in RESTful communication: GET (retrieve), POST (create), PUT (update), and DELETE (remove). They correspond to the basic CRUD operations."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "5",
+      "Front": "CRUD Operations",
+      "Back": "The four basic functions of persistent storage: Create, Read, Update, and Delete. These are mapped to HTTP methods in RESTful network management interfaces."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "6",
+      "Front": "Ansible",
+      "Back": "An open-source automation tool that uses SSH to manage network devices. it is 'agentless,' meaning no software needs to be installed on the devices themselves, and uses YAML for configuration."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "6",
+      "Front": "Puppet",
+      "Back": "A configuration management tool that typically uses an agent-based model. it relies on a domain-specific language to define the desired state of network devices and ensures they stay in compliance."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "6",
+      "Front": "Chef",
+      "Back": "An automation platform that uses an agent-based architecture and Ruby-based 'recipes' to manage configurations. it is highly flexible but requires more programming knowledge than tools like Ansible."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "7",
+      "Front": "JSON",
+      "Back": "A lightweight data-interchange format that is easy for humans to read and write and easy for machines to parse. it is the standard format for data encoding in most modern network APIs."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "7",
+      "Front": "JSON Object",
+      "Back": "A collection of key-value pairs wrapped in curly braces { }. Each key is a string followed by a colon and the associated value, making the data highly structured and searchable."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "7",
+      "Front": "JSON Array",
+      "Back": "An ordered list of values wrapped in square brackets [ ]. Values within the array can be strings, numbers, objects, or even other arrays, allowing for complex data structures."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "6",
+      "Front": "Playbook (Ansible)",
+      "Back": "A YAML file in Ansible that contains a set of 'plays' or instructions to be executed on a group of network devices. it serves as the master blueprint for an automation task."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "6",
+      "Front": "Idempotency",
+      "Back": "A key property of many automation tools where running the same task multiple times has no additional effect after the first successful execution. it ensures the network stays in the desired state."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "5",
+      "Front": "URI (Uniform Resource Identifier)",
+      "Back": "The specific address used to identify a resource in a REST API, such as a particular switch port or a VLAN configuration. it is the target of an HTTP request."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "5",
+      "Front": "Payload (API)",
+      "Back": "The actual data sent or received in an API request or response, typically formatted in JSON or XML. it contains the specific configuration details or status information being exchanged."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "3",
+      "Front": "Overlay Tunneling",
+      "Back": "A technique where a packet is encapsulated inside another protocol header to be transported across the underlay network. VXLAN is the most common example used in modern data center fabrics."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "4",
+      "Front": "Cisco DNA Center Assurance",
+      "Back": "A feature that uses AI and machine learning to monitor network performance and provide proactive troubleshooting insights. it helps administrators identify and fix issues before they impact users."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "6",
+      "Front": "YAML",
+      "Back": "A human-friendly data serialization language commonly used for configuration files and automation scripts. its clean, indentation-based structure makes it the preferred choice for Ansible playbooks."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "5",
+      "Front": "API Authentication",
+      "Back": "The process of verifying the identity of a script or application before it is allowed to access a network controller. Common methods include API keys, basic auth, or OAuth tokens."
+    },
+    {
+      "Topic": "6",
+      "Subtopic": "2",
+      "Front": "Southbound Protocol (OpenFlow)",
+      "Back": "One of the original protocols used in software-defined networking to allow a controller to directly manipulate the forwarding tables of a switch. it is a foundational concept in the history of SDN."
+    }
+  ]
+}

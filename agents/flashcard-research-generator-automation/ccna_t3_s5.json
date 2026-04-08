@@ -1,0 +1,186 @@
+{
+  "status": "completed",
+  "appName": "ccna",
+  "flashcards": [
+    {
+      "Topic": "3",
+      "Subtopic": "5",
+      "Front": "FHRP",
+      "Back": "First Hop Redundancy Protocol. A class of protocols that allow multiple physical routers to appear as a single virtual gateway for a group of hosts."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "5",
+      "Front": "HSRP",
+      "Back": "Hot Standby Router Protocol. A Cisco-proprietary FHRP that provides default gateway redundancy in an active/standby configuration."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "5",
+      "Front": "VRRP",
+      "Back": "Virtual Router Redundancy Protocol. An industry-standard (IETF) alternative to Cisco's HSRP, also using an active/standby model."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "5",
+      "Front": "GLBP",
+      "Back": "Gateway Load Balancing Protocol. A Cisco-proprietary FHRP that allows for active load balancing across multiple routers in a redundancy group."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "5",
+      "Front": "Virtual IP Address (VIP)",
+      "Back": "A single IP address shared among multiple FHRP-enabled routers. Hosts configure this address as their default gateway."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "5",
+      "Front": "Virtual MAC Address",
+      "Back": "A specialized MAC address associated with the FHRP group. The active router responds to ARP requests for the VIP with this MAC."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "5",
+      "Front": "HSRP Active Router",
+      "Back": "The specific router in an HSRP group that is currently responsible for forwarding all traffic sent to the virtual gateway address."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "5",
+      "Front": "HSRP Standby Router",
+      "Back": "The router that monitors the active router and is prepared to take over the forwarding role immediately if the active router fails."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "5",
+      "Front": "HSRP Priority",
+      "Back": "A value (0-255, default 100) used to elect the active router. The device with the highest priority wins the election."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "5",
+      "Front": "Preemption (HSRP)",
+      "Back": "An optional configuration that allows a higher-priority router to reclaim the active role as soon as it comes back online after a failure."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "5",
+      "Front": "HSRPv1 Multicast IP",
+      "Back": "The destination address used for HSRPv1 hello packets, which is 224.0.0.2."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "5",
+      "Front": "HSRPv2 Multicast IP",
+      "Back": "The destination address used for HSRPv2 hello packets, which is 224.0.0.102. it supports more groups than v1."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "5",
+      "Front": "Gratuitous ARP (FHRP)",
+      "Back": "A packet sent by a router when it becomes the active forwarder to inform local switches to update their MAC tables for the virtual MAC."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "5",
+      "Front": "HSRP Hello Timer",
+      "Back": "The interval at which HSRP routers send health-check messages. The default is 3 seconds."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "5",
+      "Front": "HSRP Hold Timer",
+      "Back": "The time a standby router waits without hearing a Hello before assuming the active router has failed. The default is 10 seconds."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "5",
+      "Front": "HSRP Group Number",
+      "Back": "An identifier used to distinguish between different HSRP instances on the same subnet. it is also used to derive the virtual MAC address."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "5",
+      "Front": "AVG (Active Virtual Gateway)",
+      "Back": "The primary router in a GLBP group responsible for answering ARP requests and assigning different virtual MACs to different hosts."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "5",
+      "Front": "AVF (Active Virtual Forwarder)",
+      "Back": "A router in a GLBP group that is responsible for forwarding traffic sent to its assigned virtual MAC address."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "5",
+      "Front": "Object Tracking (FHRP)",
+      "Back": "A feature that allows an FHRP router to monitor a specific interface or route. if the tracked object fails, the router lowers its priority to trigger a failover."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "5",
+      "Front": "Virtual MAC (HSRP v1)",
+      "Back": "The standard format for HSRP v1 MAC addresses: 0000.0C07.ACxx (where xx is the hex group number)."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "5",
+      "Front": "Virtual MAC (HSRP v2)",
+      "Back": "The standard format for HSRP v2 MAC addresses: 0000.0C9F.Fxxx (where xxx is the hex group number)."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "5",
+      "Front": "Standby Listen State",
+      "Back": "An intermediate HSRP state where a router is not the active or standby device but is listening for Hello packets from other group members."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "5",
+      "Front": "Standby Speak State",
+      "Back": "An HSRP state where a router periodically sends Hello packets and is actively participating in the election of the active and standby routers."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "5",
+      "Front": "Initial State (HSRP)",
+      "Back": "The starting state of HSRP when the protocol is first enabled on an interface or after a configuration change."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "5",
+      "Front": "Master Router (VRRP)",
+      "Back": "The VRRP term for the router that is actively forwarding packets for the virtual gateway address (equivalent to HSRP Active)."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "5",
+      "Front": "Backup Router (VRRP)",
+      "Back": "The VRRP term for routers that are monitoring the Master and ready to take over if it fails."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "5",
+      "Front": "FHRP Failover",
+      "Back": "The automatic process where a standby router assumes the active role after the primary router stops sending hello packets."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "5",
+      "Front": "Interface Priority Decrement",
+      "Back": "The amount by which a router's priority is reduced when a tracked object fails, typically configured to be large enough to trigger an election."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "5",
+      "Front": "Load Sharing (HSRP)",
+      "Back": "A manual load-balancing technique where two HSRP groups are configured on the same subnet, with each router being active for one group and standby for the other."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "5",
+      "Front": "ICMP Redirect (Impact)",
+      "Back": "A message a router might send to a host to suggest a better next hop. FHRPs typically disable these to ensure traffic stays within the redundant group."
+    }
+  ]
+}

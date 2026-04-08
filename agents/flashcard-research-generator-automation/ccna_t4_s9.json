@@ -1,0 +1,186 @@
+{
+  "status": "completed",
+  "appName": "ccna",
+  "flashcards": [
+    {
+      "Topic": "4",
+      "Subtopic": "9",
+      "Front": "File Transfer Protocol (FTP)",
+      "Back": "A standard connection-oriented protocol used for moving files between a client and a server. it uses TCP for reliable delivery and requires user authentication."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "9",
+      "Front": "Trivial File Transfer Protocol (TFTP)",
+      "Back": "A simplified, connectionless file transfer protocol that uses UDP. it is lightweight and commonly used for booting diskless workstations or transferring IOS images."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "9",
+      "Front": "TCP Port 21",
+      "Back": "The standard port used for the FTP control connection, which handles commands and responses between the client and server."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "9",
+      "Front": "TCP Port 20",
+      "Back": "The standard port used for the FTP data connection, where the actual file content is transmitted in active mode."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "9",
+      "Front": "UDP Port 69",
+      "Back": "The standardized port number used for all TFTP communication. its use of UDP makes it faster but less reliable than FTP."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "9",
+      "Front": "FTP Active Mode",
+      "Back": "A connection method where the client opens a control port and the server initiates the data connection back to the client."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "9",
+      "Front": "FTP Passive Mode",
+      "Back": "A connection method where the client initiates both the control and data connections. This is the preferred mode when the client is behind a firewall or NAT."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "9",
+      "Front": "IOS Image Management",
+      "Back": "The process of using FTP or TFTP to copy new operating system files into a router or switch's flash memory for upgrades."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "9",
+      "Front": "Configuration Backup",
+      "Back": "The practice of using 'copy running-config tftp' to save a device's current settings to an external server for disaster recovery."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "9",
+      "Front": "Checksum (TFTP)",
+      "Back": "A data integrity check performed by the router after a TFTP transfer to ensure the file was received without errors, since UDP itself is unreliable."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "9",
+      "Front": "MD5 Hash Verification",
+      "Back": "A security process using the 'verify /md5' command to compare a locally calculated hash against a known value to ensure an IOS image was not tampered with."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "9",
+      "Front": "Flash Memory (IFS)",
+      "Back": "The non-volatile storage area on Cisco devices where the bootable IOS image file is typically stored."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "9",
+      "Front": "NVRAM (IFS)",
+      "Back": "The specialized storage area that holds the device's startup-configuration file. it is often the source for TFTP backups."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "9",
+      "Front": "copy command (Syntax)",
+      "Back": "The primary IOS command for file operations: copy [source-url] [destination-url] (e.g., copy flash: tftp:)."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "9",
+      "Front": "boot system",
+      "Back": "A configuration command that tells the router which specific IOS image file in flash memory should be loaded during the next reboot."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "9",
+      "Front": "Uniform Resource Identifier (URI)",
+      "Back": "The standard string format used in IOS file commands to specify locations, such as tftp://192.168.1.10/config.txt."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "9",
+      "Front": "show flash",
+      "Back": "A verification command that lists all files currently stored in flash memory, showing their names and sizes in bytes."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "9",
+      "Front": "dir command",
+      "Back": "A generic file system command in IOS used to list the contents of a specific directory or storage device like flash: or nvram:."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "9",
+      "Front": "SCP (Secure Copy)",
+      "Back": "A secure alternative to FTP/TFTP that uses the SSH protocol to provide encryption and authentication for file transfers."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "9",
+      "Front": "TFTP Block Size",
+      "Back": "A parameter that can be adjusted to increase the amount of data sent in each TFTP packet, potentially speeding up large file transfers over reliable links."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "9",
+      "Front": "FTP Username/Password",
+      "Back": "Credentials that must be configured on the Cisco device (using 'ip ftp user') to authenticate with an external FTP server."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "9",
+      "Front": "Binary Transfer Mode",
+      "Back": "The specific transfer mode used for non-text files like IOS images to ensure that no character translation occurs during the transfer."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "9",
+      "Front": "TFTP Timeout",
+      "Back": "The amount of time a TFTP client waits for an acknowledgment before assuming a packet was lost and attempting a retransmission."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "9",
+      "Front": "FTPS",
+      "Back": "FTP over SSL/TLS. An extension to FTP that adds support for Transport Layer Security to provide encrypted communication."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "9",
+      "Front": "Trivial (Meaning in TFTP)",
+      "Back": "Refers to the protocol's simplicity; it lacks directory browsing, file listing, and complex authentication compared to standard FTP."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "9",
+      "Front": "Local File System",
+      "Back": "The internal storage components of a network device, such as flash:, nvram:, and disk0:, which are managed by the IOS File System (IFS)."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "9",
+      "Front": "Remote File System",
+      "Back": "A server located across the network (accessible via FTP or TFTP) used for long-term storage of device backups and software images."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "9",
+      "Front": "IP FTP Passive",
+      "Back": "A global configuration command that forces the Cisco device to use passive mode for all outgoing FTP connections."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "9",
+      "Front": "Reliability (File Transfer)",
+      "Back": "The guarantee that a file is transferred bit-for-bit without corruption. FTP achieves this via TCP, while TFTP relies on application-level checksums."
+    },
+    {
+      "Topic": "4",
+      "Subtopic": "9",
+      "Front": "Diskless Workstation Boot",
+      "Back": "A common use case for TFTP where a computer without a hard drive downloads its operating system from a network server upon startup."
+    }
+  ]
+}

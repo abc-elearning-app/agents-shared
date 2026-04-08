@@ -1,0 +1,186 @@
+{
+  "status": "completed",
+  "appName": "ccna",
+  "flashcards": [
+    {
+      "Topic": "1",
+      "Subtopic": "7",
+      "Front": "Private IPv4 Address",
+      "Back": "An IP address reserved for use within internal networks and not routable on the public internet. This allows organizations to reuse the same address space without conflict."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "7",
+      "Front": "RFC 1918",
+      "Back": "The specific document that defines the three blocks of IPv4 address space reserved for private internal use: 10.0.0.0/8, 172.16.0.0/12, and 192.168.0.0/16."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "7",
+      "Front": "10.0.0.0/8",
+      "Back": "The Class A private address block. it provides a single large network with over 16 million unique addresses for internal use."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "7",
+      "Front": "172.16.0.0 to 172.31.255.255",
+      "Back": "The Class B private address range (172.16.0.0/12). it consists of 16 contiguous /16 networks used for medium-to-large corporate environments."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "7",
+      "Front": "192.168.0.0/16",
+      "Back": "The Class C private address block. it contains 256 /24 networks and is the most common choice for home and small office LANs."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "7",
+      "Front": "Network Address Translation (NAT)",
+      "Back": "A process that maps private internal IP addresses to a single or small pool of public IP addresses, allowing internal devices to access the internet."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "7",
+      "Front": "Inside Local Address",
+      "Back": "The actual private IP address assigned to a host on an internal network. it is the source address of a packet before it is translated by the NAT device."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "7",
+      "Front": "Inside Global Address",
+      "Back": "The registered public IP address that represents an internal host to the outside world. it is the source address of a packet after NAT translation."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "7",
+      "Front": "Outside Global Address",
+      "Back": "The public IP address assigned to a host on the external network (e.g., a web server). it is the destination address seen by internal hosts."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "7",
+      "Front": "Outside Local Address",
+      "Back": "The IP address of an external host as it appears to the internal network. In standard configurations, this is usually identical to the outside global address."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "7",
+      "Front": "Static NAT",
+      "Back": "A permanent one-to-one mapping between an internal private address and a specific external public address. it is used for servers that must be reachable from the internet."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "7",
+      "Front": "Dynamic NAT",
+      "Back": "A mapping where internal private addresses are translated to the first available public address from a pre-configured pool. The mapping exists only for the duration of the session."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "7",
+      "Front": "Port Address Translation (PAT)",
+      "Back": "A form of NAT that allows multiple private IP addresses to be mapped to a single public address using unique source port numbers. also known as NAT Overloading."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "7",
+      "Front": "NAT Overload",
+      "Back": "The Cisco term for PAT. it allows a single public IP address to support over 65,000 concurrent internal connections by utilizing the TCP/UDP port space."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "7",
+      "Front": "NAT Pool",
+      "Back": "A defined range of registered public IP addresses that a router can use for dynamic NAT translation."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "7",
+      "Front": "Translation Table",
+      "Back": "An internal database on a router that tracks active NAT mappings, including the local IP, global IP, and port numbers for every active session."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "7",
+      "Front": "Source NAT",
+      "Back": "The most common form of NAT where the source IP address of a packet is translated as it exits the network toward the internet."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "7",
+      "Front": "Destination NAT",
+      "Back": "A NAT process where the destination IP address of an incoming packet is translated to a private internal address, often used for load balancing or reaching internal servers."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "7",
+      "Front": "IP NAT Inside",
+      "Back": "The interface configuration command used to identify a port connected to the private internal network for NAT processing."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "7",
+      "Front": "IP NAT Outside",
+      "Back": "The interface configuration command used to identify a port connected to the public external network (ISP) for NAT processing."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "7",
+      "Front": "Unregistered Address",
+      "Back": "Another term for a private IP address that has not been officially assigned by an internet registry and cannot be routed globally."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "7",
+      "Front": "Registered Address",
+      "Back": "A globally unique public IP address assigned by an authority (like ARIN or RIPE) that is guaranteed to be routable across the internet."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "7",
+      "Front": "NAT Starvation",
+      "Back": "A condition where a dynamic NAT pool is completely exhausted, preventing any new internal hosts from establishing connections to the internet."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "7",
+      "Front": "Port Mapping",
+      "Back": "The process of associating a specific public port number with a private internal IP address and port, allowing for external access to a specific service (Port Forwarding)."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "7",
+      "Front": "Overload (Keyword)",
+      "Back": "The specific keyword added to the 'ip nat inside source list' command to enable many-to-one translation (PAT) on a Cisco router."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "7",
+      "Front": "Inside Interface",
+      "Back": "The router port facing the internal LAN where hosts with private RFC 1918 addresses reside."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "7",
+      "Front": "Outside Interface",
+      "Back": "The router port facing the ISP or public internet where the translated public addresses are used."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "7",
+      "Front": "Bidirectional NAT",
+      "Back": "A NAT configuration that allows both internal-to-external and external-to-internal connection initiation, typically used with static mappings."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "7",
+      "Front": "Show IP NAT Translations",
+      "Back": "The Cisco IOS EXEC command used to view the current active NAT mappings in the router's translation table."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "7",
+      "Front": "Clear IP NAT Translation *",
+      "Back": "The command used to flush all dynamic entries from the NAT translation table, often used for troubleshooting or reconfiguring NAT rules."
+    }
+  ]
+}

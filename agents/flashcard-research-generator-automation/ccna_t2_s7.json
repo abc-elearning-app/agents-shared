@@ -1,0 +1,186 @@
+{
+  "status": "completed",
+  "appName": "ccna",
+  "flashcards": [
+    {
+      "Topic": "2",
+      "Subtopic": "7",
+      "Front": "LWAP Access Link",
+      "Back": "The type of connection used by a lightweight access point to the wired network. it typically uses an access mode port to terminate the CAPWAP tunnel."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "7",
+      "Front": "Autonomous AP Trunk",
+      "Back": "The type of connection often used by standalone access points, requiring an 802.1Q trunk link to support multiple SSIDs mapped to different VLANs."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "7",
+      "Front": "WLC Distribution System Port",
+      "Back": "The primary physical interface on a Wireless LAN Controller used for user data and management traffic. it must connect to a switch port in 802.1Q trunk mode."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "7",
+      "Front": "WLC Service Port",
+      "Back": "A dedicated physical port on a WLC used for out-of-band management and system recovery. it must connect to an access mode port on a management VLAN."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "7",
+      "Front": "WLC Console Port",
+      "Back": "A physical serial port (RJ-45 or USB) used for local, asynchronous out-of-band access to the WLC command-line interface."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "7",
+      "Front": "WLC Redundancy Port",
+      "Back": "A dedicated physical port used to interconnect two controllers in a High Availability (HA) pair for stateful synchronization and failover."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "7",
+      "Front": "LAG (Link Aggregation Group)",
+      "Back": "A configuration on a Cisco WLC that bundles all physical distribution ports into a single logical link, providing high-speed redundant connectivity."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "7",
+      "Front": "EtherChannel (WLC Requirement)",
+      "Back": "The switch configuration required when connecting to a WLC with LAG enabled. it must be configured as an 'on' (unconditional) bundle as WLCs do not support LACP/PAgP."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "7",
+      "Front": "WLC Management Interface",
+      "Back": "A logical interface used for in-band management traffic, CAPWAP control tunnels, and communication with other infrastructure like RADIUS servers."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "7",
+      "Front": "WLC Dynamic Interface",
+      "Back": "A logical interface created by an administrator to map a specific WLAN (SSID) to a corresponding wired VLAN ID."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "7",
+      "Front": "WLC AP-Manager Interface",
+      "Back": "A legacy logical interface (in older WLC versions) dedicated to termination of CAPWAP tunnels from access points. its functions are now combined into the management interface."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "7",
+      "Front": "WLC Virtual Interface",
+      "Back": "A logical interface used to support mobility management, DHCP relay, and the web-based login page for guest users."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "7",
+      "Front": "PoE (Power over Ethernet)",
+      "Back": "The standard method for delivering DC electrical power to access points over standard UTP cabling, eliminating the need for local power outlets."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "7",
+      "Front": "PoE+ (802.3at)",
+      "Back": "An enhanced PoE standard providing up to 30W of power per port, necessary for high-performance 802.11ac and 802.11ax access points."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "7",
+      "Front": "Cisco UPoE (802.3bt)",
+      "Back": "Universal Power over Ethernet. A Cisco-proprietary standard providing up to 60W or 90W of power per port for demanding network devices."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "7",
+      "Front": "In-Band Management (Wireless)",
+      "Back": "Administrative access to a WLC through the same logical network path used for wireless data and AP control traffic."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "7",
+      "Front": "Out-of-Band Management (Wireless)",
+      "Back": "Administrative access to a device through a dedicated physical network path (like the Service Port) that is isolated from standard data traffic."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "7",
+      "Front": "CAPWAP Data Encapsulation",
+      "Back": "The process where an AP wraps user Ethernet frames inside UDP packets to transport them across the Layer 3 wired network to the WLC."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "7",
+      "Front": "AP Join Process (L3)",
+      "Back": "The discovery mechanism where an AP finds a WLC on a different subnet using DHCP Option 43, DNS lookups, or a pre-configured list of controller IPs."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "7",
+      "Front": "Distribution System (Wireless)",
+      "Back": "The foundational wired backbone network that provides connectivity between access points and the rest of the organization's resources."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "7",
+      "Front": "Stateful Switchover (SSO)",
+      "Back": "A high-availability feature where a standby WLC maintains exact copies of client sessions from the active WLC, allowing for zero-downtime failover."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "7",
+      "Front": "Mobility Group",
+      "Back": "A cluster of Wireless LAN Controllers that share information about client stations, enabling seamless roaming and security policy enforcement across a large campus."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "7",
+      "Front": "Ethernet Demarcation",
+      "Back": "The physical point where the service provider network ends and the customer's wireless infrastructure begins, usually at a WAN edge router or switch."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "7",
+      "Front": "Terminal Emulator (WLC)",
+      "Back": "Software (like PuTTY or Tera Term) used on a computer to connect to the WLC console port for initial setup or troubleshooting."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "7",
+      "Front": "Asynchronous Speed (Console)",
+      "Back": "The standard communication rate for Cisco console ports, which is 9600 bits per second (baud)."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "7",
+      "Front": "WLC Power Supply Redundancy",
+      "Back": "The use of multiple hot-swappable power modules in a controller to prevent a single hardware failure from taking down the entire wireless network."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "7",
+      "Front": "Internal DHCP Server (WLC)",
+      "Back": "A software service running on the controller that can automatically provide IP addresses to wireless clients if a central DHCP server is not available."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "7",
+      "Front": "Access Port (AP Connection)",
+      "Back": "A switch port assigned to a single VLAN that connects to a lightweight AP. The AP's management IP resides in this VLAN broadcast domain."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "7",
+      "Front": "Trunk Port (WLC Connection)",
+      "Back": "A switch port configured with 802.1Q tagging that connects to a WLC distribution port, carrying traffic for multiple wireless-mapped VLANs."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "7",
+      "Front": "VLAN Tagging (Wireless)",
+      "Back": "The action of the WLC adding an 802.1Q header to user data frames as they leave the controller and enter the wired distribution switch infrastructure."
+    }
+  ]
+}

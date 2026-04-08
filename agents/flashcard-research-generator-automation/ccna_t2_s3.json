@@ -1,0 +1,186 @@
+{
+  "status": "completed",
+  "appName": "ccna",
+  "flashcards": [
+    {
+      "Topic": "2",
+      "Subtopic": "3",
+      "Front": "Cisco Discovery Protocol (CDP)",
+      "Back": "A Cisco-proprietary Layer 2 protocol used to share information between directly connected Cisco devices, such as device IDs, capabilities, and software versions."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "3",
+      "Front": "LLDP (Link Layer Discovery Protocol)",
+      "Back": "An industry-standard (802.1AB) discovery protocol that provides similar functionality to CDP but is vendor-neutral, allowing for discovery across different manufacturers."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "3",
+      "Front": "CDP Update Timer",
+      "Back": "The frequency at which a Cisco device sends CDP advertisements to its neighbors. The default value is 60 seconds."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "3",
+      "Front": "CDP Holdtime",
+      "Back": "The amount of time a device will retain information about a neighbor before discarding it if no new updates are received. The default is 180 seconds."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "3",
+      "Front": "LLDP Message Interval",
+      "Back": "The standard frequency at which LLDP advertisements are transmitted. The default value on Cisco devices is 30 seconds."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "3",
+      "Front": "LLDP Holdtime",
+      "Back": "The duration for which LLDP neighbor information remains valid in the local database. The default value on Cisco devices is 120 seconds."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "3",
+      "Front": "cdp run",
+      "Back": "The global configuration command used to enable CDP on an entire Cisco device. it is typically enabled by default."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "3",
+      "Front": "lldp run",
+      "Back": "The global configuration command used to enable LLDP on a Cisco device. Unlike CDP, LLDP is often disabled by default."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "3",
+      "Front": "cdp enable",
+      "Back": "The interface-level command used to enable CDP on a specific port. this is necessary if CDP was globally enabled but specifically disabled on that port."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "3",
+      "Front": "lldp transmit",
+      "Back": "An interface-level command that allows a device to send LLDP advertisements out of a specific port."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "3",
+      "Front": "lldp receive",
+      "Back": "An interface-level command that allows a device to process incoming LLDP advertisements on a specific port."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "3",
+      "Front": "show cdp neighbors",
+      "Back": "A verification command that provides a summary list of directly connected Cisco neighbors, including their ID, local port, and remote port."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "3",
+      "Front": "show lldp neighbors",
+      "Back": "A verification command that displays a summary of all discovered non-Cisco and Cisco neighbors using the LLDP protocol."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "3",
+      "Front": "show cdp entry *",
+      "Back": "A command that displays exhaustive technical details for all discovered CDP neighbors, equivalent to using the 'detail' keyword."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "3",
+      "Front": "Device ID (Discovery)",
+      "Back": "The configured hostname of a neighboring device as discovered by CDP or LLDP."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "3",
+      "Front": "Capabilities (Discovery)",
+      "Back": "A list of codes (e.g., R for Router, S for Switch) that identify the primary functions of a discovered neighbor device."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "3",
+      "Front": "Local Interface",
+      "Back": "The specific physical port on the device you are currently logged into that connects to a discovered neighbor."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "3",
+      "Front": "Port ID (Discovery)",
+      "Back": "The physical interface on the remote neighbor device that is connected to your local port."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "3",
+      "Front": "TLV (Type-Length-Value)",
+      "Back": "The structured data format used by LLDP to carry different pieces of information (like IP address or port description) within an advertisement."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "3",
+      "Front": "CDP v2",
+      "Back": "The modern version of CDP that includes advanced features like native VLAN mismatch detection and duplex mismatch reporting."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "3",
+      "Front": "Native VLAN Mismatch Detection",
+      "Back": "A troubleshooting feature of CDP that alerts administrators if two connected switch ports are configured with different native VLANs."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "3",
+      "Front": "Duplex Mismatch Detection",
+      "Back": "A diagnostic function of CDP that identifies if two ends of a link have conflicting duplex settings (e.g., half vs full)."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "3",
+      "Front": "show cdp interface",
+      "Back": "A command that displays the CDP status and timer settings for all active interfaces on a Cisco device."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "3",
+      "Front": "show lldp traffic",
+      "Back": "A diagnostic command that displays statistics on the number of LLDP frames sent, received, and any errors encountered."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "3",
+      "Front": "Re-initialization Delay (LLDP)",
+      "Back": "The amount of time an LLDP-enabled interface waits before attempting to re-establish discovery after a link flap or configuration change."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "3",
+      "Front": "Network Address (Discovery)",
+      "Back": "The management IP address of a neighboring device as reported in the 'detail' output of CDP or LLDP."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "3",
+      "Front": "Platform (Discovery)",
+      "Back": "The specific hardware model of a discovered neighbor (e.g., Cisco 2960 or Catalyst 9300)."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "3",
+      "Front": "LLDP-MED",
+      "Back": "Media Endpoint Discovery. An extension of LLDP used specifically for identifying and configuring VoIP phones and other media devices."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "3",
+      "Front": "In-Band Discovery",
+      "Back": "The method of discovering neighbors using management frames that travel over the same physical cabling as user data traffic."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "3",
+      "Front": "Neighbor Aging",
+      "Back": "The process where a discovery entry is removed from the local table because its holdtime has expired without receiving a fresh update."
+    }
+  ]
+}

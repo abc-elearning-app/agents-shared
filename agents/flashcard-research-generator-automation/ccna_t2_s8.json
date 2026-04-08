@@ -1,0 +1,186 @@
+{
+  "status": "completed",
+  "appName": "ccna",
+  "flashcards": [
+    {
+      "Topic": "2",
+      "Subtopic": "2",
+      "Front": "CLI Management Access",
+      "Back": "Administrative access to a device using a text-based interface. on APs and WLCs, this is typically done via Console, Telnet, or SSH."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "2",
+      "Front": "GUI Management Access",
+      "Back": "Administrative access using a web browser. most WLC configuration is performed via a web-based graphical interface using HTTP or HTTPS."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "2",
+      "Front": "Telnet (Wireless)",
+      "Back": "A legacy management protocol that sends data in clear text. it is highly insecure and should be disabled on APs and WLCs in favor of SSH."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "2",
+      "Front": "Secure Shell (SSH)",
+      "Back": "A cryptographic protocol for secure CLI access. it encrypts the entire session, protecting administrative credentials and configuration data."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "2",
+      "Front": "HTTP (Wireless)",
+      "Back": "The unencrypted web protocol for GUI access. like Telnet, it is insecure and should be replaced by HTTPS for management tasks."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "2",
+      "Front": "HTTPS (Wireless)",
+      "Back": "A secure version of HTTP that uses SSL/TLS to encrypt communication between the administrator's browser and the WLC's management interface."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "2",
+      "Front": "Management IP Address",
+      "Back": "The specific IP assigned to an AP or WLC's management interface that administrators use to establish remote connections."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "2",
+      "Front": "Local Authentication",
+      "Back": "The process of verifying management user credentials against a database stored locally on the AP or Wireless LAN Controller hardware."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "2",
+      "Front": "External AAA Authentication",
+      "Back": "The practice of using a centralized server (like Cisco ISE) to manage administrative login credentials for all networking hardware."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "2",
+      "Front": "TACACS+",
+      "Back": "Terminal Access Controller Access-Control System Plus. A Cisco-proprietary AAA protocol that encrypts the entire packet and separates authentication, authorization, and accounting."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "2",
+      "Front": "RADIUS (Management)",
+      "Back": "Remote Authentication Dial-In User Service. An open-standard AAA protocol that combines authentication and authorization and only encrypts the password field."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "2",
+      "Front": "Authentication (AAA)",
+      "Back": "The first step in AAA that verifies 'who you are' by checking a username and password against a database."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "2",
+      "Front": "Authorization (AAA)",
+      "Back": "The second step in AAA that determines 'what you can do', such as defining the privilege level or specific commands an administrator is allowed to run."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "2",
+      "Front": "Accounting (AAA)",
+      "Back": "The final step in AAA that records 'what you did', creating an audit trail of all commands executed and configuration changes made during a session."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "2",
+      "Front": "Console Access",
+      "Back": "A physical out-of-band management method that provides CLI access to an AP or WLC via a serial cable even if the network is down."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "2",
+      "Front": "Virtual Teletype (VTY)",
+      "Back": "The logical ports used for remote CLI connections (Telnet/SSH) to a Cisco device. APs and WLCs have multiple VTY lines to support concurrent users."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "2",
+      "Front": "Privilege Level",
+      "Back": "A setting that defines the degree of access an administrator has. Level 15 provides full unrestricted control, while lower levels provide limited read-only or operator access."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "2",
+      "Front": "Read-Only User",
+      "Back": "A management account type that can monitor the status and configuration of a WLC but cannot make any changes or execute disruptive commands."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "2",
+      "Front": "Read-Write User",
+      "Back": "A management account type with full administrative authority to modify any configuration parameter on the Wireless LAN Controller."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "2",
+      "Front": "Session Timeout",
+      "Back": "A security feature that automatically disconnects an inactive management session after a pre-defined period to prevent unauthorized access from abandoned terminals."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "2",
+      "Front": "SNMP Management",
+      "Back": "A protocol used by network monitoring systems to retrieve status information and performance metrics from APs and WLCs."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "2",
+      "Front": "Syslog (Wireless)",
+      "Back": "A service that sends system messages and alerts from the WLC to a central server for logging and long-term analysis."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "2",
+      "Front": "WLC Certificate",
+      "Back": "A digital file used by the WLC to prove its identity during HTTPS or SSH sessions, ensuring the administrator is connecting to the correct device."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "2",
+      "Front": "Lobby Ambassador",
+      "Back": "A specialized WLC user role that can only create and manage temporary guest user accounts, typically used by non-technical reception staff."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "2",
+      "Front": "AP Management IP",
+      "Back": "The address used by a lightweight AP to communicate with its WLC. it is separate from the IP addresses used by wireless clients."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "2",
+      "Front": "Service Port Access",
+      "Back": "Accessing the WLC via its physical service port, which is restricted to a local management VLAN for increased security."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "2",
+      "Front": "Secure Web Access",
+      "Back": "The practice of strictly using HTTPS for all browser-based interaction with the Wireless LAN Controller GUI."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "2",
+      "Front": "VTY Access List",
+      "Back": "An ACL applied to the VTY lines to restrict remote management access to specific trusted management workstations or subnets."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "2",
+      "Front": "Admin Credential Policy",
+      "Back": "An organizational requirement for management passwords, such as minimum length, complexity, and mandatory periodic changes."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "2",
+      "Front": "Command Logging",
+      "Back": "A feature of TACACS+ that records every single command entered by an administrator, providing a detailed audit log for security compliance."
+    }
+  ]
+}
