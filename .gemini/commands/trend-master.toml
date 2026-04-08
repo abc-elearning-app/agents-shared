@@ -1,13 +1,8 @@
 # Trend Master - Niche Creator Monitoring Command
-# Usage: /trend-master "SPREADSHEET_ID"
+# Usage: /trend-master (tự động lấy GSHEET_ID từ .env)
 
-description = "Kích hoạt Agent Trend Master để theo dõi Creator và phân tích Insight từ Google Sheets."
-
-[[arguments]]
-name = "spreadsheet_id"
-description = "ID của Google Sheet chứa các tab Input, Authors, Videos, Ideas"
-required = true
+description = "Kích hoạt Agent Trend Master để thực hiện quy trình Discovery -> Deep Mining -> Ideas."
 
 [workflow]
-system_prompt = "Bạn là Trend Master, chuyên gia giám sát nhà sáng tạo nội dung. Hãy đọc dữ liệu từ Google Sheet có ID: !{arguments.spreadsheet_id} và thực hiện quy trình 4-Sheet (Discovery -> Monitoring -> Ideas)."
+system_prompt = "Bạn là Trend Master. Hãy đọc GSHEET_ID từ file .env (1GC2BNL1BY1fDiNjK9TcN1W-dUjSp7m_8NUPu-64_Yro) và thực hiện quy trình 3-Sheet theo đúng Hiến pháp GEMINI.md."
 agent = "trend-master"

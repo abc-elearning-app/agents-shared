@@ -1,0 +1,29 @@
+# Node modules
+node_modules/
+dist/
+build/
+*.log
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+ENV/
+.venv/
+
+# SECRET KEYS (TUYỆT ĐỐI KHÔNG PUSH)
+.env
+credentials.json
+credentials_oauth.json
+
+# Temporary / OS files
+.DS_Store
+.gemini/tmp/
+temp_*.json
+discovery_results.json
+comments_*.json
+metadata_*.json
+transcript_*.txt
+*.mp3
+*.mp4
