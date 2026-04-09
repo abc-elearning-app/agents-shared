@@ -1,9 +1,12 @@
 import requests
 import json
 import os
-import time
+import sys
 
-def upload_json(file_path, url):
+def upload_json(file_path):
+    # URL mới nhất của bạn
+    url = "https://script.google.com/macros/s/AKfycbwM_sk8-VNktBMybaRcoqTnqLTat1XVDtDUklQ-e0ZM-wbVZqFR2P3Ah5LM9gfFRX6P/exec"
+    
     if not os.path.exists(file_path):
         print(f"Error: File {file_path} not found.")
         return False
@@ -11,7 +14,7 @@ def upload_json(file_path, url):
     with open(file_path, 'r', encoding='utf-8') as f:
         data = json.load(f)
 
-    print(f"Uploading {file_path} to {url}...")
+    print(f"Uploading {file_path} to Dashboard...")
     
     try:
         response = requests.post(
@@ -30,26 +33,7 @@ def upload_json(file_path, url):
         return False
 
 if __name__ == "__main__":
-    url = "https://script.google.com/macros/s/AKfycbzzNrqiWiV3kTbwaAN1f94X6gcaxxuy7b_NmC1mlKTyBlpjYRZ4JQKcQXVP04qQUfCioQ/exec"
-    files = [
-        "ccna_t1_s1.json",
-        "ccna_t1_s2.json",
-        "ccna_t1_s3.json",
-        "ccna_t1_s4.json",
-        "ccna_t1_s5.json",
-        "ccna_t1_s6.json",
-        "ccna_t1_s7.json",
-        "ccna_t1_s8_9.json",
-        "ccna_t1_s10.json",
-        "ccna_t1_s11.json",
-        "ccna_t1_s12.json",
-        "ccna_t1_s13.json"
-    ]
-    
-    for i, file_path in enumerate(files):
-        success = upload_json(file_path, url)
-        if i < len(files) - 1:
-            print("Waiting 2 seconds before next upload...")
-            time.sleep(2)
-
-    print("Batch upload complete.")
+    if len(sys.argv) > 1:
+        upload_json(sys.argv[1])
+    else:
+        print("Usage: python3 batch_upload.py <file_path>")

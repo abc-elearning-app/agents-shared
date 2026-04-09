@@ -1,306 +1,55 @@
 {
-  "status": "completed",
-  "appName": "emtb",
+  "app_name": "emtb",
   "flashcards": [
-    {
-      "Topic": "1",
-      "Subtopic": "N/A",
-      "Front": "DCAP-BTLS",
-      "Back": "A mnemonic used for physical assessment to identify Deformities, Contusions, Abrasions, Punctures, Burns, Tenderness, Lacerations, and Swelling. It provides a systematic approach for evaluating trauma patients for potential life-threatening injuries."
-    },
-    {
-      "Topic": "1",
-      "Subtopic": "N/A",
-      "Front": "Arterial Bleeding",
-      "Back": "Bright red, spurting blood that is difficult to control due to high pressure from the heart. This type of hemorrhage is life-threatening and requires immediate direct pressure or tourniquet application."
-    },
-    {
-      "Topic": "1",
-      "Subtopic": "N/A",
-      "Front": "Venous Bleeding",
-      "Back": "Dark red or maroon blood that flows steadily from a ruptured vein. While easier to control than arterial bleeds, it still requires prompt direct pressure to prevent significant blood loss and shock."
-    },
-    {
-      "Topic": "1",
-      "Subtopic": "N/A",
-      "Front": "Capillary Bleeding",
-      "Back": "Slow, oozing blood that typically occurs from minor surface wounds and abrasions. This is the least severe form of external bleeding and usually stops on its own through the body's clotting process."
-    },
-    {
-      "Topic": "1",
-      "Subtopic": "N/A",
-      "Front": "Tourniquet",
-      "Back": "A device used to compress an artery to stop life-threatening extremity hemorrhage when direct pressure fails. It should be applied high and tight and the time of application must be clearly documented."
-    },
-    {
-      "Topic": "1",
-      "Subtopic": "N/A",
-      "Front": "Hemostatic Agent",
-      "Back": "A chemical substance used to promote rapid blood clotting in deep wounds where pressure cannot be applied. These agents are often embedded in gauze to pack wounds in the groin or axilla."
-    },
-    {
-      "Topic": "1",
-      "Subtopic": "N/A",
-      "Front": "Hypovolemic Shock",
-      "Back": "A life-threatening condition caused by severe blood or fluid loss leading to inadequate tissue perfusion. It is the most common type of shock in trauma and requires rapid fluid or blood replacement."
-    },
-    {
-      "Topic": "1",
-      "Subtopic": "N/A",
-      "Front": "Distributive Shock",
-      "Back": "Shock caused by widespread vasodilation, resulting in a relative hypovolemia despite normal fluid volume. Common causes include anaphylaxis, sepsis, and spinal cord injuries that disrupt the body's ability to maintain vessel tone."
-    },
-    {
-      "Topic": "1",
-      "Subtopic": "N/A",
-      "Front": "Obstructive Shock",
-      "Back": "Shock resulting from a physical blockage of blood flow to or from the heart. Conditions such as tension pneumothorax or cardiac tamponade can prevent the heart from pumping blood effectively to the body."
-    },
-    {
-      "Topic": "1",
-      "Subtopic": "N/A",
-      "Front": "Cardiogenic Shock",
-      "Back": "Shock caused by the heart's inability to pump an adequate supply of blood to the vital organs. In trauma settings, this often results from myocardial contusion or direct damage to the heart muscle."
-    },
-    {
-      "Topic": "1",
-      "Subtopic": "N/A",
-      "Front": "Septic Shock",
-      "Back": "A severe form of distributive shock caused by widespread infection that leads to low blood pressure and organ failure. It is characterized by leaking blood vessels and impaired cellular metabolism across the body."
-    },
-    {
-      "Topic": "1",
-      "Subtopic": "N/A",
-      "Front": "Neurogenic Shock",
-      "Back": "Shock resulting from high spinal cord injury that causes loss of sympathetic nervous system control over blood vessels. Patients often present with warm, dry skin and bradycardia instead of the typical signs of shock."
-    },
-    {
-      "Topic": "1",
-      "Subtopic": "N/A",
-      "Front": "Anaphylactic Shock",
-      "Back": "A life-threatening allergic reaction causing massive vasodilation, increased capillary permeability, and bronchoconstriction. Rapid administration of epinephrine is the primary treatment to reverse the systemic cardiovascular collapse and airway narrowing."
-    },
-    {
-      "Topic": "1",
-      "Subtopic": "N/A",
-      "Front": "Compensated Shock",
-      "Back": "The early stage of shock where the body uses mechanisms like increased heart rate to maintain perfusion. A key sign is maintaining a normal blood pressure despite other symptoms of physiological stress."
-    },
-    {
-      "Topic": "1",
-      "Subtopic": "N/A",
-      "Front": "Decompensated Shock",
-      "Back": "The late stage of shock when the body can no longer maintain blood pressure or perfusion to vital organs. Falling blood pressure is a hallmark sign that indicates imminent cardiovascular collapse and death."
-    },
-    {
-      "Topic": "1",
-      "Subtopic": "N/A",
-      "Front": "Golden Hour",
-      "Back": "The critical sixty-minute window from the time of injury to definitive surgical care in a trauma center. Survival rates for severely injured patients increase significantly when they receive surgical intervention within this timeframe."
-    },
-    {
-      "Topic": "1",
-      "Subtopic": "N/A",
-      "Front": "Platinum 10 Minutes",
-      "Back": "The goal time for EMS to identify life-threats, provide essential stabilization, and initiate transport of a trauma patient. Rapid scene clearance is vital for ensuring the patient reaches definitive care within the golden hour."
-    },
-    {
-      "Topic": "1",
-      "Subtopic": "N/A",
-      "Front": "Mechanism of Injury",
-      "Back": "The forces and energy transmission that caused the patient's injuries, such as a fall or car crash. Understanding the MOI helps the EMT predict potential internal injuries that may not be immediately visible."
-    },
-    {
-      "Topic": "1",
-      "Subtopic": "N/A",
-      "Front": "Index of Suspicion",
-      "Back": "An EMT's awareness and concern for potentially serious underlying injuries based on the mechanism of injury. A high index of suspicion ensures that critical but non-obvious injuries are not overlooked during assessment."
-    },
-    {
-      "Topic": "1",
-      "Subtopic": "N/A",
-      "Front": "Cavitation",
-      "Back": "The formation of a temporary or permanent cavity in tissue caused by the pressure wave of a moving projectile. This phenomenon explains how high-velocity bullets can cause damage far beyond their physical path."
-    },
-    {
-      "Topic": "1",
-      "Subtopic": "N/A",
-      "Front": "Sucking Chest Wound",
-      "Back": "An open pneumothorax where air enters the pleural space through a hole in the chest wall during inhalation. It must be treated with an occlusive dressing taped on three sides to allow air escape."
-    },
-    {
-      "Topic": "1",
-      "Subtopic": "N/A",
-      "Front": "Occlusive Dressing",
-      "Back": "An airtight medical dressing used to seal open wounds in the chest or abdomen. This type of seal prevents atmospheric air from entering the thoracic cavity, thereby reducing the risk of a tension pneumothorax."
-    },
-    {
-      "Topic": "1",
-      "Subtopic": "N/A",
-      "Front": "Flail Chest",
-      "Back": "A condition where three or more ribs are broken in two or more places, creating a detached segment. This causes paradoxical motion, where the detached section moves inward while the rest of the chest expands."
-    },
-    {
-      "Topic": "1",
-      "Subtopic": "N/A",
-      "Front": "Paradoxical Motion",
-      "Back": "The abnormal movement of a flail chest segment that moves opposite to the rest of the rib cage. This inefficiency in breathing often leads to hypoxia and requires positive pressure ventilation to stabilize."
-    },
-    {
-      "Topic": "1",
-      "Subtopic": "N/A",
-      "Front": "Tension Pneumothorax",
-      "Back": "A life-threatening condition where air trapped in the pleural space puts pressure on the heart and lungs. It is characterized by tracheal deviation, jugular vein distention, and rapidly worsening respiratory distress."
-    },
-    {
-      "Topic": "1",
-      "Subtopic": "N/A",
-      "Front": "Hemothorax",
-      "Back": "A collection of blood in the pleural space between the chest wall and the lung. This condition compresses the lung and can cause both respiratory failure and hypovolemic shock due to significant internal bleeding."
-    },
-    {
-      "Topic": "1",
-      "Subtopic": "N/A",
-      "Front": "Cardiac Tamponade",
-      "Back": "Compression of the heart caused by fluid or blood accumulation in the pericardial sac. This pressure prevents the ventricles from filling properly, leading to a dramatic drop in cardiac output and obstructive shock."
-    },
-    {
-      "Topic": "1",
-      "Subtopic": "N/A",
-      "Front": "Beck's Triad",
-      "Back": "A set of clinical signs indicating cardiac tamponade: muffled heart sounds, jugular vein distention, and narrowing pulse pressure. Identifying these three signs is essential for recognizing this life-threatening obstructive shock condition."
-    },
-    {
-      "Topic": "1",
-      "Subtopic": "N/A",
-      "Front": "Abdominal Evisceration",
-      "Back": "An open abdominal injury where internal organs, typically the intestines, protrude through the wound. Management involves covering the exposed organs with a moist, sterile dressing and an occlusive layer to prevent drying and infection."
-    },
-    {
-      "Topic": "1",
-      "Subtopic": "N/A",
-      "Front": "Solid Organs",
-      "Back": "Abdominal organs like the liver, spleen, and kidneys that contain a high volume of blood. Traumatic injury to these organs typically results in massive internal hemorrhage rather than the spilling of digestive contents."
-    },
-    {
-      "Topic": "1",
-      "Subtopic": "N/A",
-      "Front": "Hollow Organs",
-      "Back": "Organs like the stomach, intestines, and bladder that contain substances such as food, waste, or urine. Injury to these organs often leads to peritonitis because their acidic or infectious contents leak into the abdominal cavity."
-    },
-    {
-      "Topic": "1",
-      "Subtopic": "N/A",
-      "Front": "Kehr's Sign",
-      "Back": "Referred pain in the left shoulder caused by blood or irritation in the peritoneal cavity, often indicating a ruptured spleen. This classic finding helps the EMT identify internal abdominal bleeding in trauma patients."
-    },
-    {
-      "Topic": "1",
-      "Subtopic": "N/A",
-      "Front": "Superficial Burn",
-      "Back": "A first-degree burn that affects only the epidermis, characterized by redness and pain without blisters. A common example is a mild sunburn, which typically heals within a few days without scarring or medical intervention."
-    },
-    {
-      "Topic": "1",
-      "Subtopic": "N/A",
-      "Front": "Partial-Thickness Burn",
-      "Back": "A second-degree burn involving the epidermis and part of the dermis, causing intense pain and blistering. These injuries are highly sensitive to air and require sterile dressings to prevent infection while they heal."
-    },
-    {
-      "Topic": "1",
-      "Subtopic": "N/A",
-      "Front": "Full-Thickness Burn",
-      "Back": "A third-degree burn that destroys all skin layers and may involve underlying muscle or bone. The area often appears charred or leathery and is frequently painless because the nerve endings have been destroyed."
-    },
-    {
-      "Topic": "1",
-      "Subtopic": "N/A",
-      "Front": "Rule of Nines",
-      "Back": "A method used to estimate the percentage of Total Body Surface Area (TBSA) affected by burns. This calculation is vital for determining the severity of the injury and the amount of fluid resuscitation required."
-    },
-    {
-      "Topic": "1",
-      "Subtopic": "N/A",
-      "Front": "Rule of Nines (Adult Arm)",
-      "Back": "According to this estimation method, each entire arm of an adult accounts for $9\\%$ of the total body surface area. This includes both the front and back of the limb from shoulder to fingertips."
-    },
-    {
-      "Topic": "1",
-      "Subtopic": "N/A",
-      "Front": "Palm Method",
-      "Back": "A technique using the patient's own palm to estimate small or irregular burn areas as approximately $1\\%$ of their body surface. This is particularly useful for assessing scattered burns that do not follow simple patterns."
-    },
-    {
-      "Topic": "1",
-      "Subtopic": "N/A",
-      "Front": "Glasgow Coma Scale",
-      "Back": "A standardized scoring system used to assess a patient's level of consciousness based on eye opening, verbal, and motor responses. Scores range from $3$ to $15$, with lower numbers indicating more severe brain injury."
-    },
-    {
-      "Topic": "1",
-      "Subtopic": "N/A",
-      "Front": "Cushing's Triad",
-      "Back": "A clinical sign of increased intracranial pressure characterized by hypertension, bradycardia, and irregular respirations. It indicates that the brain is being compressed and is a late sign of life-threatening head trauma."
-    },
-    {
-      "Topic": "1",
-      "Subtopic": "N/A",
-      "Front": "Epidural Hematoma",
-      "Back": "Bleeding between the skull and the dura mater, often caused by an arterial rupture. It is classically associated with a 'lucid interval' where the patient temporarily regains consciousness before rapidly deteriorating into a coma."
-    },
-    {
-      "Topic": "1",
-      "Subtopic": "N/A",
-      "Front": "Subdural Hematoma",
-      "Back": "An accumulation of blood beneath the dura mater, typically resulting from venous bleeding. Because it is venous, symptoms may develop more slowly over hours or days compared to the rapid onset of an epidural bleed."
-    },
-    {
-      "Topic": "1",
-      "Subtopic": "N/A",
-      "Front": "Concussion",
-      "Back": "A mild traumatic brain injury that interferes with normal brain function, often caused by a blow to the head. Symptoms typically include temporary confusion, memory loss, or headache without physical damage visible on standard scans."
-    },
-    {
-      "Topic": "1",
-      "Subtopic": "N/A",
-      "Front": "Battle's Sign",
-      "Back": "Bruising behind the ear over the mastoid process that indicates a basilar skull fracture. This is a late sign of serious head trauma and suggests that the protective structures of the brain have been breached."
-    },
-    {
-      "Topic": "1",
-      "Subtopic": "N/A",
-      "Front": "Raccoon Eyes",
-      "Back": "Periorbital ecchymosis, or bruising around both eyes, which is a clinical indicator of a basilar skull fracture. Like Battle's sign, this finding often takes several hours to appear after the initial traumatic event occurred."
-    },
-    {
-      "Topic": "1",
-      "Subtopic": "N/A",
-      "Front": "Decerebrate Posturing",
-      "Back": "An abnormal body position where the arms and legs are extended straight out and the toes point downward. This indicates severe damage to the brainstem and carries a worse prognosis than other types of posturing."
-    },
-    {
-      "Topic": "1",
-      "Subtopic": "N/A",
-      "Front": "Decorticate Posturing",
-      "Back": "Abnormal posturing in which a person's arms are flexed inward toward the chest and legs are extended. This sign indicates serious injury to the brain's cerebral cortex or the pathway between the brain and spinal cord."
-    },
-    {
-      "Topic": "1",
-      "Subtopic": "N/A",
-      "Front": "Basilar Skull Fracture",
-      "Back": "A break in the bones at the base of the skull, which can lead to leakage of cerebrospinal fluid from the ears or nose. It is a high-priority injury due to the risk of meningitis and brain damage."
-    },
-    {
-      "Topic": "1",
-      "Subtopic": "N/A",
-      "Front": "Pneumothorax",
-      "Back": "The presence of air in the pleural space that causes the lung to collapse partially or completely. This disrupts the normal pressure needed for breathing and can lead to rapid respiratory failure if not managed."
-    },
-    {
-      "Topic": "1",
-      "Subtopic": "N/A",
-      "Front": "Traumatic Asphyxia",
-      "Back": "A condition caused by intense compression of the thoracic cavity, forcing blood backward from the right atrium into the head and neck. Signs include bulging eyes, a swollen tongue, and cyanosis of the upper body."
-    }
+    {"Topic": "1", "Subtopic": "N/A", "Front": "Kinetic Energy ($KE$)", "Back": "The formula is $KE = \\frac{1}{2} mv^2$. Velocity is the most significant factor in determining the energy delivered during a trauma."},
+    {"Topic": "1", "Subtopic": "N/A", "Front": "Glasgow Coma Scale ($GCS$) Total", "Back": "The formula is $GCS = E + V + M$. Scores range from a minimum of 3 to a maximum of 15."},
+    {"Topic": "1", "Subtopic": "N/A", "Front": "Mean Arterial Pressure ($MAP$)", "Back": "The formula is $MAP = DBP + \\frac{1}{3}(SBP - DBP)$. It represents the average pressure in a patient's arteries during one cardiac cycle."},
+    {"Topic": "1", "Subtopic": "N/A", "Front": "Cerebral Perfusion Pressure ($CPP$)", "Back": "The formula is $CPP = MAP - ICP$. It must be maintained to ensure adequate blood flow and oxygen delivery to the brain."},
+    {"Topic": "1", "Subtopic": "N/A", "Front": "GCS: Eye Opening Scores", "Back": "Scores range from $1$ to $4$: 4-Spontaneous, 3-To Speech, 2-To Pain, 1-None."},
+    {"Topic": "1", "Subtopic": "N/A", "Front": "GCS: Verbal Response Scores", "Back": "Scores range from $1$ to $5$: 5-Oriented, 4-Confused, 3-Inappropriate, 2-Incomprehensible, 1-None."},
+    {"Topic": "1", "Subtopic": "N/A", "Front": "GCS: Motor Response Scores", "Back": "Scores range from $1$ to $6$: 6-Obeys, 5-Localizes, 4-Withdraws, 3-Flexion, 2-Extension, 1-None."},
+    {"Topic": "1", "Subtopic": "N/A", "Front": "GCS: Severe Injury Threshold", "Back": "A score of $GCS \\leq 8$ indicates a severe head injury and typically necessitates advanced airway management."},
+    {"Topic": "1", "Subtopic": "N/A", "Front": "GCS: Moderate Injury Range", "Back": "A Glasgow Coma Scale score between $9$ and $12$ indicates a moderate brain injury."},
+    {"Topic": "1", "Subtopic": "N/A", "Front": "GCS: Mild Injury Range", "Back": "A Glasgow Coma Scale score between $13$ and $15$ indicates a mild brain injury or concussion."},
+    {"Topic": "1", "Subtopic": "N/A", "Front": "Decorticate Posturing", "Back": "Abnormal flexion where the patient pulls their arms toward the core. It indicates damage to the nerve pathway between the brain and spinal cord."},
+    {"Topic": "1", "Subtopic": "N/A", "Front": "Decerebrate Posturing", "Back": "Abnormal extension where the patient pushes their arms outward and toes downward. This indicates more severe brain stem damage than decorticate posturing."},
+    {"Topic": "1", "Subtopic": "N/A", "Front": "Cushing's Triad", "Back": "A sign of increased intracranial pressure consisting of hypertension, bradycardia, and irregular respirations."},
+    {"Topic": "1", "Subtopic": "N/A", "Front": "Beck's Triad", "Back": "A set of signs indicating cardiac tamponade: JVD, muffled heart sounds, and narrowing pulse pressure."},
+    {"Topic": "1", "Subtopic": "N/A", "Front": "Epidural Hematoma", "Back": "Bleeding between the skull and dura mater, often involving the middle meningeal artery. It typically presents with a lucid interval followed by rapid decline."},
+    {"Topic": "1", "Subtopic": "N/A", "Front": "Subdural Hematoma", "Back": "Bleeding between the dura mater and the brain, usually from venous rupture. Symptoms may develop slowly over hours or days."},
+    {"Topic": "1", "Subtopic": "N/A", "Front": "Basilar Skull Fracture", "Back": "A fracture at the base of the skull. Classic signs include Battle's sign and raccoon eyes."},
+    {"Topic": "1", "Subtopic": "N/A", "Front": "Battle's Sign", "Back": "Ecchymosis or bruising over the mastoid process behind the ear. It is a late sign of a basilar skull fracture."},
+    {"Topic": "1", "Subtopic": "N/A", "Front": "Raccoon Eyes", "Back": "Periorbital ecchymosis or bruising around the eyes. It is a late sign of a basilar skull fracture."},
+    {"Topic": "1", "Subtopic": "N/A", "Front": "Hypovolemic Shock", "Back": "Shock resulting from a lack of blood or fluid volume. It is the most common type of shock in trauma patients."},
+    {"Topic": "1", "Subtopic": "N/A", "Front": "Cardiogenic Shock", "Back": "Shock caused by inadequate function of the heart or pump failure. It may follow a myocardial infarction or chest trauma."},
+    {"Topic": "1", "Subtopic": "N/A", "Front": "Neurogenic Shock", "Back": "Shock caused by nerve paralysis that results in uncontrolled dilation of blood vessels. It often presents with warm, dry skin and bradycardia."},
+    {"Topic": "1", "Subtopic": "N/A", "Front": "Anaphylactic Shock", "Back": "A life-threatening systemic allergic reaction. It causes widespread vasodilation and bronchoconstriction."},
+    {"Topic": "1", "Subtopic": "N/A", "Front": "Obstructive Shock", "Back": "Shock caused by a physical obstruction to blood flow. Examples include tension pneumothorax and cardiac tamponade."},
+    {"Topic": "1", "Subtopic": "N/A", "Front": "Compensated Shock", "Back": "The early stage of shock where the body can still maintain blood pressure. Signs include tachycardia and cool, clammy skin."},
+    {"Topic": "1", "Subtopic": "N/A", "Front": "Decompensated Shock", "Back": "The late stage of shock where the body can no longer maintain blood pressure. Hypotension is the hallmark sign."},
+    {"Topic": "1", "Subtopic": "N/A", "Front": "Arterial Bleeding", "Back": "Bleeding characterized by bright red blood that spurts in time with the pulse. It is the most difficult type of bleeding to control."},
+    {"Topic": "1", "Subtopic": "N/A", "Front": "Venous Bleeding", "Back": "Bleeding characterized by dark red blood that flows steadily. It is typically easier to control than arterial bleeding."},
+    {"Topic": "1", "Subtopic": "N/A", "Front": "Tourniquet Application", "Back": "Apply high and tight or 2-3 inches proximal to the injury for uncontrolled extremity bleeding. Never apply directly over a joint."},
+    {"Topic": "1", "Subtopic": "N/A", "Front": "Hemostatic Dressing", "Back": "A gauze treated with a chemical that promotes clotting. Use it for junctional bleeding where a tourniquet cannot be applied."},
+    {"Topic": "1", "Subtopic": "N/A", "Front": "Flail Chest", "Back": "A condition where three or more ribs are fractured in two or more places. It creates a free-floating segment of the chest wall."},
+    {"Topic": "1", "Subtopic": "N/A", "Front": "Paradoxical Motion", "Back": "Movement of a flail segment in the opposite direction of the rest of the chest. It moves in during inhalation and out during exhalation."},
+    {"Topic": "1", "Subtopic": "N/A", "Front": "Tension Pneumothorax", "Back": "A life-threatening condition where air accumulates in the pleural space and shifts mediastinal structures. Signs include absent lung sounds and JVD."},
+    {"Topic": "1", "Subtopic": "N/A", "Front": "Sucking Chest Wound", "Back": "An open chest wound that allows air to enter the pleural space. It should be treated with a three-sided occlusive dressing."},
+    {"Topic": "1", "Subtopic": "N/A", "Front": "Cardiac Tamponade", "Back": "Compression of the heart due to fluid accumulation in the pericardial sac. It prevents the heart from filling properly during diastole."},
+    {"Topic": "1", "Subtopic": "N/A", "Front": "Commotio Cordis", "Back": "Sudden cardiac arrest caused by a blunt impact to the chest during a specific phase of the heart's rhythm."},
+    {"Topic": "1", "Subtopic": "N/A", "Front": "Traumatic Evisceration", "Back": "An injury where abdominal organs protrude through the skin. Treat by covering with a moist, sterile, occlusive dressing."},
+    {"Topic": "1", "Subtopic": "N/A", "Front": "Superficial Burn", "Back": "A first-degree burn involving only the epidermis. It presents with redness and pain, similar to a sunburn."},
+    {"Topic": "1", "Subtopic": "N/A", "Front": "Partial-Thickness Burn", "Back": "A second-degree burn involving the epidermis and dermis. It is characterized by intense pain and blisters."},
+    {"Topic": "1", "Subtopic": "N/A", "Front": "Full-Thickness Burn", "Back": "A third-degree burn that destroys all skin layers and underlying tissue. It may appear leathery or charred and is often painless due to nerve damage."},
+    {"Topic": "1", "Subtopic": "N/A", "Front": "Rule of Nines: Adult Head", "Back": "In an adult, the entire head and neck represent 9% of the total body surface area."},
+    {"Topic": "1", "Subtopic": "N/A", "Front": "Rule of Nines: Infant Head", "Back": "In an infant, the entire head represents 18% of the total body surface area. This is twice the percentage of an adult head."},
+    {"Topic": "1", "Subtopic": "N/A", "Front": "Rule of Nines: Adult Arm", "Back": "Each entire arm in an adult represents 9% of the total body surface area."},
+    {"Topic": "1", "Subtopic": "N/A", "Front": "Rule of Nines: Adult Leg", "Back": "Each entire leg in an adult represents 18% of the total body surface area."},
+    {"Topic": "1", "Subtopic": "N/A", "Front": "Rule of Nines: Adult Torso", "Back": "The front and back of the torso each represent 18%, totaling 36% for the entire trunk."},
+    {"Topic": "1", "Subtopic": "N/A", "Front": "Retrograde Amnesia", "Back": "Loss of memory for events that occurred before the traumatic injury."},
+    {"Topic": "1", "Subtopic": "N/A", "Front": "Anterograde Amnesia", "Back": "The inability to form new memories after a traumatic injury occurred."},
+    {"Topic": "1", "Subtopic": "N/A", "Front": "Spinal Motion Restriction ($SMR$)", "Back": "The process of limiting movement of the spine to prevent further injury. It is indicated by midline tenderness or neurologic deficits."},
+    {"Topic": "1", "Subtopic": "N/A", "Front": "Golden Period", "Back": "The time following a traumatic injury when prompt medical treatment has the highest likelihood of preventing death."},
+    {"Topic": "1", "Subtopic": "N/A", "Front": "Platinum 10 Minutes", "Back": "The goal time for EMS to identify life threats, stabilize the patient, and begin transport for critical trauma cases."}
   ]
 }
