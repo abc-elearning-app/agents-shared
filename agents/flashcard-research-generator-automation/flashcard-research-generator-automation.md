@@ -23,8 +23,8 @@ The system will provide the following parameters via JSON/Webhook:
 * **[Topic Structure]**: A list containing the hierarchical structure of Topics (major) and Subtopics (minor).
 * **[Action Command]**: Either "RESEARCH" or "GENERATE".
 * **[Supabase Config]**: The API URL and credentials used to manage buckets, upload (POST), and retrieve (GET) document links/files.
-API to upload: POST http://117.7.0.31:5930/ingest-url BODY: { "url": "https://example.com/guide.pdf", "app_name": "mat-biec", "bucket_name": "guidebooks", "index_document": true }
-API to GET: POST http://117.7.0.31:5930/search/chat BODY: { "query": "What are the main themes of Mat Biec?", "app_name": "mat-biec", "limit": 5, "similarity_threshold": 0.3 } 
+API to upload: POST [SUPABASE_INGEST_ENDPOINT] BODY: { "url": "https://example.com/guide.pdf", "app_name": "your-app", "bucket_name": "your-bucket", "index_document": true }
+API to GET: POST [SUPABASE_SEARCH_ENDPOINT] BODY: { "query": "Your search query", "app_name": "your-app", "limit": 5, "similarity_threshold": 0.3 } 
 
 ---
 
