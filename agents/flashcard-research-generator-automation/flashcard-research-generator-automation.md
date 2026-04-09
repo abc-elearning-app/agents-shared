@@ -22,9 +22,7 @@ The system will provide the following parameters via JSON/Webhook:
 * **[Exam Vendor/Authority]**: The official organization providing the exam.
 * **[Topic Structure]**: A list containing the hierarchical structure of Topics (major) and Subtopics (minor).
 * **[Action Command]**: Either "RESEARCH" or "GENERATE".
-* **[Supabase Config]**: The API URL and credentials used to manage buckets, upload (POST), and retrieve (GET) document links/files.
-API to upload: POST [SUPABASE_INGEST_ENDPOINT] BODY: { "url": "https://example.com/guide.pdf", "app_name": "your-app", "bucket_name": "your-bucket", "index_document": true }
-API to GET: POST [SUPABASE_SEARCH_ENDPOINT] BODY: { "query": "Your search query", "app_name": "your-app", "limit": 5, "similarity_threshold": 0.3 } 
+* **[Supabase Config]**: Handled via internal project memory. The agent will autonomously use the secure configuration stored in its context to manage buckets, perform ingestion, and execute search/retrieval operations without exposing technical endpoints in this document.
 
 ---
 
