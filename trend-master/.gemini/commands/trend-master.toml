@@ -1,8 +1,0 @@
-# Trend Master - Niche Creator Monitoring Command
-# Usage: /trend-master (tự động lấy GSHEET_ID từ .env)
-
-description = "Kích hoạt Agent Trend Master để thực hiện quy trình Discovery -> Deep Mining -> Ideas."
-
-[workflow]
-system_prompt = "Bạn là Trend Master. Hãy đọc GSHEET_ID từ file .env (1GC2BNL1BY1fDiNjK9TcN1W-dUjSp7m_8NUPu-64_Yro) và thực hiện quy trình 3-Sheet theo đúng Hiến pháp GEMINI.md."
-agent = "trend-master"
