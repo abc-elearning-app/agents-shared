@@ -1,0 +1,1154 @@
+
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'html' -->
+<!-- FILE NAME SUGGESTIONS:
+   ▪️ html--sites--default--files--2025-03--New%20Driver%27s%20License%20Manual.pdf.html.twig
+   ▪️ html--sites--default--files--2025-03.html.twig
+   ▪️ html--sites--default--files.html.twig
+   ▪️ html--sites--default.html.twig
+   ▪️ html--sites.html.twig
+   ✅ html.html.twig
+-->
+<!-- 💡 BEGIN CUSTOM TEMPLATE OUTPUT from 'themes/PublicSafety/html.html.twig' -->
+<!DOCTYPE html>
+<html  lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# ">
+	<head>
+		<meta charset="utf-8" />
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-C9V8QSW93H"></script>
+<script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments)};gtag("js", new Date());gtag("set", "developer_id.dMDhkMT", true);gtag("config", "G-C9V8QSW93H", {"groups":"default","page_location":"/404.html?page=" + document.location.pathname + document.location.search + "&from=" + document.referrer});</script>
+<meta name="description" content="Page Not Found Sorry, we couldn’t find that page. Try searching the site to help you find what you need, head back to the home page, or try one of the divisions listed below." />
+<meta name="keywords" content="government, public safety, highway patrol" />
+<meta name="geo.placename" content="Jackson, MS" />
+<meta name="geo.region" content="US-MS" />
+<link rel="canonical" href="https://www.dps.ms.gov/404" />
+<link rel="image_src" href="https://www.dps.ms.gov/sites/dps/files/2019-05/dpsHeader-alt-helicopter2_0.png" />
+<meta property="og:site_name" content="Mississippi Department of Public Safety" />
+<meta property="og:type" content="government" />
+<meta property="og:image" content="https://www.dps.ms.gov/sites/dps/files/2019-05/dpsHeader-alt-helicopter2_0.png" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:alt" content="DPS helicopter" />
+<meta property="og:locality" content="Jackson" />
+<meta property="og:region" content="Mississippi" />
+<meta property="og:country_name" content="United States" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="https://www.dps.ms.gov/sites/dps/files/2019-05/dpsHeader-alt-helicopter2_0.png" />
+<meta name="twitter:image:alt" content="DPS helicopter" />
+<meta name="Generator" content="Drupal 10 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="icon" href="/sites/dps/files/images/DPS-LOGO-2017.png" type="image/png" />
+
+			<meta property="og:title" content="Department of Public Safety">
+			<meta property="og:type" content="website"/>
+			<meta property="og:description" content="The Mississippi Department of Public Safety (MDPS) has over 1,000 sworn and non-sworn employees dedicated to the safety of our fellow Mississippians.  Each day, MDPS employees help make Mississippi a safer place by patrolling its roads and highways, keeping drugs off the streets and by providing training, certification and support to law enforcement agencies across the state. ">
+			<meta property="og:image" content="https://www.dps.ms.gov/sites/dps/files/images/dpsSiteLogo.svg">
+			<meta property="og:url" content="https://www.dps.ms.gov/">
+			<title>404 | Mississippi Department of Public Safety</title>
+			<link rel="stylesheet" media="all" href="/core/assets/vendor/jquery.ui/themes/base/core.css?t9g6zc" />
+<link rel="stylesheet" media="all" href="/core/assets/vendor/jquery.ui/themes/base/controlgroup.css?t9g6zc" />
+<link rel="stylesheet" media="all" href="/core/assets/vendor/jquery.ui/themes/base/checkboxradio.css?t9g6zc" />
+<link rel="stylesheet" media="all" href="/core/assets/vendor/jquery.ui/themes/base/resizable.css?t9g6zc" />
+<link rel="stylesheet" media="all" href="/core/assets/vendor/jquery.ui/themes/base/button.css?t9g6zc" />
+<link rel="stylesheet" media="all" href="/core/assets/vendor/jquery.ui/themes/base/dialog.css?t9g6zc" />
+<link rel="stylesheet" media="all" href="/core/misc/components/progress.module.css?t9g6zc" />
+<link rel="stylesheet" media="all" href="/core/misc/components/ajax-progress.module.css?t9g6zc" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/align.module.css?t9g6zc" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/fieldgroup.module.css?t9g6zc" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/container-inline.module.css?t9g6zc" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/clearfix.module.css?t9g6zc" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/details.module.css?t9g6zc" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/hidden.module.css?t9g6zc" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/item-list.module.css?t9g6zc" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/js.module.css?t9g6zc" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/nowrap.module.css?t9g6zc" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/position-container.module.css?t9g6zc" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/reset-appearance.module.css?t9g6zc" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/resize.module.css?t9g6zc" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/system-status-counter.css?t9g6zc" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/system-status-report-counters.css?t9g6zc" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/system-status-report-general-info.css?t9g6zc" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/tablesort.module.css?t9g6zc" />
+<link rel="stylesheet" media="all" href="/modules/contrib/jquery_ui/assets/vendor/jquery.ui/themes/base/core.css?t9g6zc" />
+<link rel="stylesheet" media="all" href="/core/assets/vendor/jquery.ui/themes/base/theme.css?t9g6zc" />
+<link rel="stylesheet" media="all" href="/modules/custom/cacheflush/css/cacheflush.menu.css?t9g6zc" />
+<link rel="stylesheet" media="all" href="/modules/contrib/jquery_ui/assets/vendor/jquery.ui/themes/base/theme.css?t9g6zc" />
+<link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/npm/entreprise7pro-bootstrap@3.4.8/dist/css/bootstrap.css" integrity="sha256-3p/H8uQndDeQADwalAGPYNGwk6732TJRjYcY05O81og=" crossorigin="anonymous" />
+<link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/npm/@unicorn-fail/drupal-bootstrap-styles@0.0.2/dist/3.1.1/7.x-3.x/drupal-bootstrap.css" integrity="sha512-ys0R7vWvMqi0PjJvf7827YdAhjeAfzLA3DHX0gE/sPUYqbN/sxO6JFzZLvc/wazhj5utAy7rECg1qXQKIEZOfA==" crossorigin="anonymous" />
+<link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/npm/@unicorn-fail/drupal-bootstrap-styles@0.0.2/dist/3.1.1/8.x-3.x/drupal-bootstrap.css" integrity="sha512-ixuOBF5SPFLXivQ0U4/J9sQbZ7ZjmBzciWMBNUEudf6sUJ6ph2zwkpFkoUrB0oUy37lxP4byyHasSpA4rZJSKg==" crossorigin="anonymous" />
+<link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/npm/@unicorn-fail/drupal-bootstrap-styles@0.0.2/dist/3.2.0/7.x-3.x/drupal-bootstrap.css" integrity="sha512-MiCziWBODHzeWsTWg4TMsfyWWoMltpBKnf5Pf5QUH9CXKIVeGpEsHZZ4NiWaJdgqpDzU/ahNWaW80U1ZX99eKw==" crossorigin="anonymous" />
+<link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/npm/@unicorn-fail/drupal-bootstrap-styles@0.0.2/dist/3.2.0/8.x-3.x/drupal-bootstrap.css" integrity="sha512-US+XMOdYSqB2lE8RSbDjBb/r6eTTAv7ydpztf8B7hIWSlwvzQDdaAGun5M4a6GRjCz+BIZ6G43l+UolR+gfLFQ==" crossorigin="anonymous" />
+<link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/npm/@unicorn-fail/drupal-bootstrap-styles@0.0.2/dist/3.3.1/7.x-3.x/drupal-bootstrap.css" integrity="sha512-3gQUt+MI1o8v7eEveRmZzYx6fsIUJ6bRfBLMaUTzdmNQ/1vTWLpNPf13Tcrf7gQ9iHy9A9QjXKxRGoXEeiQnPA==" crossorigin="anonymous" />
+<link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/npm/@unicorn-fail/drupal-bootstrap-styles@0.0.2/dist/3.3.1/8.x-3.x/drupal-bootstrap.css" integrity="sha512-AwNfHm/YKv4l+2rhi0JPat+4xVObtH6WDxFpUnGXkkNEds3OSnCNBSL9Ygd/jQj1QkmHgod9F5seqLErhbQ6/Q==" crossorigin="anonymous" />
+<link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/npm/@unicorn-fail/drupal-bootstrap-styles@0.0.2/dist/3.4.0/8.x-3.x/drupal-bootstrap.css" integrity="sha512-j4mdyNbQqqp+6Q/HtootpbGoc2ZX0C/ktbXnauPFEz7A457PB6le79qasOBVcrSrOBtGAm0aVU2SOKFzBl6RhA==" crossorigin="anonymous" />
+<link rel="stylesheet" media="all" href="/modules/contrib/jquery_ui/assets/vendor/jquery.ui/themes/base/draggable.css?t9g6zc" />
+<link rel="stylesheet" media="all" href="/modules/contrib/jquery_ui/assets/vendor/jquery.ui/themes/base/resizable.css?t9g6zc" />
+<link rel="stylesheet" media="all" href="/themes/PublicSafety/css/style.css?t9g6zc" />
+
+				</head>
+				<body class="path-sites page-node-type-page-not-found has-glyphicons">
+					<div id="fb-root"></div>
+					<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v8.0" nonce="1XUWhSo1"></script>
+					<a href="#main-content" class="visually-hidden focusable skip-link">
+						Skip to main content
+					</a>
+					
+					
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'off_canvas_page_wrapper' -->
+<!-- BEGIN OUTPUT from 'core/modules/system/templates/off-canvas-page-wrapper.html.twig' -->
+  <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'page' -->
+<!-- FILE NAME SUGGESTIONS:
+   ✅ page--page-not-found.html.twig
+   ▪️ page--404.html.twig
+   ▪️ page--4xx.html.twig
+   ▪️ page--sites--default--files--2025-03--New%20Driver%27s%20License%20Manual.pdf.html.twig
+   ▪️ page--sites--default--files--2025-03.html.twig
+   ▪️ page--sites--default--files.html.twig
+   ▪️ page--sites--default.html.twig
+   ▪️ page--sites.html.twig
+   ▪️ page.html.twig
+-->
+<!-- 💡 BEGIN CUSTOM TEMPLATE OUTPUT from 'themes/PublicSafety/page--page-not-found.html.twig' -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+<div id="missiTarget">
+</div>
+
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v8.0&appId=1847108468944168&autoLogAppEvents=1" nonce="DIXc4NZG"></script>
+
+<header class="main-header container-fluid">
+    <div class="row" id="banner">
+        
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'region' -->
+<!-- FILE NAME SUGGESTIONS:
+   ▪️ region--home-header.html.twig
+   ✅ region.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/contrib/bootstrap/templates/system/region.html.twig' -->
+  <div class="region region-home-header">
+    
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'block' -->
+<!-- FILE NAME SUGGESTIONS:
+   ▪️ block--homepageheader.html.twig
+   ▪️ block--block-content--63967725-6732-4ef5-ad74-527e186533e8.html.twig
+   ▪️ block--block-content--id-view--homepageheader--full.html.twig
+   ▪️ block--block-content--id--homepageheader.html.twig
+   ▪️ block--block-content--view-type--header--full.html.twig
+   ▪️ block--block-content--type--header.html.twig
+   ▪️ block--block-content--view--full.html.twig
+   ▪️ block--bundle--header.html.twig
+   ▪️ block--block-content.html.twig
+   ✅ block.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/contrib/bootstrap/templates/block/block.html.twig' -->
+<section id="block-homepageheader" class="block block-block-content block-block-content63967725-6732-4ef5-ad74-527e186533e8 clearfix">
+  
+    
+
+      
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'field' -->
+<!-- FILE NAME SUGGESTIONS:
+   ▪️ field--block-content--field-header-image--header.html.twig
+   ▪️ field--block-content--field-header-image.html.twig
+   ▪️ field--block-content--header.html.twig
+   ✅ field--field-header-image.html.twig
+   ▪️ field--image.html.twig
+   ▪️ field.html.twig
+-->
+<!-- 💡 BEGIN CUSTOM TEMPLATE OUTPUT from 'themes/PublicSafety/templates/field--field-header-image.html.twig' -->
+
+ 
+
+    <div class="banner" style="background-image: url(/sites/dps/files/2019-05/dpsHeader-alt-helicopter2_0.png)">
+    </div>
+
+
+
+
+
+
+
+<!-- END CUSTOM TEMPLATE OUTPUT from 'themes/PublicSafety/templates/field--field-header-image.html.twig' -->
+
+
+  </section>
+
+
+<!-- END OUTPUT from 'themes/contrib/bootstrap/templates/block/block.html.twig' -->
+
+
+  </div>
+
+<!-- END OUTPUT from 'themes/contrib/bootstrap/templates/system/region.html.twig' -->
+
+
+        <div class="row" id="menu1">
+            <nav class="navbar navbar-default">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'region' -->
+<!-- FILE NAME SUGGESTIONS:
+   ▪️ region--navigation.html.twig
+   ✅ region.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/contrib/bootstrap/templates/system/region.html.twig' -->
+  <div class="region region-navigation">
+    
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'block' -->
+<!-- FILE NAME SUGGESTIONS:
+   ▪️ block--divisionsmenu.html.twig
+   ▪️ block--system-menu-block--divisions.html.twig
+   ✅ block--system-menu-block.html.twig
+   ▪️ block--system.html.twig
+   ▪️ block.html.twig
+-->
+<!-- BEGIN OUTPUT from 'core/modules/system/templates/block--system-menu-block.html.twig' -->
+<nav role="navigation" aria-labelledby="block-divisionsmenu-menu" id="block-divisionsmenu">
+            
+  <h2 class="visually-hidden" id="block-divisionsmenu-menu">Divisions Menu</h2>
+  
+
+        
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'menu__divisions' -->
+<!-- FILE NAME SUGGESTIONS:
+   ▪️ menu--divisions.html.twig
+   ✅ menu.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/contrib/bootstrap/templates/menu/menu.html.twig' -->
+
+      <ul class="menu menu--divisions nav">
+                      <li class="expanded dropdown first last">
+                                                                    <a href="" class="dropdown-toggle" data-toggle="dropdown">Divisions <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                      <li class="first">
+                                        <a href="https://www.driverservicebureau.dps.ms.gov/">Driver Service Bureau (Driver License)</a>
+              </li>
+                      <li>
+                                        <a href="/highway-patrol" data-drupal-link-system-path="node/15">Highway Patrol</a>
+              </li>
+                      <li>
+                                        <a href="/investigation" data-drupal-link-system-path="node/16">Bureau of Investigation</a>
+              </li>
+                      <li>
+                                        <a href="/narcotics" data-drupal-link-system-path="node/17">Bureau of Narcotics</a>
+              </li>
+                      <li>
+                                        <a href="https://www.homelandsecurity.ms.gov">Homeland Security</a>
+              </li>
+                      <li>
+                                        <a href="/forensic-laboratories" data-drupal-link-system-path="node/394">Office of Forensic Laboratories</a>
+              </li>
+                      <li>
+                                        <a href="/MLEOTA" data-drupal-link-system-path="node/12">Law Enforcement Officers&#039; Training Academy</a>
+              </li>
+                      <li>
+                                        <a href="/public-safety-planning" data-drupal-link-system-path="node/19">Public Safety Planning</a>
+              </li>
+                      <li>
+                                        <a href="/public-safety-planning/standards-and-training" data-drupal-link-system-path="node/51">Standards and Training</a>
+              </li>
+                      <li>
+                                        <a href="/crime-stoppers" data-drupal-link-system-path="node/13">Crime Stoppers</a>
+              </li>
+                      <li>
+                                        <a href="/capitol-police" data-drupal-link-system-path="node/870">Capitol Police</a>
+              </li>
+                      <li class="last">
+                                        <a href="/" data-drupal-link-system-path="&lt;front&gt;">Commercial Transportation Enforcement</a>
+              </li>
+        </ul>
+  
+              </li>
+        </ul>
+  
+
+<!-- END OUTPUT from 'themes/contrib/bootstrap/templates/menu/menu.html.twig' -->
+
+
+  </nav>
+
+<!-- END OUTPUT from 'core/modules/system/templates/block--system-menu-block.html.twig' -->
+
+
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'block' -->
+<!-- FILE NAME SUGGESTIONS:
+   ▪️ block--resourcesmenu.html.twig
+   ▪️ block--system-menu-block--resources-menu.html.twig
+   ✅ block--system-menu-block.html.twig
+   ▪️ block--system.html.twig
+   ▪️ block.html.twig
+-->
+<!-- BEGIN OUTPUT from 'core/modules/system/templates/block--system-menu-block.html.twig' -->
+<nav role="navigation" aria-labelledby="block-resourcesmenu-menu" id="block-resourcesmenu">
+            
+  <h2 class="visually-hidden" id="block-resourcesmenu-menu">Resources Menu</h2>
+  
+
+        
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'menu__resources_menu' -->
+<!-- FILE NAME SUGGESTIONS:
+   ▪️ menu--resources-menu.html.twig
+   ✅ menu.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/contrib/bootstrap/templates/menu/menu.html.twig' -->
+
+      <ul class="menu menu--resources-menu nav">
+                      <li class="expanded dropdown first last">
+                                                                    <a href="" class="dropdown-toggle" data-toggle="dropdown">Resources <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                      <li class="first last">
+                                        <a href="/resources-menu/related-links" data-drupal-link-system-path="node/245">Related Links</a>
+              </li>
+        </ul>
+  
+              </li>
+        </ul>
+  
+
+<!-- END OUTPUT from 'themes/contrib/bootstrap/templates/menu/menu.html.twig' -->
+
+
+  </nav>
+
+<!-- END OUTPUT from 'core/modules/system/templates/block--system-menu-block.html.twig' -->
+
+
+  </div>
+
+<!-- END OUTPUT from 'themes/contrib/bootstrap/templates/system/region.html.twig' -->
+
+
+                </div>
+            </nav>   
+        </div>
+        <div class="searchbar">
+            
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'region' -->
+<!-- FILE NAME SUGGESTIONS:
+   ▪️ region--search.html.twig
+   ✅ region.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/contrib/bootstrap/templates/system/region.html.twig' -->
+  <div class="region region-search">
+    
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'block' -->
+<!-- FILE NAME SUGGESTIONS:
+   ▪️ block--searchform.html.twig
+   ▪️ block--search-form-block.html.twig
+   ✅ block--search.html.twig
+   ▪️ block.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/contrib/bootstrap/templates/block/block--search.html.twig' -->
+<div class="search-block-form block block-search block-search-form-block" data-drupal-selector="search-block-form" id="block-searchform" role="search">
+  
+    
+      
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'form' -->
+<!-- BEGIN OUTPUT from 'core/modules/system/templates/form.html.twig' -->
+<form action="/search/node" method="get" id="search-block-form" accept-charset="UTF-8">
+  
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'form_element' -->
+<!-- BEGIN OUTPUT from 'themes/contrib/bootstrap/templates/input/form-element.html.twig' -->
+<div class="form-item js-form-item form-type-search js-form-type-search form-item-keys js-form-item-keys form-no-label form-group">
+      
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'form_element_label' -->
+<!-- BEGIN OUTPUT from 'themes/contrib/bootstrap/templates/input/form-element-label.html.twig' -->
+<label for="edit-keys" class="control-label sr-only">Search</label>
+<!-- END OUTPUT from 'themes/contrib/bootstrap/templates/input/form-element-label.html.twig' -->
+
+
+  
+  
+  
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'input__search' -->
+<!-- FILE NAME SUGGESTIONS:
+   ▪️ input--search.html.twig
+   ▪️ input--form-control--search.html.twig
+   ✅ input--form-control.html.twig
+   ▪️ input.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/contrib/bootstrap/templates/input/input--form-control.html.twig' -->
+<div class="input-group"><input title="Enter the terms you wish to search for." data-drupal-selector="edit-keys" class="form-search form-control" placeholder="Search" type="search" id="edit-keys" name="keys" value="" size="15" maxlength="128" data-toggle="tooltip" /><span class="input-group-btn"><!-- THEME DEBUG --><!-- THEME HOOK: 'input__submit' --><!-- FILE NAME SUGGESTIONS:
+   ▪️ input--submit.html.twig
+   ▪️ input--button--submit.html.twig
+   ✅ input--button.html.twig
+   ▪️ input.html.twig
+--><!-- BEGIN OUTPUT from 'themes/contrib/bootstrap/templates/input/input--button.html.twig' --><button type="submit" value="Search" class="button js-form-submit form-submit btn-primary btn icon-only"><span class="sr-only">Search</span><span class="icon glyphicon glyphicon-search" aria-hidden="true"></span></button><!-- END OUTPUT from 'themes/contrib/bootstrap/templates/input/input--button.html.twig' --></span></div>
+<!-- END OUTPUT from 'themes/contrib/bootstrap/templates/input/input--form-control.html.twig' -->
+
+
+
+  
+  
+  </div>
+
+<!-- END OUTPUT from 'themes/contrib/bootstrap/templates/input/form-element.html.twig' -->
+
+
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'container' -->
+<!-- BEGIN OUTPUT from 'themes/contrib/bootstrap/templates/system/container.html.twig' -->
+<div class="form-actions form-group js-form-wrapper form-wrapper" data-drupal-selector="edit-actions" id="edit-actions"></div>
+
+<!-- END OUTPUT from 'themes/contrib/bootstrap/templates/system/container.html.twig' -->
+
+
+</form>
+
+<!-- END OUTPUT from 'core/modules/system/templates/form.html.twig' -->
+
+
+  </div>
+
+<!-- END OUTPUT from 'themes/contrib/bootstrap/templates/block/block--search.html.twig' -->
+
+
+  </div>
+
+<!-- END OUTPUT from 'themes/contrib/bootstrap/templates/system/region.html.twig' -->
+
+
+        </div>
+                                    <div class="inside-logo">
+                <a id="header-image-link" href=/>
+                    <!--<img src ="/sites/dps/files/images/dpsSiteLogo.svg" class="logo" alt="dps white image">-->
+                    
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'region' -->
+<!-- FILE NAME SUGGESTIONS:
+   ▪️ region--inner-logo.html.twig
+   ✅ region.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/contrib/bootstrap/templates/system/region.html.twig' -->
+  <div class="region region-inner-logo">
+    
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'block' -->
+<!-- FILE NAME SUGGESTIONS:
+   ▪️ block--maindpslogo.html.twig
+   ▪️ block--block-content--7a356042-e647-4254-9821-7362332a76be.html.twig
+   ▪️ block--block-content--id-view--maindpslogo--full.html.twig
+   ▪️ block--block-content--id--maindpslogo.html.twig
+   ▪️ block--block-content--view-type--main-header-logo--full.html.twig
+   ▪️ block--block-content--type--main-header-logo.html.twig
+   ▪️ block--block-content--view--full.html.twig
+   ▪️ block--bundle--main-header-logo.html.twig
+   ▪️ block--block-content.html.twig
+   ✅ block.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/contrib/bootstrap/templates/block/block.html.twig' -->
+<section id="block-maindpslogo" class="block block-block-content block-block-content7a356042-e647-4254-9821-7362332a76be clearfix">
+  
+    
+
+      
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'field' -->
+<!-- FILE NAME SUGGESTIONS:
+   ▪️ field--block-content--field-logo-image--main-header-logo.html.twig
+   ▪️ field--block-content--field-logo-image.html.twig
+   ▪️ field--block-content--main-header-logo.html.twig
+   ▪️ field--field-logo-image.html.twig
+   ▪️ field--image.html.twig
+   ✅ field.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/contrib/bootstrap/templates/field/field.html.twig' -->
+
+            <div class="field field--name-field-logo-image field--type-image field--label-hidden field--item">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'image_formatter' -->
+<!-- BEGIN OUTPUT from 'core/modules/image/templates/image-formatter.html.twig' -->
+  
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'image' -->
+<!-- BEGIN OUTPUT from 'themes/contrib/bootstrap/templates/system/image.html.twig' -->
+<img loading="lazy" src="/sites/dps/files/images/DPS-logo.png" width="880" height="360" alt="Mississippi Department of Public Safety" typeof="foaf:Image" class="img-responsive" />
+
+<!-- END OUTPUT from 'themes/contrib/bootstrap/templates/system/image.html.twig' -->
+
+
+
+<!-- END OUTPUT from 'core/modules/image/templates/image-formatter.html.twig' -->
+
+</div>
+      
+<!-- END OUTPUT from 'themes/contrib/bootstrap/templates/field/field.html.twig' -->
+
+
+  </section>
+
+
+<!-- END OUTPUT from 'themes/contrib/bootstrap/templates/block/block.html.twig' -->
+
+
+  </div>
+
+<!-- END OUTPUT from 'themes/contrib/bootstrap/templates/system/region.html.twig' -->
+
+
+                </a>
+            </div>
+                    </header>
+<div class="message-banner container-fluid">
+    
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'region' -->
+<!-- FILE NAME SUGGESTIONS:
+   ▪️ region--alert-banner.html.twig
+   ✅ region.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/contrib/bootstrap/templates/system/region.html.twig' -->
+  <div class="region region-alert-banner">
+    
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'block' -->
+<!-- FILE NAME SUGGESTIONS:
+   ▪️ block--alertinformationbanner.html.twig
+   ▪️ block--block-content--c52ade30-fac8-4d0c-b367-0e10bc4c92f2.html.twig
+   ▪️ block--block-content--id-view--alertinformationbanner--full.html.twig
+   ▪️ block--block-content--id--alertinformationbanner.html.twig
+   ▪️ block--block-content--view-type--basic--full.html.twig
+   ▪️ block--block-content--type--basic.html.twig
+   ▪️ block--block-content--view--full.html.twig
+   ▪️ block--bundle--basic.html.twig
+   ▪️ block--block-content.html.twig
+   ✅ block.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/contrib/bootstrap/templates/block/block.html.twig' -->
+<section id="block-alertinformationbanner" class="block block-block-content block-block-contentc52ade30-fac8-4d0c-b367-0e10bc4c92f2 clearfix">
+  
+    
+
+      
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'field' -->
+<!-- FILE NAME SUGGESTIONS:
+   ▪️ field--block-content--body--basic.html.twig
+   ▪️ field--block-content--body.html.twig
+   ▪️ field--block-content--basic.html.twig
+   ▪️ field--body.html.twig
+   ▪️ field--text-with-summary.html.twig
+   ✅ field.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/contrib/bootstrap/templates/field/field.html.twig' -->
+
+            <div class="field field--name-body field--type-text-with-summary field--label-hidden field--item"><h3>CALLING ALL LAW ENFORCMENT:&nbsp;</h3>
+
+<p><strong><a href="https://dpsplus.ms/leo-grant-program/">Click here to complete the LEO Grant Application</a></strong></p></div>
+      
+<!-- END OUTPUT from 'themes/contrib/bootstrap/templates/field/field.html.twig' -->
+
+
+  </section>
+
+
+<!-- END OUTPUT from 'themes/contrib/bootstrap/templates/block/block.html.twig' -->
+
+
+  </div>
+
+<!-- END OUTPUT from 'themes/contrib/bootstrap/templates/system/region.html.twig' -->
+
+
+</div>
+ 
+
+<div class="faqPage container-fluid">
+    <div class="subPageTitle col-sm-12">
+        <span>
+            <h2>
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'region' -->
+<!-- FILE NAME SUGGESTIONS:
+   ▪️ region--header.html.twig
+   ✅ region.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/contrib/bootstrap/templates/system/region.html.twig' -->
+  <div class="region region-header">
+    
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'block' -->
+<!-- FILE NAME SUGGESTIONS:
+   ▪️ block--PublicSafety-page-title.html.twig
+   ✅ block--page-title-block.html.twig
+   ▪️ block--core.html.twig
+   ▪️ block.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/contrib/bootstrap/templates/block/block--page-title-block.html.twig' -->
+  
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'page_title' -->
+<!-- BEGIN OUTPUT from 'themes/contrib/bootstrap/templates/system/page-title.html.twig' -->
+  <h1 class="page-header">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'field' -->
+<!-- FILE NAME SUGGESTIONS:
+   ▪️ field--node--title--page-not-found.html.twig
+   ✅ field--node--title.html.twig
+   ▪️ field--node--page-not-found.html.twig
+   ▪️ field--title.html.twig
+   ▪️ field--string.html.twig
+   ▪️ field.html.twig
+-->
+<!-- BEGIN OUTPUT from 'core/modules/node/templates/field--node--title.html.twig' -->
+
+<span>404</span>
+
+<!-- END OUTPUT from 'core/modules/node/templates/field--node--title.html.twig' -->
+
+</h1>
+
+<!-- END OUTPUT from 'themes/contrib/bootstrap/templates/system/page-title.html.twig' -->
+
+
+
+<!-- END OUTPUT from 'themes/contrib/bootstrap/templates/block/block--page-title-block.html.twig' -->
+
+
+  </div>
+
+<!-- END OUTPUT from 'themes/contrib/bootstrap/templates/system/region.html.twig' -->
+
+</h2>
+        </span>
+        <div class="subPageBody">
+           
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'region' -->
+<!-- FILE NAME SUGGESTIONS:
+   ▪️ region--content.html.twig
+   ✅ region.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/contrib/bootstrap/templates/system/region.html.twig' -->
+  <div class="region region-content">
+    
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'block' -->
+<!-- FILE NAME SUGGESTIONS:
+   ▪️ block--PublicSafety-content.html.twig
+   ▪️ block--system-main-block.html.twig
+   ✅ block--system.html.twig
+   ▪️ block.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/contrib/bootstrap/templates/block/block--system.html.twig' -->
+  
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'node' -->
+<!-- FILE NAME SUGGESTIONS:
+   ▪️ node--1552--full.html.twig
+   ▪️ node--1552.html.twig
+   ▪️ node--page-not-found--full.html.twig
+   ▪️ node--page-not-found.html.twig
+   ▪️ node--full.html.twig
+   ✅ node.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/contrib/bootstrap/templates/node/node.html.twig' -->
+
+<article data-history-node-id="1552" about="/404" class="page-not-found is-promoted full clearfix">
+
+  
+    
+
+      <footer>
+      
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'user' -->
+<!-- FILE NAME SUGGESTIONS:
+   ▪️ user--compact.html.twig
+   ✅ user.html.twig
+-->
+<!-- BEGIN OUTPUT from 'core/modules/user/templates/user.html.twig' -->
+<article typeof="schema:Person" about="/user/49">
+  </article>
+
+<!-- END OUTPUT from 'core/modules/user/templates/user.html.twig' -->
+
+
+      <div class="author">
+        Submitted by 
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'field' -->
+<!-- FILE NAME SUGGESTIONS:
+   ▪️ field--node--uid--page-not-found.html.twig
+   ✅ field--node--uid.html.twig
+   ▪️ field--node--page-not-found.html.twig
+   ▪️ field--uid.html.twig
+   ▪️ field--entity-reference.html.twig
+   ▪️ field.html.twig
+-->
+<!-- BEGIN OUTPUT from 'core/modules/node/templates/field--node--uid.html.twig' -->
+
+<span>
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'username' -->
+<!-- BEGIN OUTPUT from 'core/modules/user/templates/username.html.twig' -->
+<span lang="" about="/user/49" typeof="schema:Person" property="schema:name" datatype="">linzy.gressett</span>
+<!-- END OUTPUT from 'core/modules/user/templates/username.html.twig' -->
+
+</span>
+
+<!-- END OUTPUT from 'core/modules/node/templates/field--node--uid.html.twig' -->
+
+ on 
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'field' -->
+<!-- FILE NAME SUGGESTIONS:
+   ▪️ field--node--created--page-not-found.html.twig
+   ✅ field--node--created.html.twig
+   ▪️ field--node--page-not-found.html.twig
+   ▪️ field--created.html.twig
+   ▪️ field.html.twig
+-->
+<!-- BEGIN OUTPUT from 'core/modules/node/templates/field--node--created.html.twig' -->
+
+<span>
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'time' -->
+<!-- BEGIN OUTPUT from 'core/modules/system/templates/time.html.twig' -->
+<time datetime="2025-03-24T16:14:55-05:00" title="Monday, March 24, 2025">Mon, 03/24/2025 - 16:14</time>
+
+<!-- END OUTPUT from 'core/modules/system/templates/time.html.twig' -->
+
+</span>
+
+<!-- END OUTPUT from 'core/modules/node/templates/field--node--created.html.twig' -->
+
+        
+      </div>
+    </footer>
+  
+  <div class="content">
+    
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'field' -->
+<!-- FILE NAME SUGGESTIONS:
+   ▪️ field--node--body--page-not-found.html.twig
+   ▪️ field--node--body.html.twig
+   ▪️ field--node--page-not-found.html.twig
+   ▪️ field--body.html.twig
+   ▪️ field--text-with-summary.html.twig
+   ✅ field.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/contrib/bootstrap/templates/field/field.html.twig' -->
+
+            <div class="field field--name-body field--type-text-with-summary field--label-hidden field--item"><h3>Page Not Found</h3>
+
+<p><strong>Sorry, we couldn’t find that page.</strong></p>
+
+<p>Try <a href="https://www.dps.ms.gov/search/">searching the site</a> to help you find what you need, head back to the <a href="https://www.dps.ms.gov/">home page</a>, or try one of the divisions listed below.</p>
+
+<ul>
+	<li><a href="https://www.dps.ms.gov/administration">Administration</a></li>
+	<li><a href="https://www.driverservicebureau.dps.ms.gov/">Driver Service Bureau (Driver License)</a></li>
+	<li><a href="https://www.dps.ms.gov/highway-patrol">Highway Patrol</a></li>
+	<li><a href="https://www.dps.ms.gov/investigation">Bureau of Investigation</a></li>
+	<li><a href="https://www.dps.ms.gov/narcotics">Bureau of Narcotics</a></li>
+	<li><a href="https://www.homelandsecurity.ms.gov/">Homeland Security</a></li>
+	<li><a href="https://www.dps.ms.gov/forensic-laboratories">Office of Forensic Laboratories</a></li>
+	<li><a href="https://www.dps.ms.gov/MLEOTA">Law Enforcement Officers' Training Academy</a></li>
+	<li><a href="https://www.dps.ms.gov/public-safety-planning">Public Safety Planning</a></li>
+	<li><a href="https://www.dps.ms.gov/public-safety-planning/standards-and-training">Standards and Training</a></li>
+	<li><a href="https://www.dps.ms.gov/crime-stoppers">Crime Stoppers</a></li>
+	<li><a href="https://www.dps.ms.gov/capitol-police">Capitol Police</a></li>
+	<li><a href="https://www.dps.ms.gov/commercial-transportation-enforcement">Commercial Transportation Enforcement</a></li>
+	<li><a href="https://www.dps.ms.gov/node/1491">Complaints</a></li>
+</ul></div>
+      
+<!-- END OUTPUT from 'themes/contrib/bootstrap/templates/field/field.html.twig' -->
+
+
+  </div>
+
+</article>
+
+<!-- END OUTPUT from 'themes/contrib/bootstrap/templates/node/node.html.twig' -->
+
+
+
+<!-- END OUTPUT from 'themes/contrib/bootstrap/templates/block/block--system.html.twig' -->
+
+
+  </div>
+
+<!-- END OUTPUT from 'themes/contrib/bootstrap/templates/system/region.html.twig' -->
+
+
+        </div>
+    </div>
+</div> 
+
+<footer>
+    <div class="pagefooter container">
+        <div class="row">
+            <div class="col-sm-2 agency">
+                <img src="/sites/dps/files/images/LOGO-dps-footer.png" alt="footer image">
+            </div>
+            <div class="col-sm-1 footersocial">
+                
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'region' -->
+<!-- FILE NAME SUGGESTIONS:
+   ▪️ region--footer-add.html.twig
+   ✅ region.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/contrib/bootstrap/templates/system/region.html.twig' -->
+  <div class="region region-footer-add">
+    
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'block' -->
+<!-- FILE NAME SUGGESTIONS:
+   ▪️ block--footersocialicons.html.twig
+   ▪️ block--block-content--021b7790-48bb-43ce-89fb-fb71b8c1416d.html.twig
+   ▪️ block--block-content--id-view--footersocialicons--full.html.twig
+   ▪️ block--block-content--id--footersocialicons.html.twig
+   ▪️ block--block-content--view-type--basic--full.html.twig
+   ▪️ block--block-content--type--basic.html.twig
+   ▪️ block--block-content--view--full.html.twig
+   ▪️ block--bundle--basic.html.twig
+   ▪️ block--block-content.html.twig
+   ✅ block.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/contrib/bootstrap/templates/block/block.html.twig' -->
+<section id="block-footersocialicons" class="block block-block-content block-block-content021b7790-48bb-43ce-89fb-fb71b8c1416d clearfix">
+  
+    
+
+      
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'field' -->
+<!-- FILE NAME SUGGESTIONS:
+   ▪️ field--block-content--body--basic.html.twig
+   ▪️ field--block-content--body.html.twig
+   ▪️ field--block-content--basic.html.twig
+   ▪️ field--body.html.twig
+   ▪️ field--text-with-summary.html.twig
+   ✅ field.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/contrib/bootstrap/templates/field/field.html.twig' -->
+
+            <div class="field field--name-body field--type-text-with-summary field--label-hidden field--item"><ul>
+	<li><a class="fb-icon" href="https://www.facebook.com/MissDPS/"><span>Facebook</span></a></li>
+	<li><a class="tweet-icon" href="https://twitter.com/MissDPS"><span>Twitter</span></a></li>
+	<li><a href="https://www.instagram.com/mississippi_dps/"><span>Instagram</span></a></li>
+	<li><a class="linked-icon" href="https://www.linkedin.com/company/mississippi-department-of-public-safety/"><span>Linkedin</span></a></li>
+</ul>
+</div>
+      
+<!-- END OUTPUT from 'themes/contrib/bootstrap/templates/field/field.html.twig' -->
+
+
+  </section>
+
+
+<!-- END OUTPUT from 'themes/contrib/bootstrap/templates/block/block.html.twig' -->
+
+
+  </div>
+
+<!-- END OUTPUT from 'themes/contrib/bootstrap/templates/system/region.html.twig' -->
+
+
+            </div>
+            <div class="col-sm-3 footerLinks">
+                
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'region' -->
+<!-- FILE NAME SUGGESTIONS:
+   ▪️ region--footer-menu.html.twig
+   ✅ region.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/contrib/bootstrap/templates/system/region.html.twig' -->
+  <div class="region region-footer-menu">
+    
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'block' -->
+<!-- FILE NAME SUGGESTIONS:
+   ▪️ block--PublicSafety-footer.html.twig
+   ▪️ block--system-menu-block--footer.html.twig
+   ✅ block--system-menu-block.html.twig
+   ▪️ block--system.html.twig
+   ▪️ block.html.twig
+-->
+<!-- BEGIN OUTPUT from 'core/modules/system/templates/block--system-menu-block.html.twig' -->
+<nav role="navigation" aria-labelledby="block-publicsafety-footer-menu" id="block-publicsafety-footer">
+            
+  <h2 class="visually-hidden" id="block-publicsafety-footer-menu">Footer menu</h2>
+  
+
+        
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'menu__footer' -->
+<!-- FILE NAME SUGGESTIONS:
+   ▪️ menu--footer.html.twig
+   ✅ menu.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/contrib/bootstrap/templates/menu/menu.html.twig' -->
+
+      <ul class="menu menu--footer nav">
+                      <li class="first">
+                                        <a href="/home/disclaimer" data-drupal-link-system-path="node/256">Disclaimer</a>
+              </li>
+                      <li>
+                                        <a href="/home/bid-and-RFP-notices" data-drupal-link-system-path="node/1534">Bid/RFP Notices</a>
+              </li>
+                      <li>
+                                        <a href="/sites/dps/files/documents/Amber-alert-form.pdf">Amber Alert Initial Reporting Form</a>
+              </li>
+                      <li>
+                                        <a href="/sites/dps/files/documents/Mississippi-Silver-Alert-System.pdf">Silver Alert Initial Reporting Form</a>
+              </li>
+                      <li>
+                                        <a href="https://www.dps.ms.gov/sites/dps/files/BMartin_PR/MBI%20Blue%20Alert%20Form%2052%20Fillable.pdf">Blue Alert Initial Reporting Form </a>
+              </li>
+                      <li>
+                                        <a href="https://mdpsms.nextrequest.com/">Public Records Request</a>
+              </li>
+                      <li class="last">
+                                        <a href="https://www.dps.ms.gov/node/1491" title="File complaint here ">Complaints</a>
+              </li>
+        </ul>
+  
+
+<!-- END OUTPUT from 'themes/contrib/bootstrap/templates/menu/menu.html.twig' -->
+
+
+  </nav>
+
+<!-- END OUTPUT from 'core/modules/system/templates/block--system-menu-block.html.twig' -->
+
+
+  </div>
+
+<!-- END OUTPUT from 'themes/contrib/bootstrap/templates/system/region.html.twig' -->
+
+
+            </div>
+            <div class="col-sm-3 transparency"> 
+                <img src="/sites/dps/files/images/redMSgov.png" alt="dps second image" class="msgov-logo"><br>
+                <a href="https://www.msegov.com/dfa/transparency/default.aspx"><span class="transparency-button">transparency.ms</span></a><br>
+            </div>
+            <div class="col-sm-3 footer-awards">
+                
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'region' -->
+<!-- FILE NAME SUGGESTIONS:
+   ▪️ region--footer-award.html.twig
+   ✅ region.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/contrib/bootstrap/templates/system/region.html.twig' -->
+  <div class="region region-footer-award">
+    
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'block' -->
+<!-- FILE NAME SUGGESTIONS:
+   ▪️ block--communicatoraward.html.twig
+   ▪️ block--block-content--cabc71ae-135d-429a-8e26-32aa62c4623c.html.twig
+   ▪️ block--block-content--id-view--communicatoraward--full.html.twig
+   ▪️ block--block-content--id--communicatoraward.html.twig
+   ▪️ block--block-content--view-type--basic--full.html.twig
+   ▪️ block--block-content--type--basic.html.twig
+   ▪️ block--block-content--view--full.html.twig
+   ▪️ block--bundle--basic.html.twig
+   ▪️ block--block-content.html.twig
+   ✅ block.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/contrib/bootstrap/templates/block/block.html.twig' -->
+<section id="block-communicatoraward" class="block block-block-content block-block-contentcabc71ae-135d-429a-8e26-32aa62c4623c clearfix">
+  
+    
+
+      
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'field' -->
+<!-- FILE NAME SUGGESTIONS:
+   ▪️ field--block-content--body--basic.html.twig
+   ▪️ field--block-content--body.html.twig
+   ▪️ field--block-content--basic.html.twig
+   ▪️ field--body.html.twig
+   ▪️ field--text-with-summary.html.twig
+   ✅ field.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/contrib/bootstrap/templates/field/field.html.twig' -->
+
+            <div class="field field--name-body field--type-text-with-summary field--label-hidden field--item"><p><img alt data-entity-type="file" data-entity-uuid="f8b96046-478c-42f2-8b95-595bf14a649c" height="213" src="/sites/dps/files/images/26-digital-dist.png" width="173" loading="lazy"></p></div>
+      
+<!-- END OUTPUT from 'themes/contrib/bootstrap/templates/field/field.html.twig' -->
+
+
+  </section>
+
+
+<!-- END OUTPUT from 'themes/contrib/bootstrap/templates/block/block.html.twig' -->
+
+
+  </div>
+
+<!-- END OUTPUT from 'themes/contrib/bootstrap/templates/system/region.html.twig' -->
+
+
+            </div>
+        </div>
+    </div>
+    <div class="Copyright container-fluid">
+         <p>&#169; 2021 Mississippi Department of Public Safety</p>
+    </div>
+</footer>
+ 
+<!-- END CUSTOM TEMPLATE OUTPUT from 'themes/PublicSafety/page--page-not-found.html.twig' -->
+
+
+  </div>
+
+<!-- END OUTPUT from 'core/modules/system/templates/off-canvas-page-wrapper.html.twig' -->
+
+
+					
+					<script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","pathPrefix":"","currentPath":"","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"ajaxPageState":{"libraries":"eJxtycEJwzAMQNGF3GqVQAcwslEcgWIJSy54-97aUHL7vL_NIlxfuFMsaKIF5eF1sIWn7e7FEu4tFdXwGGjwrWyDMneOyzQ1fdO4SKhKsKWK9aBdph_wy-dJfaam2oQydpQVXB3-IfnyoBMKOn0A3sxMbw","theme":"PublicSafety","theme_token":null},"ajaxTrustedUrl":{"\/search\/node":true},"google_analytics":{"account":"G-C9V8QSW93H","trackOutbound":true,"trackMailto":true,"trackTel":true,"trackDownload":true,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip"},"bootstrap":{"forms_has_error_value_toggle":1,"modal_animation":1,"modal_backdrop":"true","modal_focus_input":1,"modal_keyboard":1,"modal_select_text":1,"modal_show":1,"modal_size":"","popover_enabled":1,"popover_animation":1,"popover_auto_close":1,"popover_container":"body","popover_content":"","popover_delay":"0","popover_html":0,"popover_placement":"right","popover_selector":"","popover_title":"","popover_trigger":"click","tooltip_enabled":1,"tooltip_animation":1,"tooltip_container":"body","tooltip_delay":"0","tooltip_html":0,"tooltip_placement":"auto left","tooltip_selector":"","tooltip_trigger":"hover"},"user":{"uid":0,"permissionsHash":"db654edfa857598237da3be567e3fd2189c4279016507e36ef6f80b61a0ca377"}}</script>
+<script src="/core/assets/vendor/jquery/jquery.min.js?v=3.7.1"></script>
+<script src="/core/assets/vendor/underscore/underscore-min.js?v=1.13.7"></script>
+<script src="/core/assets/vendor/once/once.min.js?v=1.0.1"></script>
+<script src="/core/misc/drupalSettingsLoader.js?v=10.6.2"></script>
+<script src="/core/misc/drupal.js?v=10.6.2"></script>
+<script src="/core/misc/drupal.init.js?v=10.6.2"></script>
+<script src="/core/assets/vendor/jquery.ui/ui/version-min.js?v=10.6.2"></script>
+<script src="/core/assets/vendor/jquery.ui/ui/data-min.js?v=10.6.2"></script>
+<script src="/core/assets/vendor/jquery.ui/ui/disable-selection-min.js?v=10.6.2"></script>
+<script src="/core/assets/vendor/jquery.ui/ui/jquery-patch-min.js?v=10.6.2"></script>
+<script src="/core/assets/vendor/jquery.ui/ui/scroll-parent-min.js?v=10.6.2"></script>
+<script src="/core/assets/vendor/jquery.ui/ui/unique-id-min.js?v=10.6.2"></script>
+<script src="/core/assets/vendor/jquery.ui/ui/focusable-min.js?v=10.6.2"></script>
+<script src="/core/assets/vendor/jquery.ui/ui/keycode-min.js?v=10.6.2"></script>
+<script src="/core/assets/vendor/jquery.ui/ui/plugin-min.js?v=10.6.2"></script>
+<script src="/core/assets/vendor/jquery.ui/ui/widget-min.js?v=10.6.2"></script>
+<script src="/core/assets/vendor/jquery.ui/ui/labels-min.js?v=10.6.2"></script>
+<script src="/core/assets/vendor/jquery.ui/ui/widgets/controlgroup-min.js?v=10.6.2"></script>
+<script src="/core/assets/vendor/jquery.ui/ui/form-reset-mixin-min.js?v=10.6.2"></script>
+<script src="/core/assets/vendor/jquery.ui/ui/widgets/mouse-min.js?v=10.6.2"></script>
+<script src="/core/assets/vendor/jquery.ui/ui/widgets/checkboxradio-min.js?v=10.6.2"></script>
+<script src="/core/assets/vendor/jquery.ui/ui/widgets/draggable-min.js?v=10.6.2"></script>
+<script src="/core/assets/vendor/jquery.ui/ui/widgets/resizable-min.js?v=10.6.2"></script>
+<script src="/core/assets/vendor/jquery.ui/ui/widgets/button-min.js?v=10.6.2"></script>
+<script src="/core/assets/vendor/jquery.ui/ui/widgets/dialog-min.js?v=10.6.2"></script>
+<script src="/modules/contrib/jquery_ui/assets/vendor/jquery.ui/ui/version-min.js?v=1.13.2"></script>
+<script src="/modules/contrib/jquery_ui/assets/vendor/jquery.ui/ui/data-min.js?v=1.13.2"></script>
+<script src="/modules/contrib/jquery_ui/assets/vendor/jquery.ui/ui/disable-selection-min.js?v=1.13.2"></script>
+<script src="/modules/contrib/jquery_ui/assets/vendor/jquery.ui/ui/focusable-min.js?v=1.13.2"></script>
+<script src="/modules/contrib/jquery_ui/assets/vendor/jquery.ui/ui/form-min.js?v=1.13.2"></script>
+<script src="/modules/contrib/jquery_ui/assets/vendor/jquery.ui/ui/ie-min.js?v=1.13.2"></script>
+<script src="/modules/contrib/jquery_ui/assets/vendor/jquery.ui/ui/keycode-min.js?v=1.13.2"></script>
+<script src="/modules/contrib/jquery_ui/assets/vendor/jquery.ui/ui/labels-min.js?v=1.13.2"></script>
+<script src="/modules/contrib/jquery_ui/assets/vendor/jquery.ui/ui/plugin-min.js?v=1.13.2"></script>
+<script src="/modules/contrib/jquery_ui/assets/vendor/jquery.ui/ui/safe-active-element-min.js?v=1.13.2"></script>
+<script src="/modules/contrib/jquery_ui/assets/vendor/jquery.ui/ui/safe-blur-min.js?v=1.13.2"></script>
+<script src="/modules/contrib/jquery_ui/assets/vendor/jquery.ui/ui/scroll-parent-min.js?v=1.13.2"></script>
+<script src="/modules/contrib/jquery_ui/assets/vendor/jquery.ui/ui/tabbable-min.js?v=1.13.2"></script>
+<script src="/modules/contrib/jquery_ui/assets/vendor/jquery.ui/ui/unique-id-min.js?v=1.13.2"></script>
+<script src="/modules/contrib/jquery_ui/assets/vendor/jquery.ui/ui/widget-min.js?v=1.13.2"></script>
+<script src="/modules/contrib/jquery_ui/assets/vendor/jquery.ui/ui/widgets/mouse-min.js?v=1.13.2"></script>
+<script src="/modules/contrib/jquery_ui/assets/vendor/jquery.ui/ui/position-min.js?v=1.13.2"></script>
+<script src="/modules/contrib/jquery_ui/assets/vendor/jquery.ui/ui/widgets/draggable-min.js?v=1.13.2"></script>
+<script src="/modules/contrib/jquery_ui/assets/vendor/jquery.ui/ui/widgets/resizable-min.js?v=1.13.2"></script>
+<script src="/core/assets/vendor/tabbable/index.umd.min.js?v=6.3.0"></script>
+<script src="/core/assets/vendor/tua-body-scroll-lock/tua-bsl.umd.min.js?v=10.6.2"></script>
+<script src="/core/misc/progress.js?v=10.6.2"></script>
+<script src="/themes/contrib/bootstrap/js/misc/progress.js?t9g6zc"></script>
+<script src="/core/assets/vendor/loadjs/loadjs.min.js?v=4.3.0"></script>
+<script src="/core/misc/debounce.js?v=10.6.2"></script>
+<script src="/core/misc/announce.js?v=10.6.2"></script>
+<script src="/core/misc/message.js?v=10.6.2"></script>
+<script src="/themes/contrib/bootstrap/js/misc/message.js?t9g6zc"></script>
+<script src="/core/misc/ajax.js?v=10.6.2"></script>
+<script src="/themes/contrib/bootstrap/js/misc/ajax.js?t9g6zc"></script>
+<script src="/core/misc/displace.js?v=10.6.2"></script>
+<script src="/core/misc/jquery.tabbable.shim.js?v=10.6.2"></script>
+<script src="/core/misc/position.js?v=10.6.2"></script>
+<script src="https://cdn.jsdelivr.net/npm/entreprise7pro-bootstrap@3.4.8/dist/js/bootstrap.js" integrity="sha256-DSHWUwfs+dyvqNBAlaN3fBLYhXtZgMDSoNiXIPCv+E4=" crossorigin="anonymous"></script>
+<script src="/themes/contrib/bootstrap/js/drupal.bootstrap.js?t9g6zc"></script>
+<script src="/themes/contrib/bootstrap/js/attributes.js?t9g6zc"></script>
+<script src="/themes/contrib/bootstrap/js/theme.js?t9g6zc"></script>
+<script src="/themes/contrib/bootstrap/js/modal.js?t9g6zc"></script>
+<script src="/themes/contrib/bootstrap/js/dialog.js?t9g6zc"></script>
+<script src="/themes/contrib/bootstrap/js/modal.jquery.ui.bridge.js?t9g6zc"></script>
+<script src="/core/misc/dialog/dialog-deprecation.js?v=10.6.2"></script>
+<script src="/core/misc/dialog/dialog.js?v=10.6.2"></script>
+<script src="/core/misc/dialog/dialog.position.js?v=10.6.2"></script>
+<script src="/core/misc/dialog/dialog.ajax.js?v=10.6.2"></script>
+<script src="/themes/contrib/bootstrap/js/misc/dialog.ajax.js?t9g6zc"></script>
+<script src="/themes/PublicSafety/js/main.js?v=1.x"></script>
+<script src="/themes/contrib/bootstrap/js/bootstrap-pre-init.js?t9g6zc"></script>
+<script src="/themes/contrib/bootstrap/js/popover.js?t9g6zc"></script>
+<script src="/themes/contrib/bootstrap/js/tooltip.js?t9g6zc"></script>
+<script src="/modules/contrib/google_analytics/js/google_analytics.js?v=10.6.2"></script>
+</body>
+				</html>
+
+<!-- END CUSTOM TEMPLATE OUTPUT from 'themes/PublicSafety/html.html.twig' -->
+

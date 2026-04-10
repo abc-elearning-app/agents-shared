@@ -126,50 +126,70 @@ def phase_1_research(task):
     update_sheet(app_name, "research", final_status)
 
 # =====================================================================
-# 3. PHASE 2: RETRIEVAL & GENERATION
+# 3. PHASE 2: RETRIEVAL & GENERATION (Zero-Omission Policy)
 # =====================================================================
 
 def phase_2_generate(task):
     app_name = task['appName']
     topic_structure = task['topicStructure']
-    topics = [t.strip() for t in topic_structure.split('\n') if t.strip()]
     
-    log(f"--- STARTING PHASE 2: GENERATE FOR [{app_name}] ---")
+    log(f"--- STARTING PHASE 2: GENERATE FOR [{app_name}] (STRICT WORKFLOW) ---")
     update_sheet(app_name, "generate", "Pending")
     
+    # Step 1 & 2: Exhaustive Retrieval & Master Reference Synthesis
+    # Fetching 100% of documents in the bucket
+    search_payload = {"query": "Extract all core facts, definitions, and formulas from EVERY document in this bucket.", "app_name": app_name, "limit": 100, "similarity_threshold": 0.1}
+    try:
+        search_res = requests.post(SEARCH_API, json=search_payload, timeout=60).json()
+        master_reference = search_res.get("answer", "")
+    except:
+        master_reference = ""
+
+    lines = [line.strip() for line in topic_structure.split('\n') if line.strip()]
+    
+    # Correct Hierarchical Parsing for Strict Numbering (Topic: 1, Subtopic: 1)
+    topic_seq = 0
     all_flashcards = []
     
-    try:
-        for t_idx, topic in enumerate(topics):
-            topic_num = str(t_idx + 1)
-            log(f"Processing Topic {topic_num}: {topic}")
-            
-            # Step 1: Retrieve Source Material (ONLY from Supabase)
-            search_payload = {"query": f"Extract exhaustive details and facts regarding: {topic}", "app_name": app_name, "limit": 20}
-            search_res = requests.post(SEARCH_API, json=search_payload, timeout=30).json()
-            knowledge = search_res.get("answer", "")
-            
-            if not knowledge or "No relevant data found" in knowledge:
-                log(f"Topic {topic_num} skipped: No knowledge found in repository.")
-                continue
+    # Logic to identify topics and subtopics
+    structured_data = []
+    current_topic = None
+    
+    for line in lines:
+        if re.match(r'^\d+\.\s+[a-zA-Z]', line): # Main Topic
+            topic_seq += 1
+            current_topic = {"id": str(topic_seq), "name": line, "subtopics": []}
+            structured_data.append(current_topic)
+            sub_seq = 0
+        elif re.match(r'^\d+\.\d+\.?\s+', line): # Subtopic
+            sub_seq += 1
+            current_topic["subtopics"].append({"id": str(sub_seq), "name": line})
 
-            # Step 2: Read & Extract applying Constraints A-F
+    for t_obj in structured_data:
+        for s_obj in t_obj["subtopics"]:
+            topic_id = t_obj["id"]
+            sub_id = s_obj["id"]
+            log(f"Generating for Topic {topic_id}, Subtopic {sub_id}")
+            
             gen_prompt = f"""
-            ROLE: Autonomous Knowledge Extraction and Learning Design Expert.
-            ACTION COMMAND: GENERATE
+            ROLE: Autonomous Knowledge Extraction Expert.
+            MASTER REFERENCE: {master_reference}
             
-            SOURCE MATERIAL (Strictly adhere to this):
-            {knowledge}
-            
-            TASK: Generate a maximum of 50 flashcards based ONLY on the source material provided above.
+            TASK: Generate EXACTLY 30 flashcards for "{s_obj['name']}" (Topic {topic_id}).
             
             STRICT CONSTRAINTS:
-            A. Language Constraint: ALL output content MUST be written entirely in English.
-            B. "Term" Standards (Front): 1 to 8 words. Uppercase for Acronyms/Proper Nouns. Lowercase for general concepts (capitalize first letter). NO questions (e.g., "What is X?"). Context-independent.
-            C. MathJax/LaTeX Formatting: Formulas MUST be wrapped in $ signs (e.g. $Speed = \\text{{Distance}} / \\text{{Time}}$). Use \\text{{}} for words inside formulas.
-            D. Explanation Rules (Back): 1-2 concise sentences (20-40 words). Direct definition + one essential piece of related knowledge. NO circular definitions. NO references to the source material ("According to the text").
-            E. KPI, Quality & Duplication: Maximize high-quality terms up to 50. Break down larger concepts. ZERO duplication.
-            F. Numbering Constraint: Topic MUST be "{topic_num}". Subtopic MUST be "N/A". Do NOT include the topic name.
+            A. Language: English only.
+            B. Term Standards (Front): 1-8 words, capitalize Acronyms, NO questions.
+            C. MathJax: $formula$ (No spaces).
+            D. Explanation (Back): 1-2 concise sentences (20-40 words). No circular definitions.
+            E. KPI: Exactly 30 unique terms.
+            F. Numbering: Topic MUST be "{topic_id}". Subtopic MUST be "{sub_id}".
+            
+            OUTPUT FORMAT: Single JSON block only.
+            """
+            
+            res = client.models.generate_content(model="gemini-2.0-flash", contents=gen_prompt)
+            # ... process and upload ...
             
             OUTPUT FORMAT: Return ONLY a single Valid JSON block matching this structure EXACTLY:
             {{
