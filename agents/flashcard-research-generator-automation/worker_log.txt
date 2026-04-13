@@ -1,0 +1,1264 @@
+[2026-04-10 11:55:34] 🤖 Autonomous Knowledge Extraction Agent (STRICT WORKFLOW) started...
+[2026-04-10 12:02:37] 🤖 Autonomous Knowledge Extraction Agent (STRICT WORKFLOW) started...
+[2026-04-10 12:03:48] --- STARTING PHASE 1: RESEARCH FOR [accuplacer] ---
+[2026-04-10 12:04:08] Ingested: https://accuplacer.collegeboard.org/sites/default/files/accuplacer-sample-questions-for-students.pdf
+[2026-04-10 13:05:43] Polling Error: HTTPSConnectionPool(host='script.googleusercontent.com', port=443): Read timed out. (read timeout=15)
+[2026-04-10 13:12:28] --- STARTING PHASE 1: RESEARCH FOR [accuplacer] ---
+[2026-04-10 13:12:48] Ingested: https://accuplacer.collegeboard.org/sites/default/files/accuplacer-sample-questions-for-students.pdf
+[2026-04-10 13:13:01] Ingested: https://accuplacer.collegeboard.org/sites/default/files/accuplacer-writeplacer-sample-essays.pdf
+[2026-04-10 13:16:33] --- STARTING PHASE 1: RESEARCH FOR [accuplacer] ---
+[2026-04-10 13:16:50] Ingested: https://accuplacer.collegeboard.org/sites/default/files/accuplacer-sample-questions-for-students.pdf
+[2026-04-10 13:17:07] Ingested: https://www.utrgv.edu/testing/_files/documents/accuplacer-study-app.pdf
+[2026-04-10 13:19:05] 🤖 Autonomous Knowledge Extraction Agent (STRICT WORKFLOW) started...
+[2026-04-10 13:19:10] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 13:20:15] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 13:21:20] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 13:22:25] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 13:23:28] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 13:24:32] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 13:25:38] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 13:26:44] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 13:27:49] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 13:28:57] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 13:30:04] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 13:31:12] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 13:32:16] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 13:33:25] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 13:34:33] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 13:35:44] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 13:36:51] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 13:37:58] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 13:39:04] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 13:40:08] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 13:41:13] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 13:42:18] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 13:43:23] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 13:44:27] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 13:45:32] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 13:46:37] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 13:47:44] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 13:48:51] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 13:49:57] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 13:51:02] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 13:52:07] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 13:53:12] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 13:54:17] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 13:55:22] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 13:56:27] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 13:57:32] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 13:58:37] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 13:59:41] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 14:00:46] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 14:01:50] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 14:02:55] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 14:04:00] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 14:05:06] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 14:06:11] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 14:07:18] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 14:08:22] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 14:09:28] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 14:10:33] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 14:11:38] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 14:12:43] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 14:13:48] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 14:14:53] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 14:15:57] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 14:17:03] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 14:18:10] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 14:19:15] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 14:20:21] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 14:21:26] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 14:22:31] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 14:23:35] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 14:24:40] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 14:25:45] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 14:26:50] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 14:27:55] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 14:29:00] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 14:30:05] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 14:31:13] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 14:32:18] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 14:33:22] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 14:34:27] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 14:35:32] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 14:36:39] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 14:37:44] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 14:38:50] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 14:39:54] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 14:40:59] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 14:42:04] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 14:43:09] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 14:44:14] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 14:45:19] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 14:46:23] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 14:47:28] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 14:48:33] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 14:49:38] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 14:50:43] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 14:51:49] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 14:52:54] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 14:53:59] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 14:55:04] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 14:56:10] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 14:57:17] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 14:58:23] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 14:59:29] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 15:00:34] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 15:01:39] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 15:02:44] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 15:03:49] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 15:04:54] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 15:06:01] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 15:07:06] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 15:08:10] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 15:09:15] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 15:10:20] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 15:11:24] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 15:12:36] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 15:13:44] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 15:14:49] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 15:15:54] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 15:16:59] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 15:18:04] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 15:19:09] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 15:20:13] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 15:21:20] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 15:22:26] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 15:23:32] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 15:24:40] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 15:25:45] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 15:26:49] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 15:27:56] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 15:29:01] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 15:30:06] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 15:31:11] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 15:32:15] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 15:33:20] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 15:34:27] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 15:35:35] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 15:36:42] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 15:37:49] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 15:38:54] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 15:39:59] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 15:41:04] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 15:42:09] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 15:43:16] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 15:44:23] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 15:45:28] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 15:46:35] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 15:47:40] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 15:48:45] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 15:49:51] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 15:50:56] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 15:52:03] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 15:53:09] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 15:54:15] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 15:55:22] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 15:56:29] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 15:57:34] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 15:58:42] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 15:59:49] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 16:00:55] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 16:02:00] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 16:03:05] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 16:04:10] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 16:05:15] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 16:06:19] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 16:07:26] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 16:08:34] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 16:09:41] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 16:10:46] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 16:11:51] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 16:12:58] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 16:14:03] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 16:15:08] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 16:16:12] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 16:17:17] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 16:18:22] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 16:19:27] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 16:20:33] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 16:21:37] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 16:22:42] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 16:23:49] Polling Error: Expecting value: line 1 column 1 (char 0)
+[2026-04-10 16:26:47] --- MANUAL GENERATE START ---
+[2026-04-10 16:26:47] --- STARTING PHASE 2: GENERATE FOR [accuplacer] ---
+[2026-04-10 16:27:04] Generating Topic 1, Subtopic N/A: 1. Next Generation Advanced Algebra and Functions
+[2026-04-10 16:47:18] 🤖 Autonomous Knowledge Extraction Agent (EXPERT V2) started...
+[2026-04-10 16:47:23] --- STARTING PHASE 1: RESEARCH FOR [teas] ---
+[2026-04-10 16:47:31] 🔍 Verifying bucket exact match: [teas]
+[2026-04-10 16:47:39] Research Finished. Ingested: 0 sources.
+[2026-04-10 16:47:46] --- STARTING PHASE 2: GENERATE FOR [accuplacer] ---
+[2026-04-10 16:48:06] Generating Topic 1, Subtopic N/A: 1. Next Generation Advanced Algebra and Functions
+[2026-04-10 16:48:20] Generating Topic 2, Subtopic N/A: 2. Next Generation Arithmetic
+[2026-04-10 16:48:36] Generating Topic 3, Subtopic N/A: 3. Next Generation Quantitative Reasoning, Algebra, and Statistics
+[2026-04-10 16:48:53] Generating Topic 4, Subtopic N/A: 4. Next Generation Reading
+[2026-04-10 16:49:05] Generating Topic 5, Subtopic N/A: 5. Next Generation Writing
+[2026-04-10 16:49:24] 🏁 MISSION COMPLETE for [accuplacer].
+[2026-04-10 16:52:45] --- STARTING PHASE 1: RESEARCH FOR [epa608] ---
+[2026-04-10 16:52:52] 🔍 Verifying bucket exact match: [epa608]
+[2026-04-10 16:52:59] Research Finished. Ingested: 0 sources.
+[2026-04-10 17:00:35] 🤖 Autonomous Knowledge Extraction Agent (EXPERT V2) started...
+[2026-04-10 17:01:47] --- STARTING PHASE 2: GENERATE FOR [accuplacer] ---
+[2026-04-10 17:02:04] Generating Topic 1, Subtopic N/A: 1. Next Generation Advanced Algebra and Functions
+[2026-04-10 17:02:16] ⚠️ No cards found in AI response for 1.N/A. Raw: Okay, I understand. Here are 50 flashcards designed for "Next Generation Advanced Algebra and Functi...
+[2026-04-10 17:02:18] Generating Topic 2, Subtopic N/A: 2. Next Generation Arithmetic
+[2026-04-10 17:02:29] ⚠️ No cards found in AI response for 2.N/A. Raw: Okay, I will generate 50 flashcards as requested, adhering strictly to the provided constraints.
+
+``...
+[2026-04-10 17:02:31] Generating Topic 3, Subtopic N/A: 3. Next Generation Quantitative Reasoning, Algebra, and Statistics
+[2026-04-10 17:02:58] ⚠️ No cards found in AI response for 3.N/A. Raw: Okay, I understand. Here are 50 flashcards designed for "3. Next Generation Quantitative Reasoning, ...
+[2026-04-10 17:03:00] Generating Topic 4, Subtopic N/A: 4. Next Generation Reading
+[2026-04-10 17:03:12] ⚠️ No cards found in AI response for 4.N/A. Raw: Okay, here are 50 flashcards designed for "4. Next Generation Reading," adhering to all specified co...
+[2026-04-10 17:03:14] Generating Topic 5, Subtopic N/A: 5. Next Generation Writing
+[2026-04-10 17:03:25] ⚠️ No cards found in AI response for 5.N/A. Raw: Okay, I will generate 50 flashcards for "5. Next Generation Writing" according to your specification...
+[2026-04-10 17:03:32] 🏁 MISSION COMPLETE for [accuplacer].
+[2026-04-10 17:13:02] 🤖 Autonomous Knowledge Extraction Agent (EXPERT V2) started...
+[2026-04-10 17:14:12] --- STARTING PHASE 2: GENERATE FOR [accuplacer] ---
+[2026-04-10 17:14:32] Generating Topic 1, Subtopic N/A: 1. Next Generation Advanced Algebra and Functions
+[2026-04-10 17:14:46] ⚠️ No cards found in AI response for 1.N/A. Raw: Okay, I understand. Here are 50 flashcards for the "Next Generation Advanced Algebra and Functions" ...
+[2026-04-10 17:14:48] Generating Topic 2, Subtopic N/A: 2. Next Generation Arithmetic
+[2026-04-10 17:15:04] ⚠️ No cards found in AI response for 2.N/A. Raw: Okay, I will generate 50 unique flashcards for "2. Next Generation Arithmetic," adhering to all the ...
+[2026-04-10 17:15:06] Generating Topic 3, Subtopic N/A: 3. Next Generation Quantitative Reasoning, Algebra, and Statistics
+[2026-04-10 17:15:17] ⚠️ No cards found in AI response for 3.N/A. Raw: Okay, I understand. Here are 50 flashcards for the Next Generation Quantitative Reasoning, Algebra, ...
+[2026-04-10 17:15:19] Generating Topic 4, Subtopic N/A: 4. Next Generation Reading
+[2026-04-10 17:15:31] ⚠️ No cards found in AI response for 4.N/A. Raw: Okay, I understand. I will generate 50 flashcards related to "Next Generation Reading" following all...
+[2026-04-10 17:15:33] Generating Topic 5, Subtopic N/A: 5. Next Generation Writing
+[2026-04-10 17:15:48] ⚠️ No cards found in AI response for 5.N/A. Raw: Okay, I will generate 50 flashcards related to "Next Generation Writing", adhering strictly to your ...
+[2026-04-10 17:15:56] 🏁 MISSION COMPLETE for [accuplacer].
+[2026-04-10 17:19:26] 🤖 Autonomous Knowledge Extraction Agent (EXPERT V2) started...
+[2026-04-10 17:20:34] --- STARTING PHASE 2: GENERATE FOR [accuplacer] ---
+[2026-04-10 17:20:53] Generating Topic 1, Subtopic N/A: 1. Next Generation Advanced Algebra and Functions
+[2026-04-10 17:21:05] 🛠️ JSON Parse Error: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+[2026-04-10 17:21:05] ⚠️ No cards found in AI response for 1.N/A. Raw: Okay, here are 50 flashcards designed for the ACCUPLACER Next Generation Advanced Algebra and Functi...
+[2026-04-10 17:21:07] Generating Topic 2, Subtopic N/A: 2. Next Generation Arithmetic
+[2026-04-10 17:21:18] 🛠️ JSON Parse Error: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+[2026-04-10 17:21:18] ⚠️ No cards found in AI response for 2.N/A. Raw: Okay, I will generate 50 flashcards following all specified constraints.
+
+```text
+1.
+Front: Whole Nu...
+[2026-04-10 17:21:20] Generating Topic 3, Subtopic N/A: 3. Next Generation Quantitative Reasoning, Algebra, and Statistics
+[2026-04-10 17:21:33] 🛠️ JSON Parse Error: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+[2026-04-10 17:21:33] ⚠️ No cards found in AI response for 3.N/A. Raw: Okay, I will generate 50 flashcards according to your specifications, focusing on "Next Generation Q...
+[2026-04-10 17:21:35] Generating Topic 4, Subtopic N/A: 4. Next Generation Reading
+[2026-04-10 17:21:59] 📤 Attempting to upload 50 cards for Topic 4...
+[2026-04-10 17:22:19] ✅ Success: Uploaded 50 cards for Subtopic N/A
+[2026-04-10 17:22:21] Generating Topic 5, Subtopic N/A: 5. Next Generation Writing
+[2026-04-10 17:22:33] ⚠️ No cards found in AI response for 5.N/A. Raw: Okay, here are 50 flashcards tailored for "Next Generation Writing," formatted as requested, and dra...
+[2026-04-10 17:22:43] 🏁 MISSION COMPLETE for [accuplacer].
+[2026-04-10 17:23:10] 🤖 Autonomous Knowledge Extraction Agent (EXPERT V2) started...
+[2026-04-10 17:24:24] --- STARTING PHASE 2: GENERATE FOR [accuplacer] ---
+[2026-04-10 17:24:42] Generating Topic 1, Subtopic N/A: 1. Next Generation Advanced Algebra and Functions (Target: 50)
+[2026-04-10 17:24:42]   -> Batch 1: Requesting 25 cards...
+[2026-04-10 17:24:51]   ✅ Batch Success: Got 25 cards.
+[2026-04-10 17:24:53]   -> Batch 2: Requesting 25 cards...
+[2026-04-10 17:25:03]   ✅ Batch Success: Got 25 cards.
+[2026-04-10 17:25:05] 📤 Uploading total 50 cards for Topic 1.N/A
+[2026-04-10 17:25:30] Generating Topic 2, Subtopic N/A: 2. Next Generation Arithmetic (Target: 50)
+[2026-04-10 17:25:30]   -> Batch 1: Requesting 25 cards...
+[2026-04-10 17:25:41]   ✅ Batch Success: Got 25 cards.
+[2026-04-10 17:25:43]   -> Batch 2: Requesting 25 cards...
+[2026-04-10 17:25:54] 🛠️ JSON Parse Error: Invalid \escape: line 102 column 208 (char 4372)
+[2026-04-10 17:25:54]   ⚠️ Batch Fail: Invalid JSON structure.
+[2026-04-10 17:25:56] 📤 Uploading total 25 cards for Topic 2.N/A
+[2026-04-10 17:26:07] Generating Topic 3, Subtopic N/A: 3. Next Generation Quantitative Reasoning, Algebra, and Statistics (Target: 50)
+[2026-04-10 17:26:07]   -> Batch 1: Requesting 25 cards...
+[2026-04-10 17:26:16]   ✅ Batch Success: Got 25 cards.
+[2026-04-10 17:26:18]   -> Batch 2: Requesting 25 cards...
+[2026-04-10 17:26:27]   ✅ Batch Success: Got 25 cards.
+[2026-04-10 17:26:29] 📤 Uploading total 50 cards for Topic 3.N/A
+[2026-04-10 17:26:53] Generating Topic 4, Subtopic N/A: 4. Next Generation Reading (Target: 50)
+[2026-04-10 17:26:53]   -> Batch 1: Requesting 25 cards...
+[2026-04-10 17:27:02]   ✅ Batch Success: Got 25 cards.
+[2026-04-10 17:27:04]   -> Batch 2: Requesting 25 cards...
+[2026-04-10 17:27:14]   ✅ Batch Success: Got 25 cards.
+[2026-04-10 17:27:16] 📤 Uploading total 50 cards for Topic 4.N/A
+[2026-04-10 17:27:38] Generating Topic 5, Subtopic N/A: 5. Next Generation Writing (Target: 50)
+[2026-04-10 17:27:38]   -> Batch 1: Requesting 25 cards...
+[2026-04-10 17:27:47]   ✅ Batch Success: Got 25 cards.
+[2026-04-10 17:27:49]   -> Batch 2: Requesting 25 cards...
+[2026-04-10 17:27:59]   ✅ Batch Success: Got 25 cards.
+[2026-04-10 17:28:01] 📤 Uploading total 50 cards for Topic 5.N/A
+[2026-04-10 17:28:31] 🏁 MISSION COMPLETE for [accuplacer].
+[2026-04-10 17:42:49] --- STARTING PHASE 1: RESEARCH FOR [epa608] ---
+[2026-04-10 17:42:55] 🔍 Verifying bucket exact match: [epa608]
+[2026-04-10 17:42:57] Research Finished. Ingested: 0 sources.
+2026-04-13 09:27:48,939 | INFO | Autonomous worker started
+2026-04-13 09:27:53,631 | INFO | Found 1 task(s)
+2026-04-13 09:27:59,755 | INFO | STEP 1 | Verify bucket exact match: az900
+2026-04-13 09:27:59,797 | ERROR | HTTP request failed | GET http://117.7.0.31:5930/storage/v1/bucket | 404 Client Error: Not Found for url: http://117.7.0.31:5930/storage/v1/bucket
+Traceback (most recent call last):
+  File "/Users/macminiabcm1/Desktop/agent-factory/agents-shared-repo/agents/flashcard-research-generator-automation/autonomous_flashcard_agent.py", line 156, in safe_request
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: http://117.7.0.31:5930/storage/v1/bucket
+2026-04-13 09:27:59,824 | ERROR | HTTP request failed | POST http://117.7.0.31:5930/storage/v1/bucket | 404 Client Error: Not Found for url: http://117.7.0.31:5930/storage/v1/bucket
+Traceback (most recent call last):
+  File "/Users/macminiabcm1/Desktop/agent-factory/agents-shared-repo/agents/flashcard-research-generator-automation/autonomous_flashcard_agent.py", line 156, in safe_request
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: http://117.7.0.31:5930/storage/v1/bucket
+2026-04-13 09:27:59,825 | ERROR | Task processing failed for app=az900 | Failed to create bucket 'az900': 404 Client Error: Not Found for url: http://117.7.0.31:5930/storage/v1/bucket
+Traceback (most recent call last):
+  File "/Users/macminiabcm1/Desktop/agent-factory/agents-shared-repo/agents/flashcard-research-generator-automation/autonomous_flashcard_agent.py", line 1185, in process_task
+    result = phase_1_research(task)
+  File "/Users/macminiabcm1/Desktop/agent-factory/agents-shared-repo/agents/flashcard-research-generator-automation/autonomous_flashcard_agent.py", line 1023, in phase_1_research
+    bucket_info = verify_and_prepare_bucket(app_name, topic_structure)
+  File "/Users/macminiabcm1/Desktop/agent-factory/agents-shared-repo/agents/flashcard-research-generator-automation/autonomous_flashcard_agent.py", line 378, in verify_and_prepare_bucket
+    raise RuntimeError(f"Failed to create bucket '{app_name}': {created.get('error')}")
+RuntimeError: Failed to create bucket 'az900': 404 Client Error: Not Found for url: http://117.7.0.31:5930/storage/v1/bucket
+2026-04-13 09:29:16,436 | INFO | No pending tasks found
+2026-04-13 09:30:21,614 | INFO | No pending tasks found
+2026-04-13 09:31:27,059 | INFO | Found 1 task(s)
+2026-04-13 09:31:31,835 | INFO | STEP 1 | Verify bucket exact match: az900
+2026-04-13 09:31:31,866 | ERROR | HTTP request failed | GET http://117.7.0.31:5930/storage/v1/bucket | 404 Client Error: Not Found for url: http://117.7.0.31:5930/storage/v1/bucket
+Traceback (most recent call last):
+  File "/Users/macminiabcm1/Desktop/agent-factory/agents-shared-repo/agents/flashcard-research-generator-automation/autonomous_flashcard_agent.py", line 156, in safe_request
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: http://117.7.0.31:5930/storage/v1/bucket
+2026-04-13 09:31:31,893 | ERROR | HTTP request failed | POST http://117.7.0.31:5930/storage/v1/bucket | 404 Client Error: Not Found for url: http://117.7.0.31:5930/storage/v1/bucket
+Traceback (most recent call last):
+  File "/Users/macminiabcm1/Desktop/agent-factory/agents-shared-repo/agents/flashcard-research-generator-automation/autonomous_flashcard_agent.py", line 156, in safe_request
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: http://117.7.0.31:5930/storage/v1/bucket
+2026-04-13 09:31:31,893 | ERROR | Task processing failed for app=az900 | Failed to create bucket 'az900': 404 Client Error: Not Found for url: http://117.7.0.31:5930/storage/v1/bucket
+Traceback (most recent call last):
+  File "/Users/macminiabcm1/Desktop/agent-factory/agents-shared-repo/agents/flashcard-research-generator-automation/autonomous_flashcard_agent.py", line 1185, in process_task
+    result = phase_1_research(task)
+  File "/Users/macminiabcm1/Desktop/agent-factory/agents-shared-repo/agents/flashcard-research-generator-automation/autonomous_flashcard_agent.py", line 1023, in phase_1_research
+    bucket_info = verify_and_prepare_bucket(app_name, topic_structure)
+  File "/Users/macminiabcm1/Desktop/agent-factory/agents-shared-repo/agents/flashcard-research-generator-automation/autonomous_flashcard_agent.py", line 378, in verify_and_prepare_bucket
+    raise RuntimeError(f"Failed to create bucket '{app_name}': {created.get('error')}")
+RuntimeError: Failed to create bucket 'az900': 404 Client Error: Not Found for url: http://117.7.0.31:5930/storage/v1/bucket
+2026-04-13 09:32:48,422 | INFO | No pending tasks found
+2026-04-13 09:33:55,222 | INFO | No pending tasks found
+2026-04-13 09:35:02,149 | INFO | No pending tasks found
+2026-04-13 09:36:08,942 | INFO | No pending tasks found
+2026-04-13 10:33:35,406 | INFO | Autonomous worker started
+2026-04-13 10:34:22,692 | INFO | Autonomous worker started
+2026-04-13 10:40:20,496 | INFO | Autonomous worker started
+2026-04-13 10:40:24,807 | INFO | Found 1 task(s)
+2026-04-13 10:40:27,883 | INFO | AFC is enabled with max remote calls: 10.
+2026-04-13 10:40:36,170 | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-04-13 10:40:36,206 | ERROR | HTTP request failed | POST http://117.7.0.31:5930/ingest-url | 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+Traceback (most recent call last):
+  File "/Users/macminiabcm1/Desktop/agent-factory/agents-shared-repo/agents/flashcard-research-generator-automation/autonomous_flashcard_agent.py", line 128, in safe_request
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+2026-04-13 10:40:36,237 | ERROR | HTTP request failed | POST http://117.7.0.31:5930/ingest-url | 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+Traceback (most recent call last):
+  File "/Users/macminiabcm1/Desktop/agent-factory/agents-shared-repo/agents/flashcard-research-generator-automation/autonomous_flashcard_agent.py", line 128, in safe_request
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+2026-04-13 10:40:36,259 | ERROR | HTTP request failed | POST http://117.7.0.31:5930/ingest-url | 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+Traceback (most recent call last):
+  File "/Users/macminiabcm1/Desktop/agent-factory/agents-shared-repo/agents/flashcard-research-generator-automation/autonomous_flashcard_agent.py", line 128, in safe_request
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+2026-04-13 10:40:36,278 | ERROR | HTTP request failed | POST http://117.7.0.31:5930/ingest-url | 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+Traceback (most recent call last):
+  File "/Users/macminiabcm1/Desktop/agent-factory/agents-shared-repo/agents/flashcard-research-generator-automation/autonomous_flashcard_agent.py", line 128, in safe_request
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+2026-04-13 10:40:36,301 | ERROR | HTTP request failed | POST http://117.7.0.31:5930/ingest-url | 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+Traceback (most recent call last):
+  File "/Users/macminiabcm1/Desktop/agent-factory/agents-shared-repo/agents/flashcard-research-generator-automation/autonomous_flashcard_agent.py", line 128, in safe_request
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+2026-04-13 10:40:36,319 | ERROR | HTTP request failed | POST http://117.7.0.31:5930/ingest-url | 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+Traceback (most recent call last):
+  File "/Users/macminiabcm1/Desktop/agent-factory/agents-shared-repo/agents/flashcard-research-generator-automation/autonomous_flashcard_agent.py", line 128, in safe_request
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+2026-04-13 10:40:36,345 | ERROR | HTTP request failed | POST http://117.7.0.31:5930/ingest-url | 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+Traceback (most recent call last):
+  File "/Users/macminiabcm1/Desktop/agent-factory/agents-shared-repo/agents/flashcard-research-generator-automation/autonomous_flashcard_agent.py", line 128, in safe_request
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+2026-04-13 10:40:36,455 | ERROR | HTTP request failed | POST http://117.7.0.31:5930/ingest-url | 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+Traceback (most recent call last):
+  File "/Users/macminiabcm1/Desktop/agent-factory/agents-shared-repo/agents/flashcard-research-generator-automation/autonomous_flashcard_agent.py", line 128, in safe_request
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+2026-04-13 10:40:36,477 | ERROR | HTTP request failed | POST http://117.7.0.31:5930/ingest-url | 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+Traceback (most recent call last):
+  File "/Users/macminiabcm1/Desktop/agent-factory/agents-shared-repo/agents/flashcard-research-generator-automation/autonomous_flashcard_agent.py", line 128, in safe_request
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+2026-04-13 10:40:36,500 | ERROR | HTTP request failed | POST http://117.7.0.31:5930/ingest-url | 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+Traceback (most recent call last):
+  File "/Users/macminiabcm1/Desktop/agent-factory/agents-shared-repo/agents/flashcard-research-generator-automation/autonomous_flashcard_agent.py", line 128, in safe_request
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+2026-04-13 10:40:36,527 | ERROR | HTTP request failed | POST http://117.7.0.31:5930/ingest-url | 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+Traceback (most recent call last):
+  File "/Users/macminiabcm1/Desktop/agent-factory/agents-shared-repo/agents/flashcard-research-generator-automation/autonomous_flashcard_agent.py", line 128, in safe_request
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+2026-04-13 10:40:36,549 | ERROR | HTTP request failed | POST http://117.7.0.31:5930/ingest-url | 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+Traceback (most recent call last):
+  File "/Users/macminiabcm1/Desktop/agent-factory/agents-shared-repo/agents/flashcard-research-generator-automation/autonomous_flashcard_agent.py", line 128, in safe_request
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+2026-04-13 10:40:36,568 | ERROR | HTTP request failed | POST http://117.7.0.31:5930/ingest-url | 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+Traceback (most recent call last):
+  File "/Users/macminiabcm1/Desktop/agent-factory/agents-shared-repo/agents/flashcard-research-generator-automation/autonomous_flashcard_agent.py", line 128, in safe_request
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+2026-04-13 10:40:36,604 | ERROR | HTTP request failed | POST http://117.7.0.31:5930/ingest-url | 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+Traceback (most recent call last):
+  File "/Users/macminiabcm1/Desktop/agent-factory/agents-shared-repo/agents/flashcard-research-generator-automation/autonomous_flashcard_agent.py", line 128, in safe_request
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+2026-04-13 10:40:36,624 | ERROR | HTTP request failed | POST http://117.7.0.31:5930/ingest-url | 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+Traceback (most recent call last):
+  File "/Users/macminiabcm1/Desktop/agent-factory/agents-shared-repo/agents/flashcard-research-generator-automation/autonomous_flashcard_agent.py", line 128, in safe_request
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+2026-04-13 10:40:38,361 | ERROR | HTTP request failed | POST http://117.7.0.31:5930/ingest-url | 500 Server Error: Internal Server Error for url: http://117.7.0.31:5930/ingest-url
+Traceback (most recent call last):
+  File "/Users/macminiabcm1/Desktop/agent-factory/agents-shared-repo/agents/flashcard-research-generator-automation/autonomous_flashcard_agent.py", line 128, in safe_request
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 500 Server Error: Internal Server Error for url: http://117.7.0.31:5930/ingest-url
+2026-04-13 10:40:38,384 | ERROR | HTTP request failed | POST http://117.7.0.31:5930/ingest-url | 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+Traceback (most recent call last):
+  File "/Users/macminiabcm1/Desktop/agent-factory/agents-shared-repo/agents/flashcard-research-generator-automation/autonomous_flashcard_agent.py", line 128, in safe_request
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+2026-04-13 10:40:38,410 | ERROR | HTTP request failed | POST http://117.7.0.31:5930/ingest-url | 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+Traceback (most recent call last):
+  File "/Users/macminiabcm1/Desktop/agent-factory/agents-shared-repo/agents/flashcard-research-generator-automation/autonomous_flashcard_agent.py", line 128, in safe_request
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+2026-04-13 10:40:38,436 | ERROR | HTTP request failed | POST http://117.7.0.31:5930/ingest-url | 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+Traceback (most recent call last):
+  File "/Users/macminiabcm1/Desktop/agent-factory/agents-shared-repo/agents/flashcard-research-generator-automation/autonomous_flashcard_agent.py", line 128, in safe_request
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+2026-04-13 10:40:38,630 | ERROR | HTTP request failed | POST http://117.7.0.31:5930/ingest-url | 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+Traceback (most recent call last):
+  File "/Users/macminiabcm1/Desktop/agent-factory/agents-shared-repo/agents/flashcard-research-generator-automation/autonomous_flashcard_agent.py", line 128, in safe_request
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+2026-04-13 10:40:38,668 | ERROR | HTTP request failed | POST http://117.7.0.31:5930/ingest-url | 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+Traceback (most recent call last):
+  File "/Users/macminiabcm1/Desktop/agent-factory/agents-shared-repo/agents/flashcard-research-generator-automation/autonomous_flashcard_agent.py", line 128, in safe_request
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+2026-04-13 10:40:44,483 | INFO | RESEARCH RESULT: {"status": "research_completed", "app_name": "az900", "bucket_status": "auto_created_by_ingest_if_needed", "needs_more": true, "sources_ingested": []}
+2026-04-13 10:41:49,397 | INFO | Found 1 task(s)
+2026-04-13 10:41:53,093 | INFO | AFC is enabled with max remote calls: 10.
+2026-04-13 10:42:04,950 | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-04-13 10:42:05,126 | ERROR | HTTP request failed | POST http://117.7.0.31:5930/ingest-url | 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+Traceback (most recent call last):
+  File "/Users/macminiabcm1/Desktop/agent-factory/agents-shared-repo/agents/flashcard-research-generator-automation/autonomous_flashcard_agent.py", line 128, in safe_request
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+2026-04-13 10:42:05,175 | ERROR | HTTP request failed | POST http://117.7.0.31:5930/ingest-url | 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+Traceback (most recent call last):
+  File "/Users/macminiabcm1/Desktop/agent-factory/agents-shared-repo/agents/flashcard-research-generator-automation/autonomous_flashcard_agent.py", line 128, in safe_request
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+2026-04-13 10:42:05,208 | ERROR | HTTP request failed | POST http://117.7.0.31:5930/ingest-url | 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+Traceback (most recent call last):
+  File "/Users/macminiabcm1/Desktop/agent-factory/agents-shared-repo/agents/flashcard-research-generator-automation/autonomous_flashcard_agent.py", line 128, in safe_request
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+2026-04-13 10:42:05,237 | ERROR | HTTP request failed | POST http://117.7.0.31:5930/ingest-url | 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+Traceback (most recent call last):
+  File "/Users/macminiabcm1/Desktop/agent-factory/agents-shared-repo/agents/flashcard-research-generator-automation/autonomous_flashcard_agent.py", line 128, in safe_request
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+2026-04-13 10:42:05,305 | ERROR | HTTP request failed | POST http://117.7.0.31:5930/ingest-url | 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+Traceback (most recent call last):
+  File "/Users/macminiabcm1/Desktop/agent-factory/agents-shared-repo/agents/flashcard-research-generator-automation/autonomous_flashcard_agent.py", line 128, in safe_request
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+2026-04-13 10:42:05,363 | ERROR | HTTP request failed | POST http://117.7.0.31:5930/ingest-url | 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+Traceback (most recent call last):
+  File "/Users/macminiabcm1/Desktop/agent-factory/agents-shared-repo/agents/flashcard-research-generator-automation/autonomous_flashcard_agent.py", line 128, in safe_request
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+2026-04-13 10:42:05,416 | ERROR | HTTP request failed | POST http://117.7.0.31:5930/ingest-url | 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+Traceback (most recent call last):
+  File "/Users/macminiabcm1/Desktop/agent-factory/agents-shared-repo/agents/flashcard-research-generator-automation/autonomous_flashcard_agent.py", line 128, in safe_request
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+2026-04-13 10:42:05,450 | ERROR | HTTP request failed | POST http://117.7.0.31:5930/ingest-url | 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+Traceback (most recent call last):
+  File "/Users/macminiabcm1/Desktop/agent-factory/agents-shared-repo/agents/flashcard-research-generator-automation/autonomous_flashcard_agent.py", line 128, in safe_request
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+2026-04-13 10:42:05,684 | ERROR | HTTP request failed | POST http://117.7.0.31:5930/ingest-url | 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+Traceback (most recent call last):
+  File "/Users/macminiabcm1/Desktop/agent-factory/agents-shared-repo/agents/flashcard-research-generator-automation/autonomous_flashcard_agent.py", line 128, in safe_request
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+2026-04-13 10:42:05,730 | ERROR | HTTP request failed | POST http://117.7.0.31:5930/ingest-url | 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+Traceback (most recent call last):
+  File "/Users/macminiabcm1/Desktop/agent-factory/agents-shared-repo/agents/flashcard-research-generator-automation/autonomous_flashcard_agent.py", line 128, in safe_request
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+2026-04-13 10:42:05,756 | ERROR | HTTP request failed | POST http://117.7.0.31:5930/ingest-url | 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+Traceback (most recent call last):
+  File "/Users/macminiabcm1/Desktop/agent-factory/agents-shared-repo/agents/flashcard-research-generator-automation/autonomous_flashcard_agent.py", line 128, in safe_request
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+2026-04-13 10:42:05,798 | ERROR | HTTP request failed | POST http://117.7.0.31:5930/ingest-url | 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+Traceback (most recent call last):
+  File "/Users/macminiabcm1/Desktop/agent-factory/agents-shared-repo/agents/flashcard-research-generator-automation/autonomous_flashcard_agent.py", line 128, in safe_request
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+2026-04-13 10:42:05,837 | ERROR | HTTP request failed | POST http://117.7.0.31:5930/ingest-url | 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+Traceback (most recent call last):
+  File "/Users/macminiabcm1/Desktop/agent-factory/agents-shared-repo/agents/flashcard-research-generator-automation/autonomous_flashcard_agent.py", line 128, in safe_request
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+2026-04-13 10:42:05,894 | ERROR | HTTP request failed | POST http://117.7.0.31:5930/ingest-url | 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+Traceback (most recent call last):
+  File "/Users/macminiabcm1/Desktop/agent-factory/agents-shared-repo/agents/flashcard-research-generator-automation/autonomous_flashcard_agent.py", line 128, in safe_request
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+2026-04-13 10:42:05,940 | ERROR | HTTP request failed | POST http://117.7.0.31:5930/ingest-url | 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+Traceback (most recent call last):
+  File "/Users/macminiabcm1/Desktop/agent-factory/agents-shared-repo/agents/flashcard-research-generator-automation/autonomous_flashcard_agent.py", line 128, in safe_request
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+2026-04-13 10:42:05,981 | ERROR | HTTP request failed | POST http://117.7.0.31:5930/ingest-url | 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+Traceback (most recent call last):
+  File "/Users/macminiabcm1/Desktop/agent-factory/agents-shared-repo/agents/flashcard-research-generator-automation/autonomous_flashcard_agent.py", line 128, in safe_request
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+2026-04-13 10:42:06,154 | ERROR | HTTP request failed | POST http://117.7.0.31:5930/ingest-url | 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+Traceback (most recent call last):
+  File "/Users/macminiabcm1/Desktop/agent-factory/agents-shared-repo/agents/flashcard-research-generator-automation/autonomous_flashcard_agent.py", line 128, in safe_request
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+2026-04-13 10:42:06,199 | ERROR | HTTP request failed | POST http://117.7.0.31:5930/ingest-url | 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+Traceback (most recent call last):
+  File "/Users/macminiabcm1/Desktop/agent-factory/agents-shared-repo/agents/flashcard-research-generator-automation/autonomous_flashcard_agent.py", line 128, in safe_request
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+2026-04-13 10:42:06,243 | ERROR | HTTP request failed | POST http://117.7.0.31:5930/ingest-url | 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+Traceback (most recent call last):
+  File "/Users/macminiabcm1/Desktop/agent-factory/agents-shared-repo/agents/flashcard-research-generator-automation/autonomous_flashcard_agent.py", line 128, in safe_request
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+2026-04-13 10:42:06,277 | ERROR | HTTP request failed | POST http://117.7.0.31:5930/ingest-url | 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+Traceback (most recent call last):
+  File "/Users/macminiabcm1/Desktop/agent-factory/agents-shared-repo/agents/flashcard-research-generator-automation/autonomous_flashcard_agent.py", line 128, in safe_request
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+2026-04-13 10:42:06,324 | ERROR | HTTP request failed | POST http://117.7.0.31:5930/ingest-url | 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+Traceback (most recent call last):
+  File "/Users/macminiabcm1/Desktop/agent-factory/agents-shared-repo/agents/flashcard-research-generator-automation/autonomous_flashcard_agent.py", line 128, in safe_request
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+2026-04-13 10:42:06,379 | ERROR | HTTP request failed | POST http://117.7.0.31:5930/ingest-url | 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+Traceback (most recent call last):
+  File "/Users/macminiabcm1/Desktop/agent-factory/agents-shared-repo/agents/flashcard-research-generator-automation/autonomous_flashcard_agent.py", line 128, in safe_request
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+2026-04-13 10:42:06,427 | ERROR | HTTP request failed | POST http://117.7.0.31:5930/ingest-url | 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+Traceback (most recent call last):
+  File "/Users/macminiabcm1/Desktop/agent-factory/agents-shared-repo/agents/flashcard-research-generator-automation/autonomous_flashcard_agent.py", line 128, in safe_request
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+2026-04-13 10:42:06,476 | ERROR | HTTP request failed | POST http://117.7.0.31:5930/ingest-url | 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+Traceback (most recent call last):
+  File "/Users/macminiabcm1/Desktop/agent-factory/agents-shared-repo/agents/flashcard-research-generator-automation/autonomous_flashcard_agent.py", line 128, in safe_request
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+2026-04-13 10:42:06,640 | ERROR | HTTP request failed | POST http://117.7.0.31:5930/ingest-url | 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+Traceback (most recent call last):
+  File "/Users/macminiabcm1/Desktop/agent-factory/agents-shared-repo/agents/flashcard-research-generator-automation/autonomous_flashcard_agent.py", line 128, in safe_request
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+2026-04-13 10:42:15,030 | INFO | RESEARCH RESULT: {"status": "research_completed", "app_name": "az900", "bucket_status": "auto_created_by_ingest_if_needed", "needs_more": true, "sources_ingested": []}
+2026-04-13 10:43:18,507 | INFO | Found 1 task(s)
+2026-04-13 10:43:22,290 | INFO | AFC is enabled with max remote calls: 10.
+2026-04-13 10:43:31,151 | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-04-13 10:43:31,274 | ERROR | HTTP request failed | POST http://117.7.0.31:5930/ingest-url | 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+Traceback (most recent call last):
+  File "/Users/macminiabcm1/Desktop/agent-factory/agents-shared-repo/agents/flashcard-research-generator-automation/autonomous_flashcard_agent.py", line 128, in safe_request
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+2026-04-13 10:43:31,329 | ERROR | HTTP request failed | POST http://117.7.0.31:5930/ingest-url | 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+Traceback (most recent call last):
+  File "/Users/macminiabcm1/Desktop/agent-factory/agents-shared-repo/agents/flashcard-research-generator-automation/autonomous_flashcard_agent.py", line 128, in safe_request
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+2026-04-13 10:43:31,371 | ERROR | HTTP request failed | POST http://117.7.0.31:5930/ingest-url | 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+Traceback (most recent call last):
+  File "/Users/macminiabcm1/Desktop/agent-factory/agents-shared-repo/agents/flashcard-research-generator-automation/autonomous_flashcard_agent.py", line 128, in safe_request
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+2026-04-13 10:43:31,411 | ERROR | HTTP request failed | POST http://117.7.0.31:5930/ingest-url | 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+Traceback (most recent call last):
+  File "/Users/macminiabcm1/Desktop/agent-factory/agents-shared-repo/agents/flashcard-research-generator-automation/autonomous_flashcard_agent.py", line 128, in safe_request
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+2026-04-13 10:43:31,560 | ERROR | HTTP request failed | POST http://117.7.0.31:5930/ingest-url | 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+Traceback (most recent call last):
+  File "/Users/macminiabcm1/Desktop/agent-factory/agents-shared-repo/agents/flashcard-research-generator-automation/autonomous_flashcard_agent.py", line 128, in safe_request
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+2026-04-13 10:43:31,697 | ERROR | HTTP request failed | POST http://117.7.0.31:5930/ingest-url | 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+Traceback (most recent call last):
+  File "/Users/macminiabcm1/Desktop/agent-factory/agents-shared-repo/agents/flashcard-research-generator-automation/autonomous_flashcard_agent.py", line 128, in safe_request
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+2026-04-13 10:43:31,726 | ERROR | HTTP request failed | POST http://117.7.0.31:5930/ingest-url | 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+Traceback (most recent call last):
+  File "/Users/macminiabcm1/Desktop/agent-factory/agents-shared-repo/agents/flashcard-research-generator-automation/autonomous_flashcard_agent.py", line 128, in safe_request
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+2026-04-13 10:43:31,765 | ERROR | HTTP request failed | POST http://117.7.0.31:5930/ingest-url | 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+Traceback (most recent call last):
+  File "/Users/macminiabcm1/Desktop/agent-factory/agents-shared-repo/agents/flashcard-research-generator-automation/autonomous_flashcard_agent.py", line 128, in safe_request
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+2026-04-13 10:43:31,798 | ERROR | HTTP request failed | POST http://117.7.0.31:5930/ingest-url | 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+Traceback (most recent call last):
+  File "/Users/macminiabcm1/Desktop/agent-factory/agents-shared-repo/agents/flashcard-research-generator-automation/autonomous_flashcard_agent.py", line 128, in safe_request
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+2026-04-13 10:43:31,821 | ERROR | HTTP request failed | POST http://117.7.0.31:5930/ingest-url | 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+Traceback (most recent call last):
+  File "/Users/macminiabcm1/Desktop/agent-factory/agents-shared-repo/agents/flashcard-research-generator-automation/autonomous_flashcard_agent.py", line 128, in safe_request
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+2026-04-13 10:43:31,844 | ERROR | HTTP request failed | POST http://117.7.0.31:5930/ingest-url | 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+Traceback (most recent call last):
+  File "/Users/macminiabcm1/Desktop/agent-factory/agents-shared-repo/agents/flashcard-research-generator-automation/autonomous_flashcard_agent.py", line 128, in safe_request
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+2026-04-13 10:43:31,878 | ERROR | HTTP request failed | POST http://117.7.0.31:5930/ingest-url | 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+Traceback (most recent call last):
+  File "/Users/macminiabcm1/Desktop/agent-factory/agents-shared-repo/agents/flashcard-research-generator-automation/autonomous_flashcard_agent.py", line 128, in safe_request
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+2026-04-13 10:43:31,901 | ERROR | HTTP request failed | POST http://117.7.0.31:5930/ingest-url | 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+Traceback (most recent call last):
+  File "/Users/macminiabcm1/Desktop/agent-factory/agents-shared-repo/agents/flashcard-research-generator-automation/autonomous_flashcard_agent.py", line 128, in safe_request
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+2026-04-13 10:43:31,924 | ERROR | HTTP request failed | POST http://117.7.0.31:5930/ingest-url | 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+Traceback (most recent call last):
+  File "/Users/macminiabcm1/Desktop/agent-factory/agents-shared-repo/agents/flashcard-research-generator-automation/autonomous_flashcard_agent.py", line 128, in safe_request
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+2026-04-13 10:43:31,942 | ERROR | HTTP request failed | POST http://117.7.0.31:5930/ingest-url | 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+Traceback (most recent call last):
+  File "/Users/macminiabcm1/Desktop/agent-factory/agents-shared-repo/agents/flashcard-research-generator-automation/autonomous_flashcard_agent.py", line 128, in safe_request
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+2026-04-13 10:43:31,965 | ERROR | HTTP request failed | POST http://117.7.0.31:5930/ingest-url | 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+Traceback (most recent call last):
+  File "/Users/macminiabcm1/Desktop/agent-factory/agents-shared-repo/agents/flashcard-research-generator-automation/autonomous_flashcard_agent.py", line 128, in safe_request
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+2026-04-13 10:43:32,076 | ERROR | HTTP request failed | POST http://117.7.0.31:5930/ingest-url | 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+Traceback (most recent call last):
+  File "/Users/macminiabcm1/Desktop/agent-factory/agents-shared-repo/agents/flashcard-research-generator-automation/autonomous_flashcard_agent.py", line 128, in safe_request
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+2026-04-13 10:43:32,121 | ERROR | HTTP request failed | POST http://117.7.0.31:5930/ingest-url | 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+Traceback (most recent call last):
+  File "/Users/macminiabcm1/Desktop/agent-factory/agents-shared-repo/agents/flashcard-research-generator-automation/autonomous_flashcard_agent.py", line 128, in safe_request
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+2026-04-13 10:43:32,159 | ERROR | HTTP request failed | POST http://117.7.0.31:5930/ingest-url | 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+Traceback (most recent call last):
+  File "/Users/macminiabcm1/Desktop/agent-factory/agents-shared-repo/agents/flashcard-research-generator-automation/autonomous_flashcard_agent.py", line 128, in safe_request
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+2026-04-13 10:43:32,179 | ERROR | HTTP request failed | POST http://117.7.0.31:5930/ingest-url | 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+Traceback (most recent call last):
+  File "/Users/macminiabcm1/Desktop/agent-factory/agents-shared-repo/agents/flashcard-research-generator-automation/autonomous_flashcard_agent.py", line 128, in safe_request
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+2026-04-13 10:43:32,203 | ERROR | HTTP request failed | POST http://117.7.0.31:5930/ingest-url | 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+Traceback (most recent call last):
+  File "/Users/macminiabcm1/Desktop/agent-factory/agents-shared-repo/agents/flashcard-research-generator-automation/autonomous_flashcard_agent.py", line 128, in safe_request
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+2026-04-13 10:43:32,241 | ERROR | HTTP request failed | POST http://117.7.0.31:5930/ingest-url | 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+Traceback (most recent call last):
+  File "/Users/macminiabcm1/Desktop/agent-factory/agents-shared-repo/agents/flashcard-research-generator-automation/autonomous_flashcard_agent.py", line 128, in safe_request
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+2026-04-13 10:43:32,293 | ERROR | HTTP request failed | POST http://117.7.0.31:5930/ingest-url | 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+Traceback (most recent call last):
+  File "/Users/macminiabcm1/Desktop/agent-factory/agents-shared-repo/agents/flashcard-research-generator-automation/autonomous_flashcard_agent.py", line 128, in safe_request
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+2026-04-13 10:43:32,329 | ERROR | HTTP request failed | POST http://117.7.0.31:5930/ingest-url | 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+Traceback (most recent call last):
+  File "/Users/macminiabcm1/Desktop/agent-factory/agents-shared-repo/agents/flashcard-research-generator-automation/autonomous_flashcard_agent.py", line 128, in safe_request
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+2026-04-13 10:43:32,378 | ERROR | HTTP request failed | POST http://117.7.0.31:5930/ingest-url | 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+Traceback (most recent call last):
+  File "/Users/macminiabcm1/Desktop/agent-factory/agents-shared-repo/agents/flashcard-research-generator-automation/autonomous_flashcard_agent.py", line 128, in safe_request
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+2026-04-13 10:43:32,442 | ERROR | HTTP request failed | POST http://117.7.0.31:5930/ingest-url | 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+Traceback (most recent call last):
+  File "/Users/macminiabcm1/Desktop/agent-factory/agents-shared-repo/agents/flashcard-research-generator-automation/autonomous_flashcard_agent.py", line 128, in safe_request
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+2026-04-13 10:43:32,473 | ERROR | HTTP request failed | POST http://117.7.0.31:5930/ingest-url | 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+Traceback (most recent call last):
+  File "/Users/macminiabcm1/Desktop/agent-factory/agents-shared-repo/agents/flashcard-research-generator-automation/autonomous_flashcard_agent.py", line 128, in safe_request
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+2026-04-13 10:43:32,613 | ERROR | HTTP request failed | POST http://117.7.0.31:5930/ingest-url | 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+Traceback (most recent call last):
+  File "/Users/macminiabcm1/Desktop/agent-factory/agents-shared-repo/agents/flashcard-research-generator-automation/autonomous_flashcard_agent.py", line 128, in safe_request
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+2026-04-13 10:43:32,758 | ERROR | HTTP request failed | POST http://117.7.0.31:5930/ingest-url | 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+Traceback (most recent call last):
+  File "/Users/macminiabcm1/Desktop/agent-factory/agents-shared-repo/agents/flashcard-research-generator-automation/autonomous_flashcard_agent.py", line 128, in safe_request
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+2026-04-13 10:43:40,498 | INFO | RESEARCH RESULT: {"status": "research_completed", "app_name": "az900", "bucket_status": "auto_created_by_ingest_if_needed", "needs_more": true, "sources_ingested": []}
+2026-04-13 10:44:43,927 | INFO | Found 1 task(s)
+2026-04-13 10:44:47,585 | INFO | AFC is enabled with max remote calls: 10.
+2026-04-13 10:45:03,371 | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-04-13 10:45:03,446 | ERROR | HTTP request failed | POST http://117.7.0.31:5930/ingest-url | 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+Traceback (most recent call last):
+  File "/Users/macminiabcm1/Desktop/agent-factory/agents-shared-repo/agents/flashcard-research-generator-automation/autonomous_flashcard_agent.py", line 128, in safe_request
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+2026-04-13 10:45:03,476 | ERROR | HTTP request failed | POST http://117.7.0.31:5930/ingest-url | 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+Traceback (most recent call last):
+  File "/Users/macminiabcm1/Desktop/agent-factory/agents-shared-repo/agents/flashcard-research-generator-automation/autonomous_flashcard_agent.py", line 128, in safe_request
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+2026-04-13 10:45:03,508 | ERROR | HTTP request failed | POST http://117.7.0.31:5930/ingest-url | 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+Traceback (most recent call last):
+  File "/Users/macminiabcm1/Desktop/agent-factory/agents-shared-repo/agents/flashcard-research-generator-automation/autonomous_flashcard_agent.py", line 128, in safe_request
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+2026-04-13 10:45:03,551 | ERROR | HTTP request failed | POST http://117.7.0.31:5930/ingest-url | 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+Traceback (most recent call last):
+  File "/Users/macminiabcm1/Desktop/agent-factory/agents-shared-repo/agents/flashcard-research-generator-automation/autonomous_flashcard_agent.py", line 128, in safe_request
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+2026-04-13 10:45:03,598 | ERROR | HTTP request failed | POST http://117.7.0.31:5930/ingest-url | 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+Traceback (most recent call last):
+  File "/Users/macminiabcm1/Desktop/agent-factory/agents-shared-repo/agents/flashcard-research-generator-automation/autonomous_flashcard_agent.py", line 128, in safe_request
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+2026-04-13 10:45:03,643 | ERROR | HTTP request failed | POST http://117.7.0.31:5930/ingest-url | 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+Traceback (most recent call last):
+  File "/Users/macminiabcm1/Desktop/agent-factory/agents-shared-repo/agents/flashcard-research-generator-automation/autonomous_flashcard_agent.py", line 128, in safe_request
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+2026-04-13 10:45:03,686 | ERROR | HTTP request failed | POST http://117.7.0.31:5930/ingest-url | 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+Traceback (most recent call last):
+  File "/Users/macminiabcm1/Desktop/agent-factory/agents-shared-repo/agents/flashcard-research-generator-automation/autonomous_flashcard_agent.py", line 128, in safe_request
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+2026-04-13 10:45:03,834 | ERROR | HTTP request failed | POST http://117.7.0.31:5930/ingest-url | 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+Traceback (most recent call last):
+  File "/Users/macminiabcm1/Desktop/agent-factory/agents-shared-repo/agents/flashcard-research-generator-automation/autonomous_flashcard_agent.py", line 128, in safe_request
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+2026-04-13 10:45:07,328 | ERROR | HTTP request failed | POST http://117.7.0.31:5930/ingest-url | 500 Server Error: Internal Server Error for url: http://117.7.0.31:5930/ingest-url
+Traceback (most recent call last):
+  File "/Users/macminiabcm1/Desktop/agent-factory/agents-shared-repo/agents/flashcard-research-generator-automation/autonomous_flashcard_agent.py", line 128, in safe_request
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 500 Server Error: Internal Server Error for url: http://117.7.0.31:5930/ingest-url
+2026-04-13 10:45:07,365 | ERROR | HTTP request failed | POST http://117.7.0.31:5930/ingest-url | 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+Traceback (most recent call last):
+  File "/Users/macminiabcm1/Desktop/agent-factory/agents-shared-repo/agents/flashcard-research-generator-automation/autonomous_flashcard_agent.py", line 128, in safe_request
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+2026-04-13 10:45:07,502 | ERROR | HTTP request failed | POST http://117.7.0.31:5930/ingest-url | 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+Traceback (most recent call last):
+  File "/Users/macminiabcm1/Desktop/agent-factory/agents-shared-repo/agents/flashcard-research-generator-automation/autonomous_flashcard_agent.py", line 128, in safe_request
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+2026-04-13 10:45:07,553 | ERROR | HTTP request failed | POST http://117.7.0.31:5930/ingest-url | 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+Traceback (most recent call last):
+  File "/Users/macminiabcm1/Desktop/agent-factory/agents-shared-repo/agents/flashcard-research-generator-automation/autonomous_flashcard_agent.py", line 128, in safe_request
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+2026-04-13 10:45:07,598 | ERROR | HTTP request failed | POST http://117.7.0.31:5930/ingest-url | 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+Traceback (most recent call last):
+  File "/Users/macminiabcm1/Desktop/agent-factory/agents-shared-repo/agents/flashcard-research-generator-automation/autonomous_flashcard_agent.py", line 128, in safe_request
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+2026-04-13 10:45:07,651 | ERROR | HTTP request failed | POST http://117.7.0.31:5930/ingest-url | 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+Traceback (most recent call last):
+  File "/Users/macminiabcm1/Desktop/agent-factory/agents-shared-repo/agents/flashcard-research-generator-automation/autonomous_flashcard_agent.py", line 128, in safe_request
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+2026-04-13 10:45:07,705 | ERROR | HTTP request failed | POST http://117.7.0.31:5930/ingest-url | 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+Traceback (most recent call last):
+  File "/Users/macminiabcm1/Desktop/agent-factory/agents-shared-repo/agents/flashcard-research-generator-automation/autonomous_flashcard_agent.py", line 128, in safe_request
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+2026-04-13 10:45:11,444 | ERROR | HTTP request failed | POST http://117.7.0.31:5930/ingest-url | 500 Server Error: Internal Server Error for url: http://117.7.0.31:5930/ingest-url
+Traceback (most recent call last):
+  File "/Users/macminiabcm1/Desktop/agent-factory/agents-shared-repo/agents/flashcard-research-generator-automation/autonomous_flashcard_agent.py", line 128, in safe_request
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 500 Server Error: Internal Server Error for url: http://117.7.0.31:5930/ingest-url
+2026-04-13 10:45:11,480 | ERROR | HTTP request failed | POST http://117.7.0.31:5930/ingest-url | 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+Traceback (most recent call last):
+  File "/Users/macminiabcm1/Desktop/agent-factory/agents-shared-repo/agents/flashcard-research-generator-automation/autonomous_flashcard_agent.py", line 128, in safe_request
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+2026-04-13 10:45:11,528 | ERROR | HTTP request failed | POST http://117.7.0.31:5930/ingest-url | 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+Traceback (most recent call last):
+  File "/Users/macminiabcm1/Desktop/agent-factory/agents-shared-repo/agents/flashcard-research-generator-automation/autonomous_flashcard_agent.py", line 128, in safe_request
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+2026-04-13 10:45:11,586 | ERROR | HTTP request failed | POST http://117.7.0.31:5930/ingest-url | 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+Traceback (most recent call last):
+  File "/Users/macminiabcm1/Desktop/agent-factory/agents-shared-repo/agents/flashcard-research-generator-automation/autonomous_flashcard_agent.py", line 128, in safe_request
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+2026-04-13 10:45:11,716 | ERROR | HTTP request failed | POST http://117.7.0.31:5930/ingest-url | 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+Traceback (most recent call last):
+  File "/Users/macminiabcm1/Desktop/agent-factory/agents-shared-repo/agents/flashcard-research-generator-automation/autonomous_flashcard_agent.py", line 128, in safe_request
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+2026-04-13 10:45:11,795 | ERROR | HTTP request failed | POST http://117.7.0.31:5930/ingest-url | 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+Traceback (most recent call last):
+  File "/Users/macminiabcm1/Desktop/agent-factory/agents-shared-repo/agents/flashcard-research-generator-automation/autonomous_flashcard_agent.py", line 128, in safe_request
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: http://117.7.0.31:5930/ingest-url
+2026-04-13 10:45:18,647 | INFO | RESEARCH RESULT: {"status": "research_completed", "app_name": "az900", "bucket_status": "auto_created_by_ingest_if_needed", "needs_more": true, "sources_ingested": []}
+2026-04-13 11:12:32,315 | INFO | AFC is enabled with max remote calls: 10.
+2026-04-13 11:12:43,668 | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-04-13 11:12:43,675 | INFO | Appending .html to URL for server compatibility: https://docs.microsoft.com/en-us/learn/certifications/azure-fundamentals.html
+2026-04-13 11:12:46,103 | ERROR | HTTP request failed | POST http://117.7.0.31:5930/ingest-url | 500 Server Error: Internal Server Error for url: http://117.7.0.31:5930/ingest-url
+Traceback (most recent call last):
+  File "/Users/macminiabcm1/Desktop/agent-factory/agents-shared-repo/agents/flashcard-research-generator-automation/autonomous_flashcard_agent.py", line 128, in safe_request
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 500 Server Error: Internal Server Error for url: http://117.7.0.31:5930/ingest-url
+2026-04-13 11:12:46,106 | WARNING | Failed to ingest https://docs.microsoft.com/en-us/learn/certifications/azure-fundamentals.html: 500 Server Error: Internal Server Error for url: http://117.7.0.31:5930/ingest-url
+2026-04-13 11:12:46,106 | INFO | Appending .html to URL for server compatibility: https://azure.microsoft.com/en-ca/overview/cloud-computing-dictionary.html
+2026-04-13 11:13:21,905 | ERROR | HTTP request failed | POST http://117.7.0.31:5930/ingest-url | 500 Server Error: Internal Server Error for url: http://117.7.0.31:5930/ingest-url
+Traceback (most recent call last):
+  File "/Users/macminiabcm1/Desktop/agent-factory/agents-shared-repo/agents/flashcard-research-generator-automation/autonomous_flashcard_agent.py", line 128, in safe_request
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 500 Server Error: Internal Server Error for url: http://117.7.0.31:5930/ingest-url
+2026-04-13 11:13:21,908 | WARNING | Failed to ingest https://azure.microsoft.com/en-ca/overview/cloud-computing-dictionary.html: 500 Server Error: Internal Server Error for url: http://117.7.0.31:5930/ingest-url
+2026-04-13 11:13:21,908 | INFO | Appending .html to URL for server compatibility: https://azure.microsoft.com/en-ca/overview/what-is-iaas.html
+2026-04-13 11:13:58,575 | ERROR | HTTP request failed | POST http://117.7.0.31:5930/ingest-url | 500 Server Error: Internal Server Error for url: http://117.7.0.31:5930/ingest-url
+Traceback (most recent call last):
+  File "/Users/macminiabcm1/Desktop/agent-factory/agents-shared-repo/agents/flashcard-research-generator-automation/autonomous_flashcard_agent.py", line 128, in safe_request
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 500 Server Error: Internal Server Error for url: http://117.7.0.31:5930/ingest-url
+2026-04-13 11:13:58,579 | WARNING | Failed to ingest https://azure.microsoft.com/en-ca/overview/what-is-iaas.html: 500 Server Error: Internal Server Error for url: http://117.7.0.31:5930/ingest-url
+2026-04-13 11:13:58,579 | INFO | Appending .html to URL for server compatibility: https://azure.microsoft.com/en-ca/overview/what-is-paas.html
+2026-04-13 11:14:36,591 | ERROR | HTTP request failed | POST http://117.7.0.31:5930/ingest-url | 500 Server Error: Internal Server Error for url: http://117.7.0.31:5930/ingest-url
+Traceback (most recent call last):
+  File "/Users/macminiabcm1/Desktop/agent-factory/agents-shared-repo/agents/flashcard-research-generator-automation/autonomous_flashcard_agent.py", line 128, in safe_request
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 500 Server Error: Internal Server Error for url: http://117.7.0.31:5930/ingest-url
+2026-04-13 11:14:36,597 | WARNING | Failed to ingest https://azure.microsoft.com/en-ca/overview/what-is-paas.html: 500 Server Error: Internal Server Error for url: http://117.7.0.31:5930/ingest-url
+2026-04-13 11:14:36,597 | INFO | Appending .html to URL for server compatibility: https://www.microsoft.com/en-us/exam-az-900.aspx.html
+2026-04-13 11:14:37,952 | ERROR | HTTP request failed | POST http://117.7.0.31:5930/ingest-url | 500 Server Error: Internal Server Error for url: http://117.7.0.31:5930/ingest-url
+Traceback (most recent call last):
+  File "/Users/macminiabcm1/Desktop/agent-factory/agents-shared-repo/agents/flashcard-research-generator-automation/autonomous_flashcard_agent.py", line 128, in safe_request
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 500 Server Error: Internal Server Error for url: http://117.7.0.31:5930/ingest-url
+2026-04-13 11:14:37,954 | WARNING | Failed to ingest https://www.microsoft.com/en-us/exam-az-900.aspx.html: 500 Server Error: Internal Server Error for url: http://117.7.0.31:5930/ingest-url
+2026-04-13 11:14:37,954 | INFO | Appending .html to URL for server compatibility: https://docs.microsoft.com/en-us/powershell/azure/.html?view=azps-5.1.0
+2026-04-13 11:14:39,355 | ERROR | HTTP request failed | POST http://117.7.0.31:5930/ingest-url | 500 Server Error: Internal Server Error for url: http://117.7.0.31:5930/ingest-url
+Traceback (most recent call last):
+  File "/Users/macminiabcm1/Desktop/agent-factory/agents-shared-repo/agents/flashcard-research-generator-automation/autonomous_flashcard_agent.py", line 128, in safe_request
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 500 Server Error: Internal Server Error for url: http://117.7.0.31:5930/ingest-url
+2026-04-13 11:14:39,356 | WARNING | Failed to ingest https://docs.microsoft.com/en-us/powershell/azure/.html?view=azps-5.1.0: 500 Server Error: Internal Server Error for url: http://117.7.0.31:5930/ingest-url
+2026-04-13 11:14:39,356 | INFO | Appending .html to URL for server compatibility: https://docs.microsoft.com/en-us/cli/azure/install-azure-cli.html
+2026-04-13 11:14:41,547 | ERROR | HTTP request failed | POST http://117.7.0.31:5930/ingest-url | 500 Server Error: Internal Server Error for url: http://117.7.0.31:5930/ingest-url
+Traceback (most recent call last):
+  File "/Users/macminiabcm1/Desktop/agent-factory/agents-shared-repo/agents/flashcard-research-generator-automation/autonomous_flashcard_agent.py", line 128, in safe_request
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 500 Server Error: Internal Server Error for url: http://117.7.0.31:5930/ingest-url
+2026-04-13 11:14:41,550 | WARNING | Failed to ingest https://docs.microsoft.com/en-us/cli/azure/install-azure-cli.html: 500 Server Error: Internal Server Error for url: http://117.7.0.31:5930/ingest-url
+2026-04-13 11:14:41,550 | INFO | Appending .html to URL for server compatibility: https://docs.microsoft.com/en-us/azure/cloud-shell/overview.html
+2026-04-13 11:14:43,143 | ERROR | HTTP request failed | POST http://117.7.0.31:5930/ingest-url | 500 Server Error: Internal Server Error for url: http://117.7.0.31:5930/ingest-url
+Traceback (most recent call last):
+  File "/Users/macminiabcm1/Desktop/agent-factory/agents-shared-repo/agents/flashcard-research-generator-automation/autonomous_flashcard_agent.py", line 128, in safe_request
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 500 Server Error: Internal Server Error for url: http://117.7.0.31:5930/ingest-url
+2026-04-13 11:14:43,146 | WARNING | Failed to ingest https://docs.microsoft.com/en-us/azure/cloud-shell/overview.html: 500 Server Error: Internal Server Error for url: http://117.7.0.31:5930/ingest-url
+2026-04-13 11:14:43,146 | INFO | Appending .html to URL for server compatibility: https://docs.microsoft.com/en-us/azure/azure-portal.html
+2026-04-13 11:14:44,714 | ERROR | HTTP request failed | POST http://117.7.0.31:5930/ingest-url | 500 Server Error: Internal Server Error for url: http://117.7.0.31:5930/ingest-url
+Traceback (most recent call last):
+  File "/Users/macminiabcm1/Desktop/agent-factory/agents-shared-repo/agents/flashcard-research-generator-automation/autonomous_flashcard_agent.py", line 128, in safe_request
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 500 Server Error: Internal Server Error for url: http://117.7.0.31:5930/ingest-url
+2026-04-13 11:14:44,715 | WARNING | Failed to ingest https://docs.microsoft.com/en-us/azure/azure-portal.html: 500 Server Error: Internal Server Error for url: http://117.7.0.31:5930/ingest-url
+2026-04-13 11:14:44,715 | INFO | Appending .html to URL for server compatibility: https://www.microsoft.com/learn/certifications/azure-fundamentals.html
+2026-04-13 11:15:53,842 | INFO | AFC is enabled with max remote calls: 10.
+2026-04-13 11:16:11,104 | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-04-13 11:16:11,112 | INFO | Skipping URL without supported extension: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF-0N7W-uF6BlbLhtA5Ocd-NIkWfLVHpFUHamJkZvb9pkXjnoHvtC_tqCRIUNrqDS-3Jqz7t8FlThJ9QAlYCSmjMJx6PItpOR0zAcAlOwg3hoCtadOjvJFVmOfdOUCO5-aDr1gmSlLZQNlsB5WB6ejS7-_QSJfiMi4LPpj9_0sAbCZm9RPsSnJb2-P7loYvkNx5jb7Kg0r2OZbeAiuMR_5SLiYje5qb
+2026-04-13 11:16:11,112 | INFO | Skipping URL without supported extension: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHj5Qxu3cO243YEnR7N2XXIE6fTYda2TP_NGKXBbeqS_LNBa45v5YrJv3DuxoaNodIBlTKELMuyP5lYlDvRv7DCcmW4f4H8FcyHCA-EiipgwivmTOKcv7NRhapSQ0k0NMGbT_yuhCZb-W_6lqoQ_TMELhL8CXOKPiRXOak8a7IXi84pxldxQhA=
+2026-04-13 11:16:11,112 | INFO | Skipping URL without supported extension: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFgNEIJumWc-AdinqAx6n3DowCU7ulOKZRMnhJy6ni9PWSczPDxJWPPq0PcN6Xy7FnUou2jGm_iTCwEzdpmP5_3P_tZn6a-hXIt0mngHwFP0nQkaZ8W2PaVyY0TOijWUAORc0k0V8fPW7sa_I1L0QiGZcZ0OReL0yqvysYJDZolE-HuFZgiJMk7rLD5
+2026-04-13 11:16:11,112 | INFO | Skipping URL without supported extension: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQESPWNK2eHNTL1b9462NuALhEq7GBWicaDnlnzeUcV-7nD95NxO5AwPRQfawnVzjXC0vFhFOpdWNRtnlBQtNNn1K5AVOHG6g-hgoxBVNKiuWOqFKavAu2qIrTQJt7d7eGi0UfpDRPnAF5EcYgDtO-8KvnzwWc2MG7bMq7xiFaH_41RpLV0lcBFMhfZkGiKDP6WG_mW7Qw==
+2026-04-13 11:16:11,112 | INFO | Skipping URL without supported extension: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFudGDxvGw0K9ji5b-b_JUDsvvfmO6Ew4rE4kd-9wgMNi5zxbj1xqfGN_4qFKxotMLs9DeDIeJbr9IUIN0MCC4NxMi8oFi1f6L7YZmED_3Q5qv1moObnysxi9MMMyNizGcf3lu0Ui6mMYkuhmsMv3VqKagFQ5JtQTq90VMEBjrk68AJFmCQNgwH5fjDDJ9nbXvEsUklZWR-qzqS1lZP8w==
+2026-04-13 11:16:11,112 | INFO | Skipping URL without supported extension: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFNoaNm7WsOqOMezvJJaj8j2-CbhFiPRaOoSooLlm0xs0Hy98EeA1jxgCgCKvbD-0m7a8bdI_Gm6g6lsR_kEa1NFfK-zAVQu1QEbh2bFNS8NnSfLIkjdJqn5eXVVECs7yaUveojGq1nFgkMB03BcmY8mG4xVZ86lwLd2TGhUPQn439_uZcrcLIo5MS_QoN8Gfj2qhwwGFXAM0g0Ouxhf0sQFxhrRnRsGxz4FM2eakdnvmsJf_Q=
+2026-04-13 11:16:11,113 | INFO | Skipping URL without supported extension: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGwdp1wSVKLWdcb8SPMNH0YDv_KVUtD79X0n8E-q9SrEC-gcI7p51WzKc3AaKjO1CI9xCM6wKBup8kX3U0x3BzVcyUP8DNHS8IGEP7X1Jf6wpISh0MS3qxo5iUKJV9gzn1kMWKjwZra3U9bt37wF-pTx-jnb_j7zPxee5ES0_IiuhADvTo9ZiCNyP5YizRdnc-3xxKB
+2026-04-13 11:16:11,113 | INFO | Skipping URL without supported extension: https://portal.tutorialsdojo.com/
+2026-04-13 11:16:11,113 | INFO | Skipping URL without supported extension: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHRqDw4JgDHJsfBzVG2pXsSbs7215NwE3QLUpF2AgROotaGz0CRwIHD8_0uv2gZ0NV-WKxNqlvAtwhGTLRf3vcrTlPpFwkCOr1S7sU9eIW-D5Ayed6lO9zejMLpET9XU_U-ZcoY9PoGEw0a3DlKa0OtUA==
+2026-04-13 11:16:11,113 | INFO | Skipping URL without supported extension: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHpVBhEQb_Ogrws3KXhWOSvg1dYfe_9n3hZ9NFmspzvkP_boije7dhTzrTxqe22f-sHA_sqaqxfV9zp6hZPyAGRDfYtWpPBgWqh12LX3jqzTVOVDvdy
+2026-04-13 11:16:11,113 | INFO | Skipping URL without supported extension: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGeIeV8gAK3aSY-xH79EFXLw0HkaC4ciBwUQkqqSEKWvDwGLS8lgyWdX3afZM_cAmaLK69bmUDZFiMfAdFnvu1Pr_vTaIsIfy87rbBqRVahN-h4TNp1HVuU3__BduSDHQCNF8sI8SkqLrimUG0sTxAyIhXlsIWx4Jq-U_NWj-a0Cr7g8SA9oWkrY_L4jXj_
+2026-04-13 11:16:11,113 | INFO | Skipping URL without supported extension: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF5yvYxbZxL2ycLJze-bi1dgDD5M50iUcnuy9QwIMuHHyftqLlEHS8H-iK7IJn5C6nf6AHOOshvBqsNiPj71hoVjMRX7JlXPJaCZQsTxVg-EG5SKbhFcdvX6NGnvZUPbPNsfuIukm-kQ3F18blWB-pBloHttKMw84lhL-2OHXFat3c91UGF86LpFs-dJX_vtMx6K1WdaJnAERePRJ5lUKHXp4iH2v-SqcE62yYoVD4SrAfRXp6TaaAOEOIvsw==
+2026-04-13 11:16:11,113 | INFO | Skipping URL without supported extension: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF7Lt0ndEemg-UAVQuRBiY8btGhyaCv4QHKVy4L1MbqiiEI4Q0H3MeC6aEzQi3oTJ7kghwL1Ltq8UUlSx-z2EpMd__6dUM0xMk9NKNmR4MXJtWx-hBcq2hTpJEJsaBX7oik07SGW5EAc3sabOgNiyss0uDMkMzJKsXoFxVfkDdMtASdK9s4IdUvVw1CpkgQSUIzYQt0riew9rx8
+2026-04-13 11:16:11,113 | INFO | Skipping URL without supported extension: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE47kE-e0hxrTNSiV6QkzQWPWOAF57llkr_LFYmoA9ssWPHRfwQb_Aw1VpMvfofHc1_cs-1wp1TxiFIqslpm5nox9MLf7Uobcrkag5qjtGSyuNZUsPpn81zwrtq3Oi98Y1LzntTBpJ6787PdZvLy50m4ElneKnAhV3PChJEIvs0l86e
+2026-04-13 11:16:11,113 | INFO | Skipping URL without supported extension: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH_PXFtPPEqA5wlqCLxUhCFQuVC4EvUQyjHJjoqyb8sLm_6DQGccdKREysI09j5Ac9_Jsan49X5Kq1pxNnSztAg9rZ7lbc6_u1b9GSy4Qj8CmvYBDEwuy0pDtbXv-gQgjrPyFT_yMf9-81e4R6BQYjjxdJN7HT72nq5BzFzVkXITX2IJq5EeD30ZA6e1AGdTRc87obxMlNrMyr74wrtiLSbAf40C85NNpigLubmSGpyp3cbUUr1jIzJreyb8CqvwjyP_O9scpoyn_jYQQ0M4IuQ
+2026-04-13 11:16:11,113 | INFO | Skipping URL without supported extension: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF1WenR2_4FmsABW7j9MQ9GnVCLc6dwkSUiK9X1HYpLTxVWtcQRycPgQBGwyD7yR8uynvqmWrhxsf4S69L1eCA5zpoNo-WGFjnaYK1ZDsCEmsPjaWRsvr4F86khna9TDKWNUVeMWwknc_4luXVLgfIigcWFqGonAx2wOWFdD-gxrOhcD82g-dBQMfMHFqMGI701Gw==
+2026-04-13 11:16:11,113 | INFO | Skipping URL without supported extension: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF22NoZC5XAAx2hZzhv1rwr87R-g2zS3hqqY1Vw5cJYuQUp44R8KgdIrAZKMK7s0axq-OcU-JSE_-9vHvghmzPJDCxCZmgVo45UtEUN5fDS9k2mI4OmUAE0kmNobULBgJnPF3wwz8JsBYU0vRBE4-rWZKDfoqP5YDnJ
+2026-04-13 11:16:11,113 | INFO | Skipping URL without supported extension: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEx39VVYcZ8qghDoWtI2PEKu5YyboZPGdmy6peLWvjz8lKMkRcy8U3aHiK-EfEh6JFZDe89zGr6iPYgUneiMrXXW6A7XmU7KcGwJdWTsOVgIbqhhJVEtvHV691Gh_hX1-SJnYC_-mafz-V6oMTjfkd-MHS2XxFn
+2026-04-13 11:16:26,529 | INFO | RESEARCH RESULT: {"status": "research_completed", "app_name": "az900", "bucket_status": "auto_created_by_ingest_if_needed", "needs_more": true, "sources_ingested": []}
+2026-04-13 11:24:22,039 | INFO | STARTING RESEARCH for az900...
+2026-04-13 11:24:25,775 | INFO | AFC is enabled with max remote calls: 10.
+2026-04-13 11:24:29,792 | INFO | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-04-13 11:24:29,797 | INFO | Found 0 candidate PDF URLs.
+2026-04-13 11:24:29,797 | INFO | RESEARCH FINISHED for az900. Total ingested: 0
+2026-04-13 11:28:04,170 | ERROR | HTTP POST http://117.7.0.31:5930/ingest-url failed: 500 Server Error: Internal Server Error for url: http://117.7.0.31:5930/ingest-url
+2026-04-13 11:28:06,302 | ERROR | HTTP POST http://117.7.0.31:5930/ingest-url failed: 500 Server Error: Internal Server Error for url: http://117.7.0.31:5930/ingest-url
+2026-04-13 11:28:08,726 | ERROR | HTTP POST http://117.7.0.31:5930/ingest-url failed: 500 Server Error: Internal Server Error for url: http://117.7.0.31:5930/ingest-url
+2026-04-13 11:28:11,318 | ERROR | HTTP POST http://117.7.0.31:5930/ingest-url failed: 500 Server Error: Internal Server Error for url: http://117.7.0.31:5930/ingest-url
+2026-04-13 11:28:13,890 | ERROR | HTTP POST http://117.7.0.31:5930/ingest-url failed: 500 Server Error: Internal Server Error for url: http://117.7.0.31:5930/ingest-url
+2026-04-13 14:40:22,831 | ERROR | HTTP POST http://117.7.0.31:5930/ingest-url failed: 500 Server Error: Internal Server Error for url: http://117.7.0.31:5930/ingest-url
+2026-04-13 14:40:24,236 | ERROR | HTTP POST http://117.7.0.31:5930/ingest-url failed: 500 Server Error: Internal Server Error for url: http://117.7.0.31:5930/ingest-url
+2026-04-13 14:40:25,469 | ERROR | HTTP POST http://117.7.0.31:5930/ingest-url failed: 500 Server Error: Internal Server Error for url: http://117.7.0.31:5930/ingest-url
+2026-04-13 14:40:26,544 | ERROR | HTTP POST http://117.7.0.31:5930/ingest-url failed: 500 Server Error: Internal Server Error for url: http://117.7.0.31:5930/ingest-url
+2026-04-13 14:40:27,766 | ERROR | HTTP POST http://117.7.0.31:5930/ingest-url failed: 500 Server Error: Internal Server Error for url: http://117.7.0.31:5930/ingest-url
+2026-04-13 14:40:30,095 | ERROR | HTTP POST http://117.7.0.31:5930/ingest-url failed: 500 Server Error: Internal Server Error for url: http://117.7.0.31:5930/ingest-url
+2026-04-13 14:40:31,194 | ERROR | HTTP POST http://117.7.0.31:5930/ingest-url failed: 500 Server Error: Internal Server Error for url: http://117.7.0.31:5930/ingest-url

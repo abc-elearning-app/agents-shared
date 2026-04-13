@@ -1,257 +1,212 @@
-import requests
-import json
-import time
 import os
 import re
+import json
+import time
 import hashlib
+import logging
+from typing import Any, Dict, List, Optional
+
+import requests
 from google import genai
 
-# --- SECURE CONFIGURATION ---
-GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
-SHEET_URL = "https://script.google.com/macros/s/AKfycbwM_sk8-VNktBMybaRcoqTnqLTat1XVDtDUklQ-e0ZM-wbVZqFR2P3Ah5LM9gfFRX6P/exec"
+# =========================================================
+# SIMPLE .ENV LOADER
+# =========================================================
+def load_dotenv_simple(env_path: str = ".env") -> None:
+    if not os.path.exists(env_path):
+        return
+    with open(env_path, "r", encoding="utf-8") as f:
+        for line in f:
+            raw = line.strip()
+            if not raw or raw.startswith("#") or "=" not in raw:
+                continue
+            key, val = raw.split("=", 1)
+            os.environ[key.strip()] = val.strip()
+
+load_dotenv_simple()
+
+# =========================================================
+# CONFIG
+# =========================================================
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "").strip()
+
+WEB_APP_URL = "https://script.google.com/macros/s/AKfycbzX9ZvLEAZ0D2FRtMnH-97Fahbph6ZXHJFQ4gSj9eTtKIWaMki9USV7URD5w3UmQKfFPg/exec"
+DASHBOARD_URL = WEB_APP_URL
+UPLOAD_URL = WEB_APP_URL
+
 INGEST_API = "http://117.7.0.31:5930/ingest-url"
 SEARCH_API = "http://117.7.0.31:5930/search/chat"
 
-client = genai.Client(api_key=GEMINI_API_KEY)
+POLL_INTERVAL_SECONDS = 60
+HTTP_TIMEOUT_SHORT = 15
+HTTP_TIMEOUT_MEDIUM = 45
+HTTP_TIMEOUT_LONG = 120
 
-def log(msg):
-    print(f"[{time.strftime('%Y-%m-%d %H:%M:%S')}] {msg}")
+BLOCKED_DOMAINS = {"baidu.com", "zhihu.com", "csdn.net", "bilibili.com", "weibo.com"}
 
-def update_sheet(app_name, column, status):
-    payload = {"action": "update_status", "app_name": app_name, "column": column, "status": status}
-    try: requests.post(SHEET_URL, json=payload, timeout=15)
-    except: pass
+client = genai.Client(api_key=GEMINI_API_KEY) if GEMINI_API_KEY else None
 
-def clean_json(text):
-    return re.sub(r'```json\n?|```', '', text).strip()
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s | %(levelname)s | %(message)s",
+    handlers=[
+        logging.FileHandler("worker_log.txt", encoding="utf-8"),
+        logging.StreamHandler()
+    ]
+)
 
-# =====================================================================
-# 2. PHASE 1: REPOSITORY MANAGEMENT, RESEARCH & INGESTION
-# =====================================================================
+# =========================================================
+# HELPERS
+# =========================================================
+def normalize_app_name(app_name: str) -> str:
+    return str(app_name or "").strip()
 
-def gate_1_validate(url):
-    """Gate 1: URL Validation & Accessibility (CRITICAL)"""
-    if not url.startswith("http"): return False
-    blocked = ["baidu.com", "zhihu.com", "csdn.net", "bilibili.com", "weibo.com", "sogou.com", "360.cn", "douban.com", "toutiao.com", "jianshu.com"]
-    if any(b in url for b in blocked): 
-        log(f"Gate 1 Failed: Blocked domain -> {url}")
-        return False
-    try:
-        res = requests.head(url, timeout=10, allow_redirects=True)
-        if res.status_code >= 400: return False
-        return True
+def normalize_whitespace(text: str) -> str:
+    text = str(text or "").replace("\x00", " ")
+    text = re.sub(r"\s+", " ", text)
+    return text.strip()
+
+def truncate_text(text: str, max_chars: int) -> str:
+    text = str(text or "")
+    return text if len(text) <= max_chars else text[:max_chars]
+
+def md5_hash(text: str) -> str:
+    return hashlib.md5(text.encode("utf-8")).hexdigest()
+
+def safe_json_loads(text: str) -> Optional[Any]:
+    if not text: return None
+    try: return json.loads(text)
     except:
-        return False
+        match = re.search(r"(\[.*\]|\{.*\})", text, re.DOTALL)
+        if match:
+            try: return json.loads(match.group(1))
+            except: pass
+    return None
 
-def gate_2_score(url):
-    """Gate 2: Tier Classification & Scoring"""
-    url_lower = url.lower()
-    score = 0.7 # Tier 3 default
-    
-    tier_1_domains = [".gov", ".mil", ".edu", "comptia.org", "isc2.org", "pmi.org", "aws.amazon.com"]
-    tier_2_domains = ["whizlabs.com", "pluralsight.com", "github.com", "pilotinstitute.com"]
-    
-    if any(d in url_lower for d in tier_1_domains): score = 0.9
-    elif any(d in url_lower for d in tier_2_domains): score = 0.8
-    
-    if url_lower.endswith(".pdf"): score += 0.1
-    if "guide" in url_lower or "cheat" in url_lower: score += 0.05
-    if "flashcard" in url_lower or "reddit" in url_lower or "forum" in url_lower: score -= 0.2
-    return score
-
-def phase_1_research(task):
-    app_name = task['appName']
-    exam = task['targetExam']
-    vendor = task['examVendor']
-    
-    log(f"--- STARTING PHASE 1: RESEARCH FOR [{app_name}] ---")
-    update_sheet(app_name, "research", "Pending")
-    
-    # Step 1: Supabase Bucket Verification (Simulated via Search/Ingest architecture)
-    log(f"Step 1: Verifying/Creating exact bucket [{app_name}]")
-    
-    # Step 2: Autonomous Research
-    search_prompt = f"Find 30 high-quality, direct PDF or educational webpage URLs for the '{exam}' by '{vendor}'. Return ONLY a JSON list of strings."
-    res = client.models.generate_content(model="gemini-2.0-flash", contents=search_prompt)
-    candidate_urls = json.loads(clean_json(res.text))
-    
-    ingested_sources = []
-    canonical_registry = set()
-    
-    for url in candidate_urls:
-        # Gate 7 Check (KPI)
-        if len(ingested_sources) >= 20: break
-            
-        # Gate 1: Validate
-        if not gate_1_validate(url): continue
-            
-        # Gate 2: Tier & Score
-        score = gate_2_score(url)
-        tier = 1 if score >= 0.9 else (2 if score >= 0.8 else 3)
-        
-        # Gate 5: Deduplication
-        canonical_id = hashlib.md5(url.split('/')[-1].encode()).hexdigest()
-        if canonical_id in canonical_registry: continue
-        
-        # Gate 6 & 8: Format Support & Final Ingestion Flow
-        payload = {"url": url, "app_name": app_name, "bucket_name": app_name, "index_document": True}
-        try:
-            ingest_res = requests.post(INGEST_API, json=payload, timeout=45)
-            if ingest_res.status_code == 200:
-                canonical_registry.add(canonical_id)
-                ingested_sources.append({
-                    "url": url,
-                    "canonical_id": canonical_id,
-                    "tier": tier,
-                    "score": round(score, 2),
-                    "format": url.split('.')[-1] if '.' in url.split('/')[-1] else "html"
-                })
-                log(f"Gate 8 Success: Ingested {url} (Score: {score})")
-        except:
-            continue
-
-    # Gate 7: Minimum Sources KPI & Step 3: Output Phase 1
-    needs_more = len(ingested_sources) < 20
-    output_json = {
-        "status": "research_completed",
-        "app_name": app_name,
-        "bucket_status": "verified",
-        "needs_more": needs_more,
-        "sources_ingested": ingested_sources
-    }
-    
-    log(f"PHASE 1 OUTPUT:\n{json.dumps(output_json, indent=2)}")
-    
-    final_status = "Done" if len(ingested_sources) > 0 else "Fail"
-    update_sheet(app_name, "research", final_status)
-
-# =====================================================================
-# 3. PHASE 2: RETRIEVAL & GENERATION (Zero-Omission Policy)
-# =====================================================================
-
-def phase_2_generate(task):
-    app_name = task['appName']
-    topic_structure = task['topicStructure']
-    
-    log(f"--- STARTING PHASE 2: GENERATE FOR [{app_name}] (STRICT WORKFLOW) ---")
-    update_sheet(app_name, "generate", "Pending")
-    
-    # Step 1 & 2: Exhaustive Retrieval & Master Reference Synthesis
-    # Fetching 100% of documents in the bucket
-    search_payload = {"query": "Extract all core facts, definitions, and formulas from EVERY document in this bucket.", "app_name": app_name, "limit": 100, "similarity_threshold": 0.1}
+def safe_request(method: str, url: str, json_payload: Optional[dict] = None, timeout: int = 30) -> Dict[str, Any]:
     try:
-        search_res = requests.post(SEARCH_API, json=search_payload, timeout=60).json()
-        master_reference = search_res.get("answer", "")
-    except:
-        master_reference = ""
-
-    lines = [line.strip() for line in topic_structure.split('\n') if line.strip()]
-    
-    # Correct Hierarchical Parsing for Strict Numbering (Topic: 1, Subtopic: 1)
-    topic_seq = 0
-    all_flashcards = []
-    
-    # Logic to identify topics and subtopics
-    structured_data = []
-    current_topic = None
-    
-    for line in lines:
-        if re.match(r'^\d+\.\s+[a-zA-Z]', line): # Main Topic
-            topic_seq += 1
-            current_topic = {"id": str(topic_seq), "name": line, "subtopics": []}
-            structured_data.append(current_topic)
-            sub_seq = 0
-        elif re.match(r'^\d+\.\d+\.?\s+', line): # Subtopic
-            sub_seq += 1
-            current_topic["subtopics"].append({"id": str(sub_seq), "name": line})
-
-    for t_obj in structured_data:
-        for s_obj in t_obj["subtopics"]:
-            topic_id = t_obj["id"]
-            sub_id = s_obj["id"]
-            log(f"Generating for Topic {topic_id}, Subtopic {sub_id}")
-            
-            gen_prompt = f"""
-            ROLE: Autonomous Knowledge Extraction Expert.
-            MASTER REFERENCE: {master_reference}
-            
-            TASK: Generate EXACTLY 30 flashcards for "{s_obj['name']}" (Topic {topic_id}).
-            
-            STRICT CONSTRAINTS:
-            A. Language: English only.
-            B. Term Standards (Front): 1-8 words, capitalize Acronyms, NO questions.
-            C. MathJax: $formula$ (No spaces).
-            D. Explanation (Back): 1-2 concise sentences (20-40 words). No circular definitions.
-            E. KPI: Exactly 30 unique terms.
-            F. Numbering: Topic MUST be "{topic_id}". Subtopic MUST be "{sub_id}".
-            
-            OUTPUT FORMAT: Single JSON block only.
-            """
-            
-            res = client.models.generate_content(model="gemini-2.0-flash", contents=gen_prompt)
-            # ... process and upload ...
-            
-            OUTPUT FORMAT: Return ONLY a single Valid JSON block matching this structure EXACTLY:
-            {{
-              "status": "completed",
-              "app_name": "{app_name}",
-              "flashcards": [
-                {{
-                  "Topic": "{topic_num}",
-                  "Subtopic": "N/A",
-                  "Front": "Term",
-                  "Back": "Explanation"
-                }}
-              ]
-            }}
-            """
-            
-            res = client.models.generate_content(model="gemini-2.0-flash", contents=gen_prompt)
-            result_json = json.loads(clean_json(res.text))
-            
-            if "flashcards" in result_json:
-                all_flashcards.extend(result_json["flashcards"])
-                # Đẩy từng Topic lên Sheet
-                requests.post(SHEET_URL, json={"app_name": app_name, "flashcards": result_json["flashcards"]}, timeout=30)
-                log(f"Topic {topic_num} generated and uploaded ({len(result_json['flashcards'])} cards).")
-                
-            time.sleep(3) # Tránh rate limit
-
-        # Output Phase 2 JSON Structure to log
-        final_output = {
-            "status": "completed",
-            "app_name": app_name,
-            "flashcards": all_flashcards
-        }
-        log(f"PHASE 2 OUTPUT GENERATED (Total Cards: {len(all_flashcards)})")
-        
-        update_sheet(app_name, "generate", "Done")
+        if method.upper() == "GET": resp = requests.get(url, timeout=timeout)
+        else: resp = requests.post(url, json=json_payload, timeout=timeout)
+        resp.raise_for_status()
+        content_type = resp.headers.get("Content-Type", "")
+        if "application/json" in content_type:
+            return {"ok": True, "data": resp.json()}
+        return {"ok": True, "data": resp.text}
     except Exception as e:
-        log(f"❌ Phase 2 Error: {e}")
-        update_sheet(app_name, "generate", "Fail")
+        logging.error(f"HTTP {method} {url} failed: {e}")
+        return {"ok": False, "error": str(e)}
 
-# =====================================================================
-# MAIN WORKER LOOP
-# =====================================================================
+# =========================================================
+# APPS SCRIPT HELPERS
+# =========================================================
+def read_tasks_from_dashboard() -> List[dict]:
+    res = safe_request("POST", DASHBOARD_URL, {"action": "read_tasks"})
+    return res.get("data", {}).get("tasks", []) if res["ok"] else []
+
+def update_sheet_status(app_name: str, column: str, status: str):
+    safe_request("POST", DASHBOARD_URL, {"action": "update_status", "app_name": app_name, "column": column, "status": status})
+
+def clear_sheet_command(app_name: str, column: str):
+    safe_request("POST", DASHBOARD_URL, {"action": "clear_command", "app_name": app_name, "column": column})
+
+def upload_flashcards_to_sheet(app_name: str, all_cards: List[dict]) -> Dict[str, Any]:
+    return safe_request("POST", UPLOAD_URL, {"action": "upload_flashcards", "app_name": app_name, "sheet_name": app_name, "flashcards": all_cards}, timeout=HTTP_TIMEOUT_LONG)
+
+# =========================================================
+# INGEST + SEARCH HELPERS
+# =========================================================
+def ingest_url(url: str, app_name: str) -> Dict[str, Any]:
+    payload = {"url": url, "app_name": app_name, "bucket_name": app_name, "index_document": True}
+    return safe_request("POST", INGEST_API, payload, timeout=HTTP_TIMEOUT_LONG)
+
+def search_chat(query: str, app_name: str, limit: int = 8, similarity_threshold: float = 0.2) -> str:
+    payload = {"query": query, "app_name": app_name, "limit": limit, "similarity_threshold": similarity_threshold}
+    result = safe_request("POST", SEARCH_API, json_payload=payload, timeout=HTTP_TIMEOUT_LONG)
+    if not result["ok"]: return ""
+    data = result.get("data", {})
+    if isinstance(data, dict):
+        for k in ["answer", "response", "result", "text", "content"]:
+            if isinstance(data.get(k), str): return normalize_whitespace(data[k])
+    return normalize_whitespace(data) if isinstance(data, str) else ""
+
+# =========================================================
+# SEARCH CANDIDATES (PHASE 1)
+# =========================================================
+def search_candidate_urls_from_web(target_exam: str, exam_vendor: str) -> List[str]:
+    if not client: return []
+    prompt = f"Search for direct PDF study guides and training materials for: {target_exam} ({exam_vendor}). Return ONLY direct PDF URLs."
+    try:
+        res = client.models.generate_content(model="gemini-2.0-flash", contents=prompt, config={"tools": [{"google_search": {}}]})
+        urls = re.findall(r'https?://[^\s<>"]+?\.pdf(?:[?\w=&%-]+)?', res.text, re.IGNORECASE)
+        return list(set(urls))
+    except: return []
+
+def phase_1_research(task: dict):
+    app_name = normalize_app_name(task.get("appName"))
+    target_exam = task.get("targetExam")
+    exam_vendor = task.get("examVendor")
+    logging.info(f"STARTING RESEARCH for {app_name}...")
+    update_sheet_status(app_name, "research", "Pending")
+    urls = search_candidate_urls_from_web(target_exam, exam_vendor)
+    success_count = 0
+    for url in urls:
+        if ingest_url(url, app_name)["ok"]:
+            success_count += 1
+            logging.info(f"SUCCESSfully ingested: {url}")
+        if success_count >= 15: break
+    update_sheet_status(app_name, "research", "Done" if success_count > 0 else "Fail")
+    clear_sheet_command(app_name, "research")
+
+# =========================================================
+# FLASHCARD GENERATION (PHASE 2)
+# =========================================================
+def parse_topic_structure(topic_structure: str) -> List[Dict[str, Any]]:
+    lines = [line.strip() for line in str(topic_structure or "").splitlines() if line.strip()]
+    topics = []
+    current_topic = None
+    for line in lines:
+        if re.match(r"^\d+\.\s+", line):
+            current_topic = {"id": re.search(r"^\d+", line).group(), "name": re.sub(r"^\d+\.\s*", "", line).strip(), "subtopics": []}
+            topics.append(current_topic)
+        elif re.match(r"^\d+\.\d+\.?\s+", line) and current_topic:
+            current_topic["subtopics"].append({"id": re.search(r"^\d+\.\d+", line).group().split(".")[-1], "name": re.sub(r"^\d+\.\d+\.?\s*", "", line).strip()})
+    return topics
+
+def generate_flashcards_for_target(master_reference: str, topic_id: str, subtopic_id: str, target_name: str, target_count: int) -> List[dict]:
+    if not client: return []
+    prompt = f"Generate {target_count} flashcards for {target_name} (Topic {topic_id}, Subtopic {subtopic_id}).\n\nMASTER REFERENCE:\n{truncate_text(master_reference, 100000)}"
+    try:
+        res = client.models.generate_content(model="gemini-2.0-flash", contents=prompt)
+        return safe_json_loads(res.text) or []
+    except: return []
+
+def phase_2_generate(task: dict):
+    app_name = normalize_app_name(task.get("appName"))
+    topic_structure = task.get("topicStructure")
+    update_sheet_status(app_name, "generate", "Pending")
+    topics = parse_topic_structure(topic_structure)
+    all_cards = []
+    for topic in topics:
+        for sub in topic["subtopics"]:
+            ref = search_chat(f"Core concepts for {sub['name']} in {topic['name']}", app_name)
+            cards = generate_flashcards_for_target(ref, topic["id"], sub["id"], sub["name"], 30)
+            if isinstance(cards, list): all_cards.extend(cards)
+    if all_cards:
+        upload_flashcards_to_sheet(app_name, all_cards)
+        update_sheet_status(app_name, "generate", "Done")
+    else:
+        update_sheet_status(app_name, "generate", "Fail")
+    clear_sheet_command(app_name, "generate")
 
 def main_loop():
-    log("🤖 Autonomous Knowledge Extraction Agent (STRICT WORKFLOW) started...")
+    logging.info("Agent started.")
     while True:
         try:
-            tasks = requests.post(SHEET_URL, json={"action": "read_tasks"}, timeout=15).json()
-            for task in tasks:
-                if not task.get('appName'): continue
-                
-                if task.get('researchStatus') == "Research":
-                    phase_1_research(task)
-                
-                if task.get('generateStatus') == "Generate":
-                    phase_2_generate(task)
-                    
-        except Exception as e:
-            log(f"Polling Error: {e}")
-            
-        time.sleep(60)
+            for task in read_tasks_from_dashboard():
+                if task.get("researchStatus") == "Research": phase_1_research(task)
+                if task.get("generateStatus") == "Generate": phase_2_generate(task)
+        except Exception as e: logging.error(f"Loop error: {e}")
+        time.sleep(POLL_INTERVAL_SECONDS)
 
 if __name__ == "__main__":
     main_loop()

@@ -5,7 +5,7 @@ import sys
 
 def upload_json(file_path):
     # URL mới nhất của bạn
-    url = "https://script.google.com/macros/s/AKfycbwM_sk8-VNktBMybaRcoqTnqLTat1XVDtDUklQ-e0ZM-wbVZqFR2P3Ah5LM9gfFRX6P/exec"
+    url = "https://script.google.com/macros/s/AKfycbzX9ZvLEAZ0D2FRtMnH-97Fahbph6ZXHJFQ4gSj9eTtKIWaMki9USV7URD5w3UmQKfFPg/exec"
     
     if not os.path.exists(file_path):
         print(f"Error: File {file_path} not found.")

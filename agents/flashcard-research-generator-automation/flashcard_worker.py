@@ -6,7 +6,7 @@ import subprocess
 import os
 
 # --- CẤU HÌNH BẢO MẬT (Lấy từ Project Memory) ---
-SHEET_URL = "https://script.google.com/macros/s/AKfycbwM_sk8-VNktBMybaRcoqTnqLTat1XVDtDUklQ-e0ZM-wbVZqFR2P3Ah5LM9gfFRX6P/exec"
+SHEET_URL = "https://script.google.com/macros/s/AKfycbzX9ZvLEAZ0D2FRtMnH-97Fahbph6ZXHJFQ4gSj9eTtKIWaMki9USV7URD5w3UmQKfFPg/exec"
 INGEST_API = "http://117.7.0.31:5930/ingest-url"
 SEARCH_API = "http://117.7.0.31:5930/search/chat"
 
