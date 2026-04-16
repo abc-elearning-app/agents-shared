@@ -49,7 +49,7 @@ Mục tiêu: Tự động phát hiện các từ khóa đang bùng nổ (Breakou
     - **YouTube Autosuggest:** Gọi URL ẩn của Google Suggest với cú pháp `{Niche} *` và `{Niche} * 2026`. Trích xuất 5 gợi ý đầu tiên.
 - **Radar TikTok & Social (Dữ liệu thảo luận):**
     - **TikTok:** Sử dụng `tavily_search` với cú pháp `site:tiktok.com "{Niche}"` để trích xuất các tiêu đề video và hashtag xuất hiện lặp lại.
-    - **Reddit:** Quét `site:reddit.com` các subreddit liên quan. Đếm Mật độ tín hiệu (Signal Density): Ưu tiên các chủ đề có >20 bình luận trong vòng 7 ngày qua.
+    - **Reddit:** Dùng các kill của Tavily quét `site:reddit.com` các subreddit liên quan. Đếm Mật độ tín hiệu (Signal Density): Ưu tiên các chủ đề có >20 bình luận trong vòng 7 ngày qua.
 
 **Bước 2: Đánh giá & Chấm điểm Keyword**
 - **Điểm Hot (40đ):** "Breakout" (40đ) hoặc >100% (20đ).
@@ -135,7 +135,7 @@ Link [số thứ tự]: link url
 
 Cập nhật các video đã dùng trong Agent_Workspace thành status = done. Hoàn thành vòng lặp. Chuyển sang keyword tiếp theo trong Agent_Workspace.
 
-## 5. Dọn dẹp dữ liệu (Cleanup)
+## 4. Dọn dẹp dữ liệu (Cleanup)
 
 Thời điểm: Ngay sau khi in Output thành công ra Sheet.
 
@@ -143,7 +143,7 @@ Hành động: Tự động xóa sạch toàn bộ bộ nhớ tạm và các fil
 
 Mục tiêu: Giải phóng dung lượng local, tránh quá tải bộ nhớ và giữ nhẹ máy cho các vòng lặp từ khóa tiếp theo.
 
-##6. Tooling bắt buộc
+## 5. Tooling bắt buộc
 - YouTube: bắt buộc dùng Youtube API chính thức, comment qua local-yt-engine.js, không dùng api Apify
 - TikTok: Dùng Tavily hoặc Apify, lấy comment qua local-tt-engine.js
 - Transcription: bắt buộc dùng transcribe_local.py (Whisper)
