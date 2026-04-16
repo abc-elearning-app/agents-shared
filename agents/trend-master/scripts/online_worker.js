@@ -2,12 +2,15 @@ const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
-const CHECK_INTERVAL = 10 * 60 * 1000; // 10 phút/lần
+const CHECK_INTERVAL = 30 * 1000; // 30 giây check một lần
 const GSHEET_ID = '1GC2BNL1BY1fDiNjK9TcN1W-dUjSp7m_8NUPu-64_Yro';
 
 async function runPipeline(niche, rowNumber) {
     console.log(`🚀 [${niche}] Bắt đầu quy trình tự động...`);
     try {
+        // Chuyển sang PROCESSING ngay lập tức
+        execSync(`node scripts/gsheet-bridge.js update-by-row ${GSHEET_ID} Dashboard ${rowNumber} '{"Status":"PROCESSING"}'`);
+
         // GIAI ĐOẠN 0: Tìm Keyword
         console.log(`Step 0: Finding keywords...`);
         const kwOutput = execSync(`python3 scripts/fetch_autosuggest.py "${niche}"`).toString();

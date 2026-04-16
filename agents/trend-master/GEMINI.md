@@ -19,7 +19,7 @@ Mục tiêu chính:
 ### Tab 1: Dashboard (Điều khiển trung tâm)
 **Columns:**
 - Niche / Exam: [DMV, ASVAB, COMPTIA, IT CERTIFICATION].
-- Status: [RUN, PAUSE, DONE].
+- Status: [RUN, PROCESSING, PAUSE, DONE].
 - Run Date: Ngày kích hoạt.
 - Seed Topic / Note: Gợi ý điều hướng.
 - Videos Scraped: Thống kê video.
