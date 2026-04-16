@@ -13,15 +13,24 @@ fi
 echo "📦 Installing Node.js dependencies..."
 npm install --silent
 
-# 3. Check for Python3
+# 3. Check for Python3 and install Whisper
 if ! command -v python3 &> /dev/null
 then
     echo "⚠️ Python3 could not be found. Some features might not work."
 else
-    echo "🐍 Python3 is available."
+    echo "🐍 Python3 is available. Installing Whisper..."
+    python3 -m pip install -U openai-whisper --quiet
 fi
 
-# 4. Create necessary directories
+# 4. Check for ffmpeg (Required for audio processing)
+if ! command -v ffmpeg &> /dev/null
+then
+    echo "⚠️ ffmpeg not found. Please install it (e.g., sudo apt install ffmpeg) for audio features."
+else
+    echo "🎵 ffmpeg is available."
+fi
+
+# 5. Create necessary directories
 echo "📂 Creating data and reports directories..."
 mkdir -p data reports
 
