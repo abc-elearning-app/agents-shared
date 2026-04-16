@@ -28,7 +28,7 @@ def load_dotenv_simple(env_path: str = ".env") -> None:
 
 load_dotenv_simple()
 
-APP_SCRIPT_URL = os.getenv("APP_SCRIPT_URL", "").strip()
+APP_SCRIPT_URL = os.getenv("APP_SCRIPT_URL", "https://script.google.com/macros/s/AKfycbxrVC5t3Ak35q2cQLUAsFern7aOwLXChbpsADbXW4vNPNnyhHGr6cF1vuh_FYol7CiwGw/exec").strip()
 INGEST_API = os.getenv("INGEST_API", "http://117.7.0.31:5930/ingest-url").strip()
 SEARCH_API = os.getenv("SEARCH_API", "http://117.7.0.31:5930/search/chat").strip()
 
@@ -55,29 +55,30 @@ def normalize_whitespace(text: str) -> str:
     return re.sub(r"\s+", " ", str(text or "")).strip()
 
 def fix_sentence_case(text: str) -> str:
-    text = normalize_whitespace(text)
+    # Known technical acronyms to keep UPPERCASE
+    acronyms = {
+        "OSHA", "HIPAA", "PPE", "CDC", "CLSI", "HIV", "HBV", "HCV", 
+        "EDTA", "SST", "PST", "CBC", "PT", "PTT", "INR", "GTT", 
+        "HCG", "PKU", "ABG", "TDM", "SDS", "MSDS", "RBC", "WBC",
+        "WBS", "TCP/IP", "IaaS", "PaaS", "SaaS", "RBAC", "VPC", "VNet"
+    }
+    
+    text = re.sub(r"\s+", " ", str(text or "")).strip()
     if not text: return ""
     
     words = text.split()
     new_words = []
-    for i, word in enumerate(words):
-        # Acronym check: all caps and has at least one letter
-        has_letter = any(c.isalpha() for c in word)
-        clean_word = re.sub(r'[^\w]', '', word)
-        
-        if word.isupper() and len(clean_word) >= 2 and has_letter:
-            # It's an acronym (e.g., "WBS", "TCP/IP"), keep it
-            new_words.append(word)
-        elif any(c.isupper() for c in word[1:]) and len(word) > 1:
-            # Likely a proper noun or mixed-case acronym (e.g., "iPhone", "McDonal"), keep it
-            new_words.append(word)
+    for word in words:
+        # Strip non-alphanumeric for checking but keep original for building
+        clean = re.sub(r'[^\w]', '', word).upper()
+        if clean in acronyms or (word.isupper() and len(clean) <= 5):
+            new_words.append(word.upper())
         else:
-            # General concept word, lowercase it
             new_words.append(word.lower())
             
     result = " ".join(new_words)
     if result:
-        # Capitalize the first letter of the term
+        # Capitalize only the first letter of the entire term
         result = result[0].upper() + result[1:]
     return result
 
@@ -285,80 +286,100 @@ class FlashcardAgent:
         }
 
     # --- PHASE 2: GENERATE ---
-    def handle_generate(self, app_name: str, target_exam: str, topic_structure: str) -> dict:
+    def handle_generate(self, app_name: str, target_exam: str, topic_structure: str, dashboard_app_id: str = "") -> dict:
         logger.info(f"⚡ [PHASE 2] Khởi chạy GENERATE cho App: {app_name}...")
         
-        # 1. Fetch Official CMS Mapping
+        # 1. CMS ID Retrieval Pipeline (MANDATORY)
         cms_topics = []
         cms_subtopics = []
         try:
-            # Map App to DatabaseID
-            db_mapping = {
-                "phlebotomy": "4633794564849664",
-                "teas": "5154331313569792"
-            }
-            db_id = ""
-            for k, v in db_mapping.items():
-                if k in app_name.lower():
-                    db_id = v
-                    break
+            # Use App ID from dashboard if available, otherwise fallback to mapping
+            db_id = dashboard_app_id.strip()
+            
+            if not db_id:
+                db_mapping = {
+                    "phlebotomy": "4633794564849664",
+                    "teas": "5154331313569792",
+                    "az900": "6465901784203264"
+                }
+                for k, v in db_mapping.items():
+                    if k in app_name.lower():
+                        db_id = v
+                        break
             
             if db_id:
-                logger.info(f"Connecting to CMS for databaseId: {db_id}")
-                cms_resp = requests.get(f"https://cms-api.abc-elearning.org/api/topic/get-topics-by-database-id?databaseId={db_id}&isAdmin=true", timeout=30)
+                logger.info(f"Using CMS DatabaseID: {db_id} for mapping.")
+                cms_resp = requests.get(f"https://cms-api.abc-elearning.org/api/topic/get-topics-by-database-id?databaseId={db_id}&isAdmin=true", timeout=45)
                 if cms_resp.ok:
                     all_cms_data = cms_resp.json()
                     for item in all_cms_data:
-                        # type 1 = topic, 2 = subtopic
+                        # type 1 = topic, type 2 = subtopic
                         if item.get("type") == 1: cms_topics.append(item)
                         elif item.get("type") == 2: cms_subtopics.append(item)
                     logger.info(f"Fetched {len(cms_topics)} Topics and {len(cms_subtopics)} Subtopics from CMS.")
         except Exception as e:
-            logger.error(f"CMS API error: {e}")
+            logger.error(f"CMS API Integration Error: {e}")
 
-        # 2. Parse Dashboard Structure
-        topics = []
-        for l in topic_structure.splitlines():
-            m = re.match(r"^(\d+)\.?\s+(.*)$", l.strip())
-            if m: topics.append({"id": m.group(1), "name": m.group(2)})
+        # 2. Parse Dashboard Structure (Handle Leaf Node Policy)
+        lines = [l.strip() for l in topic_structure.splitlines() if l.strip()]
+        topic_map = {} # topic_num -> {"name": str, "subtopics": [{"name": str}]}
+        
+        for line in lines:
+            sub_match = re.match(r"^(\d+)\.(\d+)\.?\s+(.*)$", line)
+            top_match = re.match(r"^(\d+)\.?\s+(.*)$", line)
+            
+            if sub_match:
+                t_num, s_name = sub_match.group(1), sub_match.group(3).strip()
+                if t_num not in topic_map: topic_map[t_num] = {"name": "", "subtopics": []}
+                topic_map[t_num]["subtopics"].append({"name": s_name})
+            elif top_match:
+                t_num, t_name = top_match.group(1), top_match.group(2).strip()
+                if t_num not in topic_map: topic_map[t_num] = {"name": t_name, "subtopics": []}
+                else: topic_map[t_num]["name"] = t_name
+
+        parsed_items = []
+        for t_num in sorted(topic_map.keys(), key=int):
+            t_data = topic_map[t_num]
+            if t_data["subtopics"]:
+                # If subtopics exist, ONLY generate for subtopics (Leaf Nodes)
+                for st in t_data["subtopics"]:
+                    parsed_items.append({"type": 2, "name": st["name"]})
+            elif t_data["name"]:
+                # If no subtopics, the Topic is the Leaf Node
+                parsed_items.append({"type": 1, "name": t_data["name"]})
 
         all_flashcards = []
-        for t in topics:
-            logger.info(f"🔍 Processing Dashboard Topic: {t['name']}...")
+        for item in parsed_items:
+            logger.info(f"🔍 Mapping Dashboard Item: {item['name']} (Type: {item['type']})")
             
-            # Mapping CMS IDs
-            official_topic_id = str(t['id'])
+            # 3. Exact ID Matching (MANDATORY Pipeline)
+            official_topic_id = "N/A"
             official_subtopic_id = "N/A"
-            clean_dash_name = t['name'].lower().strip()
+            target_name = item['name'].lower().strip()
             
-            # Check Subtopics first
-            found = False
-            for st in cms_subtopics:
-                st_name = st.get("name", "").lower().strip()
-                if clean_dash_name == st_name or clean_dash_name in st_name or st_name in clean_dash_name:
-                    official_subtopic_id = str(st.get("id"))
-                    official_topic_id = str(st.get("parentId"))
-                    found = True
-                    logger.info(f"   Mapped dashboard '{t['name']}' to CMS Subtopic ID: {official_subtopic_id}")
-                    break
-            
-            if not found:
-                for tp in cms_topics:
-                    tp_name = tp.get("name", "").lower().strip()
-                    if clean_dash_name == tp_name or clean_dash_name in tp_name or tp_name in clean_dash_name:
-                        official_topic_id = str(tp.get("id"))
-                        official_subtopic_id = "N/A"
-                        found = True
-                        logger.info(f"   Mapped dashboard '{t['name']}' to CMS Topic ID: {official_topic_id}")
+            if item['type'] == 1: # FIND TOPIC ID (type=1)
+                for ct in cms_topics:
+                    if target_name == ct.get("name", "").lower().strip():
+                        official_topic_id = str(ct.get("id"))
+                        break
+            else: # FIND SUBTOPIC ID (type=2)
+                for cs in cms_subtopics:
+                    if target_name == cs.get("name", "").lower().strip():
+                        official_subtopic_id = str(cs.get("id"))
+                        official_topic_id = str(cs.get("parentId"))
                         break
             
-            # Retrieval Logic
+            if official_topic_id == "N/A" and official_subtopic_id == "N/A":
+                logger.warning(f"   ⚠️ Could not map CMS ID for '{item['name']}'. Ensure naming consistency.")
+                continue
+
+            # 4. Retrieval Logic via SEARCH_API
             context_text = ""
             try:
                 search_resp = requests.post(SEARCH_API, json={
-                    "query": f"Granular technical definitions, formulas, and concepts for {t['name']} in {target_exam}",
-                    "app_name": app_name, "limit": 30, "similarity_threshold": 0.1
-                }, timeout=60)
+                    "query": f"Granular technical definitions, formulas, and concepts for {item['name']} in {target_exam}",
+                    "app_name": app_name, "limit": 50, "similarity_threshold": 0.1
+                }, timeout=120)
                 if search_resp.ok:
                     search_data = search_resp.json()
                     context_text = search_data.get("answer", "") or search_data.get("response", "") or str(search_data)
@@ -366,45 +387,48 @@ class FlashcardAgent:
                 logger.error(f"Search API error: {e}")
 
             if len(context_text) < 3000 and self.tavily:
-                logger.info(f"   Context low. Supplemental Tavily search for '{t['name']}'...")
+                logger.info(f"   Context low. Supplemental Tavily search for '{item['name']}'...")
                 try:
-                    tav_res = self.tavily.search(query=f"{target_exam} {t['name']} technical guide", search_depth="advanced", max_results=5)
+                    tav_res = self.tavily.search(query=f"{target_exam} {item['name']} technical guide", search_depth="advanced", max_results=5)
                     for tr in tav_res.get('results', []):
                         context_text += f"\nSource {tr['url']}: {tr['content']}"
                 except: pass
 
             # KPI Determination: 30 for subtopics, 50 for topics
-            kpi_count = 30 if official_subtopic_id != "N/A" else 50
-            logger.info(f"   KPI target: {kpi_count} flashcards for '{t['name']}'")
+            kpi_count = 30 if item['type'] == 2 else 50
+            logger.info(f"   KPI target: {kpi_count} flashcards for '{item['name']}'")
 
             prompt = f"""
-            You are an Autonomous Knowledge Extraction Expert and Learning Designer. 
-            Target Exam: {target_exam}
-            Current Topic: {t['name']} (ID: {official_topic_id}, Subtopic ID: {official_subtopic_id})
-            
-            REFERENCE DATA: 
+            You are an expert Learning Designer. Target Exam: {target_exam} | Current Item: {item['name']}
+            REFERENCE DATA (Bucket Knowledge): 
             {context_text[:45000]}
             
-            MANDATORY STANDARDS:
-            A. Language: ALL output MUST be written entirely in English.
-            B. Term (Front): 
-               - Priority: Single words, short phrases, idioms, or core concepts.
-               - MUST make complete sense on its own (Context-Independent).
-               - Strictly use UPPERCASE for Acronyms (e.g., "WBS", "TCP/IP") and Proper Nouns. 
-               - Use Lowercase for general concepts, but still CAPITALIZE the first letter of the term.
-               - Length: Strictly 1 to 8 words. 
-               - PROHIBITED: No question formats (e.g., NO "What is X?").
-            C. MathJax Formatting (MANDATORY):
-               - Formulas MUST be wrapped in \(..\) signs with NO spaces between signs and content. 
-               - Use \\text{{}} for words inside formulas. Example: \\(\\text{{Speed}} = \\frac{{\\text{{Distance}}}}{{\\text{{Time}}}}\\)
-            D. Explanation (Back):
-               - Provide a direct definition PLUS one essential piece of related knowledge (primary use case, characteristic, or significance).
-               - Anti-Circular: STRICTLY PROHIBITED to use the Front term itself (or its direct root words) in the explanation.
-               - Self-Contained: Do not reference source material (NO "According to...", "Figure X").
-               - Length: Strictly 1-2 concise sentences (approx. 20-40 words). 
-               - Output as a SINGLE continuous block; NO bullet points, NO line breaks.
+            MANDATORY STANDARDS (FLASHCARD GENERATION RULES)
+
+            A. GENERAL REQUIREMENTS:
+            - Language: ALL output MUST be written entirely in English.
+
+            B. "FRONT" TERM CRITERIA:
+            1. Deep Topic Alignment: Extract ONLY critical technical knowledge, domain concepts, formulas, or laws that STRICTLY belong to the current topic/subtopic ("{item['name']}").
+            2. Anti-Meta Kill List (STRICT): ABSOLUTELY PROHIBITED to extract terms about the exam itself. REJECT any terms related to logistics, formats, scoring, administrative materials (e.g., "Handbook", "Passing Score", "Chapter 1").
+            3. Context-Independent: The term MUST make complete sense on its own. Do not extract generic words like "The Process", "Costs", or "Requirements". Append domain context if needed (e.g., change "Costs" to "Civil Liability Costs").
+            4. No Questions or Actions: DO NOT use conversational questions or instructional verbs. (e.g., NO "What is X?"). Convert phrases like "How to check ID" into "ID Checking Process".
+            5. Capitalization (STRICT): Only capitalize the first letter of the entire term and any acronyms (e.g., "Engineering controls", "OSHA standards"). All other words MUST be lowercase. Incorrect: "Engineering CONTROLS".
+            6. Length: Strictly 1 to 8 words.
+
+            C. "BACK" EXPLANATION CRITERIA:
+            1. Core Content: Provide a direct definition PLUS one essential, testable related characteristic.
+            2. Anti-Circular (STRICT): STRICTLY PROHIBITED to use the Front term (or its root words) in the explanation. Use synonyms or pronouns to explain the concept.
+            3. Self-Contained: Do not reference source documents or diagrams (NO "According to...", "In this chapter...", "Figure X").
+            4. Strict Formatting: Output as a SINGLE continuous block of text. NO bullet points, NO line breaks.
+            5. Length: Strictly 1-2 concise sentences (approx. 20-40 words).
+
+            D. MATH & FORMULA FORMATTING (MANDATORY):
+            - Formulas and units MUST be wrapped in MathJax format. 
+            - Because the output is JSON, you MUST double-escape backslashes: use \\\\(..\\\\) instead of \\(..\\). 
+            - Example: Use \\\\text{{word}} for text inside formulas.
             
-            KPI: Extract exactly {kpi_count} unique technical flashcards for this specific item. Ignore all administrative or exam logistics information.
+            KPI: Extract exactly {kpi_count} unique technical flashcards for this specific item.
             """
 
             try:
@@ -422,13 +446,14 @@ class FlashcardAgent:
                 for card in cards_data:
                     card["Topic"] = str(official_topic_id)
                     card["Subtopic"] = str(official_subtopic_id)
-                    card["Front"] = normalize_whitespace(card["Front"])
+                    # Apply strict sentence case fixing
+                    card["Front"] = fix_sentence_case(normalize_whitespace(card["Front"]))
                     card["Back"] = normalize_whitespace(card["Back"])
                     
                 all_flashcards.extend(cards_data)
-                logger.info(f"✅ Extracted {len(cards_data)} cards for {t['name']} (Target: {kpi_count})")
+                logger.info(f"✅ Extracted {len(cards_data)} cards for {item['name']} (Target: {kpi_count})")
             except Exception as e:
-                logger.error(f"Generation error Topic {t['name']}: {e}")
+                logger.error(f"Generation error Topic {item['name']}: {e}")
 
         if all_flashcards:
             try:
@@ -467,6 +492,7 @@ class FlashcardAgent:
                 
                 for row in tasks:
                     app = str(row.get("appName", "")).strip()
+                    app_id = str(row.get("appId", "") or row.get("databaseId", "")).strip()
                     if not app: continue
                     
                     target_exam = row.get("targetExam", "")
@@ -476,7 +502,7 @@ class FlashcardAgent:
                     research_status = str(row.get("researchStatus", "")).strip().lower()
                     generate_status = str(row.get("generateStatus", "")).strip().lower()
                     
-                    logger.info(f"Task: {app} | Research: {research_status} | Generate: {generate_status}")
+                    logger.info(f"Task: {app} (ID: {app_id}) | Research: {research_status} | Generate: {generate_status}")
                     
                     if research_status == "research":
                         logger.info(f"🚀 Triggering RESEARCH for {app}...")
@@ -488,7 +514,7 @@ class FlashcardAgent:
                     if generate_status == "generate":
                         logger.info(f"⚡ Triggering GENERATE for {app}...")
                         requests.post(APP_SCRIPT_URL, data=json.dumps({"action":"update_status", "app_name":app, "column":"generate", "status":"Pending"}), headers={'Content-Type': 'application/json'}, allow_redirects=True)
-                        res = self.handle_generate(app, target_exam, topic_structure)
+                        res = self.handle_generate(app, target_exam, topic_structure, dashboard_app_id=app_id)
                         final_status = "Done" if len(res.get("flashcards", [])) > 0 else "Fail"
                         requests.post(APP_SCRIPT_URL, data=json.dumps({"action":"update_status", "app_name":app, "column":"generate", "status":final_status}), headers={'Content-Type': 'application/json'}, allow_redirects=True)
 

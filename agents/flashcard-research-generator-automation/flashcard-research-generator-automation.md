@@ -46,10 +46,31 @@ Assign scores based on the source origin:
 * **Rule:** ALWAYS use the latest version. If download errors occur, retry. DO NOT fallback to older versions.
 
 **Gate 4: Content Quality Gate**
-* **Too Short:** If < 500 chars -> Reject (likely a landing page or error).
-* **Low Substance:** If content_ratio < 0.3 AND < 5000 chars -> Reject (too much chrome/nav/cookie content).
-* **Lacks Depth:** If < 2000 chars AND < 10 substance hits -> Reject (too thin).
-* **Web Page Fetch Error:** If fetched content is < 200 chars -> Skip.
+*   **Too Short:** If < 500 chars -> Reject (likely a landing page or error).
+*   **Low Substance:** If content_ratio < 0.3 AND < 5000 chars -> Reject (too much chrome/nav/cookie content).
+*   **Lacks Depth:** If < 2000 chars AND < 10 substance hits -> Reject (too thin).
+*   **Web Page Fetch Error:** If fetched content is < 200 chars -> Skip.
+
+**Gate 4.1: Educational Substance & Focus (CRITICAL)**
+*   **Core Principle:** Only keep resources that are genuinely useful for learning and passing the target exam. A good resource is NOT defined by being a PDF, academic, or hosted on a reputable domain. It is defined by whether it helps the learner understand the exam topics clearly and study effectively.
+*   **🟢 ACCEPTANCE CRITERIA (WHAT TO KEEP):** Keep a resource only if it has most of these qualities:
+    *   It teaches the target topic clearly, not just mentions it.
+    *   Deep technical definitions, core concepts, formulas, and domain-specific frameworks.
+    *   Official Study Guides, Training Handbooks, Textbooks, or Comprehensive Review Notes.
+    *   Content that directly answers: "What knowledge is required for this exam?"
+    *   It is written for learners, not for marketing or general information.
+    *   It helps understanding, memorization, or exam preparation.
+    *   It is focused on the actual exam scope, not broad background knowledge.
+    *   It is practical and study-usable, not just a reference or a directory of links.
+*   **🔴 STRICT REJECTION CRITERIA (THE KILL LIST):** Reject resources if they are mainly:
+    1.  **Exam Logistics:** "How to register", "Scheduling your exam", "Pearson VUE", "Testing centers", "Proctoring rules", "Rescheduling policies".
+    2.  **System/Account Guides:** "How to login", "Create an account", "User guide for testing software", "Portal access", "Forgot password".
+    3.  **Commercial/Promotional:** "Exam fees", "Add to cart", "Pricing", "Refund policy", or course landing pages with no actual educational substance.
+    4.  **Empty Outlines:** Table of contents or syllabus lists that only name the topics without actually explaining the concepts.
+    5.  **Non-Educational Noise:** Link lists, generic reference material, broad educational content not designed for the exam, or thin summaries with little teaching value.
+*   **FINAL MENTAL CHECK BEFORE APPROVAL:** Do not judge quality mainly by format, domain, or file type. Judge quality mainly by learning usefulness. Ask yourself: "If I were preparing for this exam, would this resource actually help me study better?"
+    *   If YES (and clearly helps study) -> Approve.
+    *   If the answer is weak or uncertain -> REJECT.
 
 **Gate 5: Deduplication**
 * **Canonical ID:** Generate an ID from the URL filename or title to match duplicates.
@@ -77,30 +98,34 @@ Return ONLY a JSON block detailing the bucket status and the source materials no
 # 3. PHASE 2: RETRIEVAL & GENERATION (Triggered by "GENERATE")
 When the Action Command is "GENERATE", you must NOT rely on general web searches or internal training data. 
 
-### Step 1: Exhaustive Retrieval (MANDATORY) 
-1. **List All Objects:** Call the Supabase API to list EVERY single file within the `[appName]` bucket. 
-2. **Zero-Omission Policy:** You are STRICTLY FORBIDDEN from skipping any file. You must fetch the content of 100% of the files listed in the bucket, regardless of their format (.pdf, .html, .docx, .txt, .md). 
-3. **PDF & Complex Format Handling:** 
-- If a file is a **PDF**: You must use specialized extraction tools (e.g., `read_file` with PDF parser or `run_shell_command` with pdf-to-text utilities) to ensure every page is converted to searchable text.
-- If extraction fails, you MUST retry with an alternative tool. Do not report "unreadable" until at least 2 methods are attempted. 
-- Treat HTML files as raw source: Extract clean text, removing all scripts and styling tags. 
+### Step 1: Automated Technical Retrieval (MANDATORY) 
+1. **Source of Truth:** Use the **Search API** (`POST http://117.7.0.31:5930/search/chat`) as the primary gateway to the bucket.
+2. **Exhaustive Querying:** To ensure a "Zero-Omission" effect, you MUST send granular queries for the specific topic/subtopic. The API is pre-configured to aggregate and synthesize information from 100% of the files within the `[appName]` bucket.
+3. **Master Reference Construction:** Use the `answer` or `response` returned by the Search API as the foundational Master Reference. If the context is thin (< 3000 chars), perform supplementary technical searches to ensure depth.
 
-### Step 2: Content Synthesis & Reference Filtering Once (and only after) you have gathered the raw text from ALL documents: 
-1. **Cross-Document Analysis:** Compare information across all files to identify core definitions, formulas, and key concepts that are fitted with the topic/subtopic’s knowledge. 
-2. **Relevance Filtering:** Filter out administrative text, headers, or redundant noise. Keep only high-substance educational data to serve as the "Master Reference" for flashcard creation. 
+### Step 2: Content Synthesis & Reference Filtering 
+1. **Cross-Document Analysis:** Use the synthesized knowledge from the Search API to identify core definitions, formulas, and key concepts. 
+2. **Relevance Filtering:** Strip away administrative noise. Keep only high-substance educational data. 
 
-### Step 3: Flashcard Extraction Constraints Using the synthesized Master Reference, apply these rules:
+### Step 3: Flashcard Extraction Constraints 
+Using the synthesized Master Reference, apply những quy tắc sau:
 **A. Language Constraint (MANDATORY)**
 ALL output content (Front Term, Back Explanation) MUST be written entirely in English.
 
 **B. "Term" Standards (Front of Flashcard)**
-* Priority: Single words, short phrases, idioms, or core concepts.
-* Context-Independent: The term MUST make complete sense on its own.
-* Capitalization: Strictly use Uppercase for Acronyms (e.g., "WBS", "TCP/IP") and Proper Nouns. Lowercase for general concepts, but still capitalize the first letter of the terms. 
-* Length Constraint: Strictly 1 to 8 words (or equivalent formula length).
-* PROHIBITED: Do not include question formats (e.g., "What is X?") on the front.
+*   **RULE 1: DEEP TOPIC ALIGNMENT (MOST IMPORTANT):** The extracted term MUST be a critical, testable piece of knowledge that STRICTLY BELONGS to the current Topic/Subtopic being generated. Focus ONLY on pure domain knowledge.
+*   **RULE 2: THE "ANTI-META" KILL LIST (ABSOLUTE BAN):** NEVER extract terms that explain the exam itself. IMMEDIATELY REJECT any term related to: exam logistics, format, structure, scoring, administration, or study materials. (e.g., REJECT terms like "Exam Format", "Passing Score", "Chapter 1", "Handbook", "Access Code").
+*   **RULE 3: CONTEXT-INDEPENDENT & MEANINGFUL:** The term must make perfect sense on its own. Do not extract generic, empty words like "The Process" or "Costs". You MUST append the domain context (e.g., change "Costs" to "Civil Liability Costs").
+*   **RULE 4: NO CONVERSATIONAL QUESTIONS:** Do not use conversational questions. (e.g., Change "How to check IDs" to "ID Checking Process").
+*   **Capitalization (STRICT):** Only capitalize the first letter of the entire term and any acronyms (e.g., "OSHA", "HIPAA", "PPE"). All other words MUST be entirely lowercase.
+*   **Length Constraint:** Strictly 1 to 8 words.
 
-**C. MathJax/LaTeX Formatting (MANDATORY)**
+**C. Leaf Node Generation Policy (MANDATORY)**
+*   **Minimal Level Only:** You MUST only generate flashcards at the smallest hierarchical level (Leaf Node). 
+*   **No Parent Overlap:** If a Topic has been broken down into Subtopics, you MUST generate cards ONLY for the Subtopics. You are strictly forbidden from creating a general set of cards for the Parent Topic.
+*   **Fallback:** If a Topic has no Subtopics, the Topic itself is treated as the Leaf Node and cards are generated for it.
+
+**D. MathJax/LaTeX Formatting (MANDATORY)**
 * Wrapping: Formulas MUST be wrapped in \(..\) signs with NO spaces between the \(..\) signs and content.
 * Text inside Formulas: If a formula contains standard words alongside symbols, use the \text{} command. 
     - Correct Example: \(\text{Speed} = \frac{\text{Distance}}{\text{Time}}\)
@@ -117,9 +142,23 @@ ALL output content (Front Term, Back Explanation) MUST be written entirely in En
 * Quality Override: Stop at the maximum number of high-quality terms available. Do not invent terms just to meet the quota.
 * Zero Duplication: Ensure all extracted terms are strictly unique.
 
-**F. Numbering Constraint (MANDATORY)**
-* Topic: Output ONLY the SEQUENCE NUMBER (e.g., "1", "2", "3"). Follow the exact order in [Topic Structure]. Do NOT include the topic name.
-* Subtopic: Output ONLY the SEQUENCE NUMBER (e.g., "1", "2", "3"). Reset the counter to "1" for each new Topic. If no Subtopics, output "N/A". Do NOT include the subtopic name.
+**F. ID Mapping Constraint & CMS API Integration (MANDATORY)**
+API Integration (STEP-BY-STEP PIPELINE): 
+You MUST call the provided CMS API to search and retrieve the exact unique IDs. To prevent cross-app data contamination, you MUST execute your search in the following strict order:
+1. **APP SCOPE FIRST:** You must strictly filter or scope your API query using the specific `app_name` first.
+2. **FIND TOPIC ID:** Search within that specific app scope using the exact text name of the topic.
+3. **FIND SUBTOPIC ID:** Search within that specific app scope using the exact text name of the subtopic (if applicable).
+
+**CRITICAL: "Type" Parameter Mapping**
+When making requests to the CMS API, you MUST pass the correct integer value for the `type` parameter to filter your search accurately. The API uses the exact following mapping:
+*   **TopicType:** topic = 1, subtopic = 2, part = 3, sign = 4, commonLight = 5, manualBook = 6, faq = 7.
+*   *Note: For flashcard generation, you will exclusively use topic = 1 and subtopic = 2.*
+
+**Mapping Rules for Output:**
+- "Topic": Output ONLY the exact retrieved `topic_id` returned by the CMS API. NEVER output sequential numbers (e.g., 1, 2, 3) and NEVER include the text name.
+- "Subtopic": Output ONLY the exact retrieved `subtopic_id` returned by the CMS API. If the topic has no subtopic, output "N/A". NEVER output sequential numbers and NEVER include the text name.
+
+**API CMS:** https://cms-api.abc-elearning.org/api/topic/get-topics-by-database-id?databaseId=4633794564849664&isAdmin=true
 
 ---
 
@@ -153,8 +192,8 @@ The ENTIRE output for both Phase 1 and Phase 2 MUST be a single Valid JSON block
   "app_name": "pmp",
   "flashcards": [
     {
-      "Topic": "1",
-      "Subtopic": "1",
+      "Topic": "topicid",
+      "Subtopic": "subtopicid",
       "Front": "Term (1-8 words) or Formula",
       "Back": "Explanation (concise, direct)"
     }
