@@ -126,6 +126,7 @@ class FlashcardOutput(BaseModel):
     Subtopic: str  # ID số của Subtopic (Mã loại 2)
     Front: str
     Back: str
+    Reference: str # Nguồn tài liệu tham khảo chính thống (Book/PDF/Citation)
 
 
 # =========================================================
@@ -195,8 +196,13 @@ class ResearchEngine:
             score = 0.8 
             
         if url_lower.endswith(".pdf"): score += 0.1
-        if any(kw in url_lower for kw in ["guide", "cheat", "blueprint", "objectives", "syllabus"]): score += 0.05
-        if any(kw in url_lower for kw in ["flashcard", "reddit", "forum"]): score -= 0.2
+        # Ưu tiên cực cao cho Coursebooks, Handbooks, Manuals
+        if any(kw in url_lower for kw in ["coursebook", "handbook", "manual", "guidebook", "textbook"]): 
+            score += 0.15
+        if any(kw in url_lower for kw in ["blueprint", "objectives", "syllabus"]): 
+            score += 0.05
+        if any(kw in url_lower for kw in ["flashcard", "reddit", "forum", "quizlet"]): 
+            score -= 0.3
         return min(1.0, max(0.0, score))
 
     def gate_3_freshness(self, text_content: str) -> bool:
@@ -311,7 +317,14 @@ class FlashcardAgent:
         logger.info(f"🚀 [PHASE 1] Khởi chạy RESEARCH cho App: {app_name}")
         
         engine = ResearchEngine(target_exam, exam_vendor)
-        queries = [f"{target_exam} official guide pdf", f"{target_exam} exam objectives", f"{target_exam} study guide"]
+        # Chiến lược tìm kiếm linh hoạt nhắm vào tài liệu học tập chính thống
+        queries = [
+            f"{target_exam} official coursebook pdf", 
+            f"{target_exam} student handbook pdf", 
+            f"{target_exam} exam objectives manual",
+            f"{target_exam} technical study guide",
+            f"{target_exam} {exam_vendor} training manual"
+        ]
         
         raw_urls = set()
         for q in queries:
@@ -420,26 +433,38 @@ class FlashcardAgent:
             official_subtopic_id = "N/A"
             target_name = item['name'].lower().strip()
             
-            if item['type'] == 1: # FIND TOPIC ID (type=1)
+            if item['type'] == 1: # Rule 1: Standalone Topic (Items with NO subtopics)
                 for ct in cms_topics:
                     if target_name == ct.get("name", "").lower().strip():
                         official_topic_id = str(ct.get("id"))
+                        official_subtopic_id = "N/A"
                         break
-            else: # FIND SUBTOPIC -> PART 1 (type=3)
+            else: # Rule 2: Subtopics (Items with Parts)
+                # Search for Part 1 (type 3)
                 part_target_name = f"{target_name} 1"
+                found_part = None
                 for cp in cms_parts:
                     if part_target_name == cp.get("name", "").lower().strip():
-                        official_subtopic_id = str(cp.get("id"))
-                        # Find parent topic via subtopic parent
-                        for cs in cms_subtopics:
-                            if cs.get("id") == cp.get("parentId"):
-                                official_topic_id = str(cs.get("parentId"))
-                                break
+                        found_part = cp
                         break
+                
+                if found_part:
+                    official_subtopic_id = str(found_part.get("id"))
+                    # Trace back parentId chain: Part -> Subtopic -> Topic
+                    parent_sub_id = found_part.get("parentId")
+                    for cs in cms_subtopics:
+                        if cs.get("id") == parent_sub_id:
+                            official_topic_id = str(cs.get("parentId"))
+                            break
             
-            if official_topic_id == "N/A" and official_subtopic_id == "N/A":
-                logger.warning(f"   ⚠️ Could not map CMS ID for '{item['name']}'. Ensure naming consistency.")
+            if official_topic_id == "N/A":
+                logger.warning(f"   ⚠️ Could not map CMS Topic ID for '{item['name']}'.")
                 continue
+            if item['type'] == 2 and official_subtopic_id == "N/A":
+                logger.warning(f"   ⚠️ Could not map CMS Part ID for subtopic '{item['name']}'. Expected '{part_target_name}'")
+                continue
+
+            logger.info(f"   ✅ Mapped to CMS -> TopicID: {official_topic_id}, SubtopicID: {official_subtopic_id}")
 
             # 4. Retrieval Logic via SEARCH_API
             context_text = ""
@@ -491,7 +516,15 @@ class FlashcardAgent:
             4. Strict Formatting: Output as a SINGLE continuous block of text. NO bullet points, NO line breaks.
             5. Length: Strictly 1-2 concise sentences (approx. 20-40 words).
 
-            D. MATH & FORMULA FORMATTING (MANDATORY):
+            D. REFERENCE MATERIALS STANDARDS (MANDATORY):
+            1. Goal: Point the user to official study guides, coursebooks, ebooks, or handbooks.
+            2. Dynamic Strategy: Combine Topic/Subtopic with Exam Name to find the exact citation (e.g., "ASE T2 Diesel Engines Training Guide").
+            3. Priority: Official Vendor Coursebooks > Official PDF Handbooks (.gov, .org) > Authoritative Study Guides.
+            4. ZERO HALLUCINATION (STRICT): DO NOT guess or invent URLs. If the exact live URL is not known, provide the precise Citation Title (Book Name + Chapter/Section) instead.
+               - OK Example: "Official DMV Driver's Manual, Chapter 4: Traffic Signs".
+               - FORBIDDEN: Guessed/Fake URLs.
+
+            E. MATH & FORMULA FORMATTING (MANDATORY):
             - Formulas and units MUST be wrapped in MathJax format. 
             - Because the output is JSON, you MUST double-escape backslashes: use \\\\(..\\\\) instead of \\(..\\). 
             - Example: Use \\\\text{{word}} for text inside formulas.
