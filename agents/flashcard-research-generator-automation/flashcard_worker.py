@@ -60,16 +60,18 @@ def poll_dashboard():
     payload = {"action": "read_tasks"}
     try:
         response = requests.post(SHEET_URL, data=json.dumps(payload), headers={'Content-Type': 'application/json'}, allow_redirects=True)
-        tasks = response.json()
+        data = response.json()
+        tasks = data.get('tasks', []) if isinstance(data, dict) else []
+        
         for task in tasks:
-            if not task['appName']: continue
+            if not task.get('appName'): continue
             
             # Kiểm tra lệnh Research
-            if task['researchStatus'] == "Research":
+            if task.get('researchStatus') == "Research":
                 handle_research(task)
             
             # Kiểm tra lệnh Generate
-            if task['generateStatus'] == "Generate":
+            if task.get('generateStatus') == "Generate":
                 handle_generate(task)
                 
     except Exception as e:

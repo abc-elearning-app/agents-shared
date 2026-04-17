@@ -48,9 +48,36 @@ if not logger.handlers:
     fh.setFormatter(fmt); sh.setFormatter(fmt)
     logger.addHandler(fh); logger.addHandler(sh)
 
+# Apify API Setup
+APIFY_API_KEY = os.getenv("APIFY_API_KEY", "").strip()
+
 # =========================================================
 # 2. HELPERS
 # =========================================================
+def crawl_with_apify(url: str) -> str:
+    """Sử dụng Apify Website Content Crawler để lấy nội dung sạch."""
+    if not APIFY_API_KEY:
+        return ""
+    
+    logger.info(f"🕸️ Deep crawling with Apify: {url}")
+    endpoint = "https://api.apify.com/v2/acts/apify~website-content-crawler/run-sync-get-dataset-items"
+    payload = {
+        "startUrls": [{"url": url}],
+        "maxCrawlPages": 1,
+        "crawlerType": "cheerio", # Nhanh và hiệu quả cho text
+        "htmlTransformer": "readableText" # Chỉ lấy nội dung chính readable
+    }
+    try:
+        resp = requests.post(f"{endpoint}?token={APIFY_API_KEY}", json=payload, timeout=180)
+        if resp.ok:
+            items = resp.json()
+            if items and isinstance(items, list):
+                # Gộp text từ các page (ở đây chỉ lấy 1 page)
+                return items[0].get("text", "")
+    except Exception as e:
+        logger.error(f"Apify error: {e}")
+    return ""
+
 def normalize_whitespace(text: str) -> str:
     return re.sub(r"\s+", " ", str(text or "")).strip()
 
@@ -118,20 +145,22 @@ class ResearchEngine:
         self.tavily = TavilyClient(api_key=TAVILY_API_KEY) if TAVILY_API_KEY else None
 
     def search_web(self, query: str, max_results=30) -> list[str]:
+        # Refine query to exclude marketing/brochure content
+        refined_query = f"{query} -brochure -registration -benefits -fee -apply"
         urls = []
         if self.tavily:
             try:
-                logger.info(f"Searching Tavily for: {query}")
-                tavily_res = self.tavily.search(query=query, search_depth="advanced", max_results=max_results)
+                logger.info(f"Searching Tavily for: {refined_query}")
+                tavily_res = self.tavily.search(query=refined_query, search_depth="advanced", max_results=max_results)
                 urls = [res['url'] for res in tavily_res.get('results', [])]
                 if urls: return urls
             except Exception as e:
                 logger.error(f"Tavily search error: {e}")
 
         try:
-            logger.info(f"Searching DuckDuckGo for: {query}")
+            logger.info(f"Searching DuckDuckGo for: {refined_query}")
             with DDGS() as ddgs:
-                results = list(ddgs.text(query, max_results=max_results))
+                results = list(ddgs.text(refined_query, max_results=max_results))
                 urls = [res['href'] for res in results]
         except Exception as e:
             logger.error(f"DDG search error: {e}")
@@ -185,8 +214,15 @@ class ResearchEngine:
     def gate_4_quality(self, resp_object, url: str) -> tuple[bool, str]:
         if url.lower().endswith(".pdf") or "application/pdf" in resp_object.headers.get("Content-Type", ""):
             return True, "PDF_DOCUMENT"
-        soup = BeautifulSoup(resp_object.text, 'html.parser')
-        text_content = soup.get_text(separator=' ', strip=True)
+        
+        # Sử dụng Apify để crawl nội dung HTML chất lượng cao
+        text_content = crawl_with_apify(url)
+        
+        # Fallback về BeautifulSoup nếu Apify thất bại
+        if not text_content:
+            soup = BeautifulSoup(resp_object.text, 'html.parser')
+            text_content = soup.get_text(separator=' ', strip=True)
+            
         if len(text_content) < 500: return False, "" 
         return True, text_content
 
@@ -215,14 +251,38 @@ class ResearchEngine:
     def gate_7_kpi(self, current_count: int) -> bool:
         return current_count >= 20
 
+    def gate_4_1_educational_focus(self, text: str) -> bool:
+        """Check if content is actually educational or technical."""
+        kill_list = [
+            "how to register", "exam fee", "scheduling", "testing center", 
+            "passing score", "certification benefits", "why get certified", 
+            "registration", "brochure", "flyer", "brochures"
+        ]
+        text_lower = text.lower()
+        hits = sum(1 for word in kill_list if word in text_lower)
+        if hits >= 3: return False
+        
+        # Must contain technical/educational keywords
+        technical_keywords = ["diagnosis", "repair", "component", "system", "theory", "operation", "procedure", "definition"]
+        t_hits = sum(1 for word in technical_keywords if word in text_lower)
+        return t_hits >= 1
+
     def gate_8_execution_pipeline(self, url: str) -> dict:
         is_live, resp = self.gate_1_validate_and_ping(url)
         if not is_live: return None
         score = self.gate_2_score_tier(url)
+        
+        # Aggressive penalty for metadata/marketing keywords in URL
+        if any(bad in url.lower() for bad in ["brochure", "flyer", "about", "benefit", "registration"]):
+            score -= 0.5
+            
         if score < 0.5: return None
         is_quality, content = self.gate_4_quality(resp, url)
         if not is_quality: return None
         if content != "PDF_DOCUMENT":
+            if not self.gate_4_1_educational_focus(content):
+                logger.warning(f"   🚫 Rejected (Meta/Marketing content): {url}")
+                return None
             is_fresh = self.gate_3_freshness(content)
             if not is_fresh: return None
         is_unique, canonical_id = self.gate_5_deduplication(url, score)
@@ -292,6 +352,7 @@ class FlashcardAgent:
         # 1. CMS ID Retrieval Pipeline (MANDATORY)
         cms_topics = []
         cms_subtopics = []
+        cms_parts = []
         try:
             # Use App ID from dashboard if available, otherwise fallback to mapping
             db_id = dashboard_app_id.strip()
@@ -313,10 +374,12 @@ class FlashcardAgent:
                 if cms_resp.ok:
                     all_cms_data = cms_resp.json()
                     for item in all_cms_data:
-                        # type 1 = topic, type 2 = subtopic
-                        if item.get("type") == 1: cms_topics.append(item)
-                        elif item.get("type") == 2: cms_subtopics.append(item)
-                    logger.info(f"Fetched {len(cms_topics)} Topics and {len(cms_subtopics)} Subtopics from CMS.")
+                        # type 1 = topic, type 2 = subtopic, type 3 = part
+                        t = item.get("type")
+                        if t == 1: cms_topics.append(item)
+                        elif t == 2: cms_subtopics.append(item)
+                        elif t == 3: cms_parts.append(item)
+                    logger.info(f"Fetched {len(cms_topics)} Topics, {len(cms_subtopics)} Subtopics, and {len(cms_parts)} Parts from CMS.")
         except Exception as e:
             logger.error(f"CMS API Integration Error: {e}")
 
@@ -362,11 +425,16 @@ class FlashcardAgent:
                     if target_name == ct.get("name", "").lower().strip():
                         official_topic_id = str(ct.get("id"))
                         break
-            else: # FIND SUBTOPIC ID (type=2)
-                for cs in cms_subtopics:
-                    if target_name == cs.get("name", "").lower().strip():
-                        official_subtopic_id = str(cs.get("id"))
-                        official_topic_id = str(cs.get("parentId"))
+            else: # FIND SUBTOPIC -> PART 1 (type=3)
+                part_target_name = f"{target_name} 1"
+                for cp in cms_parts:
+                    if part_target_name == cp.get("name", "").lower().strip():
+                        official_subtopic_id = str(cp.get("id"))
+                        # Find parent topic via subtopic parent
+                        for cs in cms_subtopics:
+                            if cs.get("id") == cp.get("parentId"):
+                                official_topic_id = str(cs.get("parentId"))
+                                break
                         break
             
             if official_topic_id == "N/A" and official_subtopic_id == "N/A":

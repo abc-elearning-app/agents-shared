@@ -6,10 +6,14 @@ payload = {"action": "read_tasks"}
 
 try:
     response = requests.post(url, data=json.dumps(payload), headers={'Content-Type': 'application/json'}, allow_redirects=True)
-    tasks = response.json()
+    print(response.text)
+    data = response.json()
+    tasks = data.get('tasks', []) if isinstance(data, dict) else data
+    
     # Tìm các task cần xử lý
     for task in tasks:
-        if task.get('researchStatus') == "Research" or task.get('generateStatus') == "Generate":
-            print(json.dumps(task))
+        if isinstance(task, dict):
+            if task.get('researchStatus') == "Research" or task.get('generateStatus') == "Generate":
+                print(json.dumps(task))
 except Exception as e:
     print(f"Error: {e}")
