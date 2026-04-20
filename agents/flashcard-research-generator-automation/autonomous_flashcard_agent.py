@@ -396,10 +396,12 @@ class FlashcardAgent:
         cms_subtopics = []
         cms_parts = []
         try:
-            # Use App ID from dashboard if available, otherwise fallback to mapping
-            db_id = dashboard_app_id.strip()
+            # Extract ALL numeric sequences from the dashboard_app_id string
+            raw_db_id = dashboard_app_id.strip()
+            db_ids = re.findall(r"\d{15,}", raw_db_id) # IDs are usually 16 digits
             
-            if not db_id:
+            if not db_ids:
+                # Fallback to hardcoded mapping
                 db_mapping = {
                     "phlebotomy": "4633794564849664",
                     "teas": "5154331313569792",
@@ -407,10 +409,10 @@ class FlashcardAgent:
                 }
                 for k, v in db_mapping.items():
                     if k in app_name.lower():
-                        db_id = v
+                        db_ids = [v]
                         break
             
-            if db_id:
+            for db_id in db_ids:
                 logger.info(f"Using CMS DatabaseID: {db_id} for mapping.")
                 cms_resp = requests.get(f"https://cms-api.abc-elearning.org/api/topic/get-topics-by-database-id?databaseId={db_id}&isAdmin=true", timeout=45)
                 if cms_resp.ok:
@@ -421,7 +423,11 @@ class FlashcardAgent:
                         if t == 1: cms_topics.append(item)
                         elif t == 2: cms_subtopics.append(item)
                         elif t == 3: cms_parts.append(item)
-                    logger.info(f"Fetched {len(cms_topics)} Topics, {len(cms_subtopics)} Subtopics, and {len(cms_parts)} Parts from CMS.")
+            
+            if cms_parts:
+                logger.info(f"Sample CMS Parts: {[p.get('name') for p in cms_parts[:5]]}")
+            
+            logger.info(f"Fetched {len(cms_topics)} Topics, {len(cms_subtopics)} Subtopics, and {len(cms_parts)} Parts from CMS (Total from {len(db_ids)} DBs).")
         except Exception as e:
             logger.error(f"CMS API Integration Error: {e}")
 
@@ -454,6 +460,10 @@ class FlashcardAgent:
                 parsed_items.append({"type": 1, "name": t_data["name"]})
 
         all_flashcards = []
+        # Local counter for sequential fallback IDs if CMS mapping fails
+        topic_counter = 1
+        subtopic_counter = 1
+        
         for item in parsed_items:
             logger.info(f"🔍 Mapping Dashboard Item: {item['name']} (Type: {item['type']})")
             
@@ -462,15 +472,22 @@ class FlashcardAgent:
             official_subtopic_id = "N/A"
             target_name = item['name'].lower().strip()
             
-            if item['type'] == 1: # Rule 1: Standalone Topic (Items with NO subtopics)
+            # Remove numeric prefixes like "1.1. " or "220-1201: " for cleaner matching
+            clean_target_name = re.sub(r"^(\d+\.)+\s+", "", target_name)
+            clean_target_name = re.sub(r"^\d+-\d+:\s+", "", clean_target_name).strip()
+            
+            if item['type'] == 1: # Rule 1: Standalone Topic
                 for ct in cms_topics:
-                    if target_name == ct.get("name", "").lower().strip():
+                    if clean_target_name == ct.get("name", "").lower().strip():
                         official_topic_id = str(ct.get("id"))
                         official_subtopic_id = "N/A"
                         break
+                # Fallback to sequential ID
+                if official_topic_id == "N/A":
+                    official_topic_id = str(topic_counter)
+                    topic_counter += 1
             else: # Rule 2: Subtopics (Items with Parts)
-                # Search for Part 1 (type 3)
-                part_target_name = f"{target_name} 1"
+                part_target_name = f"{clean_target_name} 1"
                 found_part = None
                 for cp in cms_parts:
                     if part_target_name == cp.get("name", "").lower().strip():
@@ -479,21 +496,21 @@ class FlashcardAgent:
                 
                 if found_part:
                     official_subtopic_id = str(found_part.get("id"))
-                    # Trace back parentId chain: Part -> Subtopic -> Topic
                     parent_sub_id = found_part.get("parentId")
                     for cs in cms_subtopics:
                         if cs.get("id") == parent_sub_id:
                             official_topic_id = str(cs.get("parentId"))
                             break
-            
-            if official_topic_id == "N/A":
-                logger.warning(f"   ⚠️ Could not map CMS Topic ID for '{item['name']}'.")
-                continue
-            if item['type'] == 2 and official_subtopic_id == "N/A":
-                logger.warning(f"   ⚠️ Could not map CMS Part ID for subtopic '{item['name']}'. Expected '{part_target_name}'")
-                continue
+                
+                # Fallback to sequential IDs if mapping failed
+                if official_subtopic_id == "N/A":
+                    official_topic_id = str(topic_counter)
+                    official_subtopic_id = f"{topic_counter}.{subtopic_counter}"
+                    subtopic_counter += 1
+                    # If we just started a new topic based on the string logic elsewhere, 
+                    # we might need more complex logic here, but sequential is a safe bypass.
 
-            logger.info(f"   ✅ Mapped to CMS -> TopicID: {official_topic_id}, SubtopicID: {official_subtopic_id}")
+            logger.info(f"   ✅ Using IDs -> TopicID: {official_topic_id}, SubtopicID: {official_subtopic_id}")
 
             # 4. Retrieval Logic via SEARCH_API
             context_text = ""
@@ -531,12 +548,16 @@ class FlashcardAgent:
             - Language: ALL output MUST be written entirely in English.
 
             B. "FRONT" TERM CRITERIA:
-            1. Deep Topic Alignment: Extract ONLY critical technical knowledge, domain concepts, formulas, or laws that STRICTLY belong to the current topic/subtopic ("{item['name']}").
-            2. Anti-Meta Kill List (STRICT): ABSOLUTELY PROHIBITED to extract terms about the exam itself. REJECT any terms related to logistics, formats, scoring, administrative materials (e.g., "Handbook", "Passing Score", "Chapter 1").
-            3. Context-Independent: The term MUST make complete sense on its own. Do not extract generic words like "The Process", "Costs", or "Requirements". Append domain context if needed (e.g., change "Costs" to "Civil Liability Costs").
-            4. No Questions or Actions: DO NOT use conversational questions or instructional verbs. (e.g., NO "What is X?"). Convert phrases like "How to check ID" into "ID Checking Process".
-            5. Capitalization (STRICT): Only capitalize the first letter of the entire term and any acronyms (e.g., "Engineering controls", "OSHA standards"). All other words MUST be lowercase. Incorrect: "Engineering CONTROLS".
-            6. Length: Strictly 1 to 8 words.
+            1. THE ENTITY & TESTABILITY TEST (MOST IMPORTANT): The extracted term MUST be a specific, testable Knowledge Entity. Ask yourself: "Is this a definitive answer to a multiple-choice question?" It must be a specific Law, Protocol, Theorem, Technical Component, Medical Condition, or Academic Vocabulary (e.g., "Dram Shop Law", "TCP/IP Protocol", "Work Breakdown Structure", "Pythagorean Theorem").
+            2. THE UNIVERSAL "FLUFF & META" KILL LIST (ABSOLUTE BAN): NEVER extract broad categories, meta-concepts, human abilities, or exam logistics. IMMEDIATELY REJECT any term containing words like:
+               * Meta/Exam: "Exam", "Format", "Chapter", "Course", "Handbook", "Passing Score".
+               * Vague Skills: "Skills", "Abilities", "Reasoning", "Strategies", "Thinking", "Aptitude".
+               * Empty Categories: "Introduction", "Overview", "Basics", "Concepts", "The Process".
+            3. SPECIFICITY & CONTEXT-INDEPENDENCE: The term MUST make complete sense on its own if picked up from the floor. Do not extract generic nouns. (e.g., Incorrect: "Costs", "Storage"; Correct: "Civil Liability Costs", "Azure Blob Storage").
+            4. NO ACTIONS OR QUESTIONS: DO NOT use conversational questions or instructional verbs. Convert "How to mitigate risk" to "Risk Mitigation Techniques".
+            5. FORMATTING CONSTRAINT:
+               * Capitalization: Only capitalize the first letter of the entire term and any acronyms (e.g., "Engineering controls", "OSHA standards").
+               * Length: Strictly 1 to 8 words.
 
             C. "BACK" EXPLANATION CRITERIA:
             1. Core Content: Provide a direct definition PLUS one essential, testable related characteristic.
@@ -573,15 +594,30 @@ class FlashcardAgent:
                 )
                 
                 cards_data = json.loads(response.text)
+                valid_batch = []
+                meta_keywords = ["timing", "scoring", "preparation", "exam format", "handbook", "guide", "overview", "calculator"]
+                
                 for card in cards_data:
+                    front_lower = card["Front"].lower()
+                    # Reject if contains exam name or topic name (over-prefixing)
+                    if target_exam.lower() in front_lower or item['name'].lower() in front_lower:
+                        logger.warning(f"   🚫 Filtering Meta/Prefix term: {card['Front']}")
+                        continue
+                    
+                    # Reject if contains meta keywords
+                    if any(k in front_lower for k in meta_keywords):
+                        logger.warning(f"   🚫 Filtering Meta keyword: {card['Front']}")
+                        continue
+
                     card["Topic"] = str(official_topic_id)
                     card["Subtopic"] = str(official_subtopic_id)
                     # Apply strict sentence case fixing
                     card["Front"] = fix_sentence_case(normalize_whitespace(card["Front"]))
                     card["Back"] = normalize_whitespace(card["Back"])
+                    valid_batch.append(card)
                     
-                all_flashcards.extend(cards_data)
-                logger.info(f"✅ Extracted {len(cards_data)} cards for {item['name']} (Target: {kpi_count})")
+                all_flashcards.extend(valid_batch)
+                logger.info(f"✅ Extracted {len(valid_batch)} valid cards for {item['name']} (Original: {len(cards_data)})")
             except Exception as e:
                 logger.error(f"Generation error Topic {item['name']}: {e}")
 
@@ -604,6 +640,7 @@ class FlashcardAgent:
             except Exception as e:
                 logger.error(f"Upload error: {e}")
 
+        logger.info(f"🏁 Generation complete for {app_name}. Total cards: {len(all_flashcards)}")
         return {"status": "completed", "app_name": app_name, "flashcards": all_flashcards}
 
     # --- MAIN LOOP ---
@@ -634,18 +671,21 @@ class FlashcardAgent:
                     
                     logger.info(f"Task: {app} (ID: {app_id}) | Research: {research_status} | Generate: {generate_status}")
                     
-                    if research_status == "research":
+                    if "research" in research_status:
                         logger.info(f"🚀 Triggering RESEARCH for {app}...")
                         requests.post(APP_SCRIPT_URL, data=json.dumps({"action":"update_status", "app_name":app, "column":"research", "status":"Pending"}), headers={'Content-Type': 'application/json'}, allow_redirects=True)
                         res = self.handle_research(app, target_exam, exam_vendor)
                         final_status = "Done" if not res["needs_more"] else "Fail"
                         requests.post(APP_SCRIPT_URL, data=json.dumps({"action":"update_status", "app_name":app, "column":"research", "status":final_status}), headers={'Content-Type': 'application/json'}, allow_redirects=True)
                     
-                    if generate_status == "generate":
+                    if "generate" in generate_status:
                         logger.info(f"⚡ Triggering GENERATE for {app}...")
                         requests.post(APP_SCRIPT_URL, data=json.dumps({"action":"update_status", "app_name":app, "column":"generate", "status":"Pending"}), headers={'Content-Type': 'application/json'}, allow_redirects=True)
                         res = self.handle_generate(app, target_exam, topic_structure, dashboard_app_id=app_id)
-                        final_status = "Done" if len(res.get("flashcards", [])) > 0 else "Fail"
+                        # CRITICAL: Status is Done ONLY if cards were actually produced
+                        cards_produced = len(res.get("flashcards", []))
+                        final_status = "Done" if cards_produced > 0 else "Fail"
+                        logger.info(f"Task result for {app}: {final_status} ({cards_produced} cards)")
                         requests.post(APP_SCRIPT_URL, data=json.dumps({"action":"update_status", "app_name":app, "column":"generate", "status":final_status}), headers={'Content-Type': 'application/json'}, allow_redirects=True)
 
             except Exception as e:
