@@ -435,6 +435,7 @@ class FlashcardAgent:
         lines = [l.strip() for l in topic_structure.splitlines() if l.strip()]
         topic_map = {} # topic_num -> {"name": str, "subtopics": [{"name": str}]}
         
+        counter = 1
         for line in lines:
             sub_match = re.match(r"^(\d+)\.(\d+)\.?\s+(.*)$", line)
             top_match = re.match(r"^(\d+)\.?\s+(.*)$", line)
@@ -445,72 +446,90 @@ class FlashcardAgent:
                 topic_map[t_num]["subtopics"].append({"name": s_name})
             elif top_match:
                 t_num, t_name = top_match.group(1), top_match.group(2).strip()
+                # Clean prefix like "220-1201: " from topic name
+                t_name = re.sub(r"^\d+-\d+:\s+", "", t_name).strip()
                 if t_num not in topic_map: topic_map[t_num] = {"name": t_name, "subtopics": []}
                 else: topic_map[t_num]["name"] = t_name
+            else:
+                t_name = line.strip()
+                t_num = str(counter)
+                while t_num in topic_map:
+                    counter += 1
+                    t_num = str(counter)
+                topic_map[t_num] = {"name": t_name, "subtopics": []}
+                counter += 1
 
         parsed_items = []
-        for t_num in sorted(topic_map.keys(), key=int):
+        for t_num in sorted(topic_map.keys(), key=lambda x: int(x) if x.isdigit() else 999):
             t_data = topic_map[t_num]
             if t_data["subtopics"]:
-                # If subtopics exist, ONLY generate for subtopics (Leaf Nodes)
                 for st in t_data["subtopics"]:
-                    parsed_items.append({"type": 2, "name": st["name"]})
+                    parsed_items.append({"type": 2, "name": st["name"], "parent_name": t_data["name"], "t_num": t_num})
             elif t_data["name"]:
-                # If no subtopics, the Topic is the Leaf Node
-                parsed_items.append({"type": 1, "name": t_data["name"]})
+                parsed_items.append({"type": 1, "name": t_data["name"], "t_num": t_num})
 
         all_flashcards = []
-        # Local counter for sequential fallback IDs if CMS mapping fails
-        topic_counter = 1
-        subtopic_counter = 1
+        # Fallback ID cache to ensure consistency within the same run
+        fallback_topic_ids = {} # t_num -> id
+        next_fallback_id = 1000 # Use high numbers for fallback to avoid overlap
         
         for item in parsed_items:
-            logger.info(f"🔍 Mapping Dashboard Item: {item['name']} (Type: {item['type']})")
+            logger.info(f"🔍 Mapping Dashboard Item: {item['name']} (Type: {item['type']}, Parent: {item.get('parent_name')})")
             
-            # 3. Exact ID Matching (MANDATORY Pipeline)
             official_topic_id = "N/A"
             official_subtopic_id = "N/A"
             target_name = item['name'].lower().strip()
+            t_num = item.get("t_num")
             
-            # Remove numeric prefixes like "1.1. " or "220-1201: " for cleaner matching
+            # 3. Exact ID Matching (MANDATORY Pipeline)
             clean_target_name = re.sub(r"^(\d+\.)+\s+", "", target_name)
             clean_target_name = re.sub(r"^\d+-\d+:\s+", "", clean_target_name).strip()
             
-            if item['type'] == 1: # Rule 1: Standalone Topic
+            if item['type'] == 1: # Standalone Topic
                 for ct in cms_topics:
                     if clean_target_name == ct.get("name", "").lower().strip():
                         official_topic_id = str(ct.get("id"))
-                        official_subtopic_id = "N/A"
                         break
-                # Fallback to sequential ID
+                
                 if official_topic_id == "N/A":
-                    official_topic_id = str(topic_counter)
-                    topic_counter += 1
-            else: # Rule 2: Subtopics (Items with Parts)
+                    if t_num not in fallback_topic_ids:
+                        fallback_topic_ids[t_num] = str(next_fallback_id)
+                        next_fallback_id += 1
+                    official_topic_id = fallback_topic_ids[t_num]
+                    official_subtopic_id = "N/A"
+            
+            else: # Subtopic (Leaf Node)
+                # First find the parent Topic ID
+                parent_name = item.get("parent_name", "").lower().strip()
+                parent_topic_id = "N/A"
+                for ct in cms_topics:
+                    if parent_name == ct.get("name", "").lower().strip():
+                        parent_topic_id = str(ct.get("id"))
+                        break
+                
+                if parent_topic_id == "N/A":
+                    if t_num not in fallback_topic_ids:
+                        fallback_topic_ids[t_num] = str(next_fallback_id)
+                        next_fallback_id += 1
+                    parent_topic_id = fallback_topic_ids[t_num]
+                
+                official_topic_id = parent_topic_id
+                
+                # Now try to find Subtopic ID (Part in CMS)
                 part_target_name = f"{clean_target_name} 1"
-                found_part = None
                 for cp in cms_parts:
                     if part_target_name == cp.get("name", "").lower().strip():
-                        found_part = cp
+                        official_subtopic_id = str(cp.get("id"))
                         break
                 
-                if found_part:
-                    official_subtopic_id = str(found_part.get("id"))
-                    parent_sub_id = found_part.get("parentId")
-                    for cs in cms_subtopics:
-                        if cs.get("id") == parent_sub_id:
-                            official_topic_id = str(cs.get("parentId"))
-                            break
-                
-                # Fallback to sequential IDs if mapping failed
                 if official_subtopic_id == "N/A":
-                    official_topic_id = str(topic_counter)
-                    official_subtopic_id = f"{topic_counter}.{subtopic_counter}"
-                    subtopic_counter += 1
-                    # If we just started a new topic based on the string logic elsewhere, 
-                    # we might need more complex logic here, but sequential is a safe bypass.
+                    # Generate a consistent sequential subtopic ID for this topic
+                    # Format: TopicID.SubtopicCounter
+                    existing_subs = [c['Subtopic'] for c in all_flashcards if c['Topic'] == official_topic_id]
+                    sub_idx = len(set(existing_subs)) + 1
+                    official_subtopic_id = f"{official_topic_id}.{sub_idx}"
 
-            logger.info(f"   ✅ Using IDs -> TopicID: {official_topic_id}, SubtopicID: {official_subtopic_id}")
+            logger.info(f"   ✅ Final IDs -> TopicID: {official_topic_id}, SubtopicID: {official_subtopic_id}")
 
             # 4. Retrieval Logic via SEARCH_API
             context_text = ""
