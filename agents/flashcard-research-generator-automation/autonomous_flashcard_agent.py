@@ -601,44 +601,57 @@ class FlashcardAgent:
             KPI: Extract exactly {kpi_count} unique technical flashcards for this specific item.
             """
 
-            try:
-                response = self.client.models.generate_content(
-                    model=GEMINI_MODEL,
-                    contents=prompt,
-                    config=types.GenerateContentConfig(
-                        response_mime_type="application/json",
-                        response_schema=list[FlashcardOutput],
-                        temperature=0.1 
+            max_retries = 3
+            retry_delay = 20
+            
+            for attempt in range(max_retries):
+                try:
+                    # Exponential backoff delay
+                    wait_time = retry_delay * (attempt + 1)
+                    logger.info(f"   AI Generation attempt {attempt+1}/{max_retries} (Waiting {wait_time}s)...")
+                    time.sleep(wait_time)
+                    
+                    response = self.client.models.generate_content(
+                        model=GEMINI_MODEL,
+                        contents=prompt,
+                        config=types.GenerateContentConfig(
+                            response_mime_type="application/json",
+                            response_schema=list[FlashcardOutput],
+                            temperature=0.1 
+                        )
                     )
-                )
-                
-                cards_data = json.loads(response.text)
-                valid_batch = []
-                meta_keywords = ["timing", "scoring", "preparation", "exam format", "handbook", "guide", "overview", "calculator"]
-                
-                for card in cards_data:
-                    front_lower = card["Front"].lower()
-                    # Reject if contains exam name or topic name (over-prefixing)
-                    if target_exam.lower() in front_lower or item['name'].lower() in front_lower:
-                        logger.warning(f"   🚫 Filtering Meta/Prefix term: {card['Front']}")
-                        continue
                     
-                    # Reject if contains meta keywords
-                    if any(k in front_lower for k in meta_keywords):
-                        logger.warning(f"   🚫 Filtering Meta keyword: {card['Front']}")
-                        continue
+                    cards_data = json.loads(response.text)
+                    valid_batch = []
+                    meta_keywords = ["timing", "scoring", "preparation", "exam format", "handbook", "guide", "overview", "calculator"]
+                    
+                    for card in cards_data:
+                        front_lower = card["Front"].lower()
+                        # Reject if contains exam name or topic name (over-prefixing)
+                        if target_exam.lower() in front_lower or item['name'].lower() in front_lower:
+                            logger.warning(f"   🚫 Filtering Meta/Prefix term: {card['Front']}")
+                            continue
+                        
+                        # Reject if contains meta keywords
+                        if any(k in front_lower for k in meta_keywords):
+                            logger.warning(f"   🚫 Filtering Meta keyword: {card['Front']}")
+                            continue
 
-                    card["Topic"] = str(official_topic_id)
-                    card["Subtopic"] = str(official_subtopic_id)
-                    # Apply strict sentence case fixing
-                    card["Front"] = fix_sentence_case(normalize_whitespace(card["Front"]))
-                    card["Back"] = normalize_whitespace(card["Back"])
-                    valid_batch.append(card)
-                    
-                all_flashcards.extend(valid_batch)
-                logger.info(f"✅ Extracted {len(valid_batch)} valid cards for {item['name']} (Original: {len(cards_data)})")
-            except Exception as e:
-                logger.error(f"Generation error Topic {item['name']}: {e}")
+                        card["Topic"] = str(official_topic_id)
+                        card["Subtopic"] = str(official_subtopic_id)
+                        # Apply strict sentence case fixing
+                        card["Front"] = fix_sentence_case(normalize_whitespace(card["Front"]))
+                        card["Back"] = normalize_whitespace(card["Back"])
+                        valid_batch.append(card)
+                        
+                    all_flashcards.extend(valid_batch)
+                    logger.info(f"✅ Extracted {len(valid_batch)} valid cards for {item['name']} (Original: {len(cards_data)})")
+                    break # Success, exit retry loop
+
+                except Exception as e:
+                    logger.error(f"Generation error Topic {item['name']} (Attempt {attempt+1}): {e}")
+                    if attempt == max_retries - 1:
+                        logger.error(f"❌ Failed to generate cards for {item['name']} after {max_retries} attempts.")
 
         if all_flashcards:
             try:
