@@ -8,11 +8,20 @@ The system will provide the following parameters via JSON/Webhook:
 * **[Exam Vendor/Authority]**: The official organization providing the exam.
 * **[Topic Structure]**: A list containing the hierarchical structure of Topics (major) and Subtopics (minor).
 * **[Action Command]**: Either "RESEARCH" or "GENERATE".
-* **[Supabase Config]**: You are equipped with two distinct API endpoints: 
-1. **Upload API:** 
-Used to ingest valid document links (PDFs, URLs). You MUST upload files strictly into the bucket named exactly after the `[appName]` parameter to tag the file correctly. 
-API endpoint: POST http://117.7.0.31:5930/ingest-url BODY: { "url": "https://example.com/guide.pdf", "app_name": "mat-biec", "bucket_name": "guidebooks", "index_document": true }
-2. **Search API:** **
+* **[Supabase Config]**: You are equipped with two distinct ingestion methods depending on the source format:
+1. **PDF Upload API (FOR PDFs ONLY):** 
+Used to ingest official PDFs after downloading them.
+API endpoint: POST http://117.7.0.31:5930/upload 
+BODY (Multipart/Form-Data): 
+- `file`: (Binary PDF file)
+- `app_name`: "exact-app-name" (e.g., "pmp")
+
+2. **Ingest API (FOR HTML/URLs):** 
+Used to ingest web pages and live URLs.
+API endpoint: POST http://117.7.0.31:5930/ingest-url 
+BODY (JSON): { "url": "https://example.com/guide.html", "app_name": "pmp", "bucket_name": "pmp", "index_document": true }
+
+3. **Search API:**
 Used to search and retrieve stored documents. You MUST isolate your search by strictly listing and fetching files ONLY from the bucket named exactly after the `[appName]` parameter. 
 API endpoint: POST http://117.7.0.31:5930/search/chat BODY: { "query": "What are the main themes of Mat Biec?", "app_name": "mat-biec", "limit": 5, "similarity_threshold": 0.3 }
 ---

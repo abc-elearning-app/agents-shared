@@ -30,6 +30,7 @@ load_dotenv_simple()
 
 APP_SCRIPT_URL = os.getenv("APP_SCRIPT_URL", "https://script.google.com/macros/s/AKfycbxrVC5t3Ak35q2cQLUAsFern7aOwLXChbpsADbXW4vNPNnyhHGr6cF1vuh_FYol7CiwGw/exec").strip()
 INGEST_API = os.getenv("INGEST_API", "http://117.7.0.31:5930/ingest-url").strip()
+PDF_UPLOAD_API = os.getenv("PDF_UPLOAD_API", "http://117.7.0.31:5930/upload").strip()
 SEARCH_API = os.getenv("SEARCH_API", "http://117.7.0.31:5930/search/chat").strip()
 
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "").strip()
@@ -338,18 +339,46 @@ class FlashcardAgent:
             if approved_source:
                 logger.info(f"📥 Approved: {url} (Score: {approved_source['score']})")
                 try:
-                    ingest_resp = requests.post(self.INGEST_API, json={
-                        "url": url,
-                        "app_name": app_name,
-                        "bucket_name": app_name,
-                        "index_document": True
-                    }, timeout=120)
-                    
-                    if ingest_resp.ok:
-                        sources_ingested.append(approved_source)
-                        logger.info(f"✅ Ingested successfully: {url}")
+                    if approved_source['format'] == 'pdf':
+                        # New Logic for PDF: Download and use /upload API
+                        logger.info(f"📄 PDF detected. Downloading and uploading via /upload: {url}")
+                        pdf_resp = requests.get(url, timeout=60, stream=True)
+                        if pdf_resp.ok:
+                            temp_filename = f"temp_{approved_source['canonical_id']}.pdf"
+                            with open(temp_filename, "wb") as f:
+                                for chunk in pdf_resp.iter_content(chunk_size=8192):
+                                    f.write(chunk)
+                            
+                            with open(temp_filename, "rb") as f:
+                                upload_resp = requests.post(PDF_UPLOAD_API, 
+                                                            files={'file': f}, 
+                                                            data={'app_name': app_name},
+                                                            timeout=120)
+                            
+                            if os.path.exists(temp_filename):
+                                os.remove(temp_filename)
+                                
+                            if upload_resp.ok:
+                                sources_ingested.append(approved_source)
+                                logger.info(f"✅ PDF Uploaded successfully: {url}")
+                            else:
+                                logger.error(f"❌ PDF Upload failed for {url}: {upload_resp.text}")
+                        else:
+                            logger.error(f"❌ Could not download PDF: {url}")
+                    else:
+                        # Existing Logic for HTML: use /ingest-url
+                        ingest_resp = requests.post(INGEST_API, json={
+                            "url": url,
+                            "app_name": app_name,
+                            "bucket_name": app_name,
+                            "index_document": True
+                        }, timeout=120)
+                        
+                        if ingest_resp.ok:
+                            sources_ingested.append(approved_source)
+                            logger.info(f"✅ HTML Ingested successfully: {url}")
                 except Exception as e:
-                    logger.error(f"Ingest API error: {e}")
+                    logger.error(f"Ingest/Upload API error for {url}: {e}")
 
         return {
             "status": "research_completed",
