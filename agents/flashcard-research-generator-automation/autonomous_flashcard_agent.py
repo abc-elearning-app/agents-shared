@@ -32,6 +32,8 @@ APP_SCRIPT_URL = os.getenv("APP_SCRIPT_URL", "https://script.google.com/macros/s
 INGEST_API = os.getenv("INGEST_API", "http://117.7.0.31:5930/ingest-url").strip()
 PDF_UPLOAD_API = os.getenv("PDF_UPLOAD_API", "http://117.7.0.31:5930/upload").strip()
 SEARCH_API = os.getenv("SEARCH_API", "http://117.7.0.31:5930/search/chat").strip()
+SEARXNG_URL = os.getenv("SEARXNG_URL", "http://localhost:8080/search").strip()
+URL_REGISTRY_FILE = "url_registry.json"
 
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "").strip()
 GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-2.0-flash").strip()
@@ -55,6 +57,57 @@ APIFY_API_KEY = os.getenv("APIFY_API_KEY", "").strip()
 # =========================================================
 # 2. HELPERS
 # =========================================================
+def load_url_registry() -> dict:
+    if os.path.exists(URL_REGISTRY_FILE):
+        try:
+            with open(URL_REGISTRY_FILE, "r", encoding="utf-8") as f:
+                return json.load(f)
+        except Exception as e:
+            logger.error(f"Error loading registry: {e}")
+    return {}
+
+def save_url_registry(registry: dict):
+    try:
+        with open(URL_REGISTRY_FILE, "w", encoding="utf-8") as f:
+            json.dump(registry, f, indent=2)
+    except Exception as e:
+        logger.error(f"Error saving registry: {e}")
+
+def normalize_url(url: str) -> str:
+    """Normalize URL by removing tracking params, fragments, and lowercasing."""
+    try:
+        parsed = urlparse(url)
+        # Lowercase domain
+        netloc = parsed.netloc.lower()
+        # Remove common tracking parameters
+        query_params = []
+        if parsed.query:
+            for p in parsed.query.split("&"):
+                if "=" in p:
+                    k, v = p.split("=", 1)
+                    if not k.lower().startswith(("utm_", "fbclid", "gclid", "ref")):
+                        query_params.append(f"{k}={v}")
+        
+        normalized = f"{parsed.scheme}://{netloc}{parsed.path}"
+        if query_params:
+            normalized += f"?{'&'.join(query_params)}"
+        return normalized
+    except Exception:
+        return url.split("#")[0].strip()
+
+def searxng_search(query: str, max_results: int = 10) -> list[dict]:
+    """Helper to call SearXNG API."""
+    try:
+        logger.info(f"Searching SearXNG for: {query}")
+        resp = requests.get(SEARXNG_URL, params={"q": query, "format": "json"}, timeout=15)
+        if resp.ok:
+            data = resp.json()
+            results = data.get("results", [])
+            return [{"url": r["url"], "title": r.get("title", ""), "snippet": r.get("content", "")} for r in results[:max_results]]
+    except Exception as e:
+        logger.error(f"SearXNG error: {e}")
+    return []
+
 def crawl_with_apify(url: str) -> str:
     """Sử dụng Apify Website Content Crawler để lấy nội dung sạch."""
     if not APIFY_API_KEY:
@@ -143,30 +196,55 @@ class ResearchEngine:
     def __init__(self, exam: str, vendor: str):
         self.exam = exam
         self.vendor = vendor if vendor else "" 
-        self.ingested_registry = {} 
+        self.registry = load_url_registry()
         self.tavily = TavilyClient(api_key=TAVILY_API_KEY) if TAVILY_API_KEY else None
 
     def search_web(self, query: str, max_results=30) -> list[str]:
-        # Refine query to exclude marketing/brochure content
-        refined_query = f"{query} -brochure -registration -benefits -fee -apply"
-        urls = []
-        if self.tavily:
-            try:
-                logger.info(f"Searching Tavily for: {refined_query}")
-                tavily_res = self.tavily.search(query=refined_query, search_depth="advanced", max_results=max_results)
-                urls = [res['url'] for res in tavily_res.get('results', [])]
-                if urls: return urls
-            except Exception as e:
-                logger.error(f"Tavily search error: {e}")
+        # Generate query variations
+        variations = [
+            f"{query} -brochure -registration -benefits -fee -apply",
+            f"{query} filetype:pdf",
+            f'"{self.exam}" "study guide" filetype:pdf',
+            f'"{self.exam}" "practice test" filetype:pdf',
+            f'site:edu "{self.exam}" filetype:pdf',
+            f'site:gov "{self.exam}" filetype:pdf',
+            f'"{self.exam}" handbook pdf',
+            f'"{self.exam}" technical manual pdf'
+        ]
+        
+        all_urls = set()
+        for q in variations:
+            # 1. Tavily
+            if self.tavily:
+                try:
+                    logger.info(f"Hybrid Search (Tavily): {q}")
+                    tavily_res = self.tavily.search(query=q, search_depth="advanced", max_results=max_results)
+                    for res in tavily_res.get('results', []):
+                        all_urls.add(res['url'])
+                except Exception as e:
+                    logger.error(f"Tavily search error: {e}")
 
-        try:
-            logger.info(f"Searching DuckDuckGo for: {refined_query}")
-            with DDGS() as ddgs:
-                results = list(ddgs.text(refined_query, max_results=max_results))
-                urls = [res['href'] for res in results]
-        except Exception as e:
-            logger.error(f"DDG search error: {e}")
-        return urls
+            # 2. SearXNG
+            try:
+                logger.info(f"Hybrid Search (SearXNG): {q}")
+                searx_results = searxng_search(q, max_results=max_results)
+                for res in searx_results:
+                    all_urls.add(res['url'])
+            except Exception as e:
+                logger.error(f"SearXNG search error: {e}")
+
+        # 3. Fallback to DDGS if still thin
+        if len(all_urls) < 5:
+            try:
+                logger.info(f"Fallback Search (DDGS): {query}")
+                with DDGS() as ddgs:
+                    results = list(ddgs.text(query, max_results=max_results))
+                    for res in results:
+                        all_urls.add(res['href'])
+            except Exception as e:
+                logger.error(f"DDG search error: {e}")
+        
+        return list(all_urls)
 
     def gate_1_validate_and_ping(self, url: str) -> tuple[bool, Any]:
         domain = urlparse(url).netloc.lower()
@@ -233,18 +311,32 @@ class ResearchEngine:
         if len(text_content) < 500: return False, "" 
         return True, text_content
 
-    def gate_5_deduplication(self, url: str, score: float) -> tuple[bool, str]:
-        canonical_id = hashlib.md5(url.encode()).hexdigest()
-        if canonical_id in self.ingested_registry:
-            existing_score = self.ingested_registry[canonical_id]
-            if existing_score >= 0.9 and score < 0.9:
-                return False, "Duplicate of Tier 1 Source"
-            elif score > existing_score:
-                self.ingested_registry[canonical_id] = score
-                return True, canonical_id
-            return False, "Already Ingested"
-        self.ingested_registry[canonical_id] = score
+    def gate_5_deduplication(self, url: str, score: float, source: str = "unknown", force_refresh: bool = False) -> tuple[bool, str]:
+        normalized_url = normalize_url(url)
+        canonical_id = hashlib.md5(normalized_url.encode()).hexdigest()
+        
+        if canonical_id in self.registry:
+            entry = self.registry[canonical_id]
+            if entry.get("status") == "success" and not force_refresh:
+                return False, "Already Successfully Ingested"
+        
+        # Register/Update entry
+        self.registry[canonical_id] = {
+            "url": url,
+            "normalized_url": normalized_url,
+            "canonical_id": canonical_id,
+            "first_seen_at": time.time(),
+            "source": source,
+            "status": "pending",
+            "score": score
+        }
+        save_url_registry(self.registry)
         return True, canonical_id
+
+    def update_ingestion_status(self, canonical_id: str, status: str):
+        if canonical_id in self.registry:
+            self.registry[canonical_id]["status"] = status
+            save_url_registry(self.registry)
 
     def gate_6_format_support(self, url: str) -> tuple[bool, str]:
         url_lower = url.lower()
@@ -339,6 +431,7 @@ class FlashcardAgent:
             if approved_source:
                 logger.info(f"📥 Approved: {url} (Score: {approved_source['score']})")
                 try:
+                    success = False
                     if approved_source['format'] == 'pdf':
                         # New Logic for PDF: Download and use /upload API
                         logger.info(f"📄 PDF detected. Downloading and uploading via /upload: {url}")
@@ -359,7 +452,7 @@ class FlashcardAgent:
                                 os.remove(temp_filename)
                                 
                             if upload_resp.ok:
-                                sources_ingested.append(approved_source)
+                                success = True
                                 logger.info(f"✅ PDF Uploaded successfully: {url}")
                             else:
                                 logger.error(f"❌ PDF Upload failed for {url}: {upload_resp.text}")
@@ -375,10 +468,18 @@ class FlashcardAgent:
                         }, timeout=120)
                         
                         if ingest_resp.ok:
-                            sources_ingested.append(approved_source)
+                            success = True
                             logger.info(f"✅ HTML Ingested successfully: {url}")
+                    
+                    if success:
+                        sources_ingested.append(approved_source)
+                        engine.update_ingestion_status(approved_source['canonical_id'], "success")
+                    else:
+                        engine.update_ingestion_status(approved_source['canonical_id'], "failed")
+
                 except Exception as e:
                     logger.error(f"Ingest/Upload API error for {url}: {e}")
+                    engine.update_ingestion_status(approved_source['canonical_id'], "failed")
 
         return {
             "status": "research_completed",
@@ -544,12 +645,21 @@ class FlashcardAgent:
             except Exception as e:
                 logger.error(f"Search API error: {e}")
 
-            if len(context_text) < 3000 and self.tavily:
-                logger.info(f"   Context low. Supplemental Tavily search for '{item['name']}'...")
+            if len(context_text) < 3000:
+                logger.info(f"   Context low. Supplemental Search for '{item['name']}'...")
+                # 1. Tavily Fallback
+                if self.tavily:
+                    try:
+                        tav_res = self.tavily.search(query=f"{target_exam} {item['name']} technical guide", search_depth="advanced", max_results=5)
+                        for tr in tav_res.get('results', []):
+                            context_text += f"\nSource {tr['url']} | {tr.get('title', 'Guide')}: {tr['content']}"
+                    except: pass
+                
+                # 2. SearXNG Fallback
                 try:
-                    tav_res = self.tavily.search(query=f"{target_exam} {item['name']} technical guide", search_depth="advanced", max_results=5)
-                    for tr in tav_res.get('results', []):
-                        context_text += f"\nSource {tr['url']}: {tr['content']}"
+                    searx_res = searxng_search(f"{target_exam} {item['name']} technical documentation", max_results=5)
+                    for sr in searx_res:
+                        context_text += f"\nSource {sr['url']} | {sr['title']}: {sr['snippet']}"
                 except: pass
 
             # KPI Determination: 30 for subtopics, 50 for topics
