@@ -727,7 +727,7 @@ class FlashcardAgent:
             """
 
             max_retries = 3
-            retry_delay = 20
+            retry_delay = 60
             
             topic_success = False
             for attempt in range(max_retries):
