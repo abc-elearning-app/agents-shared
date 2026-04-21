@@ -681,107 +681,119 @@ class FlashcardAgent:
             kpi_count = 30 if item['type'] == 2 else 50
             logger.info(f"   KPI target: {kpi_count} flashcards for '{item['name']}'")
 
-            prompt = f"""
-            You are an expert Learning Designer. Target Exam: {target_exam} | Current Item: {item['name']}
-            REFERENCE DATA (Bucket Knowledge): 
-            {context_text[:45000]}
+            # Technical Fix for 429: Split into batches of 25 to respect TPM/RPM limits
+            batch_size = 25
+            num_batches = (kpi_count + batch_size - 1) // batch_size
             
-            MANDATORY STANDARDS (FLASHCARD GENERATION RULES)
+            topic_cards = []
+            topic_success = True 
 
-            A. GENERAL REQUIREMENTS:
-            - Language: ALL output MUST be written entirely in English.
+            for b_idx in range(num_batches):
+                current_batch_goal = min(batch_size, kpi_count - len(topic_cards))
+                if current_batch_goal <= 0: break
+                
+                logger.info(f"   --- Batch {b_idx+1}/{num_batches} (Goal: {current_batch_goal}) ---")
+                
+                prompt = f"""
+                You are an expert Learning Designer. Target Exam: {target_exam} | Current Item: {item['name']}
+                REFERENCE DATA (Bucket Knowledge): 
+                {context_text[:45000]}
+                
+                MANDATORY STANDARDS (FLASHCARD GENERATION RULES)
 
-            B. "FRONT" TERM CRITERIA:
-            1. THE ENTITY & TESTABILITY TEST (MOST IMPORTANT): The extracted term MUST be a specific, testable Knowledge Entity. Ask yourself: "Is this a definitive answer to a multiple-choice question?" It must be a specific Law, Protocol, Theorem, Technical Component, Medical Condition, or Academic Vocabulary (e.g., "Dram Shop Law", "TCP/IP Protocol", "Work Breakdown Structure", "Pythagorean Theorem").
-            2. THE UNIVERSAL "FLUFF & META" KILL LIST (ABSOLUTE BAN): NEVER extract broad categories, meta-concepts, human abilities, or exam logistics. IMMEDIATELY REJECT any term containing words like:
-               * Meta/Exam: "Exam", "Format", "Chapter", "Course", "Handbook", "Passing Score".
-               * Vague Skills: "Skills", "Abilities", "Reasoning", "Strategies", "Thinking", "Aptitude".
-               * Empty Categories: "Introduction", "Overview", "Basics", "Concepts", "The Process".
-            3. SPECIFICITY & CONTEXT-INDEPENDENCE: The term MUST make complete sense on its own if picked up from the floor. Do not extract generic nouns. (e.g., Incorrect: "Costs", "Storage"; Correct: "Civil Liability Costs", "Azure Blob Storage").
-            4. NO ACTIONS OR QUESTIONS: DO NOT use conversational questions or instructional verbs. Convert "How to mitigate risk" to "Risk Mitigation Techniques".
-            5. FORMATTING CONSTRAINT:
-               * Capitalization: Only capitalize the first letter of the entire term and any acronyms (e.g., "Engineering controls", "OSHA standards").
-               * Length: Strictly 1 to 8 words.
+                A. GENERAL REQUIREMENTS:
+                - Language: ALL output MUST be written entirely in English.
 
-            C. "BACK" EXPLANATION CRITERIA:
-            1. Core Content: Provide a direct definition PLUS one essential, testable related characteristic.
-            2. Anti-Circular (STRICT): STRICTLY PROHIBITED to use the Front term (or its root words) in the explanation. Use synonyms or pronouns to explain the concept.
-            3. Self-Contained: Do not reference source documents or diagrams (NO "According to...", "In this chapter...", "Figure X").
-            4. Strict Formatting: Output as a SINGLE continuous block of text. NO bullet points, NO line breaks.
-            5. Length: Strictly 1-2 concise sentences (approx. 20-40 words).
+                B. "FRONT" TERM CRITERIA:
+                1. THE ENTITY & TESTABILITY TEST (MOST IMPORTANT): The extracted term MUST be a specific, testable Knowledge Entity. Ask yourself: "Is this a definitive answer to a multiple-choice question?" It must be a specific Law, Protocol, Theorem, Technical Component, Medical Condition, or Academic Vocabulary (e.g., "Dram Shop Law", "TCP/IP Protocol", "Work Breakdown Structure", "Pythagorean Theorem").
+                2. THE UNIVERSAL "FLUFF & META" KILL LIST (ABSOLUTE BAN): NEVER extract broad categories, meta-concepts, human abilities, or exam logistics. IMMEDIATELY REJECT any term containing words like:
+                   * Meta/Exam: "Exam", "Format", "Chapter", "Course", "Handbook", "Passing Score".
+                   * Vague Skills: "Skills", "Abilities", "Reasoning", "Strategies", "Thinking", "Aptitude".
+                   * Empty Categories: "Introduction", "Overview", "Basics", "Concepts", "The Process".
+                3. SPECIFICITY & CONTEXT-INDEPENDENCE: The term MUST make complete sense on its own if picked up from the floor. Do not extract generic nouns. (e.g., Incorrect: "Costs", "Storage"; Correct: "Civil Liability Costs", "Azure Blob Storage").
+                4. NO ACTIONS OR QUESTIONS: DO NOT use conversational questions or instructional verbs. Convert "How to mitigate risk" to "Risk Mitigation Techniques".
+                5. FORMATTING CONSTRAINT:
+                   * Capitalization: Only capitalize the first letter of the entire term and any acronyms (e.g., "Engineering controls", "OSHA standards").
+                   * Length: Strictly 1 to 8 words.
 
-            D. REFERENCE MATERIALS STANDARDS (MANDATORY):
-            1. Goal: Point the user to official study guides, coursebooks, ebooks, or handbooks.
-            2. Dynamic Strategy: Combine Topic/Subtopic with Exam Name to find the exact citation (e.g., "ASE T2 Diesel Engines Training Guide").
-            3. Priority: Official Vendor Coursebooks > Official PDF Handbooks (.gov, .org) > Authoritative Study Guides.
-            4. ZERO HALLUCINATION (STRICT): DO NOT guess or invent URLs. If the exact live URL is not known, provide the precise Citation Title (Book Name + Chapter/Section) instead.
-               - OK Example: "Official DMV Driver's Manual, Chapter 4: Traffic Signs".
-               - FORBIDDEN: Guessed/Fake URLs.
+                C. "BACK" EXPLANATION CRITERIA:
+                1. Core Content: Provide a direct definition PLUS one essential, testable related characteristic.
+                2. Anti-Circular (STRICT): STRICTLY PROHIBITED to use the Front term (or its root words) in the explanation. Use synonyms or pronouns to explain the concept.
+                3. Self-Contained: Do not reference source documents or diagrams (NO "According to...", "In this chapter...", "Figure X").
+                4. Strict Formatting: Output as a SINGLE continuous block of text. NO bullet points, NO line breaks.
+                5. Length: Strictly 1-2 concise sentences (approx. 20-40 words).
 
-            E. MATH & FORMULA FORMATTING (MANDATORY):
-            - Formulas and units MUST be wrapped in MathJax format. 
-            - Because the output is JSON, you MUST double-escape backslashes: use \\\\(..\\\\) instead of \\(..\\). 
-            - Example: Use \\\\text{{word}} for text inside formulas.
-            
-            KPI: Extract exactly {kpi_count} unique technical flashcards for this specific item.
-            """
+                D. REFERENCE MATERIALS STANDARDS (MANDATORY):
+                1. Goal: Point the user to official study guides, coursebooks, ebooks, or handbooks.
+                2. Dynamic Strategy: Combine Topic/Subtopic with Exam Name to find the exact citation (e.g., "ASE T2 Diesel Engines Training Guide").
+                3. Priority: Official Vendor Coursebooks > Official PDF Handbooks (.gov, .org) > Authoritative Study Guides.
+                4. ZERO HALLUCINATION (STRICT): DO NOT guess or invent URLs. If the exact live URL is not known, provide the precise Citation Title (Book Name + Chapter/Section) instead.
+                   - OK Example: "Official DMV Driver's Manual, Chapter 4: Traffic Signs".
+                   - FORBIDDEN: Guessed/Fake URLs.
 
-            max_retries = 3
-            retry_delay = 60
-            
-            topic_success = False
-            for attempt in range(max_retries):
-                try:
-                    # Exponential backoff delay
-                    wait_time = retry_delay * (attempt + 1)
-                    logger.info(f"   AI Generation attempt {attempt+1}/{max_retries} (Waiting {wait_time}s)...")
-                    time.sleep(wait_time)
-                    
-                    response = self.client.models.generate_content(
-                        model=GEMINI_MODEL,
-                        contents=prompt,
-                        config=types.GenerateContentConfig(
-                            response_mime_type="application/json",
-                            response_schema=list[FlashcardOutput],
-                            temperature=0.1 
+                E. MATH & FORMULA FORMATTING (MANDATORY):
+                - Formulas and units MUST be wrapped in MathJax format. 
+                - Because the output is JSON, you MUST double-escape backslashes: use \\\\(..\\\\) instead of \\(..\\). 
+                - Example: Use \\\\text{{word}} for text inside formulas.
+                
+                KPI: Extract exactly {current_batch_goal} unique technical flashcards for this specific item.
+                """
+
+                batch_success = False
+                for attempt in range(max_retries):
+                    try:
+                        wait_time = retry_delay * (attempt + 1)
+                        if attempt > 0:
+                            logger.info(f"   AI Generation attempt {attempt+1}/{max_retries} (Waiting {wait_time}s)...")
+                            time.sleep(wait_time)
+                        
+                        response = self.client.models.generate_content(
+                            model=GEMINI_MODEL,
+                            contents=prompt,
+                            config=types.GenerateContentConfig(
+                                response_mime_type="application/json",
+                                response_schema=list[FlashcardOutput],
+                                temperature=0.1 
+                            )
                         )
-                    )
-                    
-                    cards_data = json.loads(response.text)
-                    valid_batch = []
-                    meta_keywords = ["timing", "scoring", "preparation", "exam format", "handbook", "guide", "overview", "calculator"]
-                    
-                    for card in cards_data:
-                        front_lower = card["Front"].lower()
-                        # Reject if contains exam name or topic name (over-prefixing)
-                        if target_exam.lower() in front_lower or item['name'].lower() in front_lower:
-                            logger.warning(f"   🚫 Filtering Meta/Prefix term: {card['Front']}")
-                            continue
                         
-                        # Reject if contains meta keywords
-                        if any(k in front_lower for k in meta_keywords):
-                            logger.warning(f"   🚫 Filtering Meta keyword: {card['Front']}")
-                            continue
-
-                        card["Topic"] = str(official_topic_id)
-                        card["Subtopic"] = str(official_subtopic_id)
-                        # Apply strict sentence case fixing
-                        card["Front"] = fix_sentence_case(normalize_whitespace(card["Front"]))
-                        card["Back"] = normalize_whitespace(card["Back"])
-                        valid_batch.append(card)
+                        cards_data = json.loads(response.text)
+                        valid_batch = []
+                        meta_keywords = ["timing", "scoring", "preparation", "exam format", "handbook", "guide", "overview", "calculator"]
                         
-                    all_flashcards.extend(valid_batch)
-                    logger.info(f"✅ Extracted {len(valid_batch)} valid cards for {item['name']} (Original: {len(cards_data)})")
-                    topic_success = True
-                    break # Success, exit retry loop
+                        for card in cards_data:
+                            front_lower = card["Front"].lower()
+                            # Original strict filters
+                            if target_exam.lower() in front_lower or item['name'].lower() in front_lower:
+                                continue
+                            
+                            if any(k in front_lower for k in meta_keywords):
+                                continue
 
-                except Exception as e:
-                    logger.error(f"Generation error Topic {item['name']} (Attempt {attempt+1}): {e}")
-                    if attempt == max_retries - 1:
-                        logger.error(f"❌ Failed to generate cards for {item['name']} after {max_retries} attempts.")
+                            card["Topic"] = str(official_topic_id)
+                            card["Subtopic"] = str(official_subtopic_id)
+                            card["Front"] = fix_sentence_case(normalize_whitespace(card["Front"]))
+                            card["Back"] = normalize_whitespace(card["Back"])
+                            valid_batch.append(card)
+                            
+                        topic_cards.extend(valid_batch)
+                        logger.info(f"✅ Batch {b_idx+1} complete: {len(valid_batch)} cards.")
+                        batch_success = True
+                        break 
+
+                    except Exception as e:
+                        logger.error(f"Batch error (Attempt {attempt+1}): {e}")
+                
+                if not batch_success:
+                    topic_success = False
+                    break
             
-            if not topic_success:
+            if topic_success:
+                all_flashcards.extend(topic_cards)
+                logger.info(f"🌟 Total for {item['name']}: {len(topic_cards)} cards.")
+            else:
                 failed_any = True
+                logger.error(f"❌ Failed to complete all batches for {item['name']}")
 
         if all_flashcards:
             try:
