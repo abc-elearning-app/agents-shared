@@ -202,14 +202,12 @@ class ResearchEngine:
     def search_web(self, query: str, max_results=30) -> list[str]:
         # Generate query variations
         variations = [
-            f"{query} -brochure -registration -benefits -fee -apply",
-            f"{query} filetype:pdf",
-            f'"{self.exam}" "study guide" filetype:pdf',
-            f'"{self.exam}" "practice test" filetype:pdf',
-            f'site:edu "{self.exam}" filetype:pdf',
-            f'site:gov "{self.exam}" filetype:pdf',
-            f'"{self.exam}" handbook pdf',
-            f'"{self.exam}" technical manual pdf'
+            f"{query} official textbook filetype:pdf",
+            f'"{self.exam}" "study guide" technical details filetype:pdf',
+            f'"{self.exam}" "coursebook" filetype:pdf',
+            f'site:edu "{self.exam}" textbook filetype:pdf',
+            f'"{self.exam}" technical reference manual pdf -brochure -registration -handbook',
+            f'"{self.exam}" theory and concepts filetype:pdf'
         ]
         
         all_urls = set()
@@ -275,8 +273,8 @@ class ResearchEngine:
             score = 0.8 
             
         if url_lower.endswith(".pdf"): score += 0.1
-        # Ưu tiên cực cao cho Coursebooks, Handbooks, Manuals
-        if any(kw in url_lower for kw in ["coursebook", "handbook", "manual", "guidebook", "textbook"]): 
+        # 0.15 score boost only for highly technical academic materials
+        if any(kw in url_lower for kw in ["coursebook", "textbook", "reference-manual", "study-guide", "lecture"]): 
             score += 0.15
         if any(kw in url_lower for kw in ["blueprint", "objectives", "syllabus"]): 
             score += 0.05
@@ -355,25 +353,40 @@ class ResearchEngine:
         kill_list = [
             "how to register", "exam fee", "scheduling", "testing center", 
             "passing score", "certification benefits", "why get certified", 
-            "registration", "brochure", "flyer", "brochures"
+            "registration", "brochure", "flyer", "brochures",
+            "candidate handbook", "exam logistics", "cancellation policy", 
+            "reschedule", "pearson vue", "proctor", "identification requirements", 
+            "certification roadmap", "how to apply"
         ]
         text_lower = text.lower()
         hits = sum(1 for word in kill_list if word in text_lower)
-        if hits >= 3: return False
+        if hits >= 2: return False
         
         # Must contain technical/educational keywords
-        technical_keywords = ["diagnosis", "repair", "component", "system", "theory", "operation", "procedure", "definition"]
+        technical_keywords = [
+            "diagnosis", "repair", "component", "system", "theory", "operation", 
+            "procedure", "definition", "concept", "framework", "architecture", 
+            "protocol", "equation", "principles", "characteristics"
+        ]
         t_hits = sum(1 for word in technical_keywords if word in text_lower)
-        return t_hits >= 1
+        return t_hits >= 2
 
     def gate_8_execution_pipeline(self, url: str) -> dict:
         is_live, resp = self.gate_1_validate_and_ping(url)
         if not is_live: return None
+
+        # Aggressive URL Rejection (CRITICAL)
+        url_lower = url.lower()
+        bad_url_keywords = [
+            "brochure", "flyer", "about", "benefit", "registration", 
+            "candidate-guide", "handbook", "roadmap", "logistics", 
+            "scheduling", "policies", "exam-guide", "bulletin", "faq", "apply"
+        ]
+        if any(bad in url_lower for bad in bad_url_keywords):
+            logger.warning(f"   🚫 Strictly Rejected (URL Keywords): {url}")
+            return None
+
         score = self.gate_2_score_tier(url)
-        
-        # Aggressive penalty for metadata/marketing keywords in URL
-        if any(bad in url.lower() for bad in ["brochure", "flyer", "about", "benefit", "registration"]):
-            score -= 0.5
             
         if score < 0.5: return None
         is_quality, content = self.gate_4_quality(resp, url)
@@ -574,6 +587,8 @@ class FlashcardAgent:
         fallback_topic_ids = {} # t_num -> id
         next_fallback_id = 1000 # Use high numbers for fallback to avoid overlap
         
+        failed_any = False
+        
         for item in parsed_items:
             logger.info(f"🔍 Mapping Dashboard Item: {item['name']} (Type: {item['type']}, Parent: {item.get('parent_name')})")
             
@@ -714,6 +729,7 @@ class FlashcardAgent:
             max_retries = 3
             retry_delay = 20
             
+            topic_success = False
             for attempt in range(max_retries):
                 try:
                     # Exponential backoff delay
@@ -756,12 +772,16 @@ class FlashcardAgent:
                         
                     all_flashcards.extend(valid_batch)
                     logger.info(f"✅ Extracted {len(valid_batch)} valid cards for {item['name']} (Original: {len(cards_data)})")
+                    topic_success = True
                     break # Success, exit retry loop
 
                 except Exception as e:
                     logger.error(f"Generation error Topic {item['name']} (Attempt {attempt+1}): {e}")
                     if attempt == max_retries - 1:
                         logger.error(f"❌ Failed to generate cards for {item['name']} after {max_retries} attempts.")
+            
+            if not topic_success:
+                failed_any = True
 
         if all_flashcards:
             try:
@@ -782,8 +802,13 @@ class FlashcardAgent:
             except Exception as e:
                 logger.error(f"Upload error: {e}")
 
-        logger.info(f"🏁 Generation complete for {app_name}. Total cards: {len(all_flashcards)}")
-        return {"status": "completed", "app_name": app_name, "flashcards": all_flashcards}
+        logger.info(f"🏁 Generation complete for {app_name}. Total cards: {len(all_flashcards)} | Success: {not failed_any}")
+        return {
+            "status": "completed" if not failed_any else "failed", 
+            "app_name": app_name, 
+            "flashcards": all_flashcards,
+            "all_topics_success": not failed_any
+        }
 
     # --- MAIN LOOP ---
     def run_loop(self):
@@ -824,10 +849,14 @@ class FlashcardAgent:
                         logger.info(f"⚡ Triggering GENERATE for {app}...")
                         requests.post(APP_SCRIPT_URL, data=json.dumps({"action":"update_status", "app_name":app, "column":"generate", "status":"Pending"}), headers={'Content-Type': 'application/json'}, allow_redirects=True)
                         res = self.handle_generate(app, target_exam, topic_structure, dashboard_app_id=app_id)
-                        # CRITICAL: Status is Done ONLY if cards were actually produced
+                        
+                        # CRITICAL: Status is Done ONLY if 100% of topics were successful
+                        all_success = res.get("all_topics_success", False)
                         cards_produced = len(res.get("flashcards", []))
-                        final_status = "Done" if cards_produced > 0 else "Fail"
-                        logger.info(f"Task result for {app}: {final_status} ({cards_produced} cards)")
+                        
+                        final_status = "Done" if all_success and cards_produced > 0 else "Fail"
+                        
+                        logger.info(f"Task result for {app}: {final_status} (Success: {all_success}, Cards: {cards_produced})")
                         requests.post(APP_SCRIPT_URL, data=json.dumps({"action":"update_status", "app_name":app, "column":"generate", "status":final_status}), headers={'Content-Type': 'application/json'}, allow_redirects=True)
 
             except Exception as e:

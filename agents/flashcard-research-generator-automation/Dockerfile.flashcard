@@ -15,7 +15,10 @@ RUN pip install --no-cache-dir \
     beautifulsoup4 \
     pymupdf \
     PyPDF2 \
-    python-docx
+    python-docx \
+    duckduckgo-search \
+    tavily-python \
+    pydantic
 
 # Để log hiển thị ngay lập tức trong Docker thay vì bị buffer
 ENV PYTHONUNBUFFERED=1
