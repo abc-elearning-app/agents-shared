@@ -246,9 +246,9 @@ class FlashcardAgent:
         total_items = len(parsed_items)
         
         for idx, item in enumerate(parsed_items):
-            progress_msg = f"Pending: {idx+1}/{total_items}"
+            progress_msg = f"{idx+1}/{total_items}"
             logger.info(f"🔍 Processing {progress_msg}: {item['name']} (Parent: {item.get('parent_name')})")
-            self.update_dashboard_status(app_name, "generate", progress_msg)
+            self.update_dashboard_status(app_name, "generate", "Pending")
             
             official_topic_id = "N/A"
             clean_name = re.sub(r"^(\d+\.)+\s+", "", item['name'].lower().strip())
