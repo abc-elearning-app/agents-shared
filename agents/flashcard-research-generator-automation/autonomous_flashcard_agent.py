@@ -167,6 +167,14 @@ class FlashcardAgent:
     def __init__(self):
         self.client = genai.Client(api_key=GEMINI_API_KEY)
 
+    def update_dashboard_status(self, app_name: str, column: str, status: str):
+        try:
+            payload = {"action": "update_status", "app_name": app_name, "column": column, "status": status}
+            resp = requests.post(APP_SCRIPT_URL, data=json.dumps(payload), headers={'Content-Type': 'application/json'}, allow_redirects=True, timeout=30)
+            logger.info(f"📊 Dashboard Status Updated ({column}): {status} | Response: {resp.text}")
+        except Exception as e:
+            logger.error(f"❌ Failed to update dashboard status: {e}")
+
     def handle_research(self, app_name: str, target_exam: str, exam_vendor: str) -> dict:
         logger.info(f"🚀 [RESEARCH] Start for {app_name}")
         engine = ResearchEngine(target_exam, exam_vendor)
@@ -235,9 +243,13 @@ class FlashcardAgent:
         
         all_flashcards, all_generated_fronts = [], set()
         failed_any = False
+        total_items = len(parsed_items)
         
-        for item in parsed_items:
-            logger.info(f"🔍 Processing: {item['name']} (Parent: {item.get('parent_name')})")
+        for idx, item in enumerate(parsed_items):
+            progress_msg = f"Pending: {idx+1}/{total_items}"
+            logger.info(f"🔍 Processing {progress_msg}: {item['name']} (Parent: {item.get('parent_name')})")
+            self.update_dashboard_status(app_name, "generate", progress_msg)
+            
             official_topic_id = "N/A"
             clean_name = re.sub(r"^(\d+\.)+\s+", "", item['name'].lower().strip())
             for ct in cms_topics:
@@ -305,13 +317,14 @@ class FlashcardAgent:
                     app_id = str(t.get("appId", "") or t.get("databaseId", "")).strip()
                     res_status, gen_status = str(t.get("researchStatus", "")).lower(), str(t.get("generateStatus", "")).lower()
                     if (mode in ["all", "research"]) and (res_status in ["research", "pending"]):
-                        requests.post(APP_SCRIPT_URL, data=json.dumps({"action":"update_status", "app_name":app, "column":"research", "status":"Pending"}), headers={'Content-Type': 'application/json'})
+                        self.update_dashboard_status(app, "research", "Pending")
                         res = self.handle_research(app, t.get("targetExam", ""), t.get("examVendor", ""))
-                        requests.post(APP_SCRIPT_URL, data=json.dumps({"action":"update_status", "app_name":app, "column":"research", "status":"Done" if not res["needs_more"] else "Fail"}), headers={'Content-Type': 'application/json'})
+                        self.update_dashboard_status(app, "research", "Done" if not res["needs_more"] else "Fail")
+                    
                     if (mode in ["all", "generate"]) and (gen_status in ["generate", "pending"]):
-                        requests.post(APP_SCRIPT_URL, data=json.dumps({"action":"update_status", "app_name":app, "column":"generate", "status":"Pending"}), headers={'Content-Type': 'application/json'})
+                        self.update_dashboard_status(app, "generate", "Pending")
                         res = self.handle_generate(app, t.get("targetExam", ""), t.get("topicStructure", ""), dashboard_app_id=app_id)
-                        requests.post(APP_SCRIPT_URL, data=json.dumps({"action":"update_status", "app_name":app, "column":"generate", "status":"Done" if res["flashcards_count"] > 0 else "Fail"}), headers={'Content-Type': 'application/json'})
+                        self.update_dashboard_status(app, "generate", "Done" if res["flashcards_count"] > 0 else "Fail")
             except Exception as e: logger.error(f"Loop error: {e}")
             time.sleep(60)
 
