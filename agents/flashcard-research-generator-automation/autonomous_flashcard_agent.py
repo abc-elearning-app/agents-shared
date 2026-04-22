@@ -6,6 +6,9 @@ import logging
 import hashlib
 import requests
 import argparse
+import asyncio
+import random
+from concurrent.futures import ThreadPoolExecutor
 from bs4 import BeautifulSoup
 from urllib.parse import urlparse
 from pydantic import BaseModel
@@ -140,15 +143,32 @@ class ResearchEngine:
         self.tavily = TavilyClient(api_key=TAVILY_API_KEY) if TAVILY_API_KEY else None
 
     def search_web(self, query: str, max_results=30) -> list[str]:
-        variations = [f"{query} official textbook filetype:pdf", f'"{self.exam}" "study guide" technical details filetype:pdf', f'"{self.exam}" "coursebook" filetype:pdf', f'site:edu "{self.exam}" textbook filetype:pdf']
+        variations = [
+            f"{query} official blueprint filetype:pdf",
+            f"{query} textbook filetype:pdf",
+            f'"{self.exam}" study guide filetype:pdf',
+            f"{query} manual filetype:pdf",
+            f"{query} technical details",
+            f"{query} exam objectives"
+        ]
         all_urls = set()
         for q in variations:
+            # Tavily
             if self.tavily:
                 try:
                     res = self.tavily.search(query=q, search_depth="advanced", max_results=max_results)
                     for r in res.get('results', []): all_urls.add(r['url'])
                 except: pass
+            
+            # DuckDuckGo
+            try:
+                with DDGS() as ddgs:
+                    for r in ddgs.text(q, max_results=10): urls.add(r['href'])
+            except: pass
+
+            # SearXNG
             for r in searxng_search(q, max_results=max_results): all_urls.add(r['url'])
+            
         return list(all_urls)
 
     def gate_8_execution_pipeline(self, url: str) -> dict:
@@ -166,6 +186,9 @@ class ResearchEngine:
 class FlashcardAgent:
     def __init__(self):
         self.client = genai.Client(api_key=GEMINI_API_KEY)
+        self.executor = ThreadPoolExecutor(max_workers=20)
+        self.semaphore = asyncio.Semaphore(3)
+        self.active_jobs = set()
 
     def update_dashboard_status(self, app_name: str, column: str, status: str):
         try:
@@ -196,7 +219,7 @@ class FlashcardAgent:
                 except: pass
         return {"status": "research_completed", "app_name": app_name, "needs_more": len(sources_ingested) < 5}
 
-    def handle_generate(self, app_name: str, target_exam: str, topic_structure: str, dashboard_app_id: str = "") -> dict:
+    async def handle_generate(self, app_name: str, target_exam: str, topic_structure: str, dashboard_app_id: str = "") -> dict:
         logger.info(f"⚡ [GENERATE] Start for {app_name}")
         cms_topics, cms_parts = [], []
         db_id = dashboard_app_id.strip()
@@ -255,14 +278,24 @@ class FlashcardAgent:
             for ct in cms_topics:
                 if clean_name in ct.get("name", "").lower(): official_topic_id = str(ct.get("id")); break
             
-            # High-Quality Multi-Search Retrieval
+            # Step 1: Automated Technical Retrieval & Context Optimization
+            loop = asyncio.get_event_loop()
             context_text = ""
-            search_queries = [f"Technical definitions for {item['name']} in {target_exam}", f"Key procedures and troubleshooting for {item['name']} {target_exam}", f"Industry standards and components of {item['name']}"]
-            for q in search_queries:
-                try:
-                    resp = requests.post(SEARCH_API, json={"query": q, "app_name": app_name, "limit": 30}, timeout=120)
-                    if resp.ok: context_text += resp.json().get("answer", "") + "\n\n"
-                except: pass
+            search_query = f"Provide core definitions, frameworks, formulas, and key concepts specifically for {item['name']} - {item.get('parent_name', 'General')}."
+            
+            try:
+                # API Execution & Strict Payload Limits (limit: 3, similarity_threshold: 0.4)
+                resp = await loop.run_in_executor(self.executor, lambda: requests.post(
+                    SEARCH_API, 
+                    json={"query": search_query, "app_name": app_name, "limit": 3, "similarity_threshold": 0.4}, 
+                    timeout=120
+                ))
+                if resp.ok: 
+                    ans = resp.json().get("answer", "")
+                    if "couldn't find any relevant documents" not in ans.lower():
+                        # Master Reference Truncation: Strictly first 15,000 characters
+                        context_text = ans[:15000]
+            except: pass
 
             kpi_count = 30
             batch_size = 25
@@ -279,21 +312,36 @@ class FlashcardAgent:
                     recent = list(all_generated_fronts)[-150:]
                     avoid_instruction = f"\nSTRICT ANTI-DUPLICATION: You have already generated these cards for this app. DO NOT repeat them:\n{', '.join(recent)}\n"
 
-                prompt = f"Expert Learning Designer. Exam: {target_exam}. Item: {item['name']}\nSource: {context_text[:35000]}\n{avoid_instruction}\nRULES:\n1. English only.\n2. Front: 1-8 words, Capitalize first letter only. No questions.\n3. Back: 1-2 sentences.\n4. MathJax: wrap formulas in \\\\(..\\\\). Use \\\\text{{..}} for words. \nKPI: {current_goal} unique terms."
+                prompt = f"Expert Learning Designer. Exam: {target_exam}. Item: {item['name']}\nSource: {context_text}\n{avoid_instruction}\nRULES:\n1. English only.\n2. Front: 1-8 words, Capitalize first letter only. No questions.\n3. Back: 1-2 sentences.\n4. MathJax: wrap formulas in \\\\(..\\\\). Use \\\\text{{..}} for words. \nKPI: {current_goal} unique terms."
                 
                 batch_done = False
                 for attempt in range(20): # Persistent 20 Retries
                     try:
-                        if attempt > 0: time.sleep(min(30 * attempt, 300))
-                        res = self.client.models.generate_content(model=GEMINI_MODEL, contents=prompt, config=types.GenerateContentConfig(response_mime_type="application/json", response_schema=list[FlashcardOutput], temperature=0.1))
-                        cards_data = json.loads(res.text)
+                        if attempt > 0:
+                            # Jittered Backoff Fix
+                            delay = (2 ** attempt) + random.uniform(0.5, 2.0)
+                            logger.warning(f"🔄 Retry attempt {attempt}. Sleeping {delay:.2f}s...")
+                            await asyncio.sleep(delay)
+                            
+                        # RPM Fix: Restrict concurrent Gemini API calls
+                        async with self.semaphore:
+                            res = await loop.run_in_executor(self.executor, lambda: self.client.models.generate_content(model=GEMINI_MODEL, contents=prompt, config=types.GenerateContentConfig(response_mime_type="application/json", response_schema=list[FlashcardOutput], temperature=0.1)))
+                            cards_data = json.loads(res.text)
+                        
                         for c in cards_data:
                             f_clean = fix_sentence_case(normalize_whitespace(c["Front"]))
                             if f_clean.lower() not in all_generated_fronts:
                                 c["Topic"], c["Subtopic"], c["Front"] = official_topic_id, "0", f_clean
                                 topic_cards.append(c); all_generated_fronts.add(f_clean.lower())
                         batch_done = True; break
-                    except Exception as e: logger.error(f"Batch error: {e}")
+                    except Exception as e:
+                        if "429" in str(e):
+                            # Deep Sleep for 429 recovery with jitter
+                            delay_429 = 90 + random.uniform(1.0, 5.0)
+                            logger.error(f"🚨 RESOURCE_EXHAUSTED (429). Deep sleep {delay_429:.2f}s for quota recovery...")
+                            await asyncio.sleep(delay_429)
+                        else:
+                            logger.error(f"Batch error: {e}")
                 if not batch_done: topic_success = False; break
             
             if topic_success:
@@ -304,32 +352,56 @@ class FlashcardAgent:
 
         return {"status": "completed" if not failed_any else "failed", "flashcards_count": len(all_flashcards)}
 
-    def run_loop(self, mode="all"):
+    async def run_job(self, app_name, target_exam, exam_vendor, topic_structure, app_id, task_type):
+        job_id = f"{app_name}_{task_type}"
+        if job_id in self.active_jobs: return
+        self.active_jobs.add(job_id)
+        logger.info(f"🆕 Job Started: {job_id}")
+        loop = asyncio.get_event_loop()
+        try:
+            if task_type == "research":
+                await loop.run_in_executor(self.executor, self.update_dashboard_status, app_name, "research", "Pending")
+                res = await loop.run_in_executor(self.executor, self.handle_research, app_name, target_exam, exam_vendor)
+                await loop.run_in_executor(self.executor, self.update_dashboard_status, app_name, "research", "Done" if not res["needs_more"] else "Fail")
+            elif task_type == "generate":
+                await loop.run_in_executor(self.executor, self.update_dashboard_status, app_name, "generate", "Pending")
+                res = await self.handle_generate(app_name, target_exam, topic_structure, dashboard_app_id=app_id)
+                await loop.run_in_executor(self.executor, self.update_dashboard_status, app_name, "generate", "Done" if res["flashcards_count"] > 0 else "Fail")
+        except Exception as e:
+            logger.error(f"❌ Job {job_id} failed: {e}")
+        finally:
+            self.active_jobs.remove(job_id)
+            logger.info(f"🔚 Job Finished: {job_id}")
+
+    async def run_loop(self, mode="all"):
         global logger
         logger = setup_logger(mode)
-        logger.info(f"🧠 Worker {mode.upper()} Started")
+        logger.info(f"🧠 Worker {mode.upper()} Started (Parallel Mode)")
+        loop = asyncio.get_event_loop()
         while True:
             try:
-                resp = requests.post(APP_SCRIPT_URL, data=json.dumps({"action": "read_tasks"}), headers={'Content-Type': 'application/json'}, timeout=60)
+                resp = await loop.run_in_executor(self.executor, lambda: requests.post(APP_SCRIPT_URL, data=json.dumps({"action": "read_tasks"}), headers={'Content-Type': 'application/json'}, timeout=60))
                 tasks = resp.json().get("tasks", []) if resp.ok else []
                 for t in tasks:
                     app = str(t.get("appName", "")).strip()
                     app_id = str(t.get("appId", "") or t.get("databaseId", "")).strip()
                     res_status, gen_status = str(t.get("researchStatus", "")).lower(), str(t.get("generateStatus", "")).lower()
+                    
+                    target_exam = t.get("targetExam", "")
+                    exam_vendor = t.get("examVendor", "")
+                    topic_structure = t.get("topicStructure", "")
+
                     if (mode in ["all", "research"]) and (res_status in ["research", "pending"]):
-                        self.update_dashboard_status(app, "research", "Pending")
-                        res = self.handle_research(app, t.get("targetExam", ""), t.get("examVendor", ""))
-                        self.update_dashboard_status(app, "research", "Done" if not res["needs_more"] else "Fail")
+                        asyncio.create_task(self.run_job(app, target_exam, exam_vendor, topic_structure, app_id, "research"))
                     
                     if (mode in ["all", "generate"]) and (gen_status in ["generate", "pending"]):
-                        self.update_dashboard_status(app, "generate", "Pending")
-                        res = self.handle_generate(app, t.get("targetExam", ""), t.get("topicStructure", ""), dashboard_app_id=app_id)
-                        self.update_dashboard_status(app, "generate", "Done" if res["flashcards_count"] > 0 else "Fail")
+                        asyncio.create_task(self.run_job(app, target_exam, exam_vendor, topic_structure, app_id, "generate"))
             except Exception as e: logger.error(f"Loop error: {e}")
-            time.sleep(60)
+            await asyncio.sleep(20)
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--mode", choices=["all", "research", "generate"], default="all")
     args = parser.parse_args()
-    FlashcardAgent().run_loop(mode=args.mode)
+    agent = FlashcardAgent()
+    asyncio.run(agent.run_loop(mode=args.mode))
