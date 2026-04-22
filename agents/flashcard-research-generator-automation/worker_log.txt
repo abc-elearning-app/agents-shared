@@ -54,3 +54,14 @@
 2026-04-14 17:28:22,019 | INFO | Topic 4 Subtopic N/A: Routine Blood Collections
 2026-04-14 17:28:55,953 | INFO | Topic 5 Subtopic N/A: Special Collections
 2026-04-14 17:29:27,661 | INFO | Topic 6 Subtopic N/A: Processing
+[2026-04-17 13:16:33] 🤖 Flashcard Master Worker started...
+[2026-04-17 13:16:36] ❌ Error polling dashboard: string indices must be integers, not 'str'
+[2026-04-17 13:17:43] ❌ Error polling dashboard: string indices must be integers, not 'str'
+[2026-04-17 13:18:46] ❌ Error polling dashboard: string indices must be integers, not 'str'
+[2026-04-17 13:19:58] ❌ Error polling dashboard: string indices must be integers, not 'str'
+[2026-04-17 13:21:02] ❌ Error polling dashboard: string indices must be integers, not 'str'
+[2026-04-17 13:22:09] ❌ Error polling dashboard: string indices must be integers, not 'str'
+[2026-04-17 13:23:15] ❌ Error polling dashboard: string indices must be integers, not 'str'
+[2026-04-17 13:24:20] ❌ Error polling dashboard: string indices must be integers, not 'str'
+[2026-04-17 13:25:24] ❌ Error polling dashboard: string indices must be integers, not 'str'
+[2026-04-17 13:26:04] 🤖 Flashcard Master Worker started...

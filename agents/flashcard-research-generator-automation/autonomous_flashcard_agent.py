@@ -205,13 +205,33 @@ class FlashcardAgent:
         # Parse Structure Core 1/2 Strict Order
         lines = [l.strip() for l in topic_structure.splitlines() if l.strip()]
         parsed_items, current_topic_name = [], "General"
+        
+        raw_structure = []
         for line in lines:
             core_match = re.match(r"^(\d+-\d+):\s+(.*)$", line)
             sub_match = re.match(r"^(\d+)\.(\d+)\.?\s+(.*)$", line)
             top_match = re.match(r"^(\d+)\.?\s+(.*)$", line)
-            if core_match: current_topic_name = line.strip()
-            elif sub_match: parsed_items.append({"type": 2, "name": sub_match.group(3).strip(), "parent_name": current_topic_name, "t_num": sub_match.group(1)})
-            elif top_match: current_topic_name = top_match.group(2).strip()
+            
+            if core_match:
+                current_topic_name = line.strip()
+                raw_structure.append({"type": 1, "name": current_topic_name, "parent": None})
+            elif sub_match:
+                raw_structure.append({"type": 2, "name": sub_match.group(3).strip(), "parent": current_topic_name})
+            elif top_match:
+                current_topic_name = top_match.group(2).strip()
+                raw_structure.append({"type": 1, "name": current_topic_name, "parent": None})
+        
+        # Lọc lấy Leaf Nodes: Nếu Topic có Subtopic đi kèm thì chỉ lấy Subtopic. Nếu không có thì lấy chính Topic.
+        for i in range(len(raw_structure)):
+            curr = raw_structure[i]
+            if curr["type"] == 1:
+                has_child = False
+                if i + 1 < len(raw_structure) and raw_structure[i+1]["type"] == 2:
+                    has_child = True
+                if not has_child:
+                    parsed_items.append({"type": 1, "name": curr["name"], "parent_name": "General"})
+            else:
+                parsed_items.append({"type": 2, "name": curr["name"], "parent_name": curr["parent"]})
         
         all_flashcards, all_generated_fronts = [], set()
         failed_any = False
