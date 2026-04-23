@@ -321,28 +321,27 @@ class FlashcardAgent:
         async with self.semaphore:
             try:
                 res = await asyncio.get_event_loop().run_in_executor(
-                    self.executor, 
+                    self.executor,
                     lambda: self.client.models.generate_content(
-                        model=GEMINI_MODEL, 
-                        contents=prompt, 
+                        model=GEMINI_MODEL,
+                        contents=prompt,
                         config=types.GenerateContentConfig(
-                            response_mime_type="application/json", 
-                            response_schema=schema, 
+                            response_mime_type="application/json",
+                            response_schema=schema,
                             temperature=0.1
                         )
                     )
                 )
-                # THROTTLING: Nghỉ bắt buộc 10 giây sau mỗi lần gọi thành công để giữ RPM thấp
-                await asyncio.sleep(10)
+                # THROTTLING: Nghỉ bắt buộc 30 giây sau mỗi lần gọi thành công để giữ RPM cực thấp (An toàn tuyệt đối)
+                await asyncio.sleep(30)
                 return res
             except Exception as e:
                 if "429" in str(e):
-                    # DEEP SLEEP: Nghỉ 2 phút nếu bị rate limit
-                    wait_time = 120 + random.uniform(5, 10)
-                    logger.error(f"🚨 RATE LIMIT HIT (429). Throttling active: Sleeping {wait_time:.2f}s...")
+                    # QUOTA RECOVERY: Nghỉ hẳn 5 phút nếu bị rate limit để hồi phục hoàn toàn
+                    wait_time = 300 + random.uniform(5, 15)
+                    logger.error(f"🚨 RATE LIMIT HIT (429). Sleeping {wait_time:.2f}s for full quota recovery...")
                     await asyncio.sleep(wait_time)
                 raise e
-
     def update_dashboard_status(self, app_name: str, column: str, status: str):
         try:
             payload = {"action": "update_status", "app_name": app_name, "column": column, "status": status}
@@ -352,25 +351,52 @@ class FlashcardAgent:
             logger.error(f"❌ Failed to update dashboard status: {e}")
 
     def handle_research(self, app_name: str, target_exam: str, exam_vendor: str) -> dict:
-        logger.info(f"🚀 [RESEARCH] Start for {app_name}")
+        logger.info(f"🚀 [RESEARCH] Start for {app_name} (Exam: {target_exam}, Vendor: {exam_vendor})")
         engine = ResearchEngine(target_exam, exam_vendor)
         raw_urls = engine.search_web(target_exam)
+        logger.info(f"🌐 Found {len(raw_urls)} raw URLs, starting ingestion pipeline...")
+        
         sources_ingested = []
+        pdf_count = 0
+        
         for url in raw_urls:
             if len(sources_ingested) >= 20: break
             approved = engine.gate_8_execution_pipeline(url)
             if approved:
                 try:
                     if approved['format'] == 'pdf':
+                        logger.info(f"📥 Attempting to upload PDF: {url}")
                         pdf_resp = requests.get(url, timeout=60)
                         if pdf_resp.ok:
-                            requests.post(PDF_UPLOAD_API, files={'file': pdf_resp.content}, data={'app_name': app_name}, timeout=120)
-                            sources_ingested.append(approved)
+                            upload_resp = requests.post(PDF_UPLOAD_API, files={'file': pdf_resp.content}, data={'app_name': app_name}, timeout=120)
+                            if upload_resp.ok:
+                                logger.info(f"✅ PDF Uploaded successfully: {url}")
+                                sources_ingested.append(approved)
+                                pdf_count += 1
+                            else:
+                                logger.warning(f"❌ PDF Upload failed (Status {upload_resp.status_code}): {url}")
                     else:
-                        requests.post(INGEST_API, json={"url": url, "app_name": app_name, "bucket_name": app_name, "index_document": True}, timeout=120)
-                        sources_ingested.append(approved)
-                except: pass
-        return {"status": "research_completed", "app_name": app_name, "needs_more": len(sources_ingested) < 5}
+                        logger.info(f"🔗 Attempting to ingest URL: {url}")
+                        ingest_resp = requests.post(INGEST_API, json={"url": url, "app_name": app_name, "bucket_name": app_name, "index_document": True}, timeout=120)
+                        if ingest_resp.ok:
+                            logger.info(f"✅ URL Ingested successfully: {url}")
+                            sources_ingested.append(approved)
+                        else:
+                            logger.warning(f"❌ URL Ingest failed (Status {ingest_resp.status_code}): {url}")
+                except Exception as e:
+                    logger.error(f"⚠️ Error during ingestion of {url}: {e}")
+        
+        # Logic báo Done chặt chẽ hơn: Cần ít nhất 5 nguồn, trong đó khuyến khích có PDF
+        success_criteria = len(sources_ingested) >= 5
+        logger.info(f"🏁 [RESEARCH] Finished for {app_name}. Total: {len(sources_ingested)} (PDFs: {pdf_count})")
+        
+        return {
+            "status": "research_completed", 
+            "app_name": app_name, 
+            "needs_more": not success_criteria,
+            "pdf_count": pdf_count,
+            "total_count": len(sources_ingested)
+        }
 
     async def handle_generate(self, app_name: str, target_exam: str, topic_structure: str, dashboard_app_id: str = "") -> dict:
         logger.info(f"⚡ [GENERATE] Start for {app_name}")
