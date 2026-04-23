@@ -507,24 +507,26 @@ class FlashcardAgent:
             official_topic_id = "N/A"
             official_subtopic_id = "N/A" # This will hold the PART ID (Type 3)
             
-            clean_item_name = re.sub(r"^(\d+\.)+\s+", "", item['name'].strip())
+            clean_item_name = re.sub(r"\s+", " ", re.sub(r"^(\d+\.)+\s+", "", item['name'].strip())).lower()
             
             # 1. Luôn tìm Topic ID (Type 1)
             parent_to_find = item['name'] if item['type'] == 1 else item.get('parent_name', 'General')
-            clean_parent = re.sub(r"^(\d+\.)+\s+", "", parent_to_find.strip()).lower()
+            clean_parent = re.sub(r"\s+", " ", re.sub(r"^(\d+\.)+\s+", "", parent_to_find.strip())).lower()
             
             for ct in cms_topics:
-                if clean_parent in ct.get("name", "").lower() or ct.get("name", "").lower() in clean_parent:
+                cms_t_name = re.sub(r"\s+", " ", ct.get("name", "")).lower()
+                if clean_parent == cms_t_name or clean_parent in cms_t_name or cms_t_name in clean_parent:
                     official_topic_id = str(ct.get("id"))
                     break
             
             # 2. Nếu là Subtopic, tìm Part 1 (Type 3) của nó
             # Pattern: [Subtopic Name] + " 1"
             if item['type'] == 2:
-                search_part_name = f"{clean_item_name} 1".lower()
+                search_part_name = f"{clean_item_name} 1"
                 logger.info(f"🕵️ Searching for Part 1: '{search_part_name}' (type=3)")
                 for cp in cms_parts:
-                    if cp.get("type") == 3 and search_part_name == cp.get("name", "").lower():
+                    cms_p_name = re.sub(r"\s+", " ", cp.get("name", "")).lower()
+                    if cp.get("type") == 3 and search_part_name == cms_p_name:
                         official_subtopic_id = str(cp.get("id"))
                         logger.info(f"✅ Found Part 1 ID: {official_subtopic_id}")
                         break
