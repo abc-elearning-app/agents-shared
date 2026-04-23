@@ -209,51 +209,102 @@ class FlashcardOutput(BaseModel):
 class ResearchEngine:
     BLOCKED_DOMAINS = ["baidu.com", "zhihu.com", "csdn.net", "bilibili.com", "weibo.com", "sogou.com", "360.cn", "douban.com", "toutiao.com", "jianshu.com"]
     SUPPORTED_FORMATS = [".pdf", ".md", ".txt", ".text", ".json", ".docx", ".html", ".htm"]
+    
+    # Tier 1: Official Publishers & Authorities
+    TIER_1_DOMAINS = [
+        ".gov", ".mil", ".edu", "comptia.org", "isc2.org", "pmi.org", "aws.amazon.com", "microsoft.com", 
+        "cisco.com", "oracle.com", "faa.gov", "nist.gov", "iso.org", "ieee.org", "aicpa.org"
+    ]
+    # Tier 2: Recognized Exam Prep & Support
+    TIER_2_DOMAINS = [
+        "professormesser.com", "pilotinstitute.com", "whizlabs.com", "pluralsight.com", "github.com",
+        "wiley.com", "kaplan.com", "pearson.com", "sybex.com", "boson.com"
+    ]
+
     def __init__(self, exam: str, vendor: str):
         self.exam, self.vendor = exam, vendor or ""
         self.registry = load_url_registry()
         self.tavily = TavilyClient(api_key=TAVILY_API_KEY) if TAVILY_API_KEY else None
 
     def search_web(self, query: str, max_results=30) -> list[str]:
+        # NGUYÊN TẮC 4: RECENCY CHECK - Luôn tìm version mới nhất (mặc định 2026 cho năm hiện tại của hệ thống)
+        current_year = "2026"
+        
+        # NGUYÊN TẮC 2: CẤU TRÚC QUERY TIÊU CHUẨN
         variations = [
-            f"{query} official blueprint filetype:pdf",
-            f"{query} textbook filetype:pdf",
-            f'"{self.exam}" study guide filetype:pdf',
-            f"{query} manual filetype:pdf",
-            f"{query} technical details",
-            f"{query} exam objectives"
+            # Tầng 1: Official site query
+            f'"{self.exam}" site:{self.vendor.lower() if self.vendor else ""}' if self.vendor else f'"{self.exam}" official blueprint',
+            # Tầng 1 & 6: PDF Mining from authorities
+            f'"{self.exam}" filetype:pdf {self.vendor}',
+            f'"{query}" site:.gov OR site:.edu filetype:pdf',
+            # Tầng 3: Recognized Exam Prep
+            f'"{self.exam}" study guide {current_year}',
+            f'"{query}" explanation "official"',
+            # Tầng 4: Standards
+            f'"{query}" technical standards documentation',
+            # Verbatim phrase check (if query is specific)
+            f'"{query}"'
         ]
+        
         all_urls = set()
         for q in variations:
-            # Tavily
+            # Tavily (Advanced Research)
             if self.tavily:
                 try:
                     res = self.tavily.search(query=q, search_depth="advanced", max_results=max_results)
                     for r in res.get('results', []): all_urls.add(r['url'])
                 except: pass
             
-            # DuckDuckGo
+            # DuckDuckGo (General fallback)
             try:
                 with DDGS() as ddgs:
-                    for r in ddgs.text(q, max_results=10): urls.add(r['href'])
+                    for r in ddgs.text(q, max_results=10): all_urls.add(r['href'])
             except: pass
 
-            # SearXNG
+            # SearXNG (Meta-search)
             for r in searxng_search(q, max_results=max_results): all_urls.add(r['url'])
             
-        return list(all_urls)
+        # NGUYÊN TẮC 1: LỌC QUA GATE 1 (Accessibility & Blocked Domains)
+        valid_urls = []
+        for url in all_urls:
+            if any(blocked in url.lower() for blocked in self.BLOCKED_DOMAINS): continue
+            valid_urls.append(url)
+            
+        return valid_urls
 
     def gate_8_execution_pipeline(self, url: str) -> dict:
+        """
+        NGUYÊN TẮC 1: PYRAMID NGUỒN (TIER CLASSIFICATION)
+        """
         try:
+            # GATE 1: Pre-upload accessibility check
             resp = requests.get(url, headers={"User-Agent": "Mozilla/5.0"}, timeout=15)
             if not resp.ok: return None
         except: return None
+        
         u = url.lower()
-        score = 0.7
-        if any(x in u for x in [".gov", ".edu", "comptia.org", "isc2.org", "pmi.org"]): score = 0.9
-        if u.endswith(".pdf"): score += 0.1
-        if score < 0.5: return None
-        return {"url": url, "score": score, "canonical_id": hashlib.md5(url.encode()).hexdigest(), "format": "pdf" if u.endswith(".pdf") else "html"}
+        score = 0.7 # Tier 3 default
+        
+        # TIER 1: Official Score 0.9
+        if any(domain in u for domain in self.TIER_1_DOMAINS):
+            score = 0.9
+        # TIER 2: Recognized Prep Score 0.8
+        elif any(domain in u for domain in self.TIER_2_DOMAINS):
+            score = 0.8
+            
+        # Score Adjustments
+        if u.endswith(".pdf"): score += 0.1 # NGUYÊN TẮC 6: PDF Mining - Gold Standard
+        if any(x in u for x in ["blueprint", "objective", "syllabus"]): score += 0.05
+        
+        # Gate 3: Freshness & Gate 4: Quality (Cơ bản qua score)
+        if score < 0.7: return None
+        
+        return {
+            "url": url, 
+            "score": round(score, 2), 
+            "canonical_id": hashlib.md5(url.encode()).hexdigest(), 
+            "format": "pdf" if u.endswith(".pdf") else "html"
+        }
 
 class FlashcardAgent:
     def __init__(self):

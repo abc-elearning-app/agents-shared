@@ -44,6 +44,15 @@ When the Action Command is "RESEARCH", you must NOT generate flashcards. Your ON
 ### Step 2: Autonomous Research & The 8 Ingestion Gates
 Conduct advanced web searches to locate the most up-to-date, official Exam Blueprint/Syllabus/Objectives and high-value study materials. Every discovered source MUST pass the following strict pipeline before being uploaded to Supabase:
 
+**Research Principles (Query & Verification):**
+1. **Source Pyramid:** Prioritize Official Publishers (.gov, .org of vendors) > Support Docs > Recognized Exam Prep (Messer, Sybex) > Academic Standards (IEEE, ISO). Banned: Quizlet, Reddit, Brainly.
+2. **Standard Query Structure:** Use `"<concept>" site:<domain>`, `"<concept>" filetype:pdf`, or `"<exact phrase>" <publisher>`.
+3. **Verbatim Phrase Search:** Use quotes for specific explanations to verify wording authenticity against official sources.
+4. **Recency Check:** Always verify the latest version (e.g., SY0-701 vs SY0-601).
+5. **Cross-Check:** Never overturn original data without confirmation from at least 2 independent authoritative sources.
+6. **PDF Mining:** Deep-dive into long PDFs using the RAG pipeline; PDFs are the "Gold Standard" for accuracy.
+7. **Anti-Patterns:** Avoid generic queries, snippet-only reading, or relying on "general knowledge" without source backing.
+
 **Gate 1: URL Validation & Accessibility (CRITICAL)**
 * Must be HTTP/HTTPS with a valid domain.
 * **Pre-Upload Check (CRITICAL):** You MUST access the URL and verify that it is a live, reachable, and usable source before any ingestion attempt. If the link returns any 4xx/5xx status code (including 404, 403, 401, 410, 429, 500, 502, 503, 504), fails DNS/SSL/connection checks, times out, enters a broken redirect chain, or is otherwise inaccessible, reject it immediately and find an alternative. Even if the response is 200 OK, you MUST still reject it if the destination is a soft-404 page, empty page, parked domain, placeholder page, login wall, CAPTCHA wall, paywall-only page, broken file, invalid file, or any page that does not expose meaningful retrievable content. Only sources that are confirmed live, accessible, and content-valid may proceed to the next stage.

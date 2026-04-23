@@ -1,0 +1,72 @@
+NGUYÊN TẮC QUERY & RESEARCH CHO GEMINI CLI AGENT
+=====================================================
+
+Dưới đây là bộ nguyên tắc hướng dẫn Agent thực hiện tìm kiếm và xác minh thông tin trong Phase 1 (Research) để đảm bảo độ chính xác cao nhất.
+
+1. PYRAMID NGUỒN (THỨ TỰ ƯU TIÊN)
+----------------------------------
+Luôn thực hiện search từ tầng cao nhất xuống, dừng lại ngay khi tìm được thông tin xác đáng:
+
+- Tầng 1: Publisher chính thức (Default, luôn thử trước)
+  Ví dụ: faa.gov, comptia.org, pmi.org, aicpa.org, docs.aws.amazon.com.
+- Tầng 2: Vendor support docs (Cho các sản phẩm cụ thể)
+  Ví dụ: support.cisco.com, oracle.com/docs.
+- Tầng 3: Recognized exam prep (Khi publisher quá chung chung)
+  Ví dụ: professormesser.com (Sec+), Boson, Sybex, Wiley, Kaplan.
+- Tầng 4: Academic / Standards body (Tiêu chuẩn/Giao thức)
+  Ví dụ: ieee.org, iso.org, NIST publications.
+- Tầng 5: Tutorials/blog (Hạn chót, chỉ dùng để đối chiếu)
+  Ví dụ: Medium, dev.to, geeksforgeeks.
+- CẤM SỬ DỤNG: Quizlet, Brainly, Reddit, Yahoo Answers (Nguồn cộng đồng, thường sai).
+
+2. CẤU TRÚC QUERY TIÊU CHUẨN
+-----------------------------
+Sử dụng công thức: "<concept> + <authoritative qualifier> + <filetype>"
+
+- Query Tồi: "what is COGS" -> Trả về Investopedia, Wikipedia, blog rác.
+- Query Mẫu Chuẩn:
+    + "<concept>" site:<official-domain>
+    + "<concept>" filetype:pdf <publisher>
+    + "<concept>" "<exam-code>" study guide
+    + "<exact phrase from explanation>" <publisher>
+
+- Ví dụ thực tế:
+    + "Class B" "weather minimum" site:faa.gov filetype:pdf
+    + "attestation" "SY0-701" site:comptia.org OR site:professormesser.com
+
+3. VERBATIM PHRASE SEARCH (TRUY XUẤT NGUỒN GỐC)
+-----------------------------------------------
+Khi cần xác minh một câu giải thích cụ thể, hãy đặt nguyên đoạn đó trong ngoặc kép:
+- Ví dụ: "Remote pilot in command must" site:faa.gov
+- Nếu trả về 1-2 kết quả chính thống: Phrase đúng và là wording chuẩn.
+- Nếu chỉ trả về Quizlet/blog: Wording đã bị paraphrase, cần tìm lại version chính thống.
+
+4. KIỂM TRA TÍNH CẬP NHẬT (RECENCY CHECK)
+------------------------------------------
+Luôn xác minh phiên bản mới nhất của tài liệu:
+- Sec+ -> SY0-701 (Không dùng SY0-601).
+- PMBOK -> 7th Edition (Không dùng 6th).
+- Part 107 -> Kiểm tra revision date trong file PDF.
+- AWS docs -> Kiểm tra version stamp trên URL.
+- Query mẫu: "<concept>" "<latest version code>" 2026
+
+5. XÁC MINH CHÉO (CROSS-CHECK >= 2 SOURCES)
+-------------------------------------------
+Không thay đổi đáp án gốc (overturn) trừ khi có ít nhất 2 nguồn độc lập xác nhận:
+- Bước 1: Tìm kiếm nguồn từ Official Publisher.
+- Bước 2: Tìm kiếm nguồn từ Recognized Exam Prep uy tín.
+- Bước 3: Nếu cả 2 đồng nhất -> Cho phép cập nhật thông tin.
+- Bước 4: Nếu mâu thuẫn -> Giữ nguyên đáp án gốc và đánh dấu (flag) để kiểm tra sau.
+
+6. KHAI THÁC FILE PDF (PDF MINING)
+----------------------------------
+Nội dung chứng chỉ chuyên sâu thường nằm trong các file PDF dài.
+- Quy trình: WebSearch (filetype:pdf) -> Xác nhận nội dung sơ bộ -> Download (curl) -> Upload vào RAG bucket -> Truy vấn sâu.
+- PDF là "Tiêu chuẩn vàng" vì: Có số trang để trích dẫn, wording chuẩn xác, URL ổn định.
+
+7. CÁC LỖI CẦN TRÁNH (ANTI-PATTERNS)
+------------------------------------
+- KHÔNG dùng query chung chung kiểu "PMP hybrid organization explanation".
+- KHÔNG chỉ đọc snippet preview mà không truy cập xem toàn bộ nội dung web.
+- KHÔNG xác nhận thông tin chỉ bằng "kiến thức chung" cộng với 1 trang blog.
+- KHÔNG bỏ qua nguồn chính thống chỉ vì file PDF quá lớn hoặc khó parse.
