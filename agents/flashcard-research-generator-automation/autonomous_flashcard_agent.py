@@ -39,7 +39,7 @@ SEARCH_API = os.getenv("SEARCH_API", "http://117.7.0.31:5930/search/chat").strip
 SEARXNG_URL = os.getenv("SEARXNG_URL", "http://searxng:8080/search").strip()
 URL_REGISTRY_FILE = "url_registry.json"
 
-GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "").strip()
+GEMINI_API_KEYS = [k.strip() for k in os.getenv("GEMINI_API_KEY", "").split(",") if k.strip()]
 GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-2.0-flash").strip()
 TAVILY_API_KEY = os.getenv("TAVILY_API_KEY", "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").strip()
 
@@ -308,40 +308,71 @@ class ResearchEngine:
 
 class FlashcardAgent:
     def __init__(self):
-        self.client = genai.Client(api_key=GEMINI_API_KEY)
+        # Khởi tạo danh sách clients cho tất cả API keys
+        self.clients = [genai.Client(api_key=k) for k in GEMINI_API_KEYS]
+        self.current_client_idx = 0
+        self.key_cooldowns = [0.0] * len(GEMINI_API_KEYS)
+        
         self.executor = ThreadPoolExecutor(max_workers=20)
         # THROTTLING: Chỉ cho phép 1 request duy nhất được thực hiện tại một thời điểm trên toàn hệ thống
         self.semaphore = asyncio.Semaphore(1) 
         self.active_jobs = set()
 
+    async def get_next_available_client(self):
+        """Logic luân phiên chuyển Key khi gặp 429 hoặc xoay vòng"""
+        start_idx = self.current_client_idx
+        while True:
+            # Nếu Key hiện tại không trong thời gian cooldown
+            if time.time() > self.key_cooldowns[self.current_client_idx]:
+                return self.clients[self.current_client_idx]
+            
+            # Chuyển sang idx tiếp theo
+            self.current_client_idx = (self.current_client_idx + 1) % len(self.clients)
+            
+            # Nếu đã duyệt qua tất cả các Key và đều đang cooldown
+            if self.current_client_idx == start_idx:
+                min_cooldown = min(self.key_cooldowns)
+                wait_time = max(0.1, min_cooldown - time.time())
+                logger.warning(f"⏳ All API keys are in cooldown. Waiting {wait_time:.2f}s...")
+                await asyncio.sleep(wait_time)
+
     async def rate_limited_gen(self, prompt, schema):
         """
-        Hàm bao bọc để điều tiết luồng API (Throttling)
+        Hàm bao bọc để điều tiết luồng API (Throttling) + API Rotation
         """
         async with self.semaphore:
-            try:
-                res = await asyncio.get_event_loop().run_in_executor(
-                    self.executor,
-                    lambda: self.client.models.generate_content(
-                        model=GEMINI_MODEL,
-                        contents=prompt,
-                        config=types.GenerateContentConfig(
-                            response_mime_type="application/json",
-                            response_schema=schema,
-                            temperature=0.1
+            keys_attempted = 0
+            while keys_attempted < len(self.clients):
+                client = await self.get_next_available_client()
+                try:
+                    res = await asyncio.get_event_loop().run_in_executor(
+                        self.executor,
+                        lambda: client.models.generate_content(
+                            model=GEMINI_MODEL,
+                            contents=prompt,
+                            config=types.GenerateContentConfig(
+                                response_mime_type="application/json",
+                                response_schema=schema,
+                                temperature=0.1
+                            )
                         )
                     )
-                )
-                # THROTTLING: Nghỉ bắt buộc 30 giây sau mỗi lần gọi thành công để giữ RPM cực thấp (An toàn tuyệt đối)
-                await asyncio.sleep(30)
-                return res
-            except Exception as e:
-                if "429" in str(e):
-                    # QUOTA RECOVERY: Nghỉ hẳn 5 phút nếu bị rate limit để hồi phục hoàn toàn
-                    wait_time = 300 + random.uniform(5, 15)
-                    logger.error(f"🚨 RATE LIMIT HIT (429). Sleeping {wait_time:.2f}s for full quota recovery...")
-                    await asyncio.sleep(wait_time)
-                raise e
+                    # THROTTLING: Nghỉ bắt buộc 30 giây sau mỗi lần gọi thành công
+                    await asyncio.sleep(30)
+                    return res
+                except Exception as e:
+                    if "429" in str(e):
+                        # QUOTA RECOVERY: Đánh dấu Key này bị hỏng trong 5 phút
+                        self.key_cooldowns[self.current_client_idx] = time.time() + 300
+                        logger.error(f"🚨 API Key {self.current_client_idx+1} hit 429. Switching key...")
+                        # Chuyển idx ngay lập tức để vòng lặp sau dùng key mới
+                        self.current_client_idx = (self.current_client_idx + 1) % len(self.clients)
+                        keys_attempted += 1
+                        continue
+                    raise e
+            
+            # Nếu tất cả Key đều đạt giới hạn
+            raise Exception("All API keys reached limit. Quota exhausted.")
     def update_dashboard_status(self, app_name: str, column: str, status: str):
         try:
             payload = {"action": "update_status", "app_name": app_name, "column": column, "status": status}
