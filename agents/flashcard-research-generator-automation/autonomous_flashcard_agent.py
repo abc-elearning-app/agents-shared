@@ -232,12 +232,15 @@ class ResearchEngine:
         # NGUYÊN TẮC 4: RECENCY CHECK
         current_year = "2026"
         
+        # SỬ DỤNG APP_NAME LÀM TỪ KHÓA CHÍNH ĐỂ SÁT NỘI DUNG BÀI THI
+        search_key = self.app_name.upper()
+
         # NGUYÊN TẮC 2: CẤU TRÚC QUERY TIÊU CHUẨN
         variations = [
-            f'"{self.exam}" site:{self.vendor.lower() if self.vendor else ""}' if self.vendor else f'"{self.exam}" official blueprint',
-            f'"{self.exam}" filetype:pdf {self.vendor}',
+            f'"{search_key}" site:{self.vendor.lower() if self.vendor else ""}' if self.vendor else f'"{search_key}" official blueprint',
+            f'"{search_key}" filetype:pdf {self.vendor}',
             f'"{query}" site:.gov OR site:.edu filetype:pdf',
-            f'"{self.exam}" study guide {current_year}',
+            f'"{search_key}" study guide {current_year}',
             f'"{query}" explanation "official"',
             f'"{query}" technical standards documentation',
             f'"{query}"'
@@ -247,14 +250,13 @@ class ResearchEngine:
         if topics:
             sample_topics = random.sample(topics, min(len(topics), 5))
             for t in sample_topics:
-                variations.append(f'"{t}" "{self.exam}" coursebook official handbook PDF')
+                variations.append(f'"{t}" "{search_key}" coursebook official handbook PDF')
         
         all_urls = set()
         
-        # TAVILY - GỌI 1 LẦN DUY NHẤT ĐỂ TIẾT KIỆM TOKEN
+        # TAVILY - SỬ DỤNG SEARCH_KEY ĐỂ TÌM KIẾM CHÍNH XÁC
         if self.tavily:
-            # Câu lệnh tổng hợp tìm Blueprint và Manual (Dạng PDF - Gold Standard)
-            tavily_query = f'"{self.exam}" official blueprint manual study guide filetype:pdf'
+            tavily_query = f'"{search_key}" official blueprint manual study guide filetype:pdf'
             try:
                 res = self.tavily.search(query=tavily_query, search_depth="advanced", max_results=20)
                 for r in res.get('results', []): all_urls.add(r['url'])
