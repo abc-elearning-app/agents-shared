@@ -618,11 +618,8 @@ class FlashcardAgent:
                             logger.warning(f"🔄 Retry attempt {attempt}. Sleeping {delay:.2f}s...")
                             await asyncio.sleep(delay)
                             
-                        async with self.semaphore:
-                            res = await loop.run_in_executor(self.executor, lambda: self.client.models.generate_content(model=GEMINI_MODEL, contents=prompt, config=types.GenerateContentConfig(response_mime_type="application/json", response_schema=list[FlashcardOutput], temperature=0.1)))
-                            # GIẢM TẦN SUẤT: Nghỉ bắt buộc 10 giây sau mỗi request thành công để giữ RPM an toàn
-                            await asyncio.sleep(10)
-                            cards_data = json.loads(res.text)
+                        res = await self.rate_limited_gen(prompt, list[FlashcardOutput])
+                        cards_data = json.loads(res.text)
                         
                         for c in cards_data:
                             c["Front"] = apply_term_constraints(fix_mathjax(normalize_whitespace(c["Front"])), is_front=True)
