@@ -475,12 +475,23 @@ class FlashcardAgent:
 
                 {exclusion_instruction}
 
-                STRICT RULES FOR "FRONT" (TERM):
-                - RULE: NO CONVERSATIONAL QUESTIONS. No "?" marks.
-                - RULE: DO NOT use the words: "What", "How", "Why", "Define", "Explain".
-                - RULE: THE FRONT MUST BE A PURE NOUN PHRASE (A TERM).
-                - RULE: 1-8 words. Capitalize ONLY the first letter and acronyms.
-                - ANTI-META: IMMEDIATELY REJECT any term related to exam logistics, scoring, or structure.
+                UNIVERSAL STANDARDS FOR "FRONT" TERM EXTRACTION:
+                - RULE 1: THE ENTITY & TESTABILITY TEST (MOST IMPORTANT). 
+                  The extracted term MUST be a specific, testable Knowledge Entity. It must be a specific Law, Protocol, Theorem, Technical Component, Medical Condition, or Academic Vocabulary (e.g., "Dram Shop Law", "TCP/IP Protocol", "Work Breakdown Structure", "Pythagorean Theorem").
+                - RULE 2: THE UNIVERSAL "FLUFF & META" KILL LIST (ABSOLUTE BAN). 
+                  IMMEDIATELY REJECT any term containing words like: 
+                  * Meta/Exam: "Exam", "Format", "Chapter", "Course", "Handbook", "Passing Score".
+                  * Vague Skills: "Skills", "Abilities", "Reasoning", "Strategies", "Thinking", "Aptitude".
+                  * Empty Categories: "Introduction", "Overview", "Basics", "Concepts", "The Process".
+                - RULE 3: SPECIFICITY & CONTEXT-INDEPENDENCE. 
+                  The term MUST make complete sense on its own if picked up from the floor. Do not extract generic nouns. (e.g., "Azure Blob Storage" instead of "Storage").
+                - RULE 4: NO ACTIONS OR QUESTIONS. 
+                  DO NOT use conversational questions or instructional verbs. 
+                  * Convert "How to mitigate risk" to "Risk Mitigation Techniques".
+                  * Convert "What is a Variable" to "Algebraic Variable".
+                - RULE 5: FORMATTING CONSTRAINT.
+                  * Capitalization: Only capitalize the first letter of the entire term and any acronyms (e.g., "Engineering controls", "OSHA standards").
+                  * Length: Strictly 1 to 8 words.
 
                 STRICT RULES FOR "BACK":
                 - Definition + 1 essential characteristic.
@@ -488,7 +499,7 @@ class FlashcardAgent:
                 - MathJax: Wrap in \\\\(..\\\\) with NO spaces. Use \\\\text{{}} for words.
 
                 KPI: {current_goal} unique terms.
-                Topic ID: {official_topic_id}, Subtopic: 0.
+                Topic ID: {official_topic_id}, Subtopic: {official_subtopic_id}.
                 """
                 
                 batch_done = False

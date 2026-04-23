@@ -128,12 +128,32 @@ Using the synthesized Master Reference, apply những quy tắc sau:
 ALL output content (Front Term, Back Explanation) MUST be written entirely in English.
 
 **B. "Term" Standards (Front of Flashcard)**
-*   **RULE 1: DEEP TOPIC ALIGNMENT (MOST IMPORTANT):** The extracted term MUST be a critical, testable piece of knowledge that STRICTLY BELONGS to the current Topic/Subtopic being generated. Focus ONLY on pure domain knowledge.
-*   **RULE 2: THE "ANTI-META" KILL LIST (ABSOLUTE BAN):** NEVER extract terms that explain the exam itself. IMMEDIATELY REJECT any term related to: exam logistics, format, structure, scoring, administration, or study materials. (e.g., REJECT terms like "Exam Format", "Passing Score", "Chapter 1", "Handbook", "Access Code").
-*   **RULE 3: CONTEXT-INDEPENDENT & MEANINGFUL:** The term must make perfect sense on its own. Do not extract generic, empty words like "The Process" or "Costs". You MUST append the domain context (e.g., change "Costs" to "Civil Liability Costs").
-*   **RULE 4: NO CONVERSATIONAL QUESTIONS:** Do not use conversational questions. (e.g., Change "How to check IDs" to "ID Checking Process").
-*   **Capitalization (STRICT):** Only capitalize the first letter of the entire term and any acronyms (e.g., "OSHA", "HIPAA", "PPE"). All other words MUST be entirely lowercase.
-*   **Length Constraint:** Strictly 1 to 8 words.
+   UNIVERSAL STANDARDS FOR "FRONT" TERM EXTRACTION:
+
+   - RULE 1: THE ENTITY & TESTABILITY TEST (MOST IMPORTANT). 
+     The extracted term MUST be a specific, testable Knowledge Entity. Ask yourself: "Is this a definitive answer to a multiple-choice question?" 
+     It must be a specific Law, Protocol, Theorem, Technical Component, Medical Condition, or Academic Vocabulary (e.g., "Dram Shop Law", "TCP/IP Protocol", "Work Breakdown Structure", "Pythagorean Theorem").
+
+   - RULE 2: THE UNIVERSAL "FLUFF & META" KILL LIST (ABSOLUTE BAN). 
+     NEVER extract broad categories, meta-concepts, human abilities, or exam logistics. 
+     IMMEDIATELY REJECT any term containing words like: 
+     * Meta/Exam: "Exam", "Format", "Chapter", "Course", "Handbook", "Passing Score".
+     * Vague Skills: "Skills", "Abilities", "Reasoning", "Strategies", "Thinking", "Aptitude".
+     * Empty Categories: "Introduction", "Overview", "Basics", "Concepts", "The Process".
+
+   - RULE 3: SPECIFICITY & CONTEXT-INDEPENDENCE. 
+     The term MUST make complete sense on its own if picked up from the floor. Do not extract generic nouns. 
+     * Incorrect: "Costs", "Storage", "Addition", "Checking".
+     * Correct: "Civil Liability Costs", "Azure Blob Storage", "Commutative Property of Addition", "ID Verification Process".
+
+   - RULE 4: NO ACTIONS OR QUESTIONS. 
+     DO NOT use conversational questions or instructional verbs. 
+     * Convert "How to mitigate risk" to "Risk Mitigation Techniques".
+     * Convert "What is a Variable" to "Algebraic Variable".
+
+   - RULE 5: FORMATTING CONSTRAINT.
+     * Capitalization: Only capitalize the first letter of the entire term and any acronyms (e.g., "Engineering controls", "OSHA standards").
+     * Length: Strictly 1 to 8 words.
 
 **C. Leaf Node Generation Policy (MANDATORY)**
 *   **Minimal Level Only:** You MUST only generate flashcards at the smallest hierarchical level (Leaf Node). 
