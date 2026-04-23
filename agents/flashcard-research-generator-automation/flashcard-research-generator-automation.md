@@ -114,6 +114,26 @@ Assign scores based on the source origin:
 **Gate 8: Final Ingestion Flow (Execution)**
 Follow this exact pipeline for every file: URL -> Validate -> Blocked? -> Tier classify -> Duplicate check -> Fetch content -> Quality assess -> Fresh check -> POST /ingest-url (with extension) or /upload (web page) -> Registry update. 
 
+**MANDATORY STANDARDS FOR REFERENCE MATERIALS (BOOKS, PDFS, HANDBOOKS):**
+When providing a reference for the flashcard, your goal is to point the user to official study guides, coursebooks, ebooks, PDF handbooks, cheat sheets, or any other resource that provides knowledge supporting for learning the targeted certificate. 
+
+1. **DYNAMIC SEARCH STRATEGY (CRITICAL):**
+   - To find the most accurate and diverse sources, DO NOT just rely on the general exam name.
+   - You MUST mentally combine the specific Topic/Subtopic name with the Exam Name to target the exact chapter/concept. 
+   - Conceptual Search Example: Instead of looking for generic "ServSafe Alcohol guide", target your knowledge base for "Dram Shop Law ServSafe Coursebook" or "BAC limits Azure Fundamentals PDF".
+
+2. **DOCUMENT FORMAT & SOURCE PRIORITY:**
+   - Priority 1: Official Vendor Coursebooks or Handbooks (e.g., "ServSafe Alcohol Coursebook", "PMBOK Guide", "Azure Fundamentals Exam Guide").
+   - Priority 2: Official standard `.pdf` documents from authoritative domains (e.g., osha.gov, fda.gov, pmi.org).
+   - ABSOLUTE BAN: Do NOT link to illegal pirated sites, exam-dump platforms, or user-uploaded homework sites (e.g., CourseHero, Quizlet, BrainDumps).
+
+3. **HALLUCINATION PREVENTION (STRICT ZERO-GUESSING):**
+   - LLMs often hallucinate fake `.pdf` URLs. DO NOT invent or guess URLs.
+   - IF you are 100% certain of a live, open-access official URL, you may provide it.
+   - IF you do not know the exact live URL, DO NOT guess. Instead, output the precise Citation Title (Book Name + Chapter) so the user can look it up in their own textbook.
+   - Acceptable Output Example: "ServSafe Alcohol Coursebook, Chapter 2: Alcohol Laws and Your Responsibility".
+   - Unacceptable Output Example: "https://servsafe.com/fake-document-123.pdf"
+
 ### Step 3: Output Phase 1
 Return ONLY a JSON block detailing the bucket status and the source materials now stored.
 

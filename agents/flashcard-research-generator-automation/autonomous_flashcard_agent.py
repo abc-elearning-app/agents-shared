@@ -205,6 +205,8 @@ class FlashcardOutput(BaseModel):
     Subtopic: str
     Front: str
     Back: str
+    Reference: str
+    Reference: str
 
 class ResearchEngine:
     BLOCKED_DOMAINS = ["baidu.com", "zhihu.com", "csdn.net", "bilibili.com", "weibo.com", "sogou.com", "360.cn", "douban.com", "toutiao.com", "jianshu.com"]
@@ -226,25 +228,26 @@ class ResearchEngine:
         self.registry = load_url_registry()
         self.tavily = TavilyClient(api_key=TAVILY_API_KEY) if TAVILY_API_KEY else None
 
-    def search_web(self, query: str, max_results=30) -> list[str]:
-        # NGUYÊN TẮC 4: RECENCY CHECK - Luôn tìm version mới nhất (mặc định 2026 cho năm hiện tại của hệ thống)
+    def search_web(self, query: str, topics: list = None, max_results=30) -> list[str]:
+        # NGUYÊN TẮC 4: RECENCY CHECK
         current_year = "2026"
         
         # NGUYÊN TẮC 2: CẤU TRÚC QUERY TIÊU CHUẨN
         variations = [
-            # Tầng 1: Official site query
             f'"{self.exam}" site:{self.vendor.lower() if self.vendor else ""}' if self.vendor else f'"{self.exam}" official blueprint',
-            # Tầng 1 & 6: PDF Mining from authorities
             f'"{self.exam}" filetype:pdf {self.vendor}',
             f'"{query}" site:.gov OR site:.edu filetype:pdf',
-            # Tầng 3: Recognized Exam Prep
             f'"{self.exam}" study guide {current_year}',
             f'"{query}" explanation "official"',
-            # Tầng 4: Standards
             f'"{query}" technical standards documentation',
-            # Verbatim phrase check (if query is specific)
             f'"{query}"'
         ]
+
+        # DYNAMIC SEARCH STRATEGY (BỔ SUNG)
+        if topics:
+            sample_topics = random.sample(topics, min(len(topics), 5))
+            for t in sample_topics:
+                variations.append(f'"{t}" "{self.exam}" coursebook official handbook PDF')
         
         all_urls = set()
         
@@ -608,6 +611,13 @@ class FlashcardAgent:
                 - Definition + 1 essential characteristic.
                 - 1-2 concise sentences. No bullet points.
                 - MathJax: Wrap in \\\\(..\\\\) with NO spaces. Use \\\\text{{}} for words.
+
+                MANDATORY STANDARDS FOR "REFERENCE":
+                - Goal: Provide official source for learning.
+                - Priority: Vendor Coursebooks, Handbooks, Official PDFs (.gov, .edu, pmi.org, etc.).
+                - Hallucination Prevention: NEVER guess/invent URLs. 
+                - Format: IF you are 100% sure of a live official URL, provide it. OTHERWISE, provide a precise Citation (e.g., "ServSafe Alcohol Coursebook, Chapter 2").
+                - ABSOLUTE BAN: No links to Quizlet, CourseHero, or pirated sites.
 
                 KPI: {current_goal} unique terms.
                 Topic ID: {official_topic_id}, Subtopic: {official_subtopic_id}.
