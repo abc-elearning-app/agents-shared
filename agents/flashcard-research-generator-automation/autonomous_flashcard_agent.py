@@ -347,7 +347,7 @@ class FlashcardAgent:
                 try:
                     res = await asyncio.get_event_loop().run_in_executor(
                         self.executor,
-                        lambda: client.models.generate_content(
+                        lambda c=client: c.models.generate_content(
                             model=GEMINI_MODEL,
                             contents=prompt,
                             config=types.GenerateContentConfig(
