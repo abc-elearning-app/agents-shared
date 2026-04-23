@@ -402,24 +402,30 @@ class FlashcardAgent:
             if approved:
                 try:
                     if approved['format'] == 'pdf':
-                        logger.info(f"📥 Attempting to upload PDF: {url}")
-                        pdf_resp = requests.get(url, headers={"User-Agent": "Mozilla/5.0"}, timeout=60)
+                        logger.info(f"📥 Downloading PDF for local processing: {url}")
+                        pdf_resp = requests.get(url, headers={"User-Agent": "Mozilla/5.0"}, timeout=120)
                         if pdf_resp.ok:
-                            # Tạo tên file từ URL để tránh trùng lặp và giúp Ingest API xử lý tốt hơn
-                            file_name = f"{hashlib.md5(url.encode()).hexdigest()}.pdf"
-                            # Gửi cả app_name và bucket_name cho đồng bộ
+                            # 1. Tạo tên file chuẩn
+                            clean_filename = f"{hashlib.md5(url.encode()).hexdigest()}.pdf"
+                            
+                            # 2. Gọi API upload PDF chuyên dụng
+                            logger.info(f"📤 Uploading PDF to Shared Repository: {clean_filename}")
                             upload_resp = requests.post(
                                 PDF_UPLOAD_API, 
-                                files={'file': (file_name, pdf_resp.content, 'application/pdf')}, 
-                                data={'app_name': app_name, 'bucket_name': app_name}, 
-                                timeout=120
+                                files={'file': (clean_filename, pdf_resp.content, 'application/pdf')}, 
+                                data={
+                                    'app_name': app_name, 
+                                    'bucket_name': app_name # Đảm bảo bucket_name luôn có
+                                }, 
+                                timeout=180 # Tăng timeout cho file lớn
                             )
+                            
                             if upload_resp.ok:
                                 logger.info(f"✅ PDF Uploaded successfully: {url}")
                                 sources_ingested.append(approved)
                                 pdf_count += 1
                             else:
-                                logger.warning(f"❌ PDF Upload failed (Status {upload_resp.status_code}): {url}")
+                                logger.warning(f"❌ PDF Upload failed (Status {upload_resp.status_code}): {url} | Detail: {upload_resp.text}")
                     else:
                         logger.info(f"🔗 Attempting to ingest URL: {url}")
                         ingest_resp = requests.post(INGEST_API, json={"url": url, "app_name": app_name, "bucket_name": app_name, "index_document": True}, timeout=120)
