@@ -228,12 +228,12 @@ class ResearchEngine:
         self.registry = load_url_registry()
         self.tavily = TavilyClient(api_key=TAVILY_API_KEY) if TAVILY_API_KEY else None
 
-    def search_web(self, query: str, topics: list = None, max_results=30) -> list[str]:
+    def search_web(self, query: str, app_name: str = "general", topics: list = None, max_results=30) -> list[str]:
         # NGUYÊN TẮC 4: RECENCY CHECK
         current_year = "2026"
         
         # SỬ DỤNG APP_NAME LÀM TỪ KHÓA CHÍNH ĐỂ SÁT NỘI DUNG BÀI THI
-        search_key = self.app_name.upper()
+        search_key = app_name.upper()
 
         # NGUYÊN TẮC 2: CẤU TRÚC QUERY TIÊU CHUẨN
         variations = [
@@ -254,11 +254,12 @@ class ResearchEngine:
         
         all_urls = set()
         
-        # TAVILY - SỬ DỤNG SEARCH_KEY ĐỂ TÌM KIẾM CHÍNH XÁC
+        # TAVILY - GỌI 1 LẦN DUY NHẤT ĐỂ TIẾT KIỆM TOKEN
         if self.tavily:
             tavily_query = f'"{search_key}" official blueprint manual study guide filetype:pdf'
             try:
-                res = self.tavily.search(query=tavily_query, search_depth="advanced", max_results=20)
+                # Chuyển search_depth sang basic để tiết kiệm token, chỉ lấy links
+                res = self.tavily.search(query=tavily_query, search_depth="basic", max_results=20)
                 for r in res.get('results', []): all_urls.add(r['url'])
             except: pass
 
@@ -392,7 +393,8 @@ class FlashcardAgent:
     def handle_research(self, app_name: str, target_exam: str, exam_vendor: str) -> dict:
         logger.info(f"🚀 [RESEARCH] Start for {app_name} (Exam: {target_exam}, Vendor: {exam_vendor})")
         engine = ResearchEngine(target_exam, exam_vendor)
-        raw_urls = engine.search_web(target_exam)
+        # Parse topics from existing structure if available (optional enhancement)
+        raw_urls = engine.search_web(target_exam, app_name=app_name)
         logger.info(f"🌐 Found {len(raw_urls)} raw URLs, starting ingestion pipeline...")
         
         sources_ingested = []
