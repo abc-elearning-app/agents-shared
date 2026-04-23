@@ -1,0 +1,365 @@
+{
+  "app_name": "part107",
+  "flashcards": [
+    {
+      "Topic": "5473451013832704",
+      "Subtopic": "N/A",
+      "Front": "What affects drone performance?",
+      "Back": "Air density, temperature, altitude, and humidity greatly influence drone performance. Higher density altitude reduces lift and engine power."
+    },
+    {
+      "Topic": "5473451013832704",
+      "Subtopic": "N/A",
+      "Front": "What is density altitude?",
+      "Back": "Density altitude is pressure altitude corrected for nonstandard temperature. It significantly impacts aircraft performance."
+    },
+    {
+      "Topic": "5473451013832704",
+      "Subtopic": "N/A",
+      "Front": "Effects of high humidity on performance?",
+      "Back": "High humidity reduces air density, decreasing performance. Moist air contains more water molecules and fewer oxygen molecules."
+    },
+    {
+      "Topic": "5473451013832704",
+      "Subtopic": "N/A",
+      "Front": "How does temperature affect air density?",
+      "Back": "As temperature increases, air density decreases. This affects lift and overall drone performance negatively, particularly in hot weather."
+    },
+    {
+      "Topic": "5473451013832704",
+      "Subtopic": "N/A",
+      "Front": "What is the effect of altitude?",
+      "Back": "Increased altitude reduces air density, decreasing available thrust and lift. Higher altitudes mean thinner air, requiring higher speeds."
+    },
+    {
+      "Topic": "5473451013832704",
+      "Subtopic": "N/A",
+      "Front": "Maximum takeoff weight factors",
+      "Back": "Consider drone weight, payload, and battery weight. Exceeding max takeoff weight can cause instability and accidents."
+    },
+    {
+      "Topic": "5473451013832704",
+      "Subtopic": "N/A",
+      "Front": "What causes center of gravity shifts?",
+      "Back": "Adding or shifting payload can cause CG shifts. Incorrect CG affects stability and control; adjust for load distribution."
+    },
+    {
+      "Topic": "5473451013832704",
+      "Subtopic": "N/A",
+      "Front": "How to calculate weight and balance?",
+      "Back": "Determine the weight and arm (distance) of each item, then sum the moments (weight x arm) and divide by total weight to find the CG."
+    },
+    {
+      "Topic": "5473451013832704",
+      "Subtopic": "N/A",
+      "Front": "Performance charts: what do they show?",
+      "Back": "Performance charts provide data about takeoff distance, climb rate, range, and endurance under specific atmospheric conditions and drone configurations."
+    },
+    {
+      "Topic": "5473451013832704",
+      "Subtopic": "N/A",
+      "Front": "Effects of wind on drone performance",
+      "Back": "Headwinds decrease ground speed, while tailwinds increase it. Crosswinds affect stability and require control inputs to maintain desired flight path."
+    },
+    {
+      "Topic": "5473451013832704",
+      "Subtopic": "N/A",
+      "Front": "Battery performance with temperature change",
+      "Back": "Colder temperatures reduce battery capacity and voltage. This decreases flight time. Warmer temperatures can cause overheating if excessive."
+    },
+    {
+      "Topic": "5473451013832704",
+      "Subtopic": "N/A",
+      "Front": "What is 'arm' in weight and balance?",
+      "Back": "Arm is the horizontal distance in inches from the reference datum to the center of gravity of an item. Used for moment calculation."
+    },
+    {
+      "Topic": "5473451013832704",
+      "Subtopic": "N/A",
+      "Front": "Define: datum (weight and balance)",
+      "Back": "The datum is an imaginary vertical plane from which all horizontal distances are measured for balance purposes. It’s the starting point."
+    },
+    {
+      "Topic": "5473451013832704",
+      "Subtopic": "N/A",
+      "Front": "Define: moment (weight and balance)",
+      "Back": "Moment is the product of the weight of an item multiplied by its arm. \\(Moment = Weight \\times Arm\\); it represents a rotational force."
+    },
+    {
+      "Topic": "5473451013832704",
+      "Subtopic": "N/A",
+      "Front": "Usable fuel impact on drone weight",
+      "Back": "Usable fuel is considered part of the useful load. Its weight directly affects the total weight and balance and the endurance of the drone."
+    },
+    {
+      "Topic": "5473451013832704",
+      "Subtopic": "N/A",
+      "Front": "Adverse effect of forward CG",
+      "Back": "A forward CG increases stability but decreases maneuverability, requiring more up-elevator to maintain altitude. It can also increase stall speed."
+    },
+    {
+      "Topic": "5473451013832704",
+      "Subtopic": "N/A",
+      "Front": "Adverse effect of rearward CG",
+      "Back": "A rearward CG decreases stability but increases maneuverability. It can lead to control difficulties, and makes stall recovery more difficult."
+    },
+    {
+      "Topic": "5473451013832704",
+      "Subtopic": "N/A",
+      "Front": "How does icing impact drone performance?",
+      "Back": "Icing increases weight and drag, reducing lift and thrust. It can also affect control surfaces and sensor accuracy, leading to a loss of control."
+    },
+    {
+      "Topic": "5473451013832704",
+      "Subtopic": "N/A",
+      "Front": "Describe load factor",
+      "Back": "Load factor is the ratio of the aerodynamic force on the aircraft to its weight. It increases during turns and abrupt maneuvers."
+    },
+    {
+      "Topic": "5473451013832704",
+      "Subtopic": "N/A",
+      "Front": "Define stall speed",
+      "Back": "Stall speed is the minimum airspeed at which an aircraft can maintain lift. Exceeding the critical angle of attack will cause a stall."
+    },
+    {
+      "Topic": "5473451013832704",
+      "Subtopic": "N/A",
+      "Front": "Angle of attack (AOA) defined",
+      "Back": "Angle of Attack is the angle between the wing's chord line and the relative wind. Critical AOA is when stall occurs regardless of airspeed."
+    },
+    {
+      "Topic": "5473451013832704",
+      "Subtopic": "N/A",
+      "Front": "Relationship: airspeed and angle of attack",
+      "Back": "To maintain altitude, as airspeed decreases, the angle of attack must increase. If AOA becomes excessive a stall occurs."
+    },
+    {
+      "Topic": "5473451013832704",
+      "Subtopic": "N/A",
+      "Front": "Ground effect: improved performance?",
+      "Back": "Ground effect reduces induced drag and increases lift near the ground. This requires less thrust and improves takeoff and landing performance near the surface."
+    },
+    {
+      "Topic": "5473451013832704",
+      "Subtopic": "N/A",
+      "Front": "How to mitigate performance degradation?",
+      "Back": "Reduce payload, use higher-capacity batteries, and adjust flight plans to account for wind, temperature, and altitude to maintain acceptable performance margins."
+    },
+    {
+      "Topic": "5473451013832704",
+      "Subtopic": "N/A",
+      "Front": "What is payload management?",
+      "Back": "Payload management refers to strategically loading and positioning the drone to keep within the aircraft's center of gravity limits."
+    },
+    {
+      "Topic": "5473451013832704",
+      "Subtopic": "N/A",
+      "Front": "Effect of wind gusts on flight",
+      "Back": "Wind gusts can cause sudden changes in airspeed and direction, increasing the risk of exceeding the drone's performance limits or losing control."
+    },
+    {
+      "Topic": "5473451013832704",
+      "Subtopic": "N/A",
+      "Front": "How to prevent drone overloading?",
+      "Back": "Always adhere to the manufacturer's specified maximum takeoff weight. Calculate the total weight before each flight, including all accessories and payload."
+    },
+    {
+      "Topic": "5473451013832704",
+      "Subtopic": "N/A",
+      "Front": "Altitude effect on propeller efficiency?",
+      "Back": "Propeller efficiency decreases with altitude due to thinner air. This requires higher RPM to produce the same thrust as at lower altitudes."
+    },
+    {
+      "Topic": "5473451013832704",
+      "Subtopic": "N/A",
+      "Front": "What are performance margins?",
+      "Back": "Performance margins are the extra lift, thrust, or battery capacity reserved to handle unexpected conditions like wind gusts or increased weight."
+    },
+    {
+      "Topic": "5473451013832704",
+      "Subtopic": "N/A",
+      "Front": "What is induced drag?",
+      "Back": "Induced drag is the drag created as a byproduct of lift generation on an airfoil. It increases with angle of attack and decreases with airspeed."
+    },
+    {
+      "Topic": "5473451013832704",
+      "Subtopic": "N/A",
+      "Front": "What is density altitude's impact on performance?",
+      "Back": "Increased density altitude reduces aircraft performance. It decreases lift, thrust, and engine power due to thinner air, requiring longer takeoff and landing distances."
+    },
+    {
+      "Topic": "5473451013832704",
+      "Subtopic": "N/A",
+      "Front": "Define 'center of gravity' (CG).",
+      "Back": "The center of gravity (CG) is the point where the aircraft's weight is evenly distributed. Its location affects stability and control."
+    },
+    {
+      "Topic": "5473451013832704",
+      "Subtopic": "N/A",
+      "Front": "How does a forward CG affect stability?",
+      "Back": "A forward CG increases longitudinal stability, making the aircraft more resistant to pitch changes, but reduces maneuverability and increases stall speed."
+    },
+    {
+      "Topic": "5473451013832704",
+      "Subtopic": "N/A",
+      "Front": "Explain the effect of humidity on air density.",
+      "Back": "Increased humidity decreases air density. Water vapor is lighter than dry air, so humid air is less dense, reducing aircraft performance."
+    },
+    {
+      "Topic": "5473451013832704",
+      "Subtopic": "N/A",
+      "Front": "What is 'load factor'?",
+      "Back": "Load factor is the ratio of total load supported by the aircraft's wing to the actual weight of the aircraft. It's expressed in 'G' units."
+    },
+    {
+      "Topic": "5473451013832704",
+      "Subtopic": "N/A",
+      "Front": "Define 'maximum takeoff weight'.",
+      "Back": "Maximum takeoff weight is the highest weight at which the aircraft is permitted to initiate takeoff. It includes the weight of the aircraft, fuel, payload, and crew."
+    },
+    {
+      "Topic": "5473451013832704",
+      "Subtopic": "N/A",
+      "Front": "How does wind affect takeoff distance?",
+      "Back": "A headwind decreases takeoff distance, while a tailwind increases it. Wind speed must be factored into takeoff performance calculations."
+    },
+    {
+      "Topic": "5473451013832704",
+      "Subtopic": "N/A",
+      "Front": "What is 'service ceiling'?",
+      "Back": "Service ceiling is the altitude at which the aircraft's maximum rate of climb is reduced to \\(100\\) feet per minute. Above this altitude, performance degrades significantly."
+    },
+    {
+      "Topic": "5473451013832704",
+      "Subtopic": "N/A",
+      "Front": "Explain the effect of altitude on engine power.",
+      "Back": "As altitude increases, engine power decreases due to reduced air density. This requires adjustments to maintain optimal performance and may affect climb rate."
+    },
+    {
+      "Topic": "5473451013832704",
+      "Subtopic": "N/A",
+      "Front": "What are performance charts used for?",
+      "Back": "Performance charts predict aircraft behavior under different conditions. They allow pilots to determine takeoff distance, climb rate, and other critical parameters based on weight, altitude, and temperature."
+    },
+    {
+      "Topic": "5473451013832704",
+      "Subtopic": "N/A",
+      "Front": "Define 'pressure altitude'.",
+      "Back": "Pressure altitude is the altitude indicated when the altimeter is set to the standard datum plane of \\(29.92\\) inches of mercury (\\(29.92\\) inHg). It's used for performance calculations."
+    },
+    {
+      "Topic": "5473451013832704",
+      "Subtopic": "N/A",
+      "Front": "What is the effect of temperature on density altitude?",
+      "Back": "As temperature increases, density altitude increases. Higher temperatures cause the air to expand, reducing its density and negatively impacting performance."
+    },
+    {
+      "Topic": "5473451013832704",
+      "Subtopic": "N/A",
+      "Front": "Define 'stall speed'.",
+      "Back": "Stall speed is the minimum airspeed at which an aircraft can maintain lift. Exceeding the critical angle of attack will cause a stall, regardless of airspeed."
+    },
+    {
+      "Topic": "5473451013832704",
+      "Subtopic": "N/A",
+      "Front": "How does weight affect stall speed?",
+      "Back": "Increased weight increases stall speed. A heavier aircraft requires a higher angle of attack to generate enough lift, thus increasing the minimum airspeed required to avoid a stall."
+    },
+    {
+      "Topic": "5473451013832704",
+      "Subtopic": "N/A",
+      "Front": "What is the impact of ice on performance?",
+      "Back": "Ice accumulation increases weight and drag, and decreases lift. This can severely degrade aircraft performance, increasing stall speed and reducing climb rate."
+    },
+    {
+      "Topic": "5473451013832704",
+      "Subtopic": "N/A",
+      "Front": "Define 'basic empty weight'.",
+      "Back": "Basic Empty Weight is the standard weight of the aircraft. It includes unusable fuel, full operating fluids, and standard equipment, but excludes payload and usable fuel."
+    },
+    {
+      "Topic": "5473451013832704",
+      "Subtopic": "N/A",
+      "Front": "What is the effect of slope on takeoff?",
+      "Back": "An upslope increases takeoff distance, while a downslope decreases it. The slope affects the amount of thrust needed to accelerate to takeoff speed."
+    },
+    {
+      "Topic": "5473451013832704",
+      "Subtopic": "N/A",
+      "Front": "How does runway surface affect takeoff?",
+      "Back": "A soft or rough runway increases takeoff distance compared to a hard, smooth surface due to increased friction and resistance."
+    },
+    {
+      "Topic": "5473451013832704",
+      "Subtopic": "N/A",
+      "Front": "What is the effect of a tailwind on landing?",
+      "Back": "A tailwind increases landing distance. The aircraft's groundspeed is higher at touchdown, requiring a longer distance to decelerate and stop safely."
+    },
+    {
+      "Topic": "5473451013832704",
+      "Subtopic": "N/A",
+      "Front": "Define 'operational empty weight'.",
+      "Back": "Operational empty weight includes the basic empty weight, plus the weight of crew, their baggage, and any other equipment necessary for the flight."
+    },
+    {
+      "Topic": "5473451013832704",
+      "Subtopic": "N/A",
+      "Front": "Describe effects of exceeding weight limits.",
+      "Back": "Exceeding weight limits reduces performance. It increases takeoff and landing distances, decreases climb rate, and increases stall speed."
+    },
+    {
+      "Topic": "5473451013832704",
+      "Subtopic": "N/A",
+      "Front": "Define 'indicated airspeed' (IAS).",
+      "Back": "Indicated airspeed (IAS) is the speed shown on the aircraft's airspeed indicator. It is subject to instrument and position error."
+    },
+    {
+      "Topic": "5473451013832704",
+      "Subtopic": "N/A",
+      "Front": "What is 'true airspeed' (TAS)?",
+      "Back": "True airspeed (TAS) is the airspeed relative to undisturbed air. It is calibrated airspeed corrected for altitude and temperature."
+    },
+    {
+      "Topic": "5473451013832704",
+      "Subtopic": "N/A",
+      "Front": "Describe the effects of turbulence.",
+      "Back": "Turbulence causes erratic changes in airspeed and altitude. Severe turbulence can exceed aircraft structural limits, potentially causing damage or loss of control."
+    },
+    {
+      "Topic": "5473451013832704",
+      "Subtopic": "N/A",
+      "Front": "Define 'best angle of climb' (\\(V_x\\)).",
+      "Back": "Best angle of climb (\\(V_x\\)) is the airspeed that gains the most altitude over a given horizontal distance. It's typically used to clear obstacles after takeoff."
+    },
+    {
+      "Topic": "5473451013832704",
+      "Subtopic": "N/A",
+      "Front": "Define 'best rate of climb' (\\(V_y\\)).",
+      "Back": "Best rate of climb (\\(V_y\\)) is the airspeed that gains the most altitude in a given amount of time. It's used for general climb performance."
+    },
+    {
+      "Topic": "5473451013832704",
+      "Subtopic": "N/A",
+      "Front": "Explain the term 'density altitude'.",
+      "Back": "Density altitude is pressure altitude corrected for non-standard temperature. It directly affects aircraft performance because it represents the air's density."
+    },
+    {
+      "Topic": "5473451013832704",
+      "Subtopic": "N/A",
+      "Front": "What is a 'moment' in weight and balance?",
+      "Back": "A moment is the product of a weight and its arm (distance from the datum). It represents the rotational force caused by that weight around the datum."
+    },
+    {
+      "Topic": "5473451013832704",
+      "Subtopic": "N/A",
+      "Front": "What is the 'datum' in weight and balance?",
+      "Back": "The datum is an imaginary vertical plane from which all horizontal distances are measured for weight and balance purposes. It is set by the manufacturer."
+    },
+    {
+      "Topic": "5473451013832704",
+      "Subtopic": "N/A",
+      "Front": "What is meant by 'arm' in weight & balance?",
+      "Back": "Arm is the horizontal distance, in inches, from the reference datum line to the center of gravity of an item. It's used to calculate the 'moment'."
+    }
+  ]
+}

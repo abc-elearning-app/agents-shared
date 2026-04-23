@@ -114,19 +114,48 @@ def crawl_with_apify(url: str) -> str:
 def normalize_whitespace(text: str) -> str:
     return re.sub(r"\s+", " ", str(text or "")).strip()
 
-def fix_sentence_case(text: str) -> str:
-    acronyms = {"OSHA", "HIPAA", "PPE", "CDC", "CLSI", "HIV", "HBV", "HCV", "EDTA", "SST", "PST", "CBC", "PT", "PTT", "INR", "GTT", "HCG", "PKU", "ABG", "TDM", "SDS", "MSDS", "RBC", "WBC", "WBS", "TCP/IP", "IaaS", "PaaS", "SaaS", "RBAC", "VPC", "VNet"}
-    text = re.sub(r"\s+", " ", str(text or "")).strip()
+def fix_mathjax(text: str) -> str:
     if not text: return ""
+    # Chuyển $..$ sang \(..\) nếu có
+    text = re.sub(r"\$(.*?)\$", r"\\(\1\\)", text)
+    # Xóa khoảng trắng sát thẻ \( và \)
+    text = text.replace("\\( ", "\\(").replace(" \\)", "\\)")
+    return text
+
+def apply_term_constraints(text: str) -> str:
+    if not text: return ""
+    # 1. Xóa dấu hỏi và các từ hỏi phổ biến (Rule 4)
+    text = text.replace("?", "").strip()
+    patterns = [
+        r"^(What is|What are|Define|Explain|Describe|How to|Why do|Where is|Which of the following is|Which is)\s+",
+        r"^(The|A|An)\s+" 
+    ]
+    for p in patterns:
+        text = re.sub(p, "", text, flags=re.IGNORECASE)
+    
+    # 2. Quy tắc viết hoa (Capitalization STRICT)
+    # Chỉ viết hoa chữ cái đầu và acronyms. Còn lại viết thường.
+    acronyms = {"OSHA", "HIPAA", "PPE", "CDC", "CLSI", "HIV", "HBV", "HCV", "EDTA", "SST", "PST", "CBC", "PT", "PTT", "INR", "GTT", "HCG", "PKU", "ABG", "TDM", "SDS", "MSDS", "RBC", "WBC", "TCP/IP", "IaaS", "PaaS", "SaaS", "RBAC", "VPC", "VNET", "SOHO", "DNS", "DHCP", "FTP", "HTTP", "HTTPS"}
     words = text.split()
+    if not words: return ""
+    
     new_words = []
-    for word in words:
-        clean = re.sub(r'[^\w]', '', word).upper()
-        if clean in acronyms or (word.isupper() and len(clean) <= 5): new_words.append(word.upper())
-        else: new_words.append(word.lower())
-    result = " ".join(new_words)
-    if result: result = result[0].upper() + result[1:]
-    return result
+    for i, word in enumerate(words):
+        # Giữ nguyên MathJax
+        if "\\(" in word or "\\)" in word:
+            new_words.append(word)
+            continue
+        
+        clean_word = re.sub(r'[^\w]', '', word).upper()
+        if clean_word in acronyms:
+            new_words.append(word.upper())
+        elif i == 0:
+            # Viết hoa chữ cái đầu tiên của từ đầu tiên
+            new_words.append(word[0].upper() + word[1:].lower())
+        else:
+            new_words.append(word.lower())
+    
+    return " ".join(new_words)
 
 class FlashcardOutput(BaseModel):
     Topic: str
@@ -306,33 +335,63 @@ class FlashcardAgent:
                 current_goal = min(batch_size, kpi_count - len(topic_cards))
                 if current_goal <= 0: break
                 
-                # STRICT ANTI-DUPLICATION (Topic/App Wide)
-                avoid_instruction = ""
+                # Session-Based Deduplication (Exclusion List) for the current job
+                exclusion_instruction = ""
                 if all_generated_fronts:
-                    recent = list(all_generated_fronts)[-150:]
-                    avoid_instruction = f"\nSTRICT ANTI-DUPLICATION: You have already generated these cards for this app. DO NOT repeat them:\n{', '.join(recent)}\n"
+                    previously_generated_terms_list = ", ".join(list(all_generated_fronts))
+                    exclusion_instruction = f"""
+                    EXCLUSION LIST: You have already generated flashcards for the following terms: {previously_generated_terms_list}. 
+                    CRITICAL RULE: You are STRICTLY FORBIDDEN from generating flashcards for these exact terms again. Furthermore, you MUST NOT generate ANY terms that are semantic duplicates, synonyms, or paraphrased versions of the terms in the exclusion list (e.g., if 'Risk Mitigation' is in the list, you cannot generate 'Mitigating Risks' or 'Risk Decreasing'). Every newly generated term MUST introduce a completely unique and distinct educational concept.
+                    """
 
-                prompt = f"Expert Learning Designer. Exam: {target_exam}. Item: {item['name']}\nSource: {context_text}\n{avoid_instruction}\nRULES:\n1. English only.\n2. Front: 1-8 words, Capitalize first letter only. No questions.\n3. Back: 1-2 sentences.\n4. MathJax: wrap formulas in \\\\(..\\\\). Use \\\\text{{..}} for words. \nKPI: {current_goal} unique terms."
+                # Master Reference Synthesis per Topic/Subtopic
+                prompt = f"""
+                You are an Expert Learning Designer. Use the provided MASTER REFERENCE to extract flashcards for: {item['name']}
+                
+                MASTER REFERENCE (Source of Truth):
+                {context_text}
+
+                {exclusion_instruction}
+
+                STRICT RULES FOR "FRONT" (TERM):
+                - RULE: NO CONVERSATIONAL QUESTIONS. No "?" marks.
+                - RULE: DO NOT use the words: "What", "How", "Why", "Define", "Explain".
+                - RULE: THE FRONT MUST BE A PURE NOUN PHRASE (A TERM).
+                - RULE: 1-8 words. Capitalize ONLY the first letter and acronyms.
+                - ANTI-META: IMMEDIATELY REJECT any term related to exam logistics, scoring, or structure.
+
+                STRICT RULES FOR "BACK":
+                - Definition + 1 essential characteristic.
+                - 1-2 concise sentences. No bullet points.
+                - MathJax: Wrap in \\\\(..\\\\) with NO spaces. Use \\\\text{{}} for words.
+
+                KPI: {current_goal} unique terms.
+                Topic ID: {official_topic_id}, Subtopic: 0.
+                """
                 
                 batch_done = False
-                for attempt in range(20): # Persistent 20 Retries
+                for attempt in range(20): 
                     try:
                         if attempt > 0:
-                            # Jittered Backoff Fix
                             delay = (2 ** attempt) + random.uniform(0.5, 2.0)
                             logger.warning(f"🔄 Retry attempt {attempt}. Sleeping {delay:.2f}s...")
                             await asyncio.sleep(delay)
                             
-                        # RPM Fix: Restrict concurrent Gemini API calls
                         async with self.semaphore:
                             res = await loop.run_in_executor(self.executor, lambda: self.client.models.generate_content(model=GEMINI_MODEL, contents=prompt, config=types.GenerateContentConfig(response_mime_type="application/json", response_schema=list[FlashcardOutput], temperature=0.1)))
                             cards_data = json.loads(res.text)
                         
                         for c in cards_data:
-                            f_clean = fix_sentence_case(normalize_whitespace(c["Front"]))
-                            if f_clean.lower() not in all_generated_fronts:
-                                c["Topic"], c["Subtopic"], c["Front"] = official_topic_id, "0", f_clean
-                                topic_cards.append(c); all_generated_fronts.add(f_clean.lower())
+                            # Áp dụng các hàm xử lý chuẩn (MathJax + Term constraints)
+                            c["Front"] = apply_term_constraints(fix_mathjax(normalize_whitespace(c["Front"])))
+                            c["Back"] = fix_mathjax(normalize_whitespace(c["Back"]))
+                            
+                            f_clean = c["Front"].lower()
+                            if f_clean not in all_generated_fronts:
+                                # Anti-meta final check
+                                if not any(x in f_clean for x in ["exam", "format", "score", "passing", "handbook", "chapter"]):
+                                    c["Topic"], c["Subtopic"] = official_topic_id, "0"
+                                    topic_cards.append(c); all_generated_fronts.add(f_clean)
                         batch_done = True; break
                     except Exception as e:
                         if "429" in str(e):

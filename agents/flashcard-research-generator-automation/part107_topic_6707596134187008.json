@@ -1,0 +1,353 @@
+{
+  "app_name": "part107",
+  "flashcards": [
+    {
+      "Topic": "6707596134187008",
+      "Subtopic": "N/A",
+      "Front": "Maximum suas groundspeed",
+      "Back": "The maximum groundspeed for a small UAS is \\(87\\) knots (\\(100\\) mph). Going faster violates regulations."
+    },
+    {
+      "Topic": "6707596134187008",
+      "Subtopic": "N/A",
+      "Front": "Maximum altitude AGL for suas operation",
+      "Back": "The maximum altitude allowed for sUAS operation is \\(400\\) feet AGL, or higher if flying within a \\(400\\)-foot radius of a structure."
+    },
+    {
+      "Topic": "6707596134187008",
+      "Subtopic": "N/A",
+      "Front": "Minimum visibility for suas operation",
+      "Back": "The minimum visibility for sUAS operation is \\(3\\) statute miles from the control station. This requirement ensures the remote pilot can maintain visual line of sight (VLOS)."
+    },
+    {
+      "Topic": "6707596134187008",
+      "Subtopic": "N/A",
+      "Front": "Definition of visual line of sight (VLOS)",
+      "Back": "VLOS means the remote pilot or visual observer is able to see the unmanned aircraft at all times during flight. This is without vision enhancement."
+    },
+    {
+      "Topic": "6707596134187008",
+      "Subtopic": "N/A",
+      "Front": "Maximum blood alcohol level",
+      "Back": "The maximum allowed blood alcohol level for a remote pilot is \\(0.04\\) percent. It is also illegal to operate under the influence of any drug."
+    },
+    {
+      "Topic": "6707596134187008",
+      "Subtopic": "N/A",
+      "Front": "Time from alcohol consumption before flight",
+      "Back": "You must not operate an sUAS within \\(8\\) hours after consuming alcohol. This ensures cognitive abilities are not impaired during flight."
+    },
+    {
+      "Topic": "6707596134187008",
+      "Subtopic": "N/A",
+      "Front": "Operating over people requirements",
+      "Back": "Operations over people are permitted only if the sUAS meets specific requirements related to its weight and design. Refer to Part \\(107\\) regulations."
+    },
+    {
+      "Topic": "6707596134187008",
+      "Subtopic": "N/A",
+      "Front": "Operating from a moving vehicle",
+      "Back": "You cannot operate a sUAS from a moving aircraft or moving land vehicle unless over a sparsely populated area. "
+    },
+    {
+      "Topic": "6707596134187008",
+      "Subtopic": "N/A",
+      "Front": "Documents required during suas operation",
+      "Back": "You must have your remote pilot certificate and registration documents readily available during all sUAS operations. Provide them when requested by authorities."
+    },
+    {
+      "Topic": "6707596134187008",
+      "Subtopic": "N/A",
+      "Front": "Preflight inspection requirements",
+      "Back": "A preflight inspection must be conducted by the remote pilot-in-command before each flight to ensure the sUAS is safe for operation and all systems are functioning correctly."
+    },
+    {
+      "Topic": "6707596134187008",
+      "Subtopic": "N/A",
+      "Front": "Weather requirements for safe suas flight",
+      "Back": "You must be aware of current and forecast weather conditions, including wind speed, visibility, and cloud cover, to operate safely. Use weather charts to aid in planning."
+    },
+    {
+      "Topic": "6707596134187008",
+      "Subtopic": "N/A",
+      "Front": "Definition of a 'person directly participating'",
+      "Back": "A 'person directly participating' is someone involved in the operation of the sUAS, such as the remote pilot, visual observer, or someone maintaining flight safety."
+    },
+    {
+      "Topic": "6707596134187008",
+      "Subtopic": "N/A",
+      "Front": "Reporting an accident to the FAA",
+      "Back": "An accident must be reported to the FAA if it causes serious injury or property damage exceeding \\(\\$500\\). A report must be filed within \\(10\\) days."
+    },
+    {
+      "Topic": "6707596134187008",
+      "Subtopic": "N/A",
+      "Front": "Lost link procedure",
+      "Back": "Establish a predetermined procedure for a lost link event. The sUAS should either return to home or auto-land to mitigate risk."
+    },
+    {
+      "Topic": "6707596134187008",
+      "Subtopic": "N/A",
+      "Front": "Night operations requirement",
+      "Back": "For night operations, the sUAS must have lighted anti-collision lighting visible for at least \\(3\\) statute miles, and the pilot must complete recurrent training."
+    },
+    {
+      "Topic": "6707596134187008",
+      "Subtopic": "N/A",
+      "Front": "Authorization to fly in controlled airspace",
+      "Back": "You must obtain authorization from Air Traffic Control (ATC) to operate in controlled airspace, such as Class B, C, D, and E airspace, using LAANC or DroneZone."
+    },
+    {
+      "Topic": "6707596134187008",
+      "Subtopic": "N/A",
+      "Front": "Effect of exceeding maximum takeoff weight.",
+      "Back": "Exceeding maximum takeoff weight can impair sUAS performance, reduce flight time, and create control issues."
+    },
+    {
+      "Topic": "6707596134187008",
+      "Subtopic": "N/A",
+      "Front": "Part 107 daylight operation definition",
+      "Back": "Daylight operation is defined as \\(30\\) minutes before official sunrise to \\(30\\) minutes after official sunset, local time, with appropriate anti-collision lighting."
+    },
+    {
+      "Topic": "6707596134187008",
+      "Subtopic": "N/A",
+      "Front": "Types of operations allowed under part \\(107\\)",
+      "Back": "Part \\(107\\) allows for a wide range of commercial operations, including aerial photography, inspections, and agricultural surveys as long as regulations are followed."
+    },
+    {
+      "Topic": "6707596134187008",
+      "Subtopic": "N/A",
+      "Front": "When is a waiver needed?",
+      "Back": "A waiver is needed when you cannot comply with certain provisions of Part \\(107\\), such as operating beyond VLOS or over people without meeting specific requirements."
+    },
+    {
+      "Topic": "6707596134187008",
+      "Subtopic": "N/A",
+      "Front": "How to check for notams",
+      "Back": "Check NOTAMs (Notice to Airmen) to get information on temporary hazards to flight. NOTAMs can be accessed through online resources like the FAA website."
+    },
+    {
+      "Topic": "6707596134187008",
+      "Subtopic": "N/A",
+      "Front": "Regulations regarding dropping objects",
+      "Back": "You cannot drop objects from an sUAS if it creates an undue hazard to persons or property. Ensure precautions are in place to prevent accidents."
+    },
+    {
+      "Topic": "6707596134187008",
+      "Subtopic": "N/A",
+      "Front": "Rules regarding proximity to airports",
+      "Back": "You need authorization to operate in controlled airspace near airports. Stay clear of airports without authorization to ensure safe operation."
+    },
+    {
+      "Topic": "6707596134187008",
+      "Subtopic": "N/A",
+      "Front": "What is the remote ID rule?",
+      "Back": "The Remote ID rule requires sUAS to broadcast identification and location information during flight. This enhances safety and accountability in the NAS."
+    },
+    {
+      "Topic": "6707596134187008",
+      "Subtopic": "N/A",
+      "Front": "Maximum civil penalty",
+      "Back": "The maximum civil penalty for violating Part \\(107\\) regulations can be up to \\(\\$1,100\\) per violation. Ensure compliance to avoid penalties."
+    },
+    {
+      "Topic": "6707596134187008",
+      "Subtopic": "N/A",
+      "Front": "How often must you renew your certificate?",
+      "Back": "You must renew your remote pilot certificate every \\(24\\) calendar months by completing a recurrent knowledge test or online training."
+    },
+    {
+      "Topic": "6707596134187008",
+      "Subtopic": "N/A",
+      "Front": "What is the purpose of LAANC?",
+      "Back": "LAANC (Low Altitude Authorization and Notification Capability) automates the process of requesting airspace authorization to fly in controlled airspace."
+    },
+    {
+      "Topic": "6707596134187008",
+      "Subtopic": "N/A",
+      "Front": "What is class G airspace?",
+      "Back": "Class G airspace is uncontrolled airspace where sUAS operations are permitted without ATC authorization, up to \\(1200\\) feet AGL, but pilots must remain vigilant."
+    },
+    {
+      "Topic": "6707596134187008",
+      "Subtopic": "N/A",
+      "Front": "Effect of high density altitude",
+      "Back": "High density altitude decreases sUAS performance due to reduced air density, requiring longer takeoff distances and reduced climb rates."
+    },
+    {
+      "Topic": "6707596134187008",
+      "Subtopic": "N/A",
+      "Front": "What is indicated on a VFR sectional chart?",
+      "Back": "VFR sectional charts depict airspace classifications, airports, navigational aids, and terrain elevation to assist pilots in flight planning."
+    },
+    {
+      "Topic": "6707596134187008",
+      "Subtopic": "N/A",
+      "Front": "Maximum ground speed for suas",
+      "Back": "The maximum ground speed for sUAS operation is \\(87\\) knots (\\(100\\) mph). Staying within this limit ensures safe operation and compliance with regulations."
+    },
+    {
+      "Topic": "6707596134187008",
+      "Subtopic": "N/A",
+      "Front": "Maximum altitude for suas operation",
+      "Back": "The maximum altitude for sUAS operation is \\(400\\) feet AGL or, if higher, within \\(400\\) feet of a structure. This limit helps prevent conflicts with manned aircraft."
+    },
+    {
+      "Topic": "6707596134187008",
+      "Subtopic": "N/A",
+      "Front": "Daylight operation definition",
+      "Back": "Daylight operation refers to the period between civil twilight beginning and civil twilight ending. This period is defined by specific sunrise and sunset times for each location."
+    },
+    {
+      "Topic": "6707596134187008",
+      "Subtopic": "N/A",
+      "Front": "Part \\(107\\) VLOS requirement",
+      "Back": "The remote pilot in command (RPIC) and/or visual observer (VO) must maintain Visual Line of Sight (VLOS) with the sUAS at all times during flight operations, as stipulated in Part \\(107\\)."
+    },
+    {
+      "Topic": "6707596134187008",
+      "Subtopic": "N/A",
+      "Front": "Operating near airports: notification",
+      "Back": "When operating within \\(5\\) miles of an airport, notification to the airport operator and air traffic control (if applicable) is required. This ensures coordination and safety."
+    },
+    {
+      "Topic": "6707596134187008",
+      "Subtopic": "N/A",
+      "Front": "Suas operation over moving vehicles",
+      "Back": "sUAS operations are prohibited over moving vehicles unless the operation meets specific waiver requirements, such as being within a closed or restricted-access site."
+    },
+    {
+      "Topic": "6707596134187008",
+      "Subtopic": "N/A",
+      "Front": "Alcohol and drug regulations",
+      "Back": "Remote pilots are prohibited from operating an sUAS within \\(8\\) hours of consuming alcohol or while under the influence of drugs. This is strictly enforced to ensure safety."
+    },
+    {
+      "Topic": "6707596134187008",
+      "Subtopic": "N/A",
+      "Front": "Reporting an accident",
+      "Back": "An accident must be reported to the FAA within \\(10\\) days if it results in serious injury, loss of consciousness, or damage exceeding \\(\\$500\\) to property."
+    },
+    {
+      "Topic": "6707596134187008",
+      "Subtopic": "N/A",
+      "Front": "Class B airspace authorization",
+      "Back": "To operate in Class B airspace, you must obtain prior authorization from Air Traffic Control (ATC). This ensures safe integration with other air traffic in the area."
+    },
+    {
+      "Topic": "6707596134187008",
+      "Subtopic": "N/A",
+      "Front": "Class C airspace authorization",
+      "Back": "Operating in Class C airspace requires prior authorization from Air Traffic Control (ATC). This coordination ensures deconfliction with manned aircraft operations."
+    },
+    {
+      "Topic": "6707596134187008",
+      "Subtopic": "N/A",
+      "Front": "Class D airspace authorization",
+      "Back": "Operations in Class D airspace require authorization from Air Traffic Control (ATC). Communication is essential to maintain safety in controlled airspace."
+    },
+    {
+      "Topic": "6707596134187008",
+      "Subtopic": "N/A",
+      "Front": "Latitude/longitude format",
+      "Back": "Latitude is listed first, then longitude. Example: \\(34°03'N, 118°15'W\\). This is the standard format used in aviation for specifying a location."
+    },
+    {
+      "Topic": "6707596134187008",
+      "Subtopic": "N/A",
+      "Front": "Effect of increased weight on suas",
+      "Back": "Increased weight reduces flight time, decreases maneuverability, and increases stall speed. Proper weight management is vital for safe sUAS operation."
+    },
+    {
+      "Topic": "6707596134187008",
+      "Subtopic": "N/A",
+      "Front": "Density altitude impact",
+      "Back": "High density altitude decreases sUAS performance due to reduced air density, affecting lift and thrust. Pilots must account for this during flight planning."
+    },
+    {
+      "Topic": "6707596134187008",
+      "Subtopic": "N/A",
+      "Front": "Effects of wind on suas",
+      "Back": "Strong winds can reduce sUAS control, decrease battery life, and make it harder to return to home. Always check wind conditions before flight."
+    },
+    {
+      "Topic": "6707596134187008",
+      "Subtopic": "N/A",
+      "Front": "Part \\(107\\) waiver duration",
+      "Back": "A Part \\(107\\) waiver can be granted for a maximum period of \\(2\\) years. Ensure timely renewal if continued operations under the waiver are required."
+    },
+    {
+      "Topic": "6707596134187008",
+      "Subtopic": "N/A",
+      "Front": "Crew resource management (CRM)",
+      "Back": "CRM involves effectively using all available resources to ensure a safe and efficient flight. This includes communication, teamwork, and decision-making skills."
+    },
+    {
+      "Topic": "6707596134187008",
+      "Subtopic": "N/A",
+      "Front": "Lost link procedures",
+      "Back": "Establish procedures for lost communication, including pre-planned return-to-home routes and emergency landing sites. This helps mitigate potential risks during operations."
+    },
+    {
+      "Topic": "6707596134187008",
+      "Subtopic": "N/A",
+      "Front": "Night operation lighting requirement",
+      "Back": "During night operations, the sUAS must have anti-collision lighting visible for at least \\(3\\) statute miles. This enhances visibility and prevents potential collisions."
+    },
+    {
+      "Topic": "6707596134187008",
+      "Subtopic": "N/A",
+      "Front": "Maximum blood alcohol content (BAC)",
+      "Back": "The maximum allowable blood alcohol content (BAC) for remote pilots is \\(0.04\\). Exceeding this limit is a violation of regulations."
+    },
+    {
+      "Topic": "6707596134187008",
+      "Subtopic": "N/A",
+      "Front": "Operation from a moving vehicle",
+      "Back": "Operating a sUAS from a moving vehicle or aircraft is prohibited, unless the operation is over a sparsely populated area or involves inspecting infrastructure."
+    },
+    {
+      "Topic": "6707596134187008",
+      "Subtopic": "N/A",
+      "Front": "Documents to have during operation",
+      "Back": "The remote pilot certificate and registration documents must be readily available during sUAS operations. These documents verify qualification and authorization."
+    },
+    {
+      "Topic": "6707596134187008",
+      "Subtopic": "N/A",
+      "Front": "Temporary flight restrictions (tfrs)",
+      "Back": "TFRs are issued to restrict aircraft from operating in a specific area temporarily. Check NOTAMs to ensure compliance and avoid violating these restrictions."
+    },
+    {
+      "Topic": "6707596134187008",
+      "Subtopic": "N/A",
+      "Front": "When is a VO needed?",
+      "Back": "A Visual Observer (VO) is needed if the remote pilot cannot maintain VLOS unassisted. The VO enhances situational awareness and helps maintain safe operations."
+    },
+    {
+      "Topic": "6707596134187008",
+      "Subtopic": "N/A",
+      "Front": "How to calculate cloud base",
+      "Back": "Cloud base can be estimated using the formula: \\(\\text{Height} = (\\text{Temperature} - \\text{Dewpoint}) / 4.4 * 1000\\), where temperature and dewpoint are in Fahrenheit."
+    },
+    {
+      "Topic": "6707596134187008",
+      "Subtopic": "N/A",
+      "Front": "Meaning of UNICOM frequency",
+      "Back": "UNICOM is a non-government communication facility which may provide airport information at certain airports. Used to communicate with other airport users."
+    },
+    {
+      "Topic": "6707596134187008",
+      "Subtopic": "N/A",
+      "Front": "Effect of forward CG on suas",
+      "Back": "A forward center of gravity (CG) generally increases stability but reduces maneuverability. Correct CG is essential for predictable flight characteristics."
+    },
+    {
+      "Topic": "6707596134187008",
+      "Subtopic": "N/A",
+      "Front": "Safe distance from people rule",
+      "Back": "Part \\(107\\) prohibits operating directly over people unless they are directly participating in the operation or located under a covered structure or inside a stationary vehicle. Waivers exist."
+    }
+  ]
+}

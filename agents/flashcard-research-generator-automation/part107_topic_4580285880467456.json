@@ -1,0 +1,353 @@
+{
+  "app_name": "part107",
+  "flashcards": [
+    {
+      "Topic": "4580285880467456",
+      "Subtopic": "N/A",
+      "Front": "Minimum visibility requirement for suas operations?",
+      "Back": "The minimum visibility required for sUAS operation is \\(3\\) statute miles from your control station, to avoid collisions with other aircraft."
+    },
+    {
+      "Topic": "4580285880467456",
+      "Subtopic": "N/A",
+      "Front": "Maximum allowable suas groundspeed?",
+      "Back": "The maximum allowable groundspeed for sUAS operations is \\(87\\) knots (\\(100\\) mph). Exceeding this speed violates Part \\(107\\) regulations."
+    },
+    {
+      "Topic": "4580285880467456",
+      "Subtopic": "N/A",
+      "Front": "Maximum allowable suas altitude AGL?",
+      "Back": "The maximum altitude a sUAS can be flown is \\(400\\) feet above ground level (AGL), or higher if flying within \\(400\\) feet of a structure."
+    },
+    {
+      "Topic": "4580285880467456",
+      "Subtopic": "N/A",
+      "Front": "What is class G airspace?",
+      "Back": "Class G airspace is uncontrolled airspace where air traffic control has neither the authority nor the responsibility to control air traffic, often extending from the surface to \\(1,200\\) feet AGL."
+    },
+    {
+      "Topic": "4580285880467456",
+      "Subtopic": "N/A",
+      "Front": "What is class E airspace?",
+      "Back": "Class E airspace is controlled airspace, but not as restrictive as Class B, C, or D. It typically begins at \\(700\\) or \\(1,200\\) feet AGL, but can start at the surface around airports."
+    },
+    {
+      "Topic": "4580285880467456",
+      "Subtopic": "N/A",
+      "Front": "What is class D airspace?",
+      "Back": "Class D airspace surrounds airports with an operating control tower. Typically extends from the surface to \\(2,500\\) feet AGL and requires two-way radio communication."
+    },
+    {
+      "Topic": "4580285880467456",
+      "Subtopic": "N/A",
+      "Front": "What is class C airspace?",
+      "Back": "Class C airspace surrounds airports with an operating control tower and radar approach control service. Extends from the surface to \\(4,000\\) feet AGL and requires two-way radio communication."
+    },
+    {
+      "Topic": "4580285880467456",
+      "Subtopic": "N/A",
+      "Front": "What is class B airspace?",
+      "Back": "Class B airspace surrounds the nation's busiest airports. Extends from the surface to \\(10,000\\) feet MSL and requires specific ATC clearance to enter."
+    },
+    {
+      "Topic": "4580285880467456",
+      "Subtopic": "N/A",
+      "Front": "What is class A airspace?",
+      "Back": "Class A airspace extends from \\(18,000\\) feet MSL up to and including FL\\(600\\). All operations in Class A airspace are conducted under instrument flight rules (IFR)."
+    },
+    {
+      "Topic": "4580285880467456",
+      "Subtopic": "N/A",
+      "Front": "What is a TFR?",
+      "Back": "A Temporary Flight Restriction (TFR) is a restriction on an area of airspace due to a hazardous condition, special event, or general public safety."
+    },
+    {
+      "Topic": "4580285880467456",
+      "Subtopic": "N/A",
+      "Front": "What is a NOTAM?",
+      "Back": "A Notice to Airmen (NOTAM) is a time-critical notice containing information essential to personnel concerned with flight operations but not known far enough in advance to be published by other means."
+    },
+    {
+      "Topic": "4580285880467456",
+      "Subtopic": "N/A",
+      "Front": "What is the cloud clearance for class G airspace?",
+      "Back": "Below \\(1,200\\) feet AGL, the cloud clearance for Class G airspace is clear of clouds. Above \\(1,200\\) feet AGL, it varies and should be checked before flight."
+    },
+    {
+      "Topic": "4580285880467456",
+      "Subtopic": "N/A",
+      "Front": "What is the cloud clearance for class E airspace?",
+      "Back": "Below \\(10,000\\) feet MSL, cloud clearance is \\(500\\) feet below, \\(1,000\\) feet above, and \\(2,000\\) feet horizontally (5-1-2 rule)."
+    },
+    {
+      "Topic": "4580285880467456",
+      "Subtopic": "N/A",
+      "Front": "What is the visibility requirement for class E airspace?",
+      "Back": "Below \\(10,000\\) feet MSL, the visibility requirement for Class E airspace is \\(3\\) statute miles. Above \\(10,000\\) feet MSL, it is \\(5\\) statute miles."
+    },
+    {
+      "Topic": "4580285880467456",
+      "Subtopic": "N/A",
+      "Front": "What is the visibility requirement for class G airspace?",
+      "Back": "Below \\(1,200\\) feet AGL, the visibility requirement for Class G airspace is \\(1\\) statute mile during the day and \\(3\\) statute miles at night."
+    },
+    {
+      "Topic": "4580285880467456",
+      "Subtopic": "N/A",
+      "Front": "How to determine the latitude/longitude on sectional chart?",
+      "Back": "Latitude lines run horizontally (east/west) and longitude lines run vertically (north/south) on a sectional chart. Intersections mark geographic coordinates."
+    },
+    {
+      "Topic": "4580285880467456",
+      "Subtopic": "N/A",
+      "Front": "What does a dashed blue line on sectional chart mean?",
+      "Back": "A dashed blue line on a sectional chart indicates Class D airspace. You must establish two-way communication with ATC before entering."
+    },
+    {
+      "Topic": "4580285880467456",
+      "Subtopic": "N/A",
+      "Front": "What does a dashed magenta line on sectional chart mean?",
+      "Back": "A dashed magenta line on a sectional chart indicates Class E airspace that extends to the surface. Authorization may be required for sUAS operations."
+    },
+    {
+      "Topic": "4580285880467456",
+      "Subtopic": "N/A",
+      "Front": "What is the purpose of a METAR?",
+      "Back": "A METAR (Meteorological Terminal Aviation Routine) is an aviation routine weather report issued at hourly or half-hourly intervals; it provides current weather conditions."
+    },
+    {
+      "Topic": "4580285880467456",
+      "Subtopic": "N/A",
+      "Front": "What is the purpose of a TAF?",
+      "Back": "A TAF (Terminal Aerodrome Forecast) is a concise statement of the expected meteorological conditions at an airport during a specified period, usually \\(24\\) to \\(30\\) hours."
+    },
+    {
+      "Topic": "4580285880467456",
+      "Subtopic": "N/A",
+      "Front": "What is an airport elevation?",
+      "Back": "Airport elevation is the highest point of an airport's usable landing area measured in feet above mean sea level (MSL). It is depicted on sectional charts."
+    },
+    {
+      "Topic": "4580285880467456",
+      "Subtopic": "N/A",
+      "Front": "What is MSL?",
+      "Back": "MSL stands for Mean Sea Level, the average altitude at sea level, used as a standard reference for measuring elevations and altitudes."
+    },
+    {
+      "Topic": "4580285880467456",
+      "Subtopic": "N/A",
+      "Front": "What is AGL?",
+      "Back": "AGL stands for Above Ground Level, which measures the height above the terrain directly below the aircraft. It is most relevant to sUAS operations."
+    },
+    {
+      "Topic": "4580285880467456",
+      "Subtopic": "N/A",
+      "Front": "How long is a part \\(107\\) certificate valid?",
+      "Back": "A remote pilot certificate issued under Part \\(107\\) is valid for \\(24\\) calendar months. A renewal exam or recurrent training is required for continued operation."
+    },
+    {
+      "Topic": "4580285880467456",
+      "Subtopic": "N/A",
+      "Front": "What is the effect of density altitude?",
+      "Back": "High density altitude reduces aircraft performance. It's affected by temperature, altitude, and humidity; higher values equate to decreased performance."
+    },
+    {
+      "Topic": "4580285880467456",
+      "Subtopic": "N/A",
+      "Front": "What is the uncontrolled airspace weather minimum?",
+      "Back": "During daylight hours, the weather minimum in uncontrolled airspace (Class G) is \\(3\\) statute miles visibility and clear of clouds at or below \\(1,200\\) feet AGL."
+    },
+    {
+      "Topic": "4580285880467456",
+      "Subtopic": "N/A",
+      "Front": "What is the controlled airspace weather minimum?",
+      "Back": "Controlled airspace (E,D,C) generally requires \\(3\\) statute miles visibility, and \\(500\\) feet below, \\(1,000\\) feet above, and \\(2,000\\) feet horizontally from clouds."
+    },
+    {
+      "Topic": "4580285880467456",
+      "Subtopic": "N/A",
+      "Front": "What is the definition of VLOS?",
+      "Back": "Visual Line of Sight (VLOS) means the remote pilot or visual observer must be able to see the unmanned aircraft at all times during flight operations with unaided vision (corrective lenses acceptable)."
+    },
+    {
+      "Topic": "4580285880467456",
+      "Subtopic": "N/A",
+      "Front": "What are military training routes?",
+      "Back": "Military Training Routes (MTRs) are low-altitude, high-speed routes used by military aircraft, depicted on sectional charts. Avoid flying near them."
+    },
+    {
+      "Topic": "4580285880467456",
+      "Subtopic": "N/A",
+      "Front": "What is indicated by a blue airport symbol?",
+      "Back": "A blue airport symbol on a sectional chart indicates that the airport has a control tower. ATC communication is typically required."
+    },
+    {
+      "Topic": "4580285880467456",
+      "Subtopic": "N/A",
+      "Front": "What is class E airspace floor at surface?",
+      "Back": "Class E airspace designated from the surface is depicted with a dashed magenta line, indicating controlled airspace extends to the ground to support IFR operations."
+    },
+    {
+      "Topic": "4580285880467456",
+      "Subtopic": "N/A",
+      "Front": "What is the maximum suas speed?",
+      "Back": "The maximum allowable groundspeed for sUAS operations under Part \\(107\\) is \\(87\\) knots (\\(100\\) mph). This speed limit ensures safe and controlled operation."
+    },
+    {
+      "Topic": "4580285880467456",
+      "Subtopic": "N/A",
+      "Front": "What is the cloud clearance requirement in class G?",
+      "Back": "In Class G airspace, the cloud clearance requirement is \\(500\\) feet below, \\(1,000\\) feet above, and \\(2,000\\) feet horizontally when operating above \\(1,200\\) feet AGL."
+    },
+    {
+      "Topic": "4580285880467456",
+      "Subtopic": "N/A",
+      "Front": "What is the minimum visibility for suas operations?",
+      "Back": "Part \\(107\\) regulations require a minimum visibility of \\(3\\) statute miles from the control station during sUAS operations to maintain adequate situational awareness."
+    },
+    {
+      "Topic": "4580285880467456",
+      "Subtopic": "N/A",
+      "Front": "What is needed to operate in class D airspace?",
+      "Back": "To operate in Class D airspace, you require prior authorization from Air Traffic Control (ATC). ATC authorization ensures safe integration with manned aircraft."
+    },
+    {
+      "Topic": "4580285880467456",
+      "Subtopic": "N/A",
+      "Front": "How high can you fly above a structure?",
+      "Back": "You can fly \\(400\\) feet above a structure, as long as you remain within \\(400\\) feet laterally of the structure. This considers it as obstacle avoidance rather than altitude rule violation."
+    },
+    {
+      "Topic": "4580285880467456",
+      "Subtopic": "N/A",
+      "Front": "What is the height restriction in class G airspace?",
+      "Back": "In Class G airspace, the maximum altitude for sUAS operations is \\(400\\) feet above ground level (AGL), unless operating near a structure under specific conditions."
+    },
+    {
+      "Topic": "4580285880467456",
+      "Subtopic": "N/A",
+      "Front": "What is the floor of class E airspace?",
+      "Back": "Class E airspace typically begins at \\(700\\) feet AGL or \\(1,200\\) feet AGL, but can extend to the surface around airports depicted by a dashed magenta line."
+    },
+    {
+      "Topic": "4580285880467456",
+      "Subtopic": "N/A",
+      "Front": "What is the radius of class D airspace?",
+      "Back": "Class D airspace typically extends horizontally \\(5\\) statute miles from the primary airport and extends upwards from the surface to \\(2,500\\) feet AGL."
+    },
+    {
+      "Topic": "4580285880467456",
+      "Subtopic": "N/A",
+      "Front": "What is the max AGL without waiver?",
+      "Back": "The maximum altitude allowed for sUAS operations without a waiver is \\(400\\) feet Above Ground Level (AGL). This limit ensures safe operation in shared airspace."
+    },
+    {
+      "Topic": "4580285880467456",
+      "Subtopic": "N/A",
+      "Front": "What are restricted airspace requirements?",
+      "Back": "Restricted airspace contains unusual, often invisible, hazards to aircraft such as artillery firing, aerial gunnery, or guided missiles. Permission is needed from the controlling agency."
+    },
+    {
+      "Topic": "4580285880467456",
+      "Subtopic": "N/A",
+      "Front": "What is the limitation in a prohibited area?",
+      "Back": "Prohibited areas are designated for national security or safety reasons, and sUAS operations are not allowed. These areas are depicted on sectional charts."
+    },
+    {
+      "Topic": "4580285880467456",
+      "Subtopic": "N/A",
+      "Front": "What is the purpose of a TFR?",
+      "Back": "A Temporary Flight Restriction (TFR) is a restriction on an area of airspace due to a hazardous condition, a special event, or general warning to air traffic."
+    },
+    {
+      "Topic": "4580285880467456",
+      "Subtopic": "N/A",
+      "Front": "What are military training routes (mtrs)?",
+      "Back": "Military Training Routes (MTRs) are routes used by military aircraft to maintain proficiency in tactical flying skills. They are depicted on sectional charts."
+    },
+    {
+      "Topic": "4580285880467456",
+      "Subtopic": "N/A",
+      "Front": "What is the definition of a statute mile?",
+      "Back": "A statute mile is a unit of length equal to \\(5,280\\) feet, primarily used for measuring distances over land within the United States, in aviation visibility reports, and on sectional charts."
+    },
+    {
+      "Topic": "4580285880467456",
+      "Subtopic": "N/A",
+      "Front": "What is the weather source needed for part 107?",
+      "Back": "Pilots need to monitor current and forecasted weather conditions, obtaining preflight weather briefings from sources like the National Weather Service (NWS) to ensure safe flight operations."
+    },
+    {
+      "Topic": "4580285880467456",
+      "Subtopic": "N/A",
+      "Front": "What is ADSB broadcast requirement for suas?",
+      "Back": "Currently, there is no requirement for sUAS to broadcast Automatic Dependent Surveillance-Broadcast (ADS-B) signals under Part \\(107\\) regulations. But future regulations may require it."
+    },
+    {
+      "Topic": "4580285880467456",
+      "Subtopic": "N/A",
+      "Front": "What are cloud clearance requirements in class E?",
+      "Back": "Below \\(10,000\\) feet MSL in Class E, cloud clearance requirements are \\(500\\) feet below, \\(1,000\\) feet above, and \\(2,000\\) feet horizontally from clouds."
+    },
+    {
+      "Topic": "4580285880467456",
+      "Subtopic": "N/A",
+      "Front": "What is the purpose of a CTAF?",
+      "Back": "A Common Traffic Advisory Frequency (CTAF) is used for self-announcing position and intentions at non-towered airports, promoting situational awareness among pilots."
+    },
+    {
+      "Topic": "4580285880467456",
+      "Subtopic": "N/A",
+      "Front": "What is required to fly in class C airspace?",
+      "Back": "To operate in Class C airspace, two-way radio communication must be established with ATC. You must hear a \"call sign\" acknowledgement from ATC."
+    },
+    {
+      "Topic": "4580285880467456",
+      "Subtopic": "N/A",
+      "Front": "What are the fuel requirements?",
+      "Back": "Part \\(107\\) requires you to ensure sufficient available power to conduct the intended operation and account for any potential diversions from the planned route."
+    },
+    {
+      "Topic": "4580285880467456",
+      "Subtopic": "N/A",
+      "Front": "What is the transponder requirement for suas?",
+      "Back": "There is currently no requirement for sUAS operations under Part \\(107\\) to utilize a transponder. It is an aircraft component that replies to ATC radar signals."
+    },
+    {
+      "Topic": "4580285880467456",
+      "Subtopic": "N/A",
+      "Front": "What does a dashed blue line mean?",
+      "Back": "A dashed blue line on a sectional chart depicts Class D airspace. Requires ATC permission for UAS operations."
+    },
+    {
+      "Topic": "4580285880467456",
+      "Subtopic": "N/A",
+      "Front": "What are requirements when operating near airports?",
+      "Back": "When operating near airports, maintain awareness of manned aircraft traffic patterns, and adhere to airspace restrictions. Authorization may be required."
+    },
+    {
+      "Topic": "4580285880467456",
+      "Subtopic": "N/A",
+      "Front": "What are common radio frequencies?",
+      "Back": "Common radio frequencies include CTAF, UNICOM, and ATC frequencies, used for communication between pilots, ground personnel, and air traffic controllers to maintain awareness."
+    },
+    {
+      "Topic": "4580285880467456",
+      "Subtopic": "N/A",
+      "Front": "What is a nautical mile's length in statute miles?",
+      "Back": "One nautical mile is approximately \\(1.15\\) statute miles. Nautical miles are used for aviation and maritime navigation due to their relationship to latitude and longitude."
+    },
+    {
+      "Topic": "4580285880467456",
+      "Subtopic": "N/A",
+      "Front": "What is a pilot's responsibility before flight?",
+      "Back": "The remote pilot in command is responsible for ensuring the sUAS is safe to operate, that the flight will not pose a hazard, and has obtained all required authorizations."
+    },
+    {
+      "Topic": "4580285880467456",
+      "Subtopic": "N/A",
+      "Front": "How far must you stay from clouds?",
+      "Back": "In Class B airspace, UAS operations must remain clear of clouds. In Class G airspace below \\(1,200\\) AGL, operations must stay \\(500\\) feet below, \\(1,000\\) above, and \\(2,000\\) horizontally."
+    }
+  ]
+}

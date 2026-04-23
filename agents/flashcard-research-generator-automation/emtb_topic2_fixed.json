@@ -1,0 +1,1457 @@
+{
+  "app_name": "emtb",
+  "flashcards": [
+    {
+      "Topic": "2",
+      "Subtopic": "1",
+      "Front": "Right Atrium",
+      "Back": "The heart chamber that receives deoxygenated blood from the systemic circulation via the superior and inferior vena cava."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "1",
+      "Front": "Left Ventricle",
+      "Back": "The thickest heart chamber that pumps oxygenated blood to the entire body through the aorta."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "1",
+      "Front": "Pulmonary Artery",
+      "Back": "The only artery in the human body that carries deoxygenated blood, moving it from the right ventricle to the lungs."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "1",
+      "Front": "Pulmonary Vein",
+      "Back": "The only vein in the human body that carries oxygenated blood, moving it from the lungs to the left atrium."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "1",
+      "Front": "Tricuspid Valve",
+      "Back": "The heart valve located between the right atrium and the right ventricle that prevents backflow during contraction."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "1",
+      "Front": "SA Node",
+      "Back": "The primary pacemaker of the heart located in the right atrium, typically firing at a rate of \\(60-100\\) beats per minute."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "1",
+      "Front": "AV Node",
+      "Back": "The secondary pacemaker that creates a slight delay in the electrical signal to allow the ventricles to fill with blood."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "1",
+      "Front": "Purkinje Fibers",
+      "Back": "The specialized conduction fibers that distribute the electrical impulse rapidly throughout the ventricular myocardium."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "1",
+      "Front": "Preload",
+      "Back": "The pressure in the filled ventricles at the end of diastole, representing the amount of blood returning to the heart."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "1",
+      "Front": "Afterload",
+      "Back": "The systemic vascular resistance the left ventricle must pump against to eject blood into the aorta."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "1",
+      "Front": "\\(CO = SV \\times HR\\)",
+      "Back": "The formula for Cardiac Output, which is the volume of blood pumped by the heart per minute."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "1",
+      "Front": "Angina Pectoris",
+      "Back": "Chest pain resulting from myocardial ischemia that does not cause cell death and is typically relieved by rest or nitroglycerin."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "1",
+      "Front": "Acute Myocardial Infarction",
+      "Back": "The death of heart muscle tissue due to prolonged ischemia, often caused by a blockage in a coronary artery."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "1",
+      "Front": "Silent Myocardial Infarction",
+      "Back": "An AMI that presents with atypical symptoms like weakness or nausea instead of chest pain, common in diabetics and the elderly."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "1",
+      "Front": "Left-Sided Heart Failure",
+      "Back": "Failure that causes blood to back up into the lungs, resulting in pulmonary edema, rales, and orthopnea."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "1",
+      "Front": "Right-Sided Heart Failure",
+      "Back": "Failure that causes blood to back up into the systemic circulation, resulting in jugular venous distention and pedal edema."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "1",
+      "Front": "Dependent Edema",
+      "Back": "Fluid accumulation in the lowest part of the body, such as the feet and ankles, often signifying right heart failure."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "1",
+      "Front": "Pulmonary Edema",
+      "Back": "A life-threatening accumulation of fluid in the lungs that often produces pink, frothy sputum."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "1",
+      "Front": "Aspirin",
+      "Back": "An anti-platelet medication that prevents platelets from clumping together to form or enlarge blood clots."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "1",
+      "Front": "Aspirin Dosage",
+      "Back": "The standard EMT dose is \\(162mg\\) to \\(324mg\\) administered as chewed baby aspirin."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "1",
+      "Front": "Nitroglycerin",
+      "Back": "A vasodilator that relaxes smooth muscle in blood vessels, decreasing preload and reducing the workload of the heart."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "1",
+      "Front": "Nitroglycerin Dosage",
+      "Back": "One sublingual dose of \\(0.4mg\\) every \\(5\\) minutes as needed, up to a maximum of \\(3\\) doses."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "1",
+      "Front": "NTG Contraindication: Blood Pressure",
+      "Back": "Nitroglycerin should not be administered if the patient's systolic blood pressure is less than \\(100\\) \\(mmHg\\)."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "1",
+      "Front": "NTG Contraindication: ED Meds",
+      "Back": "Do not give nitroglycerin if the patient has taken erectile dysfunction medication within the last \\(24-48\\) hours."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "1",
+      "Front": "Ventricular Fibrillation",
+      "Back": "A chaotic and lethal heart rhythm with no organized electrical activity, resulting in no pulse."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "1",
+      "Front": "Ventricular Tachycardia",
+      "Back": "A rapid heart rhythm originating in the ventricles that can be pulseless and is a shockable rhythm for an AED."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "1",
+      "Front": "Asystole",
+      "Back": "The complete absence of all electrical and mechanical activity in the heart, appearing as a flat line on a monitor."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "1",
+      "Front": "Pulseless Electrical Activity",
+      "Back": "A condition where the heart's electrical system appears normal on a monitor, but the muscle does not contract or produce a pulse."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "1",
+      "Front": "AED: No Shock Advised",
+      "Back": "The prompt to immediately resume high-quality chest compressions and continue the cycle of CPR."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "1",
+      "Front": "Defibrillation",
+      "Back": "The delivery of an electric shock to the heart to stop lethal dysrhythmias and allow the SA node to regain control."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "1",
+      "Front": "Chain of Survival",
+      "Back": "The five essential steps to improve cardiac arrest survival: early access, early CPR, early defibrillation, early ALS, and integrated post-arrest care."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "1",
+      "Front": "ROSC",
+      "Back": "The Return of Spontaneous Circulation, identified by a palpable pulse and potentially spontaneous breathing after cardiac arrest."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "1",
+      "Front": "CPR Compression Rate",
+      "Back": "A consistent rate of \\(100-120\\) compressions per minute for adults, children, and infants."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "1",
+      "Front": "Adult CPR Compression Depth",
+      "Back": "Chest compressions should be at least \\(2\\) inches (\\(5\\) \\(cm\\)) deep but no more than \\(2.4\\) inches (\\(6\\) \\(cm\\))."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "1",
+      "Front": "Adult CPR Ratio",
+      "Back": "A compression-to-ventilation ratio of \\(30:2\\) for both single and two-rescuer adult CPR."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "1",
+      "Front": "Child CPR Compression Depth",
+      "Back": "Compressions should be approximately \\(2\\) inches deep or one-third the total depth of the chest."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "1",
+      "Front": "Infant CPR Compression Depth",
+      "Back": "Compressions should be \\(1.5\\) inches deep or one-third the total depth of the infant's chest."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "1",
+      "Front": "Pediatric Two-Rescuer Ratio",
+      "Back": "The compression-to-ventilation ratio for children and infants changes to \\(15:2\\) when two rescuers are present."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "1",
+      "Front": "Brachial Pulse",
+      "Back": "The primary pulse point used to assess circulation in an unresponsive infant."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "1",
+      "Front": "Carotid Pulse",
+      "Back": "The primary pulse point used to assess circulation in an unresponsive adult or child."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "1",
+      "Front": "Adult Rescue Breathing",
+      "Back": "One breath every \\(6\\) seconds (\\(10\\) breaths per minute) if the patient has a pulse but is not breathing."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "1",
+      "Front": "Pediatric Rescue Breathing",
+      "Back": "One breath every \\(2-3\\) seconds (\\(20-30\\) breaths per minute) if the child or infant has a pulse but is not breathing."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "1",
+      "Front": "Dissecting Aortic Aneurysm",
+      "Back": "A condition where inner layers of the aorta tear, causing sudden, severe, tearing pain between the shoulder blades."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "1",
+      "Front": "Hypertensive Emergency",
+      "Back": "A severe elevation in blood pressure, usually above \\(180/120\\) \\(mmHg\\), that may cause headache, nausea, or altered mental status."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "1",
+      "Front": "Orthopnea",
+      "Back": "Severe respiratory distress triggered by lying in a flat position, commonly seen in congestive heart failure patients."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "1",
+      "Front": "Cardiac Arrest in Pregnancy",
+      "Back": "Manually displace the uterus to the left side during CPR to prevent vena cava compression and improve blood return."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "1",
+      "Front": "Ischemia",
+      "Back": "A temporary deficiency in blood supply and oxygen to a tissue or organ, often causing pain."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "1",
+      "Front": "Infarction",
+      "Back": "The permanent death of tissue resulting from a lack of blood supply, as seen in a heart attack."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "1",
+      "Front": "AED Pad Placement",
+      "Back": "Standard placement is on the upper right chest and the lower left side of the chest below the nipple line."
+    },
+    {
+      "Topic": "2",
+      "Subtopic": "1",
+      "Front": "Chest Pain and Oxygen",
+      "Back": "Administer oxygen to a chest pain patient only if their \\(SpO2\\) is less than \\(94\\%\\) or they show signs of respiratory distress."
+    },
+    {
+      "Front": "STEMI EKG changes",
+      "Back": "ST-segment elevation indicates myocardial cell injury and is a key indicator of STEMI; the elevation must be present in at least two contiguous leads.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Next step: unresponsive patient, post AED shock",
+      "Back": "Immediately begin chest compressions; do not reassess pulse or rhythm until the next prompted analysis by the AED.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Stroke: Permissive Hypertension?",
+      "Back": "Permissive hypertension (allowing elevated blood pressure) is sometimes indicated post-stroke to maintain cerebral perfusion unless there are other contraindications.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "CPR compression depth (adult)",
+      "Back": "Adult CPR requires compressions to a depth of at least \\(2\\) inches (\\(5\\) cm) but no more than \\(2.4\\) inches (\\(6\\) cm) to effectively circulate blood.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Cardiac tamponade: Beck's triad",
+      "Back": "Beck's triad for cardiac tamponade includes hypotension, muffled heart sounds, and jugular venous distension (JVD).",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Cardiogenic shock cause",
+      "Back": "Cardiogenic shock is typically caused by the heart's inability to pump effectively, commonly due to massive myocardial infarction (\\(MI\\)).",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "CPR compression rate (adult)",
+      "Back": "The correct compression rate for adult CPR is between \\(100\\) and \\(120\\) compressions per minute to ensure adequate circulation.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Acute Coronary Syndrome (ACS) definition",
+      "Back": "ACS refers to any condition caused by sudden reduced blood flow to the heart, including unstable angina and myocardial infarction.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Aortic dissection pain description",
+      "Back": "Aortic dissection typically presents with sudden, severe, tearing or ripping pain often located in the chest or back.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Atrial Fibrillation (A-Fib) on ECG",
+      "Back": "A-Fib on ECG presents with irregularly irregular R-R intervals and absence of distinct P waves due to chaotic atrial activity.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Ventricular Tachycardia (V-Tach) definition",
+      "Back": "V-Tach is a rapid heart rhythm originating in the ventricles, defined as three or more consecutive ventricular beats at a rate greater than \\(100\\) bpm.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "V-Tach: Stable vs. Unstable",
+      "Back": "Stable V-Tach presents with a pulse and adequate perfusion; unstable V-Tach presents with a pulse but signs of poor perfusion like hypotension or altered mental status.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "CPR ventilation rate (adult) with advanced airway",
+      "Back": "When an advanced airway is in place during adult CPR, provide continuous chest compressions and ventilate at a rate of \\(1\\) breath every \\(6\\) seconds (\\(10\\) breaths per minute).",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Asystole treatment",
+      "Back": "Asystole is the absence of electrical activity in the heart; treatment focuses on continuous high-quality CPR and identifying reversible causes (Hs and Ts).",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "PEA (Pulseless Electrical Activity) definition",
+      "Back": "PEA is a condition where there is organized electrical activity on the ECG, but no palpable pulse; treatment focuses on CPR and identifying reversible causes.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Hs and Ts (reversible causes of cardiac arrest)",
+      "Back": "The 'Hs and Ts' represent potential reversible causes of cardiac arrest: Hypovolemia, Hypoxia, Hydrogen ion (acidosis), Hypo/Hyperkalemia, Hypothermia, Tension pneumothorax, Tamponade (cardiac), Toxins, Thrombosis (pulmonary/coronary).",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "CPR: Two-rescuer infant compression technique",
+      "Back": "In two-rescuer infant CPR, the preferred compression technique is the two-thumb encircling hands technique, providing compressions over the lower third of the sternum.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "CPR: Infant compression depth",
+      "Back": "For infant CPR, compress the chest approximately \\(1.5\\) inches (\\(4\\) cm), allowing for full chest recoil between compressions.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "CPR: Child compression depth",
+      "Back": "For child CPR, compress the chest approximately \\(2\\) inches (\\(5\\) cm), allowing for full chest recoil between compressions.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Infant CPR ratio (single rescuer)",
+      "Back": "For single-rescuer infant CPR, the compression-to-ventilation ratio is \\(30:2\\).",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Child CPR ratio (single rescuer)",
+      "Back": "For single-rescuer child CPR, the compression-to-ventilation ratio is \\(30:2\\).",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Infant CPR ratio (two rescuers)",
+      "Back": "For two-rescuer infant CPR, the compression-to-ventilation ratio is \\(15:2\\).",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Child CPR ratio (two rescuers)",
+      "Back": "For two-rescuer child CPR, the compression-to-ventilation ratio is \\(15:2\\).",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Stroke: Cincinnati Prehospital Stroke Scale (CPSS)",
+      "Back": "CPSS assesses facial droop, arm drift, and speech abnormality to rapidly identify potential stroke patients in the prehospital setting.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Cardiac Output Formula",
+      "Back": "Cardiac Output (\\(CO\\)) is the volume of blood pumped by the heart per minute, calculated as Stroke Volume (\\(SV\\)) multiplied by Heart Rate (\\(HR\\)): \\(CO = SV \times HR\\).",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "GCS: Eye opening score range",
+      "Back": "The eye opening component of the Glasgow Coma Scale (GCS) is scored from \\(1\\) to \\(4\\), with \\(4\\) being spontaneous eye opening and \\(1\\) being no eye opening.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "GCS: Verbal response score range",
+      "Back": "The verbal response component of the Glasgow Coma Scale (GCS) is scored from \\(1\\) to \\(5\\), with \\(5\\) being oriented and \\(1\\) being no verbal response.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "GCS: Motor response score range",
+      "Back": "The motor response component of the Glasgow Coma Scale (GCS) is scored from \\(1\\) to \\(6\\), with \\(6\\) being obeys commands and \\(1\\) being no motor response.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Normal respiratory rate: infant",
+      "Back": "A normal respiratory rate for an infant is typically between \\(25\\) and \\(50\\) breaths per minute.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Normal respiratory rate: child",
+      "Back": "A normal respiratory rate for a child is typically between \\(15\\) and \\(30\\) breaths per minute.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Normal heart rate: infant",
+      "Back": "A normal heart rate for an infant is typically between \\(100\\) and \\(160\\) beats per minute.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Normal heart rate: child",
+      "Back": "A normal heart rate for a child is typically between \\(70\\) and \\(110\\) beats per minute.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "GCS score indicating severe brain injury",
+      "Back": "A GCS score of \\(8\\) or less typically indicates severe brain injury, warranting immediate medical intervention.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Left Ventricular Hypertrophy (LVH)",
+      "Back": "LVH is the thickening of the heart's left ventricle, often due to hypertension or other conditions that increase the heart's workload.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Right Ventricular Hypertrophy (RVH)",
+      "Back": "RVH is the thickening of the heart's right ventricle, often due to pulmonary hypertension or other conditions affecting the lungs.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "CPR: minimizing interruptions",
+      "Back": "During CPR, minimize interruptions to chest compressions to less than \\(10\\) seconds to maintain consistent blood flow.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "CPR hand placement (adult)",
+      "Back": "For adult CPR, place the heel of one hand in the center of the chest (lower half of the sternum), with the other hand on top, interlacing fingers.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Rule of Nines: adult arm",
+      "Back": "In adults, the Rule of Nines assigns \\(9\\)% of total body surface area (\\(TBSA\\)) to each entire arm.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Rule of Nines: adult leg",
+      "Back": "In adults, the Rule of Nines assigns \\(18\\)% of total body surface area (\\(TBSA\\)) to each entire leg.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Rule of Nines: adult torso (front or back)",
+      "Back": "In adults, the Rule of Nines assigns \\(18\\)% of total body surface area (\\(TBSA\\)) to the front and \\(18\\)% to the back of the torso.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Rule of Nines: adult head",
+      "Back": "In adults, the Rule of Nines assigns \\(9\\)% of total body surface area (\\(TBSA\\)) to the entire head.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Pericardial effusion",
+      "Back": "Pericardial effusion refers to the accumulation of fluid within the pericardial sac surrounding the heart, potentially leading to cardiac tamponade.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Coronary artery occlusion location, inferior MI",
+      "Back": "An inferior wall myocardial infarction (\\(MI\\)) is commonly caused by occlusion of the right coronary artery (\\(RCA\\)).",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Left Anterior Descending Artery (LAD)",
+      "Back": "The Left Anterior Descending (LAD) artery supplies blood to the anterior wall and septum of the left ventricle; often called the 'widowmaker' when occluded.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "CPR: Head-tilt/chin-lift contraindications",
+      "Back": "The head-tilt/chin-lift maneuver is contraindicated in patients with suspected spinal injury; use the jaw-thrust maneuver instead.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Stroke: facial droop assessment",
+      "Back": "To assess for facial droop, ask the patient to smile or show their teeth; asymmetry suggests possible stroke.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Stroke: arm drift assessment",
+      "Back": "To assess for arm drift, ask the patient to close their eyes and hold both arms out in front of them; downward drift of one arm suggests possible stroke.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Stroke: speech assessment",
+      "Back": "To assess for speech abnormality, ask the patient to repeat a simple phrase; slurred or incomprehensible speech suggests possible stroke.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "CPR: Active compression-decompression (ACD) device",
+      "Back": "ACD devices use a suction cup to actively lift the chest during the recoil phase of CPR, potentially improving circulation; requires specific training.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Afterload definition",
+      "Back": "Afterload is the resistance the left ventricle must overcome to circulate blood; increased afterload makes it harder for the heart to eject blood.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "STEMI: EKG findings",
+      "Back": "\\(ST\\) segment elevation in at least two contiguous leads, indicating acute myocardial infarction due to complete occlusion of a coronary artery.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "NSTEMI vs Unstable Angina",
+      "Back": "Both have ischemic chest pain. NSTEMI has elevated cardiac biomarkers (troponin), while unstable angina does not.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Stroke: FAST acronym",
+      "Back": "Face drooping, Arm weakness, Speech difficulty, Time to call EMS; used to quickly identify potential stroke victims.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "What is Beck's Triad?",
+      "Back": "Hypotension, muffled heart sounds, and jugular venous distention (\\(JVD\\)); indicative of cardiac tamponade.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "AED: When can you stop?",
+      "Back": "If the patient regains a pulse, or if relieved by a provider of equal or higher medical authority, or when transferring care.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "CPR Compression Depth: Adult",
+      "Back": "Compress the chest at a depth of at least \\(2\\) inches (\\(5\\) cm), but no more than \\(2.4\\) inches (\\(6\\) cm\\()\\).",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "CPR Compression Depth: Child",
+      "Back": "Compress the chest approximately \\(2\\) inches (about \\(1/3\\) the depth of the chest).",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "CPR Compression Depth: Infant",
+      "Back": "Compress the chest approximately \\(1.5\\) inches (about \\(1/3\\) the depth of the chest).",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "CPR: Ventilation Rate (Adult)",
+      "Back": "Provide \\(1\\) breath every \\(6\\) seconds (or \\(10\\) breaths per minute) while continuing chest compressions.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "CPR: Ventilation Rate (Infant/Child)",
+      "Back": "Provide \\(1\\) breath every \\(2-3\\) seconds (or \\(20-30\\) breaths per minute) with continuous chest compressions when an advanced airway is in place.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "AED: Pad Placement",
+      "Back": "Place one pad on the upper right chest, below the clavicle, and the other on the left lower chest, below the armpit.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "AED: Special Situations",
+      "Back": "Hairy Chest: press down firmly/shave; Water: dry chest; Implanted Device: avoid placing pad directly over device.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "EMT intervention for chest pain",
+      "Back": "Administer oxygen (if indicated), aspirin (if not contraindicated), and assist with prescribed nitroglycerin (if systolic BP \\(> 100\\)).",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Aspirin Dosage for Chest Pain",
+      "Back": "Administer \\(162-324\\) mg of chewable aspirin to patients with chest pain, if not allergic and no contraindications.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Nitroglycerin Contraindications",
+      "Back": "Systolic BP \\(< 100\\) mmHg, recent use of erectile dysfunction medications (within \\(24-48\\) hours), head injury.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Stroke: Cincinnati Prehospital Stroke Scale",
+      "Back": "Facial droop, arm drift, and abnormal speech; one positive finding suggests a high probability of stroke.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Stroke: Los Angeles Prehospital Stroke Screen (LAPSS)",
+      "Back": "A stroke assessment tool including facial droop, grip strength, and arm strength to quickly identify stroke patients.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Anterior Cerebral Artery (ACA) Stroke Symptoms",
+      "Back": "Contralateral weakness and sensory loss, primarily in the leg; behavioral changes, confusion.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Middle Cerebral Artery (MCA) Stroke Symptoms",
+      "Back": "Contralateral weakness and sensory loss, primarily in the arm and face; speech deficits (aphasia), vision problems.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Posterior Cerebral Artery (PCA) Stroke Symptoms",
+      "Back": "Visual disturbances (hemianopsia), dizziness, ataxia, altered level of consciousness.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Cerebellar Stroke Symptoms",
+      "Back": "Ataxia (lack of muscle control), vertigo, nausea/vomiting, headache, difficulty swallowing.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Brainstem Stroke Symptoms",
+      "Back": "Altered level of consciousness, abnormal respirations, cranial nerve deficits, weakness on both sides of the body.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Signs of increased Intracranial Pressure (\\(ICP\\))",
+      "Back": "Altered mental status, headache, nausea/vomiting, Cushing's Triad, pupillary changes (unequal or sluggish).",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "What causes Cardiac Tamponade?",
+      "Back": "Fluid accumulation in the pericardial sac, compressing the heart and reducing cardiac output. Common causes include trauma, pericarditis, and malignancy.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Pericardial Sac Anatomy",
+      "Back": "The pericardial sac is a double-layered membrane surrounding the heart, consisting of the fibrous pericardium and serous pericardium.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Role of the Vagus Nerve on Heart Rate",
+      "Back": "Stimulation of the vagus nerve releases acetylcholine, which slows the heart rate by acting on the sinoatrial (\\(SA\\)) node.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Cardiac Conduction System",
+      "Back": "\\(SA\\) node -> \\(AV\\) node -> Bundle of His -> Left and Right Bundle Branches -> Purkinje Fibers; responsible for initiating and coordinating heart contractions.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Coronary Artery Anatomy",
+      "Back": "The main coronary arteries are the left main, left anterior descending (\\(LAD\\)), left circumflex, and right coronary artery (\\(RCA\\)), supplying blood to the heart muscle.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Right Ventricular Infarction: Signs",
+      "Back": "Hypotension, clear lung sounds, \\(JVD\\); often associated with inferior wall \\(MI\\); avoid nitrates (can worsen hypotension).",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Atrial Fibrillation EKG",
+      "Back": "Irregularly irregular rhythm with absent \\(P\\) waves and fibrillatory waves. Atrial rate is typically rapid (\\(350-600\\) bpm).",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Atrial Flutter EKG",
+      "Back": "Regularly irregular rhythm with sawtooth pattern (flutter waves). Atrial rate is typically \\(250-350\\) bpm.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Supraventricular Tachycardia (\\(SVT\\)) EKG",
+      "Back": "Narrow complex tachycardia with a rate typically \\(> 150\\) bpm; \\(P\\) waves may be hidden or absent.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Ventricular Tachycardia EKG",
+      "Back": "Wide complex tachycardia with a rate typically \\(> 100\\) bpm; \\(QRS\\) complexes are wide and bizarre.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Ventricular Fibrillation EKG",
+      "Back": "Chaotic, irregular waveform with no identifiable \\(P\\) waves, \\(QRS\\) complexes, or \\(T\\) waves; the heart is quivering, not pumping.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Torsades de Pointes EKG",
+      "Back": "Polymorphic ventricular tachycardia characterized by a twisting of the \\(QRS\\) complex around the baseline; often associated with prolonged \\(QT\\) interval.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Asystole EKG",
+      "Back": "Flatline EKG; absence of electrical activity in the heart. Confirm in at least two leads.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Pulseless Electrical Activity (\\(PEA\\))",
+      "Back": "Organized electrical activity on the EKG but no palpable pulse. Treat as cardiac arrest; focus on high-quality \\(CPR\\) and addressing reversible causes.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Common Reversible Causes of \\(PEA\\) and Asystole (The \\(Hs\\) and \\(Ts\\))",
+      "Back": "Hypovolemia, Hypoxia, Hydrogen ion (acidosis), Hyper-/Hypokalemia, Hypothermia; Tension pneumothorax, Tamponade (cardiac), Toxins, Thrombosis (pulmonary/coronary).",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Effect of Hyperkalemia on EKG",
+      "Back": "Peaked \\(T\\) waves, prolonged \\(PR\\) interval, widened \\(QRS\\) complex, and eventually sine wave pattern as potassium levels rise.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Effect of Hypokalemia on EKG",
+      "Back": "\\(ST\\) segment depression, flattened \\(T\\) waves, prominent \\(U\\) waves, and prolonged \\(QT\\) interval.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Effect of Hypocalcemia on EKG",
+      "Back": "Prolonged \\(QT\\) interval.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Effect of Hypercalcemia on EKG",
+      "Back": "Shortened \\(QT\\) interval.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Stable Angina",
+      "Back": "Chest pain that is predictable, relieved by rest or nitroglycerin, and occurs with exertion.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Unstable Angina",
+      "Back": "Chest pain that is new in onset, increasing in frequency or severity, or occurs at rest; considered an acute coronary syndrome (\\(ACS\\)).",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Prinzmetal's Angina (Variant Angina)",
+      "Back": "Chest pain caused by vasospasm of coronary arteries, often occurring at rest and may be associated with \\(ST\\) segment elevation.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Left Ventricular Hypertrophy (\\(LVH\\)) causes",
+      "Back": "Chronic hypertension, aortic stenosis, hypertrophic cardiomyopathy. \\(LVH\\) increases the risk of heart failure and sudden cardiac death.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Hypertrophic Cardiomyopathy (\\(HCM\\))",
+      "Back": "Genetic condition causing thickening of the heart muscle, especially the septum; can cause sudden cardiac arrest, particularly during exercise.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Long \\(QT\\) Syndrome",
+      "Back": "Genetic condition predisposing individuals to life-threatening arrhythmias like Torsades de Pointes. It's characterized by a prolonged \\(QT\\) interval on the EKG.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Next step: Unresponsive adult, no pulse",
+      "Back": "Begin chest compressions at a rate of \\(100-120/min\\) and a depth of at least \\(2\\) inches while preparing the AED.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Stroke mimic: Key distinguishing factor",
+      "Back": "Hypoglycemia is a common stroke mimic; always check blood glucose early in stroke assessment to rule this out (\\(<60 mg/dL\\) is severe).",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Anterior MI: ECG leads affected",
+      "Back": "Anterior wall myocardial infarctions typically show ST elevation in leads \\(V1-V4\\) due to blockage of the left anterior descending artery.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Inferior MI: ECG leads affected",
+      "Back": "Inferior wall myocardial infarctions typically show ST elevation in leads \\(II\\), \\(III\\), and \\(aVF\\) due to blockage of the right coronary artery.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "CPR compression depth for infants",
+      "Back": "When performing CPR on an infant, compress the chest to a depth of approximately \\(1.5\\) inches.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "CPR compression rate for all ages",
+      "Back": "For adults, children, and infants, the compression rate during CPR should be \\(100-120\\) compressions per minute.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Epinephrine dosage for cardiac arrest (adult)",
+      "Back": "The adult epinephrine dose for cardiac arrest is \\(1 mg\\) IV/IO, repeated every \\(3-5\\) minutes.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Amiodarone dosage for cardiac arrest (adult)",
+      "Back": "The initial adult amiodarone dose for cardiac arrest is \\(300 mg\\) IV/IO, followed by a second dose of \\(150 mg\\) if needed.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Asystole or PEA: First drug to administer",
+      "Back": "Epinephrine is the first-line drug for asystole or pulseless electrical activity (PEA) at \\(1 mg\\) IV/IO every \\(3-5\\) minutes.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Pericardial effusion: Definition",
+      "Back": "Pericardial effusion is the accumulation of excess fluid in the pericardial space, which can lead to cardiac tamponade.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Cardiac tamponade: Becks Triad",
+      "Back": "Beck's triad consists of hypotension, muffled heart sounds, and jugular venous distension (\\(JVD\\)), and is indicative of cardiac tamponade.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "STEMI: Most crucial intervention",
+      "Back": "Rapid transport to a PCI-capable facility is crucial for STEMI patients to restore blood flow and minimize myocardial damage.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "GCS Eye Opening Response: Pain only",
+      "Back": "A patient opens their eyes only in response to pain receives a GCS score of \\(2\\) for eye opening.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "GCS Verbal Response: Confused",
+      "Back": "A patient who is confused in their verbal response receives a GCS score of \\(4\\) for verbal response.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "GCS Motor Response: Withdraws from pain",
+      "Back": "A patient who withdraws from pain receives a GCS score of \\(4\\) for motor response.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "GCS score indicating severe head injury",
+      "Back": "A GCS score of \\(8\\) or less is generally indicative of a severe head injury and requires advanced airway management.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Rule of Nines: Entire arm percentage",
+      "Back": "According to the Rule of Nines, an entire arm (both anterior and posterior) represents \\(9\\)% of the total body surface area (\\(TBSA\\)).",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Rule of Nines: Anterior trunk percentage",
+      "Back": "According to the Rule of Nines, the anterior trunk represents \\(18\\)% of the total body surface area (\\(TBSA\\)).",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Rule of Nines: Entire leg percentage",
+      "Back": "According to the Rule of Nines, an entire leg (both anterior and posterior) represents \\(18\\)% of the total body surface area (\\(TBSA\\)).",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Anatomical location of the sinoatrial (SA) node",
+      "Back": "The sinoatrial (\\(SA\\)) node, the heart's primary pacemaker, is located in the right atrium.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Anatomical location of the atrioventricular (AV) node",
+      "Back": "The atrioventricular (\\(AV\\)) node is located in the lower part of the interatrial septum, near the tricuspid valve.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Purpose of the Bundle of His",
+      "Back": "The Bundle of His transmits electrical impulses from the \\(AV\\) node to the ventricles, facilitating ventricular contraction.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "What are Purkinje fibers?",
+      "Back": "Purkinje fibers are specialized conducting fibers that rapidly distribute electrical impulses throughout the ventricles, ensuring coordinated contraction.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Coronary artery responsible for perfusing the left ventricle",
+      "Back": "The left anterior descending (\\(LAD\\)) artery and the circumflex artery are primarily responsible for perfusing the left ventricle.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "First-degree AV block ECG characteristic",
+      "Back": "First-degree \\(AV\\) block is characterized by a prolonged \\(PR\\) interval (greater than \\(0.20\\) seconds) on the ECG.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Second-degree AV block Mobitz Type I ECG characteristic",
+      "Back": "Second-degree \\(AV\\) block Mobitz Type I (Wenckebach) shows a progressive lengthening of the \\(PR\\) interval until a QRS complex is dropped.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Second-degree AV block Mobitz Type II ECG characteristic",
+      "Back": "Second-degree \\(AV\\) block Mobitz Type II shows a consistent \\(PR\\) interval with intermittent dropped QRS complexes.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Third-degree AV block ECG characteristic",
+      "Back": "Third-degree \\(AV\\) block (complete heart block) shows no relationship between the \\(P\\) waves and the \\(QRS\\) complexes, indicating complete dissociation.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Ventricular tachycardia (V-tach) definition",
+      "Back": "Ventricular tachycardia (\\(V-tach\\)) is a rapid heart rhythm originating in the ventricles, characterized by a rate greater than \\(100\\) beats per minute with wide QRS complexes.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Ventricular fibrillation (V-fib) definition",
+      "Back": "Ventricular fibrillation (\\(V-fib\\)) is a chaotic, disorganized electrical activity in the ventricles that prevents effective cardiac contraction.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Torsades de Pointes definition",
+      "Back": "Torsades de Pointes is a polymorphic ventricular tachycardia characterized by a twisting of the QRS complexes around the isoelectric baseline.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "ST-segment elevation significance",
+      "Back": "ST-segment elevation typically indicates myocardial injury and is a key sign of ST-elevation myocardial infarction (STEMI).",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "ST-segment depression significance",
+      "Back": "ST-segment depression can indicate myocardial ischemia or non-ST-elevation myocardial infarction (NSTEMI).",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Effect of vagal stimulation on heart rate",
+      "Back": "Vagal stimulation, mediated by the vagus nerve, typically decreases heart rate and can be stimulated by suctioning or rectal temperature taking.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "What is preload?",
+      "Back": "Preload is the volume of blood in the ventricles at the end of diastole (ventricular filling), representing the stretch on the heart muscle before contraction.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "What is afterload?",
+      "Back": "Afterload is the resistance the left ventricle must overcome to circulate blood, influenced by arterial blood pressure and vascular resistance.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Definition of cardiac output (CO)",
+      "Back": "Cardiac output (\\(CO\\)) is the volume of blood pumped by the heart per minute, calculated as heart rate (\\(HR\\)) multiplied by stroke volume (\\(SV\\)): \\(CO = HR \times SV\\).",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Definition of stroke volume (SV)",
+      "Back": "Stroke volume (\\(SV\\)) is the amount of blood ejected by the left ventricle with each contraction.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Signs of right-sided heart failure",
+      "Back": "Right-sided heart failure often presents with peripheral edema, jugular venous distension (\\(JVD\\)), and hepatomegaly.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Signs of left-sided heart failure",
+      "Back": "Left-sided heart failure often presents with pulmonary edema (rales/crackles), shortness of breath (dyspnea), and orthopnea.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Differentiating angina from myocardial infarction",
+      "Back": "Angina is typically relieved by rest or nitroglycerin, while myocardial infarction symptoms are more severe and prolonged, often unrelieved by nitroglycerin.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Significance of troponin levels",
+      "Back": "Elevated troponin levels indicate myocardial damage, making it a key biomarker for diagnosing myocardial infarction.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Action of nitroglycerin",
+      "Back": "Nitroglycerin is a vasodilator that reduces preload and afterload, decreasing cardiac workload and relieving angina.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Contraindications for nitroglycerin administration",
+      "Back": "Contraindications for nitroglycerin include hypotension (systolic blood pressure \\(<90 mmHg\\)), recent use of phosphodiesterase-5 inhibitors (e.g., Viagra, Cialis), and right ventricular infarction.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Common side effect of nitroglycerin",
+      "Back": "A common side effect of nitroglycerin is headache due to vasodilation in the cerebral vessels.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Target SpO2 range for stroke patients",
+      "Back": "Maintain an \\(SpO_2\\) of \\(94-99\\)% in stroke patients, avoiding both hypoxia and excessive oxygenation.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Critical time window for stroke thrombolytic therapy",
+      "Back": "The ideal time window for administering thrombolytic therapy (tPA) in acute ischemic stroke is within \\(3-4.5\\) hours of symptom onset.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "FAST assessment components for stroke",
+      "Back": "The FAST assessment for stroke includes: Facial droop, Arm weakness, Speech difficulty, and Time to call 911.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Most likely cause of sudden cardiac arrest",
+      "Back": "The most common cause of sudden cardiac arrest is ventricular fibrillation secondary to coronary artery disease.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "STEMI EKG changes indicate:",
+      "Back": "ST-segment elevation myocardial infarction indicates full thickness myocardial damage, requiring rapid intervention to restore blood flow.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "CPR compression depth for adult",
+      "Back": "Adult CPR compressions should be at least \\(2\\) inches (\\(5\\) cm) but no more than \\(2.4\\) inches (\\(6\\) cm) deep.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "GCS Eye Opening: Opens to pain",
+      "Back": "A patient opens their eyes only when subjected to a painful stimulus scores \\(2\\) on the Glasgow Coma Scale eye opening assessment.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Stroke: Cincinnati Prehospital Stroke Scale (CPSS) findings",
+      "Back": "Facial droop, arm drift, and abnormal speech are the three components of the Cincinnati Prehospital Stroke Scale.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Next step in witnessed adult cardiac arrest",
+      "Back": "Immediately begin chest compressions while another rescuer retrieves the AED and calls for backup.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "GCS Verbal: Confused conversation",
+      "Back": "A patient engages in conversation but is disoriented to time, place, or person scores \\(4\\) on the Glasgow Coma Scale verbal response.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "CPR compression to ventilation ratio (adult)",
+      "Back": "Adult CPR compression-to-ventilation ratio is \\(30:2\\) for single and two-rescuer CPR.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "GCS Motor: Withdraws from pain",
+      "Back": "A patient pulls a body part away when a painful stimulus is applied scores \\(4\\) on the Glasgow Coma Scale motor response.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "CPR compression to ventilation ratio (child/infant, 2 rescuers)",
+      "Back": "Child and infant CPR compression-to-ventilation ratio is \\(15:2\\) with two rescuers present.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "GCS Motor: Obeys commands",
+      "Back": "A patient follows simple commands such as “squeeze my hand” scores \\(6\\) on the Glasgow Coma Scale motor response.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Right sided heart failure signs",
+      "Back": "Peripheral edema, jugular vein distension (JVD), and hepatomegaly are common signs of right-sided heart failure.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "AED: When to resume compressions",
+      "Back": "Immediately resume chest compressions after delivering a shock from an AED, starting with compressions.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "GCS Motor: Extension to pain",
+      "Back": "A patient extends their body or limbs in response to pain (decerebrate posturing) scores \\(2\\) on the Glasgow Coma Scale motor response.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Left sided heart failure signs",
+      "Back": "Pulmonary edema, shortness of breath (dyspnea), and rales (crackles) in the lungs are common signs of left-sided heart failure.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "GCS Verbal: Inappropriate words",
+      "Back": "The patient speaks intelligible words, but they are out of context and nonsensical (\\(3\\)).",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Atherosclerosis pathophysiology",
+      "Back": "Atherosclerosis involves the buildup of plaque (fats, cholesterol, calcium) inside the arteries, leading to narrowing and reduced blood flow.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Aspirin dosage for ACS",
+      "Back": "The standard aspirin dosage for Acute Coronary Syndrome (ACS) is \\(162-324\\) mg of chewable aspirin.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "GCS Verbal: No verbal response",
+      "Back": "The patient makes no vocal sounds. Assigned a score of \\(1\\).",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Myocardial infarction pathophysiology",
+      "Back": "Myocardial infarction occurs when blood flow to a part of the heart is blocked, causing damage or death to the heart muscle.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Epinephrine action during cardiac arrest",
+      "Back": "Epinephrine causes vasoconstriction to increase blood flow to the brain and heart during cardiac arrest. It also stimulates heart contractions.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "GCS Motor: No motor response",
+      "Back": "The patient makes no movements. Assigned a score of \\(1\\).",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Sudden cardiac arrest primary cause",
+      "Back": "Ventricular fibrillation (\\(V-fib\\)) is the most common cause of sudden cardiac arrest.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Amiodarone use",
+      "Back": "Antiarrhythmic medication used to treat life-threatening ventricular arrhythmias such as \\(V-tach\\) and \\(V-fib\\).",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "GCS Eye Opening: Opens spontaneously",
+      "Back": "The patient opens their eyes without any external stimulus. Assigned a score of \\(4\\).",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Atrial Fibrillation (A-Fib) EKG characteristic",
+      "Back": "Irregularly irregular rhythm without discernable P waves due to chaotic atrial electrical activity.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Adenosine use",
+      "Back": "Antiarrhythmic medication used to treat supraventricular tachycardia (\\(SVT\\)).",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "GCS Eye Opening: Opens to verbal command",
+      "Back": "The patient opens their eyes when prompted by a verbal command. Assigned a score of \\(3\\).",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Ventricular Tachycardia (V-tach) EKG characteristic",
+      "Back": "Rapid, wide QRS complexes originating from the ventricles; may be pulseless.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Atropine use",
+      "Back": "Anticholinergic drug used to treat symptomatic bradycardia (slow heart rate).",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "GCS Verbal: Oriented conversation",
+      "Back": "The patient is oriented to person, place, and time. Assigned a score of \\(5\\).",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Ventricular Fibrillation (V-fib) EKG characteristic",
+      "Back": "Chaotic, irregular electrical activity in the ventricles, resulting in no effective cardiac output.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Pediatric Cardiac Arrest common cause",
+      "Back": "Hypoxia or respiratory failure are the most common causes of pediatric cardiac arrest.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "GCS Motor: Flexion to pain",
+      "Back": "A patient flexes their body in response to pain (decorticate posturing) scores \\(3\\) on the Glasgow Coma Scale motor response.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Pediatric CPR compression depth",
+      "Back": "Compress the chest at least one-third of its depth (approximately \\(1.5\\) inches (\\(4\\) cm) for infants and \\(2\\) inches (\\(5\\) cm) for children).",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Pulseless Electrical Activity (PEA)",
+      "Back": "Organized electrical activity on the ECG without a palpable pulse. Treat as cardiac arrest.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Pediatric CPR compression to ventilation ratio (single rescuer)",
+      "Back": "The compression-to-ventilation ratio is \\(30:2\\) for single-rescuer CPR in infants and children.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Stroke: Large vessel occlusion significance",
+      "Back": "Large vessel occlusions often result in more severe deficits and may require advanced interventions like thrombectomy.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "CPR for newborns",
+      "Back": "For newborns, use two thumb encircling hands technique with compression to ventilation ratio of \\(3:1\\).",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Stroke: Penumbral region significance",
+      "Back": "The penumbral region represents ischemic brain tissue that is potentially salvageable with timely intervention.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Defibrillation Joule settings (Adult)",
+      "Back": "Defibrillation dose is \\(200\\) J for Biphasic and \\(360\\) J for Monophasic Defibrillators, however, follow manufacturer's instructions for Biphasic.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Stroke: Ischemic core significance",
+      "Back": "The ischemic core represents brain tissue that has already infarcted (died) due to lack of blood flow.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Post-cardiac arrest care focus",
+      "Back": "Focus on optimizing ventilation and oxygenation, managing blood pressure, and identifying and treating the underlying cause.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Stroke: tPA window of opportunity",
+      "Back": "tPA, a thrombolytic (clot-busting) medication, is most effective if administered within \\(3-4.5\\) hours of symptom onset for ischemic stroke.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Coronary Artery Bypass Graft (CABG) indications",
+      "Back": "Severe coronary artery disease (CAD) is the main indication for CABG in which vessels are grafted to bypass blocked arteries.",
+      "Topic": "2",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Acute Coronary Syndrome (ACS) encompasses:",
+      "Back": "ACS encompasses a range of conditions including unstable angina, NSTEMI, and STEMI, all related to reduced blood flow in the coronary arteries.",
+      "Topic": "2",
+      "Subtopic": "1"
+    }
+  ]
+}

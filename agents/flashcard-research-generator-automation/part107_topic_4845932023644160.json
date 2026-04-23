@@ -1,0 +1,323 @@
+{
+  "app_name": "part107",
+  "flashcards": [
+    {
+      "Topic": "4845932023644160",
+      "Subtopic": "N/A",
+      "Front": "What is dew point temperature?",
+      "Back": "Dew point is the temperature to which air must be cooled to become saturated. At saturation, relative humidity is \\(100\\%\\), and clouds/fog form."
+    },
+    {
+      "Topic": "4845932023644160",
+      "Subtopic": "N/A",
+      "Front": "What is the effect of stable air?",
+      "Back": "Stable air resists vertical movement. Expect stratiform clouds, smooth air, and fair to poor visibility due to haze or fog."
+    },
+    {
+      "Topic": "4845932023644160",
+      "Subtopic": "N/A",
+      "Front": "What causes wind?",
+      "Back": "Wind is caused by differences in air pressure. Air moves from areas of high pressure to areas of low pressure."
+    },
+    {
+      "Topic": "4845932023644160",
+      "Subtopic": "N/A",
+      "Front": "What are isobars?",
+      "Back": "Isobars are lines on a weather chart connecting points of equal pressure. Closely spaced isobars indicate a strong pressure gradient and high winds."
+    },
+    {
+      "Topic": "4845932023644160",
+      "Subtopic": "N/A",
+      "Front": "What is a temperature inversion?",
+      "Back": "A temperature inversion is when temperature increases with altitude. This can trap pollutants and create stable air conditions."
+    },
+    {
+      "Topic": "4845932023644160",
+      "Subtopic": "N/A",
+      "Front": "What conditions create fog?",
+      "Back": "Fog forms when the air temperature nears the dew point and condensation occurs near the ground. Stable air, high humidity, and light winds are conducive to fog formation."
+    },
+    {
+      "Topic": "4845932023644160",
+      "Subtopic": "N/A",
+      "Front": "What is the coriolis effect?",
+      "Back": "The Coriolis effect is the apparent deflection of moving objects (like air) due to the Earth's rotation. It deflects winds to the right in the Northern Hemisphere."
+    },
+    {
+      "Topic": "4845932023644160",
+      "Subtopic": "N/A",
+      "Front": "What is a cold front?",
+      "Back": "A cold front is the leading edge of a colder air mass, often associated with towering cumulus or cumulonimbus clouds and showery precipitation."
+    },
+    {
+      "Topic": "4845932023644160",
+      "Subtopic": "N/A",
+      "Front": "What is a warm front?",
+      "Back": "A warm front is the leading edge of a warmer air mass, often associated with stratiform clouds and widespread, gentle precipitation."
+    },
+    {
+      "Topic": "4845932023644160",
+      "Subtopic": "N/A",
+      "Front": "What are thunderstorms?",
+      "Back": "Thunderstorms are caused by unstable air, high humidity, and a lifting force. They can produce hazardous conditions like lightning, hail, and strong winds."
+    },
+    {
+      "Topic": "4845932023644160",
+      "Subtopic": "N/A",
+      "Front": "What is wind shear?",
+      "Back": "Wind shear is a sudden change in wind speed or direction over a short distance. It can be horizontal or vertical and is a serious hazard, especially during takeoff and landing."
+    },
+    {
+      "Topic": "4845932023644160",
+      "Subtopic": "N/A",
+      "Front": "What is a microburst?",
+      "Back": "A microburst is a localized column of sinking air within a thunderstorm, resulting in an outward burst of damaging winds at the surface. Extremely hazardous."
+    },
+    {
+      "Topic": "4845932023644160",
+      "Subtopic": "N/A",
+      "Front": "What does 'PIREP' stand for?",
+      "Back": "PIREP stands for Pilot Report. It is a report of actual weather conditions encountered by an aircraft in flight, very useful for real-time awareness."
+    },
+    {
+      "Topic": "4845932023644160",
+      "Subtopic": "N/A",
+      "Front": "What is indicated by closely spaced isobars?",
+      "Back": "Closely spaced isobars indicate a steep pressure gradient, resulting in stronger winds. Further apart means weaker winds."
+    },
+    {
+      "Topic": "4845932023644160",
+      "Subtopic": "N/A",
+      "Front": "What is the standard temperature lapse rate?",
+      "Back": "The standard temperature lapse rate is a decrease of \\(2^{\\circ}\\text{C}\\) per \\(1,000\\) feet of altitude. This is an average, and actual lapse rates can vary significantly."
+    },
+    {
+      "Topic": "4845932023644160",
+      "Subtopic": "N/A",
+      "Front": "What is the effect of unstable air?",
+      "Back": "Unstable air promotes vertical air currents, leading to turbulent conditions and the development of cumulus-type clouds, and potentially thunderstorms."
+    },
+    {
+      "Topic": "4845932023644160",
+      "Subtopic": "N/A",
+      "Front": "How does haze impact flight operations?",
+      "Back": "Haze reduces visibility, making it harder to see other aircraft and terrain. Can significantly impair visual flight rules (VFR) conditions."
+    },
+    {
+      "Topic": "4845932023644160",
+      "Subtopic": "N/A",
+      "Front": "What causes upslope fog?",
+      "Back": "Upslope fog forms when moist, stable air is forced up a sloping land surface and cools to its dew point, saturating the air."
+    },
+    {
+      "Topic": "4845932023644160",
+      "Subtopic": "N/A",
+      "Front": "What are the characteristics of a stable airmass?",
+      "Back": "A stable airmass typically exhibits smooth air, poor visibility, and steady precipitation. Stable air resists vertical movement."
+    },
+    {
+      "Topic": "4845932023644160",
+      "Subtopic": "N/A",
+      "Front": "What information is on a surface analysis chart?",
+      "Back": "Surface Analysis Charts depict sea level pressure, positions of highs, lows, ridges, troughs, and locations of fronts and drylines at the surface."
+    },
+    {
+      "Topic": "4845932023644160",
+      "Subtopic": "N/A",
+      "Front": "What are the stages of a thunderstorm?",
+      "Back": "The stages of a thunderstorm are: cumulus (updrafts dominate), mature (updrafts and downdrafts coexist, most intense), and dissipating (downdrafts dominate)."
+    },
+    {
+      "Topic": "4845932023644160",
+      "Subtopic": "N/A",
+      "Front": "What is a METAR?",
+      "Back": "A METAR is an aviation routine weather report. It provides current surface weather observations, including temperature, wind, visibility, and cloud cover at specific airports."
+    },
+    {
+      "Topic": "4845932023644160",
+      "Subtopic": "N/A",
+      "Front": "What is a TAF?",
+      "Back": "A TAF (Terminal Aerodrome Forecast) is a forecast of expected weather conditions within a \\(5\\)-statute-mile radius of an airport, valid for a specific time."
+    },
+    {
+      "Topic": "4845932023644160",
+      "Subtopic": "N/A",
+      "Front": "What causes sea breezes?",
+      "Back": "Sea breezes are caused by differential heating between land and water. During the day, land heats up faster than water, creating a pressure gradient that causes wind to blow from the sea to the land."
+    },
+    {
+      "Topic": "4845932023644160",
+      "Subtopic": "N/A",
+      "Front": "What are lenticular clouds?",
+      "Back": "Lenticular clouds are lens-shaped clouds that form over mountains. They indicate strong winds and turbulence at higher altitudes."
+    },
+    {
+      "Topic": "4845932023644160",
+      "Subtopic": "N/A",
+      "Front": "What is advection fog?",
+      "Back": "Advection fog forms when warm, moist air moves over a cooler surface. The air cools to its dew point, resulting in fog. This is common near coastlines."
+    },
+    {
+      "Topic": "4845932023644160",
+      "Subtopic": "N/A",
+      "Front": "What is a squall line?",
+      "Back": "A squall line is a line of thunderstorms, often forming ahead of a cold front. It can produce strong winds, heavy rain, and hail."
+    },
+    {
+      "Topic": "4845932023644160",
+      "Subtopic": "N/A",
+      "Front": "How do you calculate cloud base (AGL)?",
+      "Back": "Approximate cloud base (AGL) can be calculated using the formula: \\(\\frac{\\text{Temperature}-\\text{Dewpoint}}{4.4} \\times 1000\\). Result is in feet above ground level."
+    },
+    {
+      "Topic": "4845932023644160",
+      "Subtopic": "N/A",
+      "Front": "What does 'BR' mean in a METAR?",
+      "Back": "'BR' in a METAR indicates mist. Mist is defined as visibility greater than \\(5/8\\) statute mile but less than \\(7\\) statute miles."
+    },
+    {
+      "Topic": "4845932023644160",
+      "Subtopic": "N/A",
+      "Front": "What preflight weather information is required?",
+      "Back": "Before any flight, pilots must become familiar with all available weather information including METARs, TAFs, winds aloft forecasts, and NOTAMs."
+    },
+    {
+      "Topic": "4845932023644160",
+      "Subtopic": "N/A",
+      "Front": "What is dew point?",
+      "Back": "Dew point is the temperature to which air must be cooled to become saturated. The closer the dew point is to the temperature, the higher the relative humidity."
+    },
+    {
+      "Topic": "4845932023644160",
+      "Subtopic": "N/A",
+      "Front": "What are isobars on a weather chart?",
+      "Back": "Isobars are lines on a weather chart that connect points of equal atmospheric pressure. Closely spaced isobars indicate a strong pressure gradient and higher wind speeds."
+    },
+    {
+      "Topic": "4845932023644160",
+      "Subtopic": "N/A",
+      "Front": "Define a temperature inversion.",
+      "Back": "A temperature inversion occurs when temperature increases with altitude instead of decreasing. Inversions can trap pollutants and create stable atmospheric conditions."
+    },
+    {
+      "Topic": "4845932023644160",
+      "Subtopic": "N/A",
+      "Front": "Define a cold front.",
+      "Back": "A cold front is the leading edge of a colder air mass, replacing a warmer air mass. Passage of a cold front is often associated with thunderstorms."
+    },
+    {
+      "Topic": "4845932023644160",
+      "Subtopic": "N/A",
+      "Front": "What is indicated by widely spaced isobars?",
+      "Back": "Widely spaced isobars indicate a weak pressure gradient. This typically results in lighter winds because the pressure difference is gradual."
+    },
+    {
+      "Topic": "4845932023644160",
+      "Subtopic": "N/A",
+      "Front": "What is the definition of visibility?",
+      "Back": "Visibility is the greatest horizontal distance at which prominent objects can be viewed with the naked eye. Reduced visibility poses a significant flight hazard."
+    },
+    {
+      "Topic": "4845932023644160",
+      "Subtopic": "N/A",
+      "Front": "Describe the lifecycle of a thunderstorm.",
+      "Back": "Thunderstorms have three stages: cumulus (updrafts dominate), mature (updrafts and downdrafts coexist), and dissipating (downdrafts dominate). Hazardous conditions are most intense during the mature stage."
+    },
+    {
+      "Topic": "4845932023644160",
+      "Subtopic": "N/A",
+      "Front": "Define relative humidity.",
+      "Back": "Relative humidity is the amount of water vapor in the air, expressed as a percentage of the maximum amount of water vapor the air could hold at that temperature. \\(100\\%\\) relative humidity means the air is saturated."
+    },
+    {
+      "Topic": "4845932023644160",
+      "Subtopic": "N/A",
+      "Front": "How does temperature affect air density?",
+      "Back": "As temperature increases, air density decreases. Warm air is less dense than cold air, which impacts aircraft performance, especially takeoff distance and climb rate."
+    },
+    {
+      "Topic": "4845932023644160",
+      "Subtopic": "N/A",
+      "Front": "What is a PIREP?",
+      "Back": "A PIREP is a pilot report concerning weather conditions encountered in flight. PIREPs provide valuable real-time information to other pilots and weather forecasters."
+    },
+    {
+      "Topic": "4845932023644160",
+      "Subtopic": "N/A",
+      "Front": "Explain a stable air mass.",
+      "Back": "A stable air mass resists vertical movement. Stable air is often associated with smooth air, poor visibility (due to trapped pollutants), and steady precipitation."
+    },
+    {
+      "Topic": "4845932023644160",
+      "Subtopic": "N/A",
+      "Front": "What are tafs?",
+      "Back": "Terminal Aerodrome Forecasts (TAFs) are concise forecasts of expected weather conditions within a \\(5\\) nautical mile radius of an airport. They are issued several times daily."
+    },
+    {
+      "Topic": "4845932023644160",
+      "Subtopic": "N/A",
+      "Front": "Describe an unstable air mass.",
+      "Back": "An unstable air mass promotes vertical air movement. Unstable air is often associated with turbulent air, good visibility, and showery precipitation. Thunderstorms can develop."
+    },
+    {
+      "Topic": "4845932023644160",
+      "Subtopic": "N/A",
+      "Front": "How does pressure affect air density?",
+      "Back": "As atmospheric pressure increases, air density also increases. Higher pressure means more air molecules are packed into the same volume, resulting in denser air."
+    },
+    {
+      "Topic": "4845932023644160",
+      "Subtopic": "N/A",
+      "Front": "Define a warm front.",
+      "Back": "A warm front is the leading edge of a warmer air mass, replacing a colder air mass. Passage of a warm front often brings widespread cloudiness and precipitation."
+    },
+    {
+      "Topic": "4845932023644160",
+      "Subtopic": "N/A",
+      "Front": "What is a SIGMET?",
+      "Back": "A SIGMET (Significant Meteorological Information) is a weather advisory concerning significant weather phenomena like severe turbulence, icing, and widespread dust storms that are hazardous to all aircraft."
+    },
+    {
+      "Topic": "4845932023644160",
+      "Subtopic": "N/A",
+      "Front": "What is mountain obscuration?",
+      "Back": "Mountain obscuration occurs when clouds cover mountain peaks, reducing visibility and creating hazardous flying conditions. This is common when moist air is forced to rise over mountains."
+    },
+    {
+      "Topic": "4845932023644160",
+      "Subtopic": "N/A",
+      "Front": "How does humidity affect air density?",
+      "Back": "As humidity increases, air density decreases. Water vapor is lighter than dry air, so moist air is less dense than dry air at the same temperature and pressure."
+    },
+    {
+      "Topic": "4845932023644160",
+      "Subtopic": "N/A",
+      "Front": "What is the freezing level?",
+      "Back": "The freezing level is the altitude at which the air temperature is \\(0^{\\circ}\\text{C}\\). It is crucial for determining the potential for icing conditions on aircraft."
+    },
+    {
+      "Topic": "4845932023644160",
+      "Subtopic": "N/A",
+      "Front": "What are LIFR conditions?",
+      "Back": "LIFR (Low Instrument Flight Rules) conditions are weather conditions where visibility is less than \\(1\\) statute mile and the ceiling is less than \\(500\\) feet above ground level."
+    },
+    {
+      "Topic": "4845932023644160",
+      "Subtopic": "N/A",
+      "Front": "How do you convert celsius to fahrenheit?",
+      "Back": "To convert Celsius to Fahrenheit, use the formula: \\(F = (\\frac{9}{5} \\cdot C) + 32\\). This is important for interpreting weather reports from various sources."
+    },
+    {
+      "Topic": "4845932023644160",
+      "Subtopic": "N/A",
+      "Front": "What is radiation fog?",
+      "Back": "Radiation fog forms on clear, calm nights when the ground cools rapidly by radiation. The cool ground cools the air above it to the dew point, forming fog."
+    },
+    {
+      "Topic": "4845932023644160",
+      "Subtopic": "N/A",
+      "Front": "What is needed for structural icing?",
+      "Back": "Visible moisture and temperatures at or below freezing are required for structural icing. Ice accumulation can severely affect aircraft performance and control."
+    }
+  ]
+}

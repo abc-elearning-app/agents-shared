@@ -1,0 +1,341 @@
+{
+  "app_name": "part107",
+  "flashcards": [
+    {
+      "Topic": "6277911107600384",
+      "Subtopic": "N/A",
+      "Front": "Maximum suas groundspeed",
+      "Back": "The maximum groundspeed for a small unmanned aircraft system (sUAS) is \\(\\text{87 knots}\\) or \\(\\text{100 mph}\\), as defined by Part 107 regulations."
+    },
+    {
+      "Topic": "6277911107600384",
+      "Subtopic": "N/A",
+      "Front": "Maximum suas altitude AGL",
+      "Back": "The maximum altitude a sUAS can be flown is \\(\\text{400 feet}\\) above ground level (AGL), or higher if flying within a \\(\\text{400-foot}\\) radius of a structure."
+    },
+    {
+      "Topic": "6277911107600384",
+      "Subtopic": "N/A",
+      "Front": "Minimum visibility for suas flight",
+      "Back": "According to Part 107, the minimum visibility required to operate a sUAS is \\(\\text{3 statute miles}\\) from your control station."
+    },
+    {
+      "Topic": "6277911107600384",
+      "Subtopic": "N/A",
+      "Front": "Required preflight actions",
+      "Back": "The remote pilot in command must inspect the sUAS to ensure it is in a condition for safe operation, per regulations."
+    },
+    {
+      "Topic": "6277911107600384",
+      "Subtopic": "N/A",
+      "Front": "Alcohol impairment limit",
+      "Back": "You cannot operate a sUAS if you have consumed alcohol within the preceding \\(\\text{8 hours}\\), or if your blood alcohol content is \\(\\text{0.04}\\) or greater."
+    },
+    {
+      "Topic": "6277911107600384",
+      "Subtopic": "N/A",
+      "Front": "Operating near manned aircraft",
+      "Back": "A remote pilot cannot operate an sUAS in a manner that interferes with operations and traffic patterns at any airport, heliport, or seaplane base per Part 107."
+    },
+    {
+      "Topic": "6277911107600384",
+      "Subtopic": "N/A",
+      "Front": "Operating over people",
+      "Back": "Operating a sUAS over people is prohibited unless you have a waiver or the operation meets the requirements of Category \\(\\text{1, 2, 3, or 4}\\)."
+    },
+    {
+      "Topic": "6277911107600384",
+      "Subtopic": "N/A",
+      "Front": "Part 107 daylight operations",
+      "Back": "sUAS operations are allowed during daylight hours or during civil twilight with appropriate anti-collision lighting that is visible for \\(\\text{3 statute miles}\\)."
+    },
+    {
+      "Topic": "6277911107600384",
+      "Subtopic": "N/A",
+      "Front": "Reporting an accident to the FAA",
+      "Back": "An accident must be reported to the FAA if it involves serious injury to any person or loss of consciousness, or if the sUAS sustains substantial damage. Notification is required within \\(10\\) days."
+    },
+    {
+      "Topic": "6277911107600384",
+      "Subtopic": "N/A",
+      "Front": "Certificate of waiver requirements",
+      "Back": "A Certificate of Waiver (CoW) is required to deviate from certain provisions of Part 107, such as nighttime operations or flying beyond visual line of sight (BVLOS)."
+    },
+    {
+      "Topic": "6277911107600384",
+      "Subtopic": "N/A",
+      "Front": "Remote pilot in command (remote PIC) responsibilities",
+      "Back": "The Remote PIC is responsible for ensuring the sUAS is safe to fly and that the operation is conducted in accordance with Part 107 regulations."
+    },
+    {
+      "Topic": "6277911107600384",
+      "Subtopic": "N/A",
+      "Front": "Class B airspace authorization",
+      "Back": "To operate in Class B airspace, you typically need authorization from Air Traffic Control (ATC) via LAANC or a manual waiver, ensuring safe integration."
+    },
+    {
+      "Topic": "6277911107600384",
+      "Subtopic": "N/A",
+      "Front": "Class C airspace authorization",
+      "Back": "Operations in Class C airspace require ATC authorization. Utilize LAANC when available, or manually request permissions when necessary."
+    },
+    {
+      "Topic": "6277911107600384",
+      "Subtopic": "N/A",
+      "Front": "Class D airspace authorization",
+      "Back": "Similar to Class C, operating in Class D airspace also requires ATC authorization before commencing sUAS operations near airports."
+    },
+    {
+      "Topic": "6277911107600384",
+      "Subtopic": "N/A",
+      "Front": "Operating near airports without control towers",
+      "Back": "When operating near airports without an operating control tower, you should self-announce your intentions on the Common Traffic Advisory Frequency (CTAF)."
+    },
+    {
+      "Topic": "6277911107600384",
+      "Subtopic": "N/A",
+      "Front": "Temporary flight restrictions (tfrs)",
+      "Back": "Temporary Flight Restrictions (TFRs) are issued to restrict aircraft operations in certain areas temporarily. Remote pilots must check for TFRs before each flight to ensure compliance."
+    },
+    {
+      "Topic": "6277911107600384",
+      "Subtopic": "N/A",
+      "Front": "Lost link procedures",
+      "Back": "Remote pilots must establish lost link procedures. These include predetermined actions the sUAS will take in the event of a lost link, such as returning to a pre-programmed location."
+    },
+    {
+      "Topic": "6277911107600384",
+      "Subtopic": "N/A",
+      "Front": "Maintenance requirements",
+      "Back": "The Remote PIC is responsible for ensuring that the sUAS receives proper maintenance per manufacturer's guidelines and Part 107 requirements."
+    },
+    {
+      "Topic": "6277911107600384",
+      "Subtopic": "N/A",
+      "Front": "Validity of remote pilot certificate",
+      "Back": "The FAA Remote Pilot Certificate is valid for \\(\\text{24 calendar months}\\). Recurrent testing or training is required to maintain currency."
+    },
+    {
+      "Topic": "6277911107600384",
+      "Subtopic": "N/A",
+      "Front": "Documents required during suas operation",
+      "Back": "You must have your Remote Pilot Certificate and registration readily available during all sUAS operations as per FAA regulations."
+    },
+    {
+      "Topic": "6277911107600384",
+      "Subtopic": "N/A",
+      "Front": "Supplemental weather data",
+      "Back": "While not explicitly mandated in Part 107, using supplemental weather data can improve decision-making for a safer flight operation."
+    },
+    {
+      "Topic": "6277911107600384",
+      "Subtopic": "N/A",
+      "Front": "Responsibility regarding hazardous materials",
+      "Back": "Part 107 restricts carriage of hazardous materials with few exceptions for items necessary for the safe operation of the sUAS."
+    },
+    {
+      "Topic": "6277911107600384",
+      "Subtopic": "N/A",
+      "Front": "Night operations requirements",
+      "Back": "Night operations require completion of updated FAA training and using anti-collision lights visible for \\(\\text{3 statute miles}\\) from the sUAS."
+    },
+    {
+      "Topic": "6277911107600384",
+      "Subtopic": "N/A",
+      "Front": "Corrective lenses requirement",
+      "Back": "If you require corrective lenses, you must have them available during flight operations per regulations on pilot medical certificates."
+    },
+    {
+      "Topic": "6277911107600384",
+      "Subtopic": "N/A",
+      "Front": "Operating from a moving vehicle",
+      "Back": "A sUAS cannot be operated from a moving aircraft or vehicle unless over a sparsely populated area; regulations apply per Part 107."
+    },
+    {
+      "Topic": "6277911107600384",
+      "Subtopic": "N/A",
+      "Front": "ATC communication responsibilities",
+      "Back": "Communicate effectively with ATC, providing accurate location and altitude information, and follow instructions precisely for safe airspace integration."
+    },
+    {
+      "Topic": "6277911107600384",
+      "Subtopic": "N/A",
+      "Front": "Deviation authority",
+      "Back": "Remote pilots may deviate from Part 107 in response to an in-flight emergency, as long as the FAA is notified upon request."
+    },
+    {
+      "Topic": "6277911107600384",
+      "Subtopic": "N/A",
+      "Front": "VO responsibilities",
+      "Back": "The VO should maintain VLOS with the sUAS, scan the airspace for hazards, and communicate effectively with the remote pilot in command."
+    },
+    {
+      "Topic": "6277911107600384",
+      "Subtopic": "N/A",
+      "Front": "Defined longitudinal separation during operations",
+      "Back": "During operations, ensure adequate longitudinal separation, as outlined in FAA guidelines, to avoid potential collisions with other aircraft."
+    },
+    {
+      "Topic": "6277911107600384",
+      "Subtopic": "N/A",
+      "Front": "Considerations around airport operations",
+      "Back": "When near airports, be aware of the airport's layout, traffic patterns, and potential wake turbulence from larger aircraft, adhering to safety guidelines."
+    },
+    {
+      "Topic": "6277911107600384",
+      "Subtopic": "N/A",
+      "Front": "Maximum allowable groundspeed for suas",
+      "Back": "The maximum groundspeed for a small unmanned aircraft system (sUAS) is \\(87\\) knots or \\(100\\) mph. This limit ensures safe operation and control of the drone."
+    },
+    {
+      "Topic": "6277911107600384",
+      "Subtopic": "N/A",
+      "Front": "Maximum altitude AGL for suas operation",
+      "Back": "The maximum altitude for sUAS operation is \\(400\\) feet above ground level (AGL) or, if higher, within \\(400\\) feet of a structure. This is per 14 CFR Part 107."
+    },
+    {
+      "Topic": "6277911107600384",
+      "Subtopic": "N/A",
+      "Front": "Minimum visibility requirement for suas flight",
+      "Back": "The minimum visibility requirement for sUAS operations is \\(3\\) statute miles (SM) from the control station. This ensures adequate visual awareness of the surrounding airspace."
+    },
+    {
+      "Topic": "6277911107600384",
+      "Subtopic": "N/A",
+      "Front": "Definition of visual line of sight (VLOS)",
+      "Back": "VLOS means the remote pilot or visual observer must be able to see the unmanned aircraft throughout the entire flight, unaided by any device other than corrective lenses."
+    },
+    {
+      "Topic": "6277911107600384",
+      "Subtopic": "N/A",
+      "Front": "Preflight inspection requirements for suas",
+      "Back": "The remote pilot in command (PIC) must conduct a preflight inspection to ensure the sUAS is in a safe condition for operation. This includes checking control links."
+    },
+    {
+      "Topic": "6277911107600384",
+      "Subtopic": "N/A",
+      "Front": "Required documents during suas operations",
+      "Back": "The remote pilot must have their remote pilot certificate and registration available for inspection upon request by the FAA or law enforcement during sUAS operations."
+    },
+    {
+      "Topic": "6277911107600384",
+      "Subtopic": "N/A",
+      "Front": "Night operation limitations without waiver",
+      "Back": "Operations at night are not allowed without a waiver, even with anti-collision lights. Part \\(107.29\\) defines requirements for night operations with a waiver."
+    },
+    {
+      "Topic": "6277911107600384",
+      "Subtopic": "N/A",
+      "Front": "Maximum blood alcohol content for remote pilot",
+      "Back": "The maximum blood alcohol content (BAC) for a remote pilot is \\(.04\\). Remote pilots are also prohibited from operating under the influence of drugs."
+    },
+    {
+      "Topic": "6277911107600384",
+      "Subtopic": "N/A",
+      "Front": "Weather minimums for operating near clouds",
+      "Back": "When operating near clouds, you need to maintain a distance of \\(500\\) feet below the cloud and \\(2,000\\) feet horizontally. This ensures safe operation and airspace awareness."
+    },
+    {
+      "Topic": "6277911107600384",
+      "Subtopic": "N/A",
+      "Front": "Definition of a 'control station'",
+      "Back": "A control station is an interface used by the remote pilot to control the flight path of the small unmanned aircraft. The remote pilot directly manipulates it."
+    },
+    {
+      "Topic": "6277911107600384",
+      "Subtopic": "N/A",
+      "Front": "Part 107 applicability",
+      "Back": "Part \\(107\\) applies to civil small UAS operations conducted for compensation or hire. This includes commercial, educational, and research operations."
+    },
+    {
+      "Topic": "6277911107600384",
+      "Subtopic": "N/A",
+      "Front": "What is the weight limit for suas?",
+      "Back": "A small unmanned aircraft system (sUAS) must weigh less than \\(55\\) pounds, including payload, to be operated under Part \\(107\\) regulations without further restrictions."
+    },
+    {
+      "Topic": "6277911107600384",
+      "Subtopic": "N/A",
+      "Front": "Operation from a moving vehicle",
+      "Back": "sUAS operations from a moving vehicle are not allowed unless over a sparsely populated area or water and no property is being transported for compensation."
+    },
+    {
+      "Topic": "6277911107600384",
+      "Subtopic": "N/A",
+      "Front": "Airspace authorization requirements",
+      "Back": "Operations in Class B, C, D, and E airspace require prior authorization from Air Traffic Control (ATC). Apply through LAANC or DroneZone for permissions."
+    },
+    {
+      "Topic": "6277911107600384",
+      "Subtopic": "N/A",
+      "Front": "What is 'careless or reckless' operation?",
+      "Back": "Operating an sUAS in a careless or reckless manner that endangers the life or property of another person is prohibited under Part \\(107\\) regulations."
+    },
+    {
+      "Topic": "6277911107600384",
+      "Subtopic": "N/A",
+      "Front": "Who is responsible for avoiding collisions?",
+      "Back": "The remote pilot in command (PIC) is directly responsible for avoiding collisions with other aircraft, people, and objects on the ground during sUAS operations."
+    },
+    {
+      "Topic": "6277911107600384",
+      "Subtopic": "N/A",
+      "Front": "Suas registration requirements",
+      "Back": "All sUAS operated under Part \\(107\\) must be registered with the FAA, and the registration number must be displayed on the aircraft per \\(14\\) CFR Part \\(48\\)."
+    },
+    {
+      "Topic": "6277911107600384",
+      "Subtopic": "N/A",
+      "Front": "Part 107 waiver process",
+      "Back": "To deviate from certain Part \\(107\\) regulations, a remote pilot must apply for a waiver through the FAA's DroneZone website. The FAA reviews each waiver request."
+    },
+    {
+      "Topic": "6277911107600384",
+      "Subtopic": "N/A",
+      "Front": "Defining a 'small unmanned aircraft'",
+      "Back": "A 'small unmanned aircraft' is an unmanned aircraft weighing less than \\(55\\) pounds, including everything that is onboard or otherwise attached to the aircraft."
+    },
+    {
+      "Topic": "6277911107600384",
+      "Subtopic": "N/A",
+      "Front": "Remote pilot certificate validity",
+      "Back": "A remote pilot certificate is valid for \\(24\\) calendar months. You must pass a recurrent knowledge test to renew it before expiration to continue operating commercially."
+    },
+    {
+      "Topic": "6277911107600384",
+      "Subtopic": "N/A",
+      "Front": "What is considered 'hazardous material'?",
+      "Back": "Hazardous material is defined as any substance or material that has been determined by the Secretary of Transportation to be capable of posing an unreasonable risk to health, safety, and property when transported in commerce."
+    },
+    {
+      "Topic": "6277911107600384",
+      "Subtopic": "N/A",
+      "Front": "Operating over people limitations",
+      "Back": "According to Part \\(107\\), operation over people is prohibited unless you have a waiver or your drone meets specific operational requirements for Category \\(1\\), \\(2\\), \\(3\\), or \\(4\\) operations."
+    },
+    {
+      "Topic": "6277911107600384",
+      "Subtopic": "N/A",
+      "Front": "Altitude restriction near airports",
+      "Back": "When operating within the lateral boundaries of an airport, the maximum allowable altitude is determined by the Airport Elevation and any FAA restrictions in place."
+    },
+    {
+      "Topic": "6277911107600384",
+      "Subtopic": "N/A",
+      "Front": "What is 'operational control'?",
+      "Back": "'Operational control' refers to having the authority to initiate, conduct, continue, divert, or terminate a flight. The remote PIC always holds operational control."
+    },
+    {
+      "Topic": "6277911107600384",
+      "Subtopic": "N/A",
+      "Front": "Minimum age for remote pilot certificate",
+      "Back": "The minimum age requirement to obtain a remote pilot certificate with a small UAS rating is \\(16\\) years old. You must also be able to read, speak, write, and understand English."
+    },
+    {
+      "Topic": "6277911107600384",
+      "Subtopic": "N/A",
+      "Front": "Suas carriage of property for hire",
+      "Back": "Carriage of property of another for compensation or hire is allowed under Part 107, provided it meets specific requirements including operation within VLOS and weight limits."
+    }
+  ]
+}

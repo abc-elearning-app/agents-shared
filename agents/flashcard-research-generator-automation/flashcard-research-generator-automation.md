@@ -113,16 +113,10 @@ Return ONLY a JSON block detailing the bucket status and the source materials no
 # 3. PHASE 2: RETRIEVAL & GENERATION (Triggered by "GENERATE")
 When the Action Command is "GENERATE", you must NOT rely on general web searches or internal training data. 
 
-### Step 1: Automated Technical Retrieval & Context Optimization (MANDATORY) 
-You must retrieve information dynamically for EACH specific Topic/Subtopic before generating its flashcards. 
-
-1. **Dynamic Query Construction:** For every individual topic or subtopic being processed, you must construct a highly specific search string.
-   - Example Query Strategy: `"Provide core definitions, frameworks, formulas, and key concepts specifically for [Exact Topic Name] - [Exact Subtopic Name]."`
-2. **API Execution & Strict Payload Limits (Anti-TPM Exhaustion):** Use the Search API (`POST http://117.7.0.31:5930/search/chat`). To prevent LLM context window overload, you MUST enforce these parameters in the API body:
-   - `"limit": 3` (Do NOT exceed 3 sources).
-   - `"similarity_threshold": 0.4` (Ensure high relevance).
-   - *Example Body:* `{ "query": "Concepts for Risk Management - Qualitative Analysis", "app_name": "pmp", "limit": 3, "similarity_threshold": 0.4 }`
-3. **Master Reference Truncation:** Use the `answer` or `response` returned by the Search API as the foundational Master Reference. **CRITICAL PYTHON IMPLEMENTATION RULE:** Before injecting this Master Reference into the generation prompt, the system MUST truncate the text strictly to the first 15,000 characters (e.g., `master_reference[:15000]`).
+### Step 1: Automated Technical Retrieval (MANDATORY) 
+1. **Source of Truth:** Use the **Search API** (`POST http://117.7.0.31:5930/search/chat`) as the primary gateway to the bucket.
+2. **Exhaustive Querying:** To ensure a "Zero-Omission" effect, you MUST send granular queries for the specific topic/subtopic. The API is pre-configured to aggregate and synthesize information from 100% of the files within the `[appName]` bucket.
+3. **Master Reference Construction:** Use the `answer` or `response` returned by the Search API as the foundational Master Reference. If the context is thin (< 3000 chars), perform supplementary technical searches to ensure depth.
 
 ### Step 2: Content Synthesis & Reference Filtering 
 1. **Cross-Document Analysis:** Use the synthesized knowledge from the Search API to identify core definitions, formulas, and key concepts. 
@@ -161,7 +155,12 @@ ALL output content (Front Term, Back Explanation) MUST be written entirely in En
 * Target KPI: Extract a minimum of 50 terms/Topic (if no subtopics) or 30 terms/Subtopic (if app have layer “subtopic”).
 * Split Technique: Break down larger concepts into detailed aspects to meet KPIs, if derived from actual research.
 * Quality Override: Stop at the maximum number of high-quality terms available. Do not invent terms just to meet the quota.
-* Zero Duplication: Ensure all extracted terms are strictly unique.
+* **Session-Based Deduplication (STRICT):**
+    - **Session Memory:** Maintain an in-memory tracker of all 'Front' terms generated within the current `job_id`.
+    - **Exclusion List Injection:** For subsequent batches, inject the list of previously generated terms into the prompt.
+    - **Anti-Paraphrasing Rule:** Explicitly forbid the LLM from generating semantic duplicates, synonyms, or paraphrased versions of terms in the exclusion list. Every term must be a distinct educational concept.
+    - **Session Reset:** This exclusion list is transient and must be cleared when a new `job_id` is initiated, allowing for re-generation of terms in fresh runs.
+* Zero Duplication: Ensure all extracted terms are strictly unique across all batches in a session.
 
 **F. ID Mapping Constraint & CMS API Integration (MANDATORY)**
 API Integration (STEP-BY-STEP PIPELINE): 

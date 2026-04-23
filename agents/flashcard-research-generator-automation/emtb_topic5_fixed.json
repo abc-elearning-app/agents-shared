@@ -1,0 +1,1463 @@
+{
+  "app_name": "emtb",
+  "flashcards": [
+    {
+      "Topic": "5",
+      "Subtopic": "1",
+      "Front": "Incident Command System (\\(ICS\\))",
+      "Back": "A standardized, on-scene emergency management tool designed to allow users to adopt an integrated organizational structure. It minimizes duplication of effort and ensures efficient resource management."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "1",
+      "Front": "Incident Commander (\\(IC\\))",
+      "Back": "The individual who has overall responsibility for managing the entire incident. They establish objectives and have final authority over all resource decisions."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "1",
+      "Front": "Unified Command",
+      "Back": "A structure where representatives from multiple agencies work together to develop a common set of objectives. It prevents conflicts in command and ensures a coordinated response."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "1",
+      "Front": "Span of Control",
+      "Back": "The ratio of supervisors to subordinates, ideally maintained at \\(1\\) to \\(5\\). This ensures that every leader can effectively manage their assigned resources."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "1",
+      "Front": "Safety Officer",
+      "Back": "A command staff member responsible for identifying hazardous situations and ensuring the safety of all personnel. They have the authority to stop any unsafe operation immediately."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "1",
+      "Front": "Public Information Officer (\\(PIO\\))",
+      "Back": "The individual responsible for providing accurate and timely information to the media and public. They serve as the single point of contact for incident-related updates."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "1",
+      "Front": "Liaison Officer",
+      "Back": "The point of contact for assisting or coordinating agencies participating in the incident. They handle requests for resources from outside organizations."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "1",
+      "Front": "Operations Section",
+      "Back": "The component of the General Staff responsible for managing all tactical operations at the incident. They carry out the Incident Action Plan to achieve mission objectives."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "1",
+      "Front": "Planning Section",
+      "Back": "The section responsible for collecting, evaluating, and disseminating information about the incident's status. They develop the Incident Action Plan and maintain resource status documentation."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "1",
+      "Front": "Logistics Section",
+      "Back": "The section responsible for providing facilities, services, and materials needed to support the incident. This includes food, medical supplies, and communications equipment."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "1",
+      "Front": "Finance Section",
+      "Back": "The section responsible for tracking all incident costs, including payroll, equipment rental, and injury compensation. They are typically only activated for large or complex incidents."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "1",
+      "Front": "Mass-Casualty Incident (\\(MCI\\))",
+      "Back": "An emergency situation that involves three or more patients or places a great demand on available resources. It requires the use of triage and the Incident Command System."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "1",
+      "Front": "\\(START\\) Triage",
+      "Back": "A protocol used to quickly categorize adult patients at an \\(MCI\\) based on \\(RPM\\) criteria. It stands for Simple Triage and Rapid Treatment."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "1",
+      "Front": "\\(JumpSTART\\) Triage",
+      "Back": "A modified triage system designed specifically for pediatric patients at a mass-casualty incident. It accounts for the physiological differences in children, such as respiratory rates."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "1",
+      "Front": "Triage Priority: Immediate (Red)",
+      "Back": "Patients with life-threatening injuries who require immediate care and transport. Examples include airway obstruction, severe bleeding, or tension pneumothorax."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "1",
+      "Front": "Triage Priority: Delayed (Yellow)",
+      "Back": "Patients with significant injuries who can wait for a short period before receiving treatment. Examples include stable fractures or large wounds without severe bleeding."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "1",
+      "Front": "Triage Priority: Minor (Green)",
+      "Back": "Often called the walking wounded, these patients have minor injuries and can move to a designated area. They are the last priority for transport."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "1",
+      "Front": "Triage Priority: Deceased (Black)",
+      "Back": "Patients who are already dead or have injuries so catastrophic that survival is not possible. They are not moved or treated until all other patients are cleared."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "1",
+      "Front": "\\(RPM\\) Criteria",
+      "Back": "The three assessments performed during \\(START\\) triage: Respirations, Perfusion, and Mental Status. A failure in any one category results in a Red tag."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "1",
+      "Front": "\\(START\\) Triage: Respirations",
+      "Back": "If a patient is not breathing, the airway is opened once; if they still do not breathe, they are tagged Black. If they breathe over \\(30\\) times per minute, they are tagged Red."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "1",
+      "Front": "\\(START\\) Triage: Perfusion",
+      "Back": "Evaluated using capillary refill or radial pulse. If capillary refill is greater than \\(2\\) seconds or the radial pulse is absent, the patient is tagged Red."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "1",
+      "Front": "\\(START\\) Triage: Mental Status",
+      "Back": "The patient is asked to follow a simple command. If they cannot follow the command or are unconscious, they are tagged Red."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "1",
+      "Front": "Due Regard",
+      "Back": "The legal requirement for emergency vehicle operators to drive with safety for all others on the road. It does not grant absolute immunity from traffic laws."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "1",
+      "Front": "Cushion of Safety",
+      "Back": "The safe distance maintained between an ambulance and other vehicles on the road. This space allows for reaction time and prevents collisions during sudden stops."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "1",
+      "Front": "Siren Syndrome",
+      "Back": "A psychological phenomenon where the sound of a siren causes a driver to increase speed and take unnecessary risks. It can lead to a false sense of security."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "1",
+      "Front": "Blind Spots",
+      "Back": "Areas around the ambulance that cannot be seen in the mirrors. Drivers must lean forward and look around the mirrors to ensure these areas are clear."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "1",
+      "Front": "Ambulance Cleaning",
+      "Back": "The process of removing dirt and organic matter from surfaces using soap and water. It is the first step in the decontamination process."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "1",
+      "Front": "Ambulance Disinfection",
+      "Back": "The use of a chemical agent to kill most bacteria and viruses on non-critical surfaces. It is typically performed after every call involving patient contact."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "1",
+      "Front": "High-Level Disinfection",
+      "Back": "A more intense disinfection process that kills all microorganisms except for high numbers of bacterial spores. It is used for items like laryngoscope blades."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "1",
+      "Front": "Sterilization",
+      "Back": "The use of heat or chemicals to kill all forms of microbial life, including spores. This process is required for any equipment that enters the body or sterile tissues."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "1",
+      "Front": "Hot Zone",
+      "Back": "The area immediately surrounding a hazardous materials release where the highest risk of contamination exists. Access is restricted to personnel with specialized protective equipment."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "1",
+      "Front": "Warm Zone",
+      "Back": "The area where personnel and equipment decontamination takes place. It serves as a buffer between the contaminated hot zone and the safe cold zone."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "1",
+      "Front": "Cold Zone",
+      "Back": "The safe area where the command post and support functions are located. No contaminated personnel or equipment are allowed in this zone."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "1",
+      "Front": "Emergency Response Guidebook (\\(ERG\\))",
+      "Back": "A reference manual used to identify hazards and determine initial safety distances at a hazmat incident. It is organized by chemical name and \\(ID\\) number."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "1",
+      "Front": "Safety Data Sheet (\\(SDS\\))",
+      "Back": "A document provided by manufacturers that lists the physical properties, hazards, and first-aid measures for a specific chemical. It must be available in workplaces."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "1",
+      "Front": "\\(NFPA\\) 704 Diamond",
+      "Back": "A color-coded sign used to identify the health, flammability, and reactivity hazards of materials. Numbers range from \\(0\\) (no hazard) to \\(4\\) (severe hazard)."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "1",
+      "Front": "\\(CHEMTREC\\)",
+      "Back": "A \\(24\\)-hour emergency resource that provides technical information to responders dealing with hazardous materials incidents. They can be contacted via phone or radio."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "1",
+      "Front": "Decontamination",
+      "Back": "The physical or chemical process of removing or neutralizing contaminants from people and equipment. It prevents the spread of toxins into clean areas."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "1",
+      "Front": "Expressed Consent",
+      "Back": "Permission given by a conscious, competent adult for medical care. It must be informed, meaning the patient understands the risks and benefits of treatment."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "1",
+      "Front": "Implied Consent",
+      "Back": "A legal principle that assumes an unconscious or mentally incapacitated patient would want life-saving treatment. It applies when a threat to life or limb exists."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "1",
+      "Front": "Involuntary Consent",
+      "Back": "Consent obtained from a third party, such as a law enforcement officer or legal guardian, for a patient who cannot legally consent. This often applies to psychiatric emergencies."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "1",
+      "Front": "Negligence",
+      "Back": "A failure to provide the expected standard of care, resulting in injury to the patient. It requires duty to act, breach of duty, damages, and causation."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "1",
+      "Front": "Abandonment",
+      "Back": "The termination of patient care without the patient's consent or without transferring care to a provider of equal or higher training. It is a legal and ethical violation."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "1",
+      "Front": "\\(HIPAA\\)",
+      "Back": "The Health Insurance Portability and Accountability Act, which protects the privacy of patient health information. It limits the disclosure of sensitive medical data."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "1",
+      "Front": "Duty to Act",
+      "Back": "A legal obligation to provide care when an individual is on duty or when a specific relationship exists. For EMTs, this usually begins when they are dispatched."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "1",
+      "Front": "Standard of Care",
+      "Back": "The level of care that a reasonable and prudent person with the same training would provide in a similar situation. It is defined by local and national guidelines."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "1",
+      "Front": "Scope of Practice",
+      "Back": "The legal boundaries of what an EMT is permitted to do based on their certification level. It is determined by state law and medical oversight."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "1",
+      "Front": "Simple Access",
+      "Back": "Gaining entry to a vehicle or structure without the use of specialized tools. This typically involves opening an unlocked door or rolling down a window."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "1",
+      "Front": "Complex Access",
+      "Back": "Gaining entry to a vehicle or structure using tools such as hydraulic cutters or glass breakers. It requires specialized training and equipment."
+    },
+    {
+      "Topic": "5",
+      "Subtopic": "1",
+      "Front": "Landing Zone (\\(LZ\\)) Dimensions",
+      "Back": "A flat, clear area for a helicopter landing, ideally measuring \\(100\\) feet by \\(100\\) feet. The surface must be free of loose debris and overhead wires."
+    },
+    {
+      "Front": "START Triage: Immediate (Red) Criteria",
+      "Back": "Respirations \\(> 30/min\\), perfusion (cap refill \\(> 2\\) seconds or absent radial pulse), or altered mental status (unable to follow simple commands) designate immediate transport.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Incident Command System (ICS) purpose",
+      "Back": "The Incident Command System is a standardized, on-scene, all-hazard incident management concept allowing for efficient and effective coordination of resources.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Hazmat: ERG Orange Section",
+      "Back": "The orange section of the Emergency Response Guidebook (\\(ERG\\)) lists potential hazards, personal protective equipment, and emergency actions for specific materials.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "MCI: Role of Triage Supervisor",
+      "Back": "The triage supervisor is responsible for rapidly assessing and categorizing patients during a mass casualty incident, ensuring efficient allocation of resources.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Terrorism: Potential Secondary Device",
+      "Back": "Be aware of the possibility of a secondary explosive device targeting first responders at a terrorist incident; maintain situational awareness and follow established safety protocols.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Ambulance Staging Area Definition",
+      "Back": "A designated location where ambulances and other emergency vehicles await instructions or deployment during a large-scale incident or event.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "START Triage: Delayed (Yellow) Criteria",
+      "Back": "Patients who are able to follow simple commands, have respirations \\(< 30/min\\), and have a palpable radial pulse but cannot walk are categorized as delayed.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Ambulance inspection: Tire tread depth",
+      "Back": "Check tire tread depth to ensure it meets minimum safety standards (typically \\(> 4/32\\) inch) for safe ambulance operation.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Hazmat: Identifying hazardous materials",
+      "Back": "Hazardous materials are identified by placards, labels, shipping papers, and safety data sheets (\\(SDS\\)).",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Role of Finance/Administration Section Chief",
+      "Back": "Tracks costs related to the incident. Handles compensation and claims. Oversees all financial aspects.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Cyanide exposure sign",
+      "Back": "Signs include rapid, gasping respirations; flushed skin; tachycardia; altered mental status; seizures; and eventually pulmonary edema and cardiac arrest.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Weapons of Mass Destruction (WMD) Categories",
+      "Back": "Biological, nuclear, incendiary, chemical, and explosive (\\(BNICE\\)).",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "JumpSTART Triage: Infant no pulse/apneic",
+      "Back": "If an infant is apneic with no pulse, immediately check pulse. If pulse is present, give \\(5\\) rescue breaths. If infant remains apneic, move on.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Purpose of unified command",
+      "Back": "Allows agencies with different legal, geographic, and functional responsibilities to work together effectively without losing individual authority.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Hazmat: Safest approach distance",
+      "Back": "Always approach from upwind, uphill, and upstream to minimize exposure risks during a hazardous materials incident.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "MCI: Role of Medical Branch Director",
+      "Back": "The Medical Branch Director oversees all medical operations at the incident, including triage, treatment, and transport.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Most common blast injury",
+      "Back": "Tympanic membrane rupture is the most common primary blast injury due to the ear's sensitivity to pressure changes.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Ambulance disinfecting solutions",
+      "Back": "Use an \\(EPA\\)-approved disinfectant solution (e.g., \\(1:100\\) bleach solution) to clean and disinfect ambulance surfaces after each patient transport.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "START Triage: Immediate (Red) Pediatric",
+      "Back": "If respirations are \\(> 45/min\\) or \\(< 15/min\\), perfusion (no palpable radial pulse), or inappropriate painful stimuli response, the patient is immediate.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "ICS: Chain of Command Purpose",
+      "Back": "Ensures that each individual reports to only one designated supervisor, preventing confusion and conflicting orders.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Hazmat: SDS sections",
+      "Back": "The Safety Data Sheet includes information about the chemical's hazards, composition, safe handling practices, and emergency control measures.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "MCI: Role of Transportation Officer",
+      "Back": "The transportation officer coordinates the movement of patients from the treatment area to appropriate medical facilities.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Terrorism: S/S of nerve agent",
+      "Back": "SLUDGEM - Salivation, Lacrimation, Urination, Defecation, GI upset, Emesis, Miosis (pinpoint pupils).",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Ambulance equipment: Oxygen regulator output",
+      "Back": "Ensure the oxygen regulator can deliver variable flow rates, typically from \\(1-15\\) \\(L/min\\) for nasal cannula and masks.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "START Triage: Delayed (Yellow) Pediatric",
+      "Back": "The patient has peripheral pulse, respirations \\(15-45\\), and is responsive to painful stimuli.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "ICS: Span of Control",
+      "Back": "Refers to the number of individuals one supervisor can effectively manage, typically \\(3-7\\) people.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Hazmat: Placard colors and meanings",
+      "Back": "Red indicates flammable, yellow indicates reactivity, white indicates special hazard, and orange indicates explosive.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "MCI: Role of Staging Area Manager",
+      "Back": "The Staging Area Manager oversees the location where ambulances and other resources are parked while awaiting assignment.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Terrorism: S/S of vesicant agent",
+      "Back": "Blistering (vesicles) on skin and respiratory tract, eye irritation, and potential systemic effects. Example: sulfur mustard.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Ambulance safety: Blind spots",
+      "Back": "Be aware of large blind spots on both sides and to the rear of the ambulance; use mirrors and spotters when maneuvering.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "START Triage: Minor (Green) Criteria",
+      "Back": "Patients who are able to walk (ambulatory) and have minor injuries are classified as 'walking wounded' or 'minor'.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "ICS: Purpose of Planning Section",
+      "Back": "Collects, evaluates, and disseminates information needed to develop the incident action plan.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Hazmat: Identifying containers",
+      "Back": "Containers are identified by their shape, markings, and the presence of placards or labels.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "MCI: Resource Management Principles",
+      "Back": "Resource management during an MCI involves prioritizing, allocating, and tracking available resources (personnel, equipment, supplies) to maximize effectiveness.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Terrorism: S/S of pulmonary agent",
+      "Back": "Causes severe irritation or swelling of the respiratory tract. Examples include phosgene and chlorine.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Ambulance: Warning Devices",
+      "Back": "Siren, horn, and flashing lights are crucial for alerting other drivers but should be used judiciously and in accordance with local regulations.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "JumpSTART Triage: Apneic child w/ palpable pulse",
+      "Back": "Give \\(5\\) rescue breaths. If no spontaneous breathing, immediate (red).",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "ICS: Logistics Section Responsibilities",
+      "Back": "Provides resources and support services, such as personnel, equipment, supplies, and facilities, needed for the incident.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Hazmat: NFPA \\(704\\) Diamond",
+      "Back": "The NFPA \\(704\\) diamond provides a quick reference to the hazards of a material: Health (blue), Flammability (red), Reactivity (yellow), and Special Hazards (white).",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "MCI: Span of Control in EMS",
+      "Back": "In an MCI, aim for a span of control of approximately \\(3-7\\) personnel per supervisor to maintain effective management.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Terrorism: Ricin signs and symptoms",
+      "Back": "Ricin is a toxin that inhibits protein synthesis, causing cellular damage and potentially leading to organ failure and death via inhalation, ingestion or injection.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Ambulance Equipment: Suction",
+      "Back": "Portable and mounted suction units must generate a vacuum of at least \\(300\\) \\(mmHg\\) and have wide-bore, nonkinking tubing.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "START Triage: Deceased (Black) Criteria",
+      "Back": "Patients who are not breathing after an attempt to open the airway are classified as deceased (black/expectant).",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "ICS: Single Resource vs Task Force",
+      "Back": "A single resource is an individual or piece of equipment; a task force is a group of mixed resources with common communications operating under one leader.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Hazmat: Evacuation vs Shelter-in-Place",
+      "Back": "Evacuation involves moving people away from a hazardous area, while shelter-in-place involves staying indoors to protect from airborne contaminants.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "MCI: Communication Challenges",
+      "Back": "Communication challenges in an MCI include interoperability issues, radio frequency congestion, and the need for clear and concise messaging.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Terrorism: Common explosives",
+      "Back": "Common explosives include dynamite, \\(TNT\\), ammonium nitrate fuel oil (\\(ANFO\\)), and improvised explosive devices (\\(IEDs\\)).",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Ambulance: Cleaning vs Disinfecting",
+      "Back": "Cleaning removes visible dirt and debris, while disinfecting kills many (but not all) microorganisms; both are essential for infection control.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "JumpSTART Triage: Palpable Pulse, but Apneic",
+      "Back": "Give \\(5\\) rescue breaths. If still apneic, immediate (red).",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "START Triage: Respiratory Rate over \\(30\\)",
+      "Back": "If a patient's respiratory rate is over \\(30\\) breaths per minute during START triage, immediately tag them as IMMEDIATE (Red).",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Hazmat: What does the ERG guide provide?",
+      "Back": "The Emergency Response Guidebook (\\(ERG\\)) provides information on the hazards of materials, initial response, and protective actions during a hazmat incident.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "ICS: Span of control ratio",
+      "Back": "In the Incident Command System (\\(ICS\\)), the optimal span of control is one supervisor to between \\(3\\) and \\(7\\) subordinates.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "MCI: Triage prioritization categories",
+      "Back": "The four triage categories are Immediate (Red), Delayed (Yellow), Minor (Green), and Expectant (Black).",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Ambulance: Phases of an ambulance call",
+      "Back": "The phases of an ambulance call are: preparation, dispatch, en route, arrival at scene, patient transfer, en route to receiving facility, at receiving facility, return to service.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Terrorism: Secondary device concerns",
+      "Back": "A secondary explosive device is designed to target first responders arriving on scene of an initial event and cause further casualties.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "ICS: Purpose of the Incident Commander",
+      "Back": "The Incident Commander (\\(IC\\)) is responsible for all aspects of the response, including developing incident objectives and managing all incident operations.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Triage: RPM meaning",
+      "Back": "RPM in START triage refers to Respirations, Perfusion, and Mental Status, used to quickly assess patients at an MCI.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Ambulance: Cleaning vs. Disinfecting",
+      "Back": "Cleaning involves removing visible contaminants, while disinfecting uses chemicals to kill many (but not all) microorganisms.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Hazmat: Level A Protection",
+      "Back": "Level A personal protective equipment (\\(PPE\\)) offers the highest level of respiratory, skin, and eye protection.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "MCI: Role of Triage Officer",
+      "Back": "The triage officer is responsible for rapidly assessing and categorizing patients based on the severity of their injuries.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Terrorism: Indicators of a Chemical Attack",
+      "Back": "Indicators of a chemical attack include multiple casualties with similar symptoms, unexplained odors, and dead animals.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Triage: Capillary refill assessment",
+      "Back": "If capillary refill is greater than \\(2\\) seconds during triage, tag as immediate (Red).",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Ambulance: Safe ambulance operation",
+      "Back": "Safe ambulance operation includes defensive driving, awareness of surroundings, and proper use of warning devices.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Hazmat: Placard colors meaning",
+      "Back": "Hazmat placards utilize colors to indicate the general hazard class, such as red for flammable and yellow for reactive.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "MCI: Communication challenges",
+      "Back": "Communication challenges at an \\(MCI\\) include interoperability issues, limited radio channels, and background noise.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Terrorism: Biological weapon dissemination",
+      "Back": "Biological weapons can be disseminated through aerosolization, food/water contamination, or direct contact.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "ICS: Finance/Administration Section duties",
+      "Back": "The Finance/Administration Section tracks costs, handles procurement, and manages personnel payment records.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Triage: Mental status assessment",
+      "Back": "During START triage, if a patient can follow simple commands, they are classified as delayed (Yellow).",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Ambulance: Decontamination procedures",
+      "Back": "Decontamination of the ambulance involves removing contaminants from surfaces using appropriate cleaning agents.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Hazmat: Routes of entry",
+      "Back": "Routes of entry for hazardous materials include inhalation, ingestion, absorption, and injection.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "MCI: Staging area purpose",
+      "Back": "The staging area provides a location for incoming resources to assemble before being assigned to a specific task.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Terrorism: \\(SLUDGEM\\) mnemonic",
+      "Back": "\\(SLUDGEM\\) helps recall signs of nerve agent exposure: Salivation, Lacrimation, Urination, Defecation, Gastric upset, Emesis, Miosis.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "ICS: Planning Section tasks",
+      "Back": "The Planning Section collects, evaluates, and disseminates information needed to manage the incident.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Triage: Pediatric assessment differences",
+      "Back": "Pediatric triage considers different respiratory rates and relies more on AVPU scale compared to adults.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Ambulance: Medial equipment maintenance",
+      "Back": "Proper maintenance of medical equipment is crucial for ensuring equipment functionality and patient safety.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Hazmat: Using your senses at hazmat scenes",
+      "Back": "Never use your senses (smell, taste) to identify hazardous materials. Rely on placards and information.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "MCI: Family reunification",
+      "Back": "Establishing a family reunification area is important for connecting separated individuals following a mass casualty event.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Terrorism: Key signs of a bomb threat",
+      "Back": "Key signs of a bomb threat include suspicious packages, unusual odors, or specific/vague threats.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "ICS: Operations Section Responsibilities",
+      "Back": "The Operations Section conducts tactical operations to carry out the incident objectives.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Triage: Immediate intervention criteria",
+      "Back": "Immediate intervention criteria in triage include airway obstruction, uncontrolled bleeding, and shock.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Ambulance: Air ambulance considerations",
+      "Back": "Air ambulance considerations include landing zone safety, weather conditions, and communication with air medical crew.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Hazmat: NFPA 704 Diamond",
+      "Back": "The \\(NFPA 704\\) diamond uses colors (red, blue, yellow, white) to indicate health, flammability, reactivity, and special hazards.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "MCI: Role of patient transportation officer",
+      "Back": "The patient transportation officer coordinates the movement of patients from the scene to appropriate medical facilities.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Terrorism: Radiological dispersal device (\\(RDD\\))",
+      "Back": "A radiological dispersal device (\\(RDD\\)), or \"dirty bomb,\" spreads radioactive material without a nuclear explosion.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "ICS: Chain of command importance",
+      "Back": "Following chain of command ensures clear communication and accountability within the incident management structure.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Triage: Delayed treatment examples",
+      "Back": "Patients with isolated long bone fractures, burns without airway compromise, or stable abdominal injuries are typically tagged as delayed (Yellow).",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Ambulance: Situational awareness importance",
+      "Back": "Maintaining situational awareness during ambulance operations helps identify potential hazards and make informed decisions.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Hazmat: Isolation perimeter size",
+      "Back": "The isolation perimeter size depends on the type and amount of hazardous material involved in the incident.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "MCI: Psychological impact on responders",
+      "Back": "Responders at an \\(MCI\\) may experience psychological stress, requiring debriefing and support services.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Terrorism: Indicators of a suspicious package",
+      "Back": "Indicators of a suspicious package include excessive postage, strange odors, and lopsided or uneven shape.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "ICS: Unity of Command",
+      "Back": "Unity of command dictates that each individual reports to only one designated supervisor.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Triage: Expectant category criteria",
+      "Back": "The Expectant (Black) category is assigned to patients with severe injuries who have a low probability of survival given available resources.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Ambulance: Securing the scene",
+      "Back": "Securing the scene involves parking the ambulance safely, managing traffic, and ensuring scene safety for responders and patients.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Hazmat: Decontamination corridor setup",
+      "Back": "The decontamination corridor should be upwind and uphill from the incident, with separate areas for contaminated and clean equipment.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "MCI: Resource allocation principles",
+      "Back": "Resource allocation at an \\(MCI\\) should prioritize the greatest good for the greatest number of people.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Terrorism: Blast injuries primary effects",
+      "Back": "Primary blast injuries are caused by the pressure wave itself, affecting air-filled organs like lungs and ears.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "ICS: Unified Command System",
+      "Back": "A Unified Command System allows agencies with different legal, jurisdictional, and functional responsibilities to work together effectively.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Triage: RPM's Perfusion assessment",
+      "Back": "If radial pulse is absent during START triage, tag as immediate (Red).",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "MCI Triage: Prioritization based on?",
+      "Back": "Triage prioritizes patients based on the severity of their injuries and the likelihood of survival with available resources, using categories like immediate, delayed, minimal, and expectant.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "ICS: Finance/Administration Section Responsibilities",
+      "Back": "The Finance/Administration Section in ICS manages all financial aspects of the incident, including tracking costs, procurement, time recording, and compensation claims.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Hazmat: ERG Initial Action Guides focus on?",
+      "Back": "The Emergency Response Guidebook's Initial Action Guides primarily focus on immediate safety measures, such as evacuation distances and protective clothing, based on the identified hazardous material.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "BLS Ambulance Equipment: Minimum airway adjuncts?",
+      "Back": "At a minimum, a BLS ambulance should carry oropharyngeal airways (\\(OPA\\)) and nasopharyngeal airways (\\(NPA\\)) in various sizes to maintain a patent airway.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "START Triage: Immediate (Red) Criteria - Respiration?",
+      "Back": "In START triage, a patient is categorized as immediate (red) if they have respirations greater than \\(30\\) per minute or less than \\(10\\) per minute after manual opening of the airway.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Terrorism: Secondary Device Concerns",
+      "Back": "A secondary device targets first responders and bystanders arriving after an initial explosion, designed to cause further casualties and complicate rescue efforts.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Ambulance staging at a Hazmat scene?",
+      "Back": "Ambulances should stage upwind and uphill from a Hazmat incident, a safe distance away, to minimize exposure to hazardous materials and fumes.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "ICS Span of Control Definition",
+      "Back": "Span of control refers to the number of individuals or resources one supervisor can effectively manage during an incident, typically ranging from \\(3\\) to \\(7\\).",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "MCI Communication Challenges",
+      "Back": "Communication challenges at an MCI include interoperability between agencies, maintaining clear communication channels, and managing the flow of information to and from the scene.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Hazmat: Identifying placards indicate?",
+      "Back": "Hazmat placards on vehicles and containers indicate the class and specific type of hazardous material being transported or stored, aiding in hazard assessment.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "NEXT step: Vehicle Collision, Downed Power Lines",
+      "Back": "The next step is to establish a safety perimeter and contact the power company to de-energize the lines before approaching the vehicle.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Most likely cause: Patient with altered mental status, hypoglycemia.",
+      "Back": "The most likely cause of altered mental status in a diabetic patient is hypoglycemia, so check blood glucose levels immediately.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "GCS: Eye-opening score of 3 indicates?",
+      "Back": "A GCS eye-opening score of \\(3\\) indicates that the patient opens their eyes to verbal command.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Rule of Nines: Adult torso percentage?",
+      "Back": "In adults, the entire torso (front and back) accounts for \\(36\\)% of the total body surface area (\\(TBSA\\)) according to the Rule of Nines.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Pediatric Vitals: Normal respiratory rate infant (1-12 months)",
+      "Back": "A normal respiratory rate for an infant aged \\(1\\)-\\(12\\) months is typically between \\(30\\) and \\(60\\) breaths per minute.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "PALS: Epinephrine dose for anaphylaxis (\\(1:1,000\\))",
+      "Back": "For anaphylaxis in children, the epinephrine dose (\\(1:1,000\\)) is \\(0.01\\) \\(mg/kg\\) IM, with a maximum single dose of \\(0.3\\) \\(mg\\).",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Anatomy: Diaphragm innervation",
+      "Back": "The diaphragm, the primary muscle of respiration, is innervated by the phrenic nerve, which originates from cervical nerves \\(C3\\)-\\(C5\\).",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Pathophysiology: Tension pneumothorax effect on heart",
+      "Back": "A tension pneumothorax can cause compression of the heart and great vessels, leading to decreased cardiac output and obstructive shock.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Hazmat: Decontamination Corridor setup.",
+      "Back": "The decontamination corridor should be set up in the warm zone, with a controlled perimeter, to remove contaminants from personnel and equipment.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "START Triage: What does RPM stand for?",
+      "Back": "\"RPM\" in START triage stands for Respirations, Perfusion, and Mental Status, the key assessments for determining triage categories.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "BLS Ambulance: Required suction capacity",
+      "Back": "The suction unit on a BLS ambulance must be capable of generating airflow of more than \\(30\\) \\(L/min\\) at the end of the catheter.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Terrorism: Common nerve agent effects",
+      "Back": "Common nerve agent effects include SLUDGEM (Salivation, Lacrimation, Urination, Defecation, Gastric upset, Emesis, Miosis) due to cholinesterase inhibition.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Most likely diagnosis: Crushing chest pain, ST elevation.",
+      "Back": "The most likely diagnosis is an ST-elevation myocardial infarction (\\(STEMI\\)), requiring rapid transport to a cardiac catheterization lab.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Rule of Nines: Infant leg percentage",
+      "Back": "For infants, each entire leg is \\(13.5\\)% of the total body surface area; this differs from adults, which are \\(18\\)% each.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "GCS: Verbal response score of 4 indicates?",
+      "Back": "A GCS verbal response score of \\(4\\) indicates that the patient is confused but able to answer questions.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Pediatric Vitals: Normal heart rate (2 years old)",
+      "Back": "A normal heart rate for a \\(2\\)-year-old child is typically between \\(80\\) and \\(120\\) beats per minute.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Anatomy: Upper airway structures include?",
+      "Back": "Upper airway structures include the nose, mouth, pharynx (nasopharynx, oropharynx, laryngopharynx), and larynx.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Pathophysiology: Cardiac tamponade effect on blood pressure",
+      "Back": "Cardiac tamponade causes decreased cardiac output, leading to narrowing pulse pressure and hypotension due to fluid accumulation in the pericardial sac.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "NEXT step: Hazmat scene with unconscious patient",
+      "Back": "The next step is to ensure the scene is safe, call for Hazmat team, and stage a safe distance away until cleared by the Hazmat team.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "ICS: Planning Section Responsibilities",
+      "Back": "The Planning Section collects and evaluates information, develops the Incident Action Plan (IAP), and tracks resources and situation status.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Hazmat: Levels of PPE",
+      "Back": "Levels of PPE range from Level A (highest protection, SCBA and encapsulated suit) to Level D (work uniform, minimal protection), depending on hazard assessment.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "START Triage: What does the 'P' assess?",
+      "Back": "The 'P' in START triage assesses perfusion by evaluating capillary refill; if it exceeds \\(2\\) seconds, the patient is triaged as immediate (red).",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "BLS Ambulance: Required oxygen flow rate",
+      "Back": "A portable oxygen cylinder must be capable of delivering oxygen at a rate of at least \\(15\\) \\(L/min\\).",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Terrorism: Signs of a possible explosive device",
+      "Back": "Suspicious packages, wires, unusual odors, and unattended bags are signs of a possible explosive device that should be reported immediately.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "MCI: Role of the Staging Area Manager",
+      "Back": "The Staging Area Manager is responsible for managing and tracking resources (personnel, vehicles, equipment) waiting for assignment at the incident.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Rule of Nines: Adult arm percentage",
+      "Back": "Each arm on an adult represents \\(9\\)% of the TBSA. Anterior and posterior make up \\(4.5\\)% each.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "GCS: Motor response score of 5 indicates?",
+      "Back": "A GCS motor response score of \\(5\\) indicates localization of pain; the patient attempts to remove the painful stimulus.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Pediatric Vitals: Normal systolic BP (10 yr old)",
+      "Back": "A normal systolic blood pressure for a \\(10\\) year old is \\(90 + (2 \times \text{age in years})\\); so approximately \\(110\\) \\(mmHg\\).",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Anatomy: Lower airway structures include?",
+      "Back": "Lower airway structures include the trachea, bronchi, bronchioles, and alveoli. These are responsible for gas exchange.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Pathophysiology: Distributive shock examples",
+      "Back": "Distributive shock includes septic shock (infection), anaphylactic shock (severe allergic reaction), and neurogenic shock (spinal cord injury).",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "NEXT step: Scene safe, unresponsive trauma patient",
+      "Back": "The next step is to assess airway patency and begin manual stabilization of the cervical spine.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Hazmat: Role of the Hot Zone",
+      "Back": "The hot zone is the area immediately surrounding the hazardous material release, where contamination is present and highest level PPE is required.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "START Triage: Cannot assess respirations/perfusion/mental status?",
+      "Back": "If a patient cannot be readily assessed during START triage, they are immediately categorized as immediate (red).",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "BLS Ambulance: Required spinal immobilization devices",
+      "Back": "A BLS ambulance is required to carry a long spine board, short spine immobilization device (KED), and cervical collars of various sizes.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Terrorism: Biological weapon indicators",
+      "Back": "Unusual disease outbreaks, multiple casualties with similar symptoms, and unexplained illnesses are indicators of a potential biological weapon attack.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "MCI: Role of the Treatment Area Manager",
+      "Back": "The Treatment Area Manager oversees the triage, treatment, and staging of patients within the designated treatment area at an MCI.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Most likely cause: sudden right-sided flank pain",
+      "Back": "The most likely cause is kidney stones (renal calculi). Though other causes are possible, nephrolithiasis is common.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Rule of Nines: Adult genital area percentage",
+      "Back": "In adults, the genital region accounts for \\(1\\)% of the total body surface area (\\(TBSA\\)) according to the Rule of Nines.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "MCI: START triage - RPM",
+      "Back": "Respirations (>\\(30\\) or <\\(10\\)), Perfusion (cap refill >\\(2\\) seconds), Mental Status (follows commands?). Immediate if ANY fail.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "HAZMAT: ERG initial action distance",
+      "Back": "Determined by the substance, wind direction, and container size. Use the Emergency Response Guidebook (ERG) Table \\(1\\) to find the initial isolation and protective action distances.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Incident Command System (ICS) Span of Control",
+      "Back": "Ideally, one supervisor for every \\(3\\) to \\(7\\) subordinates to ensure effective management and communication during an incident.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "MCI: What is a 'walking wounded'?",
+      "Back": "Patients who are able to follow commands and move independently are typically tagged as 'Green' during START triage; consider them delayed.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Ambulance: Hot vs. Cold Zone",
+      "Back": "The 'hot zone' is contaminated; only specially trained personnel are allowed. The 'cold zone' is safe; patient care and staging happens here.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Terrorism: Secondary Device",
+      "Back": "Explosive device intended to injure first responders. Maintain awareness and staged a safe distance.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "GCS: Eye Opening Score of 3",
+      "Back": "Opens eyes to voice. A GCS score of \\(3\\) indicates the patient opens their eyes in response to verbal stimuli only.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Rule of Nines: Adult, Entire Leg",
+      "Back": "The entire leg represents \\(18\\)% of the total body surface area (\\(9\\)% front, \\(9\\)% back), important for estimating burn extent.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Pediatric: Normal Respiratory Rate (infant)",
+      "Back": "A normal respiratory rate for an infant is typically between \\(25\\) to \\(50\\) breaths per minute; assess work of breathing as well.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "HAZMAT: Decontamination importance",
+      "Back": "Removes contaminants, protecting yourself, the patient, and the environment, using specific procedures (water, soap, and appropriate PPE).",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "EMS: Types of Medical Direction",
+      "Back": "Online (direct) medical control provides immediate physician guidance. Offline (indirect) uses protocols and standing orders.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Terrorism: Signs of a nerve agent attack",
+      "Back": "SLUDGEM: Salivation, Lacrimation, Urination, Defecation, GI upset, Emesis, Miosis (pinpoint pupils). Requires immediate treatment.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "ICS: Unified Command",
+      "Back": "Multiple agencies working together to manage an incident, sharing authority and resources; promotes collaboration and efficiency.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Triage: JumpSTART differences",
+      "Back": "Modified START triage for pediatrics; considers pulse presence even with apnea. Also uses different respiratory rate thresholds.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Ambulance: Landing Zone Size (helicopter)",
+      "Back": "Ideally \\(100\\) x \\(100\\) feet, flat, firm, and free of obstructions; ensure wind direction is known. Radio communication essential.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "GCS: Verbal Response Score of 4",
+      "Back": "Confused. A GCS score of \\(4\\) in the verbal category means the patient is confused but able to answer questions.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Rule of Nines: Adult, Anterior Trunk",
+      "Back": "The anterior trunk (chest and abdomen) represents \\(18\\)% of the total body surface area for calculating burn percentages.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Pediatric: Normal Heart Rate (toddler)",
+      "Back": "A normal heart rate for a toddler is typically between \\(80\\) to \\(110\\) beats per minute; assess perfusion as well.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "HAZMAT: Identifying Hazardous Materials",
+      "Back": "Use placards, labels, shipping papers, and the ERG to identify the specific hazardous material involved in an incident.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "EMS: Scope of Practice",
+      "Back": "Legally defined limits of what an EMT can do, determined by state regulations and medical direction; never exceed this scope.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Terrorism: Radiological Dispersal Device (RDD)",
+      "Back": "'Dirty bomb' that spreads radioactive material; not a nuclear explosion. Primary concern is contamination, not immediate blast injury.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "ICS: Finance/Administration Section",
+      "Back": "Responsible for tracking incident costs, personnel pay, equipment purchases, and all financial aspects of the response.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Triage: Open Airway and Apneic",
+      "Back": "If, after opening the airway, a patient remains apneic during triage, check for a pulse. If a pulse is present, tag as 'Immediate'.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Ambulance: Stages of Extrication",
+      "Back": "Preparation, access, disentanglement, packaging, and removal. Safety and patient care are paramount throughout each stage.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "GCS: Motor Response Score of 5",
+      "Back": "Localizes pain. A GCS motor score of \\(5\\) indicates the patient moves purposefully toward a painful stimulus.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Rule of Nines: Infant, Entire Back",
+      "Back": "The entire back represents \\(18\\)% of the total body surface area in infants for calculating burn percentages.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Pediatric: Hypotension Calculation (1-10 years)",
+      "Back": "Lower limit of systolic blood pressure: \\(70 + (2 \times age in years)\\). Use clinical signs of shock primarily.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "HAZMAT: Level A Protective Gear",
+      "Back": "Fully encapsulated, vapor-tight suit with self-contained breathing apparatus (SCBA); provides the highest level of respiratory, skin, and eye protection.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "EMS: Standing Orders",
+      "Back": "Written protocols allowing EMTs to perform specific skills or administer medications without direct physician contact in certain situations.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "ICS: Logistics Section",
+      "Back": "Responsible for providing resources and support services, including personnel, equipment, supplies, communication, and transportation.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Triage: MCI Respiratory < \\(10\\) or > \\(30\\)",
+      "Back": "If respirations are less than \\(10\\) or greater than \\(30\\) per minute, tag the patient as 'Immediate' during START triage.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Ambulance: Vehicle Safety Checks",
+      "Back": "Inspect tires, fluid levels, brakes, lights, and emergency equipment before each shift to ensure safe and reliable operation.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "GCS: Best Possible Score",
+      "Back": "A fully alert and oriented person will have a GCS score of \\(15\\). Scores range from \\(3\\) to \\(15\\), \\(3\\) is completely unresponsive.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Rule of Nines: Adult, One arm",
+      "Back": "An entire arm represents \\(9\\)% of the total body surface area (\\(4.5\\)% front, \\(4.5\\)% back). This is for calculating burn percentages.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Pediatric: Broselow Tape Usage",
+      "Back": "Color-coded tape used to estimate a child's weight and medication dosages based on length; improves accuracy in pediatric care.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "HAZMAT: Safety Data Sheet (SDS)",
+      "Back": "Provides detailed information about hazardous materials, including chemical properties, health hazards, handling procedures, and emergency response.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "EMS: Patient Refusal Requirements",
+      "Back": "Patient must be informed, understand risks of refusal, and be competent to make decisions; document the refusal thoroughly.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Terrorism: Types of Explosives",
+      "Back": "High explosives (detonate rapidly) and low explosives (deflagrate or burn rapidly). Different types cause varying levels of damage.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "ICS: Planning Section",
+      "Back": "Develops the Incident Action Plan (IAP), gathers intelligence, conducts situation analysis, and manages resources to achieve incident objectives.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Triage: Delayed treatment",
+      "Back": "Patients tagged as yellow require treatment, but not immediately. Commonly, these patients cannot walk but are responsive.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "GCS: Lowest Possible Score",
+      "Back": "A GCS score of \\(3\\) indicates the patient is completely unresponsive. Scores range from \\(3\\) to \\(15\\).",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Rule of Nines: Adult, Head",
+      "Back": "The entire head represents \\(9\\)% of the total body surface area for calculating burn percentages. (\\(4.5\\)% front, \\(4.5\\)% back).",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Pediatric: Assessing Capillary Refill",
+      "Back": "Normal capillary refill is less than \\(2\\) seconds. Prolonged refill may indicate shock or poor perfusion. Temperature matters.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "HAZMAT: Isolation and Notification",
+      "Back": "Isolate the area, prevent entry, and notify the appropriate authorities, including HAZMAT teams and law enforcement.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "EMS: DNR Order Requirements",
+      "Back": "Valid DNR requires proper documentation, patient or surrogate consent, and physician signature; respect patient wishes legally.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Terrorism: Response to a bombing",
+      "Back": "Safety first, then scene assessment, triage patients, and provide medical care; be aware of secondary devices.",
+      "Topic": "5",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "ICS: Operations Section",
+      "Back": "Directly manages tactical operations, implements the IAP, assigns resources, and coordinates activities to achieve incident objectives.",
+      "Topic": "5",
+      "Subtopic": "1"
+    }
+  ]
+}

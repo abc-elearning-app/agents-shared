@@ -1,0 +1,905 @@
+{
+  "app_name": "emtb",
+  "flashcards": [
+    {
+      "Topic": "1",
+      "Subtopic": "1",
+      "Front": "Epiglottis",
+      "Back": "A leaf-shaped flap of cartilage that prevents food and liquid from entering the trachea during swallowing. It acts as a critical gateway between the pharynx and the larynx."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "1",
+      "Front": "Larynx",
+      "Back": "The voice box which marks the transition point between the upper and lower airways. It contains the vocal cords and the glottic opening protected by the epiglottis."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "1",
+      "Front": "Carina",
+      "Back": "The specific point where the trachea bifurcates into the left and right mainstem bronchi. It is highly sensitive and can trigger intense coughing when irritated."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "1",
+      "Front": "Alveoli",
+      "Back": "Tiny air sacs at the end of the bronchioles where gas exchange occurs. They are surrounded by a network of capillaries to allow for the diffusion of oxygen and carbon dioxide."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "1",
+      "Front": "Visceral Pleura",
+      "Back": "A thin, slippery membrane that covers the outer surface of the lungs. It allows the lungs to move smoothly against the chest wall during respiration."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "1",
+      "Front": "Parietal Pleura",
+      "Back": "The outer membrane that lines the inner surface of the chest cavity. It works with the visceral pleura to create a vacuum seal necessary for lung expansion."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "1",
+      "Front": "Diaphragm",
+      "Back": "The primary muscle of inspiration that separates the thoracic and abdominal cavities. Its contraction increases thoracic volume and decreases pressure to pull air into the lungs."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "1",
+      "Front": "Inhalation",
+      "Back": "An active process where the diaphragm and intercostal muscles contract to expand the chest. This creates negative pressure that draws ambient air into the pulmonary system."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "1",
+      "Front": "Exhalation",
+      "Back": "A passive process where the respiratory muscles relax and the lungs naturally recoil. This increases intrathoracic pressure to push carbon dioxide out of the body."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "1",
+      "Front": "Diffusion",
+      "Back": "The movement of gas molecules from an area of higher concentration to an area of lower concentration. This is the fundamental mechanism for gas exchange in the alveoli and cells."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "1",
+      "Front": "Hypoxic Drive",
+      "Back": "A secondary respiratory trigger where the brain monitors low oxygen levels rather than high carbon dioxide. It is commonly found in patients with chronic obstructive pulmonary disease."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "1",
+      "Front": "Minute Volume Formula",
+      "Back": "Calculated as \\(V_M = V_T \\times f\\), representing the total volume of air moved in one minute. It is the mathematical product of tidal volume and respiratory rate."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "1",
+      "Front": "Alveolar Ventilation Formula",
+      "Back": "Calculated as \\(V_A = (V_T - V_D) \\times f\\), measuring the volume of air that reaches the alveoli for exchange. It subtracts dead space from tidal volume before multiplying by rate."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "1",
+      "Front": "Dead Space",
+      "Back": "The portion of the respiratory system where no gas exchange occurs, such as the trachea and bronchi. This air never reaches the alveoli during the ventilation cycle."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "1",
+      "Front": "Respiratory Distress",
+      "Back": "A clinical state characterized by increased work of breathing while the body maintains adequate gas exchange. Signs include tachypnea, accessory muscle use, and tripod positioning."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "1",
+      "Front": "Respiratory Failure",
+      "Back": "A life-threatening condition where the body can no longer meet oxygen demands or clear carbon dioxide. It requires immediate intervention with positive pressure ventilation via BVM."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "1",
+      "Front": "Snoring",
+      "Back": "An upper airway sound indicating a partial obstruction, most commonly caused by the tongue falling back into the throat. It is corrected by manual airway maneuvers."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "1",
+      "Front": "Gurgling",
+      "Back": "A bubbling sound heard in the upper airway indicating the presence of fluid like blood, vomit, or secretions. This sound is a direct indication for immediate suctioning."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "1",
+      "Front": "Stridor",
+      "Back": "A high-pitched, brassy sound heard on inspiration that indicates swelling or an obstruction in the upper airway. It is common in conditions like croup or epiglottitis."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "1",
+      "Front": "Wheezing",
+      "Back": "A whistling sound heard primarily on exhalation indicating constriction or inflammation in the lower airways. It is a hallmark sign of asthma and anaphylaxis."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "1",
+      "Front": "Head Tilt-Chin Lift",
+      "Back": "The standard manual maneuver used to open the airway of an unresponsive patient without suspected spinal injury. It moves the tongue forward away from the posterior pharynx."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "1",
+      "Front": "Jaw Thrust Maneuver",
+      "Back": "The preferred technique for opening the airway of a patient with a suspected cervical spine injury. It moves the mandible forward without tilting the head back."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "1",
+      "Front": "OPA Measurement",
+      "Back": "Sized by measuring from the corner of the patient's mouth to the earlobe or the angle of the jaw. Proper sizing is critical to ensure the device rests behind the tongue."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "1",
+      "Front": "OPA Contraindication",
+      "Back": "An oropharyngeal airway should never be used on a patient who has an intact gag reflex. Inserting it in a semi-conscious patient may cause vomiting or laryngospasm."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "1",
+      "Front": "NPA Measurement",
+      "Back": "Sized by measuring from the tip of the patient's nose to the earlobe or tragus. It is the preferred adjunct for patients with a gag reflex or clenched teeth."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "1",
+      "Front": "NPA Contraindication",
+      "Back": "A nasopharyngeal airway is contraindicated in patients with severe head trauma or suspected basilar skull fractures. Insertion could potentially enter the cranial vault through a fracture."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "1",
+      "Front": "Yankauer Suction",
+      "Back": "A rigid, large-bore plastic tip used to suction the oropharynx of thick secretions, blood, or vomit. It is the most common suction tool used in prehospital care."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "1",
+      "Front": "French Suction Catheter",
+      "Back": "A flexible, whistle-tip tube used for suctioning the nose, stoma, or liquid secretions in the back of the throat. It is available in various sizes for different patient needs."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "1",
+      "Front": "Adult Suctioning Limit",
+      "Back": "Suctioning should be limited to a maximum of 15 seconds per attempt in adults to prevent hypoxia. Always pre-oxygenate the patient before and after each suctioning attempt."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "1",
+      "Front": "Infant Suctioning Limit",
+      "Back": "Suctioning in infants should be limited to no more than 5 seconds at a time. Their smaller oxygen reserves make them highly susceptible to rapid desaturation and breadcardia."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "1",
+      "Front": "Nasal Cannula Flow Rate",
+      "Back": "An oxygen delivery device used at 1 to 6 liters per minute, providing 24% to 44% oxygen concentration. It is intended for patients with mild respiratory distress."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "1",
+      "Front": "Non-rebreather Mask Flow Rate",
+      "Back": "Used at 10 to 15 liters per minute to deliver up to 95% oxygen to a spontaneously breathing patient. The reservoir bag must remain at least two-thirds full during inhalation."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "1",
+      "Front": "BVM with Oxygen Reservoir",
+      "Back": "A ventilation device that delivers nearly 100% oxygen when connected to a 15 liter per minute source. It is the primary tool for patients in respiratory failure or arrest."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "1",
+      "Front": "CPAP",
+      "Back": "A non-invasive ventilation method that provides continuous pressure to keep alveoli open and improve gas exchange. It is used for awake patients in severe respiratory distress."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "1",
+      "Front": "Pulse Oximetry (\\(SpO_2\\))",
+      "Back": "A non-invasive tool that measures the percentage of hemoglobin molecules saturated with oxygen. It provides a baseline assessment of the patient's peripheral oxygenation status."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "1",
+      "Front": "Normal \\(SpO_2\\) Range",
+      "Back": "For most healthy adults, a normal reading is between 94% and 99%. Readings below 94% may indicate hypoxia and require the initiation of supplemental oxygen therapy."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "1",
+      "Front": "Gastric Distension",
+      "Back": "The inflation of the stomach with air, often caused by ventilating a patient too forcefully or too rapidly. This can lead to vomiting and decreased lung expansion capacity."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "1",
+      "Front": "COPD",
+      "Back": "A chronic inflammatory lung disease that causes obstructed airflow from the lungs, often leading to air trapping. Common forms include emphysema and chronic bronchitis."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "1",
+      "Front": "Asthma",
+      "Back": "A condition where the lower airways become narrow and swollen, often producing extra mucus. This leads to difficulty breathing, chest tightness, and characteristic expiratory wheezing."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "1",
+      "Front": "Pneumonia",
+      "Back": "An infection that inflames the air sacs in one or both lungs, which may fill with fluid or pus. It often causes fever, chills, and a productive cough."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "1",
+      "Front": "Pulmonary Edema",
+      "Back": "A condition caused by excess fluid in the lungs, making it difficult to breathe. It is most often caused by left-sided heart failure and results in crackles during auscultation."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "1",
+      "Front": "Tension Pneumothorax",
+      "Back": "A life-threatening condition where air enters the pleural space but cannot escape, causing the lung to collapse. It leads to obstructive shock and potential tracheal deviation."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "1",
+      "Front": "Stoma",
+      "Back": "A permanent surgical opening in the neck that allows a patient to breathe through the trachea. EMTs must ventilate directly over this opening using a pediatric-sized mask."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "1",
+      "Front": "Pin-Indexing System",
+      "Back": "A safety mechanism for portable oxygen cylinders that prevents the wrong gas regulator from being attached. Each medical gas has a unique, specific hole pattern."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "1",
+      "Front": "Oxygen Cylinder Safe Pressure",
+      "Back": "Regulators should be changed and cylinders replaced when the pressure drops below 200 psi. This ensures there is always a safe reserve for the next patient transport."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "1",
+      "Front": "Full Oxygen Cylinder Pressure",
+      "Back": "A standard, full medical oxygen cylinder typically contains a pressure of approximately 2,000 to 2,200 psi. This high pressure is reduced by a regulator for patient safety."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "1",
+      "Front": "Cheyne-Stokes Respirations",
+      "Back": "An abnormal breathing pattern characterized by progressively deeper breaths followed by a gradual decrease and a period of apnea. It often indicates serious brain injury."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "1",
+      "Front": "See-Saw Breathing",
+      "Back": "A sign of extreme respiratory distress in infants where the chest and abdomen move in opposite directions. It indicates the infant is struggling to maintain effective ventilation."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "1",
+      "Front": "Apnea",
+      "Back": "The complete cessation of breathing, which leads to rapid hypoxia and eventual cardiac arrest. It requires immediate intervention with a bag-valve mask and high-flow oxygen."
+    },
+    {
+      "Topic": "1",
+      "Subtopic": "1",
+      "Front": "Internal Respiration",
+      "Back": "The exchange of oxygen and carbon dioxide between the systemic circulatory system and the cells of the body. It ensures cells receive the oxygen needed for cellular metabolism."
+    },
+    {
+      "Front": "Adult BVM ventilation rate with advanced airway",
+      "Back": "Ventilate an adult with an advanced airway at a rate of \\(10-12\\) breaths per minute (every \\(5-6\\) seconds), continuously reassessing chest rise and fall.",
+      "Topic": "1",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Pediatric BVM ventilation rate",
+      "Back": "Ventilate a child or infant with a bag-valve-mask at a rate of \\(12-20\\) breaths per minute (every \\(3-5\\) seconds), ensuring adequate chest rise.",
+      "Topic": "1",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Most common cause of airway obstruction",
+      "Back": "The most common cause of airway obstruction is the tongue falling back into the pharynx, especially in an unresponsive patient.",
+      "Topic": "1",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Anaphylaxis: Stridor indicates what?",
+      "Back": "Stridor in anaphylaxis indicates upper airway swelling and obstruction, requiring immediate intervention.",
+      "Topic": "1",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Minimum SpO2 for COPD patient",
+      "Back": "While 'normal' \\(SpO_2\\) is between \\(94-99\\\\%\\), COPD patients often function normally with an \\(SpO_2\\) between \\(88-92\\\\%\\).",
+      "Topic": "1",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Head-tilt chin-lift contraindications",
+      "Back": "The head-tilt chin-lift maneuver is contraindicated in patients with suspected cervical spine injury; use the jaw-thrust maneuver instead.",
+      "Topic": "1",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "GCS: Eye opening to pain",
+      "Back": "A GCS score of \\(2\\) is given for eye opening to pain.",
+      "Topic": "1",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "GCS: Verbal response confused",
+      "Back": "A GCS score of \\(4\\) is given for a confused verbal response.",
+      "Topic": "1",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "GCS: Motor response withdraws from pain",
+      "Back": "A GCS score of \\(4\\) is given for motor response withdrawing from pain.",
+      "Topic": "1",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Signs of adequate artificial ventilation",
+      "Back": "Adequate artificial ventilation is indicated by visible chest rise and fall, and improving skin color.",
+      "Topic": "1",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Oxygen cylinder: D tank liters",
+      "Back": "A D cylinder holds approximately \\(350\\) liters of oxygen.",
+      "Topic": "1",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Oxygen cylinder: E tank liters",
+      "Back": "An E cylinder holds approximately \\(625\\) liters of oxygen.",
+      "Topic": "1",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Oxygen cylinder: M tank liters",
+      "Back": "An M cylinder holds approximately \\(3000\\) liters of oxygen.",
+      "Topic": "1",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Formula: Duration of flow for oxygen cylinders",
+      "Back": "Duration of flow (minutes) \\( = (Gauge \\ pressure \\ (psi) - Safe \\ residual \\ pressure \\ (psi)) \\times Cylinder \\ constant / Flow \\ rate \\ (L/min)\\).",
+      "Topic": "1",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Safe residual pressure of O2 tank",
+      "Back": "The safe residual pressure for an oxygen tank is \\(200\\) psi.",
+      "Topic": "1",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Cylinder constant: D tank",
+      "Back": "The cylinder constant for a D tank is \\(0.16\\).",
+      "Topic": "1",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Cylinder constant: E tank",
+      "Back": "The cylinder constant for an E tank is \\(0.28\\).",
+      "Topic": "1",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Cylinder constant: M tank",
+      "Back": "The cylinder constant for an M tank is \\(1.56\\).",
+      "Topic": "1",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Early signs of respiratory distress",
+      "Back": "Early signs of respiratory distress include increased respiratory rate, nasal flaring, and retractions (intercostal, supraclavicular, substernal).",
+      "Topic": "1",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Late signs of respiratory distress",
+      "Back": "Late signs of respiratory distress include altered mental status, cyanosis, and marked use of accessory muscles.",
+      "Topic": "1",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Most common cause of hypoxia",
+      "Back": "The most common cause of hypoxia is ventilation-perfusion mismatch, often caused by pulmonary diseases or airway obstruction.",
+      "Topic": "1",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Pneumonia pathophysiology",
+      "Back": "Pneumonia involves inflammation and fluid accumulation in the alveoli, impairing gas exchange.",
+      "Topic": "1",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Asthma pathophysiology",
+      "Back": "Asthma is characterized by bronchospasm, inflammation, and mucus production in the airways, leading to airflow obstruction.",
+      "Topic": "1",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "COPD pathophysiology",
+      "Back": "COPD involves chronic inflammation and destruction of lung tissue, leading to airflow limitation and impaired gas exchange.",
+      "Topic": "1",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Pulmonary embolism pathophysiology",
+      "Back": "A pulmonary embolism is a blood clot that blocks blood flow to the lungs, leading to ventilation-perfusion mismatch and hypoxia.",
+      "Topic": "1",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Hyperventilation syndrome pathophysiology",
+      "Back": "Hyperventilation syndrome involves rapid and deep breathing, leading to excessive carbon dioxide removal and respiratory alkalosis.",
+      "Topic": "1",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Croup pathophysiology",
+      "Back": "Croup involves inflammation and swelling of the larynx and trachea, leading to a characteristic 'barking' cough.",
+      "Topic": "1",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Epiglottitis pathophysiology",
+      "Back": "Epiglottitis involves inflammation and swelling of the epiglottis, leading to severe airway obstruction, especially in children.",
+      "Topic": "1",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Pertussis pathophysiology",
+      "Back": "Pertussis (whooping cough) is a highly contagious respiratory infection characterized by severe coughing fits followed by a 'whooping' sound.",
+      "Topic": "1",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Cystic fibrosis pathophysiology",
+      "Back": "Cystic fibrosis involves the production of thick mucus that clogs the lungs and other organs, leading to respiratory and digestive problems.",
+      "Topic": "1",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Pneumothorax pathophysiology",
+      "Back": "Pneumothorax is the accumulation of air in the pleural space, causing lung collapse and impaired ventilation.",
+      "Topic": "1",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Tension pneumothorax pathophysiology",
+      "Back": "Tension pneumothorax is a life-threatening condition where air accumulates in the pleural space and cannot escape, causing lung collapse and mediastinal shift, compressing the heart and great vessels.",
+      "Topic": "1",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Hemothorax pathophysiology",
+      "Back": "Hemothorax is the accumulation of blood in the pleural space, often due to trauma, causing lung compression and impaired ventilation.",
+      "Topic": "1",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Cardiac tamponade pathophysiology",
+      "Back": "Cardiac tamponade is the accumulation of fluid in the pericardial sac, compressing the heart and impairing its ability to pump blood effectively.",
+      "Topic": "1",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Commotio cordis pathophysiology",
+      "Back": "Commotio cordis is a sudden cardiac arrest caused by a blow to the chest that occurs during a critical time in the heart's electrical cycle.",
+      "Topic": "1",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Flail chest pathophysiology",
+      "Back": "Flail chest occurs when multiple ribs are fractured in multiple places, causing a segment of the chest wall to move paradoxically with respiration.",
+      "Topic": "1",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Pulmonary contusion pathophysiology",
+      "Back": "Pulmonary contusion is bruising of the lung tissue, often due to trauma, leading to inflammation, edema, and impaired gas exchange.",
+      "Topic": "1",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "ARDS pathophysiology",
+      "Back": "ARDS (Acute Respiratory Distress Syndrome) is a severe inflammatory lung condition that causes fluid leakage into the alveoli and impairs gas exchange.",
+      "Topic": "1",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "What does wheezing indicate?",
+      "Back": "Wheezing often indicates narrowing of the lower airways, such as in asthma or bronchiolitis.",
+      "Topic": "1",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "What does stridor indicate?",
+      "Back": "Stridor usually indicates upper airway obstruction, such as in croup or epiglottitis.",
+      "Topic": "1",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "What do rales (crackles) indicate?",
+      "Back": "Rales (crackles) often indicate fluid in the alveoli, such as in pneumonia or pulmonary edema.",
+      "Topic": "1",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "What do rhonchi indicate?",
+      "Back": "Rhonchi often indicate mucus or secretions in the larger airways, such as in bronchitis or pneumonia.",
+      "Topic": "1",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Pediatric respiratory distress: First sign?",
+      "Back": "Increased respiratory rate and effort are usually the first signs of respiratory distress in children.",
+      "Topic": "1",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "How does CPAP improve respiratory function?",
+      "Back": "CPAP (Continuous Positive Airway Pressure) increases pressure in the lungs to prevent alveolar collapse and improve oxygenation.",
+      "Topic": "1",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Contraindications for CPAP",
+      "Back": "Contraindications for CPAP include hypotension, altered mental status, pneumothorax, and facial trauma.",
+      "Topic": "1",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "BVM rate for apneic neonate",
+      "Back": "Ventilate an apneic neonate with a BVM at a rate of \\(40-60\\) breaths per minute.",
+      "Topic": "1",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Normal respiratory rate: Infant",
+      "Back": "Normal respiratory rate for an infant is \\(25-50\\) breaths per minute.",
+      "Topic": "1",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Normal respiratory rate: Child",
+      "Back": "Normal respiratory rate for a child is \\(15-30\\) breaths per minute.",
+      "Topic": "1",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Causes of decreased tidal volume",
+      "Back": "Causes of decreased tidal volume include shallow breathing, restrictive lung diseases, and neuromuscular disorders.",
+      "Topic": "1",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Best indicator of effective ventilation?",
+      "Back": "The best indicator of effective ventilation is adequate chest rise and fall, and improvement of the patient's skin color and mental status.",
+      "Topic": "1",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Auscultating stridor: anatomical location?",
+      "Back": "Stridor is best heard in the upper airway, specifically the trachea and larynx, indicating upper airway obstruction.",
+      "Topic": "1",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "SpO2 goal for a patient with COPD?",
+      "Back": "The target SpO2 for COPD patients is typically \\(88-92\\)% to prevent suppression of their hypoxic drive.",
+      "Topic": "1",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "GCS score indicating severe head injury",
+      "Back": "A GCS score of \\(\\leq 8\\) indicates a severe head injury, requiring advanced airway management.",
+      "Topic": "1",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "BVM ventilation rate for an apneic adult?",
+      "Back": "Provide ventilations at a rate of \\(10-12\\) breaths per minute for an apneic adult using a bag-valve mask.",
+      "Topic": "1",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Anatomical dead space definition",
+      "Back": "Anatomical dead space is the volume of air that occupies the trachea, bronchi, and bronchioles, where no gas exchange occurs. Roughly \\(150 mL\\).",
+      "Topic": "1",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Effect of hyperventilation on \\(CO_2\\) levels",
+      "Back": "Hyperventilation causes a decrease in \\(CO_2\\) levels (hypocapnia), leading to vasoconstriction and decreased cerebral perfusion.",
+      "Topic": "1",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Early sign of respiratory distress in children",
+      "Back": "An early sign of respiratory distress in children is nasal flaring, which indicates increased work of breathing.",
+      "Topic": "1",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Minute volume calculation",
+      "Back": "Minute volume is calculated as tidal volume (\\(TV\\)) multiplied by respiratory rate (\\(RR\\)): \\(MV = TV \\times RR\\).",
+      "Topic": "1",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Complication of aggressive PPV in trauma",
+      "Back": "Aggressive positive pressure ventilation (\\(PPV\\)) in trauma patients can lead to decreased venous return and hypotension, especially with hypovolemia.",
+      "Topic": "1",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Mechanism of action for CPAP",
+      "Back": "CPAP (\\(Continuous\\ Positive\\ Airway\\ Pressure\\)) increases pressure in the lungs, keeping alveoli open and improving gas exchange.",
+      "Topic": "1",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Preferred method for opening airway with suspected C-spine injury?",
+      "Back": "Use the jaw-thrust maneuver to open the airway in patients with suspected cervical spine injury.",
+      "Topic": "1",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Suction duration for infants",
+      "Back": "Limit suctioning in infants to no more than \\(5-10\\) seconds to avoid hypoxia and vagal stimulation.",
+      "Topic": "1",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Lung sounds in pulmonary edema",
+      "Back": "Pulmonary edema typically presents with crackles (rales) in the lungs, indicating fluid accumulation in the alveoli.",
+      "Topic": "1",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Oxygen toxicity consideration with high \\(FiO_2\\)",
+      "Back": "Prolonged exposure to high concentrations of oxygen (\\(FiO_2 > 50\\)%) can lead to oxygen toxicity and alveolar damage.",
+      "Topic": "1",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "CPR ventilation rate with advanced airway in adults",
+      "Back": "When an advanced airway is in place during CPR, ventilate at a rate of \\(1\\) breath every \\(6\\) seconds (\\(10\\) breaths per minute) continuously.",
+      "Topic": "1",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Initial treatment for tension pneumothorax",
+      "Back": "Tension pneumothorax requires immediate decompression via needle thoracostomy, a skill outside the scope of practice for an EMT, so SUPPORTIVE CARE and RAPID TRANSPORT are critical.",
+      "Topic": "1",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Signs of impending respiratory failure",
+      "Back": "Signs of impending respiratory failure include altered mental status, cyanosis, paradoxical chest movement, and bradypnea/apnea.",
+      "Topic": "1",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Appropriate sized OPA",
+      "Back": "An appropriately sized OPA extends from the corner of the mouth to the angle of the jaw.",
+      "Topic": "1",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Anatomical location of cricoid cartilage",
+      "Back": "The cricoid cartilage is located inferior to the thyroid cartilage and is the only complete ring of cartilage in the trachea.",
+      "Topic": "1",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Venturi mask: how it works",
+      "Back": "Venturi masks deliver a precise concentration of oxygen by mixing oxygen with room air through a calibrated jet orifice.",
+      "Topic": "1",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Primary muscle of ventilation",
+      "Back": "The diaphragm is the primary muscle responsible for ventilation; it contracts and flattens to increase thoracic volume.",
+      "Topic": "1",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Consequences of prolonged hypoxia",
+      "Back": "Prolonged hypoxia leads to cellular damage, organ dysfunction, and ultimately, cell death, particularly in the brain and heart.",
+      "Topic": "1",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Pediatric respiratory rate: \\(0-1\\) year",
+      "Back": "The normal respiratory rate for infants (\\(0-1\\) year) is \\(30-60\\) breaths per minute.",
+      "Topic": "1",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Pediatric respiratory rate: \\(1-3\\) year",
+      "Back": "The normal respiratory rate for toddlers (\\(1-3\\) years) is \\(24-40\\) breaths per minute.",
+      "Topic": "1",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Pediatric respiratory rate: \\(3-6\\) year",
+      "Back": "The normal respiratory rate for preschoolers (\\(3-6\\) years) is \\(22-34\\) breaths per minute.",
+      "Topic": "1",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Pediatric respiratory rate: \\(6-12\\) year",
+      "Back": "The normal respiratory rate for school-age children (\\(6-12\\) years) is \\(18-30\\) breaths per minute.",
+      "Topic": "1",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Pediatric respiratory rate: \\(12-18\\) year",
+      "Back": "The normal respiratory rate for adolescents (\\(12-18\\) years) is \\(12-20\\) breaths per minute.",
+      "Topic": "1",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Effect of altitude on oxygen saturation",
+      "Back": "Higher altitudes result in lower partial pressures of oxygen, which can lead to decreased oxygen saturation levels in the blood.",
+      "Topic": "1",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Kussmaul respirations: Definition",
+      "Back": "Kussmaul respirations are deep, rapid breaths often seen in patients with diabetic ketoacidosis (\\(DKA\\)) as the body attempts to eliminate excess acid.",
+      "Topic": "1",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Cheyne-Stokes respirations: Definition",
+      "Back": "Cheyne-Stokes respirations are characterized by a gradual increase in rate and depth of breathing followed by a gradual decrease, often with periods of apnea. Indicative of head injury or stroke.",
+      "Topic": "1",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Biot's respirations: Definition",
+      "Back": "Biot's respirations are irregular patterns of breathing with unpredictable periods of apnea, often associated with increased intracranial pressure or brain damage.",
+      "Topic": "1",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Agonal gasps: Definition",
+      "Back": "Agonal gasps are infrequent, irregular breaths indicating severe hypoxia and impending death; they are NOT adequate respirations.",
+      "Topic": "1",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Signs and Symptoms of pneumothorax",
+      "Back": "Signs and Symptoms of pneumothorax are sudden chest pain, shortness of breath, decreased lung sounds on the affected side.",
+      "Topic": "1",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Signs and Symptoms of Asthma Exacerbation",
+      "Back": "Signs and Symptoms of Asthma Exacerbation include wheezing, shortness of breath, chest tightness, and coughing.",
+      "Topic": "1",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Signs and Symptoms of allergic reaction/anaphylaxis",
+      "Back": "Signs and Symptoms of allergic reaction/anaphylaxis include hives, itching, swelling, wheezing, and hypotension.",
+      "Topic": "1",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Contraindications for Nasal Airway (NPA)",
+      "Back": "Contraindications for a nasopharyngeal airway include suspected basilar skull fracture or significant nasal trauma.",
+      "Topic": "1",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "What is the carina?",
+      "Back": "The carina is the point where the trachea bifurcates into the left and right main bronchi.",
+      "Topic": "1",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Effects of smoking on the respiratory system",
+      "Back": "Smoking damages the cilia in the airway, reduces alveolar elasticity, and increases mucus production, predisposing individuals to respiratory infections and COPD.",
+      "Topic": "1",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Signs and Symptoms of Foreign Body Obstruction",
+      "Back": "Signs and Symptoms of Foreign Body Obstruction include sudden onset of choking, inability to speak, and cyanosis.",
+      "Topic": "1",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Oxygen delivery %: Nasal Cannula",
+      "Back": "Nasal Cannula delivers \\(24-44\\)% Oxygen at a rate of \\(1-6\\) liters per minute.",
+      "Topic": "1",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Oxygen delivery %: Non-Rebreather Mask",
+      "Back": "Non-Rebreather Mask delivers up to \\(90\\)% Oxygen at a rate of \\(10-15\\) liters per minute.",
+      "Topic": "1",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Oxygen delivery %: BVM",
+      "Back": "Bag Valve Mask delivers nearly \\(100\\)% Oxygen at a rate of \\(15\\) liters per minute.",
+      "Topic": "1",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Initial respiratory rate for newborn resuscitation",
+      "Back": "Initiate newborn resuscitation with positive pressure ventilation at a rate of \\(40-60\\) breaths per minute.",
+      "Topic": "1",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "What is the hypoxic drive?",
+      "Back": "The hypoxic drive is a backup system that controls breathing based on low oxygen levels in the blood, seen in some patients with chronic COPD.",
+      "Topic": "1",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Define compliance in lung mechanics",
+      "Back": "Compliance refers to the ease with which the lungs expand. Decreased compliance means the lungs are stiff and harder to ventilate.",
+      "Topic": "1",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "What causes epiglottitis?",
+      "Back": "Epiglottitis is caused by a bacterial infection causing swelling of the epiglottis and leading to potential airway obstruction. Stridor and drooling are common signs.",
+      "Topic": "1",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "What is atelectasis?",
+      "Back": "Atelectasis is the collapse of part or all of a lung, which prevents normal oxygen absorption.",
+      "Topic": "1",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Define intrapulmonary shunting",
+      "Back": "Intrapulmonary shunting occurs when blood passes through the lungs without participating in gas exchange, leading to hypoxemia.",
+      "Topic": "1",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Differentiate between ventilation and respiration.",
+      "Back": "Ventilation is the mechanical process of moving air into and out of the lungs, while respiration is the exchange of oxygen and carbon dioxide at the alveolar level.",
+      "Topic": "1",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Normal tidal volume for adult",
+      "Back": "Normal tidal volume for an adult is approximately \\(500 mL\\), or \\(7 mL/kg\\) of body weight.",
+      "Topic": "1",
+      "Subtopic": "1"
+    }
+  ]
+}

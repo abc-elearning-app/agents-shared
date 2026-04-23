@@ -1,0 +1,1205 @@
+{
+  "app_name": "emtb",
+  "flashcards": [
+    {
+      "Topic": "3",
+      "Subtopic": "1",
+      "Front": "Kinetic Energy (\\(KE\\))",
+      "Back": "The formula is \\(KE = \\frac{1}{2} mv^2\\). Velocity is the most significant factor in determining the energy delivered during a trauma."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "1",
+      "Front": "Glasgow Coma Scale (\\(GCS\\)) Total",
+      "Back": "The formula is \\(GCS = E + V + M\\). Scores range from a minimum of 3 to a maximum of 15."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "1",
+      "Front": "Mean Arterial Pressure (\\(MAP\\))",
+      "Back": "The formula is \\(MAP = DBP + \\frac{1}{3}(SBP - DBP)\\). It represents the average pressure in a patient's arteries during one cardiac cycle."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "1",
+      "Front": "Cerebral Perfusion Pressure (\\(CPP\\))",
+      "Back": "The formula is \\(CPP = MAP - ICP\\). It must be maintained to ensure adequate blood flow and oxygen delivery to the brain."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "1",
+      "Front": "GCS: Eye Opening Scores",
+      "Back": "Scores range from \\(1\\) to \\(4\\): 4-Spontaneous, 3-To Speech, 2-To Pain, 1-None."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "1",
+      "Front": "GCS: Verbal Response Scores",
+      "Back": "Scores range from \\(1\\) to \\(5\\): 5-Oriented, 4-Confused, 3-Inappropriate, 2-Incomprehensible, 1-None."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "1",
+      "Front": "GCS: Motor Response Scores",
+      "Back": "Scores range from \\(1\\) to \\(6\\): 6-Obeys, 5-Localizes, 4-Withdraws, 3-Flexion, 2-Extension, 1-None."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "1",
+      "Front": "GCS: Severe Injury Threshold",
+      "Back": "A score of \\(GCS \\leq 8\\) indicates a severe head injury and typically necessitates advanced airway management."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "1",
+      "Front": "GCS: Moderate Injury Range",
+      "Back": "A Glasgow Coma Scale score between \\(9\\) and \\(12\\) indicates a moderate brain injury."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "1",
+      "Front": "GCS: Mild Injury Range",
+      "Back": "A Glasgow Coma Scale score between \\(13\\) and \\(15\\) indicates a mild brain injury or concussion."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "1",
+      "Front": "Decorticate Posturing",
+      "Back": "Abnormal flexion where the patient pulls their arms toward the core. It indicates damage to the nerve pathway between the brain and spinal cord."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "1",
+      "Front": "Decerebrate Posturing",
+      "Back": "Abnormal extension where the patient pushes their arms outward and toes downward. This indicates more severe brain stem damage than decorticate posturing."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "1",
+      "Front": "Cushing's Triad",
+      "Back": "A sign of increased intracranial pressure consisting of hypertension, bradycardia, and irregular respirations."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "1",
+      "Front": "Beck's Triad",
+      "Back": "A set of signs indicating cardiac tamponade: JVD, muffled heart sounds, and narrowing pulse pressure."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "1",
+      "Front": "Epidural Hematoma",
+      "Back": "Bleeding between the skull and dura mater, often involving the middle meningeal artery. It typically presents with a lucid interval followed by rapid decline."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "1",
+      "Front": "Subdural Hematoma",
+      "Back": "Bleeding between the dura mater and the brain, usually from venous rupture. Symptoms may develop slowly over hours or days."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "1",
+      "Front": "Basilar Skull Fracture",
+      "Back": "A fracture at the base of the skull. Classic signs include Battle's sign and raccoon eyes."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "1",
+      "Front": "Battle's Sign",
+      "Back": "Ecchymosis or bruising over the mastoid process behind the ear. It is a late sign of a basilar skull fracture."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "1",
+      "Front": "Raccoon Eyes",
+      "Back": "Periorbital ecchymosis or bruising around the eyes. It is a late sign of a basilar skull fracture."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "1",
+      "Front": "Hypovolemic Shock",
+      "Back": "Shock resulting from a lack of blood or fluid volume. It is the most common type of shock in trauma patients."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "1",
+      "Front": "Cardiogenic Shock",
+      "Back": "Shock caused by inadequate function of the heart or pump failure. It may follow a myocardial infarction or chest trauma."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "1",
+      "Front": "Neurogenic Shock",
+      "Back": "Shock caused by nerve paralysis that results in uncontrolled dilation of blood vessels. It often presents with warm, dry skin and bradycardia."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "1",
+      "Front": "Anaphylactic Shock",
+      "Back": "A life-threatening systemic allergic reaction. It causes widespread vasodilation and bronchoconstriction."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "1",
+      "Front": "Obstructive Shock",
+      "Back": "Shock caused by a physical obstruction to blood flow. Examples include tension pneumothorax and cardiac tamponade."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "1",
+      "Front": "Compensated Shock",
+      "Back": "The early stage of shock where the body can still maintain blood pressure. Signs include tachycardia and cool, clammy skin."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "1",
+      "Front": "Decompensated Shock",
+      "Back": "The late stage of shock where the body can no longer maintain blood pressure. Hypotension is the hallmark sign."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "1",
+      "Front": "Arterial Bleeding",
+      "Back": "Bleeding characterized by bright red blood that spurts in time with the pulse. It is the most difficult type of bleeding to control."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "1",
+      "Front": "Venous Bleeding",
+      "Back": "Bleeding characterized by dark red blood that flows steadily. It is typically easier to control than arterial bleeding."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "1",
+      "Front": "Tourniquet Application",
+      "Back": "Apply high and tight or 2-3 inches proximal to the injury for uncontrolled extremity bleeding. Never apply directly over a joint."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "1",
+      "Front": "Hemostatic Dressing",
+      "Back": "A gauze treated with a chemical that promotes clotting. Use it for junctional bleeding where a tourniquet cannot be applied."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "1",
+      "Front": "Flail Chest",
+      "Back": "A condition where three or more ribs are fractured in two or more places. It creates a free-floating segment of the chest wall."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "1",
+      "Front": "Paradoxical Motion",
+      "Back": "Movement of a flail segment in the opposite direction of the rest of the chest. It moves in during inhalation and out during exhalation."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "1",
+      "Front": "Tension Pneumothorax",
+      "Back": "A life-threatening condition where air accumulates in the pleural space and shifts mediastinal structures. Signs include absent lung sounds and JVD."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "1",
+      "Front": "Sucking Chest Wound",
+      "Back": "An open chest wound that allows air to enter the pleural space. It should be treated with a three-sided occlusive dressing."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "1",
+      "Front": "Cardiac Tamponade",
+      "Back": "Compression of the heart due to fluid accumulation in the pericardial sac. It prevents the heart from filling properly during diastole."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "1",
+      "Front": "Commotio Cordis",
+      "Back": "Sudden cardiac arrest caused by a blunt impact to the chest during a specific phase of the heart's rhythm."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "1",
+      "Front": "Traumatic Evisceration",
+      "Back": "An injury where abdominal organs protrude through the skin. Treat by covering with a moist, sterile, occlusive dressing."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "1",
+      "Front": "Superficial Burn",
+      "Back": "A first-degree burn involving only the epidermis. It presents with redness and pain, similar to a sunburn."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "1",
+      "Front": "Partial-Thickness Burn",
+      "Back": "A second-degree burn involving the epidermis and dermis. It is characterized by intense pain and blisters."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "1",
+      "Front": "Full-Thickness Burn",
+      "Back": "A third-degree burn that destroys all skin layers and underlying tissue. It may appear leathery or charred and is often painless due to nerve damage."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "1",
+      "Front": "Rule of Nines: Adult Head",
+      "Back": "In an adult, the entire head and neck represent 9% of the total body surface area."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "1",
+      "Front": "Rule of Nines: Infant Head",
+      "Back": "In an infant, the entire head represents 18% of the total body surface area. This is twice the percentage of an adult head."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "1",
+      "Front": "Rule of Nines: Adult Arm",
+      "Back": "Each entire arm in an adult represents 9% of the total body surface area."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "1",
+      "Front": "Rule of Nines: Adult Leg",
+      "Back": "Each entire leg in an adult represents 18% of the total body surface area."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "1",
+      "Front": "Rule of Nines: Adult Torso",
+      "Back": "The front and back of the torso each represent 18%, totaling 36% for the entire trunk."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "1",
+      "Front": "Retrograde Amnesia",
+      "Back": "Loss of memory for events that occurred before the traumatic injury."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "1",
+      "Front": "Anterograde Amnesia",
+      "Back": "The inability to form new memories after a traumatic injury occurred."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "1",
+      "Front": "Spinal Motion Restriction (\\(SMR\\))",
+      "Back": "The process of limiting movement of the spine to prevent further injury. It is indicated by midline tenderness or neurologic deficits."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "1",
+      "Front": "Golden Period",
+      "Back": "The time following a traumatic injury when prompt medical treatment has the highest likelihood of preventing death."
+    },
+    {
+      "Topic": "3",
+      "Subtopic": "1",
+      "Front": "Platinum 10 Minutes",
+      "Back": "The goal time for EMS to identify life threats, stabilize the patient, and begin transport for critical trauma cases."
+    },
+    {
+      "Front": "Motor Vehicle Collision: Delta-V",
+      "Back": "Delta-V represents the change in velocity during a collision and is a critical factor in determining the severity of injuries; a higher delta-V typically correlates with more severe trauma.",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Open Book Pelvic Fracture Concern",
+      "Back": "An open book pelvic fracture often involves significant disruption of pelvic blood vessels, leading to a high risk of severe hemorrhage and hypovolemic shock.",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Pericardial Tamponade Assessment Finding",
+      "Back": "Beck's Triad (\\(hypotension\\), muffled heart sounds, and jugular venous distention (\\(JVD\\))) is a classic finding in pericardial tamponade, where fluid accumulation impairs cardiac function.",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Tension Pneumothorax: Deviated Trachea Side?",
+      "Back": "In a tension pneumothorax, the trachea typically deviates AWAY from the affected side due to increased pressure in the pleural space.",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "GCS Eye Opening Score to Pain",
+      "Back": "A GCS eye opening score of \\(2\\) indicates the patient opens their eyes to painful stimuli.",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "GCS Verbal Score: Confused",
+      "Back": "A GCS verbal score of \\(4\\) indicates the patient is confused but able to speak.",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "GCS Motor Score: Withdraws to Pain",
+      "Back": "A GCS motor score of \\(4\\) indicates the patient withdraws from painful stimuli.",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": " Parkland Burn Formula",
+      "Back": "The Parkland formula is \\(4 mL \\times patient weight (kg) \\times %TBSA\\). Give \\(1/2\\) of the total fluids in the first \\(8\\) hours, and the other \\(1/2\\) in the next \\(16\\) hours.",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Rule of Nines: Adult Chest and Abdomen",
+      "Back": "In adults, the chest and abdomen together account for \\(18\\)% of total body surface area (\\(9\\)% for the anterior and \\(9\\)% for the posterior).",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Rule of Nines: Adult Entire Arm",
+      "Back": "In adults, an entire arm accounts for \\(9\\)% of total body surface area (\\(4.5\\)% for the anterior and \\(4.5\\)% for the posterior).",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Rule of Nines: Adult Entire Leg",
+      "Back": "In adults, an entire leg accounts for \\(18\\)% of total body surface area (\\(9\\)% for the anterior and \\(9\\)% for the posterior).",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Rule of Nines: Adult Genital Region",
+      "Back": "In adults, the genital region accounts for \\(1\\)% of total body surface area.",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Pediatric Trauma: Head Size",
+      "Back": "Children have a proportionally larger head size compared to their body, making them more prone to head injuries during trauma.",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Pediatric Airway: Anatomical Differences",
+      "Back": "A child's airway is narrower, shorter, and more flexible than an adult's, making them more susceptible to airway obstruction.",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Pediatric Compensation for Shock",
+      "Back": "Children can compensate for shock more effectively than adults initially, but they decompensate rapidly once their compensatory mechanisms fail.",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Pediatric Hypotension Threshold",
+      "Back": "Hypotension in children is defined as a systolic blood pressure less than \\(70 + (2 \\times age in years)\\) mmHg.",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Abdominal Evisceration Management",
+      "Back": "Cover eviscerated organs with sterile, saline-moistened dressings and an occlusive dressing to prevent further contamination and drying.",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Pulmonary Contusion Consequence",
+      "Back": "Pulmonary contusion can lead to acute respiratory distress syndrome (\\(ARDS\\)) due to inflammation and fluid accumulation in the lungs.",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Compartment Syndrome: The 6 P's",
+      "Back": "Pain, pallor, pulselessness, paresthesia, paralysis, and pressure are the six 'P's associated with compartment syndrome.",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Central Cord Syndrome Mechanism",
+      "Back": "Central cord syndrome typically results from hyperextension injuries, causing weakness in the upper extremities greater than the lower extremities.",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Coup-Contrecoup Brain Injury",
+      "Back": "A coup-contrecoup injury involves brain damage at the site of impact (coup) and on the opposite side of the brain (contrecoup) due to rebound.",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Subdural Hematoma: Bridging Veins",
+      "Back": "Subdural hematomas typically result from tearing of bridging veins between the brain surface and the dura mater.",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Epidural Hematoma: Arterial Bleed",
+      "Back": "Epidural hematomas are often caused by arterial bleeding, frequently from the middle meningeal artery, leading to rapid accumulation of blood.",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Basilar Skull Fracture Signs",
+      "Back": "Raccoon eyes (periorbital ecchymosis), Battle's sign (mastoid ecchymosis), and cerebrospinal fluid (\\(CSF\\)) leakage from the nose or ears are signs of basilar skull fracture.",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Flail Chest Impairment",
+      "Back": "Flail chest impairs ventilation because the fractured rib segment moves paradoxically inward during inhalation and outward during exhalation.",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Commotio Cordis Vulnerability",
+      "Back": "Commotio cordis occurs when a blow to the chest during a critical phase of the heart's repolarization cycle triggers ventricular fibrillation.",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Liver Laceration: Referred Pain",
+      "Back": "Liver laceration may cause referred pain to the right shoulder due to irritation of the phrenic nerve.",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Spleen Injury: Referred Pain",
+      "Back": "Spleen injuries may cause referred pain to the left shoulder (Kehr's sign) due to irritation of the diaphragm.",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Femur Fracture: Blood Loss Risk",
+      "Back": "A femur fracture can result in significant blood loss, potentially leading to hypovolemic shock, with estimated blood loss up to \\(1.5\\) liters.",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Pelvic Fracture: Mortality Rate",
+      "Back": "Pelvic fractures are associated with a high mortality rate due to the risk of severe hemorrhage and associated injuries.",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Hypovolemic Shock: Initial Heart Rate",
+      "Back": "In hypovolemic shock, the heart rate initially increases to compensate for decreased blood volume and maintain cardiac output.",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Neurogenic Shock: Mechanism",
+      "Back": "Neurogenic shock results from disruption of the autonomic nervous system, leading to vasodilation and decreased systemic vascular resistance.",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Anaphylactic Shock: Bronchoconstriction",
+      "Back": "Anaphylactic shock involves bronchoconstriction, making it difficult for the patient to breathe and causing wheezing.",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Septic Shock: Cause",
+      "Back": "Septic shock is caused by a systemic infection, leading to widespread vasodilation and capillary permeability.",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Cardiac Tamponade: Decreased?",
+      "Back": "Cardiac tamponade causes decreased cardiac output due to compression of the heart by fluid in the pericardial space.",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Tension Pneumothorax: Lung Compression",
+      "Back": "A tension pneumothorax causes compression of the affected lung and can shift the mediastinum, impairing venous return to the heart.",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Needle Decompression: Anatomical Location",
+      "Back": "Needle decompression for tension pneumothorax is typically performed in the second intercostal space, midclavicular line, on the affected side.",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Tourniquet Application: Timing",
+      "Back": "Apply a tourniquet for life-threatening extremity hemorrhage that cannot be controlled by direct pressure and wound packing; do not delay.",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Hemostatic Agents: Wound Packing",
+      "Back": "Hemostatic agents promote clot formation and are used in conjunction with direct pressure and wound packing to control bleeding.",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Pelvic Binder: Trochanter Placement",
+      "Back": "Apply a pelvic binder at the level of the greater trochanters to stabilize pelvic fractures and reduce bleeding.",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Tranexamic Acid (TXA): Mechanism",
+      "Back": "Tranexamic acid (\\(TXA\\)) inhibits the breakdown of blood clots, helping to stabilize and prevent further bleeding in trauma patients.",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Spinal Motion Restriction: Priority",
+      "Back": "Limit spinal motion in patients with suspected spinal injuries but prioritize airway, breathing, and circulation (\\(ABC's\\)) first.",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Burn Severity: Respiratory Involvement",
+      "Back": "Inhalation injuries significantly increase the severity of burns due to the risk of airway compromise and pulmonary damage.",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Electrical Burns: Cardiac Monitoring",
+      "Back": "Electrical burns can cause cardiac arrhythmias, so continuous cardiac monitoring is essential.",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Cyanide Poisoning: Burn Victims",
+      "Back": "Suspect cyanide poisoning in burn victims, especially those exposed to smoke in enclosed spaces, as it can rapidly lead to respiratory failure.",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Crush Syndrome: Renal Failure",
+      "Back": "Crush syndrome can lead to acute renal failure due to the release of myoglobin and other toxins from damaged muscle tissue.",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Traumatic Brain Injury: Hypotension Avoidance",
+      "Back": "Avoid hypotension in patients with traumatic brain injury (\\(TBI\\)), as it can worsen secondary brain injury by reducing cerebral perfusion pressure.",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Traumatic Brain Injury: Hyperventilation Risk",
+      "Back": "Avoid hyperventilation in patients with traumatic brain injury (\\(TBI\\)), as it can cause cerebral vasoconstriction and reduce cerebral blood flow.",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Distributive Shock Examples",
+      "Back": "Distributive shock includes septic, anaphylactic, and neurogenic shock. They all cause massive vasodilation and reduced systemic vascular resistance.",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Tidal Volume for BVM",
+      "Back": "Deliver sufficient tidal volume to produce visible chest rise (approximately \\(6\\)-\\(7\\) mL/kg) when ventilating with a bag-valve mask (\\(BVM\\)).",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "MVC: Significant mechanism, stable patient. NEXT step?",
+      "Back": "Thorough head-to-toe exam, anticipating potential delayed injuries. Transport decision based on findings; high index of suspicion.",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "GCS Eye Opening Score: Pain",
+      "Back": "Eye opening to pain is scored as a \\(2\\) on the Glasgow Coma Scale.",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Pelvic fracture: MOST concerning complication?",
+      "Back": "Hemorrhage is the most life-threatening complication due to the rich vascular supply of the pelvis.",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Tension pneumothorax: Pathophysiology effect on heart?",
+      "Back": "Mediastinal shift compresses the heart, decreasing cardiac output and causing obstructive shock.",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Burn Rule of Nines: Entire back of adult?",
+      "Back": "The entire back of an adult represents \\(18\\%\\) of the body surface area.",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Infant heart rate: Lower limit of normal?",
+      "Back": "The lower limit of normal heart rate for an infant is \\(80\\) beats per minute (\\(bpm\\)).",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Hypovolemic shock: Initial compensatory mechanism?",
+      "Back": "Tachycardia is the body's initial response to try and maintain cardiac output in the face of decreased volume.",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Open pneumothorax: Occlusive dressing rule",
+      "Back": "Apply occlusive dressing taped on three sides to prevent tension pneumothorax development.",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Spinal cord injury: Neurogenic shock cause",
+      "Back": "Loss of sympathetic tone leads to vasodilation and relative hypovolemia causing neurogenic shock.",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Head injury: Contraindication for nasal airway?",
+      "Back": "Suspected basilar skull fracture is a contraindication due to risk of intracranial placement.",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Pediatric airway: Anatomical difference",
+      "Back": "The pediatric airway is smaller, more flexible, and has a proportionally larger tongue.",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Flail chest: Physiological impact on breathing",
+      "Back": "Paradoxical movement impairs efficient chest expansion, decreasing tidal volume and causing hypoxia.",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Abdominal evisceration: Management priority",
+      "Back": "Cover the exposed organs with sterile, saline-moistened dressings to prevent drying and infection.",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Femur fracture: Potential blood loss amount",
+      "Back": "A femur fracture can result in blood loss of up to \\(1500 mL\\) leading to hypovolemic shock.",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Increased ICP: Effect on respiratory pattern",
+      "Back": "Increased intracranial pressure (\\(ICP\\)) can cause irregular respiratory patterns like Cheyne-Stokes respirations.",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Burn depth: Characterize full thickness",
+      "Back": "Full thickness burns destroy all skin layers, are painless, and appear dry and leathery.",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Cardiac tamponade: Beck's Triad",
+      "Back": "Beck's Triad consists of hypotension, muffled heart sounds, and jugular venous distention (\\(JVD\\)), indicating cardiac tamponade.",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Shock: Late sign in pediatric patients",
+      "Back": "Hypotension is a late and ominous sign of shock in pediatric patients due to their compensatory mechanisms.",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Splenic rupture: Referred pain location",
+      "Back": "Left shoulder pain (\\(Kehr's sign\\)) can indicate splenic rupture due to diaphragmatic irritation.",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Traumatic brain injury: Secondary insult prevention",
+      "Back": "Prevent hypoxia and hypotension to minimize secondary brain injury and improve patient outcomes.",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Infant respiratory rate: Normal range",
+      "Back": "Normal respiratory rate for an infant is between \\(30\\) and \\(60\\) breaths per minute.",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Pericardial effusion: Define",
+      "Back": "Pericardial effusion is the accumulation of fluid in the pericardial sac surrounding the heart.",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Long bone fracture: Immobilization benefit",
+      "Back": "Immobilization reduces pain, prevents further injury, and minimizes the risk of fat embolism.",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Coup-contrecoup injury: Define",
+      "Back": "Brain injury occurring at the site of impact (coup) and on the opposite side of the brain (contrecoup).",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Burn classification: Electrical injury concern",
+      "Back": "Electrical burns can cause extensive internal damage that is not immediately visible, requiring careful monitoring.",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Chest trauma: Simple pneumothorax definition",
+      "Back": "The presence of air within the pleural space, outside of the lung, without associated tension.",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Pediatric trauma: Difference in center of gravity",
+      "Back": "Children have a higher center of gravity making them more susceptible to head injuries.",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Distributive shock: Anaphylaxis mechanism",
+      "Back": "Widespread vasodilation and increased capillary permeability due to histamine release causes distributive shock.",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Spinal precautions: When to remove?",
+      "Back": "Spinal precautions are only removed after medical clearance by a physician following imaging and assessment.",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Trauma triage: Key vital sign consideration",
+      "Back": "Level of consciousness (altered mental status) is a key vital sign for trauma triage.",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Hemorrhagic shock: Priority intervention",
+      "Back": "Direct pressure to the source of bleeding is the initial priority in managing hemorrhagic shock.",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Crush injury: Pathophysiology of renal failure",
+      "Back": "Rhabdomyolysis releases myoglobin into the bloodstream, which can damage the kidneys, leading to renal failure.",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Traumatic asphyxia: Classic signs",
+      "Back": "Traumatic asphyxia involves upper body cyanosis, facial petechiae, and swollen tongue/lips due to sudden compression.",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Open fracture: Contamination concern",
+      "Back": "High risk of infection due to the bone being exposed to external environment.",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "GCS: Intubated patient assessment",
+      "Back": "Document as 'GCS unable to assess due to intubation', but continue neurological exam.",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Needle Decompression: Correct anatomical site",
+      "Back": "Second intercostal space, midclavicular line on the affected side in a tension pneumothorax.",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Burn fluid resuscitation: Parkland formula",
+      "Back": "The Parkland formula is \\(4 mL\\) x patient weight (kg) x % TBSA burned; administer half in the first \\(8\\) hours.",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Pediatric vitals: Hypotension age 1-10",
+      "Back": "Hypotension for ages \\(1\\)-\\(10\\) is systolic blood pressure less than \\(70 + (2 x age)\\).",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Abdominal trauma: Liver injury concern",
+      "Back": "The liver is a large, vascular organ, and injury can lead to significant internal bleeding and hypovolemic shock.",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Compartment syndrome: The 6 P's",
+      "Back": "Pain, pressure, pallor, paresthesia, paralysis, pulselessness are the 6 P's of compartment syndrome.",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Peritonitis: MOST likely cause after trauma",
+      "Back": "Leakage of bowel contents due to hollow organ perforation is the most likely cause.",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Hypothermia: Effects on coagulation",
+      "Back": "Hypothermia impairs coagulation, worsening bleeding and increasing the risk of mortality in trauma patients.",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Air embolism: Treatment in trauma",
+      "Back": "Place patient in left lateral decubitus and Trendelenburg position; administer high-flow oxygen.",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "SCI: Definition of spinal shock",
+      "Back": "Temporary loss of all spinal cord functions below the level of injury, including motor, sensory, and autonomic.",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Pediatric burns: Unique considerations",
+      "Back": "Children have thinner skin, greater body surface area (\\(BSA\\))-to-mass ratio, leading to more severe burns.",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Pulmonary contusion: Pathophysiology",
+      "Back": "Bleeding and swelling in the lung tissue, decreasing gas exchange and leading to hypoxia.",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Trauma in pregnancy: Physiological changes",
+      "Back": "Increased blood volume and heart rate are normal, but hypotension may indicate significant blood loss.",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Rib fracture: Complication consideration",
+      "Back": "Pneumothorax is a complication associated with rib fractures.",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Trauma: Golden Hour importance",
+      "Back": "The \"Golden Hour\" emphasizes rapid assessment, treatment, and transport to improve patient survival.",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "TBI: Increased ICP treatment",
+      "Back": "Hyperventilation (cautiously) to reduce \\(PaCO_2\\), elevating the head of the bed, and preventing hypotension can help.",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Motor component of GCS: Obeys commands",
+      "Back": "A patient who follows simple requests to move a limb receives a GCS motor score of \\(6\\).",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Pediatric compensation for shock: heart rate",
+      "Back": "Infants and children compensate for decreased perfusion by increasing their heart rate, often to levels considered abnormally high for adults (e.g., \\(160-180\\) bpm in infants).",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Calculating MAP (Mean Arterial Pressure)",
+      "Back": "The formula for \\(MAP\\) is \\(MAP = [(2 * Diastolic) + Systolic] / 3\\). This calculation indicates the average pressure in a patient's arteries during one cardiac cycle.",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Rule of Nines: Entire arm",
+      "Back": "In adults, the entire arm represents \\(9\\)% of the total body surface area (\\(TBSA\\)) - \\(4.5\\)% anterior and \\(4.5\\)% posterior.",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Pathophysiology: Tension pneumothorax effect on heart",
+      "Back": "Tension pneumothorax causes mediastinal shift, compressing the heart and great vessels, reducing cardiac output and causing obstructive shock.",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Next step: Open pneumothorax treatment",
+      "Back": "After applying an occlusive dressing to an open chest wound, the NEXT step is to monitor for signs of tension pneumothorax, and relieve pressure if needed.",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Most likely diagnosis: progressively worsening dyspnea after blunt chest trauma",
+      "Back": "Progressively worsening dyspnea, diminished breath sounds on one side, and tracheal deviation are MOST likely caused by tension pneumothorax.",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Anatomy: Structure most likely injured in rib fracture",
+      "Back": "Due to their proximity, fractured ribs, especially ribs \\(4\\) through \\(9\\), can cause injury to the pleura, lungs, and intercostal vessels.",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Distributive shock caused by spinal cord injury",
+      "Back": "Spinal shock (a type of neurogenic shock) results in a loss of sympathetic tone, causing widespread vasodilation and hypotension.",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Burn depth affecting pain sensation",
+      "Back": "Full-thickness (third-degree) burns may be painless because nerve endings in the dermis have been destroyed.",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Significance of unequal pupils after head trauma",
+      "Back": "Anisocoria (unequal pupils) in the setting of head trauma can indicate increased intracranial pressure (\\(ICP\\)) or direct pressure on the oculomotor nerve.",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Treatment for evisceration",
+      "Back": "Cover eviscerated abdominal organs with a sterile, saline-soaked dressing and then an occlusive dressing to keep them moist and protected.",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Signs of basilar skull fracture",
+      "Back": "Basilar skull fractures may present with raccoon eyes (periorbital ecchymosis), Battle's sign (mastoid ecchymosis), and cerebrospinal fluid (\\(CSF\\)) leakage from the nose or ears.",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": " Parkland formula for burn resuscitation",
+      "Back": "The Parkland formula dictates \\(4 \\, mL\\) of \\(Ringer's\\) \\(Lactate\\) solution per kilogram of body weight per percent of \\(TBSA\\) burned ( \\(4 \\, mL \\times kg \\times \\%TBSA\\)). Half of this volume is administered in the first \\(8\\) hours, and the remaining half over the subsequent \\(16\\) hours.",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Most likely injury: pelvic fracture high-impact trauma",
+      "Back": "Significant force is required to fracture the pelvis, thus pelvic fractures are associated with substantial internal hemorrhage.",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Expected vital sign change in early hypovolemic shock",
+      "Back": "An early sign of hypovolemic shock is an increased diastolic blood pressure, resulting in a narrowed pulse pressure.",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Anatomy: Location of spleen in abdominal trauma",
+      "Back": "Due to its location in the upper left quadrant (\\(LUQ\\)), the spleen is frequently injured in blunt abdominal trauma from motor vehicle collisions or falls.",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Treatment for flail chest",
+      "Back": "The primary treatment for flail chest involves providing adequate ventilation and oxygenation, often requiring positive pressure ventilation.",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Significance of Cheyne-Stokes respirations",
+      "Back": "Cheyne-Stokes respirations, characterized by a gradual increase in rate and depth of breathing followed by a gradual decrease and then a period of apnea, often indicates increased \\(ICP\\) or brainstem injury.",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Most likely cause of cardiac tamponade",
+      "Back": "Penetrating trauma to the chest is the MOST likely cause of cardiac tamponade.",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Definition of 'permissive hypotension'",
+      "Back": "\"Permissive hypotension\" is a strategy used in trauma resuscitation to maintain a \\(SBP\\) of \\(80-90 \\, mmHg\\) to avoid exacerbating hemorrhage by disrupting clot formation.",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Anatomy: Liver injury after blunt trauma",
+      "Back": "The liver, located in the upper right quadrant (\\(RUQ\\)), is a large and vascular organ that is prone to injury in blunt abdominal trauma.",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Effect of hypothermia on coagulation",
+      "Back": "Hypothermia impairs the coagulation cascade, increasing the risk of bleeding and complicating trauma management.",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Classic signs of Beck's Triad",
+      "Back": "Beck's triad, associated with cardiac tamponade, consists of hypotension, muffled heart sounds, and jugular venous distension (\\(JVD\\)).",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Rule of Nines: child's leg",
+      "Back": "In a child, the entire leg is \\(13.5\\)% (\\(TBSA\\)), \\(6.75\\)% anterior and \\(6.75\\)% posterior.",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Anatomy: Structures at risk in femur fracture",
+      "Back": "Femur fractures can cause significant blood loss, potentially damaging the femoral artery and nerve due to their proximity.",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Next step: suspected spinal injury",
+      "Back": "After ensuring scene safety, the NEXT step is to manually stabilize the cervical spine.",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Pathophysiology of compartment syndrome",
+      "Back": "Compartment syndrome occurs when pressure within a muscle compartment increases, compromising blood flow and potentially leading to tissue damage and necrosis.",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Expected change in pulse oximetry with carbon monoxide poisoning",
+      "Back": "Pulse oximetry may be falsely elevated in carbon monoxide poisoning because the device cannot differentiate between oxyhemoglobin and carboxyhemoglobin.",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Most likely diagnosis: progressively altered \\(LOC\\) after head trauma",
+      "Back": "A progressively altered level of consciousness (\\(LOC\\)) after head trauma is MOST likely caused by an expanding intracranial hematoma.",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Pediatric: respiratory rate indicating decompensation",
+      "Back": "A respiratory rate above \\(60\\) breaths per minute in infants or young children indicates respiratory distress or failure and impending decompensation.",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Anatomy: Injuries associated with fractured clavicle",
+      "Back": "Fractured clavicles can be associated with pneumothorax and damage to the subclavian vessels.",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Effect of hyperventilation on \\(ICP\\)",
+      "Back": "Brief hyperventilation can temporarily reduce \\(ICP\\) by causing cerebral vasoconstriction, but prolonged hyperventilation can impair cerebral perfusion.",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Significance of absent distal pulses after fracture",
+      "Back": "Absent distal pulses after a fracture indicates potential vascular compromise and requires immediate intervention.",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Treatment for impaled object in the chest",
+      "Back": "Stabilize impaled objects in place with bulky dressings and tape; do NOT remove them, as they may be tamponading a major vessel.",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Most likely complication of long bone fracture",
+      "Back": "A long bone fracture such as a femur can result in hypovolemic shock due to significant blood loss.",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Pediatric vitals: Minimum \\(SBP\\)",
+      "Back": "The formula for the minimal acceptable \\(SBP\\) is: \\(70 + (2 \\times age)\\), in years.",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Anatomy: Structures most at risk with knee dislocation",
+      "Back": "A dislocated knee is at high risk for popliteal artery injury, potentially leading to limb ischemia.",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Effect of tourniquet use",
+      "Back": "Tourniquets halt arterial blood flow to an extremity, and should only be used when direct pressure is ineffective.",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Most likely injury: Lateral impact MVC with pelvic pain",
+      "Back": "Lateral impact motor vehicle collisions often result in pelvic fractures, especially in the lateral direction of impact.",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Significance of Kehr's sign",
+      "Back": "Kehr's sign, referred pain to the shoulder, is commonly caused by splenic rupture.",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Next step: Patient with a sucking chest wound",
+      "Back": "Apply an occlusive dressing taped on three sides, creating a flutter valve, and then monitor for signs of tension pneumothorax.",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Anatomy: Diaphragm location",
+      "Back": "The diaphragm extends as high as the \\(4^{th}\\) intercostal space.",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Pediatric modification of Rule of Nines",
+      "Back": "In pediatrics, each leg is \\(13.5\\)% (\\(TBSA\\)) and the head is \\(18\\)% (\\(TBSA\\)).",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Consideration for elderly trauma patients",
+      "Back": "The elderly are at higher risk for subdural hematomas because of brain atrophy, which stretches the bridging veins.",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Most likely cause of obstructive shock",
+      "Back": "Pulmonary embolism (\\(PE\\)) is the MOST likely cause of obstructive shock.",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Differentiating neurogenic from hypovolemic shock",
+      "Back": "Neurogenic shock is characterized by hypotension and bradycardia; hypovolemic shock is characterized by hypotension and tachycardia.",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Significance of pulsus paradoxus",
+      "Back": "Pulsus paradoxus, an exaggerated decrease in systolic blood pressure during inspiration, can indicate cardiac tamponade or severe asthma.",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Anatomy: Small intestine injury",
+      "Back": "The small intestine is particularly vulnerable in penetrating trauma due to its large surface area.",
+      "Topic": "3",
+      "Subtopic": "1"
+    },
+    {
+      "Front": "Most likely diagnosis: crushing chest injury",
+      "Back": "Myocardial contusion is most likely with a crushing chest injury.",
+      "Topic": "3",
+      "Subtopic": "1"
+    }
+  ]
+}
