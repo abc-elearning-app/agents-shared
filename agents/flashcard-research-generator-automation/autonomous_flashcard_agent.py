@@ -247,21 +247,24 @@ class ResearchEngine:
         ]
         
         all_urls = set()
+        
+        # TAVILY - GỌI 1 LẦN DUY NHẤT ĐỂ TIẾT KIỆM TOKEN
+        if self.tavily:
+            # Câu lệnh tổng hợp tìm Blueprint và Manual (Dạng PDF - Gold Standard)
+            tavily_query = f'"{self.exam}" official blueprint manual study guide filetype:pdf'
+            try:
+                res = self.tavily.search(query=tavily_query, search_depth="advanced", max_results=20)
+                for r in res.get('results', []): all_urls.add(r['url'])
+            except: pass
+
         for q in variations:
-            # Tavily (Advanced Research)
-            if self.tavily:
-                try:
-                    res = self.tavily.search(query=q, search_depth="advanced", max_results=max_results)
-                    for r in res.get('results', []): all_urls.add(r['url'])
-                except: pass
-            
-            # DuckDuckGo (General fallback)
+            # DuckDuckGo (Hỗ trợ tìm kiếm miễn phí)
             try:
                 with DDGS() as ddgs:
                     for r in ddgs.text(q, max_results=10): all_urls.add(r['href'])
             except: pass
 
-            # SearXNG (Meta-search)
+            # SearXNG (Hỗ trợ tìm kiếm miễn phí)
             for r in searxng_search(q, max_results=max_results): all_urls.add(r['url'])
             
         # NGUYÊN TẮC 1: LỌC QUA GATE 1 (Accessibility & Blocked Domains)
