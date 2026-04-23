@@ -403,9 +403,17 @@ class FlashcardAgent:
                 try:
                     if approved['format'] == 'pdf':
                         logger.info(f"📥 Attempting to upload PDF: {url}")
-                        pdf_resp = requests.get(url, timeout=60)
+                        pdf_resp = requests.get(url, headers={"User-Agent": "Mozilla/5.0"}, timeout=60)
                         if pdf_resp.ok:
-                            upload_resp = requests.post(PDF_UPLOAD_API, files={'file': pdf_resp.content}, data={'app_name': app_name}, timeout=120)
+                            # Tạo tên file từ URL để tránh trùng lặp và giúp Ingest API xử lý tốt hơn
+                            file_name = f"{hashlib.md5(url.encode()).hexdigest()}.pdf"
+                            # Gửi cả app_name và bucket_name cho đồng bộ
+                            upload_resp = requests.post(
+                                PDF_UPLOAD_API, 
+                                files={'file': (file_name, pdf_resp.content, 'application/pdf')}, 
+                                data={'app_name': app_name, 'bucket_name': app_name}, 
+                                timeout=120
+                            )
                             if upload_resp.ok:
                                 logger.info(f"✅ PDF Uploaded successfully: {url}")
                                 sources_ingested.append(approved)
