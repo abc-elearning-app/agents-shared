@@ -345,20 +345,50 @@ class FlashcardAgent:
             logger.info(f"🔍 Processing {progress_msg}: {item['name']} (Parent: {item.get('parent_name')})")
             self.update_dashboard_status(app_name, "generate", "Pending")
             
+            # --- CRITICAL MAPPING LOGIC (PART 1 DEFAULT) ---
             official_topic_id = "N/A"
-            clean_name = re.sub(r"^(\d+\.)+\s+", "", item['name'].lower().strip())
+            official_subtopic_id = "N/A" # This will hold the PART ID (Type 3)
             
-            # Fuzzy match với danh sách topic từ CMS
+            clean_item_name = re.sub(r"^(\d+\.)+\s+", "", item['name'].strip())
+            
+            # 1. Luôn tìm Topic ID (Type 1)
+            parent_to_find = item['name'] if item['type'] == 1 else item.get('parent_name', 'General')
+            clean_parent = re.sub(r"^(\d+\.)+\s+", "", parent_to_find.strip()).lower()
+            
             for ct in cms_topics:
-                cms_t_name = ct.get("name", "").lower()
-                # Kiểm tra chứa chuỗi (contains) hai chiều để tăng tỉ lệ khớp
-                if clean_name in cms_t_name or cms_t_name in clean_name:
+                if clean_parent in ct.get("name", "").lower() or ct.get("name", "").lower() in clean_parent:
                     official_topic_id = str(ct.get("id"))
-                    logger.info(f"✅ Matched CMS Topic: '{ct.get('name')}' (ID: {official_topic_id})")
                     break
             
+            # 2. Nếu là Subtopic, tìm Part 1 (Type 3) của nó
+            # Pattern: [Subtopic Name] + " 1"
+            if item['type'] == 2:
+                search_part_name = f"{clean_item_name} 1".lower()
+                logger.info(f"🕵️ Searching for Part 1: '{search_part_name}' (type=3)")
+                for cp in cms_parts:
+                    if cp.get("type") == 3 and search_part_name == cp.get("name", "").lower():
+                        official_subtopic_id = str(cp.get("id"))
+                        logger.info(f"✅ Found Part 1 ID: {official_subtopic_id}")
+                        break
+                
+                # Fallback: Nếu không khớp chính xác, tìm Part 1 có chứa tên Subtopic
+                if official_subtopic_id == "N/A":
+                    for cp in cms_parts:
+                        if cp.get("type") == 3 and clean_item_name.lower() in cp.get("name", "").lower() and cp.get("name", "").strip().endswith(" 1"):
+                            official_subtopic_id = str(cp.get("id"))
+                            logger.info(f"✅ Fuzzy Matched Part 1: '{cp.get('name')}' (ID: {official_subtopic_id})")
+                            break
+            else:
+                # Nếu Topic là leaf node, kiểm tra xem có Part 1 của Topic đó không
+                search_part_name = f"{clean_item_name} 1".lower()
+                for cp in cms_parts:
+                    if cp.get("type") == 3 and search_part_name == cp.get("name", "").lower():
+                        official_subtopic_id = str(cp.get("id"))
+                        break
+
             if official_topic_id == "N/A":
-                logger.error(f"❌ Could not find CMS ID for: '{item['name']}'. CMS available: {[t.get('name') for t in cms_topics]}")
+                logger.error(f"❌ Could not find CMS Topic ID for: '{clean_parent}'")
+            # -----------------------------------------------
 
             # Step 1: Automated Technical Retrieval & Context Optimization
             loop = asyncio.get_event_loop()
@@ -451,7 +481,7 @@ class FlashcardAgent:
                             # Kiểm tra trùng lặp trong cả app và trong chính batch vừa gen
                             if f_clean not in all_generated_fronts and not any(tc["Front"].lower() == f_clean for tc in topic_cards):
                                 if not any(x in f_clean for x in ["exam", "format", "score", "passing", "handbook", "chapter"]):
-                                    c["Topic"], c["Subtopic"] = official_topic_id, "N/A"
+                                    c["Topic"], c["Subtopic"] = official_topic_id, official_subtopic_id
                                     topic_cards.append(c)
                                     # Cập nhật all_generated_fronts ngay lập tức để batch sau biết
                                     all_generated_fronts.add(f_clean)
