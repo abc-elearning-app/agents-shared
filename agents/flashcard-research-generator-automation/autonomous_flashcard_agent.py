@@ -122,39 +122,51 @@ def fix_mathjax(text: str) -> str:
     text = text.replace("\\( ", "\\(").replace(" \\)", "\\)")
     return text
 
-def apply_term_constraints(text: str) -> str:
+def apply_term_constraints(text: str, is_front: bool = True) -> str:
     if not text: return ""
-    # 1. Xóa dấu hỏi và các từ hỏi phổ biến (Rule 4)
-    text = text.replace("?", "").strip()
-    patterns = [
-        r"^(What is|What are|Define|Explain|Describe|How to|Why do|Where is|Which of the following is|Which is)\s+",
-        r"^(The|A|An)\s+" 
-    ]
-    for p in patterns:
-        text = re.sub(p, "", text, flags=re.IGNORECASE)
     
-    # 2. Quy tắc viết hoa (Capitalization STRICT)
-    # Chỉ viết hoa chữ cái đầu và acronyms. Còn lại viết thường.
-    acronyms = {"OSHA", "HIPAA", "PPE", "CDC", "CLSI", "HIV", "HBV", "HCV", "EDTA", "SST", "PST", "CBC", "PT", "PTT", "INR", "GTT", "HCG", "PKU", "ABG", "TDM", "SDS", "MSDS", "RBC", "WBC", "TCP/IP", "IaaS", "PaaS", "SaaS", "RBAC", "VPC", "VNET", "SOHO", "DNS", "DHCP", "FTP", "HTTP", "HTTPS"}
-    words = text.split()
+    # 1. Xử lý riêng cho Front (Noun Phrases, xóa meta/questions)
+    if is_front:
+        text = text.replace("?", "").strip()
+        patterns = [
+            r"^(What is|What are|Define|Explain|Describe|How to|Why do|Where is|Which of the following is|Which is)\s+",
+            r"^(The|A|An)\s+" 
+        ]
+        for p in patterns:
+            text = re.sub(p, "", text, flags=re.IGNORECASE)
+    
+    # 2. Quy tắc viết hoa STRICT (Front & Back)
+    # Danh sách acronyms cần giữ nguyên viết hoa
+    acronyms = {"OSHA", "HIPAA", "PPE", "CDC", "CLSI", "HIV", "HBV", "HCV", "EDTA", "SST", "PST", "CBC", "PT", "PTT", "INR", "GTT", "HCG", "PKU", "ABG", "TDM", "SDS", "MSDS", "RBC", "WBC", "TCP/IP", "IaaS", "PaaS", "SaaS", "RBAC", "VPC", "VNET", "SOHO", "DNS", "DHCP", "FTP", "HTTP", "HTTPS", "FAA", "sUAS", "ATC", "AGL", "MSL", "NOTAM", "METAR", "TAF", "VFR", "IFR"}
+    
+    # Bảo vệ các khối MathJax
+    math_blocks = re.findall(r"\\\(.*?\\\)", text)
+    placeholder = "___MATH_BLOCK___"
+    temp_text = re.sub(r"\\\(.*?\\\)", placeholder, text)
+    
+    words = temp_text.split()
     if not words: return ""
     
     new_words = []
+    math_idx = 0
     for i, word in enumerate(words):
-        # Giữ nguyên MathJax
-        if "\\(" in word or "\\)" in word:
-            new_words.append(word)
+        if placeholder in word:
+            actual_math = math_blocks[math_idx]
+            math_idx += 1
+            new_words.append(word.replace(placeholder, actual_math))
             continue
-        
+            
+        # Kiểm tra acronym trước
         clean_word = re.sub(r'[^\w]', '', word).upper()
         if clean_word in acronyms:
             new_words.append(word.upper())
         elif i == 0:
-            # Viết hoa chữ cái đầu tiên của từ đầu tiên
+            # Chữ cái đầu tiên viết hoa, còn lại viết thường
             new_words.append(word[0].upper() + word[1:].lower())
         else:
+            # Viết thường toàn bộ
             new_words.append(word.lower())
-    
+            
     return " ".join(new_words)
 
 class FlashcardOutput(BaseModel):
@@ -326,22 +338,31 @@ class FlashcardAgent:
                         context_text = ans[:15000]
             except: pass
 
-            kpi_count = 30
+            # Đặt KPI theo loại Node (Type 1: Topic -> 50, Type 2: Subtopic -> 30)
+            kpi_count = 50 if item.get("type") == 1 else 30
             batch_size = 25
-            num_batches = (kpi_count + batch_size - 1) // batch_size
             topic_cards, topic_success = [], True
+            max_batches = 5 # Giới hạn batch để tránh lặp vô tận
+            current_batch = 0
 
-            for b_idx in range(num_batches):
+            while len(topic_cards) < kpi_count and current_batch < max_batches:
+                current_batch += 1
                 current_goal = min(batch_size, kpi_count - len(topic_cards))
                 if current_goal <= 0: break
                 
+                logger.info(f"📦 Topic/Subtopic Batch {current_batch}: Target {current_goal} cards (Total collected: {len(topic_cards)}/{kpi_count})")
+                
                 # Session-Based Deduplication (Exclusion List) for the current job
                 exclusion_instruction = ""
-                if all_generated_fronts:
-                    previously_generated_terms_list = ", ".join(list(all_generated_fronts))
+                # Gộp cả topic_cards (trong topic này) và all_generated_fronts (toàn bộ app)
+                current_exclusion_set = all_generated_fronts.union({c["Front"].lower() for c in topic_cards})
+                
+                if current_exclusion_set:
+                    previously_generated_terms_list = ", ".join(list(current_exclusion_set))
+                    logger.info(f"🚫 Injecting Exclusion List ({len(current_exclusion_set)} terms)")
                     exclusion_instruction = f"""
                     EXCLUSION LIST: You have already generated flashcards for the following terms: {previously_generated_terms_list}. 
-                    CRITICAL RULE: You are STRICTLY FORBIDDEN from generating flashcards for these exact terms again. Furthermore, you MUST NOT generate ANY terms that are semantic duplicates, synonyms, or paraphrased versions of the terms in the exclusion list (e.g., if 'Risk Mitigation' is in the list, you cannot generate 'Mitigating Risks' or 'Risk Decreasing'). Every newly generated term MUST introduce a completely unique and distinct educational concept.
+                    CRITICAL RULE: You are STRICTLY FORBIDDEN from generating flashcards for these exact terms again. Furthermore, you MUST NOT generate ANY terms that are semantic duplicates, synonyms, or paraphrased versions of the terms in the exclusion list. Every newly generated term MUST introduce a completely unique and distinct educational concept.
                     """
 
                 # Master Reference Synthesis per Topic/Subtopic
@@ -382,20 +403,20 @@ class FlashcardAgent:
                             cards_data = json.loads(res.text)
                         
                         for c in cards_data:
-                            # Áp dụng các hàm xử lý chuẩn (MathJax + Term constraints)
-                            c["Front"] = apply_term_constraints(fix_mathjax(normalize_whitespace(c["Front"])))
-                            c["Back"] = fix_mathjax(normalize_whitespace(c["Back"]))
+                            c["Front"] = apply_term_constraints(fix_mathjax(normalize_whitespace(c["Front"])), is_front=True)
+                            c["Back"] = apply_term_constraints(fix_mathjax(normalize_whitespace(c["Back"])), is_front=False)
                             
                             f_clean = c["Front"].lower()
-                            if f_clean not in all_generated_fronts:
-                                # Anti-meta final check
+                            # Kiểm tra trùng lặp trong cả app và trong chính batch vừa gen
+                            if f_clean not in all_generated_fronts and not any(tc["Front"].lower() == f_clean for tc in topic_cards):
                                 if not any(x in f_clean for x in ["exam", "format", "score", "passing", "handbook", "chapter"]):
-                                    c["Topic"], c["Subtopic"] = official_topic_id, "0"
-                                    topic_cards.append(c); all_generated_fronts.add(f_clean)
+                                    c["Topic"], c["Subtopic"] = official_topic_id, "N/A"
+                                    topic_cards.append(c)
+                                    # Cập nhật all_generated_fronts ngay lập tức để batch sau biết
+                                    all_generated_fronts.add(f_clean)
                         batch_done = True; break
                     except Exception as e:
                         if "429" in str(e):
-                            # Deep Sleep for 429 recovery with jitter
                             delay_429 = 90 + random.uniform(1.0, 5.0)
                             logger.error(f"🚨 RESOURCE_EXHAUSTED (429). Deep sleep {delay_429:.2f}s for quota recovery...")
                             await asyncio.sleep(delay_429)
