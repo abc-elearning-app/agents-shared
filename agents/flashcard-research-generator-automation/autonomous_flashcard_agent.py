@@ -136,8 +136,14 @@ def apply_term_constraints(text: str, is_front: bool = True) -> str:
             text = re.sub(p, "", text, flags=re.IGNORECASE)
     
     # 2. Quy tắc viết hoa STRICT (Front & Back)
-    # Danh sách acronyms cần giữ nguyên viết hoa
-    acronyms = {"OSHA", "HIPAA", "PPE", "CDC", "CLSI", "HIV", "HBV", "HCV", "EDTA", "SST", "PST", "CBC", "PT", "PTT", "INR", "GTT", "HCG", "PKU", "ABG", "TDM", "SDS", "MSDS", "RBC", "WBC", "TCP/IP", "IaaS", "PaaS", "SaaS", "RBAC", "VPC", "VNET", "SOHO", "DNS", "DHCP", "FTP", "HTTP", "HTTPS", "FAA", "sUAS", "ATC", "AGL", "MSL", "NOTAM", "METAR", "TAF", "VFR", "IFR"}
+    # Bộ từ điển Acronyms phổ biến và các case đặc biệt
+    acronym_list = {
+        "OSHA", "HIPAA", "PPE", "CDC", "CLSI", "HIV", "HBV", "HCV", "EDTA", "SST", "PST", "CBC", "PT", "PTT", "INR", "GTT", "HCG", "PKU", "ABG", "TDM", "SDS", "MSDS", "RBC", "WBC", "TCP/IP", "IaaS", "PaaS", "SaaS", "RBAC", "VPC", "VNET", "SOHO", "DNS", "DHCP", "FTP", "HTTP", "HTTPS", 
+        "FAA", "sUAS", "ATC", "AGL", "MSL", "NOTAM", "METAR", "TAF", "VFR", "IFR", "PIC", "VO", "VLOS", "BVLOS", "CRM", "ICAO", "UA", "CS", "OSI", "LAN", "WAN", "PAN", "WLAN", "SATA", "NVME", "CPU", "GPU", "RAM", "ROM", "BIOS", "UEFI", "POST", "MAC", "IP", "UDP", "TCP", "ICMP", "ARP",
+        "NREMT", "EMS", "EMT", "CPR", "AED", "GCS", "AVPU", "ABC", "BSI", "SAMPLE", "OPQRST", "DCAP-BTLS", "MCI", "ICS", "NIMS", "HAZMAT", "NRB", "BVM", "CPAP", "PEEP", "CHF", "COPD", "ACS", "TIA", "CVA", "ICP", "CSF", "ALOC", "LOC"
+    }
+    # Tạo set lowercase để tra cứu nhanh
+    acronym_map = {a.lower(): a for a in acronym_list}
     
     # Bảo vệ các khối MathJax
     math_blocks = re.findall(r"\\\(.*?\\\)", text)
@@ -156,15 +162,40 @@ def apply_term_constraints(text: str, is_front: bool = True) -> str:
             new_words.append(word.replace(placeholder, actual_math))
             continue
             
-        # Kiểm tra acronym trước
-        clean_word = re.sub(r'[^\w]', '', word).upper()
-        if clean_word in acronyms:
-            new_words.append(word.upper())
+        # Tách từ để nhận diện (loại bỏ dấu câu sát từ)
+        clean_match = re.search(r"[\w\d\-/]+", word)
+        if not clean_match:
+            new_words.append(word.lower())
+            continue
+            
+        clean = clean_match.group()
+        
+        # Heuristic nhận diện Acronym:
+        # - Có trong danh sách bảo vệ
+        # - AI đã viết hoa toàn bộ và dài >= 2 ký tự (ví dụ: NASA)
+        # - Có chứa số (ví dụ: 5G, 4G, IPv6)
+        is_acronym = False
+        target_version = clean # Mặc định
+        
+        if clean.lower() in acronym_map:
+            is_acronym = True
+            target_version = acronym_map[clean.lower()]
+        elif clean.isupper() and len(clean) >= 2:
+            is_acronym = True
+            target_version = clean
+        elif any(c.isdigit() for c in clean) and len(clean) >= 2:
+            is_acronym = True
+            target_version = clean.upper() # Ví dụ: ipv6 -> IPV6 (hoặc giữ nguyên nếu muốn)
+            # Fix riêng cho IPv4/v6 nếu cần
+            if "ipv" in clean.lower():
+                target_version = "IPv" + clean.lower().split("ipv")[-1]
+            
+        if is_acronym:
+            new_words.append(word.replace(clean, target_version))
         elif i == 0:
-            # Chữ cái đầu tiên viết hoa, còn lại viết thường
+            # Chữ cái đầu tiên của chuỗi viết hoa, còn lại viết thường
             new_words.append(word[0].upper() + word[1:].lower())
         else:
-            # Viết thường toàn bộ
             new_words.append(word.lower())
             
     return " ".join(new_words)
@@ -316,9 +347,19 @@ class FlashcardAgent:
             
             official_topic_id = "N/A"
             clean_name = re.sub(r"^(\d+\.)+\s+", "", item['name'].lower().strip())
-            for ct in cms_topics:
-                if clean_name in ct.get("name", "").lower(): official_topic_id = str(ct.get("id")); break
             
+            # Fuzzy match với danh sách topic từ CMS
+            for ct in cms_topics:
+                cms_t_name = ct.get("name", "").lower()
+                # Kiểm tra chứa chuỗi (contains) hai chiều để tăng tỉ lệ khớp
+                if clean_name in cms_t_name or cms_t_name in clean_name:
+                    official_topic_id = str(ct.get("id"))
+                    logger.info(f"✅ Matched CMS Topic: '{ct.get('name')}' (ID: {official_topic_id})")
+                    break
+            
+            if official_topic_id == "N/A":
+                logger.error(f"❌ Could not find CMS ID for: '{item['name']}'. CMS available: {[t.get('name') for t in cms_topics]}")
+
             # Step 1: Automated Technical Retrieval & Context Optimization
             loop = asyncio.get_event_loop()
             context_text = ""
@@ -342,7 +383,7 @@ class FlashcardAgent:
             kpi_count = 50 if item.get("type") == 1 else 30
             batch_size = 25
             topic_cards, topic_success = [], True
-            max_batches = 5 # Giới hạn batch để tránh lặp vô tận
+            max_batches = 8 # Tăng số batch để đảm bảo KPI
             current_batch = 0
 
             while len(topic_cards) < kpi_count and current_batch < max_batches:
