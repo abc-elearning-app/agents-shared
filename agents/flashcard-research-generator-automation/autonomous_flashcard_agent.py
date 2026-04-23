@@ -411,9 +411,9 @@ class FlashcardAgent:
 
             # Đặt KPI theo loại Node (Type 1: Topic -> 50, Type 2: Subtopic -> 30)
             kpi_count = 50 if item.get("type") == 1 else 30
-            batch_size = 25
+            batch_size = kpi_count # Ép AI gen đủ luôn trong 1 lần để giảm request
             topic_cards, topic_success = [], True
-            max_batches = 8 # Tăng số batch để đảm bảo KPI
+            max_batches = 3 # Giảm số batch tối đa vì chúng ta đã yêu cầu đủ từ đầu
             current_batch = 0
 
             while len(topic_cards) < kpi_count and current_batch < max_batches:
