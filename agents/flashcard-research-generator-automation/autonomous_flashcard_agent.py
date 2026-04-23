@@ -259,8 +259,38 @@ class FlashcardAgent:
     def __init__(self):
         self.client = genai.Client(api_key=GEMINI_API_KEY)
         self.executor = ThreadPoolExecutor(max_workers=20)
-        self.semaphore = asyncio.Semaphore(3)
+        # THROTTLING: Chỉ cho phép 1 request duy nhất được thực hiện tại một thời điểm trên toàn hệ thống
+        self.semaphore = asyncio.Semaphore(1) 
         self.active_jobs = set()
+
+    async def rate_limited_gen(self, prompt, schema):
+        """
+        Hàm bao bọc để điều tiết luồng API (Throttling)
+        """
+        async with self.semaphore:
+            try:
+                res = await asyncio.get_event_loop().run_in_executor(
+                    self.executor, 
+                    lambda: self.client.models.generate_content(
+                        model=GEMINI_MODEL, 
+                        contents=prompt, 
+                        config=types.GenerateContentConfig(
+                            response_mime_type="application/json", 
+                            response_schema=schema, 
+                            temperature=0.1
+                        )
+                    )
+                )
+                # THROTTLING: Nghỉ bắt buộc 10 giây sau mỗi lần gọi thành công để giữ RPM thấp
+                await asyncio.sleep(10)
+                return res
+            except Exception as e:
+                if "429" in str(e):
+                    # DEEP SLEEP: Nghỉ 2 phút nếu bị rate limit
+                    wait_time = 120 + random.uniform(5, 10)
+                    logger.error(f"🚨 RATE LIMIT HIT (429). Throttling active: Sleeping {wait_time:.2f}s...")
+                    await asyncio.sleep(wait_time)
+                raise e
 
     def update_dashboard_status(self, app_name: str, column: str, status: str):
         try:
@@ -471,6 +501,8 @@ class FlashcardAgent:
                             
                         async with self.semaphore:
                             res = await loop.run_in_executor(self.executor, lambda: self.client.models.generate_content(model=GEMINI_MODEL, contents=prompt, config=types.GenerateContentConfig(response_mime_type="application/json", response_schema=list[FlashcardOutput], temperature=0.1)))
+                            # GIẢM TẦN SUẤT: Nghỉ bắt buộc 10 giây sau mỗi request thành công để giữ RPM an toàn
+                            await asyncio.sleep(10)
                             cards_data = json.loads(res.text)
                         
                         for c in cards_data:
@@ -488,11 +520,13 @@ class FlashcardAgent:
                         batch_done = True; break
                     except Exception as e:
                         if "429" in str(e):
-                            delay_429 = 90 + random.uniform(1.0, 5.0)
-                            logger.error(f"🚨 RESOURCE_EXHAUSTED (429). Deep sleep {delay_429:.2f}s for quota recovery...")
+                            # ĐIỀU TIẾT LUỒNG: Nghỉ ít nhất 2 phút nếu bị rate limit
+                            delay_429 = 120 + random.uniform(5.0, 15.0)
+                            logger.error(f"🚨 RATE LIMIT HIT (429). Throttling active: Sleeping {delay_429:.2f}s for quota recovery...")
                             await asyncio.sleep(delay_429)
                         else:
                             logger.error(f"Batch error: {e}")
+                            await asyncio.sleep(5)
                 if not batch_done: topic_success = False; break
             
             if topic_success:
