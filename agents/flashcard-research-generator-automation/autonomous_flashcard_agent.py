@@ -231,7 +231,8 @@ class ResearchEngine:
         "CompTIA": "comptia.org", "PMI": "pmi.org", "ISC2": "isc2.org", "Cisco": "cisco.com",
         "AWS": "aws.amazon.com", "Microsoft": "microsoft.com", "Google Cloud": "cloud.google.com",
         "Oracle": "oracle.com", "FAA": "faa.gov", "NREMT": "nremt.org",
-        "ServSafe": "servsafe.com", "National Restaurant Association": "restaurant.org", "OSHA": "osha.gov"
+        "ServSafe": "servsafe.com", "National Restaurant Association": "restaurant.org", "OSHA": "osha.gov",
+        "Criteria": "criteriacorp.com"
     }
 
     def __init__(self, target_exam: str, exam_vendor: str, app_name: str = ""):
@@ -355,7 +356,7 @@ class ResearchEngine:
             score += 0.3
             
         if id["official_name"].lower() in url or id["official_name"].lower() in title:
-            score += 0.3
+            score += 0.4
         elif any(a.lower() in url or a.lower() in title for a in id["aliases"]):
             score += 0.2
             
@@ -369,7 +370,7 @@ class ResearchEngine:
             score -= 0.6
             
         final_score = round(score, 2)
-        if final_score < 0.7: return None
+        if final_score < 0.6: return None
         
         return {
             "url": result["url"], 
