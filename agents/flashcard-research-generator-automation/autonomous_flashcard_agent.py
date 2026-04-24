@@ -229,14 +229,17 @@ class ResearchEngine:
     LEARNING_TERMS = [
         "exam prep", "study guide", "practice test", "practice exam", "exam objectives", 
         "exam blueprint", "content outline", "coursebook", "review guide", "learning objectives",
-        "sample questions", "answer explanations", "exam review", "principles study guide"
+        "sample questions", "answer explanations", "exam review", "principles study guide",
+        "practice items", "sample items", "practice questions", "test prep"
     ]
 
     ADMIN_TERMS = [
         "how to register", "scheduling", "rescheduling", "cancellation policy", "refund policy",
         "exam fees", "payment", "pearson vue", "testing center rules", "proctoring rules",
         "id requirements", "account setup", "login instructions", "portal access", "exam-day rules",
-        "score reporting", "certification renewal", "marketing", "sales page"
+        "score reporting", "certification renewal", "marketing", "sales page",
+        "library record", "bibliographic", "full record", "availability", "get it", "view online",
+        "search results", "showing 1-10", "add to cart", "checkout"
     ]
 
     def __init__(self, target_exam: str, exam_vendor: str, app_name: str = ""):
@@ -259,7 +262,8 @@ class ResearchEngine:
         exam_code = code_match.group(1) if code_match else ""
         
         vendor_tokens = [v.lower() for v in v_norm.split()]
-        concept_terms = [t.lower() for t in re.findall(r'\b[A-Za-z]{3,}\b', name_no_paren) if t.lower() not in vendor_tokens]
+        # Core keywords: nouns and adjectives longer than 3 chars
+        core_keywords = [t.lower() for t in re.findall(r'\b[A-Za-z]{4,}\b', name_no_paren) if t.lower() not in vendor_tokens + ["test", "exam", "completion", "assessing"]]
         
         strong_aliases = [name_no_paren]
         if acronym:
@@ -281,7 +285,8 @@ class ResearchEngine:
             "vendor_tokens": vendor_tokens,
             "vendor_domain": vendor_domain,
             "strong_aliases": list(set(strong_aliases)),
-            "required_concept_terms": concept_terms
+            "core_keywords": core_keywords,
+            "required_concept_terms": [t.lower() for t in re.findall(r'\b[A-Za-z]{3,}\b', name_no_paren) if t.lower() not in vendor_tokens]
         }
 
     def generate_queries(self, pass_num=1) -> list[str]:
@@ -351,20 +356,55 @@ class ResearchEngine:
     def gate_8_execution_pipeline(self, result: dict) -> dict:
         url, title, snippet = result.get("url", "").lower(), result.get("title", "").lower(), result.get("snippet", "").lower()
         id = self.identity
+        
+        # Pattern-based Rejection for Library/Catalog systems
+        if any(p in url for p in ["/discovery/fulldisplay", "/alma", "/primo-explore", "/catalog/"]):
+            logger.warning(f"❌ Rejected Library/Catalog Metadata: {url}")
+            return None
+            
         if any(blocked in url for blocked in self.BLOCKED_DOMAINS): return None
 
         # 1. Fetch & Extract
         page_text = self.extract_content(result["url"])
         if not page_text: return None
-        combined_text = f"{url} {title} {snippet} {page_text.lower()}"
+        page_text_low = page_text.lower()
+        combined_text = f"{url} {title} {snippet} {page_text_low}"
         
+        # ==================================================
+        # NEGATIVE MISMATCH DETECTION (CRITICAL)
+        # ==================================================
+        # Define competitors based on category
+        competitors = []
+        target_acro = id["acronym"].lower() if id["acronym"] else ""
+        
+        if "tasc" in target_acro or "test assessing secondary completion" in title:
+            competitors = ["ged", "hiset"]
+        elif "ged" in target_acro:
+            competitors = ["tasc", "hiset"]
+        elif "comptia" in title or "comptia" in id["vendor_normalized"].lower():
+            # If target is A+, don't allow purely Network+ content
+            if "a+" in target_acro and "network+" in title and "a+" not in title: return None
+        
+        # If a competitor name is in the title but the target is not -> REJECT
+        for comp in competitors:
+            if comp in title and target_acro not in title:
+                logger.warning(f"❌ Rejected Competitor Mismatch (Title): {url} (Found {comp} instead of {target_acro})")
+                return None
+        
+        # If competitor name appears much more frequently than target -> REJECT
+        if target_acro and len(target_acro) >= 3:
+            for comp in competitors:
+                if page_text_low.count(comp) > page_text_low.count(target_acro) * 2:
+                    logger.warning(f"❌ Rejected Competitor Dominance: {url} ({comp} count > {target_acro} count)")
+                    return None
+
         # 2. Exam-Learning Intent Gate
         learning_matches = [t for t in self.LEARNING_TERMS if t in combined_text]
         admin_matches = [t for t in self.ADMIN_TERMS if t in combined_text]
         
         is_handbook = any(h in combined_text for h in ["candidate handbook", "exam handbook", "information bulletin"])
         learning_intent = len(learning_matches) >= 1
-        mostly_admin = len(admin_matches) > len(learning_matches) * 2
+        mostly_admin = len(admin_matches) > len(learning_matches) * 1.5
 
         if is_handbook and not learning_intent:
             logger.warning(f"❌ Rejected Administrative Handbook: {url}")
@@ -376,34 +416,56 @@ class ResearchEngine:
              logger.warning(f"❌ Rejected No Learning Intent: {url}")
              return None
 
-        # 3. Hard Relevance Gate
-        alias_match = any(a.lower() in combined_text for a in id["strong_aliases"])
-        concept_match = sum(1 for t in id["required_concept_terms"] if t in combined_text) >= 2
-        vendor_match = any(v in combined_text for v in id["vendor_tokens"])
+        # 3. Hard Relevance Gate (Specific Exam)
+        alias_match = any(a.lower() in title or a.lower() in page_text_low[:1000] for a in id["strong_aliases"])
         
-        if not (alias_match or (concept_match and vendor_match)):
-            logger.warning(f"❌ Rejected Hard Relevance Gate: {url}")
+        # Generic match for exams without codes (like Real Estate)
+        generic_match = False
+        if not id["exam_code"] and len(id["core_keywords"]) >= 1:
+            matched_cores = sum(1 for ck in id["core_keywords"] if ck in combined_text)
+            required_cores = min(2, len(id["core_keywords"]))
+            if matched_cores >= required_cores and learning_intent:
+                generic_match = True
+
+        acro_confirmed = False
+        if target_acro:
+            if target_acro in title: acro_confirmed = True
+            elif target_acro in page_text_low and any(v in combined_text for v in id["vendor_tokens"] + id["required_concept_terms"]):
+                acro_confirmed = True
+
+        if not (alias_match or acro_confirmed or generic_match):
+            logger.warning(f"❌ Rejected Hard Relevance Gate (Specific Exam Missing): {url}")
             return None
 
-        # 4. Scoring (Threshold 0.7)
+        # 4. Scoring (Threshold 0.75)
         score = 0.0
         if any(t in combined_text for t in ["exam prep", "study guide", "practice test", "practice exam"]): 
-            score += 0.5  # Increased from 0.3
+            score += 0.5
         if any(t in combined_text for t in ["exam objectives", "blueprint", "content outline", "learning objectives"]): 
-            score += 0.4  # Increased from 0.3
+            score += 0.4
             
         if id["vendor_domain"] and id["vendor_domain"] in url: score += 0.3
         elif any(d in url for d in [".gov", ".edu", ".mil"]): score += 0.3
         
-        if url.endswith(".pdf"): score += 0.2  # Increased from 0.1
+        if url.endswith(".pdf"): score += 0.2
         if mostly_admin: score -= 0.6
+        
+        # Penalty for mentioning competitors
+        if any(comp in combined_text for comp in competitors): score -= 0.3
 
         final_score = round(score, 2)
-        if final_score < 0.7:  # Lowered from 0.8
-            logger.warning(f"⚠️ Rejected Score < 0.7 ({final_score}): {url}")
+        # Approval threshold: 0.75 for coded exams, 0.7 for generic exams
+        threshold = 0.75 if id["exam_code"] else 0.7
+        if final_score < threshold:
+            logger.warning(f"⚠️ Rejected Score < {threshold} ({final_score}): {url}")
             return None
             
-        return {"url": result["url"], "score": final_score, "format": "pdf" if url.endswith(".pdf") else "html"}
+        return {
+            "url": result["url"], 
+            "score": final_score, 
+            "format": "pdf" if url.endswith(".pdf") else "html",
+            "content_hash": hashlib.sha256(page_text.encode()).hexdigest()
+        }
 
 class FlashcardAgent:
     def __init__(self):
@@ -484,6 +546,7 @@ class FlashcardAgent:
         logger.info(f"🚀 [RESEARCH] Start for {app_name} (Exam: {target_exam})")
         engine = ResearchEngine(target_exam, exam_vendor, app_name)
         sources_ingested = []
+        seen_hashes = set()
         pdf_count = 0
         
         def process_batch(results):
@@ -493,6 +556,11 @@ class FlashcardAgent:
                 if any(s['url'] == res['url'] for s in sources_ingested): continue
                 approved = engine.gate_8_execution_pipeline(res)
                 if approved:
+                    c_hash = approved.get("content_hash")
+                    if c_hash in seen_hashes:
+                        logger.info(f"⏭️ Skipping Duplicate Content: {res['url']}")
+                        continue
+                    
                     try:
                         if approved['format'] == 'pdf':
                             logger.info(f"📥 Downloading PDF: {res['url']}")
@@ -501,12 +569,12 @@ class FlashcardAgent:
                                 clean_filename = f"{hashlib.md5(res['url'].encode()).hexdigest()}.pdf"
                                 if requests.post(PDF_UPLOAD_API, files={'file': (clean_filename, resp.content, 'application/pdf')}, data={'app_name': app_name, 'bucket_name': app_name}, timeout=180).ok:
                                     logger.info(f"✅ Ingested PDF: {res['url']} (Score: {approved['score']})")
-                                    sources_ingested.append(approved); pdf_count += 1
+                                    sources_ingested.append(approved); pdf_count += 1; seen_hashes.add(c_hash)
                         else:
                             logger.info(f"🔗 Ingesting URL: {res['url']}")
                             if requests.post(INGEST_API, json={"url": res['url'], "app_name": app_name, "bucket_name": app_name, "index_document": True}, timeout=120).ok:
                                 logger.info(f"✅ Ingested URL: {res['url']} (Score: {approved['score']})")
-                                sources_ingested.append(approved)
+                                sources_ingested.append(approved); seen_hashes.add(c_hash)
                     except Exception as e: logger.error(f"⚠️ Error ingesting {res['url']}: {e}")
 
         # Pass 1: Primary Prep Search
