@@ -200,12 +200,17 @@ def apply_term_constraints(text: str, is_front: bool = True) -> str:
             
     return " ".join(new_words)
 
+
+class ScopeMap(BaseModel):
+    included_skills: list[str]
+    included_concepts: list[str]
+
 class FlashcardOutput(BaseModel):
+
     Topic: str
     Subtopic: str
     Front: str
     Back: str
-    Reference: str
     Reference: str
 
 class ResearchEngine:
@@ -248,6 +253,9 @@ class ResearchEngine:
         raw_exam = target_exam.strip() if target_exam and target_exam.strip() else app_name.strip()
         vendor = exam_vendor.strip() if exam_vendor and exam_vendor.strip() else ""
         
+        # Vendor normalization: Remove Corp, Inc, LLC, Ltd, Company, Group
+        vendor_normalized = re.sub(r'(?i)\b(corp|inc|llc|ltd|company|group)\b', '', vendor).strip()
+        
         # Extract exam code (e.g. N10-009, SY0-701, AZ-900)
         code_match = re.search(r'\b([A-Z0-9]{2,}-\d{3,}|[A-Z]{1,2}\d{3})\b', raw_exam)
         exam_code = code_match.group(1) if code_match else ""
@@ -261,6 +269,13 @@ class ResearchEngine:
         if "+" in official_name: aliases.append(official_name.replace("+", " Plus"))
         if exam_code: aliases.append(exam_code)
         
+        # Extract acronym if present in parentheses or looks like one
+        acronym_match = re.search(r'\b([A-Z]{2,6})\b', official_name)
+        acronym = acronym_match.group(1) if acronym_match else ""
+        
+        # Short Acronym Protection (CRITICAL)
+        # If acronym length <= 5, we MUST combine it with vendor or full name in searches later.
+        
         vendor_domain = ""
         for v_key, domain in self.VENDOR_DOMAIN_MAP.items():
             if v_key.lower() in vendor.lower() or v_key.lower() in raw_exam.lower():
@@ -269,7 +284,8 @@ class ResearchEngine:
                 
         return {
             "official_name": official_name,
-            "vendor": vendor,
+            "acronym": acronym,
+            "vendor": vendor_normalized if vendor_normalized else vendor,
             "exam_code": exam_code,
             "aliases": list(set(aliases)),
             "vendor_domain": vendor_domain
@@ -528,7 +544,7 @@ class FlashcardAgent:
                         elif item.get("type") >= 3: cms_parts.append(item)
             except: pass
 
-        # Parse Structure Core 1/2 Strict Order
+        # Parse Structure & Remove Prefixes (e.g. 1.1, 2.)
         lines = [l.strip() for l in topic_structure.splitlines() if l.strip()]
         parsed_items, current_topic_name = [], "General"
         
@@ -539,15 +555,14 @@ class FlashcardAgent:
             top_match = re.match(r"^(\d+)\.?\s+(.*)$", line)
             
             if core_match:
-                current_topic_name = line.strip()
+                current_topic_name = re.sub(r"^(\d+\.)+\s+", "", line.strip())
                 raw_structure.append({"type": 1, "name": current_topic_name, "parent": None})
             elif sub_match:
-                raw_structure.append({"type": 2, "name": sub_match.group(3).strip(), "parent": current_topic_name})
+                raw_structure.append({"type": 2, "name": re.sub(r"^(\d+\.)+\s+", "", sub_match.group(3).strip()), "parent": current_topic_name})
             elif top_match:
-                current_topic_name = top_match.group(2).strip()
+                current_topic_name = re.sub(r"^(\d+\.)+\s+", "", top_match.group(2).strip())
                 raw_structure.append({"type": 1, "name": current_topic_name, "parent": None})
         
-        # Lọc lấy Leaf Nodes: Nếu Topic có Subtopic đi kèm thì chỉ lấy Subtopic. Nếu không có thì lấy chính Topic.
         for i in range(len(raw_structure)):
             curr = raw_structure[i]
             if curr["type"] == 1:
@@ -562,6 +577,20 @@ class FlashcardAgent:
         all_flashcards, all_generated_fronts = [], set()
         failed_any = False
         total_items = len(parsed_items)
+
+        # --- STEP 1: Blueprint Discovery ---
+        loop = asyncio.get_event_loop()
+        blueprint_context = ""
+        try:
+            bp_query = f"Find the official exam blueprint, exam objectives, skills outline, domain outline, or table of contents for {target_exam}."
+            bp_resp = await loop.run_in_executor(self.executor, lambda: requests.post(
+                SEARCH_API, json={"query": bp_query, "app_name": app_name, "limit": 5, "similarity_threshold": 0.3}, timeout=120
+            ))
+            if bp_resp.ok:
+                ans = bp_resp.json().get("answer", "")
+                if "couldn't find" not in ans.lower():
+                    blueprint_context = ans[:8000]
+        except: pass
         
         for idx, item in enumerate(parsed_items):
             progress_msg = f"{idx+1}/{total_items}"
@@ -570,13 +599,11 @@ class FlashcardAgent:
             
             # --- CRITICAL MAPPING LOGIC (PART 1 DEFAULT) ---
             official_topic_id = "N/A"
-            official_subtopic_id = "N/A" # This will hold the PART ID (Type 3)
+            official_subtopic_id = "N/A"
             
-            clean_item_name = re.sub(r"\s+", " ", re.sub(r"^(\d+\.)+\s+", "", item['name'].strip())).lower()
-            
-            # 1. Luôn tìm Topic ID (Type 1)
+            clean_item_name = re.sub(r"\s+", " ", item['name']).lower()
             parent_to_find = item['name'] if item['type'] == 1 else item.get('parent_name', 'General')
-            clean_parent = re.sub(r"\s+", " ", re.sub(r"^(\d+\.)+\s+", "", parent_to_find.strip())).lower()
+            clean_parent = re.sub(r"\s+", " ", parent_to_find).lower()
             
             for ct in cms_topics:
                 cms_t_name = re.sub(r"\s+", " ", ct.get("name", "")).lower()
@@ -584,61 +611,56 @@ class FlashcardAgent:
                     official_topic_id = str(ct.get("id"))
                     break
             
-            # 2. Nếu là Subtopic, tìm Part 1 (Type 3) của nó
-            # Pattern: [Subtopic Name] + " 1"
+            # Subtopic (Part 1 mapping)
             if item['type'] == 2:
                 search_part_name = f"{clean_item_name} 1"
-                logger.info(f"🕵️ Searching for Part 1: '{search_part_name}' (type=3)")
                 for cp in cms_parts:
                     cms_p_name = re.sub(r"\s+", " ", cp.get("name", "")).lower()
                     if cp.get("type") == 3 and search_part_name == cms_p_name:
                         official_subtopic_id = str(cp.get("id"))
-                        logger.info(f"✅ Found Part 1 ID: {official_subtopic_id}")
                         break
-                
-                # Fallback: Nếu không khớp chính xác, tìm Part 1 có chứa tên Subtopic
                 if official_subtopic_id == "N/A":
                     for cp in cms_parts:
                         if cp.get("type") == 3 and clean_item_name.lower() in cp.get("name", "").lower() and cp.get("name", "").strip().endswith(" 1"):
                             official_subtopic_id = str(cp.get("id"))
-                            logger.info(f"✅ Fuzzy Matched Part 1: '{cp.get('name')}' (ID: {official_subtopic_id})")
                             break
             else:
-                # Nếu Topic là leaf node, kiểm tra xem có Part 1 của Topic đó không
                 search_part_name = f"{clean_item_name} 1".lower()
                 for cp in cms_parts:
                     if cp.get("type") == 3 and search_part_name == cp.get("name", "").lower():
                         official_subtopic_id = str(cp.get("id"))
                         break
 
-            if official_topic_id == "N/A":
-                logger.error(f"❌ Could not find CMS Topic ID for: '{clean_parent}'")
-            # -----------------------------------------------
-
-            # Step 1: Automated Technical Retrieval & Context Optimization
-            loop = asyncio.get_event_loop()
-            context_text = ""
-            search_query = f"Provide core definitions, frameworks, formulas, and key concepts specifically for {item['name']} - {item.get('parent_name', 'General')}."
+            # --- STEP 2: Topic Scope Mapping ---
+            scope_skills = []
+            if blueprint_context:
+                scope_prompt = f"Based on the following blueprint, extract the included skills and concepts specifically for the topic: '{item['name']}'. Blueprint: {blueprint_context[:3000]}"
+                try:
+                    scope_res = await self.rate_limited_gen(scope_prompt, ScopeMap)
+                    scope_map = json.loads(scope_res.text)
+                    scope_skills = scope_map.get("included_skills", []) + scope_map.get("included_concepts", [])
+                except Exception as e:
+                    logger.error(f"Scope mapping error: {e}")
             
-            try:
-                # API Execution & Strict Payload Limits (limit: 3, similarity_threshold: 0.4)
-                resp = await loop.run_in_executor(self.executor, lambda: requests.post(
-                    SEARCH_API, 
-                    json={"query": search_query, "app_name": app_name, "limit": 3, "similarity_threshold": 0.4}, 
-                    timeout=120
-                ))
-                if resp.ok: 
-                    ans = resp.json().get("answer", "")
-                    if "couldn't find any relevant documents" not in ans.lower():
-                        # Master Reference Truncation: Strictly first 15,000 characters
-                        context_text = ans[:15000]
-            except: pass
+            if not scope_skills:
+                scope_skills = [item['name']]
 
-            # Đặt KPI theo loại Node (Type 1: Topic -> 50, Type 2: Subtopic -> 30)
+            # --- STEP 3: Blueprint-Aligned Retrieval ---
+            knowledge_reference = ""
+            for skill in scope_skills[:3]:
+                s_q = f"{skill} {target_exam} {item['name']}"
+                try:
+                    r = await loop.run_in_executor(self.executor, lambda sq=s_q: requests.post(SEARCH_API, json={"query": sq, "app_name": app_name, "limit": 3, "similarity_threshold": 0.3}, timeout=60))
+                    if r.ok:
+                        knowledge_reference += r.json().get("answer", "") + "\n"
+                except: pass
+
+            context_text = f"SCOPE:\n{scope_skills}\n\nKNOWLEDGE:\n{knowledge_reference[:10000]}"
+
             kpi_count = 50 if item.get("type") == 1 else 30
-            batch_size = kpi_count # Ép AI gen đủ luôn trong 1 lần để giảm request
+            batch_size = kpi_count
             topic_cards, topic_success = [], True
-            max_batches = 3 # Giảm số batch tối đa vì chúng ta đã yêu cầu đủ từ đầu
+            max_batches = 3
             current_batch = 0
 
             while len(topic_cards) < kpi_count and current_batch < max_batches:
@@ -648,61 +670,33 @@ class FlashcardAgent:
                 
                 logger.info(f"📦 Topic/Subtopic Batch {current_batch}: Target {current_goal} cards (Total collected: {len(topic_cards)}/{kpi_count})")
                 
-                # Session-Based Deduplication (Exclusion List) for the current job
                 exclusion_instruction = ""
-                # Gộp cả topic_cards (trong topic này) và all_generated_fronts (toàn bộ app)
                 current_exclusion_set = all_generated_fronts.union({c["Front"].lower() for c in topic_cards})
                 
                 if current_exclusion_set:
-                    previously_generated_terms_list = ", ".join(list(current_exclusion_set))
+                    previously_generated_terms_list = ", ".join(list(current_exclusion_set)[:200])
                     logger.info(f"🚫 Injecting Exclusion List ({len(current_exclusion_set)} terms)")
-                    exclusion_instruction = f"""
-                    EXCLUSION LIST: You have already generated flashcards for the following terms: {previously_generated_terms_list}. 
-                    CRITICAL RULE: You are STRICTLY FORBIDDEN from generating flashcards for these exact terms again. Furthermore, you MUST NOT generate ANY terms that are semantic duplicates, synonyms, or paraphrased versions of the terms in the exclusion list. Every newly generated term MUST introduce a completely unique and distinct educational concept.
-                    """
+                    exclusion_instruction = f"EXCLUSION LIST: Do NOT generate flashcards for these terms or their synonyms: {previously_generated_terms_list}."
 
-                # Master Reference Synthesis per Topic/Subtopic
-                prompt = f"""
-                You are an Expert Learning Designer. Use the provided MASTER REFERENCE to extract flashcards for: {item['name']}
-                
-                MASTER REFERENCE (Source of Truth):
-                {context_text}
+                prompt = f"""You are an Expert Learning Designer. Use the MASTER REFERENCE to extract flashcards for: {item['name']}.
+MASTER REFERENCE:
+{context_text}
 
-                {exclusion_instruction}
+{exclusion_instruction}
 
-                UNIVERSAL STANDARDS FOR "FRONT" TERM EXTRACTION:
-                - RULE 1: THE ENTITY & TESTABILITY TEST (MOST IMPORTANT). 
-                  The extracted term MUST be a specific, testable Knowledge Entity. It must be a specific Law, Protocol, Theorem, Technical Component, Medical Condition, or Academic Vocabulary (e.g., "Dram Shop Law", "TCP/IP Protocol", "Work Breakdown Structure", "Pythagorean Theorem").
-                - RULE 2: THE UNIVERSAL "FLUFF & META" KILL LIST (ABSOLUTE BAN). 
-                  IMMEDIATELY REJECT any term containing words like: 
-                  * Meta/Exam: "Exam", "Format", "Chapter", "Course", "Handbook", "Passing Score".
-                  * Vague Skills: "Skills", "Abilities", "Reasoning", "Strategies", "Thinking", "Aptitude".
-                  * Empty Categories: "Introduction", "Overview", "Basics", "Concepts", "The Process".
-                - RULE 3: SPECIFICITY & CONTEXT-INDEPENDENCE. 
-                  The term MUST make complete sense on its own if picked up from the floor. Do not extract generic nouns. (e.g., "Azure Blob Storage" instead of "Storage").
-                - RULE 4: NO ACTIONS OR QUESTIONS. 
-                  DO NOT use conversational questions or instructional verbs. 
-                  * Convert "How to mitigate risk" to "Risk Mitigation Techniques".
-                  * Convert "What is a Variable" to "Algebraic Variable".
-                - RULE 5: FORMATTING CONSTRAINT.
-                  * Capitalization: Only capitalize the first letter of the entire term and any acronyms (e.g., "Engineering controls", "OSHA standards").
-                  * Length: Strictly 1 to 8 words.
+RULES FOR "FRONT":
+- 1 to 8 words. MUST be a specific, testable knowledge entity.
+- NO actions or questions. Only capitalize the FIRST letter or acronyms.
+- NO fluff/meta terms like "Exam", "Format", "Process".
 
-                STRICT RULES FOR "BACK":
-                - Definition + 1 essential characteristic.
-                - 1-2 concise sentences. No bullet points.
-                - MathJax: Wrap in \\\\(..\\\\) with NO spaces. Use \\\\text{{}} for words.
+RULES FOR "BACK":
+- Definition + 1 essential characteristic. 1-2 sentences. 20-40 words total.
+- NO bullet points or line breaks.
+- MathJax REQUIRED: Wrap formulas in \\(..\\) with NO spaces. Use \\text{{}} for words inside formulas.
+- Do NOT say "according to the source".
 
-                MANDATORY STANDARDS FOR "REFERENCE":
-                - Goal: Provide official source for learning.
-                - Priority: Vendor Coursebooks, Handbooks, Official PDFs (.gov, .edu, pmi.org, etc.).
-                - Hallucination Prevention: NEVER guess/invent URLs. 
-                - Format: IF you are 100% sure of a live official URL, provide it. OTHERWISE, provide a precise Citation (e.g., "ServSafe Alcohol Coursebook, Chapter 2").
-                - ABSOLUTE BAN: No links to Quizlet, CourseHero, or pirated sites.
-
-                KPI: {current_goal} unique terms.
-                Topic ID: {official_topic_id}, Subtopic: {official_subtopic_id}.
-                """
+KPI: {current_goal} unique terms.
+"""
                 
                 batch_done = False
                 for attempt in range(20): 
@@ -720,19 +714,16 @@ class FlashcardAgent:
                             c["Back"] = apply_term_constraints(fix_mathjax(normalize_whitespace(c["Back"])), is_front=False)
                             
                             f_clean = c["Front"].lower()
-                            # Kiểm tra trùng lặp trong cả app và trong chính batch vừa gen
                             if f_clean not in all_generated_fronts and not any(tc["Front"].lower() == f_clean for tc in topic_cards):
                                 if not any(x in f_clean for x in ["exam", "format", "score", "passing", "handbook", "chapter"]):
                                     c["Topic"], c["Subtopic"] = official_topic_id, official_subtopic_id
                                     topic_cards.append(c)
-                                    # Cập nhật all_generated_fronts ngay lập tức để batch sau biết
                                     all_generated_fronts.add(f_clean)
                         batch_done = True; break
                     except Exception as e:
                         if "429" in str(e):
-                            # ĐIỀU TIẾT LUỒNG: Nghỉ ít nhất 2 phút nếu bị rate limit
                             delay_429 = 120 + random.uniform(5.0, 15.0)
-                            logger.error(f"🚨 RATE LIMIT HIT (429). Throttling active: Sleeping {delay_429:.2f}s for quota recovery...")
+                            logger.error(f"🚨 RATE LIMIT HIT (429). Sleeping {delay_429:.2f}s...")
                             await asyncio.sleep(delay_429)
                         else:
                             logger.error(f"Batch error: {e}")
@@ -740,10 +731,21 @@ class FlashcardAgent:
                 if not batch_done: topic_success = False; break
             
             if topic_success:
+                for tc in topic_cards:
+                    tc["Topic"] = str(official_topic_id)
+                    tc["Subtopic"] = str(official_subtopic_id)
                 all_flashcards.extend(topic_cards)
-                try: requests.post(APP_SCRIPT_URL, data=json.dumps({"action": "upload_flashcards", "app_name": app_name, "flashcards": topic_cards}), headers={'Content-Type': 'application/json'}, timeout=120)
-                except: pass
-            else: failed_any = True; break
+            else:
+                failed_any = True
+                break
+
+        if all_flashcards and not failed_any:
+            try:
+                logger.info(f"📤 FINAL UPLOAD: Sending {len(all_flashcards)} flashcards to Google Sheets for {app_name}")
+                payload = {"action": "upload_flashcards", "app_name": app_name, "flashcards": all_flashcards}
+                requests.post(APP_SCRIPT_URL, data=json.dumps(payload), headers={'Content-Type': 'application/json'}, timeout=180)
+            except Exception as e:
+                logger.error(f"❌ Final Upload failed: {e}")
 
         return {"status": "completed" if not failed_any else "failed", "flashcards_count": len(all_flashcards)}
 
