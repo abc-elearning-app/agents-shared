@@ -385,18 +385,22 @@ class ResearchEngine:
             logger.warning(f"❌ Rejected Hard Relevance Gate: {url}")
             return None
 
-        # 4. Scoring (Threshold 0.8)
+        # 4. Scoring (Threshold 0.7)
         score = 0.0
-        if any(t in combined_text for t in ["exam prep", "study guide", "practice test"]): score += 0.3
-        if any(t in combined_text for t in ["exam objectives", "blueprint", "content outline"]): score += 0.3
-        if id["vendor_domain"] and id["vendor_domain"] in url: score += 0.2
-        elif any(d in url for d in [".gov", ".edu", ".mil"]): score += 0.2
-        if url.endswith(".pdf"): score += 0.1
+        if any(t in combined_text for t in ["exam prep", "study guide", "practice test", "practice exam"]): 
+            score += 0.5  # Increased from 0.3
+        if any(t in combined_text for t in ["exam objectives", "blueprint", "content outline", "learning objectives"]): 
+            score += 0.4  # Increased from 0.3
+            
+        if id["vendor_domain"] and id["vendor_domain"] in url: score += 0.3
+        elif any(d in url for d in [".gov", ".edu", ".mil"]): score += 0.3
+        
+        if url.endswith(".pdf"): score += 0.2  # Increased from 0.1
         if mostly_admin: score -= 0.6
 
         final_score = round(score, 2)
-        if final_score < 0.8:
-            logger.warning(f"⚠️ Rejected Score < 0.8 ({final_score}): {url}")
+        if final_score < 0.7:  # Lowered from 0.8
+            logger.warning(f"⚠️ Rejected Score < 0.7 ({final_score}): {url}")
             return None
             
         return {"url": result["url"], "score": final_score, "format": "pdf" if url.endswith(".pdf") else "html"}
