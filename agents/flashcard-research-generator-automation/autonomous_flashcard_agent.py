@@ -135,21 +135,35 @@ def apply_term_constraints(text: str, is_front: bool = True) -> str:
         for p in patterns:
             text = re.sub(p, "", text, flags=re.IGNORECASE)
     
-    # 2. Quy tắc viết hoa STRICT (Front & Back)
-    # Bộ từ điển Acronyms phổ biến và các case đặc biệt
-    acronym_list = {
-        "OSHA", "HIPAA", "PPE", "CDC", "CLSI", "HIV", "HBV", "HCV", "EDTA", "SST", "PST", "CBC", "PT", "PTT", "INR", "GTT", "HCG", "PKU", "ABG", "TDM", "SDS", "MSDS", "RBC", "WBC", "TCP/IP", "IaaS", "PaaS", "SaaS", "RBAC", "VPC", "VNET", "SOHO", "DNS", "DHCP", "FTP", "HTTP", "HTTPS", 
-        "FAA", "sUAS", "ATC", "AGL", "MSL", "NOTAM", "METAR", "TAF", "VFR", "IFR", "PIC", "VO", "VLOS", "BVLOS", "CRM", "ICAO", "UA", "CS", "OSI", "LAN", "WAN", "PAN", "WLAN", "SATA", "NVME", "CPU", "GPU", "RAM", "ROM", "BIOS", "UEFI", "POST", "MAC", "IP", "UDP", "TCP", "ICMP", "ARP",
-        "NREMT", "EMS", "EMT", "CPR", "AED", "GCS", "AVPU", "ABC", "BSI", "SAMPLE", "OPQRST", "DCAP-BTLS", "MCI", "ICS", "NIMS", "HAZMAT", "NRB", "BVM", "CPAP", "PEEP", "CHF", "COPD", "ACS", "TIA", "CVA", "ICP", "CSF", "ALOC", "LOC"
-    }
-    # Tạo set lowercase để tra cứu nhanh
-    acronym_map = {a.lower(): a for a in acronym_list}
-    
     # Bảo vệ các khối MathJax
     math_blocks = re.findall(r"\\\(.*?\\\)", text)
     placeholder = "___MATH_BLOCK___"
     temp_text = re.sub(r"\\\(.*?\\\)", placeholder, text)
     
+    # Logic viết hoa đầu câu thông minh (Sentence Case)
+    def capitalize_sentences(s: str) -> str:
+        # Viết hoa chữ cái đầu tiên của toàn bộ chuỗi
+        s = s.lstrip()
+        if not s: return s
+        s = s[0].upper() + s[1:]
+        
+        # Tìm các vị trí sau dấu . ! ? và viết hoa chữ cái tiếp theo
+        result = list(s)
+        capitalize_next = False
+        for i in range(len(result)):
+            if result[i] in ".!?":
+                capitalize_next = True
+            elif capitalize_next and result[i].isalpha():
+                result[i] = result[i].upper()
+                capitalize_next = False
+            elif capitalize_next and not result[i].isspace():
+                # Nếu gặp ký tự khác (số, dấu ngoặc) thì cũng dừng việc tìm chữ cái để viết hoa
+                capitalize_next = False
+        return "".join(result)
+
+    if not is_front:
+        temp_text = capitalize_sentences(temp_text)
+
     words = temp_text.split()
     if not words: return ""
     
@@ -157,48 +171,32 @@ def apply_term_constraints(text: str, is_front: bool = True) -> str:
     math_idx = 0
     for i, word in enumerate(words):
         if placeholder in word:
-            actual_math = math_blocks[math_idx]
-            math_idx += 1
-            new_words.append(word.replace(placeholder, actual_math))
-            continue
+            actual_math = math_blocks[math_idx]; math_idx += 1
+            new_words.append(word.replace(placeholder, actual_math)); continue
             
-        # Tách từ để nhận diện (loại bỏ dấu câu sát từ)
         clean_match = re.search(r"[\w\d\-/]+", word)
-        if not clean_match:
-            new_words.append(word.lower())
-            continue
+        if not clean_match: new_words.append(word); continue
             
         clean = clean_match.group()
-        
-        # Heuristic nhận diện Acronym:
-        # - Có trong danh sách bảo vệ
-        # - AI đã viết hoa toàn bộ và dài >= 2 ký tự (ví dụ: NASA)
-        # - Có chứa số (ví dụ: 5G, 4G, IPv6)
         is_acronym = False
-        target_version = clean # Mặc định
+        target_version = clean
         
-        if clean.lower() in acronym_map:
+        # Tự động nhận diện Acronym
+        if clean.isupper() and len(clean) >= 2:
             is_acronym = True
-            target_version = acronym_map[clean.lower()]
-        elif clean.isupper() and len(clean) >= 2:
-            is_acronym = True
-            target_version = clean
         elif any(c.isdigit() for c in clean) and len(clean) >= 2:
-            is_acronym = True
-            target_version = clean.upper() # Ví dụ: ipv6 -> IPV6 (hoặc giữ nguyên nếu muốn)
-            # Fix riêng cho IPv4/v6 nếu cần
-            if "ipv" in clean.lower():
-                target_version = "IPv" + clean.lower().split("ipv")[-1]
+            is_acronym = True; target_version = clean.upper()
+            if "ipv" in clean.lower(): target_version = "IPv" + clean.lower().split("ipv")[-1]
             
         if is_acronym:
             new_words.append(word.replace(clean, target_version))
-        elif i == 0:
-            # Chữ cái đầu tiên của chuỗi viết hoa, còn lại viết thường
+        elif i == 0 and is_front:
             new_words.append(word[0].upper() + word[1:].lower())
         else:
-            new_words.append(word.lower())
+            new_words.append(word if not is_front else word.lower())
             
-    return " ".join(new_words)
+    res = " ".join(new_words)
+    return res.replace(" \\(", "\\(").replace(" \\)", "\\)")
 
 
 class ScopeMap(BaseModel):
@@ -217,19 +215,7 @@ class ResearchEngine:
     BLOCKED_DOMAINS = [
         "baidu.com", "zhihu.com", "csdn.net", "bilibili.com", "weibo.com", "sogou.com", "360.cn", 
         "douban.com", "toutiao.com", "jianshu.com", "quizlet.com", "coursehero.com", "chegg.com", 
-        "brainly.com", "scribd.com", "reddit.com", "facebook.com"
-    ]
-    SUPPORTED_FORMATS = [".pdf", ".md", ".txt", ".text", ".json", ".docx", ".html", ".htm"]
-    
-    # Tier 1: Official Publishers & Authorities
-    TIER_1_DOMAINS = [
-        ".gov", ".mil", ".edu", "comptia.org", "isc2.org", "pmi.org", "aws.amazon.com", "microsoft.com", 
-        "cisco.com", "oracle.com", "faa.gov", "nist.gov", "iso.org", "ieee.org", "aicpa.org"
-    ]
-    # Tier 2: Recognized Exam Prep & Support
-    TIER_2_DOMAINS = [
-        "professormesser.com", "pilotinstitute.com", "whizlabs.com", "pluralsight.com", "github.com",
-        "wiley.com", "kaplan.com", "pearson.com", "sybex.com", "boson.com"
+        "brainly.com", "scribd.com", "reddit.com", "facebook.com", "quora.com", "answergy.com"
     ]
     
     VENDOR_DOMAIN_MAP = {
@@ -240,90 +226,84 @@ class ResearchEngine:
         "Criteria": "criteriacorp.com"
     }
 
+    LEARNING_TERMS = [
+        "exam prep", "study guide", "practice test", "practice exam", "exam objectives", 
+        "exam blueprint", "content outline", "coursebook", "review guide", "learning objectives",
+        "sample questions", "answer explanations", "exam review", "principles study guide"
+    ]
+
+    ADMIN_TERMS = [
+        "how to register", "scheduling", "rescheduling", "cancellation policy", "refund policy",
+        "exam fees", "payment", "pearson vue", "testing center rules", "proctoring rules",
+        "id requirements", "account setup", "login instructions", "portal access", "exam-day rules",
+        "score reporting", "certification renewal", "marketing", "sales page"
+    ]
+
     def __init__(self, target_exam: str, exam_vendor: str, app_name: str = ""):
         self.identity = self.normalize_exam_identity(target_exam, exam_vendor, app_name)
-        self.exam = self.identity["official_name"]
-        self.vendor = self.identity["vendor"]
         self.registry = load_url_registry()
         self.tavily = TavilyClient(api_key=TAVILY_API_KEY) if TAVILY_API_KEY else None
-        logger.info(f"🧬 Research Engine Init - Identity: {json.dumps(self.identity, indent=2)}")
+        logger.info(f"🧬 Research Identity: {json.dumps(self.identity, indent=2)}")
 
     def normalize_exam_identity(self, target_exam: str, exam_vendor: str, app_name: str) -> dict:
-        # Priority: target_exam > exam_vendor > app_name
-        raw_exam = target_exam.strip() if target_exam and target_exam.strip() else app_name.strip()
-        vendor = exam_vendor.strip() if exam_vendor and exam_vendor.strip() else ""
+        raw_name = target_exam.strip() if target_exam and target_exam.strip() else app_name.strip()
+        vendor_raw = exam_vendor.strip() if exam_vendor and exam_vendor.strip() else ""
+        v_norm = re.sub(r'\b(corp|corporation|inc|llc|ltd|company|group)\b', '', vendor_raw, flags=re.I).strip(" ,.")
         
-        # Vendor normalization: Remove Corp, Inc, LLC, Ltd, Company, Group
-        vendor_normalized = re.sub(r'(?i)\b(corp|inc|llc|ltd|company|group)\b', '', vendor).strip()
+        acronym = ""
+        paren_match = re.search(r'\(([^)]+)\)', raw_name)
+        if paren_match: acronym = paren_match.group(1).strip()
         
-        # Extract exam code (e.g. N10-009, SY0-701, AZ-900)
-        code_match = re.search(r'\b([A-Z0-9]{2,}-\d{3,}|[A-Z]{1,2}\d{3})\b', raw_exam)
+        name_no_paren = re.sub(r'\(.*?\)', '', raw_name).strip()
+        code_match = re.search(r'\b([A-Z0-9]{2,}-\d{3,}|[A-Z]{1,2}\d{3})\b', raw_name)
         exam_code = code_match.group(1) if code_match else ""
         
-        official_name = raw_exam
-        if exam_code and exam_code in official_name:
-            official_name = official_name.replace(exam_code, "").strip(" ()-")
-            
-        aliases = [official_name]
-        if "plus" in official_name.lower(): aliases.append(official_name.lower().replace("plus", "+"))
-        if "+" in official_name: aliases.append(official_name.replace("+", " Plus"))
-        if exam_code: aliases.append(exam_code)
+        vendor_tokens = [v.lower() for v in v_norm.split()]
+        concept_terms = [t.lower() for t in re.findall(r'\b[A-Za-z]{3,}\b', name_no_paren) if t.lower() not in vendor_tokens]
         
-        # Extract acronym if present in parentheses or looks like one
-        acronym_match = re.search(r'\b([A-Z]{2,6})\b', official_name)
-        acronym = acronym_match.group(1) if acronym_match else ""
-        
-        # Short Acronym Protection (CRITICAL)
-        # If acronym length <= 5, we MUST combine it with vendor or full name in searches later.
+        strong_aliases = [name_no_paren]
+        if acronym:
+            strong_aliases.append(f"{v_norm} {acronym}")
+            strong_aliases.append(f"{acronym} {name_no_paren}")
         
         vendor_domain = ""
         for v_key, domain in self.VENDOR_DOMAIN_MAP.items():
-            if v_key.lower() in vendor.lower() or v_key.lower() in raw_exam.lower():
+            if v_key.lower() in v_norm.lower() or v_key.lower() in raw_name.lower():
                 vendor_domain = domain
                 break
-                
+
         return {
-            "official_name": official_name,
+            "official_name_full": raw_name,
+            "official_name_without_parentheses": name_no_paren,
             "acronym": acronym,
-            "vendor": vendor_normalized if vendor_normalized else vendor,
             "exam_code": exam_code,
-            "aliases": list(set(aliases)),
-            "vendor_domain": vendor_domain
+            "vendor_normalized": v_norm,
+            "vendor_tokens": vendor_tokens,
+            "vendor_domain": vendor_domain,
+            "strong_aliases": list(set(strong_aliases)),
+            "required_concept_terms": concept_terms
         }
 
-    def search_web(self, query: str = "", app_name: str = "general", pass_num=1) -> list[dict]:
+    def generate_queries(self, pass_num=1) -> list[str]:
         id = self.identity
-        templates = []
-        
-        if pass_num == 1:
-            templates = [
-                f'"{id["vendor"]}" "{id["official_name"]}" exam objectives PDF',
-                f'"{id["official_name"]}" official exam guide PDF',
-                f'"{id["official_name"]}" candidate handbook PDF',
-                f'"{id["official_name"]}" exam content outline PDF',
-                f'"{id["official_name"]}" blueprint PDF'
-            ]
-            if id["vendor_domain"]:
-                templates.append(f'site:{id["vendor_domain"]} "{id["official_name"]}"')
-            if id["exam_code"]:
-                templates.append(f'"{id["exam_code"]}" exam objectives PDF')
-                templates.append(f'"{id["vendor"]}" "{id["exam_code"]}" PDF')
-        else:
-            templates = [
-                f'"{id["official_name"]}" official study guide',
-                f'"{id["official_name"]}" coursebook PDF',
-                f'"{id["official_name"]}" domains objectives',
-                f'"{id["official_name"]}" syllabus'
-            ]
-            for alias in id["aliases"]:
-                templates.append(f'"{alias}" manual study guide PDF')
+        name = id["official_name_without_parentheses"]
+        q = [
+            f'"{name}" exam prep pdf', f'"{name}" study guide pdf', f'"{name}" practice test pdf',
+            f'"{name}" exam objectives pdf', f'"{name}" content outline pdf', f'"{name}" coursebook pdf'
+        ]
+        if pass_num > 1:
+            q.append(f'"{name}" candidate handbook pdf')
+            if id["vendor_domain"]: q.append(f'site:{id["vendor_domain"]} "{name}"')
+        return q
 
+    def search_web(self, pass_num=1) -> list[dict]:
+        queries = self.generate_queries(pass_num)
         all_results = []
         seen_urls = set()
         
         if self.tavily and pass_num == 1:
-            t_query = f'"{id["official_name"]}" {id["exam_code"]} official blueprint manual PDF'
             try:
+                t_query = f'"{self.identity["official_name_without_parentheses"]}" exam prep study guide practice test objectives PDF'
                 res = self.tavily.search(query=t_query, search_depth="basic", max_results=20)
                 for r in res.get('results', []):
                     if r['url'] not in seen_urls:
@@ -331,69 +311,95 @@ class ResearchEngine:
                         seen_urls.add(r['url'])
             except: pass
 
-        for q in templates[:12]:
+        for query in queries:
             try:
                 with DDGS() as ddgs:
-                    for r in ddgs.text(q, max_results=5):
+                    for r in ddgs.text(query, max_results=5):
                         url = r.get('href')
                         if url and url not in seen_urls:
                             all_results.append({"url": url, "title": r.get('title', ''), "snippet": r.get('body', '')})
                             seen_urls.add(url)
             except: pass
-            
-            for r in searxng_search(q, max_results=5):
+            for r in searxng_search(query, max_results=5):
                 if r['url'] not in seen_urls:
-                    all_results.append(r)
-                    seen_urls.add(r['url'])
-            
+                    all_results.append(r); seen_urls.add(r['url'])
         return all_results
 
-    def gate_8_execution_pipeline(self, result: dict) -> dict:
-        url = result.get("url", "").lower()
-        title = result.get("title", "").lower()
-        snippet = result.get("snippet", "").lower()
-        id = self.identity
-        
-        if any(blocked in url for blocked in self.BLOCKED_DOMAINS): return None
-        
+    def extract_content(self, url: str) -> str:
         try:
-            resp = requests.get(result["url"], headers={"User-Agent": "Mozilla/5.0"}, timeout=10)
-            if not resp.ok: return None
-        except: return None
+            headers = {"User-Agent": "Mozilla/5.0"}
+            resp = requests.get(url, headers=headers, timeout=20, stream=True)
+            if not resp.ok: return ""
+            
+            content_type = resp.headers.get("Content-Type", "").lower()
+            if "application/pdf" in content_type or url.lower().endswith(".pdf"):
+                with open("temp_inspect.pdf", "wb") as f:
+                    for chunk in resp.iter_content(chunk_size=8192): f.write(chunk)
+                import fitz
+                text = ""
+                with fitz.open("temp_inspect.pdf") as doc:
+                    for i in range(min(5, doc.page_count)): text += doc[i].get_text()
+                return text
+            else:
+                soup = BeautifulSoup(resp.text, 'html.parser')
+                for s in soup(["script", "style"]): s.decompose()
+                return soup.get_text(separator=' ', strip=True)[:8000]
+        except Exception as e:
+            logger.error(f"Error extracting {url}: {e}")
+            return ""
+
+    def gate_8_execution_pipeline(self, result: dict) -> dict:
+        url, title, snippet = result.get("url", "").lower(), result.get("title", "").lower(), result.get("snippet", "").lower()
+        id = self.identity
+        if any(blocked in url for blocked in self.BLOCKED_DOMAINS): return None
+
+        # 1. Fetch & Extract
+        page_text = self.extract_content(result["url"])
+        if not page_text: return None
+        combined_text = f"{url} {title} {snippet} {page_text.lower()}"
         
+        # 2. Exam-Learning Intent Gate
+        learning_matches = [t for t in self.LEARNING_TERMS if t in combined_text]
+        admin_matches = [t for t in self.ADMIN_TERMS if t in combined_text]
+        
+        is_handbook = any(h in combined_text for h in ["candidate handbook", "exam handbook", "information bulletin"])
+        learning_intent = len(learning_matches) >= 1
+        mostly_admin = len(admin_matches) > len(learning_matches) * 2
+
+        if is_handbook and not learning_intent:
+            logger.warning(f"❌ Rejected Administrative Handbook: {url}")
+            return None
+        if mostly_admin and not learning_intent:
+            logger.warning(f"❌ Rejected Mostly Administrative: {url}")
+            return None
+        if not learning_intent and not id["exam_code"]:
+             logger.warning(f"❌ Rejected No Learning Intent: {url}")
+             return None
+
+        # 3. Hard Relevance Gate
+        alias_match = any(a.lower() in combined_text for a in id["strong_aliases"])
+        concept_match = sum(1 for t in id["required_concept_terms"] if t in combined_text) >= 2
+        vendor_match = any(v in combined_text for v in id["vendor_tokens"])
+        
+        if not (alias_match or (concept_match and vendor_match)):
+            logger.warning(f"❌ Rejected Hard Relevance Gate: {url}")
+            return None
+
+        # 4. Scoring (Threshold 0.8)
         score = 0.0
-        
-        if (id["vendor_domain"] and id["vendor_domain"] in url) or any(d in url for d in [".gov", ".edu", ".mil"]):
-            score += 0.4
-        elif any(d in url for d in self.TIER_1_DOMAINS): score += 0.4
-        elif any(d in url for d in self.TIER_2_DOMAINS): score += 0.3
-            
-        if id["exam_code"] and (id["exam_code"].lower() in url or id["exam_code"].lower() in title):
-            score += 0.3
-            
-        if id["official_name"].lower() in url or id["official_name"].lower() in title:
-            score += 0.4
-        elif any(a.lower() in url or a.lower() in title for a in id["aliases"]):
-            score += 0.2
-            
-        if url.endswith(".pdf") or any(x in url or x in title for x in ["blueprint", "objective", "handbook", "syllabus", "outline"]):
-            score += 0.2
-            
-        if any(yr in title or yr in snippet for yr in ["2024", "2025", "2026"]):
-            score += 0.2
-            
-        if id["vendor"] and id["vendor"].lower() not in url and id["vendor"].lower() not in title and id["vendor"].lower() not in snippet:
-            score -= 0.6
-            
+        if any(t in combined_text for t in ["exam prep", "study guide", "practice test"]): score += 0.3
+        if any(t in combined_text for t in ["exam objectives", "blueprint", "content outline"]): score += 0.3
+        if id["vendor_domain"] and id["vendor_domain"] in url: score += 0.2
+        elif any(d in url for d in [".gov", ".edu", ".mil"]): score += 0.2
+        if url.endswith(".pdf"): score += 0.1
+        if mostly_admin: score -= 0.6
+
         final_score = round(score, 2)
-        if final_score < 0.6: return None
-        
-        return {
-            "url": result["url"], 
-            "score": final_score, 
-            "canonical_id": hashlib.md5(result["url"].encode()).hexdigest(), 
-            "format": "pdf" if url.endswith(".pdf") else "html"
-        }
+        if final_score < 0.8:
+            logger.warning(f"⚠️ Rejected Score < 0.8 ({final_score}): {url}")
+            return None
+            
+        return {"url": result["url"], "score": final_score, "format": "pdf" if url.endswith(".pdf") else "html"}
 
 class FlashcardAgent:
     def __init__(self):
@@ -471,63 +477,49 @@ class FlashcardAgent:
             logger.error(f"❌ Failed to update dashboard status: {e}")
 
     def handle_research(self, app_name: str, target_exam: str, exam_vendor: str) -> dict:
-        logger.info(f"🚀 [RESEARCH] Start for {app_name} (Exam: {target_exam}, Vendor: {exam_vendor})")
+        logger.info(f"🚀 [RESEARCH] Start for {app_name} (Exam: {target_exam})")
         engine = ResearchEngine(target_exam, exam_vendor, app_name)
-        
         sources_ingested = []
         pdf_count = 0
         
         def process_batch(results):
             nonlocal pdf_count
-            ingested_count = 0
             for res in results:
-                if len(sources_ingested) >= 20: break
+                if len(sources_ingested) >= 15: break
                 if any(s['url'] == res['url'] for s in sources_ingested): continue
-                
                 approved = engine.gate_8_execution_pipeline(res)
                 if approved:
                     try:
                         if approved['format'] == 'pdf':
                             logger.info(f"📥 Downloading PDF: {res['url']}")
-                            pdf_resp = requests.get(res['url'], headers={"User-Agent": "Mozilla/5.0"}, timeout=120)
-                            if pdf_resp.ok:
+                            resp = requests.get(res['url'], headers={"User-Agent": "Mozilla/5.0"}, timeout=120)
+                            if resp.ok:
                                 clean_filename = f"{hashlib.md5(res['url'].encode()).hexdigest()}.pdf"
-                                upload_resp = requests.post(PDF_UPLOAD_API, files={'file': (clean_filename, pdf_resp.content, 'application/pdf')}, data={'app_name': app_name, 'bucket_name': app_name}, timeout=180)
-                                if upload_resp.ok:
-                                    logger.info(f"✅ PDF Uploaded: {res['url']}")
-                                    sources_ingested.append(approved)
-                                    pdf_count += 1
-                                    ingested_count += 1
+                                if requests.post(PDF_UPLOAD_API, files={'file': (clean_filename, resp.content, 'application/pdf')}, data={'app_name': app_name, 'bucket_name': app_name}, timeout=180).ok:
+                                    logger.info(f"✅ Ingested PDF: {res['url']} (Score: {approved['score']})")
+                                    sources_ingested.append(approved); pdf_count += 1
                         else:
                             logger.info(f"🔗 Ingesting URL: {res['url']}")
-                            ingest_resp = requests.post(INGEST_API, json={"url": res['url'], "app_name": app_name, "bucket_name": app_name, "index_document": True}, timeout=120)
-                            if ingest_resp.ok:
-                                logger.info(f"✅ URL Ingested: {res['url']}")
+                            if requests.post(INGEST_API, json={"url": res['url'], "app_name": app_name, "bucket_name": app_name, "index_document": True}, timeout=120).ok:
+                                logger.info(f"✅ Ingested URL: {res['url']} (Score: {approved['score']})")
                                 sources_ingested.append(approved)
-                                ingested_count += 1
                     except Exception as e: logger.error(f"⚠️ Error ingesting {res['url']}: {e}")
-            return ingested_count
 
-        # Pass 1: Primary Search
-        results1 = engine.search_web(app_name=app_name, pass_num=1)
-        logger.info(f"🌐 Pass 1: Found {len(results1)} potential URLs")
-        process_batch(results1)
+        # Pass 1: Primary Prep Search
+        logger.info("🔍 Pass 1: Exam Prep & Study Guides")
+        process_batch(engine.search_web(pass_num=1))
         
         # Pass 2: Fallback
         if len(sources_ingested) < 5:
             logger.info(f"⚠️ Only {len(sources_ingested)} sources found. Running second pass...")
-            results2 = engine.search_web(app_name=app_name, pass_num=2)
-            process_batch(results2)
+            process_batch(engine.search_web(pass_num=2))
         
-        success_criteria = len(sources_ingested) >= 5
+        success = len(sources_ingested) >= 3
         logger.info(f"🏁 [RESEARCH] Finished for {app_name}. Total: {len(sources_ingested)} (PDFs: {pdf_count})")
         
         return {
-            "status": "research_completed", 
-            "app_name": app_name, 
-            "needs_more": not success_criteria,
-            "pdf_count": pdf_count,
-            "total_count": len(sources_ingested)
+            "status": "research_completed", "app_name": app_name, "needs_more": not success,
+            "pdf_count": pdf_count, "total_count": len(sources_ingested)
         }
 
     async def handle_generate(self, app_name: str, target_exam: str, topic_structure: str, dashboard_app_id: str = "") -> dict:
@@ -660,7 +652,7 @@ class FlashcardAgent:
             kpi_count = 50 if item.get("type") == 1 else 30
             batch_size = kpi_count
             topic_cards, topic_success = [], True
-            max_batches = 3
+            max_batches = 5 # Tăng số batch để cố đạt KPI
             current_batch = 0
 
             while len(topic_cards) < kpi_count and current_batch < max_batches:
@@ -679,6 +671,8 @@ class FlashcardAgent:
                     exclusion_instruction = f"EXCLUSION LIST: Do NOT generate flashcards for these terms or their synonyms: {previously_generated_terms_list}."
 
                 prompt = f"""You are an Expert Learning Designer. Use the MASTER REFERENCE to extract flashcards for: {item['name']}.
+CRITICAL KPI: You MUST extract exactly {current_goal} unique and high-quality flashcards in this batch to meet the required total of {kpi_count} for this topic.
+
 MASTER REFERENCE:
 {context_text}
 
@@ -695,7 +689,7 @@ RULES FOR "BACK":
 - MathJax REQUIRED: Wrap formulas in \\(..\\) with NO spaces. Use \\text{{}} for words inside formulas.
 - Do NOT say "according to the source".
 
-KPI: {current_goal} unique terms.
+KPI: Generate EXACTLY {current_goal} unique terms.
 """
                 
                 batch_done = False
