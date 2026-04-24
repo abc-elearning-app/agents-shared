@@ -209,7 +209,11 @@ class FlashcardOutput(BaseModel):
     Reference: str
 
 class ResearchEngine:
-    BLOCKED_DOMAINS = ["baidu.com", "zhihu.com", "csdn.net", "bilibili.com", "weibo.com", "sogou.com", "360.cn", "douban.com", "toutiao.com", "jianshu.com"]
+    BLOCKED_DOMAINS = [
+        "baidu.com", "zhihu.com", "csdn.net", "bilibili.com", "weibo.com", "sogou.com", "360.cn", 
+        "douban.com", "toutiao.com", "jianshu.com", "quizlet.com", "coursehero.com", "chegg.com", 
+        "brainly.com", "scribd.com", "reddit.com", "facebook.com"
+    ]
     SUPPORTED_FORMATS = [".pdf", ".md", ".txt", ".text", ".json", ".docx", ".html", ".htm"]
     
     # Tier 1: Official Publishers & Authorities
@@ -222,97 +226,156 @@ class ResearchEngine:
         "professormesser.com", "pilotinstitute.com", "whizlabs.com", "pluralsight.com", "github.com",
         "wiley.com", "kaplan.com", "pearson.com", "sybex.com", "boson.com"
     ]
+    
+    VENDOR_DOMAIN_MAP = {
+        "CompTIA": "comptia.org", "PMI": "pmi.org", "ISC2": "isc2.org", "Cisco": "cisco.com",
+        "AWS": "aws.amazon.com", "Microsoft": "microsoft.com", "Google Cloud": "cloud.google.com",
+        "Oracle": "oracle.com", "FAA": "faa.gov", "NREMT": "nremt.org",
+        "ServSafe": "servsafe.com", "National Restaurant Association": "restaurant.org", "OSHA": "osha.gov"
+    }
 
-    def __init__(self, exam: str, vendor: str):
-        self.exam, self.vendor = exam, vendor or ""
+    def __init__(self, target_exam: str, exam_vendor: str, app_name: str = ""):
+        self.identity = self.normalize_exam_identity(target_exam, exam_vendor, app_name)
+        self.exam = self.identity["official_name"]
+        self.vendor = self.identity["vendor"]
         self.registry = load_url_registry()
         self.tavily = TavilyClient(api_key=TAVILY_API_KEY) if TAVILY_API_KEY else None
+        logger.info(f"🧬 Research Engine Init - Identity: {json.dumps(self.identity, indent=2)}")
 
-    def search_web(self, query: str, app_name: str = "general", topics: list = None, max_results=30) -> list[str]:
-        # NGUYÊN TẮC 4: RECENCY CHECK
-        current_year = "2026"
+    def normalize_exam_identity(self, target_exam: str, exam_vendor: str, app_name: str) -> dict:
+        # Priority: target_exam > exam_vendor > app_name
+        raw_exam = target_exam.strip() if target_exam and target_exam.strip() else app_name.strip()
+        vendor = exam_vendor.strip() if exam_vendor and exam_vendor.strip() else ""
         
-        # SỬ DỤNG APP_NAME LÀM TỪ KHÓA CHÍNH ĐỂ SÁT NỘI DUNG BÀI THI
-        search_key = app_name.upper()
+        # Extract exam code (e.g. N10-009, SY0-701, AZ-900)
+        code_match = re.search(r'\b([A-Z0-9]{2,}-\d{3,}|[A-Z]{1,2}\d{3})\b', raw_exam)
+        exam_code = code_match.group(1) if code_match else ""
+        
+        official_name = raw_exam
+        if exam_code and exam_code in official_name:
+            official_name = official_name.replace(exam_code, "").strip(" ()-")
+            
+        aliases = [official_name]
+        if "plus" in official_name.lower(): aliases.append(official_name.lower().replace("plus", "+"))
+        if "+" in official_name: aliases.append(official_name.replace("+", " Plus"))
+        if exam_code: aliases.append(exam_code)
+        
+        vendor_domain = ""
+        for v_key, domain in self.VENDOR_DOMAIN_MAP.items():
+            if v_key.lower() in vendor.lower() or v_key.lower() in raw_exam.lower():
+                vendor_domain = domain
+                break
+                
+        return {
+            "official_name": official_name,
+            "vendor": vendor,
+            "exam_code": exam_code,
+            "aliases": list(set(aliases)),
+            "vendor_domain": vendor_domain
+        }
 
-        # NGUYÊN TẮC 2: CẤU TRÚC QUERY TIÊU CHUẨN
-        variations = [
-            f'"{search_key}" site:{self.vendor.lower() if self.vendor else ""}' if self.vendor else f'"{search_key}" official blueprint',
-            f'"{search_key}" filetype:pdf {self.vendor}',
-            f'"{query}" site:.gov OR site:.edu filetype:pdf',
-            f'"{search_key}" study guide {current_year}',
-            f'"{query}" explanation "official"',
-            f'"{query}" technical standards documentation',
-            f'"{query}"'
-        ]
+    def search_web(self, query: str = "", app_name: str = "general", pass_num=1) -> list[dict]:
+        id = self.identity
+        templates = []
+        
+        if pass_num == 1:
+            templates = [
+                f'"{id["vendor"]}" "{id["official_name"]}" exam objectives PDF',
+                f'"{id["official_name"]}" official exam guide PDF',
+                f'"{id["official_name"]}" candidate handbook PDF',
+                f'"{id["official_name"]}" exam content outline PDF',
+                f'"{id["official_name"]}" blueprint PDF'
+            ]
+            if id["vendor_domain"]:
+                templates.append(f'site:{id["vendor_domain"]} "{id["official_name"]}"')
+            if id["exam_code"]:
+                templates.append(f'"{id["exam_code"]}" exam objectives PDF')
+                templates.append(f'"{id["vendor"]}" "{id["exam_code"]}" PDF')
+        else:
+            templates = [
+                f'"{id["official_name"]}" official study guide',
+                f'"{id["official_name"]}" coursebook PDF',
+                f'"{id["official_name"]}" domains objectives',
+                f'"{id["official_name"]}" syllabus'
+            ]
+            for alias in id["aliases"]:
+                templates.append(f'"{alias}" manual study guide PDF')
 
-        # DYNAMIC SEARCH STRATEGY (BỔ SUNG)
-        if topics:
-            sample_topics = random.sample(topics, min(len(topics), 5))
-            for t in sample_topics:
-                variations.append(f'"{t}" "{search_key}" coursebook official handbook PDF')
+        all_results = []
+        seen_urls = set()
         
-        all_urls = set()
-        
-        # TAVILY - GỌI 1 LẦN DUY NHẤT ĐỂ TIẾT KIỆM TOKEN
-        if self.tavily:
-            tavily_query = f'"{search_key}" official blueprint manual study guide filetype:pdf'
+        if self.tavily and pass_num == 1:
+            t_query = f'"{id["official_name"]}" {id["exam_code"]} official blueprint manual PDF'
             try:
-                # Chuyển search_depth sang basic để tiết kiệm token, chỉ lấy links
-                res = self.tavily.search(query=tavily_query, search_depth="basic", max_results=20)
-                for r in res.get('results', []): all_urls.add(r['url'])
+                res = self.tavily.search(query=t_query, search_depth="basic", max_results=20)
+                for r in res.get('results', []):
+                    if r['url'] not in seen_urls:
+                        all_results.append({"url": r['url'], "title": r.get('title', ''), "snippet": r.get('content', '')})
+                        seen_urls.add(r['url'])
             except: pass
 
-        for q in variations:
-            # DuckDuckGo (Hỗ trợ tìm kiếm miễn phí)
+        for q in templates[:12]:
             try:
                 with DDGS() as ddgs:
-                    for r in ddgs.text(q, max_results=10): all_urls.add(r['href'])
+                    for r in ddgs.text(q, max_results=5):
+                        url = r.get('href')
+                        if url and url not in seen_urls:
+                            all_results.append({"url": url, "title": r.get('title', ''), "snippet": r.get('body', '')})
+                            seen_urls.add(url)
             except: pass
-
-            # SearXNG (Hỗ trợ tìm kiếm miễn phí)
-            for r in searxng_search(q, max_results=max_results): all_urls.add(r['url'])
             
-        # NGUYÊN TẮC 1: LỌC QUA GATE 1 (Accessibility & Blocked Domains)
-        valid_urls = []
-        for url in all_urls:
-            if any(blocked in url.lower() for blocked in self.BLOCKED_DOMAINS): continue
-            valid_urls.append(url)
+            for r in searxng_search(q, max_results=5):
+                if r['url'] not in seen_urls:
+                    all_results.append(r)
+                    seen_urls.add(r['url'])
             
-        return valid_urls
+        return all_results
 
-    def gate_8_execution_pipeline(self, url: str) -> dict:
-        """
-        NGUYÊN TẮC 1: PYRAMID NGUỒN (TIER CLASSIFICATION)
-        """
+    def gate_8_execution_pipeline(self, result: dict) -> dict:
+        url = result.get("url", "").lower()
+        title = result.get("title", "").lower()
+        snippet = result.get("snippet", "").lower()
+        id = self.identity
+        
+        if any(blocked in url for blocked in self.BLOCKED_DOMAINS): return None
+        
         try:
-            # GATE 1: Pre-upload accessibility check
-            resp = requests.get(url, headers={"User-Agent": "Mozilla/5.0"}, timeout=15)
+            resp = requests.get(result["url"], headers={"User-Agent": "Mozilla/5.0"}, timeout=10)
             if not resp.ok: return None
         except: return None
         
-        u = url.lower()
-        score = 0.7 # Tier 3 default
+        score = 0.0
         
-        # TIER 1: Official Score 0.9
-        if any(domain in u for domain in self.TIER_1_DOMAINS):
-            score = 0.9
-        # TIER 2: Recognized Prep Score 0.8
-        elif any(domain in u for domain in self.TIER_2_DOMAINS):
-            score = 0.8
+        if (id["vendor_domain"] and id["vendor_domain"] in url) or any(d in url for d in [".gov", ".edu", ".mil"]):
+            score += 0.4
+        elif any(d in url for d in self.TIER_1_DOMAINS): score += 0.4
+        elif any(d in url for d in self.TIER_2_DOMAINS): score += 0.3
             
-        # Score Adjustments
-        if u.endswith(".pdf"): score += 0.1 # NGUYÊN TẮC 6: PDF Mining - Gold Standard
-        if any(x in u for x in ["blueprint", "objective", "syllabus"]): score += 0.05
-        
-        # Gate 3: Freshness & Gate 4: Quality (Cơ bản qua score)
-        if score < 0.7: return None
+        if id["exam_code"] and (id["exam_code"].lower() in url or id["exam_code"].lower() in title):
+            score += 0.3
+            
+        if id["official_name"].lower() in url or id["official_name"].lower() in title:
+            score += 0.3
+        elif any(a.lower() in url or a.lower() in title for a in id["aliases"]):
+            score += 0.2
+            
+        if url.endswith(".pdf") or any(x in url or x in title for x in ["blueprint", "objective", "handbook", "syllabus", "outline"]):
+            score += 0.2
+            
+        if any(yr in title or yr in snippet for yr in ["2024", "2025", "2026"]):
+            score += 0.2
+            
+        if id["vendor"] and id["vendor"].lower() not in url and id["vendor"].lower() not in title and id["vendor"].lower() not in snippet:
+            score -= 0.6
+            
+        final_score = round(score, 2)
+        if final_score < 0.7: return None
         
         return {
-            "url": url, 
-            "score": round(score, 2), 
-            "canonical_id": hashlib.md5(url.encode()).hexdigest(), 
-            "format": "pdf" if u.endswith(".pdf") else "html"
+            "url": result["url"], 
+            "score": final_score, 
+            "canonical_id": hashlib.md5(result["url"].encode()).hexdigest(), 
+            "format": "pdf" if url.endswith(".pdf") else "html"
         }
 
 class FlashcardAgent:
@@ -392,56 +455,53 @@ class FlashcardAgent:
 
     def handle_research(self, app_name: str, target_exam: str, exam_vendor: str) -> dict:
         logger.info(f"🚀 [RESEARCH] Start for {app_name} (Exam: {target_exam}, Vendor: {exam_vendor})")
-        engine = ResearchEngine(target_exam, exam_vendor)
-        # Parse topics from existing structure if available (optional enhancement)
-        raw_urls = engine.search_web(target_exam, app_name=app_name)
-        logger.info(f"🌐 Found {len(raw_urls)} raw URLs, starting ingestion pipeline...")
+        engine = ResearchEngine(target_exam, exam_vendor, app_name)
         
         sources_ingested = []
         pdf_count = 0
         
-        for url in raw_urls:
-            if len(sources_ingested) >= 20: break
-            approved = engine.gate_8_execution_pipeline(url)
-            if approved:
-                try:
-                    if approved['format'] == 'pdf':
-                        logger.info(f"📥 Downloading PDF for local processing: {url}")
-                        pdf_resp = requests.get(url, headers={"User-Agent": "Mozilla/5.0"}, timeout=120)
-                        if pdf_resp.ok:
-                            # 1. Tạo tên file chuẩn
-                            clean_filename = f"{hashlib.md5(url.encode()).hexdigest()}.pdf"
-                            
-                            # 2. Gọi API upload PDF chuyên dụng
-                            logger.info(f"📤 Uploading PDF to Shared Repository: {clean_filename}")
-                            upload_resp = requests.post(
-                                PDF_UPLOAD_API, 
-                                files={'file': (clean_filename, pdf_resp.content, 'application/pdf')}, 
-                                data={
-                                    'app_name': app_name, 
-                                    'bucket_name': app_name # Đảm bảo bucket_name luôn có
-                                }, 
-                                timeout=180 # Tăng timeout cho file lớn
-                            )
-                            
-                            if upload_resp.ok:
-                                logger.info(f"✅ PDF Uploaded successfully: {url}")
-                                sources_ingested.append(approved)
-                                pdf_count += 1
-                            else:
-                                logger.warning(f"❌ PDF Upload failed (Status {upload_resp.status_code}): {url} | Detail: {upload_resp.text}")
-                    else:
-                        logger.info(f"🔗 Attempting to ingest URL: {url}")
-                        ingest_resp = requests.post(INGEST_API, json={"url": url, "app_name": app_name, "bucket_name": app_name, "index_document": True}, timeout=120)
-                        if ingest_resp.ok:
-                            logger.info(f"✅ URL Ingested successfully: {url}")
-                            sources_ingested.append(approved)
+        def process_batch(results):
+            nonlocal pdf_count
+            ingested_count = 0
+            for res in results:
+                if len(sources_ingested) >= 20: break
+                if any(s['url'] == res['url'] for s in sources_ingested): continue
+                
+                approved = engine.gate_8_execution_pipeline(res)
+                if approved:
+                    try:
+                        if approved['format'] == 'pdf':
+                            logger.info(f"📥 Downloading PDF: {res['url']}")
+                            pdf_resp = requests.get(res['url'], headers={"User-Agent": "Mozilla/5.0"}, timeout=120)
+                            if pdf_resp.ok:
+                                clean_filename = f"{hashlib.md5(res['url'].encode()).hexdigest()}.pdf"
+                                upload_resp = requests.post(PDF_UPLOAD_API, files={'file': (clean_filename, pdf_resp.content, 'application/pdf')}, data={'app_name': app_name, 'bucket_name': app_name}, timeout=180)
+                                if upload_resp.ok:
+                                    logger.info(f"✅ PDF Uploaded: {res['url']}")
+                                    sources_ingested.append(approved)
+                                    pdf_count += 1
+                                    ingested_count += 1
                         else:
-                            logger.warning(f"❌ URL Ingest failed (Status {ingest_resp.status_code}): {url}")
-                except Exception as e:
-                    logger.error(f"⚠️ Error during ingestion of {url}: {e}")
+                            logger.info(f"🔗 Ingesting URL: {res['url']}")
+                            ingest_resp = requests.post(INGEST_API, json={"url": res['url'], "app_name": app_name, "bucket_name": app_name, "index_document": True}, timeout=120)
+                            if ingest_resp.ok:
+                                logger.info(f"✅ URL Ingested: {res['url']}")
+                                sources_ingested.append(approved)
+                                ingested_count += 1
+                    except Exception as e: logger.error(f"⚠️ Error ingesting {res['url']}: {e}")
+            return ingested_count
+
+        # Pass 1: Primary Search
+        results1 = engine.search_web(app_name=app_name, pass_num=1)
+        logger.info(f"🌐 Pass 1: Found {len(results1)} potential URLs")
+        process_batch(results1)
         
-        # Logic báo Done chặt chẽ hơn: Cần ít nhất 5 nguồn, trong đó khuyến khích có PDF
+        # Pass 2: Fallback
+        if len(sources_ingested) < 5:
+            logger.info(f"⚠️ Only {len(sources_ingested)} sources found. Running second pass...")
+            results2 = engine.search_web(app_name=app_name, pass_num=2)
+            process_batch(results2)
+        
         success_criteria = len(sources_ingested) >= 5
         logger.info(f"🏁 [RESEARCH] Finished for {app_name}. Total: {len(sources_ingested)} (PDFs: {pdf_count})")
         

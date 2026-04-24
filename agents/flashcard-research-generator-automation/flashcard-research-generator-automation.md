@@ -120,6 +120,8 @@ When providing a reference for the flashcard, your goal is to point the user to 
 1. **DYNAMIC SEARCH STRATEGY (CRITICAL):**
    - To find the most accurate and diverse sources, DO NOT just rely on the general exam name.
    - You MUST mentally combine the specific Topic/Subtopic name with the Exam Name to target the exact chapter/concept. 
+   - **Educational-Only Focus:** Append keywords like "technical review", "core concepts", "definitions", "knowledge domains", "syllabus breakdown" to your queries.
+   - **Administrative Exclusion:** Explicitly exclude logistics by adding `-register -schedule -fees -venue -apply` to search variations where possible.
    - Conceptual Search Example: Instead of looking for generic "ServSafe Alcohol guide", target your knowledge base for "Dram Shop Law ServSafe Coursebook" or "BAC limits Azure Fundamentals PDF".
 
 2. **DOCUMENT FORMAT & SOURCE PRIORITY:**
