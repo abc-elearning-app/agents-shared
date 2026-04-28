@@ -477,34 +477,47 @@ class FlashcardAgent:
         self.executor = ThreadPoolExecutor(max_workers=20)
         # THROTTLING: Chỉ cho phép 1 request duy nhất được thực hiện tại một thời điểm trên toàn hệ thống
         self.semaphore = asyncio.Semaphore(1) 
+        self.ai_lock = asyncio.Lock()
         self.active_jobs = set()
 
     async def get_next_available_client(self):
-        """Logic luân phiên chuyển Key khi gặp 429 hoặc xoay vòng"""
+        """Logic luân phiên chuyển Key khi gặp 429 hoặc xoay vòng, tuân thủ cooldown nghiêm ngặt"""
         start_idx = self.current_client_idx
         while True:
-            # Nếu Key hiện tại không trong thời gian cooldown
-            if time.time() > self.key_cooldowns[self.current_client_idx]:
-                return self.clients[self.current_client_idx]
+            now = time.time()
+            if now > self.key_cooldowns[self.current_client_idx]:
+                return self.clients[self.current_client_idx], self.current_client_idx
             
-            # Chuyển sang idx tiếp theo
             self.current_client_idx = (self.current_client_idx + 1) % len(self.clients)
             
-            # Nếu đã duyệt qua tất cả các Key và đều đang cooldown
             if self.current_client_idx == start_idx:
                 min_cooldown = min(self.key_cooldowns)
-                wait_time = max(0.1, min_cooldown - time.time())
-                logger.warning(f"⏳ All API keys are in cooldown. Waiting {wait_time:.2f}s...")
-                await asyncio.sleep(wait_time)
-
-    async def rate_limited_gen(self, prompt, schema):
+                wait_time = max(1.0, min_cooldown - now)
+                # Nếu tất cả key đều bị cooldown, tạm dừng toàn bộ job 180s theo quy tắc
+                if wait_time > 0:
+                    pause_duration = 180 + random.randint(10, 30)
+                    logger.warning(f"⏳ [SYSTEM PAUSE] All API keys in cooldown. Pausing for {pause_duration}s...")
+                    await asyncio.sleep(pause_duration)
+                    continue 
+        
+    async def rate_limited_gen(self, prompt, schema, request_type="general"):
         """
-        Hàm bao bọc để điều tiết luồng API (Throttling) + API Rotation
+        Hàm bao bọc điều tiết luồng API (Global Throttling):
+        - Concurrency = 1
+        - Fixed delay 5-10s
+        - 429 Cooldown: 60/120/300s + Jitter
         """
-        async with self.semaphore:
-            keys_attempted = 0
-            while keys_attempted < len(self.clients):
-                client = await self.get_next_available_client()
+        # Throttling toàn cục: Chỉ 1 request tại một thời điểm
+        async with self.ai_lock:
+            max_retries = 2
+            attempt = 0
+            
+            while attempt <= max_retries:
+                client, client_idx = await self.get_next_available_client()
+                
+                # Log request chi tiết
+                logger.info(f"[AI REQUEST] vendor=gemini model={GEMINI_MODEL} key_index={client_idx+1} type={request_type} retry={attempt}")
+                
                 try:
                     res = await asyncio.get_event_loop().run_in_executor(
                         self.executor,
@@ -514,26 +527,43 @@ class FlashcardAgent:
                             config=types.GenerateContentConfig(
                                 response_mime_type="application/json",
                                 response_schema=schema,
-                                temperature=0.1
+                                temperature=0.1,
+                                max_output_tokens=1024
                             )
                         )
                     )
-                    # THROTTLING: Nghỉ bắt buộc 30 giây sau mỗi lần gọi thành công
-                    await asyncio.sleep(30)
+                    
+                    # Thành công: Nghỉ 5-10s trước khi cho phép request tiếp theo
+                    success_delay = random.uniform(5, 10)
+                    await asyncio.sleep(success_delay)
                     return res
+
                 except Exception as e:
-                    if "429" in str(e):
-                        # QUOTA RECOVERY: Đánh dấu Key này bị hỏng trong 5 phút
-                        self.key_cooldowns[self.current_client_idx] = time.time() + 300
-                        logger.error(f"🚨 API Key {self.current_client_idx+1} hit 429. Switching key...")
-                        # Chuyển idx ngay lập tức để vòng lặp sau dùng key mới
-                        self.current_client_idx = (self.current_client_idx + 1) % len(self.clients)
-                        keys_attempted += 1
+                    err_str = str(e).lower()
+                    if any(x in err_str for x in ["429", "quota", "resource_exhausted"]):
+                        attempt += 1
+                        # Chiến lược Cooldown 429: 60/120/300
+                        cooldowns = [60, 120, 300]
+                        base_cd = cooldowns[min(attempt-1, 2)]
+                        jitter = random.randint(10, 30)
+                        cd_time = base_cd + jitter
+                        
+                        self.key_cooldowns[client_idx] = time.time() + cd_time
+                        
+                        logger.error(f"[429 ERROR] vendor=gemini key_index={client_idx+1} retry={attempt}/{max_retries} cooldown={cd_time}s")
+                        
+                        if attempt > max_retries:
+                            logger.error("❌ Max retries reached for this request. Marking for retry_later.")
+                            raise Exception("Retry storm prevented: Request failed after max agent-level retries.")
+                        
+                        # Chuyển key ngay và đợi trước khi thử lại
+                        self.current_client_idx = (client_idx + 1) % len(self.clients)
+                        await asyncio.sleep(cd_time)
                         continue
-                    raise e
-            
-            # Nếu tất cả Key đều đạt giới hạn
-            raise Exception("All API keys reached limit. Quota exhausted.")
+                    else:
+                        logger.error(f"❌ AI API Error: {e}")
+                        raise e
+
     def update_dashboard_status(self, app_name: str, column: str, status: str):
         try:
             payload = {"action": "update_status", "app_name": app_name, "column": column, "status": status}
@@ -542,9 +572,38 @@ class FlashcardAgent:
         except Exception as e:
             logger.error(f"❌ Failed to update dashboard status: {e}")
 
-    def handle_research(self, app_name: str, target_exam: str, exam_vendor: str) -> dict:
+    async def handle_research(self, app_name: str, target_exam: str, exam_vendor: str) -> dict:
         logger.info(f"🚀 [RESEARCH] Start for {app_name} (Exam: {target_exam})")
+        
+        # --- STEP 0: LATEST VERSION DISCOVERY (AI ASSISTED) ---
+        id_prompt = f"""
+        Analyze the certification: "{target_exam}" by "{exam_vendor}".
+        1. Find the OFFICIAL LATEST EXAM CODE (e.g., SY0-701, CS0-003).
+        2. Find the CURRENT VERSION YEAR (e.g., 2024, 2025).
+        Return ONLY a JSON: {{"official_code": "code", "version_year": "year", "full_name": "name"}}.
+        """
+        latest_intel = {}
+        try:
+            schema = {
+                "type": "OBJECT",
+                "properties": {
+                    "official_code": {"type": "STRING"},
+                    "version_year": {"type": "STRING"},
+                    "full_name": {"type": "STRING"}
+                },
+                "required": ["official_code", "version_year", "full_name"]
+            }
+            res = await self.rate_limited_gen(id_prompt, schema)
+            latest_intel = json.loads(res.text)
+            logger.info(f"🧬 AI Version Intel: {json.dumps(latest_intel)}")
+        except Exception as e:
+            logger.warning(f"⚠️ Version Intel discovery failed: {e}")
+            pass
+
         engine = ResearchEngine(target_exam, exam_vendor, app_name)
+        if latest_intel.get("official_code"):
+            engine.identity["exam_code"] = latest_intel["official_code"]
+        
         sources_ingested = []
         seen_hashes = set()
         pdf_count = 0
@@ -552,14 +611,25 @@ class FlashcardAgent:
         def process_batch(results):
             nonlocal pdf_count
             for res in results:
-                if len(sources_ingested) >= 15: break
+                if len(sources_ingested) >= 20: break # Tăng limit lên 20 nguồn
                 if any(s['url'] == res['url'] for s in sources_ingested): continue
+                
+                # --- Gate 3: Outdated Version Blocking ---
+                url_low = res['url'].lower()
+                latest_code = engine.identity.get("exam_code", "").lower()
+                if latest_code:
+                    prefix = re.split(r'\d+', latest_code)[0]
+                    if prefix and len(prefix) >= 2:
+                        # Nếu URL chứa prefix+số mà số đó khác version mới nhất -> REJECT
+                        match = re.search(f"{prefix}\\d+", url_low)
+                        if match and match.group() != latest_code:
+                            logger.info(f"🚫 Skipping Outdated Version: {match.group()} (Latest is {latest_code})")
+                            continue
+
                 approved = engine.gate_8_execution_pipeline(res)
                 if approved:
                     c_hash = approved.get("content_hash")
-                    if c_hash in seen_hashes:
-                        logger.info(f"⏭️ Skipping Duplicate Content: {res['url']}")
-                        continue
+                    if c_hash in seen_hashes: continue
                     
                     try:
                         if approved['format'] == 'pdf':
@@ -568,25 +638,36 @@ class FlashcardAgent:
                             if resp.ok:
                                 clean_filename = f"{hashlib.md5(res['url'].encode()).hexdigest()}.pdf"
                                 if requests.post(PDF_UPLOAD_API, files={'file': (clean_filename, resp.content, 'application/pdf')}, data={'app_name': app_name, 'bucket_name': app_name}, timeout=180).ok:
-                                    logger.info(f"✅ Ingested PDF: {res['url']} (Score: {approved['score']})")
+                                    logger.info(f"✅ Ingested PDF: {res['url']}")
                                     sources_ingested.append(approved); pdf_count += 1; seen_hashes.add(c_hash)
                         else:
                             logger.info(f"🔗 Ingesting URL: {res['url']}")
                             if requests.post(INGEST_API, json={"url": res['url'], "app_name": app_name, "bucket_name": app_name, "index_document": True}, timeout=120).ok:
-                                logger.info(f"✅ Ingested URL: {res['url']} (Score: {approved['score']})")
+                                logger.info(f"✅ Ingested URL: {res['url']}")
                                 sources_ingested.append(approved); seen_hashes.add(c_hash)
                     except Exception as e: logger.error(f"⚠️ Error ingesting {res['url']}: {e}")
 
-        # Pass 1: Primary Prep Search
-        logger.info("🔍 Pass 1: Exam Prep & Study Guides")
-        process_batch(engine.search_web(pass_num=1))
+        # Tăng cường Query với Version mới
+        def get_targeted_queries():
+            id = engine.identity
+            code = id.get("exam_code", "")
+            year = latest_intel.get("version_year", "2025")
+            return [
+                f'"{code}" official exam objectives PDF {year}',
+                f'"{id["official_name_without_parentheses"]}" "{code}" syllabus PDF',
+                f'"{id["official_name_without_parentheses"]}" candidate handbook {year}',
+                f'"{id["vendor_normalized"]}" "{code}" study guide PDF'
+            ]
+
+        logger.info("🔍 Pass 1: Targeted Latest Version Search")
+        for q in get_targeted_queries():
+            process_batch(engine.search_web(query=q, pass_num=1))
         
-        # Pass 2: Fallback
-        if len(sources_ingested) < 5:
-            logger.info(f"⚠️ Only {len(sources_ingested)} sources found. Running second pass...")
-            process_batch(engine.search_web(pass_num=2))
+        if len(sources_ingested) < 10:
+            logger.info("🔍 Pass 2: General Fallback Search")
+            process_batch(engine.search_web(pass_num=1))
         
-        success = len(sources_ingested) >= 3
+        success = len(sources_ingested) >= 5
         logger.info(f"🏁 [RESEARCH] Finished for {app_name}. Total: {len(sources_ingested)} (PDFs: {pdf_count})")
         
         return {
@@ -824,8 +905,8 @@ KPI: Generate EXACTLY {current_goal} unique terms.
         try:
             if task_type == "research":
                 await loop.run_in_executor(self.executor, self.update_dashboard_status, app_name, "research", "Pending")
-                res = await loop.run_in_executor(self.executor, self.handle_research, app_name, target_exam, exam_vendor)
-                await loop.run_in_executor(self.executor, self.update_dashboard_status, app_name, "research", "Done" if not res["needs_more"] else "Fail")
+                res = await self.handle_research(app_name, target_exam, exam_vendor)
+                await loop.run_in_executor(self.executor, self.update_dashboard_status, app_name, "research", "Done" if not res.get("needs_more") else "Fail")
             elif task_type == "generate":
                 await loop.run_in_executor(self.executor, self.update_dashboard_status, app_name, "generate", "Pending")
                 res = await self.handle_generate(app_name, target_exam, topic_structure, dashboard_app_id=app_id)
