@@ -1,3 +1,4 @@
+require('dotenv').config();
 const axios = require('axios');
 
 const SPREADSHEET_ID = process.env.SPREADSHEET_ID;

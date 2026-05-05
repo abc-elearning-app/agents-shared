@@ -1,3 +1,4 @@
+require('dotenv').config();
 const { google } = require('googleapis');
 const { exec } = require('child_process');
 const path = require('path');
