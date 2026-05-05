@@ -8,7 +8,7 @@ const cloudinary = require('cloudinary').v2;
 const { GoogleGenerativeAI } = require('@google/generative-ai');
 
 // --- CONFIGURATION ---
-const SPREADSHEET_ID = '13j1j4kL6XPGxfwPUSwItOP0nAwyaOhLSoVmvb5LWI6k';
+const SPREADSHEET_ID = process.env.SPREADSHEET_ID;
 const SHEET_NAME = 'Ảnh tự tạo';
 const RANGE = `${SHEET_NAME}!A2:M100`; 
 

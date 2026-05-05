@@ -6,7 +6,7 @@ const FormData = require('form-data');
 const cloudinary = require('cloudinary').v2;
 
 // --- CONFIGURATION ---
-const SPREADSHEET_ID = '13j1j4kL6XPGxfwPUSwItOP0nAwyaOhLSoVmvb5LWI6k';
+const SPREADSHEET_ID = process.env.SPREADSHEET_ID;
 const RANGE = 'Ảnh câu hỏi scale!A2:M100'; 
 
 // Cloudinary Config

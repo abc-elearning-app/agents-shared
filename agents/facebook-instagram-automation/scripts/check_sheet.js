@@ -1,6 +1,6 @@
 const { google } = require('googleapis');
 
-const SPREADSHEET_ID = '13j1j4kL6XPGxfwPUSwItOP0nAwyaOhLSoVmvb5LWI6k';
+const SPREADSHEET_ID = process.env.SPREADSHEET_ID;
 const RANGE = 'Ảnh câu hỏi scale!A1:K20'; 
 
 const CLIENT_ID = process.env.GOOGLE_CLIENT_ID;

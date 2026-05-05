@@ -2,7 +2,7 @@ const { google } = require('googleapis');
 const { exec } = require('child_process');
 const path = require('path');
 
-const SPREADSHEET_ID = '13j1j4kL6XPGxfwPUSwItOP0nAwyaOhLSoVmvb5LWI6k';
+const SPREADSHEET_ID = process.env.SPREADSHEET_ID;
 const RANGE = 'Ảnh câu hỏi scale!A6:K6'; 
 
 const CLIENT_ID = process.env.GOOGLE_CLIENT_ID;
