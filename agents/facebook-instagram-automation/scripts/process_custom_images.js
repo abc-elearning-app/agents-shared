@@ -197,7 +197,10 @@ function shouldPostNow(dateStr) {
     if (!dateStr || dateStr.trim() === '') return true;
     const scheduledTime = new Date(dateStr);
     const now = new Date();
-    return now >= scheduledTime;
+    // Cho phép sai số 16 phút: Nếu thời gian hiện tại nằm trong khoảng từ [Giờ đặt] đến [Giờ đặt + 16 phút]
+    // Hoặc nếu đã quá giờ đặt (để đăng bù)
+    const diffInMinutes = (now - scheduledTime) / (1000 * 60);
+    return diffInMinutes >= 0; // Đã đến hoặc quá giờ đăng
 }
 
 async function updateStatus(rowIndex, status) {

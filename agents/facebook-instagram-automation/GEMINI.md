@@ -63,7 +63,7 @@ Sử dụng AI để xử lý các ảnh thiết kế sẵn hoặc ảnh từ Go
 - **Tối ưu nội dung:** Agent tự phân tích hình ảnh và điền vào: **Title (E)**, **Caption FB (F)**, **Caption IG (G)**, **Hashtag FB (H)**, **Hashtag IG (I)**, **CTA Content (J)**.
 - **Thực thi:**
     - **Đăng ngay:** Nếu Cột B là `Ready` + Cột D (Date) Trống ➡️ Kích hoạt làm việc ngay lập tức.
-    - **Chờ đến giờ:** Nếu Cột D có thời gian ➡️ Agent so sánh với thời gian thực tế. Khi đến giờ set ở cột D, tự động chuyển Cột B sang `Ready` để bắt đầu.
+    - **Chờ đến giờ:** Nếu Cột D có thời gian ➡️ Agent so sánh với thời gian thực tế. Khi đến giờ set ở cột D (cho phép sai số quét lùi 16 phút để không bỏ lỡ bài), tự động chuyển Cột B sang `Ready` để bắt đầu.
 - **Kết quả:** Trả về link vào **Cột K (Facebook)** và **Cột L (Instagram)**. Cập nhật Status sang `Done`.
 
 ---

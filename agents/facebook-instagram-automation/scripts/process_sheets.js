@@ -125,6 +125,15 @@ async function publishToInstagramMCP(appType, caption, imageUrl) {
     return 'Success';
 }
 
+function shouldPostNow(dateStr) {
+    if (!dateStr || dateStr.trim() === '') return true;
+    const scheduledTime = new Date(dateStr);
+    const now = new Date();
+    // Đã đến hoặc quá giờ đăng (cho phép sai số quét 16 phút)
+    const diffInMinutes = (now - scheduledTime) / (1000 * 60);
+    return diffInMinutes >= 0; 
+}
+
 async function updateStatus(rowIndex, status) {
     await sheets.spreadsheets.values.update({
         spreadsheetId: SPREADSHEET_ID,
@@ -145,8 +154,21 @@ async function runAutomation() {
             const rowIndex = i + 2; 
             const account = (row[0] || '').trim(); // A
             const status = (row[4] || '').trim();  // E
+            const dateStr = (row[10] || '').trim(); // Column K: Date (if exists)
+
+            // Auto-trigger Ready for scheduled posts
+            if (status === '' && dateStr !== '' && shouldPostNow(dateStr)) {
+                console.log(`⏰ Time reached for Quiz Row ${rowIndex}. Setting to Ready.`);
+                await updateStatus(rowIndex, 'Ready');
+                continue;
+            }
 
             if (status === 'Ready') {
+                if (!shouldPostNow(dateStr)) {
+                    console.log(`⏳ Quiz Row ${rowIndex} scheduled for ${dateStr}. Skipping.`);
+                    continue;
+                }
+
                 console.log(`\n🔒 Locking Row ${rowIndex} (Processing)...`);
                 await updateStatus(rowIndex, 'Processing');
 
