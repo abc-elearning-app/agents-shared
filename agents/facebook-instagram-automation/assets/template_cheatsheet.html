@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            margin: 0; padding: 0; width: 1080px; height: 1080px;
+            display: flex; flex-direction: column;
+            font-family: 'Segoe UI', sans-serif;
+            background: #f8f9fa; color: #333;
+        }
+        .header {
+            background: #2c3e50; color: white;
+            padding: 40px; text-align: center;
+            font-size: 40px; font-weight: bold;
+            text-transform: uppercase;
+        }
+        .content {
+            flex: 1; padding: 40px;
+            display: flex; flex-direction: column; justify-content: center;
+        }
+        table {
+            width: 100%; border-collapse: collapse;
+            font-size: 28px; background: white;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        th, td {
+            border: 1px solid #ddd; padding: 25px; text-align: left;
+        }
+        th { background: #34495e; color: white; }
+        tr:nth-child(even) { background: #f2f2f2; }
+        .footer {
+            padding: 20px; text-align: center;
+            background: #ecf0f1; font-style: italic; font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header" id="title">CHEAT SHEET: TCP vs UDP</div>
+    <div class="content">
+        <table id="data-table">
+            <thead>
+                <tr>
+                    <th>Đặc điểm</th>
+                    <th>TCP</th>
+                    <th>UDP</th>
+                </tr>
+            </thead>
+            <tbody id="data-body">
+                <!-- Rows injected here -->
+            </tbody>
+        </table>
+    </div>
+    <div class="footer" id="footer">Lưu lại để ôn tập nhé!</div>
+
+    <script>
+        window.setData = (data) => {
+            document.getElementById('title').innerText = data.title;
+            const body = document.getElementById('data-body');
+            body.innerHTML = '';
+            data.rows.forEach(row => {
+                const tr = document.createElement('tr');
+                row.forEach(cell => {
+                    const td = document.createElement('td');
+                    td.innerText = cell;
+                    tr.appendChild(td);
+                });
+                body.appendChild(tr);
+            });
+            if (data.footer) document.getElementById('footer').innerText = data.footer;
+        };
+    </script>
+</body>
+</html>

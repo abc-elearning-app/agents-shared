@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            margin: 0; padding: 0; width: 1080px; height: 1080px;
+            display: flex; flex-direction: column;
+            font-family: 'Consolas', 'Courier New', monospace;
+            background: #1e1e1e; color: #d4d4d4;
+        }
+        .header {
+            background: #e74c3c; color: white;
+            padding: 30px; text-align: center;
+            font-size: 36px; font-weight: bold;
+            font-family: sans-serif;
+        }
+        .code-container {
+            flex: 1; padding: 40px;
+            font-size: 32px; line-height: 1.5;
+            background: #252526; margin: 30px;
+            border-radius: 10px; border: 1px solid #333;
+            overflow: hidden;
+        }
+        .question-box {
+            background: #34495e; color: white;
+            padding: 40px; text-align: center;
+            font-size: 34px; font-family: sans-serif;
+            font-weight: bold;
+        }
+        .highlight { color: #569cd6; }
+        .string { color: #ce9178; }
+        .comment { color: #6a9955; }
+    </style>
+</head>
+<body>
+    <div class="header">CẢNH BÁO: TÌM LỖI SAI CẤU HÌNH!</div>
+    <div class="code-container" id="code-content">
+        <!-- Code snippet here -->
+    </div>
+    <div class="question-box" id="question">
+        Lỗi nghiêm trọng nằm ở đâu? Comment ngay!
+    </div>
+
+    <script>
+        window.setData = (data) => {
+            document.getElementById('code-content').innerHTML = data.code;
+            document.getElementById('question').innerText = data.question;
+        };
+    </script>
+</body>
+</html>

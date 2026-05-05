@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            width: 1080px;
+            height: 1080px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        .container {
+            width: 900px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 30px;
+            padding: 50px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            text-align: center;
+        }
+        .title {
+            font-size: 32px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 40px;
+            opacity: 0.8;
+        }
+        .question {
+            font-size: 48px;
+            font-weight: bold;
+            line-height: 1.4;
+            margin-bottom: 50px;
+        }
+        .options {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        .option {
+            background: white;
+            color: #333;
+            padding: 20px;
+            border-radius: 15px;
+            font-size: 28px;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="title" id="title">CÂU HỎI HÔM NAY</div>
+        <div class="question" id="question">Câu hỏi sẽ hiển thị ở đây?</div>
+        <div class="options" id="options">
+            <div class="option">A. Lựa chọn 1</div>
+            <div class="option">B. Lựa chọn 2</div>
+            <div class="option">C. Lựa chọn 3</div>
+            <div class="option">D. Lựa chọn 4</div>
+        </div>
+    </div>
+
+    <script>
+        // Data injection point
+        window.setData = (data) => {
+            document.getElementById('title').innerText = data.title || 'CÂU HỎI HÔM NAY';
+            document.getElementById('question').innerText = data.question;
+            const optionsContainer = document.getElementById('options');
+            optionsContainer.innerHTML = '';
+            if (data.options && data.options.length > 0) {
+                data.options.forEach((opt, index) => {
+                    const div = document.createElement('div');
+                    div.className = 'option';
+                    div.innerText = String.fromCharCode(65 + index) + '. ' + opt;
+                    optionsContainer.appendChild(div);
+                });
+            } else {
+                optionsContainer.style.display = 'none';
+            }
+        };
+    </script>
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CompTIA Practice Quiz</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Inter', sans-serif !important;
+        }
+        body {
+            background-color: #e5e7eb;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+        .capture-area {
+            width: 800px;
+            aspect-ratio: 1 / 1;
+            background-color: white;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            border-radius: 0.75rem;
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="comptia-card" class="capture-area">
+        <!-- Decorative Background Elements -->
+        <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-red-50 rounded-full blur-3xl -mr-40 -mt-40 opacity-60"></div>
+        <div class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-red-50/50 rounded-full blur-3xl -ml-20 -mb-20"></div>
+
+        <!-- HEADER -->
+        <div class="bg-red-900 text-white px-8 py-6 flex justify-between items-center relative z-10">
+            <div class="flex items-center space-x-3">
+                <div class="bg-white text-red-900 p-2 rounded-lg">
+                    <i class="fas fa-server text-2xl"></i>
+                </div>
+                <div>
+                    <h1 class="text-2xl font-black tracking-tight leading-none uppercase">CompTIA Practice</h1>
+                    <p class="text-red-200 text-sm font-semibold tracking-wide mt-1">
+                        by <a href="https://abc-elearning.org" target="_blank" rel="noopener noreferrer" class="hover:text-white hover:underline transition-colors">abc-elearning.org</a>
+                    </p>
+                </div>
+            </div>
+            
+            <div class="flex flex-col items-end space-y-2 text-sm font-medium">
+                <div class="flex items-center bg-red-800/50 px-3 py-1.5 rounded-full border border-red-700/50">
+                    <i class="fas fa-microchip text-yellow-400 mr-2"></i>
+                    <span id="exam-text">Network+ N10-009</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- BODY -->
+        <div class="flex-1 px-10 py-8 flex flex-col relative z-10">
+            <!-- Question -->
+            <div class="mb-8">
+                <div class="flex items-center space-x-2 mb-4">
+                    <span class="bg-yellow-400 text-yellow-900 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+                        Question of the day
+                    </span>
+                </div>
+                <h2 id="question-text" class="text-2xl font-bold text-gray-800 leading-snug">
+                    How are online uninterruptible power supplies (UPSs) different from standby uninterruptible power supplies (UPSs)?
+                </h2>
+            </div>
+
+            <!-- Options -->
+            <div id="options-container" class="flex flex-col space-y-4 mb-auto">
+                <!-- Options will be injected here -->
+            </div>
+        </div>
+        
+        <!-- Bottom Accent Line -->
+        <div class="h-2 w-full bg-gradient-to-r from-red-900 via-red-600 to-yellow-400"></div>
+    </div>
+
+    <script>
+        window.setData = (data) => {
+            if (data.exam) {
+                document.getElementById('exam-text').innerText = data.exam;
+            }
+            if (data.question) {
+                document.getElementById('question-text').innerText = data.question;
+            }
+            
+            const optionsContainer = document.getElementById('options-container');
+            if (data.options && Array.isArray(data.options)) {
+                optionsContainer.innerHTML = '';
+                const labels = ['A', 'B', 'C', 'D'];
+                data.options.forEach((option, index) => {
+                    const div = document.createElement('div');
+                    div.className = "flex items-center p-4 rounded-2xl border-2 transition-all bg-white border-gray-200 text-gray-700";
+                    div.innerHTML = `
+                        <div class="w-10 h-10 flex items-center justify-center rounded-full text-lg font-bold mr-4 shrink-0 bg-gray-100 text-gray-500">
+                            ${labels[index]}
+                        </div>
+                        <span class="text-base font-semibold text-gray-800">
+                            ${option}
+                        </span>
+                    `;
+                    optionsContainer.appendChild(div);
+                });
+            }
+        };
+
+        // For testing/preview
+        /*
+        window.setData({
+            exam: "Network+ N10-009",
+            question: "How are online uninterruptible power supplies (UPSs) different from standby uninterruptible power supplies (UPSs)?",
+            options: [
+                "An online UPS provides no gap in the power supplied to the devices during a main power failure.",
+                "A standby UPS provides only enough power for an orderly shutdown of the devices.",
+                "A standby UPS runs devices using battery power all the time.",
+                "An online UPS switches devices to battery power only during a main power failure."
+            ]
+        });
+        */
+    </script>
+</body>
+</html>

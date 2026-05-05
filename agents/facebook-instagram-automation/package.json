@@ -1,0 +1,19 @@
+{
+  "name": "fb-automation-agent",
+  "version": "1.0.0",
+  "description": "Automated Facebook Content Generator from Google Sheets",
+  "main": "scripts/process_sheets.js",
+  "scripts": {
+    "start": "node scripts/process_sheets.js",
+    "render": "node scripts/generate_image.js",
+    "process-custom": "node scripts/process_custom_images.js"
+  },
+  "dependencies": {
+    "@google/generative-ai": "^0.24.1",
+    "axios": "^1.15.2",
+    "cloudinary": "^2.10.0",
+    "dotenv": "^17.4.2",
+    "googleapis": "^126.0.0",
+    "playwright": "^1.40.0"
+  }
+}

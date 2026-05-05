@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            margin: 0; padding: 0; width: 1080px; height: 1080px;
+            display: flex; flex-direction: column;
+            font-family: 'Segoe UI', sans-serif;
+            background: #fff; color: #333;
+        }
+        .header {
+            background: #f1c40f; color: #2c3e50;
+            padding: 40px; text-align: center;
+            font-size: 44px; font-weight: 900;
+            text-transform: uppercase;
+        }
+        .container {
+            flex: 1; padding: 60px;
+            display: flex; flex-direction: column; gap: 40px;
+        }
+        .section {
+            border-left: 10px solid; padding-left: 30px;
+        }
+        .trap {
+            border-color: #e74c3c;
+        }
+        .tip {
+            border-color: #2ecc71;
+        }
+        .label {
+            font-size: 28px; font-weight: bold; text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+        .text {
+            font-size: 36px; line-height: 1.4;
+        }
+        .keyword {
+            color: #e74c3c; text-decoration: underline; font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="header" id="title">BÓC TRẦN "CẠM BẪY" KỲ THI</div>
+    <div class="container">
+        <div class="section trap">
+            <div class="label" style="color: #e74c3c;">Cạm bẫy (The Trap)</div>
+            <div class="text" id="trap-text">Nội dung cạm bẫy...</div>
+        </div>
+        <div class="section tip">
+            <div class="label" style="color: #2ecc71;">Mẹo xử lý (The Tip)</div>
+            <div class="text" id="tip-text">Hãy chú ý vào keyword...</div>
+        </div>
+    </div>
+
+    <script>
+        window.setData = (data) => {
+            if (data.title) document.getElementById('title').innerText = data.title;
+            document.getElementById('trap-text').innerHTML = data.trap;
+            document.getElementById('tip-text').innerHTML = data.tip;
+        };
+    </script>
+</body>
+</html>

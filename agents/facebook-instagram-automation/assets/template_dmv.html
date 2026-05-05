@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DMV Practice Quiz</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: white;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .capture-area {
+            width: 800px;
+            height: 800px;
+            background-color: white;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+        .bg-blur-1 {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 500px;
+            height: 500px;
+            background-color: #eff6ff;
+            border-radius: 9999px;
+            filter: blur(64px);
+            margin-right: -10rem;
+            margin-top: -10rem;
+            opacity: 0.6;
+        }
+        .bg-blur-2 {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 400px;
+            height: 400px;
+            background-color: rgba(239, 246, 255, 0.5);
+            border-radius: 9999px;
+            filter: blur(64px);
+            margin-left: -5rem;
+            margin-bottom: -5rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="dmv-card" class="capture-area">
+        <!-- Decorative Background Elements -->
+        <div class="bg-blur-1"></div>
+        <div class="bg-blur-2"></div>
+
+        <!-- --- HEADER --- -->
+        <div class="bg-blue-900 text-white px-8 py-6 flex justify-between items-center relative z-10">
+            <div class="flex items-center space-x-3">
+                <div class="w-14 h-14 relative shrink-0">
+                    <img src="dmv_logo.png" alt="DMV Logo" class="w-14 h-14 rounded-xl shadow-sm object-cover" onerror="this.src='https://via.placeholder.com/56'">
+                </div>
+                <div>
+                    <h1 class="text-2xl font-black tracking-tight leading-none uppercase" id="brand-title">DMV EASY PREP</h1>
+                    <p class="text-blue-200 text-sm font-semibold tracking-wide mt-1">
+                        by <span id="website">abc-elearning.org</span>
+                    </p>
+                </div>
+            </div>
+            
+            <div class="flex flex-col items-end space-y-2 text-sm font-medium">
+                <div class="flex items-center bg-blue-800/50 px-3 py-1.5 rounded-full border border-blue-700/50">
+                    <!-- Lucide MapPin Icon Replacement -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-yellow-400 mr-2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                    <span id="state-text">North Carolina</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- --- BODY --- -->
+        <div class="flex-1 px-10 py-10 flex flex-col relative z-10">
+            
+            <!-- Question -->
+            <div class="mb-10">
+                <div class="flex items-center space-x-2 mb-4">
+                    <span class="bg-yellow-400 text-yellow-900 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+                        Question of the day
+                    </span>
+                </div>
+                <h2 class="text-3xl font-bold text-gray-800 leading-snug" id="question-text">
+                    For how many days will a North Carolina driver's first points suspension remain in effect?
+                </h2>
+            </div>
+
+            <!-- Options -->
+            <div class="grid grid-cols-2 gap-6 mb-auto" id="options-container">
+                <!-- Options will be injected here -->
+            </div>
+
+        </div>
+        
+        <!-- Bottom Accent Line -->
+        <div class="h-3 w-full bg-gradient-to-r from-blue-900 via-blue-600 to-yellow-400"></div>
+    </div>
+
+    <script>
+        window.setData = (data) => {
+            if (data.brandTitle) document.getElementById('brand-title').innerHTML = data.brandTitle;
+            if (data.website) document.getElementById('website').innerHTML = data.website;
+            if (data.state) document.getElementById('state-text').innerHTML = data.state;
+            if (data.question) document.getElementById('question-text').innerHTML = data.question;
+
+            const optionsContainer = document.getElementById('options-container');
+            optionsContainer.innerHTML = '';
+            const labels = ['A', 'B', 'C', 'D'];
+            
+            const correctIndex = data.correctIndex !== undefined ? data.correctIndex : -1;
+
+            data.options.forEach((option, index) => {
+                const isCorrect = index === correctIndex;
+                const div = document.createElement('div');
+                
+                // Base classes
+                let classes = "flex items-center p-6 rounded-2xl border-2 transition-all bg-white ";
+                let labelClasses = "w-12 h-12 flex items-center justify-center rounded-full text-xl font-bold mr-4 shrink-0 ";
+                let textClasses = "text-2xl font-bold ";
+
+                if (isCorrect) {
+                    classes += "border-green-500 bg-green-50 shadow-sm";
+                    labelClasses += "bg-green-500 text-white";
+                    textClasses += "text-green-800";
+                } else {
+                    classes += "border-gray-200 text-gray-700";
+                    labelClasses += "bg-gray-100 text-gray-500";
+                    textClasses += "text-gray-800";
+                }
+
+                div.className = classes;
+                div.innerHTML = `
+                    <div class="${labelClasses}">
+                        ${labels[index]}
+                    </div>
+                    <span class="${textClasses}">
+                        ${option}
+                    </span>
+                `;
+                optionsContainer.appendChild(div);
+            });
+        };
+
+        // For testing purposes
+        // window.setData({
+        //     brandTitle: "DMV Practice",
+        //     website: "abc-elearning.org",
+        //     state: "North Carolina",
+        //     question: "For how many days will a North Carolina driver's first points suspension remain in effect?",
+        //     options: ['120', '90', '30', '60'],
+        //     correctIndex: 3
+        // });
+    </script>
+</body>
+</html>
